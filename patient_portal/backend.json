@@ -1,0 +1,104 @@
+{
+    "users":[
+      {
+        "id": "1",
+        "email": "test@gmail.com",
+        "password": "asdfghjkl",
+        "first_name": "",
+        "last_name": "",
+        "dob":"",
+        "mobile":"",
+        "role": "",
+        "created_date": "",
+        "created_by": ""
+      }
+    ],
+    "demographics":[
+      {
+        "id": "",
+        "patient_id":"",
+        "first_name": "",
+        "last_name": "",
+        "dob":"",
+        "gender":"",
+        "ethicity":"",
+        "education":"",
+        "occupation":"",
+        "address":"",
+        "mobile":"",
+        "medical_history":"",
+        "family_medical_history":"",
+        "surgery":"",
+        "insurence_provider":""
+      }
+    ],
+    "medication_allergies":[
+      {
+        "id":"",
+        "patient_id":"",
+        "current_medication":"",
+        "otc_medication":"",
+        "natural_product_hurbs":"",
+        "socila_drugs":"",
+        "past_medication":"",
+        "drug_allergies":"",
+        "other_allergies_reaction":""     
+       
+      }
+    ],
+    "immunization":[{
+      "id":"",
+      "patient_id":"",
+      "covid_19_vaccine":"",
+      "general_vaccine":""  
+    }],
+    "schedule_appointment":[{
+      "id":"",
+      "patient_id":"",
+      "meeting_title":"",
+      "description":"",
+      "physication":"",
+      "date":"",  
+      "time":"",
+      "reason":""
+    }],
+    "order":[{
+      "id":"",
+      "patient_id":"",
+      "patient_vitals":"",
+      "procedure_code":"",
+      "diagnosis_code":"",
+      "lab_report":"",  
+      "radiology_report":"",
+      "medication":""
+    }],
+    "payment_details":[{
+      "id":"",
+      "patient_id":"",
+      "patient_bill":"",
+      "payment_method":"",
+      "payment_history":"",
+      "lab_report":"",  
+      "radiology_report":"",
+      "medication":""
+    }],
+      "allergies":
+    [
+    {
+      "id": "Bos d 2.0101",
+      "AllergyType": "Animal",
+      "AllergyName": "Bovine",
+      "AllergenSource": "Bos taurus",
+      "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 2",
+      "Allerginicity": "IgE but no biological test"
+    },
+    {
+      "id": "Bos d 3.0101",
+      "AllergyType": "Animal",
+      "AllergyName": "Bovine",
+      "AllergenSource": "Bos taurus",
+      "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 3",
+      "Allerginicity": "IgE but no biological test"
+    }
+]
+}
