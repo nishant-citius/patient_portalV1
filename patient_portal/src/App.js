@@ -7,7 +7,7 @@ function App() {
         <div className="col-4">
           <h1>Patient Portal</h1>
           <h2>created mybranch</h2>
-          <h1>shiva changes one</h1>
+         
           
         </div>
       </div>
