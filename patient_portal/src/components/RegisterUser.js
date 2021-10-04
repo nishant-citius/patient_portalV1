@@ -1,14 +1,8 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
+import { connect } from "react-redux";
+import * as actionCreator from "../redux/actions/userActionCreater";
 
-const RegisterUser = () => {
-  // const [email, setEmail] = useState[""];
-  // const [fName, setfName] = useState[""];
-  // const [lName, setlName] = useState[""];
-  // const [dob, setdob] = useState[""];
-  // const [password, setPassword] = useState[""];
-  // const [mobile, setMobile] = useState[""];
-  // const [rPassword, setrPassword] = useState[""];
-
+const RegisterUser = (props) => {
   let tempUser = {
     fName: "",
     lName: "",
@@ -35,7 +29,7 @@ const RegisterUser = () => {
     e.preventDefault();
     let newUserData = { ...user };
 
-    console.log(newUserData);
+    props.addUserHandler(newUserData);
   };
 
   return (
@@ -120,6 +114,7 @@ const RegisterUser = () => {
                   onChange={handleUserChange}
                 />
               </div>
+
               <div className="form-group">
                 <label>Password</label>
                 <input
@@ -155,4 +150,17 @@ const RegisterUser = () => {
   );
 };
 
-export default RegisterUser;
+const mapStateToProps = (state) => {
+  return {
+    allusers: state.users.users,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUserHandler: (newuser) => dispatch(actionCreator.AddUserAsync(newuser)),
+  };
+};
+
+let hof = connect(mapStateToProps, mapDispatchToProps);
+export default hof(RegisterUser);
