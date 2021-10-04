@@ -1,17 +1,18 @@
 import "./App.css";
+import { Switch, Route } from "react-router-dom";
+import PatientPortalHome from "./components/PatientPortalHome";
+import Login from "./components/Login";
+import RegisterUser from "./components/RegisterUser";
 
 function App() {
   return (
-    <div className="App">
-      <div className="row justify-content-center">
-        <div className="col-4">
-          <h1>Patient Portal</h1>
-          <h2>created mybranch</h2>
-         
-          
-        </div>
-      </div>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/" component={PatientPortalHome} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={RegisterUser} />
+      </Switch>
+    </>
   );
 }
 
