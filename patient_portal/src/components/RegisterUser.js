@@ -35,7 +35,7 @@ const RegisterUser = () => {
     e.preventDefault();
     let newUserData = { ...user };
 
-    // console.log(typeof newUserData);
+    console.log(typeof newUserData);
   };
 
   return (
