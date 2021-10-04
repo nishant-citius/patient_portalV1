@@ -35,7 +35,7 @@ const RegisterUser = () => {
     e.preventDefault();
     let newUserData = { ...user };
 
-    console.log(typeof newUserData);
+    console.log(newUserData);
   };
 
   return (
@@ -72,7 +72,7 @@ const RegisterUser = () => {
               <div className="form-group">
                 <label>DOB</label>
                 <input
-                  type="text"
+                  type="date"
                   className="form-control"
                   name="dob"
                   id="dob"
@@ -144,7 +144,7 @@ const RegisterUser = () => {
                   onChange={handleUserChange}
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary m-4">
                 Submit
               </button>
             </form>
