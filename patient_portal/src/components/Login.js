@@ -2,36 +2,35 @@ import React from "react";
 
 const Login = () => {
   return (
-    <>
-      <div className="wrapper fadeInDown">
-        <div id="formContent">
-          <form>
-            <input
-              type="text"
-              id="login"
-              className="fadeIn second"
-              name="login"
-              placeholder="login"
-            />
-            <input
-              type="text"
-              id="password"
-              className="fadeIn third"
-              name="login"
-              placeholder="password"
-            />
-            <input type="submit" className="fadeIn fourth" value="Log In" />
-          </form>
-
-          {/* <div id="formFooter">
-            <a className="underlineHover" href="#">
-              Forgot Password?
-            </a>
-          </div> */}
+   <>
+    <div className="container">
+      <h4 className="text-center">Login Page</h4>
+        <div className="row justify-content-center">
+          <div className="col-8"></div>
+      <form className="login-form">
+        <div className="form-group">
+          <label htmlFor="user name">User Name</label>
+            <input type = "text" className="form-control" name="user name"/>
+              <small id="emailHelp" className="form-text text-muted">Forgot username?</small>
         </div>
+
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+            <input type = "password" className="form-control" name="user name"/>
+            <small id="passwordHelp" className="form-text text-muted">Forgot password?</small>
+        </div>
+         <br/>
+        <div>
+          <label class="form-check-label" htmlFor="Check1">Remember me</label>
+            <input type="checkbox" className="form-check-input" id="Check1"/>
+        </div>
+         <br/>
+         <button type="submit" className="btn btn-primary">Login</button>
+      </form>
       </div>
+    </div>
     </>
-  );
+      )
 };
 
 export default Login;
