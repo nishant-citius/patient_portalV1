@@ -16,8 +16,7 @@ function App() {
         <Route path="/register" component={RegisterUser} />
         <Route path="/admin" component={Admin_dashboard} />
         <Route path="/patient" component={Patient_dashboard} />
-        <Route path="/physician" component={Physician_dashboard} />
-        <h1>shiva push attempt</h1>
+        <Route path="/physician" component={Physician_dashboard} /> 
       </Switch>
     </>
   );
