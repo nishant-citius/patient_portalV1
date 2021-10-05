@@ -44,7 +44,7 @@ const RegisterUser = (props) => {
       .get("http://localhost:9999/users")
       .then((res) => checkEmail(res.data, formData));
     if (user) {
-      alert("email exists");
+      alert("email alreday exists");
       // do whatever you want here with the existence user store.
     } else {
       props.addUserHandler(formData);
