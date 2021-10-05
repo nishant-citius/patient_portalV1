@@ -1,6 +1,7 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../redux/actions/userActionCreater";
+import axios from "axios";
 
 const RegisterUser = (props) => {
   let tempUser = {
@@ -21,15 +22,33 @@ const RegisterUser = (props) => {
   const handleUserChange = (e) => {
     const name = e.target.name,
       value = e.target.value;
-
     setUser({ ...user, [name]: value });
   };
 
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
+    // props.addUserHandler(newUserData);
+    // setUser(tempUser);
 
-    props.addUserHandler(newUserData);
+    onSubmit(newUserData);
+  };
+
+  const checkEmail = (serverUsers, formData) => {
+    const user = serverUsers.find((user) => user.email === formData.email); // extract the email from the formData
+    if (user) return user;
+  };
+
+  const onSubmit = async (formData) => {
+    const user = await axios
+      .get("http://localhost:9999/users")
+      .then((res) => checkEmail(res.data, formData));
+    if (user) {
+      alert("email exists");
+      // do whatever you want here with the existence user store.
+    } else {
+      props.addUserHandler(formData);
+    }
   };
 
   return (
