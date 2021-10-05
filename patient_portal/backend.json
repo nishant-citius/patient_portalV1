@@ -24,6 +24,45 @@
       "rpassword": "111",
       "createdDate": "Tue Oct 05 2021 16:22:48 GMT+0530 (India Standard Time)",
       "id": "rrN-bgT"
+    },
+    {
+      "fName": "Ajinkya",
+      "lName": "Pathak",
+      "dob": "2021-10-04",
+      "username": "aj",
+      "email": "aj@email.com",
+      "mobile": "",
+      "role": "patient",
+      "password": "123",
+      "rpassword": "123",
+      "createdDate": "Tue Oct 05 2021 18:46:51 GMT+0530 (India Standard Time)",
+      "id": "QzR3zYy"
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-27",
+      "username": "nish",
+      "email": "nish@email.com",
+      "mobile": "",
+      "role": "physician",
+      "password": "123",
+      "rpassword": "123",
+      "createdDate": "Tue Oct 05 2021 18:47:48 GMT+0530 (India Standard Time)",
+      "id": "qf5-u4i"
+    },
+    {
+      "fName": "Pooja",
+      "lName": "Thakur",
+      "dob": "2021-09-27",
+      "username": "pooja",
+      "email": "pooja@email.com",
+      "mobile": "",
+      "role": "admin",
+      "password": "123",
+      "rpassword": "123",
+      "createdDate": "Tue Oct 05 2021 18:48:28 GMT+0530 (India Standard Time)",
+      "id": "Glv5ecj"
     }
   ],
   "demographics": [
