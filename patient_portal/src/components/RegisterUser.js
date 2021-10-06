@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../redux/actions/userActionCreater";
 import axios from "axios";
+import * as URLS from "../shared/url_list";
 
 const RegisterUser = (props) => {
   let tempUser = {
@@ -41,7 +42,7 @@ const RegisterUser = (props) => {
 
   const onSubmit = async (formData) => {
     const user = await axios
-      .get("http://localhost:9999/users")
+      .get(`${URLS.BASE_URL}/users`)
       .then((res) => checkEmail(res.data, formData));
     if (user) {
       alert("email alreday exists");

@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
+import * as URLS from "../shared/url_list";
 
 const Login = (props) => {
   const tempUser = {
@@ -8,10 +9,8 @@ const Login = (props) => {
     password: "",
   };
 
-  const [user, setUser] = useState(tempUser);
-  const [userState, setUserState] = useState(false);
-
   let history = useHistory();
+  const [user, setUser] = useState(tempUser);
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -28,14 +27,14 @@ const Login = (props) => {
   const checkEmail = (serverUsers, formData) => {
     const user = serverUsers.find(
       (user) =>
-        user.email === formData.username && user.password == formData.password
+        user.email === formData.username && user.password === formData.password
     ); // extract the email from the formData
     if (user) return user;
   };
 
   const onSubmit = async (formData) => {
     const user = await axios
-      .get("http://localhost:9999/users")
+      .get(`${URLS.BASE_URL}/users`)
       .then((res) => checkEmail(res.data, formData));
 
     if (user) {
@@ -52,9 +51,7 @@ const Login = (props) => {
       }
 
       const session = window.sessionStorage;
-      let userSessionData = session.setItem("userInfo", JSON.stringify(user));
-
-      // props.history.push("/admin");
+      session.setItem("userInfo", JSON.stringify(user));
     } else {
       alert("email doesnot exit");
     }
