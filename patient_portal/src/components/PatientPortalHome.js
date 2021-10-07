@@ -1,16 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from 'components/Navbar';
+import Slider from "components/Slider";
+
 
 const PatientPortalHome = () => {
   return (
     <>
-      <h1 className="text-center text-primary">Patient Portal</h1>
-      <Link to="/login" className="btn btn-primary btn-sm float-end m-2">
-        Login
-      </Link>
-      <Link to="/register" className="btn btn-primary btn-sm float-end m-2">
-        Register User
-      </Link>
+     <div>
+      <Navbar />
+      </div>
+
+      <div>
+        <Slider />
+      </div>
+     
     </>
   );
 };

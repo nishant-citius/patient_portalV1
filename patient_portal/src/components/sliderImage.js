@@ -18,7 +18,7 @@ export default [
   {
     title: "",
     
-    urls: "https://lh3.googleusercontent.com/proxy/yudAkIeR7IWfb4rG6-RP1PApLa6-aVEJTQGQm_o4_d41KSRn7C3rO5_rqdIVOC4tM4qWuYJqpegSQEzmdYs3DVe5MJ7GHmCUfEfGS56flLjW-nr9mhNMGBICh9IFqRGW_A",
+    urls: "https://www.maggohospital.com/wp-content/uploads/2019/10/banner1.jpg",
   },
   {
     title: "",
