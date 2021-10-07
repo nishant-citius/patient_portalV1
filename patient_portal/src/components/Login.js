@@ -44,7 +44,7 @@ const Login = (props) => {
         history.push("/admin");
       } else if (user.role === "patient") {
         /**patient */
-        history.push("/patient");
+        history.push("/demographics");
       } else {
         /**physician */
         history.push("/physician");

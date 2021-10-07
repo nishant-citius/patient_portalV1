@@ -73,7 +73,7 @@ const RegisterUser = (props) => {
               </div>
               <div className="form-group">
                 <label>Last Name</label>
-                <input
+                <inputs
                   type="text"
                   className="form-control"
                   name="lName"
@@ -158,6 +158,7 @@ const RegisterUser = (props) => {
                   value={user.rpassword}
                   onChange={handleUserChange}
                 />
+                
               </div>
               <button type="submit" className="btn btn-primary m-4">
                 Submit

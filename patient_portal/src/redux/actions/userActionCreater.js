@@ -31,3 +31,16 @@ export function AddUserAsync(user) {
     );
   };
 }
+export function AddDemographicsAsync(user) {
+  return (dispatch) => {
+    userService.Addpatientdemographics(user).then(
+      (response) => {
+        dispatch({ type: actions.ADD_DEMOGRAPHICS, newuser:user });
+      },
+      (error) => {
+        return;
+      }
+    );
+  };
+}
+
