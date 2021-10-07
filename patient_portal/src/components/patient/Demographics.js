@@ -1,12 +1,60 @@
+import { React, useState, userEffect, useEffect } from "react";
+// import Card from "../../shared/Card";
+import { connect } from "react-redux";
+import * as actionCreator from "../../redux/actions/userActionCreater";
 
-const Demographics =() =>{
-    return(
-   <>
-   <div className="container">
-      <h4 className="text-center">Patient Demographics</h4>
+
+const Demographics = (props) => {
+    let userId = JSON.parse(window.sessionStorage.getItem("userInfo"))
+    // setpatientDemographics({
+    //   ...patientDemographics,
+    //   [userId]: userId.id
+    // });
+
+  const [patientDemographics, setpatientDemographics] = useState({
+    fName: "",
+    lName: "",
+    dob: "",
+    gender: "",
+    ethnicity: "",
+    race: "",
+    education: "",
+    employment: "",
+    address: "",
+    phone_number: "",
+    medical_history: "",
+    family_medical_history: "",
+    surgeries: "",
+    insurance_provider: "",
+    userId: userId.id
+  });
+
+  console.log(patientDemographics)
+
+  const HandleChange = (e) => {
+    setpatientDemographics({
+      ...patientDemographics,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let newrecords = { ...patientDemographics };
+    props.addUserHandler(newrecords)
+  };
+
+  // useEffect(() => {
+
+  // }, [])
+
+  return (
+    <>
+      <div className="container">
+        <h4 className="text-center">Patient Demographics</h4>
         <div className="row justify-content-center">
           <div className="col-8">
-            <form name="Patient Demographics" onSubmit={submitUserData}>
+            <form name="Patient Demographics" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label>First Name</label>
                 <input
@@ -14,8 +62,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="fName"
                   id="fName"
-                  value={user.fName}
-                  onChange={handleUserChange}
+                  value={patientDemographics.fName}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -25,8 +73,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="lName"
                   id="lName"
-                  value={user.lName}
-                  onChange={handleUserChange}
+                  value={patientDemographics.lName}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -36,7 +84,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="dob"
                   id="dob"
-                 onChange={handleUserChange}
+                  value={patientDemographics.dob}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -45,12 +94,13 @@ const Demographics =() =>{
                   className="form-control"
                   name="gender"
                   id="gender"
-                  
-                  onChange={handleUserChange}
+                  value={patientDemographics.gender}
+                  onChange={HandleChange}
                 >
+                  <option value="select">Select</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
-                  </select>
+                </select>
               </div>
 
               <div className="form-group">
@@ -58,10 +108,10 @@ const Demographics =() =>{
                 <input
                   type="text"
                   className="form-control"
-                  name="ethnicity/race"
+                  name="ethnicity"
                   id="ethnicity/race"
-                 
-                  onChange={handleUserChange}
+                  value={patientDemographics.ethinicity}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -71,8 +121,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="education"
                   id="education"
-                 
-                  onChange={handleUserChange}
+                  value={patientDemographics.education}
+                  onChange={HandleChange}
                 />
               </div>
 
@@ -83,8 +133,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="employment"
                   id="employment"
-                 
-                  onChange={handleUserChange}
+                  value={patientDemographics.employment}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -94,7 +144,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="address"
                   id="address"
-                  onChange={handleUserChange}
+                  value={patientDemographics.address}
+                  onChange={HandleChange}
                 />
               </div>
 
@@ -103,20 +154,22 @@ const Demographics =() =>{
                 <input
                   type="number"
                   className="form-control"
-                  name="phone number"
-                  id="phone number"
-                  onChange={handleUserChange}
+                  name="phone_number"
+                  id="phone_number"
+                  value={patientDemographics.phone_number}
+                  onChange={HandleChange}
                 />
-                </div>
+              </div>
 
-               <div className="form-group">
+              <div className="form-group">
                 <label>Medical History</label>
                 <input
                   type="text"
                   className="form-control"
-                  name="medical history"
-                  id="medical history"
-                  onChange={handleUserChange}
+                  name="medical_history"
+                  id="medical_history"
+                  value={patientDemographics.medical_history}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -124,9 +177,10 @@ const Demographics =() =>{
                 <input
                   type="text"
                   className="form-control"
-                  name="family-medical-history"
-                  id="family-medical-history"
-                  onChange={handleUserChange}
+                  name="family_medical_history"
+                  id="family_medical_history"
+                  value={patientDemographics.family_medical_history}
+                  onChange={HandleChange}
                 />
               </div>
               <div className="form-group">
@@ -136,7 +190,8 @@ const Demographics =() =>{
                   className="form-control"
                   name="surgeries"
                   id="surgeries"
-                  onChange={handleUserChange}
+                  value={patientDemographics.surgeries}
+                  onChange={HandleChange}
                 />
               </div>
 
@@ -145,12 +200,13 @@ const Demographics =() =>{
                 <input
                   type="text"
                   className="form-control"
-                  name="insurance provider"
-                  id="insurance provider"
-                  onChange={handleUserChange}
+                  name="insurance_provider"
+                  id="insurance_provider"
+                  value={patientDemographics.insurance_provider}
+                  onChange={HandleChange}
                 />
               </div>
-              
+
               <button type="submit" className="btn btn-primary m-4">
                 Submit
               </button>
@@ -161,6 +217,17 @@ const Demographics =() =>{
     </>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    allusers: state.demographics.Demographicsreducer,
+  };
+};
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addUserHandler: (newuser) => dispatch(actionCreator.AddDemographicsAsync(newuser)),
+  };
+};
 
-export default Demographics;
+let hof = connect(mapStateToProps, mapDispatchToProps);
+export default hof(Demographics);
