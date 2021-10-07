@@ -21,7 +21,6 @@
       "mobile": "9999999999",
       "role": "patient",
       "password": "123",
-      "rpassword": "123",
       "createdDate": "Tue Oct 05 2021 16:22:48 GMT+0530 (India Standard Time)",
       "id": "rrN-bgT"
     },
@@ -34,7 +33,6 @@
       "mobile": "9403541779",
       "role": "patient",
       "password": "12345",
-      "rpassword": "123",
       "createdDate": "Tue Oct 05 2021 18:46:51 GMT+0530 (India Standard Time)",
       "id": "QzR3zYy"
     },
@@ -47,7 +45,6 @@
       "mobile": "",
       "role": "patient",
       "password": "123",
-      "rpassword": "123",
       "createdDate": "Tue Oct 05 2021 18:47:48 GMT+0530 (India Standard Time)",
       "id": "qf5-u4i"
     },
@@ -60,7 +57,6 @@
       "mobile": "",
       "role": "admin",
       "password": "123",
-      "rpassword": "123",
       "createdDate": "Tue Oct 05 2021 18:48:28 GMT+0530 (India Standard Time)",
       "id": "Glv5ecj"
     }
