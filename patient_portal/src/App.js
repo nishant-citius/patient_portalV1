@@ -6,6 +6,7 @@ import RegisterUser from "./components/RegisterUser";
 import Admin_dashboard from "./components/admin/Admin_dashboard";
 import Patient_dashboard from "./components/patient/Patient_dashboard";
 import Physician_dashboard from "./components/physician/Physician_dashboard";
+import Demographics from "./components/patient/Demographics";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/admin" component={Admin_dashboard} />
         <Route path="/patient" component={Patient_dashboard} />
         <Route path="/physician" component={Physician_dashboard} />
+        <Route path="/demographics" component={Demographics}/>
       </Switch>
     </>
   );
