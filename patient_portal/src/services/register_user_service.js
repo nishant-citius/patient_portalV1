@@ -17,6 +17,18 @@ class UserServices {
     console.log(user);
     return axios.post(url, JSON.stringify(user), config);
   }
+
+
+Addpatientdemographics(user) {
+  let url = URLS.BASE_URL + "/demographics";
+
+  let config = {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+  };
+  return axios.post(url, JSON.stringify(user), config);
+}
 }
 
 /*********Admin Serives***********/
