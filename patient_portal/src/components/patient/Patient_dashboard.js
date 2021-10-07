@@ -1,9 +1,12 @@
 import React from "react";
+//import Navbar from "../../shared/Navbarold";
+import Navbar from "../../shared/Navbar";
+import '../../shared/navbar.css';
 
 const Patient_dashboard = () => {
   return (
     <>
-      <h1 className="">Patient Dashboard</h1>
+      <Navbar/>
     </>
   );
 };
