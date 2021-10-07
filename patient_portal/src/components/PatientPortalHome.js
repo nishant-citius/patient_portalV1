@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from 'components/Navbar';
-import Slider from "components/Slider";
+import Navbar from './Navbar/index';
+import Slider from "./Slider";
 
 
 const PatientPortalHome = () => {

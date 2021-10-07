@@ -1,17 +1,18 @@
 import "./App.css";
+import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import {Link} from "react-router-dom";
-import PatientPortalHome from "components/PatientPortalHome";
-import Login from "components/Login";
-import RegisterUser from "components/RegisterUser";
+import PatientPortalHome from "./components/PatientPortalHome";
+import Login from "./components/Login";
+import RegisterUser from "./components/RegisterUser";
 import Admin_dashboard from "./components/admin/Admin_dashboard";
 import Patient_dashboard from "./components/patient/Patient_dashboard";
 import Physician_dashboard from "./components/physician/Physician_dashboard";
 import Slider from "./components/Slider";
-import About from 'pages/about';
-import Services from 'pages/services';
-import Contact from 'pages/contact';
-import React from 'react';
+import About from './pages/about';
+import Services from './pages/services';
+import Contact from './pages/contact';
+
 
 
 
