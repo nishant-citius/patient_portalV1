@@ -9,7 +9,7 @@ import Admin_dashboard from "./components/admin/Admin_dashboard";
 import Patient_dashboard from "./components/patient/Patient_dashboard";
 import Physician_dashboard from "./components/physician/Physician_dashboard";
 import Demographics from "./components/patient/Demographics";
-import Slider from "./components/Slider";
+import Slider from "./components/imageslider/Slider";
 import About from './pages/about';
 import Services from './pages/services';
 import Contact from './pages/contact';
@@ -31,6 +31,7 @@ function App() {
       
       <div>
       <Switch>
+        {/* *****Patient Routes***** */}
         <Route exact path="/" component={PatientPortalHome} />
         <Route path="/Login" component={Login} />
         <Route path="/RegisterUser" component={RegisterUser} />
