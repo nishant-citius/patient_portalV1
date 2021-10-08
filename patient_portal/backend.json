@@ -87,6 +87,33 @@
       "rpassword": "123",
       "createdDate": "Fri Oct 08 2021 11:43:09 GMT+0530 (India Standard Time)",
       "id": "DxW0yQW"
+    },
+    {
+      "fName": "",
+      "lName": "sdfgh",
+      "dob": "2021-10-04",
+      "username": "Nishant.Chaubehvvhvhy@citiustech.com",
+      "email": "nishant.chaubbhbhbhey@citiustech.com",
+      "mobile": "",
+      "role": "patient",
+      "password": "",
+      "rpassword": "",
+      "createdDate": "Fri Oct 08 2021 14:44:01 GMT+0530 (India Standard Time)",
+      "mobil": "0",
+      "id": "XtACnJx"
+    },
+    {
+      "fName": "",
+      "lName": "",
+      "dob": "",
+      "username": "",
+      "email": "",
+      "mobile": "",
+      "role": "",
+      "password": "",
+      "rpassword": "",
+      "createdDate": "Fri Oct 08 2021 14:45:04 GMT+0530 (India Standard Time)",
+      "id": "YaHyKpP"
     }
   ],
   "demographics": [],
