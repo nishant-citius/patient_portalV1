@@ -1,20 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from './Navbar/index';
+import Navbar from "./Navbar/index";
 import Slider from "./Slider";
-
 
 const PatientPortalHome = () => {
   return (
     <>
-     <div>
-      <Navbar />
+      <div>
+        <Navbar />
       </div>
 
       <div>
         <Slider />
       </div>
-     
     </>
   );
 };
