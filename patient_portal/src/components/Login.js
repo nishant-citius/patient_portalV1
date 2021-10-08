@@ -11,6 +11,7 @@ const Login = (props) => {
 
   let history = useHistory();
   const [user, setUser] = useState(tempUser);
+  const [userState, setUserState] = useState(false);
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -52,6 +53,7 @@ const Login = (props) => {
 
       const session = window.sessionStorage;
       session.setItem("userInfo", JSON.stringify(user));
+      let userSessionData = session.setItem("userInfo", JSON.stringify(user));
     } else {
       alert("email doesnot exit");
     }
@@ -59,7 +61,7 @@ const Login = (props) => {
 
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <h4 className="text-center">Login Page</h4>
         <div className="row justify-content-center">
           <div className="col-8"></div>
@@ -106,7 +108,59 @@ const Login = (props) => {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
+      <div className="container">
+       
+       <div className="card shadow-lg p-10 mb-6 bg-white rounded">
+         <div className="card-header">Login form</div>
+         <div className="card-body">
+         <form className="login-form">
+           <div className="form-group">
+             <label htmlFor="user name">User Name</label>
+             <input
+               type="email"
+               className="form-control"
+               name="username"
+               placeholder="Please enter your Email id"
+               onChange={handleUserChange}
+             />
+             
+           </div>
+
+           <div className="form-group mt-4">
+             <label htmlFor="password">Password</label>
+             <input
+               type="password"
+               className="form-control"
+               placeholder="Please enter password"
+               name="password"
+               onChange={handleUserChange}
+             />
+            
+           </div>
+           <br />
+           <div>
+             <label className="form-check-label " htmlFor="Check1">
+               Remember me 
+             </label>
+             <input type="checkbox" className="form-check-input l-2" id="Check1" />
+           </div>
+           <br />
+           <button
+             type="submit"
+             
+             className="btn btn-primary"
+             onClick={submitUserData}
+           >
+             Login
+           </button>
+           <a className="btn btn-secondary m-2" href="/forgotpassword">forgot password</a>
+           <a className="btn btn-secondary " href="/forgotusername">forgot username</a>
+
+         </form>
+         </div>
+       </div>
+     </div>
     </>
   );
 };

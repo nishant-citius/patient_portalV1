@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import * as actionCreator from "../redux/actions/userActionCreater";
 import axios from "axios";
 import * as URLS from "../shared/url_list";
+import { useHistory } from "react-router";
 
 const RegisterUser = (props) => {
   let tempUser = {
@@ -19,6 +20,7 @@ const RegisterUser = (props) => {
   };
 
   const [user, setUser] = useState(tempUser);
+  let history = useHistory();
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -29,7 +31,18 @@ const RegisterUser = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    onSubmit(newUserData);
+    if(user.fName.length < 1){
+      alert("plse enter valid First name")
+    }
+    if(user.lName.length < 1){
+      alert("plse enter valid last name")
+    }
+    
+   if(user.password != user.rpassword){
+     alert('plse enter the same password')
+   }else{
+      onSubmit(newUserData);
+   }
   };
 
   const checkEmail = (serverUsers, formData) => {
@@ -46,15 +59,17 @@ const RegisterUser = (props) => {
       // do whatever you want here with the existence user store.
     } else {
       props.addUserHandler(formData);
+      history.push("/login");
     }
   };
 
   return (
     <>
-      <div className="container">
-        <h4 className="text-center">Register Page</h4>
-        <div className="row justify-content-center">
-          <div className="col-8">
+       <div className="container">
+       
+       <div className="card shadow-lg p-10 mb-6 bg-white rounded">
+         <div className="card-header">Login form</div>
+         <div className="card-body">
             <form name="registration_form" onSubmit={submitUserData}>
               <div className="form-group">
                 <label>First Name</label>
@@ -131,6 +146,18 @@ const RegisterUser = (props) => {
                   onChange={handleUserChange}
                 />
               </div>
+              <div className="form-group">
+                <label>mobil</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="mobil"
+                  id="mobil"
+                  placeholder="Enter Your mobile number"
+                  value={user.mobile}
+                  onChange={handleUserChange}
+                />
+              </div>
 
               <div className="form-group">
                 <label>Password</label>
@@ -156,7 +183,7 @@ const RegisterUser = (props) => {
                   onChange={handleUserChange}
                 />
               </div>
-              <button type="submit" className="btn btn-primary m-4">
+              <button type="submit" className="btn btn-primary mt-2 center">
                 Submit
               </button>
             </form>
