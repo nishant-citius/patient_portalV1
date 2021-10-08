@@ -1,24 +1,27 @@
 import { React, useState } from "react";
+import { useHistory } from "react-router";
 import { connect } from "react-redux";
-import * as actionCreator from "../redux/actions/userActionCreater";
+import * as actionCreator from "../../../redux/actions/userActionCreater";
 import axios from "axios";
-import * as URLS from "../shared/url_list";
+import * as URLS from "../../../shared/url_list";
 
-const RegisterUser = (props) => {
-  let tempUser = {
+const AddNewUser = (props) => {
+  let tempUserData = {
     fName: "",
     lName: "",
     dob: "",
     username: "",
     email: "",
-    mobile: "",
+    mobile: "9922664488",
     role: "",
     password: "",
     rpassword: "",
     createdDate: Date(),
   };
 
-  const [user, setUser] = useState(tempUser);
+  const [user, setUser] = useState(tempUserData);
+
+  const history = useHistory();
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -33,7 +36,7 @@ const RegisterUser = (props) => {
   };
 
   const checkEmail = (serverUsers, formData) => {
-    const user = serverUsers.find((user) => user.email === formData.email); // extract the email from the formData
+    const user = serverUsers.find((user) => user.email === formData.email);
     if (user) return user;
   };
 
@@ -43,16 +46,16 @@ const RegisterUser = (props) => {
       .then((res) => checkEmail(res.data, formData));
     if (user) {
       alert("email alreday exists");
-      // do whatever you want here with the existence user store.
     } else {
       props.addUserHandler(formData);
+      history.push("/patientlist");
     }
   };
 
   return (
     <>
       <div className="container">
-        <h4 className="text-center">Register Page</h4>
+        <h4 className="text-center">Add New User</h4>
         <div className="row justify-content-center">
           <div className="col-8">
             <form name="registration_form" onSubmit={submitUserData}>
@@ -180,4 +183,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 let hof = connect(mapStateToProps, mapDispatchToProps);
-export default hof(RegisterUser);
+
+export default hof(AddNewUser);
