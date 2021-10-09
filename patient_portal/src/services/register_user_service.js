@@ -18,17 +18,16 @@ class UserServices {
     return axios.post(url, JSON.stringify(user), config);
   }
 
+  Addpatientdemographics(user) {
+    let url = URLS.BASE_URL + "/demographics";
 
-Addpatientdemographics(user) {
-  let url = URLS.BASE_URL + "/demographics";
-
-  let config = {
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-    },
-  };
-  return axios.post(url, JSON.stringify(user), config);
-}
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.post(url, JSON.stringify(user), config);
+  }
 }
 
 /*********Admin Serives***********/
@@ -40,6 +39,11 @@ class AdminServices {
 
   getAllPhysicians() {
     const url = `${URLS.BASE_URL}/users?role=physician`;
+    return axios.get(url);
+  }
+
+  getUserById(userId) {
+    const url = `${URLS.BASE_URL}/users?id=${userId}`;
     return axios.get(url);
   }
 

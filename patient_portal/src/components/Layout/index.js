@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   Nav,
@@ -6,33 +6,31 @@ import {
   Bars,
   NavMenu,
   NavBtn,
-  NavBtnLink
-} from './NavbarElements';
+  NavBtnLink,
+} from "./NavbarElements";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to='/'>
-          <img src="" alt="logo" />
+        <NavLink to="/">
+          <img src="src/assets/logo.png" alt="logo" />
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/about' activeStyle>
+          <NavLink to="/about" activeStyle>
             About
           </NavLink>
-          <NavLink to='/services' activeStyle>
+          <NavLink to="/services" activeStyle>
             Services
           </NavLink>
-          <NavLink to='/contact-us' activeStyle>
+          <NavLink to="/contact-us" activeStyle>
             Contact Us
           </NavLink>
-          
-          </NavMenu>
+        </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/RegisterUser'>Register Here</NavBtnLink>
-       
-          <NavBtnLink to='/Login'>Login</NavBtnLink>
+          <NavBtnLink to="/RegisterUser">Register Here</NavBtnLink>
+          <NavBtnLink to="/Login">Login</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

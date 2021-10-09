@@ -1,5 +1,5 @@
 import "./App.css";
-import React from 'react';
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import PatientPortalHome from "./components/PatientPortalHome";
 import Login from "./components/Login";
@@ -24,45 +24,42 @@ import PhysicianDetails from "./components/admin/PhysicianDetails/PhysicianDetai
 import UserList from "./components/admin/UserDetails/UserList";
 import Appointments from "./components/admin/AppointmentDetails/Appointments";
 import ImmunizationDetails from "./components/admin/ImmunizationDetails/ImmunizationDetails";
+import EditUser from "./components/admin/PatientDetails/EditUser";
+import AddNewUser from "components/admin/PatientDetails/AddNewUser";
 
 function App() {
   return (
     <>
-      
       <div>
-      <Switch>
-        {/* *****Patient Routes***** */}
-        <Route exact path="/" component={PatientPortalHome} />
-        <Route path="/Login" component={Login} />
-        <Route path="/RegisterUser" component={RegisterUser} />
-        <Route path="/admin" component={Admin_dashboard} />
-        <Route path="/patient" component={Patient_dashboard} />
-        <Route path="/physician" component={Physician_dashboard} />
-        <Route path="/demographics" component={Demographics}/>
-        <Route path='/about' component={About} />
-        <Route path='/services' component={Services} />
-        <Route path='/contact-us' component={Contact} /> 
+        <Switch>
+          <Route exact path="/" component={PatientPortalHome} />
+          <Route path="/Login" component={Login} />
+          <Route path="/RegisterUser" component={RegisterUser} />
+          <Route path="/admin" component={Admin_dashboard} />
+          <Route path="/patient" component={Patient_dashboard} />
+          <Route path="/physician" component={Physician_dashboard} />
+          <Route path="/demographics" component={Demographics} />
+          <Route path="/about" component={About} />
+          <Route path="/services" component={Services} />
+          <Route path="/contact-us" component={Contact} />
 
-        {/* *****Admin Routes***** */}
-        <Route path={"/patientlist"} component={PatientList} />
-        <Route path={"/patientdetails"} component={PatientDetails} />
-        <Route path={"/physicianlist"} component={PhysicianList} />
-        <Route path={"/physiciandetails"} component={PhysicianDetails} />
-        <Route path={"/userlist"} component={UserList} />
-        <Route path={"/appointments"} component={Appointments} />
-        <Route
-          path={"/admin/immunizationdetails"}
-          component={ImmunizationDetails}
-        />
-        {/* *****Admin Routes***** */}
-      </Switch>
+          {/* *****Admin Routes***** */}
+          <Route path={"/patientlist"} component={PatientList} />
+          <Route path={"/physicianlist"} component={PhysicianList} />
+          <Route path={"/physiciandetails"} component={PhysicianDetails} />
+          <Route path={"/userlist"} component={UserList} />
+          <Route path={"/appointments"} component={Appointments} />
+          <Route
+            path={"/immunizationdetails"}
+            component={ImmunizationDetails}
+          />
+          <Route path={"/patientdetails/:id"} component={PatientDetails} />
+          <Route path={"/edit/:id"} component={EditUser} />
+          <Route path={"/addnewuser"} component={AddNewUser} />
+
+          {/* *****Admin Routes***** */}
+        </Switch>
       </div>
-
-
-    
-
-
-      
     </>
   );
 }

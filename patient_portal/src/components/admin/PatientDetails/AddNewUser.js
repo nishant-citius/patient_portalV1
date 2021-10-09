@@ -1,26 +1,27 @@
 import { React, useState } from "react";
-import { connect } from "react-redux";
-import * as actionCreator from "../redux/actions/userActionCreater";
-import axios from "axios";
-import * as URLS from "../shared/url_list";
 import { useHistory } from "react-router";
+import { connect } from "react-redux";
+import * as actionCreator from "../../../redux/actions/userActionCreater";
+import axios from "axios";
+import * as URLS from "../../../shared/url_list";
 
-const RegisterUser = (props) => {
-  let tempUser = {
+const AddNewUser = (props) => {
+  let tempUserData = {
     fName: "",
     lName: "",
     dob: "",
     username: "",
     email: "",
-    mobile: "",
+    mobile: "9922664488",
     role: "",
     password: "",
     rpassword: "",
     createdDate: Date(),
   };
 
-  const [user, setUser] = useState(tempUser);
-  let history = useHistory();
+  const [user, setUser] = useState(tempUserData);
+
+  const history = useHistory();
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -31,22 +32,11 @@ const RegisterUser = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    if(user.fName.length < 1){
-      alert("plse enter valid First name")
-    }
-    if(user.lName.length < 1){
-      alert("plse enter valid last name")
-    }
-    
-   if(user.password != user.rpassword){
-     alert('plse enter the same password')
-   }else{
-      onSubmit(newUserData);
-   }
+    onSubmit(newUserData);
   };
 
   const checkEmail = (serverUsers, formData) => {
-    const user = serverUsers.find((user) => user.email === formData.email); // extract the email from the formData
+    const user = serverUsers.find((user) => user.email === formData.email);
     if (user) return user;
   };
 
@@ -56,20 +46,18 @@ const RegisterUser = (props) => {
       .then((res) => checkEmail(res.data, formData));
     if (user) {
       alert("email alreday exists");
-      // do whatever you want here with the existence user store.
     } else {
       props.addUserHandler(formData);
-      history.push("/login");
+      history.push("/patientlist");
     }
   };
 
   return (
     <>
-       <div className="container">
-       
-       <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-         <div className="card-header">Login form</div>
-         <div className="card-body">
+      <div className="container">
+        <h4 className="text-center">Add New User</h4>
+        <div className="row justify-content-center">
+          <div className="col-8">
             <form name="registration_form" onSubmit={submitUserData}>
               <div className="form-group">
                 <label>First Name</label>
@@ -146,18 +134,6 @@ const RegisterUser = (props) => {
                   onChange={handleUserChange}
                 />
               </div>
-              <div className="form-group">
-                <label>mobil</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="mobil"
-                  id="mobil"
-                  placeholder="Enter Your mobile number"
-                  value={user.mobile}
-                  onChange={handleUserChange}
-                />
-              </div>
 
               <div className="form-group">
                 <label>Password</label>
@@ -183,7 +159,7 @@ const RegisterUser = (props) => {
                   onChange={handleUserChange}
                 />
               </div>
-              <button type="submit" className="btn btn-primary mt-2 center">
+              <button type="submit" className="btn btn-primary m-4">
                 Submit
               </button>
             </form>
@@ -207,4 +183,5 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 let hof = connect(mapStateToProps, mapDispatchToProps);
-export default hof(RegisterUser);
+
+export default hof(AddNewUser);
