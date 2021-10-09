@@ -1,14 +1,12 @@
-import First from "../assets/First.jpg";
-import Second from "../assets/Second.jpg";
 
 export default [
   {
     title: "",
-    urls: First,
+    urls: "https://www.kailashhealthcare.com/healthpackagesnew/images/slider-1.png",
   },
   {
     title: "",
-    urls: Second,
+    urls: "https://www.maggohospital.com/wp-content/uploads/2019/10/banner1.jpg",
   },
   {
     title: "",
