@@ -43,4 +43,16 @@ export function AddDemographicsAsync(user) {
     );
   };
 }
+export function AddImmunizationsAsync(user) {
+  return (dispatch) => {
+    userService.Addpatientimmunization(user).then(
+      (response) => {
+        dispatch({ type: actions.ADD_IMMUNIZATION, newuser:user });
+      },
+      (error) => {
+        return;
+      }
+    );
+  };
+}
 

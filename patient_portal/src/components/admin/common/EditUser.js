@@ -1,21 +1,25 @@
 import { React, useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { adminService } from "../../../services/register_user_service";
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
-const EditUser = (props) => {
+const EditUser = () => {
   let tempUserData = {
     fName: "",
     lName: "",
     dob: "",
     username: "",
     email: "",
-    mobile: "9922664488",
+    mobile: "",
     role: "",
     password: "",
     rpassword: "",
     createdDate: Date(),
   };
+
   const [user, setUser] = useState(tempUserData);
+
   const { id } = useParams();
   const history = useHistory();
 
@@ -26,7 +30,6 @@ const EditUser = (props) => {
   const loadUsers = (_id) => {
     adminService.getUserById(_id).then(
       (response) => {
-        console.log(response.data);
         setUser(response.data[0]);
       },
       (error) => {
@@ -38,7 +41,9 @@ const EditUser = (props) => {
   const submitNewUserData = (_id, userData) => {
     adminService.updateUser(_id, userData).then(
       (response) => {
-        history.push("/patientlist");
+        user.role === "patient"
+          ? history.push("/patientlist")
+          : history.push("/physicianlist");
       },
       (error) => {}
     );
@@ -57,8 +62,12 @@ const EditUser = (props) => {
   };
 
   return (
-    <div className="container">
-      <h2 className="text-center text-primary bold">Edit User</h2>
+    <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
+      <Link className="btn btn-warning" to="/patientlist">
+        <BsFillArrowLeftSquareFill />
+        <span className="m-2">Back</span>
+      </Link>
+      <h3 className="text-success text-center fw-bold ">Edit Details</h3>
       <div className="row justify-content-center">
         <div className="col-8">
           <form name="registration_form" onSubmit={submitUserData}>
@@ -118,6 +127,7 @@ const EditUser = (props) => {
                 id="role"
                 value={user.role}
                 onChange={handleUserChange}
+                disabled={true}
               >
                 <option value="">Select</option>
                 <option value="admin">Admin</option>
@@ -135,9 +145,21 @@ const EditUser = (props) => {
                 placeholder="Enter email"
                 value={user.email}
                 onChange={handleUserChange}
+                disabled={true}
               />
             </div>
-
+            <div className="form-group">
+              <label>Phone</label>
+              <input
+                type="text"
+                className="form-control"
+                name="mobile"
+                id="mobile"
+                placeholder="Enter Mobile Number"
+                value={user.mobile}
+                onChange={handleUserChange}
+              />
+            </div>
             <div className="form-group">
               <label>Password</label>
               <input
@@ -150,8 +172,8 @@ const EditUser = (props) => {
                 onChange={handleUserChange}
               />
             </div>
-            <button type="submit" className="btn btn-primary m-4">
-              Submit
+            <button type="submit" className="btn btn-primary mt-4">
+              Save Details
             </button>
           </form>
         </div>

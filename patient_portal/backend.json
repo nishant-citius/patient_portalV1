@@ -1,43 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "admin_1@gmail.com",
-      "password": "admin_123",
-      "first_name": "Admin",
-      "last_name": "Admin",
-      "dob": "2021-10-04",
-      "mobile": "9865342166",
-      "role": "admin",
-      "created_date": "",
-      "created_by": "",
-      "status": ""
-    },
-    {
-      "fName": "Ajinkya",
-      "lName": "Pathak",
-      "dob": "2021-10-04",
-      "username": "ajinkya",
-      "email": "aj@email.com",
-      "mobile": "9403541779",
-      "role": "patient",
-      "password": "12345",
-      "createdDate": "Tue Oct 05 2021 18:46:51 GMT+0530 (India Standard Time)",
-      "id": "QzR3zYy"
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-27",
-      "username": "nish",
-      "email": "nish@email.com",
-      "mobile": "9922664488",
-      "role": "patient",
-      "password": "123",
-      "createdDate": "Tue Oct 05 2021 18:47:48 GMT+0530 (India Standard Time)",
-      "id": "qf5-u4i"
-    },
-    {
       "fName": "Pooja",
       "lName": "Thakur",
       "dob": "2021-09-27",
@@ -47,20 +10,22 @@
       "role": "admin",
       "password": "123",
       "createdDate": "Tue Oct 05 2021 18:48:28 GMT+0530 (India Standard Time)",
-      "id": "Glv5ecj"
+      "id": "Glv5ecj",
+      "isActive": false
     },
     {
-      "fName": "Person-1",
-      "lName": "Person-1",
-      "dob": "2021-10-04",
-      "username": "person-1",
+      "fName": "Ajinkya",
+      "lName": "Pathak",
+      "dob": "2006-03-28",
+      "username": "@jinx",
       "email": "p@email.com",
       "mobile": "9922664488",
       "role": "patient",
       "password": "12345",
       "rpassword": "12345",
       "createdDate": "Fri Oct 08 2021 11:21:12 GMT+0530 (India Standard Time)",
-      "id": "OxtfXFr"
+      "id": "OxtfXFr",
+      "isActive": false
     },
     {
       "fName": "Ajinkya ",
@@ -73,47 +38,36 @@
       "password": "123",
       "rpassword": "123",
       "createdDate": "Fri Oct 08 2021 11:36:57 GMT+0530 (India Standard Time)",
-      "id": "YEPY4P1"
+      "id": "YEPY4P1",
+      "isActive": false
     },
     {
-      "fName": "John ",
-      "lName": "Morgan",
-      "dob": "2021-10-09",
-      "username": "john",
-      "email": "j@email",
-      "mobile": "9922664488",
-      "role": "patient",
+      "fName": "Steven",
+      "lName": "Strange",
+      "dob": "2021-10-08",
+      "username": "Dr.Strange",
+      "email": "strange@email.com",
+      "mobile": "9565846529",
+      "role": "physician",
+      "password": "1234",
+      "rpassword": "1234",
+      "createdDate": "Sun Oct 10 2021 15:44:14 GMT+0530 (India Standard Time)",
+      "id": "g7kO58T",
+      "isActive": false
+    },
+    {
+      "fName": "John",
+      "lName": "Morhson",
+      "dob": "2021-10-14",
+      "username": "John",
+      "email": "john@doc.com",
+      "mobile": "9955641258",
+      "role": "physician",
       "password": "123",
       "rpassword": "123",
-      "createdDate": "Fri Oct 08 2021 11:43:09 GMT+0530 (India Standard Time)",
-      "id": "DxW0yQW"
-    },
-    {
-      "fName": "",
-      "lName": "sdfgh",
-      "dob": "2021-10-04",
-      "username": "Nishant.Chaubehvvhvhy@citiustech.com",
-      "email": "nishant.chaubbhbhbhey@citiustech.com",
-      "mobile": "",
-      "role": "patient",
-      "password": "",
-      "rpassword": "",
-      "createdDate": "Fri Oct 08 2021 14:44:01 GMT+0530 (India Standard Time)",
-      "mobil": "0",
-      "id": "XtACnJx"
-    },
-    {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "username": "",
-      "email": "",
-      "mobile": "",
-      "role": "",
-      "password": "",
-      "rpassword": "",
-      "createdDate": "Fri Oct 08 2021 14:45:04 GMT+0530 (India Standard Time)",
-      "id": "YaHyKpP"
+      "createdDate": "Sun Oct 10 2021 15:47:29 GMT+0530 (India Standard Time)",
+      "id": "xAoP04C",
+      "isActive": false
     }
   ],
   "demographics": [],
@@ -134,20 +88,22 @@
     {
       "id": "",
       "patient_id": "",
-      "covid_19_vaccine": "",
+      "vaccine_brand": "",
+      "age_category":"",
+      "dose_detail":"",
       "general_vaccine": ""
     }
   ],
-  "schedule_appointment": [
+  "appointments": [
     {
-      "id": "",
-      "patient_id": "",
-      "meeting_title": "",
+      "appointmentId": "",
+      "patientId": "",
+      "physicianId": "",
+      "appointmentTitle": "",
       "description": "",
-      "physication": "",
-      "date": "",
-      "time": "",
-      "reason": ""
+      "startDate": "",
+      "endDate": "",
+      "timeSlot": ""
     }
   ],
   "order": [
@@ -172,6 +128,16 @@
       "lab_report": "",
       "radiology_report": "",
       "medication": ""
+    }
+  ],
+  "billing": [
+    {
+      "billingId": "",
+      "patientId": "",
+      "physicianId": "",
+      "paymentMode": "",
+      "billAmount": "",
+      "date": ""
     }
   ],
   "allergies": [

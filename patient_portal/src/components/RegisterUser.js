@@ -31,18 +31,18 @@ const RegisterUser = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    if(user.fName.length < 1){
-      alert("plse enter valid First name")
+    if (user.fName.length < 1) {
+      alert("plse enter valid First name");
     }
-    if(user.lName.length < 1){
-      alert("plse enter valid last name")
+    if (user.lName.length < 1) {
+      alert("plse enter valid last name");
     }
-    
-   if(user.password != user.rpassword){
-     alert('plse enter the same password')
-   }else{
+
+    if (user.password !== user.rpassword) {
+      alert("plse enter the same password");
+    } else {
       onSubmit(newUserData);
-   }
+    }
   };
 
   const checkEmail = (serverUsers, formData) => {
@@ -65,11 +65,12 @@ const RegisterUser = (props) => {
 
   return (
     <>
-       <div className="container">
-       
-       <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-         <div className="card-header">Login form</div>
-         <div className="card-body">
+      <div className="container mt-4">
+        <div className="card shadow-lg p-10 mb-6 bg-white rounded">
+          <div className="card-header fw-bold text-center fs-5">
+            Registration Form
+          </div>
+          <div className="card-body">
             <form name="registration_form" onSubmit={submitUserData}>
               <div className="form-group">
                 <label>First Name</label>
@@ -78,7 +79,7 @@ const RegisterUser = (props) => {
                   className="form-control"
                   name="fName"
                   id="fName"
-                  placeholder="Enter Your First name"
+                  placeholder="Enter First name"
                   value={user.fName}
                   onChange={handleUserChange}
                 />
@@ -87,34 +88,34 @@ const RegisterUser = (props) => {
                 <label>Last Name</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control "
                   name="lName"
                   id="lName"
-                  placeholder="Enter Your Last name"
+                  placeholder="Enter Last Name"
                   value={user.lName}
                   onChange={handleUserChange}
                 />
               </div>
               <div className="form-group">
-                <label>DOB</label>
+                <label>Date Of Birth</label>
                 <input
                   type="date"
                   className="form-control"
                   name="dob"
                   id="dob"
-                  placeholder="Enter Your Dob"
+                  placeholder="Enter Your Date Of Birth"
                   value={user.dob}
                   onChange={handleUserChange}
                 />
               </div>
               <div className="form-group">
-                <label>User Name</label>
+                <label>Username</label>
                 <input
                   type="text"
                   className="form-control"
                   name="username"
                   id="username"
-                  placeholder="Enter User Name"
+                  placeholder="Create Username"
                   value={user.username}
                   onChange={handleUserChange}
                 />
@@ -141,19 +142,19 @@ const RegisterUser = (props) => {
                   className="form-control"
                   id="email"
                   name="email"
-                  placeholder="Enter email"
+                  placeholder="Enter Email Address"
                   value={user.email}
                   onChange={handleUserChange}
                 />
               </div>
               <div className="form-group">
-                <label>mobil</label>
+                <label>Phone</label>
                 <input
                   type="text"
                   className="form-control"
-                  name="mobil"
-                  id="mobil"
-                  placeholder="Enter Your mobile number"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Enter Mobile Number"
                   value={user.mobile}
                   onChange={handleUserChange}
                 />
@@ -166,7 +167,7 @@ const RegisterUser = (props) => {
                   className="form-control"
                   id="password"
                   name="password"
-                  placeholder="Password"
+                  placeholder="Create Password"
                   value={user.password}
                   onChange={handleUserChange}
                 />
@@ -175,10 +176,10 @@ const RegisterUser = (props) => {
                 <label>Retype-Password</label>
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control "
                   id="rpassword"
                   name="rpassword"
-                  placeholder="Password"
+                  placeholder="Repeat your Password"
                   value={user.rpassword}
                   onChange={handleUserChange}
                 />
