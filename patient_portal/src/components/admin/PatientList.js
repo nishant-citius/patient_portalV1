@@ -1,17 +1,20 @@
 import { React, useState, useEffect } from "react";
-import { adminService } from "../../../services/register_user_service";
+import { adminService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
+import {
+  BsFillTrashFill,
+  BsFillPencilFill,
+  BsPersonFill,
+} from "react-icons/bs";
 
 const PatientList = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  /**nitialLoad */
   useEffect(() => {
     loadUsers();
   }, []);
 
-  /**loadUserDetails */
   const loadUsers = () => {
     adminService.getAllPatients().then(
       (response) => {
@@ -24,7 +27,6 @@ const PatientList = () => {
     );
   };
 
-  /**Delete User */
   const deleteUser = (id) => {
     adminService.deleteUser(id).then(
       (response) => {
@@ -39,21 +41,18 @@ const PatientList = () => {
   if (isLoading) {
     return (
       <>
-        <div className="float-end mr-4">
-          <Link to={`/addnewuser`} className="btn btn-primary ">
-            Add New User
-          </Link>
-        </div>
-        <div className="container-xl">
-          <table className="table table-bordered shadow">
-            <thead className="thead-dark">
+        <div className="container mt-4">
+          <h1 className="text-success text-center fw-bold ">Patient List</h1>
+          <table className="table table-bordered shadow mt-4">
+            <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
-                <th scope="col">Id</th>
+                {/* <th scope="col">Id</th> */}
                 <th scope="col">Name</th>
-                <th scope="col">DOB</th>
+                <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
+                <th scope="col">Status</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -61,31 +60,30 @@ const PatientList = () => {
               {users.map((user, index) => {
                 return (
                   <tr key={index}>
-                    <th scope="row">{index}</th>
-                    <td>{user.id}</td>
+                    <th scope="row">{index + 1}</th>
+                    {/* <td>{user.id}</td> */}
                     <td>{`${user.fName} ${user.lName}`}</td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>
                     <td>
-                      <Link
-                        to={`/patientdetails/${user.id}`}
-                        className="btn btn-primary m-2"
-                      >
-                        View
-                      </Link>
-                      <Link
-                        to={`/edit/${user.id}`}
-                        className="btn btn-warning m-2"
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => deleteUser(user.id)}
-                      >
-                        Delete
-                      </button>
+                      <input className="m-2" type="checkbox" />
+                      <span>Active</span>
+                    </td>
+                    <td>
+                      <span className="p-2">
+                        <Link to={`/userdetails/${user.id}`}>
+                          <BsPersonFill />
+                        </Link>
+                      </span>
+                      <span className="p-2">
+                        <Link to={`/edit/${user.id}`}>
+                          <BsFillPencilFill />
+                        </Link>
+                      </span>
+                      <span className="p-2" onClick={() => deleteUser(user.id)}>
+                        <BsFillTrashFill />
+                      </span>
                     </td>
                   </tr>
                 );
@@ -96,11 +94,7 @@ const PatientList = () => {
       </>
     );
   } else {
-    return (
-      <>
-        <h1 className="bold text-danger ">Loading...</h1>
-      </>
-    );
+    return <h1 className="text-primary text-center fw-bold">Loading...</h1>;
   }
 };
 
