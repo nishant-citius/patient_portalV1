@@ -7,7 +7,6 @@ class Card extends React.Component {
         <div className="card-header text-success">
           <h6>{this.props.title}</h6>
         </div>
-
         <div className="card-body">
           {this.props.children}
           {this.props.footer}

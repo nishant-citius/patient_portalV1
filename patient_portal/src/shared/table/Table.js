@@ -1,34 +1,32 @@
 import React from "react";
 
-const Table = ({ users }) => {
+const Table = (props) => {
   return (
     <>
-      <div className="container">
-        <table className="table table-hover">
-          <thead>
+      <h1 className="text-success text-center fw-bold ">Heading</h1>
+      <div className="container-xl">
+        <table className="table table-bordered shadow">
+          <thead className="table-dark">
             <tr>
+              <th scope="col">Sr.No</th>
               <th scope="col">Id</th>
               <th scope="col">Name</th>
               <th scope="col">DOB</th>
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
-              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody>
-            {users.map((user, index) => {
+            {props.users.map((user, index) => {
               return (
-                <>
-                  <tr>
-                    <th scope="row">{index}</th>
-                    <td>{user.id}</td>
-                    <td>{`${user.fName} ${user.lName}`}</td>
-                    <td>{}</td>
-
-                    <td>{user.email}</td>
-                    <td>{user.dob}</td>
-                  </tr>
-                </>
+                <tr key={index}>
+                  <th scope="row">{index}</th>
+                  <td>{user.id}</td>
+                  <td>{`${user.fName} ${user.lName}`}</td>
+                  <td>{user.dob}</td>
+                  <td>{user.email}</td>
+                  <td>{user.mobile}</td>
+                </tr>
               );
             })}
           </tbody>
