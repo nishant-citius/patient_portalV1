@@ -45,22 +45,23 @@ const Login = (props) => {
   };
 
   const logInUser = (user) => {
+    userSession(user);
     if (user.role === "admin") {
       history.push("/admin");
     } else if (user.role === "patient") {
+      console.log(user);
       history.push("/demographics");
     } else {
       history.push("/physician");
     }
-    userSession(user);
   };
 
   const userSession = (user) => {
     const session = window.sessionStorage;
     session.setItem("userInfo", JSON.stringify(user));
   };
-  /** logic is reverted as of now */
-  const isActive = (user) => (user.isActive ? false : true);
+
+  const isActive = (user) => (user.isActive ? true : false);
 
   return (
     <>

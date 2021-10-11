@@ -11,7 +11,7 @@
       "password": "123",
       "createdDate": "Tue Oct 05 2021 18:48:28 GMT+0530 (India Standard Time)",
       "id": "Glv5ecj",
-      "isActive": false
+      "isActive": true
     },
     {
       "fName": "Ajinkya",
@@ -25,7 +25,7 @@
       "rpassword": "12345",
       "createdDate": "Fri Oct 08 2021 11:21:12 GMT+0530 (India Standard Time)",
       "id": "OxtfXFr",
-      "isActive": false
+      "isActive": true
     },
     {
       "fName": "Ajinkya ",
@@ -39,7 +39,7 @@
       "rpassword": "123",
       "createdDate": "Fri Oct 08 2021 11:36:57 GMT+0530 (India Standard Time)",
       "id": "YEPY4P1",
-      "isActive": false
+      "isActive": true
     },
     {
       "fName": "Steven",
@@ -53,7 +53,7 @@
       "rpassword": "1234",
       "createdDate": "Sun Oct 10 2021 15:44:14 GMT+0530 (India Standard Time)",
       "id": "g7kO58T",
-      "isActive": false
+      "isActive": true
     },
     {
       "fName": "John",
@@ -67,7 +67,7 @@
       "rpassword": "123",
       "createdDate": "Sun Oct 10 2021 15:47:29 GMT+0530 (India Standard Time)",
       "id": "xAoP04C",
-      "isActive": false
+      "isActive": true
     }
   ],
   "demographics": [],
@@ -89,8 +89,8 @@
       "id": "",
       "patient_id": "",
       "vaccine_brand": "",
-      "age_category":"",
-      "dose_detail":"",
+      "age_category": "",
+      "dose_detail": "",
       "general_vaccine": ""
     }
   ],
