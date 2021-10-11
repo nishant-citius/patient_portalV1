@@ -56,3 +56,15 @@ export function AddImmunizationsAsync(user) {
   };
 }
 
+export function AddMedicationAndAllergiesAsync(user) {
+  return (dispatch) => {
+    userService.Addmedicationandallergies(user).then(
+      (response) => {
+        dispatch({ type: actions.ADD_MEDICATIONANDALLERGIES, newuser:user });
+      },
+      (error) => {
+        return;
+      }
+    );
+  };
+}
