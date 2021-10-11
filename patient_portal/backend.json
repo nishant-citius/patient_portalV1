@@ -70,7 +70,26 @@
       "isActive": true
     }
   ],
-  "demographics": [],
+  "demographics": [
+    {
+      "fName": "nishanyt",
+      "lName": "hbyfyfy",
+      "dob": "2021-10-01",
+      "gender": "male",
+      "ethnicity": "dfghjk",
+      "race": "",
+      "education": "sdfghjk",
+      "employment": "dfghjk",
+      "address": "fghjk",
+      "phone_number": "1234567888",
+      "medical_history": "1234567890",
+      "family_medical_history": "sdfghjkl",
+      "surgeries": "dfghjk",
+      "insurance_provider": "dfghjk",
+      "userId": "OxtfXFr",
+      "id": 1
+    }
+  ],
   "medication_allergies": [
     {
       "id": "",
@@ -92,6 +111,14 @@
       "age_category": "",
       "dose_detail": "",
       "general_vaccine": ""
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "dfghjk",
+      "dose_detail": "1",
+      "general_vaccine": "dfghjk",
+      "userId": "OxtfXFr",
+      "id": "TZEd-AN"
     }
   ],
   "appointments": [

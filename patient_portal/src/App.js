@@ -8,7 +8,7 @@ import AdminDashboard from "./components/admin/AdminDashboard";
 import Patient_dashboard from "./components/patient/Patient_dashboard";
 import Physician_dashboard from "./components/physician/Physician_dashboard";
 import Demographics from "./components/patient/Demographics";
-import Immuniztion from "./components/patient/Immuniztion";
+import Immunization from "./components/patient/Immunization";
 import Slider from "./components/imageslider/Slider";
 import About from "./pages/about";
 import Services from "./pages/services";
@@ -35,7 +35,7 @@ function App() {
           <Route path="/physician" component={Physician_dashboard} />
 
           <Route path="/demographics" component={Demographics} />
-          <Route path="/immuniztion" component={Immuniztion} />
+          <Route path="/immunization" component={Immunization} />
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} />
