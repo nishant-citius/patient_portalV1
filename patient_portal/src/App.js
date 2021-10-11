@@ -10,9 +10,9 @@ import Physician_dashboard from "./components/physician/Physician_dashboard";
 import Demographics from "./components/patient/Demographics";
 import Immuniztion from "./components/patient/Immuniztion";
 import Slider from "./components/imageslider/Slider";
-import About from './pages/about';
-import Services from './pages/services';
-import Contact from './pages/contact';
+import About from "./pages/about";
+import Services from "./pages/services";
+import Contact from "./pages/contact";
 
 import PatientList from "./components/admin/PatientList";
 import PhysicianList from "./components/admin/PhysicianList";
