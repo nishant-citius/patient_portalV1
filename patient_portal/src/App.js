@@ -20,11 +20,14 @@ import Appointments from "./components/admin/Appointments";
 import ImmunizationDetails from "./components/admin/ImmunizationDetails";
 import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
+// import Navbar from "components/Layout";
+// import Navbar from "./components/admin/common/Navbar";
 
 function App() {
   return (
     <>
       <div>
+        {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={PatientPortalHome} />
           <Route path="/login" component={Login} />
