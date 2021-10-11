@@ -6,6 +6,7 @@ import {
   BsFillPencilFill,
   BsPersonFill,
 } from "react-icons/bs";
+import { DemographicsReducer } from "redux/reducers/Demographicsreducer";
 
 const PhysicianList = () => {
   const [users, setUsers] = useState([]);
