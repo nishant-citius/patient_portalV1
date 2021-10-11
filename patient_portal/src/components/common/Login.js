@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
 import * as URLS from "../../services/url_list";
+import imageSrc from '../../images/Healthcare.jpg';
+import "../common/common_style.css";
 
 const Login = (props) => {
   const tempUser = {
@@ -65,56 +67,13 @@ const Login = (props) => {
 
   return (
     <>
-      {/* <div className="container">
-        <h4 className="text-center">Login Page</h4>
+      <div className="container-fluid page_db">
         <div className="row justify-content-center">
-          <div className="col-8"></div>
-          <form className="login-form">
-            <div className="form-group">
-              <label htmlFor="user name">User Name</label>
-              <input
-                type="text"
-                className="form-control"
-                name="username"
-                onChange={handleUserChange}
-              />
-              <small id="emailHelp" className="form-text text-muted">
-                Forgot username?
-              </small>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                className="form-control"
-                name="password"
-                onChange={handleUserChange}
-              />
-              <small id="passwordHelp" className="form-text text-muted">
-                Forgot password?
-              </small>
-            </div>
-            <br />
-            <div>
-              <label className="form-check-label" htmlFor="Check1">
-                Remember me
-              </label>
-              <input type="checkbox" className="form-check-input" id="Check1" />
-            </div>
-            <br />
-            <button
-              type="submit"
-              className="btn btn-primary"
-              onClick={submitUserData}
-            >
-              Login
-            </button>
-          </form>
-        </div>
-      </div> */}
-      <div className="container">
-        <div className="card shadow-lg p-10 mb-6 bg-white rounded">
+          {/* <div className="col-7">
+            <img className="login_img" src={imageSrc}/>
+          </div> */}
+          <div className="col-5">
+          <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
           <div className="card-header ">Login form</div>
           <div className="card-body">
             <form className="login-form">
@@ -140,7 +99,7 @@ const Login = (props) => {
                 />
               </div>
               <br />
-              <div>
+              {/* <div>
                 <label className="form-check-label " htmlFor="Check1">
                   Remember me
                 </label>
@@ -149,7 +108,7 @@ const Login = (props) => {
                   className="form-check-input l-2"
                   id="Check1"
                 />
-              </div>
+              </div> */}
               <br />
               <button
                 type="submit"
@@ -158,13 +117,15 @@ const Login = (props) => {
               >
                 Login
               </button>
-              <a className="btn btn-secondary m-2" href="/forgotpassword">
+              {/* <a className="btn btn-secondary m-2" href="/forgotpassword">
                 forgot password
               </a>
               <a className="btn btn-secondary " href="/forgotusername">
                 forgot username
-              </a>
+              </a> */}
             </form>
+          </div>
+        </div>
           </div>
         </div>
       </div>
