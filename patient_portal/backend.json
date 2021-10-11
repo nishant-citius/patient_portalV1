@@ -50,13 +50,13 @@
       "id": "Glv5ecj"
     },
     {
-      "fName": "Person-1",
+      "fName": "Person-11",
       "lName": "Person-1",
       "dob": "2021-10-04",
-      "username": "person-1",
+      "username": "person-11",
       "email": "p@email.com",
       "mobile": "9922664488",
-      "role": "patient",
+      "role": "physician",
       "password": "12345",
       "rpassword": "12345",
       "createdDate": "Fri Oct 08 2021 11:21:12 GMT+0530 (India Standard Time)",
@@ -74,19 +74,6 @@
       "rpassword": "123",
       "createdDate": "Fri Oct 08 2021 11:36:57 GMT+0530 (India Standard Time)",
       "id": "YEPY4P1"
-    },
-    {
-      "fName": "John ",
-      "lName": "Morgan",
-      "dob": "2021-10-09",
-      "username": "john",
-      "email": "j@email",
-      "mobile": "9922664488",
-      "role": "patient",
-      "password": "123",
-      "rpassword": "123",
-      "createdDate": "Fri Oct 08 2021 11:43:09 GMT+0530 (India Standard Time)",
-      "id": "DxW0yQW"
     },
     {
       "fName": "",
