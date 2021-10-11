@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import { connect } from "react-redux";
-import * as actionCreator from "../redux/actions/userActionCreater";
+import * as actionCreator from "../../redux/actions/userActionCreater";
 import axios from "axios";
-import * as URLS from "../shared/url_list";
+import * as URLS from "../../services/url_list";
 import { useHistory } from "react-router";
 
 const RegisterUser = (props) => {
