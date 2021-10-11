@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
-import * as URLS from "../shared/url_list";
+import * as URLS from "../../services/url_list";
 
 const Login = (props) => {
   const tempUser = {
