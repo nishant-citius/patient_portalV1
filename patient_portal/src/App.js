@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import PatientPortalHome from "./components/PatientPortalHome";
-import Login from "./components/Login";
-import RegisterUser from "./components/RegisterUser";
+import PatientPortalHome from "./components/common/PatientPortalHome";
+import Login from "./components/common/Login";
+import RegisterUser from "./components/common/RegisterUser";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import Patient_dashboard from "./components/patient/Patient_dashboard";
 import Physician_dashboard from "./components/physician/Physician_dashboard";

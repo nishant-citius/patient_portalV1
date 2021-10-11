@@ -1,5 +1,5 @@
 import axios from "axios";
-import * as URLS from "../shared/url_list";
+import * as URLS from "./url_list";
 
 class UserServices {
   GetAllUsers() {
