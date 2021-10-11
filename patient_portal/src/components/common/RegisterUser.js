@@ -16,6 +16,7 @@ const RegisterUser = (props) => {
     role: "",
     password: "",
     rpassword: "",
+    blood_group: "",
     createdDate: Date(),
   };
 
@@ -65,62 +66,65 @@ const RegisterUser = (props) => {
 
   return (
     <>
-      <div className="container mt-4">
+    <section className="page_db">
+      <div className="container pt-5">
         <div className="card shadow-lg p-10 mb-6 bg-white rounded">
           <div className="card-header fw-bold text-center fs-5">
             Registration Form
           </div>
           <div className="card-body">
-            <form name="registration_form" onSubmit={submitUserData}>
-              <div className="form-group">
-                <label>First Name</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="fName"
-                  id="fName"
-                  placeholder="Enter First name"
-                  value={user.fName}
-                  onChange={handleUserChange}
-                />
-              </div>
-              <div className="form-group">
-                <label>Last Name</label>
-                <input
-                  type="text"
-                  className="form-control "
-                  name="lName"
-                  id="lName"
-                  placeholder="Enter Last Name"
-                  value={user.lName}
-                  onChange={handleUserChange}
-                />
-              </div>
-              <div className="form-group">
-                <label>Date Of Birth</label>
-                <input
-                  type="date"
-                  className="form-control"
-                  name="dob"
-                  id="dob"
-                  placeholder="Enter Your Date Of Birth"
-                  value={user.dob}
-                  onChange={handleUserChange}
-                />
-              </div>
-              <div className="form-group">
-                <label>Username</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="username"
-                  id="username"
-                  placeholder="Create Username"
-                  value={user.username}
-                  onChange={handleUserChange}
-                />
-              </div>
-              <div className="form-group">
+          <form name="registration_form" onSubmit={submitUserData}>
+            <div className="row justify-content-center">
+              <div className="col-12 col-md-6">
+                <div className="form-group">
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="fName"
+                    id="fName"
+                    placeholder="Enter First name"
+                    value={user.fName}
+                    onChange={handleUserChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    className="form-control "
+                    name="lName"
+                    id="lName"
+                    placeholder="Enter Last Name"
+                    value={user.lName}
+                    onChange={handleUserChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Date Of Birth</label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    name="dob"
+                    id="dob"
+                    placeholder="Enter Your Date Of Birth"
+                    value={user.dob}
+                    onChange={handleUserChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="username"
+                    id="username"
+                    placeholder="Create Username"
+                    value={user.username}
+                    onChange={handleUserChange}
+                  />
+                </div>
+                <div className="form-group">
                 <label>Role</label>
                 <select
                   className="form-control"
@@ -134,6 +138,20 @@ const RegisterUser = (props) => {
                   <option value="patient">Patient</option>
                   <option value="physician">Physician</option>
                 </select>
+              </div>
+              </div>
+              <div className="col-12 col-md-6">
+              <div className="form-group">
+                <label>Blood Group</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="blood_group"
+                  name="blood_group"
+                  placeholder="Enter Your Blood Group"
+                  value={user.blood_group}
+                  onChange={handleUserChange}
+                />
               </div>
               <div className="form-group">
                 <label>Email</label>
@@ -184,6 +202,8 @@ const RegisterUser = (props) => {
                   onChange={handleUserChange}
                 />
               </div>
+              </div>
+            </div> 
               <button type="submit" className="btn btn-primary mt-2 center">
                 Submit
               </button>
@@ -191,6 +211,7 @@ const RegisterUser = (props) => {
           </div>
         </div>
       </div>
+      </section>
     </>
   );
 };

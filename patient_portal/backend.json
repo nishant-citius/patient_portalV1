@@ -72,24 +72,6 @@
   ],
   "demographics": [
     {
-<<<<<<< HEAD
-      "fName": "nishanyt",
-      "lName": "hbyfyfy",
-      "dob": "2021-10-01",
-      "gender": "male",
-      "ethnicity": "dfghjk",
-      "race": "",
-      "education": "sdfghjk",
-      "employment": "dfghjk",
-      "address": "fghjk",
-      "phone_number": "1234567888",
-      "medical_history": "1234567890",
-      "family_medical_history": "sdfghjkl",
-      "surgeries": "dfghjk",
-      "insurance_provider": "dfghjk",
-      "userId": "OxtfXFr",
-      "id": 1
-=======
       "fName": "dfjkasdf",
       "lName": "asdfasf",
       "dob": "2021-10-06",
@@ -214,7 +196,6 @@
       "insurance_provider": "asdf",
       "userId": "OxtfXFr",
       "id": 7
->>>>>>> 60b9d6484600ed8074ca9a70527a006ed3839b59
     }
   ],
   "medication_allergies": [
