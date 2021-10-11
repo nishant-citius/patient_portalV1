@@ -1,5 +1,8 @@
 import { React, useState } from "react";
 import Calendar from "react-calendar";
+import Dropdown from 'react-bootstrap/Dropdown';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 
@@ -12,21 +15,26 @@ const Physician_dashboard = () => {
       <Calendar
         onChange={onChange}
         value={value}
+        className="mb-4"
       />
       </div>
       <div className="col-6">
-      <div className="btn-group p-3">
-  <button type="button" className="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Action 
-  </button>
-  <ul className="dropdown-menu">
-    <li><a className="dropdown-item">Action</a></li>
-    <li><a className="dropdown-item" >Another action</a></li>
-    <li><a className="dropdown-item" >Something else here</a></li>
- 
-    <li><a className="dropdown-item" >Separated link</a></li>
-  </ul>
-</div>
+      <Dropdown>
+        <Dropdown.Toggle variant="success">
+        Select Appointments
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="#">
+          Day
+          </Dropdown.Item>
+          <Dropdown.Item href="#">
+          Week
+          </Dropdown.Item>
+          <Dropdown.Item href="#">
+          Month
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
      
       </div>
        <button className="btn btn-primary m-4">join online consultaion</button>
