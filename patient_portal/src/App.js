@@ -13,6 +13,8 @@ import Slider from "./components/imageslider/Slider";
 import About from "./pages/about";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
+import 'react-calendar/dist/Calendar.css';
+
 
 import PatientList from "./components/admin/PatientList";
 import PhysicianList from "./components/admin/PhysicianList";
