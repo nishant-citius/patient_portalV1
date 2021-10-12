@@ -68,6 +68,12 @@
       "createdDate": "Sun Oct 10 2021 15:47:29 GMT+0530 (India Standard Time)",
       "id": "xAoP04C",
       "isActive": true
+    },
+    {
+      "email": "user1@domain.com",
+      "password": "123456",
+      "name": "shiva",
+      "id": "CUXqjPi"
     }
   ],
   "demographics": [
