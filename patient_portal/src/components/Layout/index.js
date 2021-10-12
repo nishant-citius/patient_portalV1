@@ -1,4 +1,5 @@
 import React from "react";
+import imageSrc from "../../images/logo.png";
 
 import {
   Nav,
@@ -23,9 +24,7 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">
-          <img src="src/assets/logo.png" alt="logo" />
-        </NavLink>
+        <NavLink to="/">{/* <img src="" alt="logo" /> */}</NavLink>
         <Bars />
         <NavMenu>
           <NavLink to="/about" activeStyle>
@@ -43,9 +42,6 @@ const Navbar = () => {
           <NavBtnLink to="/login">Login</NavBtnLink>
         </NavBtn>
       </Nav>
-      <button onClick={logOutUser} className="btn btn-primary float-end">
-        Logout
-      </button>
     </>
   );
 };

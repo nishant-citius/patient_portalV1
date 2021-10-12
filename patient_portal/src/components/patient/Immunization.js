@@ -1,9 +1,8 @@
 import { React, useState, userEffect } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
 
-const Immuniztion = (props) => {
+const Immunization = (props) => {
   let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
 
   const [patientImmunization, setpatientImmunization] = useState({
@@ -42,8 +41,8 @@ const Immuniztion = (props) => {
                   <label htmlFor="age_category">Age Category</label>
                   <select
                     className="form-control"
-                    name="age_catg"
-                    id="age_catg"
+                    name="age_category"
+                    id="age_category"
                     value={patientImmunization.age_category}
                     onChange={HandleChange}
                   >
@@ -83,7 +82,7 @@ const Immuniztion = (props) => {
             <div className="form-group mt-4">
               <label htmlFor="general_vaccine">Other general Vaccines</label>
               <input
-                type="password"
+                type="text"
                 className="form-control"
                 placeholder="Please Enter General Vaccine Details"
                 name="general_vaccine"
@@ -119,4 +118,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 let hof = connect(mapStateToProps, mapDispatchToProps);
-export default hof(Immuniztion);
+export default hof(Immunization);
