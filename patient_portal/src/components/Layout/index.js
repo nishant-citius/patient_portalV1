@@ -9,7 +9,17 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
+import { useHistory } from "react-router";
+
 const Navbar = () => {
+  const history = useHistory();
+
+  const logOutUser = () => {
+    const session = window.sessionStorage;
+    session.removeItem("userInfo");
+    history.push("/");
+  };
+
   return (
     <>
       <Nav>
@@ -33,6 +43,9 @@ const Navbar = () => {
           <NavBtnLink to="/login">Login</NavBtnLink>
         </NavBtn>
       </Nav>
+      <button onClick={logOutUser} className="btn btn-primary float-end">
+        Logout
+      </button>
     </>
   );
 };

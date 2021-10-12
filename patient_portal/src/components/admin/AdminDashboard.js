@@ -1,15 +1,7 @@
-import Navbar from "./common/Navbar";
 import React from "react";
 import { useHistory } from "react-router";
-import { Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./admin.css";
-
-import PatientList from "./PatientList";
-import PhysicianList from "./PhysicianList";
-import Appointments from "./Appointments";
-import ImmunizationDetails from "./ImmunizationDetails";
-import EditUser from "./common/EditUser";
-import UserDetails from "./common/UserDetails";
 
 const AdminDashboard = (props) => {
   const history = useHistory();

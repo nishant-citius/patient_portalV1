@@ -2,6 +2,8 @@ import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
 import * as URLS from "../../services/url_list";
+import { connect } from "react-redux";
+import * as actionCreator from "../../redux/actions/userActionCreater";
 
 const Login = (props) => {
   const tempUser = {
@@ -22,6 +24,7 @@ const Login = (props) => {
     e.preventDefault();
     let newUserData = { ...user };
     onSubmit(newUserData);
+    props.loginHandler();
   };
 
   const checkEmail = (serverUsers, formData) => {
@@ -46,6 +49,9 @@ const Login = (props) => {
 
   const logInUser = (user) => {
     userSession(user);
+
+    console.log("IsLoggedIn--", props.loginStatus);
+
     if (user.role === "admin") {
       history.push("/admin");
     } else if (user.role === "patient") {
@@ -124,4 +130,17 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+const mapStatetoProps = (state) => {
+  return {
+    loginStatus: state.isLoggedIn.isLoggedIn,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginHandler: () => dispatch(actionCreator.loginUser()),
+  };
+};
+
+let hof = connect(mapStatetoProps, mapDispatchToProps);
+export default hof(Login);
