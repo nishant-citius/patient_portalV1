@@ -2,14 +2,28 @@ import { React, useState } from "react";
 import Calendar from "react-calendar";
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
+import { useHistory } from "react-router";
 
 
 
 
 const Physician_dashboard = () => {
   const [value, onChange] = useState(new Date());
+  const history = useHistory();
+
+
+  const logOutUser = () => {
+    const session = window.sessionStorage;
+    session.removeItem("userInfo");
+    history.push("/");
+  };
+
 
   return (
+    <>
+          <button onClick={logOutUser} className="btn btn-primary float-end mr-4">
+        Logout
+      </button>
     <div className='m-4'>
       <div className="row ">
       <div className="col-4">
@@ -79,6 +93,7 @@ const Physician_dashboard = () => {
       
       
       </div>
+      </>
   );
 };
 

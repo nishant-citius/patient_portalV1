@@ -1,79 +1,49 @@
 {
   "users": [
     {
-      "fName": "Pooja",
-      "lName": "Thakur",
-      "dob": "2021-09-27",
-      "username": "pooja",
-      "email": "pooja@email.com",
-      "mobile": "9922664488",
+      "fName": "Ajinkya ",
+      "lName": "Pathak",
+      "dob": "2021-10-06",
+      "username": "ajpathak",
+      "email": "aj@email.com",
+      "mobile": "562487157",
       "role": "admin",
-      "password": "123",
-      "createdDate": "Tue Oct 05 2021 18:48:28 GMT+0530 (India Standard Time)",
-      "id": "Glv5ecj",
-      "isActive": true
+      "password": "12345",
+      "rpassword": "12345",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Tue Oct 12 2021 16:39:22 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 1
     },
     {
-      "fName": "Ajinkya",
-      "lName": "Pathak",
-      "dob": "2006-03-28",
-      "username": "@jinx",
-      "email": "p@email.com",
-      "mobile": "9922664488",
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-10-13",
+      "username": "nish",
+      "email": "nish@gmail.com",
+      "mobile": "1245878428",
       "role": "patient",
       "password": "12345",
       "rpassword": "12345",
-      "createdDate": "Fri Oct 08 2021 11:21:12 GMT+0530 (India Standard Time)",
-      "id": "OxtfXFr",
-      "isActive": true
+      "blood_group": "A Rh + Ve",
+      "createdDate": "Tue Oct 12 2021 16:40:11 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 2
     },
     {
-      "fName": "Ajinkya ",
-      "lName": "Rahane",
-      "dob": "2021-10-04",
-      "username": "jinx",
-      "email": "jinx@email",
-      "mobile": "9922664488",
-      "role": "patient",
-      "password": "123",
-      "rpassword": "123",
-      "createdDate": "Fri Oct 08 2021 11:36:57 GMT+0530 (India Standard Time)",
-      "id": "YEPY4P1",
-      "isActive": false
-    },
-    {
-      "fName": "Steven",
-      "lName": "Strange",
-      "dob": "2021-10-08",
-      "username": "Dr.Strange",
-      "email": "strange@email.com",
-      "mobile": "9565846529",
+      "fName": "T Shiv ",
+      "lName": "Prasad",
+      "dob": "2021-09-29",
+      "username": "shiv",
+      "email": "shiv@gmail.com",
+      "mobile": "8894453658",
       "role": "physician",
-      "password": "1234",
-      "rpassword": "1234",
-      "createdDate": "Sun Oct 10 2021 15:44:14 GMT+0530 (India Standard Time)",
-      "id": "g7kO58T",
-      "isActive": true
-    },
-    {
-      "fName": "John",
-      "lName": "Morhson",
-      "dob": "2021-10-14",
-      "username": "John",
-      "email": "john@doc.com",
-      "mobile": "9955641258",
-      "role": "physician",
-      "password": "123",
-      "rpassword": "123",
-      "createdDate": "Sun Oct 10 2021 15:47:29 GMT+0530 (India Standard Time)",
-      "id": "xAoP04C",
-      "isActive": true
-    },
-    {
-      "email": "user1@domain.com",
-      "password": "123456",
-      "name": "shiva",
-      "id": "CUXqjPi"
+      "password": "12345",
+      "rpassword": "12345",
+      "blood_group": "A Rh + Ve",
+      "createdDate": "Tue Oct 12 2021 16:45:48 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 3
     }
   ],
   "demographics": [
@@ -130,6 +100,42 @@
       "insurance_provider": "asdfdasf",
       "userId": "OxtfXFr",
       "id": 3
+    },
+    {
+      "fName": "asdfds",
+      "lName": "asdfdsf",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "asdfasdf",
+      "race": "",
+      "education": "asdfsadf",
+      "employment": "asdfasdfsdf",
+      "address": "asdfsadfdf",
+      "phone_number": "1234345",
+      "medical_history": "sadfadsf",
+      "family_medical_history": "asdfsdf",
+      "surgeries": "2134234",
+      "insurance_provider": "sadfasdfasdf",
+      "userId": "OxtfXFr",
+      "id": 4
+    },
+    {
+      "fName": "",
+      "lName": "",
+      "dob": "",
+      "gender": "",
+      "ethnicity": "",
+      "race": "",
+      "education": "",
+      "employment": "",
+      "address": "",
+      "phone_number": "",
+      "medical_history": "",
+      "family_medical_history": "",
+      "surgeries": "",
+      "insurance_provider": "",
+      "userId": 2,
+      "id": 5
     }
   ],
   "medication_allergies": [
@@ -172,6 +178,14 @@
       "general_vaccine": "dfghjk",
       "userId": "OxtfXFr",
       "id": "TZEd-AN"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "1",
+      "general_vaccine": "NA",
+      "userId": "OxtfXFr",
+      "id": "iSaFnHN"
     }
   ],
   "appointments": [

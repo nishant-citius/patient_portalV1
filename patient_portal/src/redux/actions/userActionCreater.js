@@ -1,6 +1,5 @@
 import * as actions from "./userActions";
 import { userService } from "../../services/register_user_service";
-import { useHistory } from "react-router";
 
 export function GetAllUsersAsync() {
   return (dispatch) => {
@@ -19,11 +18,6 @@ export function AddUserAsync(user) {
   return (dispatch) => {
     userService.AddUser(user).then(
       (response) => {
-        // if (response.status === "201") {
-        //   alert("You Registered Successfully..");
-        // } else {
-        //   alert("Something Went wrong..");
-        // }
         dispatch({ type: actions.ADD_USER, newuser: user });
       },
       (error) => {
@@ -52,6 +46,9 @@ export function AddImmunizationsAsync(user) {
     userService.Addpatientimmunization(user).then(
       (response) => {
         dispatch({ type: actions.ADD_IMMUNIZATION, newuser: user });
+        if (response.status === 201) {
+          alert(`Immunization Added for ${user.fName} ${user.lName}`);
+        }
       },
       (error) => {
         return;
