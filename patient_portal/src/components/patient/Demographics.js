@@ -1,4 +1,4 @@
-import { React, useState, userEffect, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 // import Card from "../../shared/Card";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
@@ -29,7 +29,6 @@ const Demographics = (props) => {
     userId: userId.id
   });
 
-  console.log(patientDemographics)
 
   const HandleChange = (e) => {
     setpatientDemographics({
@@ -43,10 +42,6 @@ const Demographics = (props) => {
     let newrecords = { ...patientDemographics };
     props.addUserHandler(newrecords)
   };
-
-  // useEffect(() => {
-
-  // }, [])
 
   return (
     <>

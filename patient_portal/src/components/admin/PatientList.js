@@ -5,11 +5,14 @@ import {
   BsFillTrashFill,
   BsFillPencilFill,
   BsPersonFill,
+  BsCheckCircleFill,
+  BsFillXCircleFill,
 } from "react-icons/bs";
 
 const PatientList = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  // const [userState, setUserState] = useState();
 
   useEffect(() => {
     loadUsers();
@@ -36,6 +39,11 @@ const PatientList = () => {
         return;
       }
     );
+  };
+
+  const toggleUserState = (user) => {
+    // user.isActive = !user.isActive;
+    // setUserState(user.isActive);
   };
 
   if (isLoading) {
@@ -67,8 +75,23 @@ const PatientList = () => {
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>
                     <td>
-                      <input className="m-2" type="checkbox" />
-                      <span>Active</span>
+                      {user.isActive ? (
+                        <>
+                          <BsCheckCircleFill
+                            className="hand-pointer"
+                            onClick={() => toggleUserState(user)}
+                          />
+                          <span className="p-2">Active</span>
+                        </>
+                      ) : (
+                        <>
+                          <BsFillXCircleFill
+                            className="hand-pointer"
+                            onClick={() => toggleUserState(user)}
+                          />
+                          <span className="p-2">Inactive</span>
+                        </>
+                      )}
                     </td>
                     <td>
                       <span className="p-2">
@@ -81,7 +104,10 @@ const PatientList = () => {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2" onClick={() => deleteUser(user.id)}>
+                      <span
+                        className="p-2 hand-pointer"
+                        onClick={() => deleteUser(user.id)}
+                      >
                         <BsFillTrashFill />
                       </span>
                     </td>
