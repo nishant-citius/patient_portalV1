@@ -18,6 +18,7 @@ const RegisterUser = (props) => {
     rpassword: "",
     blood_group: "",
     createdDate: Date(),
+    isActive : true
   };
 
   const [user, setUser] = useState(tempUser);

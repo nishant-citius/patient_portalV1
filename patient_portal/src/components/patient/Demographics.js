@@ -2,14 +2,14 @@ import { React, useState, useEffect } from "react";
 // import Card from "../../shared/Card";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-
+import { useHistory } from "react-router";
 
 const Demographics = (props) => {
-    let userId = JSON.parse(window.sessionStorage.getItem("userInfo"))
-    // setpatientDemographics({
-    //   ...patientDemographics,
-    //   [userId]: userId.id
-    // });
+  let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
+  // setpatientDemographics({
+  //   ...patientDemographics,
+  //   [userId]: userId.id
+  // });
 
   const [patientDemographics, setpatientDemographics] = useState({
     fName: "",
@@ -26,26 +26,35 @@ const Demographics = (props) => {
     family_medical_history: "",
     surgeries: "",
     insurance_provider: "",
-    userId: userId.id
+    userId: userId.id,
   });
 
-
+  let history = useHistory();
   const HandleChange = (e) => {
     setpatientDemographics({
       ...patientDemographics,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let newrecords = { ...patientDemographics };
-    props.addUserHandler(newrecords)
+    props.addUserHandler(newrecords);
+  };
+
+  const logOutUser = () => {
+    const session = window.sessionStorage;
+    session.removeItem("userInfo");
+    history.push("/");
   };
 
   return (
     <>
       <div className="container">
+        <button onClick={logOutUser} className="btn btn-primary float-end mr-4">
+          Logout
+        </button>
         <h4 className="text-center">Patient Demographics</h4>
         <div className="row justify-content-center">
           <div className="col-8">
@@ -220,7 +229,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addUserHandler: (newuser) => dispatch(actionCreator.AddDemographicsAsync(newuser)),
+    addUserHandler: (newuser) =>
+      dispatch(actionCreator.AddDemographicsAsync(newuser)),
   };
 };
 

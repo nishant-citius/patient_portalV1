@@ -7,12 +7,14 @@ import {
   BsPersonFill,
   BsCheckCircleFill,
   BsFillXCircleFill,
+  BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
+
+import Sidebar from "./common/sidebar/Sidebar";
 
 const PatientList = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  // const [userState, setUserState] = useState();
 
   useEffect(() => {
     loadUsers();
@@ -41,15 +43,16 @@ const PatientList = () => {
     );
   };
 
-  const toggleUserState = (user) => {
-    // user.isActive = !user.isActive;
-    // setUserState(user.isActive);
-  };
+  const toggleUserState = (user) => {};
 
   if (isLoading) {
     return (
       <>
         <div className="container mt-4">
+          <Link className="btn btn-warning" to="/admin">
+            <BsFillArrowLeftSquareFill />
+            <span className="m-2">Back</span>
+          </Link>
           <h1 className="text-success text-center fw-bold ">Patient List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">

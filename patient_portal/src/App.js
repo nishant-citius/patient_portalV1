@@ -23,6 +23,7 @@ import Appointments from "./components/admin/Appointments";
 import ImmunizationDetails from "./components/admin/ImmunizationDetails";
 import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
+import UserList from "components/admin/Userslist";
 // import Navbar from "components/Layout";
 // import Navbar from "./components/admin/common/Navbar";
 
@@ -52,6 +53,8 @@ function App() {
 
           {/* *****Admin Routes***** */}
           <Route path={"/patientlist"} component={PatientList} />
+          <Route path={"/allusers"} component={UserList} />
+
           <Route path={"/physicianlist"} component={PhysicianList} />
           <Route path={"/appointments"} component={Appointments} />
           <Route
