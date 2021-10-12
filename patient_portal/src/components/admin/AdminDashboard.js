@@ -2,6 +2,8 @@ import React from "react";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import "./admin.css";
+import Header from "./Layout/Header";
+import Menu from "./Layout/Menu";
 
 const AdminDashboard = (props) => {
   const history = useHistory();
@@ -14,7 +16,9 @@ const AdminDashboard = (props) => {
 
   return (
     <>
-      <button onClick={logOutUser} className="btn btn-primary float-end">
+      <Header />
+      <Menu />
+      {/* <button onClick={logOutUser} className="btn btn-primary float-end">
         Logout
       </button>
       <div className="admin-sidebar border border-primary mt-5">
@@ -45,7 +49,7 @@ const AdminDashboard = (props) => {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
     </>
   );
 };
