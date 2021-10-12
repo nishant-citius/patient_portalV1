@@ -18,7 +18,7 @@ const AdminDashboard = (props) => {
         Logout
       </button>
 
-      <div className="admin-sidebar border border-primary mt-5">
+      <div className="admin-sidebar mt-5">
         <ul className="no-list-style">
           <li>
             <Link className="btn btn-primary m-2" to="/patientlist">

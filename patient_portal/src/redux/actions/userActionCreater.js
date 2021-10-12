@@ -1,5 +1,6 @@
 import * as actions from "./userActions";
 import { userService } from "../../services/register_user_service";
+import { useHistory } from "react-router";
 
 export function GetAllUsersAsync() {
   return (dispatch) => {
@@ -36,6 +37,9 @@ export function AddDemographicsAsync(user) {
     userService.Addpatientdemographics(user).then(
       (response) => {
         dispatch({ type: actions.ADD_DEMOGRAPHICS, newuser: user });
+        if (response.status === 201) {
+          alert(`Demographics Added for ${user.fName} ${user.lName}`);
+        }
       },
       (error) => {
         return;

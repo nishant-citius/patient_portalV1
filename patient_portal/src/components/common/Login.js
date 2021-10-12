@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import * as URLS from "../../services/url_list";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-import imageSrc from "../../images/Healthcare.jpg";
+// import imageSrc from "../../images/Healthcare.jpg";
 import "../common/common_style.css";
 
 const Login = (props) => {
@@ -26,7 +26,7 @@ const Login = (props) => {
     e.preventDefault();
     let newUserData = { ...user };
     onSubmit(newUserData);
-    props.loginHandler();
+    // props.loginHandler();
   };
 
   const checkEmail = (serverUsers, formData) => {
@@ -51,13 +51,9 @@ const Login = (props) => {
 
   const logInUser = (user) => {
     userSession(user);
-
-    console.log("IsLoggedIn--", props.loginStatus);
-
     if (user.role === "admin") {
       history.push("/admin");
     } else if (user.role === "patient") {
-      console.log(user);
       history.push("/demographics");
     } else {
       history.push("/physician");
@@ -80,7 +76,7 @@ const Login = (props) => {
           </div> */}
           <div className="col-5">
             <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-              <div className="card-header ">Login form</div>
+              <div className="card-header fw-bold">Login form</div>
               <div className="card-body">
                 <form className="login-form">
                   <div className="form-group">
