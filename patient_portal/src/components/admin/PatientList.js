@@ -5,7 +5,12 @@ import {
   BsFillTrashFill,
   BsFillPencilFill,
   BsPersonFill,
+  BsCheckCircleFill,
+  BsFillXCircleFill,
+  BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
+
+import Sidebar from "./common/sidebar/Sidebar";
 
 const PatientList = () => {
   const [users, setUsers] = useState([]);
@@ -38,10 +43,16 @@ const PatientList = () => {
     );
   };
 
+  const toggleUserState = (user) => {};
+
   if (isLoading) {
     return (
       <>
         <div className="container mt-4">
+          <Link className="btn btn-warning" to="/admin">
+            <BsFillArrowLeftSquareFill />
+            <span className="m-2">Back</span>
+          </Link>
           <h1 className="text-success text-center fw-bold ">Patient List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
@@ -67,8 +78,23 @@ const PatientList = () => {
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>
                     <td>
-                      <input className="m-2" type="checkbox" />
-                      <span>Active</span>
+                      {user.isActive ? (
+                        <>
+                          <BsCheckCircleFill
+                            className="hand-pointer"
+                            onClick={() => toggleUserState(user)}
+                          />
+                          <span className="p-2">Active</span>
+                        </>
+                      ) : (
+                        <>
+                          <BsFillXCircleFill
+                            className="hand-pointer"
+                            onClick={() => toggleUserState(user)}
+                          />
+                          <span className="p-2">Inactive</span>
+                        </>
+                      )}
                     </td>
                     <td>
                       <span className="p-2">
@@ -81,7 +107,10 @@ const PatientList = () => {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2" onClick={() => deleteUser(user.id)}>
+                      <span
+                        className="p-2 hand-pointer"
+                        onClick={() => deleteUser(user.id)}
+                      >
                         <BsFillTrashFill />
                       </span>
                     </td>

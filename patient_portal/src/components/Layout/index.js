@@ -1,4 +1,5 @@
 import React from "react";
+import imageSrc from "../../images/logo.png";
 
 import {
   Nav,
@@ -9,13 +10,21 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
+import { useHistory } from "react-router";
+
 const Navbar = () => {
+  const history = useHistory();
+
+  const logOutUser = () => {
+    const session = window.sessionStorage;
+    session.removeItem("userInfo");
+    history.push("/");
+  };
+
   return (
     <>
       <Nav>
-        <NavLink to="/">
-          <img src="src/assets/logo.png" alt="logo" />
-        </NavLink>
+        <NavLink to="/">{/* <img src="" alt="logo" /> */}</NavLink>
         <Bars />
         <NavMenu>
           <NavLink to="/about" activeStyle>

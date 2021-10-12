@@ -2,7 +2,9 @@ import { React, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
 import * as URLS from "../../services/url_list";
-import imageSrc from '../../images/Healthcare.jpg';
+import { connect } from "react-redux";
+import * as actionCreator from "../../redux/actions/userActionCreater";
+// import imageSrc from "../../images/Healthcare.jpg";
 import "../common/common_style.css";
 
 const Login = (props) => {
@@ -24,6 +26,7 @@ const Login = (props) => {
     e.preventDefault();
     let newUserData = { ...user };
     onSubmit(newUserData);
+    // props.loginHandler();
   };
 
   const checkEmail = (serverUsers, formData) => {
@@ -51,7 +54,6 @@ const Login = (props) => {
     if (user.role === "admin") {
       history.push("/admin");
     } else if (user.role === "patient") {
-      console.log(user);
       history.push("/demographics");
     } else {
       history.push("/physician");
@@ -73,33 +75,33 @@ const Login = (props) => {
             <img className="login_img" src={imageSrc}/>
           </div> */}
           <div className="col-5">
-          <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-          <div className="card-header ">Login form</div>
-          <div className="card-body">
-            <form className="login-form">
-              <div className="form-group">
-                <label htmlFor="user name">User Name</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  name="username"
-                  placeholder="Please enter your Email id"
-                  onChange={handleUserChange}
-                />
-              </div>
+            <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
+              <div className="card-header fw-bold">Login form</div>
+              <div className="card-body">
+                <form className="login-form">
+                  <div className="form-group">
+                    <label htmlFor="user name">User Name</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      name="username"
+                      placeholder="Please enter your Email id"
+                      onChange={handleUserChange}
+                    />
+                  </div>
 
-              <div className="form-group mt-4">
-                <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Please enter password"
-                  name="password"
-                  onChange={handleUserChange}
-                />
-              </div>
-              <br />
-              {/* <div>
+                  <div className="form-group mt-4">
+                    <label htmlFor="password">Password</label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Please enter password"
+                      name="password"
+                      onChange={handleUserChange}
+                    />
+                  </div>
+                  <br />
+                  {/* <div>
                 <label className="form-check-label " htmlFor="Check1">
                   Remember me
                 </label>
@@ -109,23 +111,23 @@ const Login = (props) => {
                   id="Check1"
                 />
               </div> */}
-              <br />
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={submitUserData}
-              >
-                Login
-              </button>
-              {/* <a className="btn btn-secondary m-2" href="/forgotpassword">
+                  <br />
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    onClick={submitUserData}
+                  >
+                    Login
+                  </button>
+                  {/* <a className="btn btn-secondary m-2" href="/forgotpassword">
                 forgot password
               </a>
               <a className="btn btn-secondary " href="/forgotusername">
                 forgot username
               </a> */}
-            </form>
-          </div>
-        </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -133,4 +135,17 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+const mapStatetoProps = (state) => {
+  return {
+    loginStatus: state.isLoggedIn.isLoggedIn,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginHandler: () => dispatch(actionCreator.loginUser()),
+  };
+};
+
+let hof = connect(mapStatetoProps, mapDispatchToProps);
+export default hof(Login);

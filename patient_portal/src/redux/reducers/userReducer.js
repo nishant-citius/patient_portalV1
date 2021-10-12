@@ -16,6 +16,21 @@ export function UsersReducer(state = appState, action) {
     };
   }
 
+  if (action.type === actions.LOGIN_USER) {
+    let isLoggedIn = false;
+    return {
+      ...state,
+      isLoggedIn: isLoggedIn,
+    };
+  }
+
+  if (action.type === actions.LOGOUT_USER) {
+    return {
+      ...state,
+      isLoggedIn: false,
+    };
+  }
+
   /**default case */
   return state;
 }
