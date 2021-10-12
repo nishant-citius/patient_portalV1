@@ -12,7 +12,7 @@ const Physician_dashboard = () => {
   return (
     <div className='m-4'>
       <div className="row ">
-      <div className="col-6">
+      <div className="col-4">
       <Calendar
         onChange={onChange}
         value={value}
@@ -43,14 +43,21 @@ const Physician_dashboard = () => {
                   <th scope="col">Patient id</th>
                   <th scope="col">Patient Name</th>
                   <th scope="col">catagory</th>
+                  <th scope="col">Appointments status</th>
               </tr>
          </thead>
            <tbody>
                <tr>
-               <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+               <th scope="row m-2">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><button className="btn btn-success btn-sm" href="#"> Approve</button>
+                <button className="btn btn-warning btn-sm m-2" href="#"> postpone</button>
+                <button className="btn btn-danger btn-sm" href="#"> Rejected</button>
+                </td>
+                
+     
     </tr>
     <tr>
       <th scope="row">2</th>
