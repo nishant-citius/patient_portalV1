@@ -9,3 +9,7 @@
   top: 5%;
   width: 20%;
 }
+
+.hand-pointer {
+  cursor: pointer;
+}
