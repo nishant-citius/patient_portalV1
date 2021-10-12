@@ -140,14 +140,15 @@ const Medication_Allergies = () => {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-12">
-          <h2 className="text-center">Medication and Allergies</h2>
           <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-            <div className="card-header ">Current Medication</div>
+            <div className="card-header ">Medication and Allergies</div>
             <div className="card-body">
-              <form className="login-form">
-                <div className="row">
+              <form name="Patient Medicationandallergies">
+
+                <div className="row mt-2">
                   <div className="col-12">
-                    <h2></h2>
+                    <hr />
+                    <h5 className="text-center">Current Medication</h5>
                     <hr />
                     <div className="row">
                       <div className="col-3">
@@ -241,23 +242,14 @@ const Medication_Allergies = () => {
                     </div>
                   </div>
                 </div>
-                <br />
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-          <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-            <div className="card-header ">Otc Medication</div>
-            <div className="card-body">
-              <form className="login-form">
-                <div className="row">
+
+
+                <div className="row mt-2">
                   <div className="col-12">
                     <hr />
+                    <h5 className="text-center">Otc Medication</h5>
+                    <hr />
+
                     <div className="row">
                       <div className="col-3">
                         <div className="form-group">
@@ -310,22 +302,12 @@ const Medication_Allergies = () => {
                     </div>
                   </div>
                 </div>
-                <br />
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-          <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-            <div className="card-header ">Past Prescribed Medication</div>
-            <div className="card-body">
-              <form className="login-form">
-                <div className="row">
+
+
+                <div className="row mt-2">
                   <div className="col-12">
+                    <hr />
+                    <h5 className="text-center">Past Prescribed Medication</h5>
                     <hr />
                     <div className="row">
                       <div className="col-3">
@@ -364,22 +346,12 @@ const Medication_Allergies = () => {
                     </div>
                   </div>
                 </div>
-                <br />
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-          <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5 mb-5">
-            <div className="card-header ">Allerigies</div>
-            <div className="card-body">
-              <form className="login-form">
-                <div className="row">
+
+
+                <div className="row mt-2">
                   <div className="col-12">
+                    <hr />
+                    <h5 className="text-center">Allerigies</h5>
                     <hr />
                     <div className="row">
                       <div className="col-3">
@@ -411,20 +383,15 @@ const Medication_Allergies = () => {
                             type="text"
                             className="form-control"
                             name="direction_to_consume"
-                            placeholder="Please enter drug allergy if any"
+                            placeholder="Please enter drug allergy"
                           />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <br />
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                >
-                  Submit
-                </button>
+                <div className="col-12 text-center mt-5">
+                  <button className="btn btn-primary" type="submit">Submit</button></div>
               </form>
             </div>
           </div>
