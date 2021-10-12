@@ -87,7 +87,7 @@ const Physician_dashboard = () => {
       </tr>
             </tbody>
         </table>
-      <button className="btn btn-primary mt-4" href="#"> join online consultaion</button>
+      <button className="btn btn-primary mt-4" href="#"> Join Online Consultaion</button>
       </div>
       </div>
       
