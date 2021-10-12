@@ -1,7 +1,7 @@
 import appState from "../appState";
 import * as actions from "../actions/userActions";
 
-export function ImmunizationReducer(state = appState, action) {
+ function ImmunizationReducer(state = appState, action) {
     if (action.type === actions.ADD_IMMUNIZATION) {
       return {
         ...state,
@@ -11,3 +11,4 @@ export function ImmunizationReducer(state = appState, action) {
 
     return state
 }
+export default ImmunizationReducer
