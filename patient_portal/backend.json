@@ -1,49 +1,64 @@
 {
   "users": [
     {
-      "fName": "Ajinkya ",
-      "lName": "Pathak",
-      "dob": "2021-10-06",
-      "username": "ajpathak",
-      "email": "aj@email.com",
-      "mobile": "562487157",
+      "email": "j@email.com",
+      "password": "$2a$10$QhJr/.j5wtJdoADQWCCbneHe.nLxnxV2DX7Mfba.99H2yAzWK9Ype",
+      "fName": "John",
+      "lName": "Cena",
+      "dob": "2021-10-01",
+      "username": "jon",
+      "mobile": "9955641258",
       "role": "admin",
-      "password": "12345",
       "rpassword": "12345",
-      "blood_group": "B Rh + Ve",
-      "createdDate": "Tue Oct 12 2021 16:39:22 GMT+0530 (India Standard Time)",
+      "blood_group": "A Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 12:56:33 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 1
     },
     {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-10-13",
-      "username": "nish",
-      "email": "nish@gmail.com",
-      "mobile": "1245878428",
-      "role": "patient",
-      "password": "12345",
+      "email": "aj@email.com",
+      "password": "$2a$10$7lHQF.18HdQqlEa1pCKnc.MMTAOcnDQm4E54ODiGfXX6rNsrvAMpm",
+      "fName": "Steven",
+      "lName": "Strange",
+      "dob": "2021-09-29",
+      "username": "steve",
+      "mobile": "9955641258",
+      "role": "admin",
       "rpassword": "12345",
-      "blood_group": "A Rh + Ve",
-      "createdDate": "Tue Oct 12 2021 16:40:11 GMT+0530 (India Standard Time)",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 12:58:37 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 2
     },
     {
-      "fName": "T Shiv ",
-      "lName": "Prasad",
-      "dob": "2021-09-29",
-      "username": "shiv",
-      "email": "shiv@gmail.com",
-      "mobile": "8894453658",
-      "role": "physician",
-      "password": "12345",
+      "email": "ajinkya@email.com",
+      "password": "$2a$10$MlipevzjaqJkEM/QNZx9qeEVS5E2ZM.JhhD/.XE1FphlwHPfhaC0y",
+      "fName": "Steven",
+      "lName": "asdfasf",
+      "dob": "2021-09-28",
+      "username": "asdfg",
+      "mobile": "956584652",
+      "role": "admin",
       "rpassword": "12345",
-      "blood_group": "A Rh + Ve",
-      "createdDate": "Tue Oct 12 2021 16:45:48 GMT+0530 (India Standard Time)",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 13:23:31 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 3
+    },
+    {
+      "email": "user_1@email.com",
+      "password": "$2a$10$5a.g6y4hvfGG3W67UjLmpeH3HniqJJMA/BvX3TDcLCqQZCPN6hmN2",
+      "fName": "dfjkasdf",
+      "lName": "fdasdsda",
+      "dob": "2021-09-27",
+      "username": "pooja@email.com",
+      "mobile": "9556644852",
+      "role": "admin",
+      "rpassword": "asdf",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 4
     }
   ],
   "demographics": [
@@ -136,33 +151,29 @@
       "insurance_provider": "",
       "userId": 2,
       "id": 5
+    },
+    {
+      "fName": "Steven",
+      "lName": "Strange",
+      "dob": "2021-10-08",
+      "gender": "male",
+      "ethnicity": "NA",
+      "race": "",
+      "education": "NA",
+      "employment": "NA",
+      "address": "Delhi",
+      "phone_number": "34343422",
+      "medical_history": "NA",
+      "family_medical_history": "NA",
+      "surgeries": "NA",
+      "insurance_provider": "NA",
+      "userId": 5,
+      "id": 6
     }
   ],
   "medication_allergies": [
     {
-      "id": "",
-      "patient_id": "",
-      "current_medication": "",
-      "otc_medication": "",
-      "natural_product_hurbs": "",
-      "socila_drugs": "",
-      "past_medication": "",
-      "drug_allergies": "",
-      "other_allergies_reaction": ""
-    },
-    {
-      "currentMedication": "bhjhdend",
-      "otc": "njndsjd",
-      "herbs": "hjbhdsd",
-      "socialDrugs": "hbd",
-      "pastMedication": "jnndj",
-      "drugAllergies": "jnddn",
-      "otherAllergies": "jndjd",
-      "userId": "OxtfXFr",
-      "id": "csQSyqd"
-    },
-    {
-      "id": "rNBLNTX",
+      "id": 1,
       "patient_id": "",
       "current_medication": [
         {
@@ -198,419 +209,22 @@
           "drugAllergy": ""
         }
       ],
-      "allergyName": "ffffff",
-      "symptomsofAllergy ": "ffff",
-      "direction_to_consume": "fff",
-      "drugName": "fff",
-      "strength": "ff",
-      "directiontoconsumedosage": "fff",
-      "otcDrugName": "ff",
+      "medicineName": "Ajinkya",
+      "dosage": "Ajinkya",
+      "directionstoconsume": "Ajinkya",
+      "frequency": "Ajinkya",
+      "physicianName ": "Ajinkya",
+      "purpose": "Ajinkya",
+      "startDate": "2021-09-30",
+      "endDate": "2021-09-27",
+      "otcDrugName": "Ajinkya",
+      "strength": "Ajinkya",
+      "directiontoconsumedosage": "Ajinkya",
       "socialDrugs: ": "smoke",
-      "medicineName": "f",
-      "physicianName ": "f",
-      "dosage": "ff",
-      "purpose": "f",
-      "directionstoconsume": "f",
-      "startDate": "2021-10-13",
-      "frequency": "f",
-      "endDate": "2021-10-13"
-    },
-    {
-      "id": "PWo7qxk",
-      "patient_id": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "hh",
-      "dosage": "hh",
-      "directionstoconsume": "hh",
-      "frequency": "hh",
-      "physicianName ": "hh",
-      "purpose": "h",
-      "startDate": "2021-10-26",
-      "endDate": "2021-10-18",
-      "otcDrugName": "p",
-      "strength": "k",
-      "directiontoconsumedosage": "j",
-      "socialDrugs: ": "drink",
-      "drugName": "j",
-      "allergyName": "k",
-      "symptomsofAllergy ": "k",
-      "direction_to_consume": "k"
-    },
-    {
-      "id": "b1X9CCY",
-      "patient_id": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "d",
-      "dosage": "f",
-      "directionstoconsume": "f",
-      "frequency": "f",
-      "physicianName ": "f",
-      "purpose": "f",
-      "startDate": "2021-10-26",
-      "endDate": "2021-11-01",
-      "otcDrugName": "d",
-      "strength": "c",
-      "directiontoconsumedosage": "cc",
-      "socialDrugs: ": "drink",
-      "drugName": "c",
-      "allergyName": "c",
-      "symptomsofAllergy ": "m",
-      "direction_to_consume": "v"
-    },
-    {
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "d",
-      "dosage": "f",
-      "directionstoconsume": "f",
-      "frequency": "f",
-      "purpose": "f",
-      "physicianName ": "f",
-      "startDate": "2021-10-26",
-      "endDate": "2021-10-26",
-      "otcDrugName": "r",
-      "strength": "r",
-      "directiontoconsumedosage": "r",
-      "socialDrugs: ": "drink",
-      "id": "yQ7lB65"
-    },
-    {
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "d",
-      "dosage": "f",
-      "directionstoconsume": "f",
-      "frequency": "f",
-      "purpose": "f",
-      "physicianName ": "f",
-      "startDate": "2021-10-26",
-      "endDate": "2021-10-26",
-      "otcDrugName": "r",
-      "strength": "r",
-      "directiontoconsumedosage": "r",
-      "socialDrugs: ": "drink",
-      "id": "3HA2yR8"
-    },
-    {
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "d",
-      "dosage": "f",
-      "directionstoconsume": "f",
-      "frequency": "f",
-      "purpose": "f",
-      "physicianName ": "f",
-      "startDate": "2021-10-26",
-      "endDate": "2021-10-26",
-      "otcDrugName": "r",
-      "strength": "r",
-      "directiontoconsumedosage": "r",
-      "socialDrugs: ": "drink",
-      "id": "dB51hqL"
-    },
-    {
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "dfff",
-      "dosage": "fgg",
-      "directionstoconsume": "f",
-      "frequency": "f",
-      "purpose": "f",
-      "physicianName ": "f",
-      "startDate": "2021-10-26",
-      "endDate": "2021-10-26",
-      "otcDrugName": "r",
-      "strength": "r",
-      "directiontoconsumedosage": "r",
-      "socialDrugs: ": "drink",
-      "id": "1VVAn8i"
-    },
-    {
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "otcDrugName": "d",
-      "strength": "d",
-      "directiontoconsumedosage": "d",
-      "socialDrugs: ": "smoke",
-      "medicineName": "d",
-      "dosage": "d",
-      "directionstoconsume": "ddd",
-      "frequency": "d",
-      "physicianName ": "d",
-      "purpose": "d",
-      "startDate": "2021-10-26",
-      "endDate": "2021-10-25",
-      "id": "Qtw79Ob"
-    },
-    {
-      "id": "rjZnlt2",
-      "patient_id": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "ffgghhh",
-      "dosage": "hhh",
-      "directionstoconsume": "hh",
-      "drugName": "f",
-      "strength": "g",
-      "directiontoconsumedosage": "g"
+      "drugName": "Ajinkya",
+      "allergyName": "Ajinkya",
+      "symptomsofAllergy ": "Ajinkya",
+      "direction_to_consume": "Ajinkya"
     }
   ],
   "immunization": [
@@ -637,6 +251,14 @@
       "general_vaccine": "NA",
       "userId": "OxtfXFr",
       "id": "iSaFnHN"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "2",
+      "general_vaccine": "NA",
+      "userId": 5,
+      "id": "GwKaUWS"
     }
   ],
   "appointments": [

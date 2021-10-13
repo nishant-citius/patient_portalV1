@@ -1,6 +1,8 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
+import axios from "axios";
+import * as URLS from "../../services/url_list";
 import { useHistory } from "react-router";
 
 const RegisterUser = (props) => {
@@ -16,22 +18,21 @@ const RegisterUser = (props) => {
     rpassword: "",
     blood_group: "",
     createdDate: Date(),
-    isActive: true,
+    isActive : true
   };
 
   const [user, setUser] = useState(tempUser);
   let history = useHistory();
 
   const handleUserChange = (e) => {
-    const name = e.target.name,
-      value = e.target.value;
+      const name = e.target.name,
+        value = e.target.value;
     setUser({ ...user, [name]: value });
   };
 
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-
     if (user.fName.length < 1) {
       alert("plse enter valid First name");
     }
@@ -42,34 +43,27 @@ const RegisterUser = (props) => {
     if (user.password !== user.rpassword) {
       alert("plse enter the same password");
     } else {
-      // onSubmit(newUserData);
-      props.register(newUserData);
+      onSubmit(newUserData);
     }
   };
 
-  useEffect(() => {
-    if (props.statusCode === 200) {
+  const checkEmail = (serverUsers, formData) => {
+    const user = serverUsers.find((user) => user.email === formData.email); // extract the email from the formData
+    if (user) return user;
+  };
+
+  const onSubmit = async (formData) => {
+    const user = await axios
+      .get(`${URLS.BASE_URL}/users`)
+      .then((res) => checkEmail(res.data, formData));
+    if (user) {
+      alert("email alreday exists");
+      // do whatever you want here with the existence user store.
+    } else {
+      props.addUserHandler(formData);
       history.push("/login");
     }
-  });
-
-  // const checkEmail = (serverUsers, formData) => {
-  //   const user = serverUsers.find((user) => user.email === formData.email); // extract the email from the formData
-  //   if (user) return user;
-  // };
-
-  // const onSubmit = async (formData) => {
-  //   const user = await axios
-  //     .get(`${URLS.BASE_URL}/users`)
-  //     .then((res) => checkEmail(res.data, formData));
-  //   if (user) {
-  //     alert("email alreday exists");
-  //     // do whatever you want here with the existence user store.
-  //   } else {
-  //     props.register(formData);
-  //     history.push("/login");
-  //   }
-  // };
+  };
 
   return (
     <>
@@ -215,7 +209,6 @@ const RegisterUser = (props) => {
                   Submit
                 </button>
               </form>
-              <h4 className="text-danger">{props.globalMessage}</h4>
             </div>
           </div>
         </div>
@@ -226,14 +219,13 @@ const RegisterUser = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    globalMessage: state.register.globalmessage,
-    statusCode: state.register.statusCode,
+    allusers: state.users.users,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    register: (newuser) => dispatch(actionCreator.Register(newuser)),
+    addUserHandler: (newuser) => dispatch(actionCreator.AddUserAsync(newuser)),
   };
 };
 

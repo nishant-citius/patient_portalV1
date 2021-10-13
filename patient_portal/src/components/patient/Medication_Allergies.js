@@ -138,14 +138,12 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 //   let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
 //   //     console.log(userId)
 const Medication_Allergies = (props) => {
-
   // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
- 
-  let  temp_medication_allergies = {
+
+  let temp_medication_allergies = {
     id: "",
     patient_id: "",
-    current_medication:[
-      {
+    current_medication: {
       medicineName: "",
       dosage: "",
       directionstoconsume: "",
@@ -153,180 +151,209 @@ const Medication_Allergies = (props) => {
       physicianName: "",
       purpose: "",
       startDate: "",
-      endDate: ""
-     },
-    ],
-    otc_medication:[
-    {
-      otcDrugName: "",
-      strength: "",
-      directiontoconsumedosage: "",
-      socialDrugs: ""
+      endDate: "",
     },
-    ],
-    pastprescribedmedication:[
-    {
-      drugName: "",
-      strength: "",
-      directiontoconsumedosage: ""
-    },
-  ], 
-    allergies: [
-    {
-      allergyName: "",
-      symptomsofAllergy: "",
-      drugAllergy: ""
-    },
-    ],
+    //   otc_medication:[
+    //   {
+    //     otcDrugName: "",
+    //     strength: "",
+    //     directiontoconsumedosage: "",
+    //     socialDrugs: ""
+    //   },
+    //   ],
+    //   pastprescribedmedication:[
+    //   {
+    //     drugName: "",
+    //     strength: "",
+    //     directiontoconsumedosage: ""
+    //   },
+    // ],
+    //   allergies: [
+    //   {
+    //     allergyName: "",
+    //     symptomsofAllergy: "",
+    //     drugAllergy: ""
+    //   },
+    //   ],
+  };
 
-}
+  const [medication_allergies, setmedication_allergies] = useState(
+    temp_medication_allergies
+  );
+  console.log(medication_allergies);
 
-  
-    const [medication_allergies, setmedication_allergies] = useState(temp_medication_allergies)
-    const HandleChange = (e) => {
-      setmedication_allergies({
-        ...medication_allergies,
-        [e.target.name]: e.target.value
-      });
-    };
+  const HandleChange = (e) => {
+    const name = e.target.name,
+      value = e.target.value;
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      let newrecords = { ...medication_allergies };
-      props.addmedicationandallergiesrHandler(newrecords)
-    };
-    return (
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12">
-            <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-              <div className="card-header text-center ">Medication and Allergies</div>
-              <div className="card-body">
-                <form name="Patient Medicationandallergies" onSubmit={handleSubmit}>
+    setmedication_allergies({
+      ...medication_allergies,
+      [name]: value,
+    });
+  };
 
-                  <div className="row mt-2">
-                    <div className="col-12">
-                      <hr />
-                      <h5 className="text-center">Current Medication</h5>
-                      <hr />
-                      <div className="row">
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Medicine Name</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="medicineName"
-                              placeholder="Please enter medicine name"
-                              id="medicineName"
-                              value={medication_allergies.current_medication.medicineName}
-                              onChange={HandleChange}
-                            />
-                          </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let newrecords = { ...medication_allergies };
+    props.addmedicationandallergiesrHandler(newrecords);
+  };
+  return (
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-12">
+          <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
+            <div className="card-header text-center ">
+              Medication and Allergies
+            </div>
+            <div className="card-body">
+              <form
+                name="Patient Medicationandallergies"
+                onSubmit={handleSubmit}
+              >
+                <div className="row mt-2">
+                  <div className="col-12">
+                    <hr />
+                    <h5 className="text-center">Current Medication</h5>
+                    <hr />
+                    <div className="row">
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">Medicine Name</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="medicineName"
+                            placeholder="Please enter medicine name"
+                            id="medicineName"
+                            value={
+                              medication_allergies.current_medication
+                                .medicineName
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Dosages</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="dosage"
-                              placeholder="Please enter dosages"
-                              id="dosage"
-                              value={medication_allergies.current_medication.dosage}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">Dosages</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="dosage"
+                            placeholder="Please enter dosages"
+                            id="dosage"
+                            value={
+                              medication_allergies.current_medication.dosage
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Direction to consume dosage</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="directionstoconsume"
-                              placeholder="Please enter medicine name"
-                              id="directionstoconsume"
-                              value={medication_allergies.current_medication.directionstoconsume}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">
+                            Direction to consume dosage
+                          </label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="directionstoconsume"
+                            placeholder="Please enter medicine name"
+                            id="directionstoconsume"
+                            value={
+                              medication_allergies.current_medication
+                                .directionstoconsume
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Frequency</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="frequency"
-                              placeholder="Please enter frequency"
-                              id="frequency"
-                              value={medication_allergies.current_medication.frequency}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">Frequency</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="frequency"
+                            placeholder="Please enter frequency"
+                            id="frequency"
+                            value={
+                              medication_allergies.current_medication.frequency
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Physician Name</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="physicianName "
-                              placeholder="Please enter Physician Name"
-                              id="physicianName "
-                              value={medication_allergies.current_medication.physicianName}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">Physician Name</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="physicianName "
+                            placeholder="Please enter Physician Name"
+                            id="physicianName "
+                            value={
+                              medication_allergies.current_medication
+                                .physicianName
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Purpose</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="purpose"
-                              placeholder="Please enter purpose"
-                              id="purpose"
-                              value={medication_allergies.current_medication.purpose}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">Purpose</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="purpose"
+                            placeholder="Please enter purpose"
+                            id="purpose"
+                            value={
+                              medication_allergies.current_medication.purpose
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">Start Date</label>
-                            <input
-                              type="date"
-                              className="form-control"
-                              name="startDate"
-                              placeholder="Please enter frequency"
-                              id="startDate"
-                              value={medication_allergies.current_medication.startDate}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">Start Date</label>
+                          <input
+                            type="date"
+                            className="form-control"
+                            name="startDate"
+                            placeholder="Please enter frequency"
+                            id="startDate"
+                            value={
+                              medication_allergies.current_medication.startDate
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
-                        <div className="col-3">
-                          <div className="form-group">
-                            <label htmlFor="user name">End Date</label>
-                            <input
-                              type="date"
-                              className="form-control"
-                              name="endDate"
-                              placeholder="Please enter frequency"
-                              id="endDate"
-                              value={medication_allergies.current_medication.endDate}
-                              onChange={HandleChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-3">
+                        <div className="form-group">
+                          <label htmlFor="user name">End Date</label>
+                          <input
+                            type="date"
+                            className="form-control"
+                            name="endDate"
+                            placeholder="Please enter frequency"
+                            id="endDate"
+                            value={
+                              medication_allergies.current_medication.endDate
+                            }
+                            onChange={HandleChange}
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
 
-
+                {/* 
                   <div className="row mt-2">
                     <div className="col-12">
                       <hr />
@@ -502,27 +529,33 @@ const Medication_Allergies = (props) => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-12 text-center mt-5">
-                    <button className="btn btn-primary" type="submit">Submit</button></div>
-                </form>
-              </div>
+                  </div> */}
+                <div className="col-12 text-center mt-5">
+                  <button className="btn btn-primary" type="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    );
-}
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
-    allmedicationandallergies: state.medication_allergies.MedicationandAllergiesReducer,
+    allmedicationandallergies:
+      state.medication_allergies.MedicationandAllergiesReducer,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
+  debugger;
   return {
-    addmedicationandallergiesrHandler: (newuser) => dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
+    addmedicationandallergiesrHandler: (newuser) =>
+      dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
   };
 };
 
