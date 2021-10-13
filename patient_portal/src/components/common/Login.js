@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState ,useEffect} from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
 import * as URLS from "../../services/url_list";
@@ -135,17 +135,21 @@ const Login = (props) => {
   );
 };
 
-// const mapStatetoProps = (state) => {
-//   return {
-//     loginStatus: state.isLoggedIn.isLoggedIn,
-//   };
-// };
+const mapStatetoProps = (state) => {
+  return {
+    isLoggedIn: state.login.isLoggedIn,
+        role: state.login.role,
+        globalmessage: state.login.globalmessage,
+        authToken: state.login.authToken,
+    
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     loginHandler: () => dispatch(actionCreator.loginUser()),
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: (user) => dispatch(actionCreator.Login(user)),
+  };
+};
 
-// let hof = connect(mapStatetoProps, mapDispatchToProps);
-export default Login
+let hof = connect(mapStatetoProps, mapDispatchToProps);
+export default hof (Login);
