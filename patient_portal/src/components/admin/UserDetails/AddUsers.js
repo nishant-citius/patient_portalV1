@@ -71,6 +71,17 @@ const AddUsers = () => {
             </div>
             <br />
             <div className="form-group">
+              <label>Role</label>
+              <select className="form-control" name="role" id="role">
+                <option value="">Select</option>
+                <option value="admin">Admin</option>
+                <option value="patient">Physician</option>
+                <option value="physician">Lab Assistant</option>
+                <option value="physician">Nurse</option>
+              </select>
+            </div>
+            <br />
+            <div className="form-group">
               <label>Email</label>
               <input
                 type="email"

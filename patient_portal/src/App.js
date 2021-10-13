@@ -51,7 +51,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} />
 
-          {/* *****Admin Routes***** */}
+          {/* *****Start Admin Routes***** */}
           <Route path={"/patientlist"} component={PatientList} />
           <Route path={"/allusers"} component={UserList} />
 
@@ -64,7 +64,7 @@ function App() {
           <Route path={"/userdetails/:id"} component={UserDetails} />
           <Route path={"/edit/:id"} component={EditUser} />
           <Route path={"/addusers"} component={AddUsers} />
-          {/* *****Admin Routes***** */}
+          {/* ***** End Admin Routes***** */}
         </Switch>
       </div>
     </>
