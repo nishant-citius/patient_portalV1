@@ -59,6 +59,21 @@
       "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 4
+    },
+    {
+      "email": "TShiva.prasad@citiustech.com",
+      "password": "$2a$10$WJO4fluyF7drycYYdi4h7OFdKbdQwfczp8XT6np78TaFr.d16XXtO",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-09-30",
+      "username": "TShiva.prasad@citiustech.com",
+      "mobile": "8801888988",
+      "role": "admin",
+      "rpassword": "12345",
+      "blood_group": "b +ve",
+      "createdDate": "Wed Oct 13 2021 14:40:37 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 5
     }
   ],
   "demographics": [

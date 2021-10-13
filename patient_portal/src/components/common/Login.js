@@ -1,15 +1,12 @@
-import { React, useState } from "react";
-import axios from "axios";
+import { React, useState, useEffect } from "react";
 import { useHistory } from "react-router";
-import * as URLS from "../../services/url_list";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-// import imageSrc from "../../images/Healthcare.jpg";
 import "../common/common_style.css";
 
 const Login = (props) => {
   const tempUser = {
-    username: "",
+    email: "",
     password: "",
   };
 
@@ -25,47 +22,21 @@ const Login = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    onSubmit(newUserData);
-    // props.loginHandler();
+    props.login(newUserData);
   };
 
-  const checkEmail = (serverUsers, formData) => {
-    const user = serverUsers.find(
-      (user) =>
-        user.email === formData.username && user.password === formData.password
-    );
-    if (user) return user;
-  };
-
-  const onSubmit = async (formData) => {
-    const user = await axios
-      .get(`${URLS.BASE_URL}/users`)
-      .then((res) => checkEmail(res.data, formData));
-
-    if (user) {
-      isActive(user) ? logInUser(user) : alert("User Id created..");
-    } else {
-      alert("Email doesn't exist");
+  useEffect(() => {
+    if (props.isLoggedIn === true) {
+      console.log(props.currentUser);
+      if (props.role === "admin") {
+        history.push("/admin");
+      } else if (props.role === "patient") {
+        history.push("/demographics");
+      } else {
+        history.push("/physician");
+      }
     }
-  };
-
-  const logInUser = (user) => {
-    userSession(user);
-    if (user.role === "admin") {
-      history.push("/admin");
-    } else if (user.role === "patient") {
-      history.push("/demographics");
-    } else {
-      history.push("/physician");
-    }
-  };
-
-  const userSession = (user) => {
-    const session = window.sessionStorage;
-    session.setItem("userInfo", JSON.stringify(user));
-  };
-
-  const isActive = (user) => (user.isActive ? true : false);
+  });
 
   return (
     <>
@@ -84,7 +55,7 @@ const Login = (props) => {
                     <input
                       type="email"
                       className="form-control"
-                      name="username"
+                      name="email"
                       placeholder="Please enter your Email id"
                       onChange={handleUserChange}
                     />
@@ -135,17 +106,21 @@ const Login = (props) => {
   );
 };
 
-// const mapStatetoProps = (state) => {
-//   return {
-//     loginStatus: state.isLoggedIn.isLoggedIn,
-//   };
-// };
+const mapStatetoProps = (state) => {
+  return {
+    isLoggedIn: state.login.isLoggedIn,
+    role: state.login.role,
+    globalmessage: state.login.globalmessage,
+    authToken: state.login.authToken,
+    currentUser: state.login.loggedUserInfo,
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     loginHandler: () => dispatch(actionCreator.loginUser()),
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    login: (user) => dispatch(actionCreator.Login(user)),
+  };
+};
 
-// let hof = connect(mapStatetoProps, mapDispatchToProps);
-export default Login
+let hof = connect(mapStatetoProps, mapDispatchToProps);
+export default hof(Login);
