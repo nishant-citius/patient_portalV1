@@ -7,13 +7,12 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
-let userId = JSON.parse(window.sessionStorage.getItem("userInfo"))
-
-export default function Sidebar() {
+function Sidebar(props) {
   return (
     <div className="sidebar">
-      <h3 className="sidebarTitle fw-bold text-success p-2">Welcome { userId.fName }</h3>
-
+      <h3 className="sidebarTitle fw-bold text-success p-2">
+        Welcome {props.userInfo.fName}
+      </h3>
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <ul className="sidebarList">
@@ -75,3 +74,5 @@ export default function Sidebar() {
     </div>
   );
 }
+
+export default Sidebar;

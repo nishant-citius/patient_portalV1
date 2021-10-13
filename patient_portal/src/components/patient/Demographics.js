@@ -5,11 +5,7 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { useHistory } from "react-router";
 
 const Demographics = (props) => {
-  let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
-  // setpatientDemographics({
-  //   ...patientDemographics,
-  //   [userId]: userId.id
-  // });
+
 
   const [patientDemographics, setpatientDemographics] = useState({
     fName: "",
@@ -26,7 +22,6 @@ const Demographics = (props) => {
     family_medical_history: "",
     surgeries: "",
     insurance_provider: "",
-    userId: userId.id,
   });
 
   let history = useHistory();
