@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import {Bar} from 'react-chartjs-2';
+// import React, { Component } from 'react';
+// import {Bar} from 'react-chartjs-2';
 
-const Chart  = () => {
-    return ( 
-        <div className='chart'>
-            chart component
-        </div>
-     );
-}
+// const Chart  = () => {
+//     return ( 
+//         <div className='chart'>
+//             chart component
+//         </div>
+//      );
+// }
  
-export default Chart ;
+// export default Chart ;
