@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import Calendar from "react-calendar";
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
+import Chart from "./chart";
 import { useHistory } from "react-router";
 
 
@@ -87,7 +88,7 @@ const Physician_dashboard = () => {
       </tr>
             </tbody>
         </table>
-      <button className="btn btn-primary mt-4" href="#"> join online consultaion</button>
+      <button className="btn btn-primary mt-4" href="#"> Join Online Consultaion</button>
       </div>
       </div>
       
