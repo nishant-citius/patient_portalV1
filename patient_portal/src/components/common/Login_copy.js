@@ -71,9 +71,6 @@ const Login = (props) => {
     <>
       <div className="container-fluid page_db">
         <div className="row justify-content-center">
-          {/* <div className="col-7">
-            <img className="login_img" src={imageSrc}/>
-          </div> */}
           <div className="col-5">
             <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
               <div className="card-header fw-bold">Login form</div>
@@ -135,17 +132,17 @@ const Login = (props) => {
   );
 };
 
-// const mapStatetoProps = (state) => {
-//   return {
-//     loginStatus: state.isLoggedIn.isLoggedIn,
-//   };
-// };
+const mapStatetoProps = (state) => {
+  return {
+    loginStatus: state.isLoggedIn.isLoggedIn,
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     loginHandler: () => dispatch(actionCreator.loginUser()),
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginHandler: () => dispatch(actionCreator.loginUser()),
+  };
+};
 
-// let hof = connect(mapStatetoProps, mapDispatchToProps);
-export default Login
+let hof = connect(mapStatetoProps, mapDispatchToProps);
+export default hof(Login);
