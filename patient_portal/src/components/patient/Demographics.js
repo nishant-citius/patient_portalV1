@@ -5,7 +5,7 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { useHistory } from "react-router";
 
 const Demographics = (props) => {
-  let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
+  // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
   // setpatientDemographics({
   //   ...patientDemographics,
   //   [userId]: userId.id
@@ -26,7 +26,7 @@ const Demographics = (props) => {
     family_medical_history: "",
     surgeries: "",
     insurance_provider: "",
-    userId: userId.id,
+    
   });
 
   let history = useHistory();
@@ -40,7 +40,9 @@ const Demographics = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let newrecords = { ...patientDemographics };
-    props.addUserHandler(newrecords);
+    // props.addUserHandler(newrecords);
+    console.log(newrecords)
+    props.demographics(newrecords);
   };
 
   const logOutUser = () => {
@@ -48,7 +50,12 @@ const Demographics = (props) => {
     session.removeItem("userInfo");
     history.push("/");
   };
-
+  
+  useEffect(() => {
+    if (props.statusCode === 201) {
+      history.push("/immunization");
+    }
+  });
   return (
     <>
       <div className="container">
@@ -215,6 +222,7 @@ const Demographics = (props) => {
                 Submit
               </button>
             </form>
+            <h4 className="text-danger">{props.globalMessage}</h4>
           </div>
         </div>
       </div>
@@ -223,14 +231,14 @@ const Demographics = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
-    allusers: state.demographics.Demographicsreducer,
+    globalMessage: state.demographics.globalmessage,
+    statusCode: state.demographics.statusCode,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addUserHandler: (newuser) =>
-      dispatch(actionCreator.AddDemographicsAsync(newuser)),
+    demographics: (newuser) => dispatch(actionCreator.AddDemographics(newuser)),
   };
 };
 
