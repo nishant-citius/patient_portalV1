@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { adminService } from "../../services/register_user_service";
+import { adminService,userService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
 import {
   BsFillTrashFill,
@@ -10,7 +10,8 @@ import {
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
-const PhysicianList = () => {
+
+const UserList = () => {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,7 +20,7 @@ const PhysicianList = () => {
   }, []);
 
   const loadUsers = () => {
-    adminService.getAllPhysicians().then(
+    userService.GetAllUsers().then(
       (response) => {
         setUsers(response.data);
         setIsLoading(true);
@@ -41,8 +42,7 @@ const PhysicianList = () => {
     );
   };
 
-    const toggleUserState = (user) => {
-    };
+  const toggleUserState = (user) => {};
 
   if (isLoading) {
     return (
@@ -52,7 +52,7 @@ const PhysicianList = () => {
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
           </Link>
-          <h1 className="text-success text-center fw-bold ">Physician List</h1>
+          <h1 className="text-success text-center fw-bold ">All Users</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>
@@ -106,7 +106,10 @@ const PhysicianList = () => {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2" onClick={() => deleteUser(user.id)}>
+                      <span
+                        className="p-2 hand-pointer"
+                        onClick={() => deleteUser(user.id)}
+                      >
                         <BsFillTrashFill />
                       </span>
                     </td>
@@ -123,4 +126,4 @@ const PhysicianList = () => {
   }
 };
 
-export default PhysicianList;
+export default UserList;

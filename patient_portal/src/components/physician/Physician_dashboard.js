@@ -3,14 +3,28 @@ import Calendar from "react-calendar";
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
 import Chart from "./chart";
+import { useHistory } from "react-router";
 
 
 
 
 const Physician_dashboard = () => {
   const [value, onChange] = useState(new Date());
+  const history = useHistory();
+
+
+  const logOutUser = () => {
+    const session = window.sessionStorage;
+    session.removeItem("userInfo");
+    history.push("/");
+  };
+
 
   return (
+    <>
+          <button onClick={logOutUser} className="btn btn-primary float-end mr-4">
+        Logout
+      </button>
     <div className='m-4'>
       <div className="row ">
       <div className="col-4">
@@ -74,13 +88,13 @@ const Physician_dashboard = () => {
       </tr>
             </tbody>
         </table>
-      <button className="btn btn-primary mt-4" href="#"> join online consultaion</button>
-      <Chart />
+      <button className="btn btn-primary mt-4" href="#"> Join Online Consultaion</button>
       </div>
       </div>
       
       
       </div>
+      </>
   );
 };
 
