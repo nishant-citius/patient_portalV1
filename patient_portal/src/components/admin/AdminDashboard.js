@@ -1,9 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
 import "./admin.css";
-import Header from "./Layout/Header";
-import Menu from "./Layout/Menu";
+import Sidebar from "./common/sidebar/Sidebar";
 
 const AdminDashboard = (props) => {
   const history = useHistory();
@@ -16,12 +14,15 @@ const AdminDashboard = (props) => {
 
   return (
     <>
-      <Header />
-      <Menu />
-      {/* <button onClick={logOutUser} className="btn btn-primary float-end">
+      <h1 className="text-success text-center fw-bold ">Admin Dashboard</h1>
+      <div className="admin-sidebar mt-5">
+        <Sidebar />
+      </div>
+      <button onClick={logOutUser} className="btn btn-primary float-end mr-4">
         Logout
       </button>
-      <div className="admin-sidebar border border-primary mt-5">
+
+      {/* <div className="admin-sidebar mt-5">
         <ul className="no-list-style">
           <li>
             <Link className="btn btn-primary m-2" to="/patientlist">
