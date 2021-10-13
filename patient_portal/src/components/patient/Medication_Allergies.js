@@ -142,47 +142,64 @@ const Medication_Allergies = (props) => {
   // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
  
   let  temp_medication_allergies = {
-    id: "",
-    patient_id: "",
-    current_medication:[
-      {
-      medicineName: "",
-      dosage: "",
-      directionstoconsume: "",
-      frequency: "",
-      physicianName: "",
-      purpose: "",
-      startDate: "",
-      endDate: ""
-     },
-    ],
-    otc_medication:[
-    {
-      otcDrugName: "",
-      strength: "",
-      directiontoconsumedosage: "",
-      socialDrugs: ""
-    },
-    ],
-    pastprescribedmedication:[
-    {
-      drugName: "",
-      strength: "",
-      directiontoconsumedosage: ""
-    },
-  ], 
-    allergies: [
-    {
-      allergyName: "",
-      symptomsofAllergy: "",
-      drugAllergy: ""
-    },
-    ],
+    
 
-}
+      "id": "",
+
+      "patient_id": "",
+
+      "current_medication": {
+
+        "medicineName": "",
+
+        "dosage": "",
+
+        "directionstoconsume": "",
+
+        "frequency": "",
+
+        "physicianName": "",
+
+        "purpose": "",
+
+        "startDate": "",
+
+        "endDate": ""
+
+      },
+
+      "otc_medication": {
+
+        "otcDrugName": "",
+
+        "strength": "",
+
+        "directiontoconsumedosage": "",
+
+        "socialDrugs": ""
+
+      },
+      pastprescribedmedication:
+        {
+          drugName: "",
+          strength: "",
+          directiontoconsumedosage: ""
+        },
+        allergies: 
+          {
+            allergyName: "",
+            symptomsofAllergy: "",
+            drugAllergy: ""
+          },
+          
+
+    }
+
+  
 
   
     const [medication_allergies, setmedication_allergies] = useState(temp_medication_allergies)
+
     const HandleChange = (e) => {
       setmedication_allergies({
         ...medication_allergies,
@@ -191,6 +208,7 @@ const Medication_Allergies = (props) => {
     };
 
     const handleSubmit = (e) => {
+      console.log(medication_allergies)
       e.preventDefault();
       let newrecords = { ...medication_allergies };
       props.addmedicationandallergiesrHandler(newrecords)
