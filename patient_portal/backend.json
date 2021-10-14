@@ -74,6 +74,27 @@
       "createdDate": "Wed Oct 13 2021 14:40:37 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "email": "patient@email.com",
+      "password": "$2a$10$oZ3nd1MmBXJROULjHkxP.u8iJdn1BOfauETzNG0NH4ZjCkj8J3xty",
+      "fName": "Patient",
+      "lName": "Strange",
+      "dob": "2021-10-07",
+      "username": "12qwerty",
+      "mobile": "9955641258",
+      "role": "physician",
+      "rpassword": "12345",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Thu Oct 14 2021 14:26:01 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 8
     }
   ],
   "demographics": [

@@ -14,7 +14,10 @@ let authToken = "";
 // ********AXIOS INTERCEPTOR********
 axios.interceptors.request.use((req) => {
   console.log(`${req.method} ${req.url}`);
-  if (req.method === "get" && req.url.endsWith("/users")) {
+  if (
+    req.method === "get" &&
+    (req.url.endsWith("/users") || req.url.endsWith("physician"))
+  ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -31,7 +34,6 @@ export function Register(user) {
     axios.post(URLS.REGISTER_USER, JSON.stringify(user), config).then(
       (response) => {
         payload.globalmessage = `Email Id: ${user.email} registered successfully`;
-
         dispatch({ type: actions.REGISTER, payload: payload });
       },
       (error) => {
@@ -84,6 +86,30 @@ export function Logout() {
   };
 }
 
+export function GetAllPhysicianData() {
+  let payload = {
+    physicians: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_PHYSICIANS).then(
+      (response) => {
+        payload.globalmessage = `Physician data retrieved successfully. Count: ${response.data.length}`;
+        payload.physicians = response.data;
+        dispatch({ type: actions.PHYSICIANS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.physicians = [];
+        dispatch({ type: actions.PHYSICIANS, payload: payload });
+      }
+    );
+  };
+}
+
+/***************Pevious******************/
 export function GetAllUsersAsync() {
   return (dispatch) => {
     userService.GetAllUsers().then(
@@ -155,14 +181,3 @@ export function AddMedicationAndAllergiesAsync(user) {
   };
 }
 
-// export function loginUser() {
-//   return {
-//     type: actions.LOGIN,
-//   };
-// }
-
-// export function logoutUser() {
-//   return {
-//     type: actions.LOGOUT,
-//   };
-// }

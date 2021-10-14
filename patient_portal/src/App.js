@@ -10,12 +10,10 @@ import Physician_dashboard from "./components/physician/Physician_dashboard";
 import Demographics from "./components/patient/Demographics";
 import Immunization from "./components/patient/Immunization";
 import Medication_Allergies from "components/patient/Medication_Allergies";
-import Slider from "./components/imageslider/Slider";
 import About from "./pages/about";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
-import 'react-calendar/dist/Calendar.css';
-
+import "react-calendar/dist/Calendar.css";
 
 import PatientList from "./components/admin/PatientList";
 import PhysicianList from "./components/admin/PhysicianList";
@@ -24,14 +22,14 @@ import ImmunizationDetails from "./components/admin/ImmunizationDetails";
 import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
 import UserList from "components/admin/Userslist";
-// import Navbar from "components/Layout";
-// import Navbar from "./components/admin/common/Navbar";
+
+import Navbar from "./shared/navbar/Navbar";
 
 function App() {
   return (
     <>
-      <div>
-        {/* <Navbar /> */}
+      <div className="app">
+        <Navbar />
         <Switch>
           <Route exact path="/" component={PatientPortalHome} />
           <Route path="/login" component={Login} />
