@@ -7,6 +7,7 @@ let appState = {
   authToken: "",
   globalmessage: "",
   role: "",
+  loggedUserInfo: {},
 };
 
 export default appState;
