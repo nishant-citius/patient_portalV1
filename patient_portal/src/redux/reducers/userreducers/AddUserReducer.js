@@ -1,5 +1,5 @@
-import appState from "../appState";
-import * as actions from "../actions/userActions";
+import appState from "../../appState";
+import * as actions from "../../actions/userActions";
 
 function AddUserReducer(state = appState, action) {
   if (action.type === actions.ADD_USER) {

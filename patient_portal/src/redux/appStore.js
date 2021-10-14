@@ -8,8 +8,9 @@ import { LoginReducer } from "./reducers/loginReducer";
 // import { UsersReducer } from "./reducers/userReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
 import { RegisterReducer } from "./reducers/RegisterReducer";
-import { AddUserReducer } from "./reducers/AddUserReducer";
-import { GetAllUsersReducer } from "./reducers/GetAllUsersReducers";
+import { AddUserReducer } from "./reducers/userreducers/AddUserReducer";
+import { GetAllUsersReducer } from "./reducers/userreducers/GetAllUsersReducers";
+import { EditUserReducer } from "./reducers/userreducers/EditUserReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -20,6 +21,7 @@ let rootReducer = combineReducers({
   medication_allergies: MedicationandAllergiesReducer,
   adduser: AddUserReducer,
   getallusers: GetAllUsersReducer,
+  updateusers: EditUserReducer,
 });
 
 /**create store  */
