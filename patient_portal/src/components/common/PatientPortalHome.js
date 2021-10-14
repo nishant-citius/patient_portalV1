@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Layout/index";
+// import Navbar from "../Layout/index";
 import Slider from "../imageslider/Slider";
 import App from "../DoctorsCard/card";
 import Footer from "../Layout/Footer";
@@ -7,9 +7,9 @@ import Footer from "../Layout/Footer";
 const PatientPortalHome = () => {
   return (
     <>
-      <div>
+      {/* <div>
         <Navbar />
-      </div>
+      </div> */}
       <div>
         <Slider />
       </div>

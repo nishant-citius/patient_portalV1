@@ -5,7 +5,7 @@ import * as actions from "../../../redux/actions/userActionCreater";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { connect } from "react-redux";
 
-const EditUser = () => {
+const EditUser = (props) => {
   let tempUserData = {
     fName: "",
     lName: "",
@@ -40,7 +40,7 @@ const EditUser = () => {
     if (user.lName.length < 1) {
       alert("please enter valid last name");
     }
-    props.updateusers(newUserData);
+    props.updateusers(id, newUserData);
   };
 
   useEffect(() => {
@@ -115,7 +115,6 @@ const EditUser = () => {
                 id="role"
                 value={user.role}
                 onChange={handleUserChange}
-                disabled={true}
               >
                 <option value="">Select</option>
                 <option value="admin">Admin</option>

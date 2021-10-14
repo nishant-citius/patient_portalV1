@@ -3,8 +3,10 @@ import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { adminService } from "../../../services/register_user_service";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+// import * as actionCreater from "../../../redux/actions/userActionCreater";
+// import { connect } from "react-redux";
 
-const EditUser = () => {
+const EditUser = (props) => {
   let tempUserData = {
     fName: "",
     lName: "",
@@ -47,6 +49,7 @@ const EditUser = () => {
       },
       (error) => {}
     );
+    // props.editUser(_id, userData);
   };
 
   const handleUserChange = (e) => {
@@ -182,4 +185,19 @@ const EditUser = () => {
   );
 };
 
+// const mapStateToProps = (state) => {
+//   return {
+//     physicians: state.physician.users,
+//   };
+// };
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     editUser: (userId, user) =>
+//       dispatch(actionCreater.updateUser(userId, user)),
+//   };
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
 export default EditUser;
+
