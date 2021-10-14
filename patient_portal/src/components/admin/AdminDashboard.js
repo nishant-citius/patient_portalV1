@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 import "./admin.css";
-import Sidebar from './common/sidebar/Sidebar'
+import Sidebar from "./common/sidebar/Sidebar";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 

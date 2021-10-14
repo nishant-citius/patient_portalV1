@@ -23,13 +23,16 @@ import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
 import UserList from "components/admin/Userslist";
 
-import Navbar from "./shared/navbar/Navbar";
+// import Navbar from "./shared/navbar/Navbar";
+import AddUsers from "./components/admin/UserDetails/AddUsers";
+// import Navbar from "components/Layout";
+// import Navbar from "./components/admin/common/Navbar";
 
 function App() {
   return (
     <>
       <div className="app">
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={PatientPortalHome} />
           <Route path="/login" component={Login} />
@@ -49,7 +52,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} />
 
-          {/* *****Admin Routes***** */}
+          {/* *****Start Admin Routes***** */}
           <Route path={"/patientlist"} component={PatientList} />
           <Route path={"/allusers"} component={UserList} />
 
@@ -61,7 +64,8 @@ function App() {
           />
           <Route path={"/userdetails/:id"} component={UserDetails} />
           <Route path={"/edit/:id"} component={EditUser} />
-          {/* *****Admin Routes***** */}
+          <Route path={"/addusers"} component={AddUsers} />
+          {/* ***** End Admin Routes***** */}
         </Switch>
       </div>
     </>
