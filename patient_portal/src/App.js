@@ -10,7 +10,6 @@ import Physician_dashboard from "./components/physician/Physician_dashboard";
 import Demographics from "./components/patient/Demographics";
 import Immunization from "./components/patient/Immunization";
 import Medication_Allergies from "components/patient/Medication_Allergies";
-import Slider from "./components/imageslider/Slider";
 import About from "./pages/about";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
@@ -23,6 +22,8 @@ import ImmunizationDetails from "./components/admin/ImmunizationDetails";
 import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
 import UserList from "components/admin/Userslist";
+
+// import Navbar from "./shared/navbar/Navbar";
 import AddUsers from "./components/admin/UserDetails/AddUsers";
 // import Navbar from "components/Layout";
 // import Navbar from "./components/admin/common/Navbar";
@@ -30,7 +31,7 @@ import AddUsers from "./components/admin/UserDetails/AddUsers";
 function App() {
   return (
     <>
-      <div>
+      <div className="app">
         {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={PatientPortalHome} />
