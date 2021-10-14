@@ -97,14 +97,20 @@ export function GetAllUsersAsync() {
   };
 }
 
-export function AddUserAsync(user) {
+export function AddUser(user) {
+  let payload = {
+    globalmessage: "",
+  };
   return (dispatch) => {
-    userService.AddUser(user).then(
+    axios.post(URLS.ADD_USER, JSON.stringify(user), config).then(
       (response) => {
-        dispatch({ type: actions.ADD_USER, newuser: user });
+        console.log(response);
+        payload.globalmessage = `New User Added successfully`;
+        dispatch({ type: actions.ADD_USER, payload: payload });
       },
       (error) => {
-        return;
+        payload.globalmessage = `ERROR: ${error.response.data}`;
+        dispatch({ type: actions.ADD_USER, payload: payload });
       }
     );
   };
@@ -155,14 +161,28 @@ export function AddMedicationAndAllergiesAsync(user) {
   };
 }
 
-// export function loginUser() {
-//   return {
-//     type: actions.LOGIN,
-//   };
-// }
+export function GetAllUserData() {
+  let payload = {
+    users: [],
 
-// export function logoutUser() {
-//   return {
-//     type: actions.LOGOUT,
-//   };
-// }
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(URLS.USER).then(
+      (response) => {
+        payload.globalmessage = `User data retrieved successfully. Count: ${response.data.length}`;
+        payload.users = response.data;
+        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+
+        payload.users = [];
+
+        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
+      }
+    );
+  };
+}

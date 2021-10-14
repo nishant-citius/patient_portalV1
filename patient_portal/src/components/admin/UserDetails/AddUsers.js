@@ -1,11 +1,32 @@
-import { React, useState, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { adminService } from "../../../services/register_user_service";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+import { connect } from "react-redux";
+import * as actions from "../../../redux/actions/userActionCreater";
 
-const EditUser = () => {
-  let tempUserData = {
+const AddUsers = (props) => {
+  // const email = useRef();
+  // const password = useRef();
+  // const role = useRef();
+  // const fName = useRef();
+  // const lName = useRef();
+  // const dob = useRef();
+  // const username = useRef();
+  // const mobile = useRef();
+
+  // function HandleAddUser() {
+  //   let userinfo = {
+  //     email: email.current.value,
+  //     password: password.current.value,
+  //     role: role.current.value,
+  //     fName: fName.current.value,
+  //     lName: lName.current.value,
+  //   };
+  //   props.adduser(userinfo);
+  // }
+
+  let tempUser = {
     fName: "",
     lName: "",
     dob: "",
@@ -14,40 +35,13 @@ const EditUser = () => {
     mobile: "",
     role: "",
     password: "",
-    rpassword: "",
+    speciality: "",
     createdDate: Date(),
+    isActive: true,
   };
 
-  const [user, setUser] = useState(tempUserData);
-
-  const { id } = useParams();
-  const history = useHistory();
-
-  useEffect(() => {
-    loadUsers(id);
-  }, [id]);
-
-  const loadUsers = (_id) => {
-    adminService.getUserById(_id).then(
-      (response) => {
-        setUser(response.data[0]);
-      },
-      (error) => {
-        return;
-      }
-    );
-  };
-
-  const submitNewUserData = (_id, userData) => {
-    adminService.updateUser(_id, userData).then(
-      (response) => {
-        user.role === "patient"
-          ? history.push("/patientlist")
-          : history.push("/physicianlist");
-      },
-      (error) => {}
-    );
-  };
+  const [user, setUser] = useState(tempUser);
+  let history = useHistory();
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -58,16 +52,29 @@ const EditUser = () => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    submitNewUserData(id, newUserData);
+
+    if (user.fName.length < 1) {
+      alert("plse enter valid First name");
+    }
+    if (user.lName.length < 1) {
+      alert("plse enter valid last name");
+    }
+    props.adduser(newUserData);
   };
+
+  useEffect(() => {
+    if (props.statusCode === 200) {
+      history.push("/login");
+    }
+  });
 
   return (
     <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
-      <Link className="btn btn-warning" to="/allusers">
+      <Link className="btn btn-warning" to="/admin">
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>
       </Link>
-      <h3 className="text-success text-center fw-bold ">Edit Details</h3>
+      <h3 className="text-success text-center fw-bold ">Add New User</h3>
       <div className="row justify-content-center">
         <div className="col-8">
           <form name="registration_form" onSubmit={submitUserData}>
@@ -79,10 +86,11 @@ const EditUser = () => {
                 name="fName"
                 id="fName"
                 placeholder="Enter Your First name"
-                value={user.fName}
+                // ref={fName}
                 onChange={handleUserChange}
               />
             </div>
+            <br />
             <div className="form-group">
               <label>Last Name</label>
               <input
@@ -91,10 +99,11 @@ const EditUser = () => {
                 name="lName"
                 id="lName"
                 placeholder="Enter Your Last name"
-                value={user.lName}
+                // ref={lName}
                 onChange={handleUserChange}
               />
             </div>
+            <br />
             <div className="form-group">
               <label>DOB</label>
               <input
@@ -103,10 +112,11 @@ const EditUser = () => {
                 name="dob"
                 id="dob"
                 placeholder="Enter Your Dob"
-                value={user.dob}
+                // ref={dob}
                 onChange={handleUserChange}
               />
             </div>
+            <br />
             <div className="form-group">
               <label>User Name</label>
               <input
@@ -115,26 +125,38 @@ const EditUser = () => {
                 name="username"
                 id="username"
                 placeholder="Enter User Name"
-                value={user.username}
+                // ref={username}
                 onChange={handleUserChange}
               />
             </div>
+            <br />
             <div className="form-group">
               <label>Role</label>
               <select
                 className="form-control"
                 name="role"
                 id="role"
-                value={user.role}
                 onChange={handleUserChange}
-                disabled={true}
               >
                 <option value="">Select</option>
                 <option value="admin">Admin</option>
-                <option value="patient">Patient</option>
                 <option value="physician">Physician</option>
+                <option value="nurse">Nurse</option>
               </select>
             </div>
+            <br />
+            <div className="form-group">
+              <label>Speciality</label>
+              <input
+                type="text"
+                className="form-control"
+                name="speciality"
+                id="speciality"
+                onChange={handleUserChange}
+                placeholder="Enter Speciality"
+              />
+            </div>
+            <br />
             <div className="form-group">
               <label>Email</label>
               <input
@@ -143,11 +165,11 @@ const EditUser = () => {
                 id="email"
                 name="email"
                 placeholder="Enter email"
-                value={user.email}
                 onChange={handleUserChange}
-                disabled={true}
+                // ref={email}
               />
             </div>
+            <br />
             <div className="form-group">
               <label>Phone</label>
               <input
@@ -156,10 +178,11 @@ const EditUser = () => {
                 name="mobile"
                 id="mobile"
                 placeholder="Enter Mobile Number"
-                value={user.mobile}
                 onChange={handleUserChange}
+                // ref={mobile}
               />
             </div>
+            <br />
             <div className="form-group">
               <label>Password</label>
               <input
@@ -168,18 +191,32 @@ const EditUser = () => {
                 id="password"
                 name="password"
                 placeholder="Password"
-                value={user.password}
                 onChange={handleUserChange}
+                // ref={password}
               />
             </div>
+            <br />
             <button type="submit" className="btn btn-primary mt-4">
               Save Details
             </button>
           </form>
+          <span>{props.globalmessage}</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default EditUser;
+const mapStateToProps = (rootReducer) => {
+  return {
+    globalmessage: rootReducer.adduser.globalmessage,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    adduser: (userinfo) => dispatch(actions.AddUser(userinfo)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddUsers);

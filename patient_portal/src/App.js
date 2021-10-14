@@ -14,8 +14,7 @@ import Slider from "./components/imageslider/Slider";
 import About from "./pages/about";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
-import 'react-calendar/dist/Calendar.css';
-
+import "react-calendar/dist/Calendar.css";
 
 import PatientList from "./components/admin/PatientList";
 import PhysicianList from "./components/admin/PhysicianList";
@@ -24,6 +23,7 @@ import ImmunizationDetails from "./components/admin/ImmunizationDetails";
 import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
 import UserList from "components/admin/Userslist";
+import AddUsers from "./components/admin/UserDetails/AddUsers";
 // import Navbar from "components/Layout";
 // import Navbar from "./components/admin/common/Navbar";
 
@@ -51,7 +51,7 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} />
 
-          {/* *****Admin Routes***** */}
+          {/* *****Start Admin Routes***** */}
           <Route path={"/patientlist"} component={PatientList} />
           <Route path={"/allusers"} component={UserList} />
 
@@ -63,7 +63,8 @@ function App() {
           />
           <Route path={"/userdetails/:id"} component={UserDetails} />
           <Route path={"/edit/:id"} component={EditUser} />
-          {/* *****Admin Routes***** */}
+          <Route path={"/addusers"} component={AddUsers} />
+          {/* ***** End Admin Routes***** */}
         </Switch>
       </div>
     </>
