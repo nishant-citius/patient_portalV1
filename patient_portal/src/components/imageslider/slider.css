@@ -3,17 +3,17 @@
     margin: 0;
   }
   
-  :root {
+  /* :root {
     --heights: 50vh;
     --widths: 100%;
-  }
+  } */
   
   .slider-container {
     height: var(--heights);
     width: var(--widths);
     position: relative;
     margin: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   
   .active {
