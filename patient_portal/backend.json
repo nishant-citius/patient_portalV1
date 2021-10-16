@@ -76,16 +76,17 @@
       "id": 5
     },
     {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$IXAq4MS9m42J9fAzL4sdvugpQjD6dWHqHbbeKxm9WYTo9PjRFznN2",
-      "fName": "abc",
-      "lName": "d",
-      "dob": "2021-10-12",
-      "username": "abc11",
-      "mobile": "23456789",
+      "email": "nc@email.com",
+      "password": "$2a$10$tcf7U.h7sbDig84A.uFjdO.XXzeELxysxCzTDJy/HOeLlzxh7ShYK",
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-29",
+      "username": "nish",
+      "mobile": "1234567890",
       "role": "patient",
-      "speciality": "Cancer",
-      "createdDate": "Thu Oct 14 2021 16:52:49 GMT+0530 (India Standard Time)",
+      "rpassword": "12345",
+      "blood_group": "b+ve",
+      "createdDate": "Fri Oct 15 2021 15:16:27 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 6
     }
