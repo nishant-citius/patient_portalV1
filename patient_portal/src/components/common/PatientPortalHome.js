@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Layout/index";
+// import Navbar from "../Layout/index";
 import Slider from "../imageslider/Slider";
 import DoctorsCard from "../DoctorsCard/card";
 import Footer from "../Layout/Footer";

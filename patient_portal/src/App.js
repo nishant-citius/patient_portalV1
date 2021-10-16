@@ -53,11 +53,11 @@ const mapStateToProps = (rootReducer) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-      logout: () => dispatch(actioncreators.Logout()) 
-  }
-}
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//       logout: () => dispatch(actioncreators.Logout()) 
+//   }
+// }
 function App(props) {
   return (
     <>         
@@ -92,14 +92,9 @@ function App(props) {
              </React.Fragment>
           ) 
         }
-        <Switch>
-          {/* <Route exact path="/" component={PatientPortalHome} /> */}
-          
-        </Switch>
-        
       </div>
     </>
   );
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, null)(App);
 //export default App;

@@ -8,6 +8,7 @@ let appState = {
   globalmessage: "",
   role: "",
   loggedUserInfo: {},
+  physicians: [],
 };
 
 export default appState;
