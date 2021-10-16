@@ -7,11 +7,12 @@ import Immunizationreducer from "./reducers/Immunizationreducer";
 import { LoginReducer } from "./reducers/loginReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
 import { RegisterReducer } from "./reducers/RegisterReducer";
+import { AddUserReducer } from "./reducers/userreducers/AddUserReducer";
+import { GetAllUsersReducer } from "./reducers/userreducers/GetAllUsersReducers";
+import { EditUserReducer } from "./reducers/userreducers/EditUserReducer";
 // import { UsersReducer } from "./reducers/userReducer";
 import { PhysicianReducer } from "./reducers/PhysicianReducer";
 // import { UpdateReducer } from "./reducers/UpdateReducer";
-import { AddUserReducer } from "./reducers/AddUserReducer";
-import { GetAllUsersReducer } from "./reducers/GetAllUsersReducers";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -24,6 +25,7 @@ let rootReducer = combineReducers({
   physicians: PhysicianReducer,
   adduser: AddUserReducer,
   getallusers: GetAllUsersReducer,
+  updateusers: EditUserReducer,
 });
 
 /**create store  */

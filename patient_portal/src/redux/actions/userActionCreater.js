@@ -16,7 +16,9 @@ axios.interceptors.request.use((req) => {
   console.log(`${req.method} ${req.url}`);
   if (
     req.method === "get" &&
-    (req.url.endsWith("/users") || req.url.endsWith("physician"))
+    (req.url.endsWith("/users") ||
+      req.url.endsWith("physician") ||
+      req.url.indexOf("/users/id="))
   ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
@@ -142,6 +144,28 @@ export function AddUser(user) {
   };
 }
 
+export function EditUser(userId, upadatedData) {
+  let payload = {
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios
+      .put(`${URLS.USER} ${userId}`, JSON.stringify(upadatedData), config)
+      .then(
+        (response) => {
+          console.log(response);
+          payload.globalmessage = ` User Updated successfully`;
+          dispatch({ type: actions.UPDATE_USER, payload: payload });
+        },
+        (error) => {
+          payload.globalmessage = `ERROR: ${error.response.data}`;
+          dispatch({ type: actions.UPDATE_USER, payload: payload });
+        }
+      );
+  };
+}
+
 export function AddDemographicsAsync(user) {
   return (dispatch) => {
     userService.Addpatientdemographics(user).then(
@@ -190,7 +214,6 @@ export function AddMedicationAndAllergiesAsync(user) {
 export function GetAllUserData() {
   let payload = {
     users: [],
-
     globalmessage: "",
   };
 
@@ -204,9 +227,7 @@ export function GetAllUserData() {
       },
       (error) => {
         payload.globalmessage = `${error.response.data}`;
-
         payload.users = [];
-
         dispatch({ type: actions.GET_ALL_USERS, payload: payload });
       }
     );
