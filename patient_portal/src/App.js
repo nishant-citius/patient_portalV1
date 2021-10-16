@@ -18,6 +18,14 @@ import { connect } from "react-redux";
 // import 'react-calendar/dist/Calendar.css';
 // import { connect } from "react-redux";
 
+// import PatientList from "./components/admin/PatientList";
+// import PhysicianList from "./components/admin/PhysicianList";
+// import Appointments from "./components/admin/Appointments";
+// import ImmunizationDetails from "./components/admin/ImmunizationDetails";
+//import EditUser from "./components/admin/common/EditUser";
+// import EditUser from "./components/admin/UserDetails/EditUser";
+// import UserDetails from "./components/admin/common/UserDetails";
+// import UserList from "components/admin/Userslist";
 
 // import PatientList from "./components/admin/PatientList";
 // import PhysicianList from "./components/admin/PhysicianList";

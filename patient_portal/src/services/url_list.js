@@ -8,4 +8,4 @@ export const MED_ALLERGIES = "http://localhost:9999/medication_allergies";
 
 export const GET_PHYSICIANS = "http://localhost:9999/users?role=physician";
 export const ADD_USER = "http://localhost:9999/register";
-export const USER = "http://localhost:9999/users";
+export const USER = "http://localhost:9999/users/";
