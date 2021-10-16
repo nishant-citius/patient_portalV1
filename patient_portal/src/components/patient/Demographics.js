@@ -232,7 +232,8 @@ const Demographics = (props) => {
 const mapStateToProps = (state) => {
   return {
     globalMessage: state.demographics.globalmessage,
-    statusCode: state.demographics.statusCode,
+    // statusCode: state.demographics.statusCode,
+    
   };
 };
 

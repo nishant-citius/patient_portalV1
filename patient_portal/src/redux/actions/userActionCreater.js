@@ -117,13 +117,14 @@ export function GetAllUsersAsync() {
 export function AddDemographics(user) {
   let payload = {
     globalmessage: "",
-    statusCode: "",
+    // statusCode: "",
   };
-  return (dispatch) => {
+  return (dispatch,getState) => {
+    authToken = getState().authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
         dispatch({ type: actions.ADD_DEMOGRAPHICS, newuser: user });
-        payload.globalmessage = `Demographics registered successfully`;
+        // payload.globalmessage = `Demographics registered successfully`;
         },
     (error) =>{
         payload.globalmessage = `Demographics ERROR: ${error.response.data}`;
