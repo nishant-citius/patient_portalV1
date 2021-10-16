@@ -1,4 +1,3 @@
-// import appState from "./appState";
 import { createStore, combineReducers } from "redux";
 import { applyMiddleware } from "redux";
 import thunk from "redux-thunk";
@@ -8,8 +7,9 @@ import { LoginReducer } from "./reducers/loginReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
 import { RegisterReducer } from "./reducers/RegisterReducer";
 import { PhysicianReducer } from "./reducers/PhysicianReducer";
-import { AddUserReducer } from "./reducers/AddUserReducer";
-import { GetAllUsersReducer } from "./reducers/GetAllUsersReducers";
+import { AddUserReducer } from "./reducers/userreducers/AddUserReducer";
+import { GetAllUsersReducer } from "./reducers/userreducers/GetAllUsersReducers";
+import { EditUserReducer } from "./reducers/userreducers/EditUserReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -21,6 +21,7 @@ let rootReducer = combineReducers({
   physicians: PhysicianReducer,
   adduser: AddUserReducer,
   getallusers: GetAllUsersReducer,
+  updateusers: EditUserReducer,
 });
 
 /**create store  */
