@@ -22,12 +22,7 @@ import ImmunizationDetails from "./components/admin/ImmunizationDetails";
 import EditUser from "./components/admin/common/EditUser";
 import UserDetails from "./components/admin/common/UserDetails";
 import UserList from "components/admin/Userslist";
-
-// import Navbar from "./shared/navbar/Navbar";
 import AddUsers from "./components/admin/UserDetails/AddUsers";
-// import Navbar from "components/Layout";
-// import Navbar from "./components/admin/common/Navbar";
-
 function App() {
   return (
     <>
