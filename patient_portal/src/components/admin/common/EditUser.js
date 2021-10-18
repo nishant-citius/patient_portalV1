@@ -1,10 +1,10 @@
 import { React, useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
-import { Link } from "react-router-dom";
 import { adminService } from "../../../services/register_user_service";
+import { Link } from "react-router-dom";
+import * as actions from "../../../redux/actions/userActionCreater";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-// import * as actionCreater from "../../../redux/actions/userActionCreater";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 const EditUser = (props) => {
   let tempUserData = {
@@ -15,8 +15,8 @@ const EditUser = (props) => {
     email: "",
     mobile: "",
     role: "",
+    speciality: "",
     password: "",
-    rpassword: "",
     createdDate: Date(),
   };
 
@@ -49,7 +49,6 @@ const EditUser = (props) => {
       },
       (error) => {}
     );
-    // props.editUser(_id, userData);
   };
 
   const handleUserChange = (e) => {
@@ -62,6 +61,7 @@ const EditUser = (props) => {
     e.preventDefault();
     let newUserData = { ...user };
     submitNewUserData(id, newUserData);
+    // props.updateUser(id, newUserData);
   };
 
   return (
@@ -138,6 +138,26 @@ const EditUser = (props) => {
                 <option value="physician">Physician</option>
               </select>
             </div>
+            {user.role === "physician" ? (
+              <>
+                <div className="form-group">
+                  <label>Speciality</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="speciality"
+                    id="speciality"
+                    onChange={handleUserChange}
+                    placeholder="Enter Speciality"
+                    value={user.speciality}
+                  />
+                </div>
+                <br />
+              </>
+            ) : (
+              ""
+            )}
+            <br />
             <div className="form-group">
               <label>Email</label>
               <input
@@ -185,18 +205,23 @@ const EditUser = (props) => {
   );
 };
 
-// const mapStateToProps = (state) => {
+// const mapStateToProps = (rootReducer) => {
 //   return {
-//     physicians: state.physician.users,
+//     globalmessage: rootReducer.updateusers.globalmessage,
 //   };
 // };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     editUser: (userId, user) =>
-//       dispatch(actionCreater.updateUser(userId, user)),
-//   };
-// };
-
+<<<<<<< HEAD
 // export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
 export default EditUser;
+=======
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateUser: (userId, updatedData) =>
+      dispatch(actions.EditUser(userId, updatedData)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(EditUser);
+// export default EditUser;
+>>>>>>> d863eec34dfe20a38ef7a15695c3607faef5983a

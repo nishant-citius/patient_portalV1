@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function App() {
+function DoctorsCard() {
   const classes = useStyles();
 
   return (
@@ -296,4 +296,4 @@ Radiation therapy, Bone marrow transplant, Immunotherapy.
   );
 }
 
-export default App;
+export default DoctorsCard;

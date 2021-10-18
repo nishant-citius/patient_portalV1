@@ -14,7 +14,6 @@ import {
 const mapStateToProps = (rootReducer) => {
   return {
     users: rootReducer.getallusers.users,
-
     globalmessage: rootReducer.getallusers.globalmessage,
   };
 };
@@ -35,11 +34,10 @@ export class UserList extends React.Component {
     this.props.getalluserdata();
   }
 
-  toggleUserState = (user) => {};
   render() {
     return (
       <>
-        <div className="container mt-4">
+        <div className="container mt-5">
           <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
@@ -57,6 +55,7 @@ export class UserList extends React.Component {
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Status</th>
+                <th scope="col">Role</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -70,24 +69,19 @@ export class UserList extends React.Component {
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>
                     <td>
-                      {/* {user.isActive ? (
+                      {user.isActive ? (
                         <>
-                          <BsCheckCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsCheckCircleFill className="hand-pointer" />
                           <span className="p-2">Active</span>
                         </>
                       ) : (
                         <>
-                          <BsFillXCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsFillXCircleFill className="hand-pointer" />
                           <span className="p-2">Inactive</span>
                         </>
-                      )} */}
+                      )}
                     </td>
+                    <td>{user.role}</td>
                     <td>
                       <span className="p-2">
                         <Link to={`/userdetails/${user.id}`}>

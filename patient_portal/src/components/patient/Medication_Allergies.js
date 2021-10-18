@@ -143,7 +143,7 @@ const Medication_Allergies = (props) => {
   let temp_medication_allergies = {
     id: "",
     patient_id: "",
-    current_medication: {
+    current_medication:[ {
       medicineName: "",
       dosage: "",
       directionstoconsume: "",
@@ -152,14 +152,14 @@ const Medication_Allergies = (props) => {
       purpose: "",
       startDate: "",
       endDate: "",
-    },
-    //   otc_medication:[
-    //   {
-    //     otcDrugName: "",
-    //     strength: "",
-    //     directiontoconsumedosage: "",
-    //     socialDrugs: ""
-    //   },
+    }],
+      // otc_medication:[
+      // {
+      //   otcDrugName: "",
+      //   strength: "",
+      //   directiontoconsumedosage: "",
+      //   socialDrugs: ""
+      // },
     //   ],
     //   pastprescribedmedication:[
     //   {
@@ -174,7 +174,7 @@ const Medication_Allergies = (props) => {
     //     symptomsofAllergy: "",
     //     drugAllergy: ""
     //   },
-    //   ],
+      // ],
   };
 
   const [medication_allergies, setmedication_allergies] = useState(
@@ -195,7 +195,8 @@ const Medication_Allergies = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let newrecords = { ...medication_allergies };
-    props.addmedicationandallergiesrHandler(newrecords);
+    //props.addmedicationandallergiesrHandler(newrecords);
+    props.addmedicationandallergiesrHandler(medication_allergies);
   };
   return (
     <div className="container">
@@ -552,7 +553,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  debugger;
+  
   return {
     addmedicationandallergiesrHandler: (newuser) =>
       dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),

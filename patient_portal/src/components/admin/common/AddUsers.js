@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { connect } from "react-redux";
@@ -40,11 +40,12 @@ const AddUsers = (props) => {
       alert("please enter valid last name");
     }
     props.adduser(newUserData);
+    history.push("/allusers");
   };
 
   useEffect(() => {
-    if (props.statusCode === 200) {
-      history.push("/allusers");
+    if (props.status === 201) {
+      // history.push("/allusers");
     }
   });
 
@@ -67,6 +68,7 @@ const AddUsers = (props) => {
                 id="fName"
                 placeholder="Enter Your First name"
                 onChange={handleUserChange}
+                value={user.fName}
               />
             </div>
             <br />
@@ -79,6 +81,7 @@ const AddUsers = (props) => {
                 id="lName"
                 placeholder="Enter Your Last name"
                 onChange={handleUserChange}
+                value={user.lName}
               />
             </div>
             <br />
@@ -91,6 +94,7 @@ const AddUsers = (props) => {
                 id="dob"
                 placeholder="Enter Your Dob"
                 onChange={handleUserChange}
+                value={user.dob}
               />
             </div>
             <br />
@@ -103,6 +107,7 @@ const AddUsers = (props) => {
                 id="username"
                 placeholder="Enter User Name"
                 onChange={handleUserChange}
+                value={user.username}
               />
             </div>
             <br />
@@ -113,6 +118,7 @@ const AddUsers = (props) => {
                 name="role"
                 id="role"
                 onChange={handleUserChange}
+                value={user.role}
               >
                 <option value="">Select</option>
                 <option value="admin">Admin</option>
@@ -121,18 +127,25 @@ const AddUsers = (props) => {
               </select>
             </div>
             <br />
-            <div className="form-group">
-              <label>Speciality</label>
-              <input
-                type="text"
-                className="form-control"
-                name="speciality"
-                id="speciality"
-                onChange={handleUserChange}
-                placeholder="Enter Speciality"
-              />
-            </div>
-            <br />
+            {user.role === "physician" ? (
+              <>
+                <div className="form-group">
+                  <label>Speciality</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="speciality"
+                    id="speciality"
+                    onChange={handleUserChange}
+                    placeholder="Enter Speciality"
+                    value={user.speciality}
+                  />
+                </div>
+                <br />
+              </>
+            ) : (
+              ""
+            )}
             <div className="form-group">
               <label>Email</label>
               <input
@@ -142,6 +155,7 @@ const AddUsers = (props) => {
                 name="email"
                 placeholder="Enter email"
                 onChange={handleUserChange}
+                value={user.email}
               />
             </div>
             <br />
@@ -154,6 +168,7 @@ const AddUsers = (props) => {
                 id="mobile"
                 placeholder="Enter Mobile Number"
                 onChange={handleUserChange}
+                value={user.mobile}
               />
             </div>
             <br />
@@ -166,6 +181,7 @@ const AddUsers = (props) => {
                 name="password"
                 placeholder="Password"
                 onChange={handleUserChange}
+                value={user.password}
               />
             </div>
             <br />
@@ -183,12 +199,13 @@ const AddUsers = (props) => {
 const mapStateToProps = (rootReducer) => {
   return {
     globalmessage: rootReducer.adduser.globalmessage,
+    status: rootReducer.adduser.statusCode,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    adduser: (userinfo) => dispatch(actions.AddUser(userinfo)),
+    adduser: (userinfo) => dispatch(actions.AddNewUser(userinfo)),
   };
 };
 

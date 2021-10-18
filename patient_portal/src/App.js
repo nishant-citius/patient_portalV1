@@ -1,76 +1,48 @@
 import "./App.css";
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-import PatientPortalHome from "./components/common/PatientPortalHome";
-import Login from "./components/common/Login";
-import RegisterUser from "./components/common/RegisterUser";
-import AdminDashboard from "./components/admin/AdminDashboard";
-import Patient_dashboard from "./components/patient/Patient_dashboard";
-import Physician_dashboard from "./components/physician/Physician_dashboard";
-import Demographics from "./components/patient/Demographics";
-import Immunization from "./components/patient/Immunization";
-import Medication_Allergies from "components/patient/Medication_Allergies";
-import About from "./pages/about";
-import Services from "./pages/services";
-import Contact from "./pages/contact";
-import "react-calendar/dist/Calendar.css";
+import { connect } from "react-redux";
+////////////////////////////////////////////////////////////////
+import "./App.css";
+import { Grid } from "./mui";
+import AppToolBar from "./navigation/AppToolBar";
+import SideNav from "./navigation/SideNav";
+import ShellComponent from "./components/ShellComponent";
+/////////////////////////////////////////////////////////////////
+const mapStateToProps = (rootReducer) => {
+  return {
+    isLoggedIn: rootReducer.login.isLoggedIn,
+    role: rootReducer.login.role,
+    authToken: rootReducer.login.authToken,
+  };
+};
 
-import PatientList from "./components/admin/PatientList";
-import PhysicianList from "./components/admin/PhysicianList";
-import Appointments from "./components/admin/Appointments";
-import ImmunizationDetails from "./components/admin/ImmunizationDetails";
-//import EditUser from "./components/admin/common/EditUser";
-import EditUser from "./components/admin/UserDetails/EditUser";
-import UserDetails from "./components/admin/common/UserDetails";
-import UserList from "components/admin/Userslist";
-
-// import Navbar from "./shared/navbar/Navbar";
-import AddUsers from "./components/admin/UserDetails/AddUsers";
-// import Navbar from "components/Layout";
-// import Navbar from "./components/admin/common/Navbar";
-
-function App() {
+function App(props) {
   return (
     <>
-      <div className="app">
-        {/* <Navbar /> */}
-        <Switch>
-          <Route exact path="/" component={PatientPortalHome} />
-          <Route path="/login" component={Login} />
-          <Route path="/registeruser" component={RegisterUser} />
-
-          <Route path="/admin" component={AdminDashboard} />
-          <Route path="/patient" component={Patient_dashboard} />
-          <Route path="/physician" component={Physician_dashboard} />
-
-          <Route path="/demographics" component={Demographics} />
-          <Route path="/immunization" component={Immunization} />
-          <Route
-            path="/medicationandallergies"
-            component={Medication_Allergies}
-          />
-          <Route path="/about" component={About} />
-          <Route path="/services" component={Services} />
-          <Route path="/contact-us" component={Contact} />
-
-          {/* *****Start Admin Routes***** */}
-          <Route path={"/patientlist"} component={PatientList} />
-          <Route path={"/allusers"} component={UserList} />
-
-          <Route path={"/physicianlist"} component={PhysicianList} />
-          <Route path={"/appointments"} component={Appointments} />
-          <Route
-            path={"/immunizationdetails"}
-            component={ImmunizationDetails}
-          />
-          <Route path={"/userdetails/:id"} component={UserDetails} />
-          <Route path={"/edit/:id"} component={EditUser} />
-          <Route path={"/addusers"} component={AddUsers} />
-          {/* ***** End Admin Routes***** */}
-        </Switch>
+      <div>
+        <AppToolBar />
+        {props.isLoggedIn === false ? (
+          <React.Fragment>
+            <Grid container>
+              <Grid item sm={12} xs={12}>
+                <ShellComponent />
+              </Grid>
+            </Grid>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Grid container>
+              <Grid item sm={2} xs={2}>
+                <SideNav role="physicianx" />
+              </Grid>
+              <Grid item sm={10} xs={10}>
+                <ShellComponent />
+              </Grid>
+            </Grid>
+          </React.Fragment>
+        )}
       </div>
     </>
   );
 }
-
-export default App;
+export default connect(mapStateToProps, null)(App);

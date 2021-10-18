@@ -2,6 +2,8 @@ import { React, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { adminService } from "../../../services/register_user_service";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+// import * as actioncreators from "../../../redux/actions/userActionCreater";
+import { connect } from "react-redux";
 
 const UserDetails = (props) => {
   let tempUser = {
@@ -20,6 +22,10 @@ const UserDetails = (props) => {
     [user, setUser] = useState(tempUser),
     currentUserIndex = 0;
 
+  useEffect(() => {
+    loadUsers(id);
+  }, [id]);
+
   const loadUsers = (_id) => {
     adminService.getUserById(_id).then(
       (response) => {
@@ -29,16 +35,14 @@ const UserDetails = (props) => {
         return;
       }
     );
+    // props.getUserDetails(id);
+    // setUser(props.userDetails);
   };
-
-  useEffect(() => {
-    loadUsers(id);
-  }, [id]);
 
   return (
     <>
       <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
-        {user.role === "patient" ? (
+        {/* {user.role === "patient" ? (
           <Link className="btn btn-warning" to="/patientlist">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
@@ -48,7 +52,7 @@ const UserDetails = (props) => {
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
           </Link>
-        )}
+        )} */}
         <h3 className="text-success text-center fw-bold ">User Details</h3>
         <div className="d-flex justify-content-center">
           <ul className="list-group w-50">
@@ -74,5 +78,20 @@ const UserDetails = (props) => {
     </>
   );
 };
+
+// const mapStateToProps = (rootReducer) => {
+//   return {
+//     userDetails: rootReducer.userDetails.userDetails,
+//     globalmessage: rootReducer.patients.globalmessage,
+//   };
+// };
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     getUserDetails: (userId) => dispatch(actioncreators.GetUserDetails(userId)),
+//   };
+// };
+
+// export default connect(mapStateToProps, mapDispatchToProps)(UserDetails);
 
 export default UserDetails;
