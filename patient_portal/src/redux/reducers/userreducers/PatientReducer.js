@@ -1,11 +1,11 @@
 import appState from "../../appState";
 import * as actions from "../../actions/userActions";
 
-export function GetAllUsersReducer(state = appState, action) {
-  if (action.type === actions.GET_ALL_USERS) {
+export function PatientReducer(state = appState, action) {
+  if (action.type === actions.PATIENTS) {
     return {
       globalmessage: action.payload.globalmessage,
-      users: action.payload.users,
+      patients: action.payload.patients,
     };
   }
 

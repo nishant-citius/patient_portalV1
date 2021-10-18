@@ -143,7 +143,7 @@ const Medication_Allergies = (props) => {
   let temp_medication_allergies = {
     id: "",
     patient_id: "",
-    current_medication: {
+    current_medication:[ {
       medicineName: "",
       dosage: "",
       directionstoconsume: "",
@@ -152,29 +152,29 @@ const Medication_Allergies = (props) => {
       purpose: "",
       startDate: "",
       endDate: "",
-    },
-      otc_medication:[
-      {
-        otcDrugName: "",
-        strength: "",
-        directiontoconsumedosage: "",
-        socialDrugs: ""
-      },
-      ],
-      pastprescribedmedication:[
-      {
-        drugName: "",
-        strength: "",
-        directiontoconsumedosage: ""
-      },
-    ],
-      allergies: [
-      {
-        allergyName: "",
-        symptomsofAllergy: "",
-        drugAllergy: ""
-      },
-      ],
+    }],
+      // otc_medication:[
+      // {
+      //   otcDrugName: "",
+      //   strength: "",
+      //   directiontoconsumedosage: "",
+      //   socialDrugs: ""
+      // },
+    //   ],
+    //   pastprescribedmedication:[
+    //   {
+    //     drugName: "",
+    //     strength: "",
+    //     directiontoconsumedosage: ""
+    //   },
+    // ],
+    //   allergies: [
+    //   {
+    //     allergyName: "",
+    //     symptomsofAllergy: "",
+    //     drugAllergy: ""
+    //   },
+      // ],
   };
 
   const [medication_allergies, setmedication_allergies] = useState(
@@ -553,7 +553,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  debugger;
+  
   return {
     addmedicationandallergiesrHandler: (newuser) =>
       dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),

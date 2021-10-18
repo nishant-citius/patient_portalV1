@@ -2,8 +2,9 @@ import { React, useState } from "react";
 import Calendar from "react-calendar";
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
-import Chart from "./chart";
+import BarChart from "./chart";
 import { useHistory } from "react-router";
+
 
 
 
@@ -22,17 +23,20 @@ const Physician_dashboard = () => {
 
   return (
     <>
-          <button onClick={logOutUser} className="btn btn-primary float-end mr-4">
+          {/* <button onClick={logOutUser} className="btn btn-primary float-end mr-4 ">
         Logout
-      </button>
+      </button> */}
+    
     <div className='m-4'>
       <div className="row ">
       <div className="col-4">
+       
       <Calendar
         onChange={onChange}
         value={value}
         className="mb-4"
       />
+      
       <Dropdown>
         <Dropdown.Toggle variant="success">
         Select Appointments
@@ -49,10 +53,11 @@ const Physician_dashboard = () => {
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
+      
       </div>
       <div className="col-6 mb-4">
       <table className="table mt-4">
-        <thead class="thead-dark">
+        <thead className="thead-dark">
              <tr>
                   <th scope="col"># </th>
                   <th scope="col">Patient id</th>
@@ -89,6 +94,7 @@ const Physician_dashboard = () => {
             </tbody>
         </table>
       <button className="btn btn-primary mt-4" href="#"> Join Online Consultaion</button>
+      <BarChart />
       </div>
       </div>
       
