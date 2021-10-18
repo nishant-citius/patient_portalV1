@@ -2,11 +2,11 @@
   "users": [
     {
       "email": "j@email.com",
-      "password": "$2a$10$QhJr/.j5wtJdoADQWCCbneHe.nLxnxV2DX7Mfba.99H2yAzWK9Ype",
-      "fName": "John",
+      "password": "$2a$10$J.r5t7QAJuzrbOsZA8l9Xe4zm4ItNjhqt4T21Jo3PNF1gX4fTZCK6",
+      "fName": "Undertaler",
       "lName": "Cena",
-      "dob": "2021-10-01",
-      "username": "jon",
+      "dob": "2021-09-29",
+      "username": "johny",
       "mobile": "9955641258",
       "role": "admin",
       "rpassword": "12345",
