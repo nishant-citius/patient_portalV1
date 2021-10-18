@@ -195,6 +195,7 @@ const Medication_Allergies = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let newrecords = { ...medication_allergies };
+    //props.addmedicationandallergiesrHandler(newrecords);
     props.addmedicationandallergiesrHandler(medication_allergies);
   };
   return (

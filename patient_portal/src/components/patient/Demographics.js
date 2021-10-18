@@ -239,7 +239,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    demographics: (newuser) => dispatch(actionCreator.AddDemographics(newuser)),
+    demographics: (newuser) => dispatch(actionCreator.AddDemographicsAsync(newuser)),
   };
 };
 

@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as URLS from "./url_list";
+// import * as actions from "../redux/actions/userActions";
 
 class UserServices {
   GetAllUsers() {
@@ -28,6 +29,7 @@ class UserServices {
     };
     return axios.post(url, JSON.stringify(user), config);
   }
+
   Addpatientimmunization(user) {
     let url = URLS.BASE_URL + "/immunization";
 
@@ -38,9 +40,10 @@ class UserServices {
     };
     return axios.post(url, JSON.stringify(user), config);
   }
+
   Addmedicationandallergies(user) {
     let url = URLS.BASE_URL + "/medication_allergies";
-  
+
     let config = {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
@@ -49,8 +52,6 @@ class UserServices {
     return axios.post(url, JSON.stringify(user), config);
   }
 }
-
-
 
 /*********Admin Serives***********/
 class AdminServices {
@@ -90,7 +91,6 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/users/${userId}`;
     return axios.delete(url);
   }
-
   addNewUser(user) {
     let url = URLS.BASE_URL + "/users";
     let config = {

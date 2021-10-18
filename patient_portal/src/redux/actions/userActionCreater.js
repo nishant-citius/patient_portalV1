@@ -14,7 +14,12 @@ let authToken = "";
 // ********AXIOS INTERCEPTOR********
 axios.interceptors.request.use((req) => {
   console.log(`${req.method} ${req.url}`);
-  if (req.method === "get" && req.url.endsWith("/users")) {
+  if (
+    req.method === "get" &&
+    (req.url.endsWith("/users") ||
+      req.url.endsWith("physician") ||
+      req.url.indexOf("/users/id="))
+  ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -35,7 +40,6 @@ export function Register(user) {
     axios.post(URLS.REGISTER_USER, JSON.stringify(user), config).then(
       (response) => {
         payload.globalmessage = `Email Id: ${user.email} registered successfully`;
-
         dispatch({ type: actions.REGISTER, payload: payload });
       },
       (error) => {
@@ -88,6 +92,30 @@ export function Logout() {
   };
 }
 
+export function GetAllPhysicianData() {
+  let payload = {
+    physicians: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_PHYSICIANS).then(
+      (response) => {
+        payload.globalmessage = `Physician data retrieved successfully. Count: ${response.data.length}`;
+        payload.physicians = response.data;
+        dispatch({ type: actions.PHYSICIANS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.physicians = [];
+        dispatch({ type: actions.PHYSICIANS, payload: payload });
+      }
+    );
+  };
+}
+
+/***************Pevious******************/
 export function GetAllUsersAsync() {
   return (dispatch) => {
     userService.GetAllUsers().then(
@@ -114,17 +142,79 @@ export function GetAllUsersAsync() {
 //   };
 // }
 
-export function AddDemographics(user) {
+// export function AddDemographics(user) {
+//   let payload = {
+//     globalmessage: "",
+//     // statusCode: "",
+//   };
+//   return (dispatch,getState) => {
+//     authToken = getState().authToken;
+//     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
+//       (response) => {
+//         payload.globalmessage = `Demographics registered successfully`;
+//         dispatch({ type: actions.DEMOGRAPHICS, payload: payload });
+//       },
+//       (error) => {
+//         payload.globalmessage = `ERROR: ${error.response.data}`;
+//         // payload.statusCode = 400;
+//         dispatch({ type: actions.DEMOGRAPHICS, payload: payload });
+//       }
+//     }
+//   }
+export function AddUser(user) {
   let payload = {
     globalmessage: "",
-    // statusCode: "",
   };
-  return (dispatch,getState) => {
-    authToken = getState().authToken;
+  return (dispatch) => {
+    axios.post(URLS.ADD_USER, JSON.stringify(user), config).then(
+      (response) => {
+        console.log(response);
+        payload.globalmessage = `New User Added successfully`;
+        dispatch({ type: actions.ADD_USER, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `ERROR: ${error.response.data}`;
+        dispatch({ type: actions.ADD_USER, payload: payload });
+      }
+    );
+  };
+}
+
+export function EditUser(userId, upadatedData) {
+  let payload = {
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios
+      .put(`${URLS.USER} ${userId}`, JSON.stringify(upadatedData), config)
+      .then(
+        (response) => {
+          console.log(response);
+          payload.globalmessage = ` User Updated successfully`;
+          dispatch({ type: actions.UPDATE_USER, payload: payload });
+        },
+        (error) => {
+          payload.globalmessage = `ERROR: ${error.response.data}`;
+          dispatch({ type: actions.UPDATE_USER, payload: payload });
+        }
+      );
+  };
+}
+
+export function AddDemographicsAsync(user) {
+  let payload = {
+        globalmessage: "",
+        // statusCode: "",
+      };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
-        dispatch({ type: actions.ADD_DEMOGRAPHICS, newuser: user });
-        // payload.globalmessage = `Demographics registered successfully`;
+        console.log(response)
+        payload.globalmessage = `Demographics registered successfully`;
+        dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
+        
         },
     (error) =>{
         payload.globalmessage = `Demographics ERROR: ${error.response.data}`;
@@ -163,14 +253,25 @@ export function AddMedicationAndAllergiesAsync(user) {
   };
 }
 
-// export function loginUser() {
-//   return {
-//     type: actions.LOGIN,
-//   };
-// }
+export function GetAllUserData() {
+  let payload = {
+    users: [],
+    globalmessage: "",
+  };
 
-// export function logoutUser() {
-//   return {
-//     type: actions.LOGOUT,
-//   };
-// }
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(URLS.USER).then(
+      (response) => {
+        payload.globalmessage = `User data retrieved successfully. Count: ${response.data.length}`;
+        payload.users = response.data;
+        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.users = [];
+        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
+      }
+    );
+  };
+}

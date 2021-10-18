@@ -7,6 +7,14 @@ import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@materia
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import InputAdornment from "@material-ui/core/InputAdornment";
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import LockIcon from '@material-ui/icons/Lock';
+
+
+const paperStyle={padding :20,height:'70vh',width:280, margin:"60px auto", marginTop: "110px"}
+  const avatarStyle={backgroundColor:'#1bbd7e'}
+  const btnstyle={margin:'8px 0'}
 
 const Login = (props) => {
   const tempUser = {
@@ -41,40 +49,61 @@ const Login = (props) => {
       }
     }
   });
-
-  const paperStyle={padding :20,height:'70vh',width:280, margin:"60px auto"}
-  const avatarStyle={backgroundColor:'#1bbd7e'}
-  const btnstyle={margin:'8px 0'}
   return (
-    <Grid>
+    <>
+      <Grid>
       <Paper elevation={10} style={paperStyle}>
         <Grid align='center'>
           <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
           <br/>
             <h4>Sign In</h4>
               </Grid>
-                <TextField label='Username' margin="normal"
+                <TextField 
+                label='Email' 
+                margin="normal"
+                type="text"
                 name="email"
                 onChange={handleUserChange}
-                 placeholder='Enter username' fullWidth required/>
-                  <br/>
-                <TextField label='Password' 
+                placeholder='Enter email' fullWidth required
+                InputProps={{
+                 startAdornment: (
+                  <InputAdornment position="start">
+                      <AccountCircle/>
+                  </InputAdornment>
+                  ),
+                }}
+                variant="standard"
+                />
+
+                <br/>
+                <TextField 
+                label="password"
                 placeholder='Enter password' 
                 type='password' 
                 name="password"
-                onChange={handleUserChange}  fullWidth required/>
-                  <br/>
+                onChange={handleUserChange}  fullWidth required
+                InputProps={{
+                  startAdornment: (
+                   <InputAdornment position="start">
+                       <LockIcon/>
+                   </InputAdornment>
+                   ),
+                 }}
+                />
+                
+                <br/>
                 <FormControlLabel
                 control={
                 <Checkbox
                 name="checkedB"
                 color="primary"
+               
                 />
                 }
                 label="Remember me"
                 />
 
-                <Button onClick ={submitUserData} type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                <Button onClick={submitUserData} type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
                  <br/>
                  
                   {/* <Typography >
@@ -84,14 +113,16 @@ const Login = (props) => {
                   </Typography> */}
                   
                   <Typography > Do you have an account ?
-                      <Link to ="./registeruser" >
-                          Sign Up 
-                      </Link>
+                      
                   </Typography>
+                  {/* <Link to ="/registeruser" >
+                          Sign Up 
+                      </Link> */}
+                      <a href="/registeruser">Sign Up</a>
               </Paper>
           </Grid>
-      );
-  
+    </>
+  );
 };
 
 const mapStatetoProps = (state) => {
