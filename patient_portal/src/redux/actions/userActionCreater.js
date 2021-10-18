@@ -171,6 +171,7 @@ export function GetUserDetails(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_USER_DETAILS}/${userId}`).then(
       (response) => {
+        console.log(response.data);
         payload.globalmessage = `User Details Retrieved...`;
         payload.userDetails = response.data;
         dispatch({ type: actions.GET_USER, payload: payload });
@@ -192,7 +193,7 @@ export function EditUser(userId, upadatedData) {
     authToken = getState().login.authToken;
 
     axios
-      .put(`${URLS.USER} ${userId}`, JSON.stringify(upadatedData), config)
+      .put(`${URLS.USER}${userId}`, JSON.stringify(upadatedData), config)
       .then(
         (response) => {
           console.log(response);
