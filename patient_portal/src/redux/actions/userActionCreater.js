@@ -18,7 +18,8 @@ axios.interceptors.request.use((req) => {
     req.method === "get" &&
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
-      req.url.indexOf("/users/id="))
+      req.url.endsWith("patient") ||
+      req.url.indexOf("/users?id="))
   ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
@@ -88,6 +89,29 @@ export function Logout() {
   };
 }
 
+export function GetAllUserData() {
+  let payload = {
+    users: [],
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(URLS.ALL_USERS).then(
+      (response) => {
+        payload.globalmessage = `User data retrieved successfully. Count: ${response.data.length}`;
+        payload.users = response.data;
+        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.users = [];
+        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetAllPhysicianData() {
   let payload = {
     physicians: [],
@@ -111,34 +135,46 @@ export function GetAllPhysicianData() {
   };
 }
 
-/***************Pevious******************/
-export function GetAllUsersAsync() {
-  return (dispatch) => {
-    userService.GetAllUsers().then(
+export function GetAllPatientsData() {
+  let payload = {
+    patients: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_PATIENTS).then(
       (response) => {
-        dispatch({ type: actions.GET_USERS, users: response.data });
+        payload.globalmessage = `Patients data retrieved successfully. Count: ${response.data.length}`;
+        payload.patients = response.data;
+        dispatch({ type: actions.PATIENTS, payload: payload });
       },
       (error) => {
-        return;
+        payload.globalmessage = `${error.response.data}`;
+        payload.patients = [];
+        dispatch({ type: actions.PATIENTS, payload: payload });
       }
     );
   };
 }
 
-export function AddUser(user) {
+export function GetUserDetails(userId) {
   let payload = {
     globalmessage: "",
+    userDetails: {},
   };
-  return (dispatch) => {
-    axios.post(URLS.ADD_USER, JSON.stringify(user), config).then(
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_USER_DETAILS}/${userId}`).then(
       (response) => {
-        console.log(response);
-        payload.globalmessage = `New User Added successfully`;
-        dispatch({ type: actions.ADD_USER, payload: payload });
+        payload.globalmessage = `User Details Retrieved...`;
+        payload.userDetails = response.data;
+        dispatch({ type: actions.GET_USER, payload: payload });
       },
       (error) => {
-        payload.globalmessage = `ERROR: ${error.response.data}`;
-        dispatch({ type: actions.ADD_USER, payload: payload });
+        payload.globalmessage = `${error.response.data}`;
+        payload.userDetails = {};
+        dispatch({ type: actions.GET_USER, payload: payload });
       }
     );
   };
@@ -150,6 +186,7 @@ export function EditUser(userId, upadatedData) {
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
+
     axios
       .put(`${URLS.USER} ${userId}`, JSON.stringify(upadatedData), config)
       .then(
@@ -163,6 +200,41 @@ export function EditUser(userId, upadatedData) {
           dispatch({ type: actions.UPDATE_USER, payload: payload });
         }
       );
+  };
+}
+
+export function AddNewUser(user) {
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch) => {
+    axios.post(URLS.ADD_USER, JSON.stringify(user), config).then(
+      (response) => {
+        console.log(response);
+        payload.globalmessage = `New User Added successfully`;
+        payload.statusCode = response.status;
+        dispatch({ type: actions.ADD_USER, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `ERROR: ${error.response.data}`;
+        payload.statusCode = error;
+        dispatch({ type: actions.ADD_USER, payload: payload });
+      }
+    );
+  };
+}
+/***************Pevious******************/
+export function GetAllUsersAsync() {
+  return (dispatch) => {
+    userService.GetAllUsers().then(
+      (response) => {
+        dispatch({ type: actions.GET_USERS, users: response.data });
+      },
+      (error) => {
+        return;
+      }
+    );
   };
 }
 
@@ -206,29 +278,6 @@ export function AddMedicationAndAllergiesAsync(user) {
       },
       (error) => {
         return;
-      }
-    );
-  };
-}
-
-export function GetAllUserData() {
-  let payload = {
-    users: [],
-    globalmessage: "",
-  };
-
-  return (dispatch, getState) => {
-    authToken = getState().login.authToken;
-    axios.get(URLS.USER).then(
-      (response) => {
-        payload.globalmessage = `User data retrieved successfully. Count: ${response.data.length}`;
-        payload.users = response.data;
-        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
-      },
-      (error) => {
-        payload.globalmessage = `${error.response.data}`;
-        payload.users = [];
-        dispatch({ type: actions.GET_ALL_USERS, payload: payload });
       }
     );
   };

@@ -1,10 +1,9 @@
 import { React, useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { adminService } from "../../../services/register_user_service";
+import * as actions from "../../../redux/actions/userActionCreater";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-// import * as actionCreater from "../../../redux/actions/userActionCreater";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 const EditUser = (props) => {
   let tempUserData = {
@@ -15,8 +14,8 @@ const EditUser = (props) => {
     email: "",
     mobile: "",
     role: "",
+    speciality: "",
     password: "",
-    rpassword: "",
     createdDate: Date(),
   };
 
@@ -24,33 +23,6 @@ const EditUser = (props) => {
 
   const { id } = useParams();
   const history = useHistory();
-
-  useEffect(() => {
-    loadUsers(id);
-  }, [id]);
-
-  const loadUsers = (_id) => {
-    adminService.getUserById(_id).then(
-      (response) => {
-        setUser(response.data[0]);
-      },
-      (error) => {
-        return;
-      }
-    );
-  };
-
-  const submitNewUserData = (_id, userData) => {
-    adminService.updateUser(_id, userData).then(
-      (response) => {
-        user.role === "patient"
-          ? history.push("/patientlist")
-          : history.push("/physicianlist");
-      },
-      (error) => {}
-    );
-    // props.editUser(_id, userData);
-  };
 
   const handleUserChange = (e) => {
     const name = e.target.name,
@@ -61,8 +33,21 @@ const EditUser = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    submitNewUserData(id, newUserData);
+
+    if (user.fName.length < 1) {
+      alert("please enter valid First name");
+    }
+    if (user.lName.length < 1) {
+      alert("please enter valid last name");
+    }
+    props.updateusers(id, newUserData);
   };
+
+  useEffect(() => {
+    if (props.statusCode === 200) {
+      history.push("/allusers");
+    }
+  });
 
   return (
     <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
@@ -130,7 +115,6 @@ const EditUser = (props) => {
                 id="role"
                 value={user.role}
                 onChange={handleUserChange}
-                disabled={true}
               >
                 <option value="">Select</option>
                 <option value="admin">Admin</option>
@@ -138,6 +122,19 @@ const EditUser = (props) => {
                 <option value="physician">Physician</option>
               </select>
             </div>
+            <div className="form-group">
+              <label>Speciality</label>
+              <input
+                type="text"
+                className="form-control"
+                name="speciality"
+                id="speciality"
+                value={user.speciality}
+                onChange={handleUserChange}
+                placeholder="Enter Speciality"
+              />
+            </div>
+            <br />
             <div className="form-group">
               <label>Email</label>
               <input
@@ -185,19 +182,17 @@ const EditUser = (props) => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   return {
-//     physicians: state.physician.users,
-//   };
-// };
+const mapStateToProps = (rootReducer) => {
+  return {
+    globalmessage: rootReducer.updateusers.globalmessage,
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     editUser: (userId, user) =>
-//       dispatch(actionCreater.updateUser(userId, user)),
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateusers: (userId, updatedData) =>
+      dispatch(actions.EditUser(userId, updatedData)),
+  };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
-export default EditUser;
-
+export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
