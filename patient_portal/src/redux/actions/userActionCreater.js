@@ -149,7 +149,9 @@ export function EditUser(userId, upadatedData) {
     globalmessage: "",
   };
   return (dispatch, getState) => {
+    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
     authToken = getState().login.authToken;
+    console.log(authToken);
     axios
       .put(`${URLS.USER} ${userId}`, JSON.stringify(upadatedData), config)
       .then(

@@ -33,7 +33,7 @@ const EditUser = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-
+    // console.log(newUserData);
     if (user.fName.length < 1) {
       alert("please enter valid First name");
     }
@@ -118,8 +118,8 @@ const EditUser = (props) => {
               >
                 <option value="">Select</option>
                 <option value="admin">Admin</option>
-                <option value="patient">Patient</option>
                 <option value="physician">Physician</option>
+                <option value="nurse">Nurse</option>
               </select>
             </div>
             <div className="form-group">
@@ -134,7 +134,6 @@ const EditUser = (props) => {
                 placeholder="Enter Speciality"
               />
             </div>
-            <br />
             <div className="form-group">
               <label>Email</label>
               <input
@@ -145,7 +144,6 @@ const EditUser = (props) => {
                 placeholder="Enter email"
                 value={user.email}
                 onChange={handleUserChange}
-                disabled={true}
               />
             </div>
             <div className="form-group">

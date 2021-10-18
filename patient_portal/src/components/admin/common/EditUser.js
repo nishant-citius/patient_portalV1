@@ -200,4 +200,3 @@ const EditUser = (props) => {
 
 // export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
 export default EditUser;
-
