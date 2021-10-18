@@ -9,6 +9,8 @@ let appState = {
   role: "",
   loggedUserInfo: {},
   physicians: [],
+  patients: [],
+  userDetails: {},
 };
 
 export default appState;

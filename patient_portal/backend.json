@@ -104,6 +104,51 @@
       "createdDate": "Mon Oct 18 2021 09:54:36 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 7
+    },
+    {
+      "email": "arjuna@email.com",
+      "password": "$2a$10$QpSn.GBXY1lA8ysEjIWy1e/J8chmDhQ.zZ9DtVJtg7hhfHiX7fFue",
+      "fName": "arjuna",
+      "lName": "oberoi",
+      "dob": "2021-10-28",
+      "username": "arjuna",
+      "mobile": "6475858",
+      "role": "",
+      "rpassword": "12345",
+      "blood_group": "o-",
+      "createdDate": "Mon Oct 18 2021 13:01:22 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 8
+    },
+    {
+      "email": "misha@email.com",
+      "password": "$2a$10$fLP68moMeAbBl4xKo0z0JOs7nKtaf6y4MG71KnveAl/X5CCJ3ttiS",
+      "fName": "misha",
+      "lName": "thakur",
+      "dob": "2021-10-12",
+      "username": "misha",
+      "mobile": "6577586886",
+      "role": "",
+      "rpassword": "12345",
+      "blood_group": "o-",
+      "createdDate": "Mon Oct 18 2021 13:12:31 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 9
+    },
+    {
+      "email": "rita@email.com",
+      "password": "$2a$10$mAzL24ojNE2Z5R402Gi2ruQAlmJS4pSyKEUwUHQFQinzJZyNw9Zda",
+      "fName": "rita",
+      "lName": "thakur",
+      "dob": "2021-10-13",
+      "username": "rita",
+      "mobile": "54645",
+      "role": "patient",
+      "rpassword": "12345",
+      "blood_group": "o-",
+      "createdDate": "Mon Oct 18 2021 13:17:12 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 10
     }
   ],
   "demographics": [

@@ -29,7 +29,7 @@ const RegisterUser = (props) => {
     username: "",
     email: "",
     mobile: "",
-    role: "",
+    role: "patient",
     password: "",
     rpassword: "",
     blood_group: "",
@@ -72,7 +72,7 @@ const RegisterUser = (props) => {
   });
 
   
-  const paperStyle={padding :20,height:'165vh',width:400, margin:"60px auto", marginTop: "110px"}
+  const paperStyle={padding :20,height:'175vh',width:400, margin:"60px auto", marginTop: "110px"}
   const avatarStyle={backgroundColor:'#1bbd7e'}
   const btnstyle={margin:'8px 0'}
   return (
@@ -153,11 +153,11 @@ const RegisterUser = (props) => {
             required
             id="filled-required"
             label="Role" fullWidth require
-            placeholder="Patient " fullWidth required
+            // placeholder="Patient" fullWidth required
             name="role"
             id="role"
-            value={user.role}
-            onChange={handleUserChange}
+            // value={user.role}
+            // onChange={handleUserChange}
             defaultValue="Patient"
             variant="filled"
             disabled
@@ -275,173 +275,10 @@ const RegisterUser = (props) => {
             </div>
             <div>
             <button onClick={submitUserData} type="submit" className="btn btn-primary mt-2 center">
-                  Submit
-                </button> 
+              Submit
+            </button> 
             </div>
-            {/* <TextField label="First Name" margin="normal"
-            name="email"
-            onChange={handleUserChange}
-            placeholder='Enter username' fullWidth required
-            id="input-with-icon-textfield"
-            />
-
-            <TextField label="Last name" margin="normal"
-            name="email"
-            onChange={handleUserChange}
-            placeholder='Enter Last Name' fullWidth required
-            id="input-with-icon-textfield"
-            />
-             
-           <TextField 
-            margin="normal"
-            name="email"
-            onChange={handleUserChange}
-            placeholder='Enter Blood Group' fullWidth required
-            id="input-with-icon-textfield"
-            label="Blood Group"
-           />
-
-           <TextField 
-            margin="normal"
-            name="email"
-            onChange={handleUserChange}
-            placeholder='Enter email address' fullWidth required
-            id="input-with-icon-textfield"
-            label="Email"
-          /> */}
-             
-                      {/* <label>First Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="fName"
-                        id="fName"
-                        // placeholder="Enter First name"
-                        value={user.fName}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Last Name</label>
-                      <input
-                        type="text"
-                        className="form-control "
-                        name="lName"
-                        id="lName"
-                        placeholder="Enter Last Name"
-                        value={user.lName}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Date Of Birth</label>
-                      <input
-                        type="date"
-                        className="form-control"
-                        name="dob"
-                        id="dob"
-                        placeholder="Enter Your Date Of Birth"
-                        value={user.dob}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Username</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="username"
-                        id="username"
-                        placeholder="Create Username"
-                        value={user.username}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Role</label>
-                      <select
-                        className="form-control"
-                        name="role"
-                        id="role"
-                        value={user.role}
-                        onChange={handleUserChange}
-                      >
-                        <option value="">Select</option>
-                        <option value="admin">Admin</option>
-                        <option value="patient">Patient</option>
-                        <option value="physician">Physician</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <div className="form-group">
-                      <label>Blood Group</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="blood_group"
-                        name="blood_group"
-                        placeholder="Enter Your Blood Group"
-                        value={user.blood_group}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Enter Email Address"
-                        value={user.email}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Phone</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="mobile"
-                        id="mobile"
-                        placeholder="Enter Mobile Number"
-                        value={user.mobile}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label>Password</label>
-                      <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        name="password"
-                        placeholder="Create Password"
-                        value={user.password}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Retype-Password</label>
-                      <input
-                        type="password"
-                        className="form-control "
-                        id="rpassword"
-                        name="rpassword"
-                        placeholder="Repeat your Password"
-                        value={user.rpassword}
-                        onChange={handleUserChange}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <button type="submit" className="btn btn-primary mt-2 center">
-                  Submit
-                </button> */}
-              
-              <h4 className="text-danger">{props.globalMessage}</h4>
+            <h4 className="text-danger">{props.globalMessage}</h4>
          </Paper>     
         
            
