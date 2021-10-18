@@ -1,5 +1,6 @@
-import { React, useState, useEffect } from "react";
-import { adminService,userService } from "../../services/register_user_service";
+import React from "react";
+import { connect } from "react-redux";
+import * as actioncreators from "../../redux/actions/userActionCreater";
 import { Link } from "react-router-dom";
 import {
   BsFillTrashFill,
@@ -10,68 +11,59 @@ import {
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
-
-const UserList = () => {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    loadUsers();
-  }, []);
-
-  const loadUsers = () => {
-    userService.GetAllUsers().then(
-      (response) => {
-        setUsers(response.data);
-        setIsLoading(true);
-      },
-      (error) => {
-        return;
-      }
-    );
+const mapStateToProps = (rootReducer) => {
+  return {
+    users: rootReducer.getallusers.users,
+    globalmessage: rootReducer.getallusers.globalmessage,
   };
+};
 
-  const deleteUser = (id) => {
-    adminService.deleteUser(id).then(
-      (response) => {
-        loadUsers();
-      },
-      (error) => {
-        return;
-      }
-    );
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
   };
+};
 
-  const toggleUserState = (user) => {};
+export class UserList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  if (isLoading) {
+  componentDidMount() {
+    this.props.getalluserdata();
+  }
+
+  render() {
     return (
       <>
-        <div className="container mt-4">
+        <div className="container mt-5">
           <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
           </Link>
-          <h1 className="text-success text-center fw-bold ">All Users</h1>
+          <Link to="/addusers" className="btn btn-primary float-end mr-4">
+            Add User
+          </Link>
+          <h1 className="text-success text-center fw-bold ">User List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
-                {/* <th scope="col">Id</th> */}
                 <th scope="col">Name</th>
                 <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Status</th>
+                <th scope="col">Role</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => {
+              {this.props.users.map((user, index) => {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    {/* <td>{user.id}</td> */}
                     <td>{`${user.fName} ${user.lName}`}</td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
@@ -79,22 +71,17 @@ const UserList = () => {
                     <td>
                       {user.isActive ? (
                         <>
-                          <BsCheckCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsCheckCircleFill className="hand-pointer" />
                           <span className="p-2">Active</span>
                         </>
                       ) : (
                         <>
-                          <BsFillXCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsFillXCircleFill className="hand-pointer" />
                           <span className="p-2">Inactive</span>
                         </>
                       )}
                     </td>
+                    <td>{user.role}</td>
                     <td>
                       <span className="p-2">
                         <Link to={`/userdetails/${user.id}`}>
@@ -106,10 +93,7 @@ const UserList = () => {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span
-                        className="p-2 hand-pointer"
-                        onClick={() => deleteUser(user.id)}
-                      >
+                      <span className="p-2">
                         <BsFillTrashFill />
                       </span>
                     </td>
@@ -121,9 +105,7 @@ const UserList = () => {
         </div>
       </>
     );
-  } else {
-    return <h1 className="text-primary text-center fw-bold">Loading...</h1>;
   }
-};
+}
 
-export default UserList;
+export default connect(mapStateToProps, mapDispatchToProps)(UserList);

@@ -1,15 +1,20 @@
-import { React, useState ,useEffect} from "react";
-import axios from "axios";
+import { React, useState, useEffect } from "react";
 import { useHistory } from "react-router";
-import * as URLS from "../../services/url_list";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-// import imageSrc from "../../images/Healthcare.jpg";
 import "../common/common_style.css";
+import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@material-ui/core'
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+
+const paperStyle={padding :20,height:'70vh',width:280, margin:"60px auto", marginTop: "110px"}
+  const avatarStyle={backgroundColor:'#1bbd7e'}
+  const btnstyle={margin:'8px 0'}
 
 const Login = (props) => {
   const tempUser = {
-    username: "",
+    email: "",
     password: "",
   };
 
@@ -25,112 +30,70 @@ const Login = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    onSubmit(newUserData);
-    // props.loginHandler();
+    props.login(newUserData);
   };
 
-  const checkEmail = (serverUsers, formData) => {
-    const user = serverUsers.find(
-      (user) =>
-        user.email === formData.username && user.password === formData.password
-    );
-    if (user) return user;
-  };
-
-  const onSubmit = async (formData) => {
-    const user = await axios
-      .get(`${URLS.BASE_URL}/users`)
-      .then((res) => checkEmail(res.data, formData));
-
-    if (user) {
-      isActive(user) ? logInUser(user) : alert("User Id created..");
-    } else {
-      alert("Email doesn't exist");
+  useEffect(() => {
+    if (props.isLoggedIn === true) {
+      console.log(props.currentUser);
+      if (props.role === "admin") {
+        history.push("/admin");
+      } else if (props.role === "patient") {
+        history.push("/demographics");
+      } else {
+        history.push("/physician");
+      }
     }
-  };
-
-  const logInUser = (user) => {
-    userSession(user);
-    if (user.role === "admin") {
-      history.push("/admin");
-    } else if (user.role === "patient") {
-      history.push("/demographics");
-    } else {
-      history.push("/physician");
-    }
-  };
-
-  const userSession = (user) => {
-    const session = window.sessionStorage;
-    session.setItem("userInfo", JSON.stringify(user));
-  };
-
-  const isActive = (user) => (user.isActive ? true : false);
+  });
 
   return (
     <>
-      <div className="container-fluid page_db">
-        <div className="row justify-content-center">
-          {/* <div className="col-7">
-            <img className="login_img" src={imageSrc}/>
-          </div> */}
-          <div className="col-5">
-            <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
-              <div className="card-header fw-bold">Login form</div>
-              <div className="card-body">
-                <form className="login-form">
-                  <div className="form-group">
-                    <label htmlFor="user name">User Name</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      name="username"
-                      placeholder="Please enter your Email id"
-                      onChange={handleUserChange}
-                    />
-                  </div>
-
-                  <div className="form-group mt-4">
-                    <label htmlFor="password">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Please enter password"
-                      name="password"
-                      onChange={handleUserChange}
-                    />
-                  </div>
-                  <br />
-                  {/* <div>
-                <label className="form-check-label " htmlFor="Check1">
-                  Remember me
-                </label>
-                <input
-                  type="checkbox"
-                  className="form-check-input l-2"
-                  id="Check1"
+      <Grid>
+      <Paper elevation={10} style={paperStyle}>
+        <Grid align='center'>
+          <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
+          <br/>
+            <h4>Sign In</h4>
+              </Grid>
+                <TextField label='Username' margin="normal"
+                name="email"
+                onChange={handleUserChange}
+                 placeholder='Enter username' fullWidth required/>
+                  <br/>
+                <TextField label='Password' 
+                placeholder='Enter password' 
+                type='password' 
+                name="password"
+                onChange={handleUserChange}  fullWidth required/>
+                  <br/>
+                <FormControlLabel
+                control={
+                <Checkbox
+                name="checkedB"
+                color="primary"
                 />
-              </div> */}
-                  <br />
-                  <button
-                    type="submit"
-                    className="btn btn-primary"
-                    onClick={submitUserData}
-                  >
-                    Login
-                  </button>
-                  {/* <a className="btn btn-secondary m-2" href="/forgotpassword">
-                forgot password
-              </a>
-              <a className="btn btn-secondary " href="/forgotusername">
-                forgot username
-              </a> */}
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                }
+                label="Remember me"
+                />
+
+                <Button onClick={submitUserData} type='submit' color='primary' variant="contained" style={btnstyle} fullWidth>Sign in</Button>
+                 <br/>
+                 
+                  {/* <Typography >
+                     <Link to="#" >
+                       Forgot password ?
+                     </Link>
+                  </Typography> */}
+                  
+                  <Typography > Do you have an account ?
+                      
+                  </Typography>
+                  {/* <Link to ="/registeruser" >
+                          Sign Up 
+                      </Link> */}
+                      <a href="/registeruser">Sign Up</a>
+              </Paper>
+          </Grid>
     </>
   );
 };
@@ -138,10 +101,10 @@ const Login = (props) => {
 const mapStatetoProps = (state) => {
   return {
     isLoggedIn: state.login.isLoggedIn,
-        role: state.login.role,
-        globalmessage: state.login.globalmessage,
-        authToken: state.login.authToken,
-    
+    role: state.login.role,
+    globalmessage: state.login.globalmessage,
+    authToken: state.login.authToken,
+    currentUser: state.login.loggedUserInfo,
   };
 };
 
@@ -152,4 +115,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 let hof = connect(mapStatetoProps, mapDispatchToProps);
-export default hof (Login);
+export default hof(Login);

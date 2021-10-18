@@ -7,6 +7,10 @@ let appState = {
   authToken: "",
   globalmessage: "",
   role: "",
+  loggedUserInfo: {},
+  physicians: [],
+  patients: [],
+  userDetails: {},
 };
 
 export default appState;

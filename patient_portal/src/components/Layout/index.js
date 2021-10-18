@@ -1,5 +1,4 @@
 import React from "react";
-import imageSrc from "../../images/logo.png";
 
 import {
   Nav,
@@ -10,17 +9,7 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
-import { useHistory } from "react-router";
-
 const Navbar = () => {
-  const history = useHistory();
-
-  const logOutUser = () => {
-    const session = window.sessionStorage;
-    session.removeItem("userInfo");
-    history.push("/");
-  };
-
   return (
     <>
       <Nav>

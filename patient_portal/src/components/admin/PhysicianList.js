@@ -1,5 +1,6 @@
-import { React, useState, useEffect } from "react";
-import { adminService } from "../../services/register_user_service";
+import React from "react";
+import { connect } from "react-redux";
+import * as actioncreators from "../../redux/actions/userActionCreater";
 import { Link } from "react-router-dom";
 import {
   BsFillTrashFill,
@@ -10,44 +11,33 @@ import {
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
-const PhysicianList = () => {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    loadUsers();
-  }, []);
-
-  const loadUsers = () => {
-    adminService.getAllPhysicians().then(
-      (response) => {
-        setUsers(response.data);
-        setIsLoading(true);
-      },
-      (error) => {
-        return;
-      }
-    );
+const mapStateToProps = (rootReducer) => {
+  return {
+    physiciandata: rootReducer.physicians.physicians,
+    globalmessage: rootReducer.physicians.globalmessage,
   };
+};
 
-  const deleteUser = (id) => {
-    adminService.deleteUser(id).then(
-      (response) => {
-        loadUsers();
-      },
-      (error) => {
-        return;
-      }
-    );
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getallphysiciandata: () => dispatch(actioncreators.GetAllPhysicianData()),
   };
+};
 
-    const toggleUserState = (user) => {
-    };
+export class PhysicianDataComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  if (isLoading) {
+  componentDidMount() {
+    this.props.getallphysiciandata();
+  }
+
+  render() {
     return (
       <>
-        <div className="container mt-4">
+        <div className="container mt-5">
           <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
@@ -57,7 +47,6 @@ const PhysicianList = () => {
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
-                {/* <th scope="col">Id</th> */}
                 <th scope="col">Name</th>
                 <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
@@ -67,11 +56,10 @@ const PhysicianList = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => {
+              {this.props.physiciandata.map((user, index) => {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    {/* <td>{user.id}</td> */}
                     <td>{`${user.fName} ${user.lName}`}</td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
@@ -79,18 +67,12 @@ const PhysicianList = () => {
                     <td>
                       {user.isActive ? (
                         <>
-                          <BsCheckCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsCheckCircleFill className="hand-pointer" />
                           <span className="p-2">Active</span>
                         </>
                       ) : (
                         <>
-                          <BsFillXCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsFillXCircleFill className="hand-pointer" />
                           <span className="p-2">Inactive</span>
                         </>
                       )}
@@ -106,7 +88,7 @@ const PhysicianList = () => {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2" onClick={() => deleteUser(user.id)}>
+                      <span className="p-2">
                         <BsFillTrashFill />
                       </span>
                     </td>
@@ -118,9 +100,10 @@ const PhysicianList = () => {
         </div>
       </>
     );
-  } else {
-    return <h1 className="text-primary text-center fw-bold">Loading...</h1>;
   }
-};
+}
 
-export default PhysicianList;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PhysicianDataComponent);

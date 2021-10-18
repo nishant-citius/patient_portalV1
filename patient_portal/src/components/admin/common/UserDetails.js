@@ -2,6 +2,8 @@ import { React, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { adminService } from "../../../services/register_user_service";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
+import * as actioncreators from "../../../redux/actions/userActionCreater";
+import { connect } from "react-redux";
 
 const UserDetails = (props) => {
   let tempUser = {
@@ -21,14 +23,15 @@ const UserDetails = (props) => {
     currentUserIndex = 0;
 
   const loadUsers = (_id) => {
-    adminService.getUserById(_id).then(
-      (response) => {
-        setUser(response.data[currentUserIndex]);
-      },
-      (error) => {
-        return;
-      }
-    );
+    // adminService.getUserById(_id).then(
+    //   (response) => {
+    //     setUser(response.data[currentUserIndex]);
+    //   },
+    //   (error) => {
+    //     return;
+    //   }
+    // );
+    props.getUserDetails(_id);
   };
 
   useEffect(() => {
@@ -75,4 +78,17 @@ const UserDetails = (props) => {
   );
 };
 
-export default UserDetails;
+const mapStateToProps = (rootReducer) => {
+  return {
+    userDetails: rootReducer.userDetails.userDetails,
+    globalmessage: rootReducer.patients.globalmessage,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getUserDetails: (userId) => dispatch(actioncreators.GetUserDetails(userId)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserDetails);

@@ -1,5 +1,6 @@
-import { React, useState, useEffect } from "react";
-import { adminService } from "../../services/register_user_service";
+import React from "react";
+import { connect } from "react-redux";
+import * as actioncreators from "../../redux/actions/userActionCreater";
 import { Link } from "react-router-dom";
 import {
   BsFillTrashFill,
@@ -10,45 +11,33 @@ import {
   BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
-import Sidebar from "./common/sidebar/Sidebar";
-
-const PatientList = () => {
-  const [users, setUsers] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    loadUsers();
-  }, []);
-
-  const loadUsers = () => {
-    adminService.getAllPatients().then(
-      (response) => {
-        setUsers(response.data);
-        setIsLoading(true);
-      },
-      (error) => {
-        return;
-      }
-    );
+const mapStateToProps = (rootReducer) => {
+  return {
+    patientData: rootReducer.patients.patients,
+    globalmessage: rootReducer.patients.globalmessage,
   };
+};
 
-  const deleteUser = (id) => {
-    adminService.deleteUser(id).then(
-      (response) => {
-        loadUsers();
-      },
-      (error) => {
-        return;
-      }
-    );
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
   };
+};
 
-  const toggleUserState = (user) => {};
+export class PatientList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  if (isLoading) {
+  componentDidMount() {
+    this.props.getAllPatients();
+  }
+
+  render() {
     return (
       <>
-        <div className="container mt-4">
+        <div className="container mt-5">
           <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
@@ -58,7 +47,6 @@ const PatientList = () => {
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
-                {/* <th scope="col">Id</th> */}
                 <th scope="col">Name</th>
                 <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
@@ -68,11 +56,10 @@ const PatientList = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => {
+              {this.props.patientData.map((user, index) => {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    {/* <td>{user.id}</td> */}
                     <td>{`${user.fName} ${user.lName}`}</td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
@@ -80,18 +67,12 @@ const PatientList = () => {
                     <td>
                       {user.isActive ? (
                         <>
-                          <BsCheckCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsCheckCircleFill className="hand-pointer" />
                           <span className="p-2">Active</span>
                         </>
                       ) : (
                         <>
-                          <BsFillXCircleFill
-                            className="hand-pointer"
-                            onClick={() => toggleUserState(user)}
-                          />
+                          <BsFillXCircleFill className="hand-pointer" />
                           <span className="p-2">Inactive</span>
                         </>
                       )}
@@ -107,10 +88,7 @@ const PatientList = () => {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span
-                        className="p-2 hand-pointer"
-                        onClick={() => deleteUser(user.id)}
-                      >
+                      <span className="p-2">
                         <BsFillTrashFill />
                       </span>
                     </td>
@@ -122,9 +100,7 @@ const PatientList = () => {
         </div>
       </>
     );
-  } else {
-    return <h1 className="text-primary text-center fw-bold">Loading...</h1>;
   }
-};
+}
 
-export default PatientList;
+export default connect(mapStateToProps, mapDispatchToProps)(PatientList);

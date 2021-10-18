@@ -1,0 +1,7 @@
+.sideNav a{
+    text-decoration: none;
+    color: none;
+}
+.sideNav a:hover{
+    color: #ffffff;
+}
