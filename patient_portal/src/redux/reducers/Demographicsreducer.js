@@ -5,6 +5,8 @@ export function DemographicsReducer(state = appState, action) {
     if (action.type === actions.ADD_DEMOGRAPHICS) {
       return {
         ...state,
+        globalmessage: action.payload.globalmessage,
+        // statusCode: action.payload.statusCode,
         demographics: state.demographics.concat(action.newuser),
       };
     };

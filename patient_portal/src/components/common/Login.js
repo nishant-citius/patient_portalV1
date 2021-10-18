@@ -7,6 +7,10 @@ import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@materia
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import InputAdornment from "@material-ui/core/InputAdornment";
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import LockIcon from '@material-ui/icons/Lock';
+
 
 const paperStyle={padding :20,height:'70vh',width:280, margin:"60px auto", marginTop: "110px"}
   const avatarStyle={backgroundColor:'#1bbd7e'}
@@ -45,7 +49,6 @@ const Login = (props) => {
       }
     }
   });
-
   return (
     <>
       <Grid>
@@ -55,22 +58,46 @@ const Login = (props) => {
           <br/>
             <h4>Sign In</h4>
               </Grid>
-                <TextField label='Username' margin="normal"
+                <TextField 
+                label='Email' 
+                margin="normal"
+                type="text"
                 name="email"
                 onChange={handleUserChange}
-                 placeholder='Enter username' fullWidth required/>
-                  <br/>
-                <TextField label='Password' 
+                placeholder='Enter email' fullWidth required
+                InputProps={{
+                 startAdornment: (
+                  <InputAdornment position="start">
+                      <AccountCircle/>
+                  </InputAdornment>
+                  ),
+                }}
+                variant="standard"
+                />
+
+                <br/>
+                <TextField 
+                label="password"
                 placeholder='Enter password' 
                 type='password' 
                 name="password"
-                onChange={handleUserChange}  fullWidth required/>
-                  <br/>
+                onChange={handleUserChange}  fullWidth required
+                InputProps={{
+                  startAdornment: (
+                   <InputAdornment position="start">
+                       <LockIcon/>
+                   </InputAdornment>
+                   ),
+                 }}
+                />
+                
+                <br/>
                 <FormControlLabel
                 control={
                 <Checkbox
                 name="checkedB"
                 color="primary"
+               
                 />
                 }
                 label="Remember me"
