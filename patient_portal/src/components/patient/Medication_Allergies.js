@@ -153,28 +153,28 @@ const Medication_Allergies = (props) => {
       startDate: "",
       endDate: "",
     },
-    //   otc_medication:[
-    //   {
-    //     otcDrugName: "",
-    //     strength: "",
-    //     directiontoconsumedosage: "",
-    //     socialDrugs: ""
-    //   },
-    //   ],
-    //   pastprescribedmedication:[
-    //   {
-    //     drugName: "",
-    //     strength: "",
-    //     directiontoconsumedosage: ""
-    //   },
-    // ],
-    //   allergies: [
-    //   {
-    //     allergyName: "",
-    //     symptomsofAllergy: "",
-    //     drugAllergy: ""
-    //   },
-    //   ],
+      otc_medication:[
+      {
+        otcDrugName: "",
+        strength: "",
+        directiontoconsumedosage: "",
+        socialDrugs: ""
+      },
+      ],
+      pastprescribedmedication:[
+      {
+        drugName: "",
+        strength: "",
+        directiontoconsumedosage: ""
+      },
+    ],
+      allergies: [
+      {
+        allergyName: "",
+        symptomsofAllergy: "",
+        drugAllergy: ""
+      },
+      ],
   };
 
   const [medication_allergies, setmedication_allergies] = useState(
@@ -354,7 +354,7 @@ const Medication_Allergies = (props) => {
                   </div>
                 </div>
 
-                {/* 
+                
                   <div className="row mt-2">
                     <div className="col-12">
                       <hr />
@@ -530,7 +530,7 @@ const Medication_Allergies = (props) => {
                         </div>
                       </div>
                     </div>
-                  </div> */}
+                  </div> 
                 <div className="col-12 text-center mt-5">
                   <button className="btn btn-primary" type="submit">
                     Submit
