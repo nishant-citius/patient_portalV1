@@ -329,7 +329,7 @@
       "id": 10
     }
   ],
-  "medication_allergies": [
+  "medic_allergy": [
     {
       "id": 1,
       "patient_id": "",
@@ -383,6 +383,136 @@
       "allergyName": "Ajinkya",
       "symptomsofAllergy ": "Ajinkya",
       "direction_to_consume": "Ajinkya"
+    },
+    {
+      "id": "10",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "Turmeric",
+          "dosage": "2"
+        }
+      ]
+    },
+    {
+      "id": "UXItJjQ",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": "",
+          "socialDrugs": ""
+        }
+      ],
+      "pastprescribedmedication": [
+        {
+          "drugName": "",
+          "strength": "",
+          "directiontoconsumedosage": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "medicineName": "hu",
+      "dosage": "nh"
+    },
+    {
+      "id": "uz-9Ws_",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": "",
+          "socialDrugs": ""
+        }
+      ],
+      "pastprescribedmedication": [
+        {
+          "drugName": "",
+          "strength": "",
+          "directiontoconsumedosage": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "medicineName": "asdf",
+      "dosage": "qwert"
+    },
+    {
+      "id": "xa6RbNw",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": "",
+          "socialDrugs": ""
+        }
+      ],
+      "pastprescribedmedication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "medicineName": "dwddwd",
+      "dosage": "wdwddwdwd"
     }
   ],
   "immunization": [
