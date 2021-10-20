@@ -14,6 +14,7 @@ import { GetAllUsersReducer } from "./reducers/userreducers/GetAllUsersReducers"
 import { EditUserReducer } from "./reducers/userreducers/EditUserReducer";
 import { PatientReducer } from "./reducers/userreducers/PatientReducer";
 import { UserDetailsReducer } from "./reducers/userreducers/UserDetailsReducer";
+import { InactiveUsersReducer } from "./reducers/userreducers/InactiveUsersReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -28,6 +29,7 @@ let rootReducer = combineReducers({
   updateusers: EditUserReducer,
   patients: PatientReducer,
   userDetails: UserDetailsReducer,
+  inactiveUsers: InactiveUsersReducer,
 });
 
 /**create store  */

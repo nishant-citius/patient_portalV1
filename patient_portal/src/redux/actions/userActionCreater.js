@@ -240,23 +240,20 @@ export function GetInactiveUsers() {
   let payload = {
     inactiveUsers: [],
     inactiveUsersCount: 0,
-    globalmessage: "",
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
 
     axios.get(URLS.INACTIVE_USERS).then(
       (response) => {
-        payload.globalmessage = `Suceess Count : ${response.data.length}`;
         payload.inactiveUsers = response.data;
         payload.inactiveUsersCount = response.data.length;
-        dispatch({ type: actions.INACTIVE_USERS, payload: payload });
+        dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
-        payload.globalmessage = `${error.response.data}`;
         payload.inactiveUsers = [];
         payload.inactiveUsersCount = 0;
-        dispatch({ type: actions.INACTIVE_USERS, payload: payload });
+        dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       }
     );
   };

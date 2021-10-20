@@ -52,16 +52,12 @@ const Login = (props) => {
 
   useEffect(() => {
     if (props.isLoggedIn === true) {
-      if (props.currentUser.isActive) {
-        if (props.role === "admin") {
-          history.push("/admin");
-        } else if (props.role === "patient") {
-          history.push("/demographics");
-        } else {
-          history.push("/physician");
-        }
+      if (props.role === "admin") {
+        history.push("/admin");
+      } else if (props.role === "patient") {
+        history.push("/demographics");
       } else {
-        console.log("User Not Approved..");
+        history.push("/physician");
       }
     }
   });
