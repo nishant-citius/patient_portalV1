@@ -14,7 +14,6 @@ export const GET_ALL_USERS = "GET_ALL_USERS";
 export const UPDATE_USER = "UPDATE_USER";
 export const GET_USER = "GET_USER";
 
-export const ADD_USER_REQUEST = "ADD_USER_REQUEST";
-export const APPROVE_USER_REQUEST = "APPROVE_USER_REQUEST";
+export const GET_INACTIVE_USERS = "GET_INACTIVE_USERS";
 
 

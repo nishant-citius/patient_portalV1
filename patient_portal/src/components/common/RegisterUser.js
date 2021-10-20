@@ -70,11 +70,6 @@ const RegisterUser = (props) => {
     } else {
       // onSubmit(newUserData);
       props.register(newUserData);
-      props.sendUserRequest({
-        id: user.email,
-        email: user.email,
-        isActive: user.isActive,
-      });
     }
   };
 
@@ -336,8 +331,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     register: (newuser) => dispatch(actionCreator.Register(newuser)),
-    sendUserRequest: (requestData) =>
-      dispatch(actionCreator.AddUserRequest(requestData)),
   };
 };
 

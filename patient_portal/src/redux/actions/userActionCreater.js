@@ -236,22 +236,32 @@ export function AddNewUser(user) {
   };
 }
 
-export function AddUserRequest(request) {
+export function GetInactiveUsers() {
   let payload = {
-    statusCode: 200,
+    inactiveUsers: [],
+    inactiveUsersCount: 0,
+    globalmessage: "",
   };
-  return (dispatch) => {
-    axios.post(URLS.USER_REQUESTS, JSON.stringify(request), config).then(
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.INACTIVE_USERS).then(
       (response) => {
-        dispatch({ type: actions.ADD_USER_REQUEST, payload: payload });
+        payload.globalmessage = `Suceess Count : ${response.data.length}`;
+        payload.inactiveUsers = response.data;
+        payload.inactiveUsersCount = response.data.length;
+        dispatch({ type: actions.INACTIVE_USERS, payload: payload });
       },
       (error) => {
-        payload.statusCode = 400;
-        dispatch({ type: actions.ADD_USER_REQUEST, payload: payload });
+        payload.globalmessage = `${error.response.data}`;
+        payload.inactiveUsers = [];
+        payload.inactiveUsersCount = 0;
+        dispatch({ type: actions.INACTIVE_USERS, payload: payload });
       }
     );
   };
 }
+
 /***************Pevious******************/
 export function GetAllUsersAsync() {
   return (dispatch) => {
