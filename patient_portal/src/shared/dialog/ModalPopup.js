@@ -29,6 +29,9 @@ function ModalPopup(props) {
     <Dialog
       open={openPopup}
       maxWidth="md"
+      scroll="paper"
+      aria-labelledby="scroll-dialog-title"
+      aria-describedby="scroll-dialog-description"
       classes={{ paper: classes.dialogWrapper }}
     >
       <DialogTitle className={classes.dialogTitle}>{title}</DialogTitle>
