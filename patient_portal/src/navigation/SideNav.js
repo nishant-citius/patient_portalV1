@@ -164,7 +164,7 @@ function SideNav(props) {
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="/medic-allergy">
+              <Link to="/medic_allergy">
                 <Icon icon="fa:wpforms" className={classes.icon} />
                 <span className={classes.text}>Medication and Allergies</span>
               </Link>
