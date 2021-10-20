@@ -35,7 +35,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
-
+  if (req.method === "post" && req.url.endsWith("/medic_allergy")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   return req;
 });
 //********AXIOS INTERCEPTOR********
@@ -312,13 +315,29 @@ export function AddImmunizationsAsync(user) {
 }
 
 export function AddMedicationAndAllergiesAsync(user) {
-  return (dispatch) => {
-    userService.Addmedicationandallergies(user).then(
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    console.log(authToken);
+    axios.post(URLS.MED_ALLERGIES, JSON.stringify(user), config).then(
       (response) => {
-        dispatch({ type: actions.ADD_MEDICATIONANDALLERGIES, newuser: user });
+        console.log(response);
+        payload.globalmessage = `Medication And Allegies Submitted successfully`;
+        dispatch({
+          type: actions.ADD_MEDICATIONANDALLERGIES,
+          payload: payload,
+        });
       },
       (error) => {
-        return;
+        payload.globalmessage = `Medication and Allergy ERROR: ${error.response.data}`;
+        // payload.statusCode = 400;
+        dispatch({
+          type: actions.ADD_MEDICATIONANDALLERGIES,
+          payload: payload,
+        });
       }
     );
   };
