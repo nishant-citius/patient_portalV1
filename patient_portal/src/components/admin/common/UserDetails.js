@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { adminService } from "../../../services/register_user_service";
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
-// import * as actioncreators from "../../../redux/actions/userActionCreater";
+import * as actioncreators from "../../../redux/actions/userActionCreater";
 import { connect } from "react-redux";
 
 const UserDetails = (props) => {
@@ -27,15 +27,15 @@ const UserDetails = (props) => {
   }, [id]);
 
   const loadUsers = (_id) => {
-    adminService.getUserById(_id).then(
-      (response) => {
-        setUser(response.data[currentUserIndex]);
-      },
-      (error) => {
-        return;
-      }
-    );
-    // props.getUserDetails(id);
+    // adminService.getUserById(_id).then(
+    //   (response) => {
+    //     setUser(response.data[currentUserIndex]);
+    //   },
+    //   (error) => {
+    //     return;
+    //   }
+    // );
+    props.getUserDetails(id);
     // setUser(props.userDetails);
   };
 
@@ -58,19 +58,19 @@ const UserDetails = (props) => {
           <ul className="list-group w-50">
             <li className="list-group-item">
               <span className="fw-bold">Name:</span>{" "}
-              {`${user.fName}  ${user.lName}`}
+              {`${props.userDetails.fName}  ${props.userDetails.lName}`}
             </li>
             <li className="list-group-item">
-              <span className="fw-bold">DOB:</span> {user.dob}
+              <span className="fw-bold">DOB:</span> {props.userDetails.dob}
             </li>
             <li className="list-group-item">
-              <span className="fw-bold">Email:</span> {user.email}
+              <span className="fw-bold">Email:</span> {props.userDetails.email}
             </li>
             <li className="list-group-item">
-              <span className="fw-bold">Contact No:</span> {user.mobile}
+              <span className="fw-bold">Contact No:</span> {props.userDetails.mobile}
             </li>
             <li className="list-group-item">
-              <span className="fw-bold">Username:</span> {user.username}
+              <span className="fw-bold">Username:</span> {props.userDetails.username}
             </li>
           </ul>
         </div>
@@ -79,19 +79,19 @@ const UserDetails = (props) => {
   );
 };
 
-// const mapStateToProps = (rootReducer) => {
-//   return {
-//     userDetails: rootReducer.userDetails.userDetails,
-//     globalmessage: rootReducer.patients.globalmessage,
-//   };
-// };
+const mapStateToProps = (rootReducer) => {
+  return {
+    userDetails: rootReducer.userDetails.userDetails,
+    globalmessage: rootReducer.patients.globalmessage,
+  };
+};
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     getUserDetails: (userId) => dispatch(actioncreators.GetUserDetails(userId)),
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getUserDetails: (userId) => dispatch(actioncreators.GetUserDetails(userId)),
+  };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(UserDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(UserDetails);
 
-export default UserDetails;
+// export default UserDetails;
