@@ -76,29 +76,27 @@ const Physician_dashboard = () => {
                 <button className="btn btn-warning btn-sm m-2" href="#"> postpone</button>
                 <button className="btn btn-danger btn-sm" href="#"> Rejected</button>
                 </td>
-                
-     
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      </tr>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                  </tr>
             </tbody>
         </table>
       <button className="btn btn-primary mt-4" href="#"> Join Online Consultaion</button>
       <BarChart />
       </div>
+      
       </div>
-      
-      
+      {/* <PatientList /> */}
       </div>
       </>
   );
