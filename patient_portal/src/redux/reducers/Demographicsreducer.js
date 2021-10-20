@@ -6,10 +6,10 @@ export function DemographicsReducer(state = appState, action) {
       return {
         ...state,
         globalmessage: action.payload.globalmessage,
-        // statusCode: action.payload.statusCode,
+        statusCode: action.payload.statusCode,
         demographics: state.demographics.concat(action.newuser),
       };
-    };
+    }
 
-    return state
-}
+    return state;
+  }

@@ -18,13 +18,20 @@ axios.interceptors.request.use((req) => {
     req.method === "get" &&
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
-      req.url.endsWith("patient") ||
-      req.url.indexOf("/users?id="))
+      req.url.endsWith("patient"))
   ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
   if (req.method === "post" && req.url.endsWith("/demographics")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
+  if (req.method === "post" && req.url.endsWith("/immunization")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
+  if (req.method === "put" && req.url.indexOf("/users/")) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -246,36 +253,44 @@ export function GetAllUsersAsync() {
 export function AddDemographicsAsync(user) {
   let payload = {
         globalmessage: "",
-        // statusCode: "",
+        statusCode: 200,
       };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response)
+        // console.log(response)
         payload.globalmessage = `Demographics registered successfully`;
+        payload.statusCode=response.status
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
         
         },
     (error) =>{
         payload.globalmessage = `Demographics ERROR: ${error.response.data}`;
-        // payload.statusCode = 400;
+        payload.statusCode = 400;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
       }
     );
     };
 }
 export function AddImmunizationsAsync(user) {
-  return (dispatch) => {
-    userService.Addpatientimmunization(user).then(
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.post(URLS.IMMUNIZATION, JSON.stringify(user), config).then(
       (response) => {
-        dispatch({ type: actions.ADD_IMMUNIZATION, newuser: user });
-        if (response.status === 201) {
-          alert(`Immunization Added for ${user.fName} ${user.lName}`);
-        }
-      },
+        console.log(response)
+        payload.globalmessage = `Immunization registered successfully`;
+        payload.statusCode=response.status
+        dispatch({ type: actions.ADD_IMMUNIZATION, payload: payload });
+        },
       (error) => {
-        return;
+        payload.globalmessage = `Immunization ERROR: ${error.response.data}`;
+        payload.statusCode = 400;
+        dispatch({ type: actions.ADD_IMMUNIZATION, payload: payload });
       }
     );
   };
@@ -292,4 +307,28 @@ export function AddMedicationAndAllergiesAsync(user) {
       }
     );
   };
+}
+
+//put request for updating the profile pic
+
+export function updateprofile(profileImage, userId) {
+  let payload = {
+        globalmessage: "",
+      };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.put(`${URLS.USER}${userId}`, JSON.stringify(profileImage), config).then(
+      (response) => {
+        console.log("From AC....",response)
+        payload.globalmessage = `Profile Pic updated successfully`;
+        dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+        
+        },
+    (error) =>{
+        payload.globalmessage = `Updation ERROR: ${error.response.data}`;
+        // payload.statusCode = 400;
+        dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+      }
+    );
+    };
 }

@@ -1,16 +1,18 @@
-import { React, useState, userEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
+import { useHistory } from "react-router";
+
 
 const Immunization = (props) => {
   let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
-
+  let history = useHistory();
   const [patientImmunization, setpatientImmunization] = useState({
     age_category: "",
     vaccine_brand: "",
     dose_detail: "",
     general_vaccine: "",
-    userId: userId.id,
+    // userId: userId.id,
   });
 
   console.log(patientImmunization);
@@ -25,8 +27,14 @@ const Immunization = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let newrecords = { ...patientImmunization };
-    props.addUserHandler(newrecords);
+    props.immunization(newrecords);
   };
+
+  useEffect(() => {
+    if(props.statusCode === 201){
+      history.push("/patient")
+    }
+  });
 
   return (
     <div className="container">
@@ -106,13 +114,14 @@ const Immunization = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    allusers: state.immunization.Immunizationsreducer,
+    globalMessage: state.immunization.globalmessage,
+    statusCode: state.immunization.statusCode,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addUserHandler: (newuser) =>
+    immunization: (newuser) =>
       dispatch(actionCreator.AddImmunizationsAsync(newuser)),
   };
 };

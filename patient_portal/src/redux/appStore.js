@@ -1,7 +1,6 @@
 import { createStore, combineReducers } from "redux";
 import { applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { DemographicsReducer } from "./reducers/Demographicsreducer";
 import Immunizationreducer from "./reducers/Immunizationreducer";
 import { LoginReducer } from "./reducers/loginReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
@@ -12,6 +11,8 @@ import { GetAllUsersReducer } from "./reducers/userreducers/GetAllUsersReducers"
 import { EditUserReducer } from "./reducers/userreducers/EditUserReducer";
 import { PatientReducer } from "./reducers/userreducers/PatientReducer";
 import { UserDetailsReducer } from "./reducers/userreducers/UserDetailsReducer";
+import {updateprofilepicreducer} from "./reducers/updateprofilepicreducer";
+import { DemographicsReducer } from "./reducers/Demographicsreducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -26,6 +27,7 @@ let rootReducer = combineReducers({
   updateusers: EditUserReducer,
   patients: PatientReducer,
   userDetails: UserDetailsReducer,
+  updateprofile: updateprofilepicreducer
 });
 
 /**create store  */

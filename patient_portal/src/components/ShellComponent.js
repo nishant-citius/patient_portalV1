@@ -26,6 +26,7 @@ import UserList from "../components/admin/Userslist";
 
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
+import MyProfile from "./patient/MyProfile";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -62,6 +63,7 @@ function ShellComponent(props) {
       <Route path="/demographics" component={Demographics} />
       <Route path="/immunization" component={Immunization} />
       <Route path="/medic-allergy" component={Medication_Allergies} />
+      <Route path="/myprofile" component={MyProfile}/>
       {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
