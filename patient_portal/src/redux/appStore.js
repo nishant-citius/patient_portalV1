@@ -1,6 +1,8 @@
 import { createStore, combineReducers } from "redux";
 import { applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+
 import { DemographicsReducer } from "./reducers/Demographicsreducer";
 import Immunizationreducer from "./reducers/Immunizationreducer";
 import { LoginReducer } from "./reducers/loginReducer";
@@ -12,6 +14,7 @@ import { GetAllUsersReducer } from "./reducers/userreducers/GetAllUsersReducers"
 import { EditUserReducer } from "./reducers/userreducers/EditUserReducer";
 import { PatientReducer } from "./reducers/userreducers/PatientReducer";
 import { UserDetailsReducer } from "./reducers/userreducers/UserDetailsReducer";
+import { InactiveUsersReducer } from "./reducers/userreducers/InactiveUsersReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -26,9 +29,13 @@ let rootReducer = combineReducers({
   updateusers: EditUserReducer,
   patients: PatientReducer,
   userDetails: UserDetailsReducer,
+  inactiveUsers: InactiveUsersReducer,
 });
 
 /**create store  */
-let appStore = createStore(rootReducer, applyMiddleware(thunk));
+let appStore = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 export default appStore;

@@ -19,12 +19,19 @@ axios.interceptors.request.use((req) => {
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
       req.url.endsWith("patient") ||
-      req.url.indexOf("/users?id="))
+      req.url.endsWith(req.url))
   ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
-  if (req.method === "post" && req.url.endsWith("/demographics")) {
+  if (
+    (req.method === "post" && req.url.endsWith("/demographics")) ||
+    req.url.endsWith("/requests")
+  ) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
+  if (req.method === "put" && req.url.indexOf("/users/")) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -200,8 +207,7 @@ export function EditUser(userId, upadatedData) {
       .put(`${URLS.USER}${userId}`, JSON.stringify(upadatedData), config)
       .then(
         (response) => {
-          console.log(response);
-          payload.globalmessage = ` User Updated successfully`;
+          payload.globalmessage = `Edit Success`;
           dispatch({ type: actions.UPDATE_USER, payload: payload });
         },
         (error) => {
@@ -220,7 +226,6 @@ export function AddNewUser(user) {
   return (dispatch) => {
     axios.post(URLS.ADD_USER, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response);
         payload.globalmessage = `New User Added successfully`;
         payload.statusCode = response.status;
         dispatch({ type: actions.ADD_USER, payload: payload });
@@ -233,6 +238,30 @@ export function AddNewUser(user) {
     );
   };
 }
+
+export function GetInactiveUsers() {
+  let payload = {
+    inactiveUsers: [],
+    inactiveUsersCount: 0,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.INACTIVE_USERS).then(
+      (response) => {
+        payload.inactiveUsers = response.data;
+        payload.inactiveUsersCount = response.data.length;
+        dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
+      },
+      (error) => {
+        payload.inactiveUsers = [];
+        payload.inactiveUsersCount = 0;
+        dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
+      }
+    );
+  };
+}
+
 /***************Pevious******************/
 export function GetAllUsersAsync() {
   return (dispatch) => {
@@ -249,26 +278,26 @@ export function GetAllUsersAsync() {
 
 export function AddDemographicsAsync(user) {
   let payload = {
-        globalmessage: "",
-        // statusCode: "",
-      };
+    globalmessage: "",
+    // statusCode: "",
+  };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response)
+        console.log(response);
         payload.globalmessage = `Demographics registered successfully`;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
-        
-        },
-    (error) =>{
+      },
+      (error) => {
         payload.globalmessage = `Demographics ERROR: ${error.response.data}`;
         // payload.statusCode = 400;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
       }
     );
-    };
+  };
 }
+
 export function AddImmunizationsAsync(user) {
   return (dispatch) => {
     userService.Addpatientimmunization(user).then(
@@ -291,20 +320,24 @@ export function AddMedicationAndAllergiesAsync(user) {
     statusCode: 200,
   };
   return (dispatch, getState) => {
-
     authToken = getState().login.authToken;
     console.log(authToken);
     axios.post(URLS.MED_ALLERGIES, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response)
+        console.log(response);
         payload.globalmessage = `Medication And Allegies Submitted successfully`;
-        dispatch({ type: actions.ADD_MEDICATIONANDALLERGIES, payload: payload });
-        
-        },
-    (error) =>{
+        dispatch({
+          type: actions.ADD_MEDICATIONANDALLERGIES,
+          payload: payload,
+        });
+      },
+      (error) => {
         payload.globalmessage = `Medication and Allergy ERROR: ${error.response.data}`;
         // payload.statusCode = 400;
-        dispatch({ type: actions.ADD_MEDICATIONANDALLERGIES, payload: payload });
+        dispatch({
+          type: actions.ADD_MEDICATIONANDALLERGIES,
+          payload: payload,
+        });
       }
     );
   };
