@@ -26,4 +26,8 @@ export { default as ListItem } from "@material-ui/core/ListItem";
 export { default as ListItemAvatar } from "@material-ui/core/ListItemAvatar";
 export { default as ListItemText } from "@material-ui/core/ListItemText";
 
+export { default as makeStyles } from "@material-ui/styles/makeStyles";
+export { default as Alert } from "@material-ui/lab/Alert";
+
+
 // export {default as CardMedia} from '@material-ui/core/CardMedia';

@@ -1,4 +1,3 @@
-import { makeStyles } from "@material-ui/core";
 import { React } from "react";
 import {
   Dialog,
@@ -6,14 +5,15 @@ import {
   DialogContent,
   DialogActions,
   Button,
+  makeStyles,
 } from "../../mui";
 
 const useStyles = makeStyles((theme) => ({
   dialogWrapper: {
-    padding: theme.spacing(2),
+    // padding: theme.spacing(2),
     position: "absolute",
-    top: theme.spacing(2),
-    right: theme.spacing(13),
+    // top: theme.spacing(2),
+    // right: theme.spacing(13),
   },
   dialogTitle: {
     // paddingRight: "0px",
