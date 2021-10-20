@@ -62,8 +62,8 @@ function ShellComponent(props) {
 
       <Route path="/demographics" component={Demographics} />
       <Route path="/immunization" component={Immunization} />
-      <Route path="/medic-allergy" component={Medication_Allergies} />
       <Route path="/myprofile" component={MyProfile}/>
+      <Route path="/medic_allergy" component={Medication_Allergies} />
       {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
