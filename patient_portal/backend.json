@@ -140,6 +140,21 @@
       "createdDate": "Mon Oct 18 2021 13:17:12 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 10
+    },
+    {
+      "email": "ni@email.com",
+      "password": "$2a$10$Sd54DEvL9uObs9igw4VL..qBjdGxetZ70sqZoFdO8iZAUyueXywHq",
+      "fName": "nishant",
+      "lName": "chaubey",
+      "dob": "2021-09-29",
+      "username": "Nishant",
+      "rpassword": "12345",
+      "mobile": 1234567887,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Wed Oct 20 2021 22:14:22 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 11
     }
   ],
   "demographics": [
