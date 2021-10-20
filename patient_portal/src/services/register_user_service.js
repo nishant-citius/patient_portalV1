@@ -41,16 +41,16 @@ class UserServices {
     return axios.post(url, JSON.stringify(user), config);
   }
 
-  Addmedicationandallergies(user) {
-    let url = URLS.BASE_URL + "/medication_allergies";
+  // Addmedicationandallergies(user) {
+  //   let url = URLS.BASE_URL + "/medic_allergy";
 
-    let config = {
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
-    };
-    return axios.post(url, JSON.stringify(user), config);
-  }
+  //   let config = {
+  //     headers: {
+  //       "Content-Type": "application/json; charset=utf-8",
+  //     },
+  //   };
+  //   return axios.post(url, JSON.stringify(user), config);
+  // }
 }
 
 /*********Admin Serives***********/

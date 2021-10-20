@@ -2,147 +2,12 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 
-
-// const Medication_Allergies = (props) =>{
-//     let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
-//     console.log(userId)
-//     const[medication_allergies, setmedication_allergies] = useState({
-
-
-//         currentMedication:"",
-//         otc: "",
-//         herbs: "",
-//         socialDrugs: "",
-//         pastMedication: "",
-//         drugAllergies: "",
-//         otherAllergies: "",
-//         userId:userId.id
-//     })
-
-//     const HandleChange = (e) => {
-//         setmedication_allergies({
-//           ...medication_allergies,
-//           [e.target.name]: e.target.value
-//         });
-//       };
-
-//       const handleSubmit = (e) => {
-//         e.preventDefault();
-//         let newrecords = { ...medication_allergies };
-//         props.addmedicationandallergiesrHandler(newrecords)
-//       };
-
-//   return(
-//    <>
-//    <div className="container">
-//     <h4 className="text-center">Medication and Allergies</h4>
-//       <div className="row justify-content-center">
-//         <div className="col-8">
-//           <form name="Patient Medicationandallergies" onSubmit={handleSubmit}>
-//             <div className="form-group">
-//               <label>Current Medication</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="currentMedication"
-//                 id="currentMedication"
-//                 value={medication_allergies.currentMedication}
-//                 onChange={HandleChange}
-//                />
-
-//              <label>OTC(Over the Counter Medication)</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="otc"
-//                 id="otc"
-//                 value={medication_allergies.otc}
-//                 onChange={HandleChange}
-//                />
-
-//               <label>Herbs/Vitamin/Minerals/Antibiotics</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="herbs"
-//                 id="herbs"
-//                 value={medication_allergies.herbs}
-//                 onChange={HandleChange}
-//                /> 
-
-//               <label>Social Drugs</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="socialDrugs"
-//                 id="socialDrugs"
-//                 value={medication_allergies.socialDrugs}
-//                 onChange={HandleChange}
-//                /> 
-
-//               <label>Any past prescribed medication</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="pastMedication"
-//                 id="pastMedication"
-//                 value={medication_allergies.pastMedication}
-//                 onChange={HandleChange}
-//                /> 
-
-//               <label>Drug Allergies</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="drugAllergies"
-//                 id="drugAllergies"
-//                 value={medication_allergies.drugAllergies}
-//                 onChange={HandleChange}
-//                /> 
-
-//               <label>Other Allergies</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 name="otherAllergies"
-//                 id="otherAllergies"
-//                 value={medication_allergies.otherAllergies}
-//                 onChange={HandleChange}
-//                /> 
-//                 </div>
-//                 <br/>
-//             <button type="submit">Submit</button>
-//           </form>
-//         </div>
-//       </div>
-//     </div>
-//    </>
-//   )
-// }
-// const mapStateToProps = (state) => {
-//     return {
-//       allmedicationandallergies: state.medication_allergies.MedicationandAllergiesReducer,
-//     };
-//   };
-
-//   const mapDispatchToProps = (dispatch) => {
-//     return {
-//       addmedicationandallergiesrHandler: (newuser) => dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
-//     };
-//   };
-
-//   let hof = connect(mapStateToProps, mapDispatchToProps);
-//   export default hof(Medication_Allergies);
-
-// const Medication_Allergies = (props) => {
-//   let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
-//   //     console.log(userId)
 const Medication_Allergies = (props) => {
   // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
 
   let temp_medication_allergies = {
     id: "",
-    patient_id: "",
+    userId: "",
     current_medication:[ {
       medicineName: "",
       dosage: "",
@@ -153,50 +18,54 @@ const Medication_Allergies = (props) => {
       startDate: "",
       endDate: "",
     }],
-      // otc_medication:[
-      // {
-      //   otcDrugName: "",
-      //   strength: "",
-      //   directiontoconsumedosage: "",
-      //   socialDrugs: ""
-      // },
-    //   ],
-    //   pastprescribedmedication:[
-    //   {
-    //     drugName: "",
-    //     strength: "",
-    //     directiontoconsumedosage: ""
-    //   },
-    // ],
-    //   allergies: [
-    //   {
-    //     allergyName: "",
-    //     symptomsofAllergy: "",
-    //     drugAllergy: ""
-    //   },
-      // ],
+      otc_medication:[
+      {
+        otcDrugName: "",
+        strength: "",
+        directiontoconsumedosage: "",
+        socialDrugs: ""
+      },
+      ],
+      pastprescribedmedication:[
+      {
+        pastdrugName: "",
+        strength: "",
+        directiontoconsumedosage: ""
+      },
+    ],
+      allergies: [
+      {
+        allergyName: "",
+        symptomsofAllergy: "",
+        drugAllergy: ""
+      },
+      ],
   };
 
-  const [medication_allergies, setmedication_allergies] = useState(
-    temp_medication_allergies
-  );
-  console.log(medication_allergies);
-
+   const [medication_allergies, setmedication_allergies] = useState(
+     temp_medication_allergies
+   );
+  //console.log(medication_allergies);
   const HandleChange = (e) => {
-    const name = e.target.name,
-      value = e.target.value;
-
+    // const name = e.target.name,
+    //   value = e.target.value;
+    //[e.target.name]: e.target.value,
     setmedication_allergies({
       ...medication_allergies,
-      [name]: value,
+      [e.target.name]: e.target.value,
     });
+
+    // setmedication_allergies({
+    //   //medication_allergies,
+    //   [name]: value,
+    // });
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let newrecords = { ...medication_allergies };
-    //props.addmedicationandallergiesrHandler(newrecords);
-    props.addmedicationandallergiesrHandler(medication_allergies);
+    props.medication_allergies(medication_allergies);
+    //console.log(props.medication_allergies);
   };
   return (
     <div className="container">
@@ -225,7 +94,7 @@ const Medication_Allergies = (props) => {
                             className="form-control"
                             name="medicineName"
                             placeholder="Please enter medicine name"
-                            id="medicineName"
+                            id="current_medication.medicineName"
                             value={
                               medication_allergies.current_medication
                                 .medicineName
@@ -354,7 +223,7 @@ const Medication_Allergies = (props) => {
                   </div>
                 </div>
 
-                {/* 
+                
                   <div className="row mt-2">
                     <div className="col-12">
                       <hr />
@@ -438,9 +307,8 @@ const Medication_Allergies = (props) => {
                             <input
                               type="text"
                               className="form-control"
-                              name="drugName"
-                              id="drugName"
-                              value={medication_allergies.pastprescribedmedication.drugName}
+                              name="pastdrugName"
+                              value={medication_allergies.pastprescribedmedication.pastdrugName}
                               placeholder="Please enter medicine name"
                               onChange={HandleChange}
                             />
@@ -530,7 +398,7 @@ const Medication_Allergies = (props) => {
                         </div>
                       </div>
                     </div>
-                  </div> */}
+                  </div> 
                 <div className="col-12 text-center mt-5">
                   <button className="btn btn-primary" type="submit">
                     Submit
@@ -547,19 +415,19 @@ const Medication_Allergies = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    allmedicationandallergies:
-      state.medication_allergies.MedicationandAllergiesReducer,
+    globalMessage: state.demographics.globalmessage,
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  
+const mapDispatchToProps = (dispatch) => {  
+
   return {
-    addmedicationandallergiesrHandler: (newuser) =>
-      dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
+    medication_allergies: (newuser) => dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
   };
 };
 
 let hof = connect(mapStateToProps, mapDispatchToProps);
 export default hof(Medication_Allergies);
+
+
 

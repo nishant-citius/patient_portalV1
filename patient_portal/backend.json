@@ -1,18 +1,9 @@
 {
   "users": [
     {
-      "email": "j@email.com",
-      "password": "$2a$10$J.r5t7QAJuzrbOsZA8l9Xe4zm4ItNjhqt4T21Jo3PNF1gX4fTZCK6",
-      "fName": "Undertaler",
-      "lName": "Cena",
-      "dob": "2021-09-29",
-      "username": "johny",
-      "mobile": "9955641258",
-      "role": "admin",
-      "rpassword": "12345",
-      "blood_group": "A Rh + Ve",
-      "createdDate": "Wed Oct 13 2021 12:56:33 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "userPic": "Nishant.jpeg",
+      "email": "nc@email.com",
+      "password": "$2a$10$Mz1SBm8xgBd9lFuIhtcfq.H5Mcu.fT7P8ekVNiMvYSbQIGdQcDYMG",
       "id": 1
     },
     {
@@ -327,9 +318,58 @@
       "surgeries": "",
       "insurance_provider": "",
       "id": 10
+    },
+    {
+      "fName": "",
+      "lName": "",
+      "dob": "",
+      "gender": "",
+      "ethnicity": "",
+      "education": "",
+      "employment": "",
+      "address": "",
+      "phone_number": "",
+      "medical_history": "",
+      "family_medical_history": "",
+      "surgeries": "",
+      "insurance_provider": "",
+      "id": 11
+    },
+    {
+      "fName": "na",
+      "lName": "n",
+      "dob": "2021-10-13",
+      "gender": "male",
+      "ethnicity": "na",
+      "education": "ns",
+      "employment": "nj",
+      "address": "nj",
+      "phone_number": 123456789,
+      "medical_history": "nj",
+      "family_medical_history": "ni",
+      "surgeries": "ni",
+      "insurance_provider": "i",
+      "id": 12
+    },
+    {
+      "fName": "is",
+      "lName": "ij",
+      "dob": "2021-10-21",
+      "gender": "male",
+      "ethnicity": "ij",
+      "education": "ij",
+      "employment": "ij",
+      "address": "ij",
+      "phone_number": 23456,
+      "medical_history": "ij",
+      "family_medical_history": "ij",
+      "surgeries": "ij",
+      "insurance_provider": "ij",
+      "userid": 3,
+      "id": 13
     }
   ],
-  "medication_allergies": [
+  "medic_allergy": [
     {
       "id": 1,
       "patient_id": "",
@@ -383,6 +423,136 @@
       "allergyName": "Ajinkya",
       "symptomsofAllergy ": "Ajinkya",
       "direction_to_consume": "Ajinkya"
+    },
+    {
+      "id": "10",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "Turmeric",
+          "dosage": "2"
+        }
+      ]
+    },
+    {
+      "id": "UXItJjQ",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": "",
+          "socialDrugs": ""
+        }
+      ],
+      "pastprescribedmedication": [
+        {
+          "drugName": "",
+          "strength": "",
+          "directiontoconsumedosage": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "medicineName": "hu",
+      "dosage": "nh"
+    },
+    {
+      "id": "uz-9Ws_",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": "",
+          "socialDrugs": ""
+        }
+      ],
+      "pastprescribedmedication": [
+        {
+          "drugName": "",
+          "strength": "",
+          "directiontoconsumedosage": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "medicineName": "asdf",
+      "dosage": "qwert"
+    },
+    {
+      "id": "xa6RbNw",
+      "userId": "",
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": "",
+          "socialDrugs": ""
+        }
+      ],
+      "pastprescribedmedication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsumedosage": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "medicineName": "dwddwd",
+      "dosage": "wdwddwdwd"
     }
   ],
   "immunization": [
