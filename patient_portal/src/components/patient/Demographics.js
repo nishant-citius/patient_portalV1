@@ -78,7 +78,7 @@ const Demographics = (props) => {
      education: Yup.string().required('Required'),
     employment: Yup.string().required('Required'),
     address: Yup.string().required('Required'),
-    phone_number: Yup.string().required('Required'),
+    phone_number: Yup.string().required('Required').min(10, 'Phone no should be of minimum 10 digits').max(12,"phone no should not be more than 12 digits"),
     medical_history: Yup.string().required('Required'),
     family_medical_history: Yup.string().required('Required'),
     surgeries: Yup.string().required('Required'),
@@ -92,6 +92,7 @@ const Demographics = (props) => {
   //   console.log(newrecords)
   //   //props.demographics(newrecords);
   // };
+  const user_Id = props.currentUser.id
   const onSubmit = (values)=>{
     const payload = { 
       fName: values.fName,
@@ -110,6 +111,8 @@ const Demographics = (props) => {
       userid:props.currentUser.id
     }
     props.demographics(payload)
+      
+    // props.getdemographics(user_Id)
   }
   return (
     <>
@@ -132,8 +135,8 @@ const Demographics = (props) => {
                   className="form-control"
                   name="fName"
                   id="fName"
-                  value=""
-                />
+                  // value={props.currentUser.fName}
+                  />
                <div className="error"><ErrorMessage name="fName" /></div> 
               </div>
               <div className="form-group">
@@ -143,6 +146,7 @@ const Demographics = (props) => {
                   className="form-control"
                   name="lName"
                   id="lName"
+                  // value={props.lName}
                 />
                 <div className="error"><ErrorMessage name="lName" /></div>
               </div>
@@ -282,6 +286,8 @@ const Demographics = (props) => {
 const mapStateToProps = (state) => {
   return {
     globalMessage: state.demographics.globalmessage,
+    demographics_data: state.demographics.demographics_data,
+    // currentUser: state.demographics,
     currentUser: state.login.loggedUserInfo,
     // statusCode: state.demographics.statusCode,
     
@@ -290,7 +296,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    demographics: (newuser) => dispatch(actionCreator.AddDemographicsAsync(newuser)),
+    demographics: (newuser) => dispatch(actionCreator.AddDemographicsAsync(newuser))
+    // getdemographics:(userId) => dispatch(actionCreator.GetDemographics(userId))
   };
 };
 

@@ -347,3 +347,26 @@ export function updateprofile(profileImage, userId) {
     );
     };
 }
+
+export function GetDemographics(userId) {
+  let payload = {
+        demographics_data:{},
+        globalmessage: "",
+      };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_DEMOGRAPHICS_DETAILS}${userId}`).then(
+      (response) => {
+        payload.demographics_data = response.data;
+        payload.globalmessage = `Demographics details retrived`;
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+        
+        },
+    (error) =>{
+        payload.globalmessage = `Demographics Error: ${error.response.data}`;
+        // payload.statusCode = 400;
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      }
+    );
+    };
+}
