@@ -1,3 +1,13 @@
 .MuiPopover-paper {
   top: 50px !important;
 }
+
+.item {
+  padding: 15px 0px !important;
+}
+
+i.icon {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}

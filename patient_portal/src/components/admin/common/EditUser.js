@@ -40,17 +40,6 @@ const EditUser = (props) => {
     );
   };
 
-  const submitNewUserData = (_id, userData) => {
-    adminService.updateUser(_id, userData).then(
-      (response) => {
-        user.role === "patient"
-          ? history.push("/patientlist")
-          : history.push("/physicianlist");
-      },
-      (error) => {}
-    );
-  };
-
   const handleUserChange = (e) => {
     const name = e.target.name,
       value = e.target.value;
@@ -60,8 +49,13 @@ const EditUser = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-    submitNewUserData(id, newUserData);
-    // props.updateUser(id, newUserData);
+
+    props.updateUser(id, newUserData);
+    if (props.globalmessage === "Edit Success") {
+      history.push("/allusers");
+    } else {
+      alert("Failure..");
+    }
   };
 
   return (
@@ -205,11 +199,11 @@ const EditUser = (props) => {
   );
 };
 
-// const mapStateToProps = (rootReducer) => {
-//   return {
-//     globalmessage: rootReducer.updateusers.globalmessage,
-//   };
-// };
+const mapStateToProps = (rootReducer) => {
+  return {
+    globalmessage: rootReducer.updateusers.globalmessage,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -218,5 +212,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(EditUser);
-// export default EditUser;
+export default connect(mapStateToProps, mapDispatchToProps)(EditUser);

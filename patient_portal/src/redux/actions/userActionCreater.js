@@ -19,15 +19,23 @@ axios.interceptors.request.use((req) => {
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
       req.url.endsWith("patient") ||
-      req.url.indexOf("/users?id="))
+      req.url.endsWith(req.url))
   ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
-  if (req.method === "post" && req.url.endsWith("/demographics")) {
+  if (
+    (req.method === "post" && req.url.endsWith("/demographics")) ||
+    req.url.endsWith("/requests")
+  ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "put" && req.url.indexOf("/users/")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
+
   return req;
 });
 //********AXIOS INTERCEPTOR********
@@ -196,8 +204,7 @@ export function EditUser(userId, upadatedData) {
       .put(`${URLS.USER}${userId}`, JSON.stringify(upadatedData), config)
       .then(
         (response) => {
-          console.log(response);
-          payload.globalmessage = ` User Updated successfully`;
+          payload.globalmessage = `Edit Success`;
           dispatch({ type: actions.UPDATE_USER, payload: payload });
         },
         (error) => {
@@ -216,7 +223,6 @@ export function AddNewUser(user) {
   return (dispatch) => {
     axios.post(URLS.ADD_USER, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response);
         payload.globalmessage = `New User Added successfully`;
         payload.statusCode = response.status;
         dispatch({ type: actions.ADD_USER, payload: payload });
@@ -225,6 +231,23 @@ export function AddNewUser(user) {
         payload.globalmessage = `ERROR: ${error.response.data}`;
         payload.statusCode = error;
         dispatch({ type: actions.ADD_USER, payload: payload });
+      }
+    );
+  };
+}
+
+export function AddUserRequest(request) {
+  let payload = {
+    statusCode: 200,
+  };
+  return (dispatch) => {
+    axios.post(URLS.USER_REQUESTS, JSON.stringify(request), config).then(
+      (response) => {
+        dispatch({ type: actions.ADD_USER_REQUEST, payload: payload });
+      },
+      (error) => {
+        payload.statusCode = 400;
+        dispatch({ type: actions.ADD_USER_REQUEST, payload: payload });
       }
     );
   };
@@ -245,26 +268,26 @@ export function GetAllUsersAsync() {
 
 export function AddDemographicsAsync(user) {
   let payload = {
-        globalmessage: "",
-        // statusCode: "",
-      };
+    globalmessage: "",
+    // statusCode: "",
+  };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response)
+        console.log(response);
         payload.globalmessage = `Demographics registered successfully`;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
-        
-        },
-    (error) =>{
+      },
+      (error) => {
         payload.globalmessage = `Demographics ERROR: ${error.response.data}`;
         // payload.statusCode = 400;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
       }
     );
-    };
+  };
 }
+
 export function AddImmunizationsAsync(user) {
   return (dispatch) => {
     userService.Addpatientimmunization(user).then(
