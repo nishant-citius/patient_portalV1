@@ -211,10 +211,6 @@ const EditUser = (props) => {
 //   };
 // };
 
-<<<<<<< HEAD
-// export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
-export default EditUser;
-=======
 const mapDispatchToProps = (dispatch) => {
   return {
     updateUser: (userId, updatedData) =>
@@ -224,4 +220,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(null, mapDispatchToProps)(EditUser);
 // export default EditUser;
->>>>>>> d863eec34dfe20a38ef7a15695c3607faef5983a
