@@ -132,7 +132,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="fName"
                       id="fName"
-                      value=""
                     />
                     <div className="error">
                       <ErrorMessage name="fName" />
