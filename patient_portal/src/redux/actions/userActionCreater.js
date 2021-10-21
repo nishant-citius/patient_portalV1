@@ -208,8 +208,8 @@ export function EditUser(userId, upadatedData) {
     globalmessage: "",
   };
   return (dispatch, getState) => {
+    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
     authToken = getState().login.authToken;
-
     axios
       .put(`${URLS.USER}${userId}`, JSON.stringify(upadatedData), config)
       .then(
@@ -285,16 +285,16 @@ export function GetAllUsersAsync() {
 
 export function AddDemographicsAsync(user) {
   let payload = {
-        globalmessage: "",
-        statusCode: 200,
-      };
+    globalmessage: "",
+    statusCode: 200,
+  };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
         // console.log(response)
-       payload.globalmessage = `Demographics registered successfully`;
-        payload.statusCode=response.status
+        payload.globalmessage = `Demographics registered successfully`;
+        payload.statusCode = response.status;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
       },
       (error) => {
@@ -315,11 +315,11 @@ export function AddImmunizationsAsync(user) {
     authToken = getState().login.authToken;
     axios.post(URLS.IMMUNIZATION, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response)
+        console.log(response);
         payload.globalmessage = `Immunization registered successfully`;
-        payload.statusCode=response.status
+        payload.statusCode = response.status;
         dispatch({ type: actions.ADD_IMMUNIZATION, payload: payload });
-        },
+      },
       (error) => {
         payload.globalmessage = `Immunization ERROR: ${error.response.data}`;
         payload.statusCode = 400;
@@ -362,32 +362,33 @@ export function AddMedicationAndAllergiesAsync(user) {
 
 export function updateprofile(profileImage, userId) {
   let payload = {
-        globalmessage: "",
-        // profileImage:""
-      };
+    globalmessage: "",
+    // profileImage:""
+  };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
-    axios.put(`${URLS.USER}${userId}`, JSON.stringify(profileImage), config).then(
-      (response) => {
-        console.log("From AC....",response)
-        payload.globalmessage = `Profile Pic updated successfully`;
-        dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-        
+    axios
+      .put(`${URLS.USER}${userId}`, JSON.stringify(profileImage), config)
+      .then(
+        (response) => {
+          console.log("From AC....", response);
+          payload.globalmessage = `Profile Pic updated successfully`;
+          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
         },
-    (error) =>{
-        payload.globalmessage = `Updation ERROR: ${error.response.data}`;
-        // payload.statusCode = 400;
-        dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-      }
-    );
-    };
+        (error) => {
+          payload.globalmessage = `Updation ERROR: ${error.response.data}`;
+          // payload.statusCode = 400;
+          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+        }
+      );
+  };
 }
 
 export function GetPatientDemographics(userId) {
   let payload = {
-        demographics_data:{},
-        globalmessage: "",
-      };
+    demographics_data: {},
+    globalmessage: "",
+  };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_DEMOGRAPHICS_DETAILS}${userId}`).then(
@@ -395,16 +396,15 @@ export function GetPatientDemographics(userId) {
         payload.demographics_data = response.data;
         payload.globalmessage = `Demographics details retrived`;
         dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
-        
-        },
-    (error) =>{
+      },
+      (error) => {
         payload.globalmessage = `Demographics Error: ${error.response.data}`;
         // payload.statusCode = 400;
         dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
       }
     );
-    };
-  }
+  };
+}
 export function GetDemographics() {
   let payload = {
     demographics: [],
@@ -415,7 +415,7 @@ export function GetDemographics() {
 
     axios.get(URLS.GET_DEMOGRAPHICS).then(
       (response) => {
-        console.log(response.data)
+        console.log(response.data);
         payload.globalmessage = `Physician data retrieved successfully. Count: ${response.data.length}`;
         payload.demographics = response.data;
         dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });

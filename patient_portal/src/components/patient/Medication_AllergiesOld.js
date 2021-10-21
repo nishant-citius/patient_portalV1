@@ -4,7 +4,7 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const Medication_Allergies = (props) => {
+const Medication_AllergiesOld = (props) => {
   // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
 
   // let temp_medication_allergies = {
@@ -498,4 +498,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 let hof = connect(mapStateToProps, mapDispatchToProps);
-export default hof(Medication_Allergies);
+export default hof(Medication_AllergiesOld);
