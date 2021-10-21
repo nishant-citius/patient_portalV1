@@ -43,8 +43,12 @@ const UserRequests = (props) => {
 
   const approve = (user) => {
     filterUsers(user.id)
-    user.isActive = true
-    props.updateUser(user.id, user)
+    let newObj = {
+      ...user,
+      password: user.rpassword,
+      isActive: true,
+    };
+    props.updateUser(user.id, newObj);
   }
 
   const reject = (user) => {

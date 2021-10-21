@@ -2,52 +2,15 @@ import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { useHistory } from "react-router";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import Select from "@material-ui/core/Select";
-import FormControl from "@material-ui/core/FormControl";
+
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import {
-  Grid,
-  Paper,
-  Avatar,
-  TextField,
-  Button,
-  Typography,
-  Link,
-} from "@material-ui/core";
+import { Grid, Paper, Avatar, TextField } from "@material-ui/core";
 
-import InputAdornment from "@material-ui/core/InputAdornment";
-import Box from "@material-ui/core/Box";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-// import  {KeyboardDatePicker,
-// DatePicker} from "@material-ui/Picker";
-//import BloodtypeIcon from '@material-ui/icons/Bloodtype';
 import LockOpenIcon from "@material-ui/icons/LockOpen";
-import EmailIcon from "@material-ui/icons/Email";
-
-//import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 const RegisterUser = (props) => {
-  // let tempUser = {
-  //   fName: "",
-  //   lName: "",
-  //   dob: "",
-  //   username: "",
-  //   email: "",
-  //   mobile: "",
-  //   role: "patient",
-  //   password: "",
-  //   rpassword: "",
-  //   blood_group: "",
-  //   createdDate: Date(),
-  //   isActive: true,
-  // };
-
-  // const [user, setUser] = useState(tempUser);
   let history = useHistory();
 
   const initialValues = {
@@ -62,9 +25,9 @@ const RegisterUser = (props) => {
     rpassword: "",
     blood_group: "",
     createdDate: Date(),
-    isActive: true,
+    isActive: false,
   };
-  const [user, setUser] = useState(initialValues);
+
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
     lName: Yup.string().required("Required"),
@@ -87,6 +50,7 @@ const RegisterUser = (props) => {
       .max(12, "Phone number required 12 digit"),
     blood_group: Yup.string().required("Required"),
   });
+
   const onSubmit = (values) => {
     const payload = {
       fName: values.fName,
@@ -101,40 +65,10 @@ const RegisterUser = (props) => {
       blood_group: values.blood_group,
       role: "patient",
       createdDate: Date(),
-      isActive: true,
+      isActive: false,
     };
     props.register(payload);
-    //const { ...user } = props
-    //const payload = { email: values.email, password: values.password }
-    //console.log(payload)
-    //setUser(payload).then(() => setSubmitting(false))
-    //props.login(payload)
   };
-
-  // const handleUserChange = (e) => {
-  //   const name = e.target.name,
-  //     value = e.target.value;
-  //   setUser({ ...user, [name]: value });
-  // };
-
-  // const submitUserData = (e) => {
-  //   e.preventDefault();
-  //   let newUserData = { ...user };
-
-  //   if (user.fName.length < 1) {
-  //     alert("plse enter valid First name");
-  //   }
-  //   if (user.lName.length < 1) {
-  //     alert("plse enter valid last name");
-  //   }
-
-  //   if (user.password !== user.rpassword) {
-  //     alert("plse enter the same password");
-  //   } else {
-  //     // onSubmit(newUserData);
-  //     props.register(newUserData);
-  //   }
-  // };
 
   useEffect(() => {
     if (props.statusCode === 200) {

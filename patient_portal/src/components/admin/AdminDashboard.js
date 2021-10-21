@@ -1,4 +1,4 @@
-import { React, Link, useEffect } from "react";
+import { React, Link, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import "./admin.css";
 import { connect } from "react-redux";
@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
 const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
+
 
   useEffect(() => {
     props.getallphysiciandata();
