@@ -18,7 +18,7 @@
     },
     {
       "email": "aj@email.com",
-      "password": "$2a$10$7lHQF.18HdQqlEa1pCKnc.MMTAOcnDQm4E54ODiGfXX6rNsrvAMpm",
+      "password": "$2a$10$pCD4APZjLMDKqAEtmML/VOM8ZwXlUltpzUDJ5yI8CK1B6MO7L0qTa",
       "fName": "Steven",
       "lName": "Strange",
       "dob": "2021-09-29",
@@ -28,12 +28,12 @@
       "rpassword": "12345",
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 12:58:37 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 2
     },
     {
       "email": "ajinkya@email.com",
-      "password": "$2a$10$440Z2mI8vG2HXsldNo3LPuNbKVlxCddQLGD8bFOzbPE4hnw5J517q",
+      "password": "$2a$10$11xhGyGMsrhMny0TUHHxje24D6mATcLbpiBDMcq717cYsuJi1MP2e",
       "fName": "Steven",
       "lName": "Cold",
       "dob": "2021-09-28",
@@ -43,15 +43,15 @@
       "rpassword": "12345",
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:23:31 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 3
     },
     {
       "email": "sc@email.com",
-      "password": "$2a$10$5a.g6y4hvfGG3W67UjLmpeH3HniqJJMA/BvX3TDcLCqQZCPN6hmN2",
-      "fName": "dfjkasdf",
-      "lName": "fdasdsda",
-      "dob": "2021-09-27",
+      "password": "$2a$10$CogcfzLqmq0Pi0RaVrkzX.XT1sfPvz.PBXZWUFdBk.so7MQU0GcHm",
+      "fName": "Supriya",
+      "lName": "Kulkarni",
+      "dob": "2021-08-30",
       "username": "pooja@email.com",
       "mobile": "9556644852",
       "role": "physician",
@@ -59,15 +59,16 @@
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 20
+      "id": 20,
+      "speciality": "Heart Surgeon"
     },
     {
       "email": "user_1@email.com",
-      "password": "$2a$10$FNAMZBlCai2o7IQRCTjcPuckJPgYX5piEGxV09Vym/KVa0KPG4cf.",
-      "fName": "Shit ",
-      "lName": "Guy",
+      "password": "$2a$10$fOk8elXRELfDBsmoq7mx8eAz/OElnT3calTVCVGIxCMgKuulbmMJ2",
+      "fName": "Shital",
+      "lName": "Mane",
       "dob": "2021-09-27",
-      "username": "pooja@email.com",
+      "username": "Shital",
       "mobile": "9556644852",
       "role": "physician",
       "rpassword": "asdf",
@@ -326,8 +327,6 @@
       "id": 13
     }
   ],
-  
-  
   "medication_allergies": [
     {
       "id": 1,

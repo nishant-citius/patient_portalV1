@@ -22,7 +22,6 @@ import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { propTypes } from "react-bootstrap/esm/Image";
-// import Notification from "../../shared/notification/Notification";
 
 const paperStyle = {
   padding: 20,
@@ -35,18 +34,6 @@ const avatarStyle = { backgroundColor: "#1bbd7e" };
 const btnstyle = { margin: "8px 0" };
 
 const Login = (props) => {
-  // const [notify, setNotify] = useState({
-  //   isOpen: false,
-  //   message: "",
-  //   type: "",
-  // });
-
-  // setNotify({
-  //   isOpen: true,
-  //   message: "Type message here..",
-  //   type: "success",
-  // });
-
   const initialValues = {
     email: "",
     password: "",
@@ -71,13 +58,24 @@ const Login = (props) => {
       if (props.role === "admin") {
         history.push("/admin");
       } else if (props.role === "patient") {
+        /**
+         * check patient status
+         */
+        patientStatus();
         history.push("/demographics");
       } else {
         history.push("/physician");
       }
-    } else {
     }
   }, []);
+
+  const patientStatus = () => {
+    if (props.currentUser.isActive) {
+      alert("Patient is Active...");
+    } else {
+      alert("Patient Inactive...");
+    }
+  };
 
   return (
     <>
@@ -149,7 +147,6 @@ const Login = (props) => {
           <Typography> Do you have an account ?</Typography>
           <a href="/registeruser">Sign Up</a>
         </Paper>
-        {/* <Notification notify={notify} setNotify={setNotify} /> */}
       </Grid>
     </>
   );
