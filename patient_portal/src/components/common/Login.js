@@ -22,6 +22,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { propTypes } from "react-bootstrap/esm/Image";
+import Notification from "../../shared/notification/Notification";
 
 const paperStyle = {
   padding: 20,
@@ -38,11 +39,20 @@ const Login = (props) => {
   //   email: "",
   //   password: "",
   // };
+
   const initialValues = {
     email: "",
     password: "",
   };
+
   const [user, setUser] = useState(initialValues);
+
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: "",
+    type: "",
+  });
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().email("Please enter valid email").required("Required"),
     password: Yup.string("Enter your password")
@@ -74,6 +84,11 @@ const Login = (props) => {
 
   useEffect(() => {
     if (props.isLoggedIn === true) {
+      setNotify({
+        isOpen: true,
+        message: `Login Successful..`,
+        type: "success",
+      });
       if (props.role === "admin") {
         history.push("/admin");
       } else if (props.role === "patient") {
@@ -167,12 +182,14 @@ const Login = (props) => {
                   </Typography> */}
 
           <Typography> Do you have an account ?</Typography>
+         
           {/* <Link to ="/registeruser" >
                           Sign Up 
                       </Link> */}
           <a href="/registeruser">Sign Up</a>
         </Paper>
       </Grid>
+      <Notification notify={notify} setNotify={setNotify} />
     </>
   );
 };

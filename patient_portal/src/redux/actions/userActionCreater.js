@@ -363,6 +363,7 @@ export function AddMedicationAndAllergiesAsync(user) {
 export function updateprofile(profileImage, userId) {
   let payload = {
         globalmessage: "",
+        // profileImage:""
       };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
@@ -382,7 +383,7 @@ export function updateprofile(profileImage, userId) {
     };
 }
 
-export function GetDemographics(userId) {
+export function GetPatientDemographics(userId) {
   let payload = {
         demographics_data:{},
         globalmessage: "",
@@ -393,14 +394,37 @@ export function GetDemographics(userId) {
       (response) => {
         payload.demographics_data = response.data;
         payload.globalmessage = `Demographics details retrived`;
-        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+        dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
         
         },
     (error) =>{
         payload.globalmessage = `Demographics Error: ${error.response.data}`;
         // payload.statusCode = 400;
-        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+        dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
       }
     );
     };
+  }
+export function GetDemographics() {
+  let payload = {
+    demographics: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_DEMOGRAPHICS).then(
+      (response) => {
+        console.log(response.data)
+        payload.globalmessage = `Physician data retrieved successfully. Count: ${response.data.length}`;
+        payload.demographics = response.data;
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.demographics = [];
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      }
+    );
+  };
 }

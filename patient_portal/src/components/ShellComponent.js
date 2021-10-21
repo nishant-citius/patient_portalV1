@@ -17,6 +17,8 @@ import "react-calendar/dist/Calendar.css";
 import { connect } from "react-redux";
 
 import PatientList from "../components/admin/PatientList";
+import PatientList1 from "../components/physician/PatientData";
+import PatientDemographics from "../components/physician/PatientDemographics";
 import PhysicianList from "../components/admin/PhysicianList";
 import Appointments from "../components/admin/Appointments";
 import ImmunizationDetails from "../components/admin/ImmunizationDetails";
@@ -78,6 +80,9 @@ function ShellComponent(props) {
       <Route path={"/userdetails/:id"} component={UserDetails} />
       <Route path={"/edit/:id"} component={EditUser} />
       {/* *****Admin Routes***** */}
+      <Route path={"/patientdata"} component={PatientList1} />
+      <Route path={"/patientdemographics"} component={PatientDemographics} />
+
     </Switch>
   );
 }

@@ -25,6 +25,7 @@ import {
   WorkOutline,
 } from "@material-ui/icons";
 
+
 const useStyles = makeStyles((theme) => ({
   container: {
     height: "100vh",
@@ -200,20 +201,27 @@ function SideNav(props) {
           </div>
           
         ) : // physician Menu==============================================================================
-        props.role === "physican" ? (
+        props.role === "physician" ? (
           <div className="sideNav">
-            <div className={classes.item}>
+          <div className={classes.item}>
               <Link to="/physician">
                 <DashboardIcon className={classes.icon} />
                 <span className={classes.text}>Physician Dashboard</span>
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="">
-                <ListAltIcon className={classes.icon} />
+              <Link to="/patientdata">
+                <ContactPhoneIcon className={classes.icon} />
                 <span className={classes.text}>Patient List</span>
               </Link>
             </div>
+            <div className={classes.item}>
+              <Link to="/patientdemographics">
+                <ContactPhoneIcon className={classes.icon} />
+                <span className={classes.text}>Patient Demographics</span>
+              </Link>
+            </div>
+            
           </div>
         ) : null
       }

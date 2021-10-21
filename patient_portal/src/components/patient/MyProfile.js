@@ -13,7 +13,7 @@ class MyProfile extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      userId:this.props.currentUser.userId,
       fName: this.props.currentUser.fName,
       lName: this.props.currentUser.lName,
       email: this.props.currentUser.email,
@@ -25,27 +25,27 @@ class MyProfile extends Component {
       //  role:this.props.role,
       //  password:this.props.password,
       //  repassword:this.props.repassword,
-      // profileImage: null
+     
     }
   }
 
   updateprofilehandler = (e) => {
     e.preventDefault();
-
-    //create object of formData
+     //create object of formData
     const formData = new FormData();
-    formData.append("profileImage", this.state.profileImage);
-    //  this.props.updateProfile(this.state.uploadedFile, this.props.id)
-    // this.props.currentUser.profileImage = this.state.profileImage
-    this.props.updateProfile(this.props.currentUser.profileImage, this.props.currentUser.id)
+    formData.append("profileImage", this.profileImage);
+    this.props.updateProfile(this.state.profileImage, this.state.userId)
+    console.log(this.state.profileImage)
+    
   };
 
   profilechange = (e) => {
-    console.log(e.target.files[0])
-    this.setState(
+    
+     console.log(e.target.files[0])
+     this.setState(
       {
-        profileImage: e.target.files[0]
-      });
+       profileImage: e.target.files[0]
+     });
   }
 
   render() {
