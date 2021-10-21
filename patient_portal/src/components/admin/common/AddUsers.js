@@ -50,7 +50,7 @@ const AddUsers = (props) => {
   });
 
   return (
-    <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
+    <div className="container py-4 border-secondary  mt-5">
       <Link className="btn btn-warning" to="/admin">
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>

@@ -50,33 +50,35 @@ const mapDispatchToProps = (dispatch) => {
 function ShellComponent(props) {
   const classes = useStyles();
   return (
-    <Switch>
-      <Route exact path="/" component={PatientPortalHome} />
-      <Route path="/login" component={Login} />
-      <Route path="/registeruser" component={RegisterUser} />
+    <div className="top_mt_100">
+      <Switch>
+        <Route exact path="/" component={PatientPortalHome} />
+        <Route path="/login" component={Login} />
+        <Route path="/registeruser" component={RegisterUser} />
 
-      <Route path="/admin" component={AdminDashboard} />
-      <Route path="/patient" component={Patient_dashboard} />
-      <Route path="/physician" component={Physician_dashboard} />
+        <Route path="/admin" component={AdminDashboard} />
+        <Route path="/patient" component={Patient_dashboard} />
+        <Route path="/physician" component={Physician_dashboard} />
 
-      <Route path="/demographics" component={Demographics} />
-      <Route path="/immunization" component={Immunization} />
-      <Route path="/medic_allergy" component={Medication_Allergies} />
-      {/* <Route path="/about" component={About} />
+        <Route path="/demographics" component={Demographics} />
+        <Route path="/immunization" component={Immunization} />
+        <Route path="/medic_allergy" component={Medication_Allergies} />
+        {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
 
-      {/* *****Admin Routes***** */}
-      <Route path={"/patientlist"} component={PatientList} />
-      <Route path={"/allusers"} component={UserList} />
-      <Route path={"/addusers"} component={AddUsers} />
-      <Route path={"/physicianlist"} component={PhysicianList} />
-      <Route path={"/appointments"} component={Appointments} />
-      <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
-      <Route path={"/userdetails/:id"} component={UserDetails} />
-      <Route path={"/edit/:id"} component={EditUser} />
-      {/* *****Admin Routes***** */}
-    </Switch>
+        {/* *****Admin Routes***** */}
+        <Route path={"/patientlist"} component={PatientList} />
+        <Route path={"/allusers"} component={UserList} />
+        <Route path={"/addusers"} component={AddUsers} />
+        <Route path={"/physicianlist"} component={PhysicianList} />
+        <Route path={"/appointments"} component={Appointments} />
+        <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
+        <Route path={"/userdetails/:id"} component={UserDetails} />
+        <Route path={"/edit/:id"} component={EditUser} />
+        {/* *****Admin Routes***** */}
+      </Switch>
+    </div>
   );
 }
 
