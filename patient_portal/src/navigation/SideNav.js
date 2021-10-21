@@ -25,6 +25,7 @@ import {
   WorkOutline,
 } from "@material-ui/icons";
 
+
 const useStyles = makeStyles((theme) => ({
   container: {
     height: "100vh",
@@ -70,6 +71,7 @@ const mapStateToProps = (rootReducer) => {
     isLoggedIn: rootReducer.login.isLoggedIn,
     role: rootReducer.login.role,
     authToken: rootReducer.login.authToken,
+    currentUser: rootReducer.login.loggedUserInfo,
   };
 };
 
@@ -83,6 +85,7 @@ function SideNav(props) {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
+      <h4>{props.currentUser.fName}</h4>
       {
         // Admin Menu====================================================================================
         props.role === "admin" ? (
@@ -131,6 +134,7 @@ function SideNav(props) {
             </div>
           </div>
         ) : // Patient Menu==================================================================================
+       
         props.role === "patient" ? (
           <div className="sideNav">
             <div className={classes.item}>
@@ -140,7 +144,7 @@ function SideNav(props) {
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="">
+              <Link to="/myprofile">
                 <ContactPhoneIcon className={classes.icon} />
                 <span className={classes.text}>My Profile</span>
               </Link>
@@ -193,25 +197,35 @@ function SideNav(props) {
                 <span className={classes.text}>Patient Education</span>
               </Link>
             </div>
+           
           </div>
+          
         ) : // physician Menu==============================================================================
-        props.role === "physican" ? (
+        props.role === "physician" ? (
           <div className="sideNav">
-            <div className={classes.item}>
+          <div className={classes.item}>
               <Link to="/physician">
                 <DashboardIcon className={classes.icon} />
                 <span className={classes.text}>Physician Dashboard</span>
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="">
-                <ListAltIcon className={classes.icon} />
+              <Link to="/patientdata">
+                <ContactPhoneIcon className={classes.icon} />
                 <span className={classes.text}>Patient List</span>
               </Link>
             </div>
+            <div className={classes.item}>
+              <Link to="/patientdemographics">
+                <ContactPhoneIcon className={classes.icon} />
+                <span className={classes.text}>Patient Demographics</span>
+              </Link>
+            </div>
+            
           </div>
         ) : null
       }
+      {/* {props.currentUser} */}
     </Container>
   );
 }

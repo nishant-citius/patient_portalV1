@@ -18,3 +18,4 @@ export { default as GroupAddIcon } from "@material-ui/icons/GroupAdd";
 export { default as BorderColorIcon } from "@material-ui/icons/BorderColor";
 export { default as SchoolIcon } from "@material-ui/icons/School";
 export { default as TextsmsIcon } from "@material-ui/icons/Textsms";
+export { default as AccessTimeOutlined } from "@material-ui/icons/AccessTimeOutlined";
