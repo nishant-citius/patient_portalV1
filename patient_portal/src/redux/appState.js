@@ -11,6 +11,8 @@ let appState = {
   physicians: [],
   patients: [],
   userDetails: {},
+  userRequests: 0,
+  inactiveUsers: [],
 };
 
 export default appState;

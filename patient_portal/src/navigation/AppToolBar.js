@@ -20,6 +20,8 @@ import { connect } from "react-redux";
 import React from "react";
 import * as actioncreators from "../redux/actions/userActionCreater";
 import { NavBtn, NavBtnLink } from "../components/Layout/NavbarElements";
+import ModalPopup from "shared/dialog/ModalPopup";
+import UserRequests from "components/admin/UserRequests";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -120,6 +122,7 @@ const useStyles = makeStyles((theme) => ({
 function AppToolBar(props) {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
+  const [openPopup, setOpenPopup] = useState(false);
 
   const classes = useStyles({ open });
   const history = useHistory();
@@ -137,6 +140,10 @@ function AppToolBar(props) {
     props.logout();
     handleClose();
     history.push("/");
+  }
+
+  function handleNotification() {
+    setOpenPopup(true);
   }
 
   return (
@@ -179,7 +186,7 @@ function AppToolBar(props) {
                 onClick={() => setOpen(true)}
               />
               <Badge badgeContent={10} color="secondary">
-                <NotificationsIcon />
+                <NotificationsIcon onClick={handleNotification} />
               </Badge>
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Badge badgeContent={6} color="secondary">
@@ -206,6 +213,13 @@ function AppToolBar(props) {
           </>
         )}
       </ToolBar>
+      <ModalPopup
+        title="User-Request"
+        openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+      >
+        <UserRequests />
+      </ModalPopup>
     </AppBar>
   );
 }

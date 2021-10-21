@@ -15,4 +15,6 @@ export const UPDATE_USER = "UPDATE_USER";
 export const GET_USER = "GET_USER";
 
 export const GET_DEMOGRAPHICS = "GET_DEMOGRAPHICS";
+export const GET_INACTIVE_USERS = "GET_INACTIVE_USERS";
+
 
