@@ -1,8 +1,9 @@
-import { React, useState, userEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useHistory } from "react-router";
 
 const Immunization = (props) => {
   const initialValues = {
@@ -51,6 +52,12 @@ const Immunization = (props) => {
   //   let newrecords = { ...patientImmunization };
   //   props.addUserHandler(newrecords);
   // };
+  let history = useHistory();
+  useEffect(() => {
+    if(props.statusCode === 201){
+      history.push("/patient")
+    }
+  });
 
   return (
     <Formik
@@ -151,7 +158,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addUserHandler: (newuser) =>
+    immunization: (newuser) =>
       dispatch(actionCreator.AddImmunizationsAsync(newuser)),
   };
 };

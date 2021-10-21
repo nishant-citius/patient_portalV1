@@ -307,6 +307,8 @@ const Demographics = (props) => {
 const mapStateToProps = (state) => {
   return {
     globalMessage: state.demographics.globalmessage,
+    demographics_data: state.demographics.demographics_data,
+    // currentUser: state.demographics,
     currentUser: state.login.loggedUserInfo,
     // statusCode: state.demographics.statusCode,
   };

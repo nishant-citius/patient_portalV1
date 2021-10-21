@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import { Container } from "../mui";
 import CardComponent from "./CardComponent";
@@ -17,6 +17,8 @@ import "react-calendar/dist/Calendar.css";
 import { connect } from "react-redux";
 
 import PatientList from "../components/admin/PatientList";
+import PatientList1 from "../components/physician/PatientData";
+import PatientDemographics from "../components/physician/PatientDemographics";
 import PhysicianList from "../components/admin/PhysicianList";
 import Appointments from "../components/admin/Appointments";
 import ImmunizationDetails from "../components/admin/ImmunizationDetails";
@@ -26,12 +28,14 @@ import UserList from "../components/admin/Userslist";
 
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
+import MyProfile from "./patient/MyProfile";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(10),
   },
 }));
+
 // calling states data
 const mapStateToProps = (rootReducer) => {
   return {
@@ -49,34 +53,41 @@ const mapDispatchToProps = (dispatch) => {
 
 function ShellComponent(props) {
   const classes = useStyles();
+
   return (
-    <Switch>
-      <Route exact path="/" component={PatientPortalHome} />
-      <Route path="/login" component={Login} />
-      <Route path="/registeruser" component={RegisterUser} />
+    <div className="top_mt_100">
+      <Switch>
+        <Route exact path="/" component={PatientPortalHome} />
+        <Route path="/login" component={Login} />
+        <Route path="/registeruser" component={RegisterUser} />
 
-      <Route path="/admin" component={AdminDashboard} />
-      <Route path="/patient" component={Patient_dashboard} />
-      <Route path="/physician" component={Physician_dashboard} />
+        <Route path="/admin" component={AdminDashboard} />
+        <Route path="/patient" component={Patient_dashboard} />
+        <Route path="/physician" component={Physician_dashboard} />
 
-      <Route path="/demographics" component={Demographics} />
-      <Route path="/immunization" component={Immunization} />
-      <Route path="/medic_allergy" component={Medication_Allergies} />
-      {/* <Route path="/about" component={About} />
+        <Route path="/demographics" component={Demographics} />
+        <Route path="/immunization" component={Immunization} />
+        <Route path="/myprofile" component={MyProfile} />
+        <Route path="/medic_allergy" component={Medication_Allergies} />
+        {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
 
-      {/* *****Admin Routes***** */}
-      <Route path={"/patientlist"} component={PatientList} />
-      <Route path={"/allusers"} component={UserList} />
-      <Route path={"/addusers"} component={AddUsers} />
-      <Route path={"/physicianlist"} component={PhysicianList} />
-      <Route path={"/appointments"} component={Appointments} />
-      <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
-      <Route path={"/userdetails/:id"} component={UserDetails} />
-      <Route path={"/edit/:id"} component={EditUser} />
-      {/* *****Admin Routes***** */}
-    </Switch>
+        {/* *****Admin Routes***** */}
+        <Route path={"/patientlist"} component={PatientList} />
+        <Route path={"/allusers"} component={UserList} />
+        <Route path={"/addusers"} component={AddUsers} />
+        <Route path={"/physicianlist"} component={PhysicianList} />
+        <Route path={"/appointments"} component={Appointments} />
+        <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
+        <Route path={"/userdetails/:id"} component={UserDetails} />
+        <Route path={"/edit/:id"} component={EditUser} />
+        {/* *****Admin Routes***** */}
+
+        <Route path={"/patientdata"} component={PatientList1} />
+        <Route path={"/patientdemographics"} component={PatientDemographics} />
+      </Switch>
+    </div>
   );
 }
 

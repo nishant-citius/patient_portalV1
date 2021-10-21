@@ -36,210 +36,38 @@
       "id": 1
     },
     {
-      "fName": "Steven",
-      "lName": "Morhson",
-      "dob": "2021-10-15",
-      "gender": "female",
-      "ethnicity": "asdf",
-      "race": "",
-      "education": "dqwe",
-      "employment": "qwer",
-      "address": "qwer",
-      "phone_number": "234",
-      "medical_history": "sadf",
-      "family_medical_history": "asdf",
-      "surgeries": "asdf",
-      "insurance_provider": "asdf",
-      "userId": "OxtfXFr",
-      "id": 2
-    },
-    {
-      "fName": "Steven",
-      "lName": "adsfsadf",
-      "dob": "2021-10-15",
-      "gender": "female",
-      "ethnicity": "asdf",
-      "race": "",
-      "education": "asdf",
-      "employment": "asdf",
-      "address": "asdf",
-      "phone_number": "234",
-      "medical_history": "adsf",
-      "family_medical_history": "asdf",
-      "surgeries": "asdf",
-      "insurance_provider": "asdfdasf",
-      "userId": "OxtfXFr",
-      "id": 3
-    },
-    {
-      "fName": "asdfds",
-      "lName": "asdfdsf",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "asdfasdf",
-      "race": "",
-      "education": "asdfsadf",
-      "employment": "asdfasdfsdf",
-      "address": "asdfsadfdf",
-      "phone_number": "1234345",
-      "medical_history": "sadfadsf",
-      "family_medical_history": "asdfsdf",
-      "surgeries": "2134234",
-      "insurance_provider": "sadfasdfasdf",
-      "userId": "OxtfXFr",
-      "id": 4
-    },
-    {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "gender": "",
-      "ethnicity": "",
-      "race": "",
-      "education": "",
-      "employment": "",
-      "address": "",
-      "phone_number": "",
-      "medical_history": "",
-      "family_medical_history": "",
-      "surgeries": "",
-      "insurance_provider": "",
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "fName": "Steven",
-      "lName": "Strange",
-      "dob": "2021-10-08",
-      "gender": "male",
-      "ethnicity": "NA",
-      "race": "",
-      "education": "NA",
-      "employment": "NA",
-      "address": "Delhi",
-      "phone_number": "34343422",
-      "medical_history": "NA",
-      "family_medical_history": "NA",
-      "surgeries": "NA",
-      "insurance_provider": "NA",
-      "userId": 5,
-      "id": 6
-    },
-    {
-      "fName": "priya",
-      "lName": "thakur",
-      "dob": "2021-10-06",
-      "gender": "female",
-      "ethnicity": "fggff",
-      "race": "",
-      "education": "fff",
-      "employment": "fff",
-      "address": "ff",
-      "phone_number": "6677",
-      "medical_history": "gggg",
-      "family_medical_history": "gggg",
-      "surgeries": "ggg",
-      "insurance_provider": "ffff",
-      "id": 7
-    },
-    {
-      "fName": "priya",
-      "lName": "thakur",
-      "dob": "2021-10-06",
-      "gender": "female",
-      "ethnicity": "fggff",
-      "race": "",
-      "education": "fff",
-      "employment": "fff",
-      "address": "ff",
-      "phone_number": "6677",
-      "medical_history": "gggg",
-      "family_medical_history": "gggg",
-      "surgeries": "ggg",
-      "insurance_provider": "ffff",
-      "id": 8
-    },
-    {
-      "fName": "priya",
-      "lName": "thakur",
-      "dob": "2021-10-13",
-      "gender": "female",
-      "ethnicity": "na",
-      "race": "",
-      "education": "na",
-      "employment": "na",
-      "address": "na",
-      "phone_number": "76666666",
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "na",
-      "id": 9
-    },
-    {
-      "fName": "",
-      "lName": "f",
-      "dob": "",
-      "gender": "",
-      "ethnicity": "ff",
-      "race": "",
-      "education": "fffff",
-      "employment": "ff",
-      "address": "",
-      "phone_number": "",
-      "medical_history": "",
-      "family_medical_history": "",
-      "surgeries": "",
-      "insurance_provider": "",
-      "id": 10
-    },
-    {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "gender": "",
-      "ethnicity": "",
-      "education": "",
-      "employment": "",
-      "address": "",
-      "phone_number": "",
-      "medical_history": "",
-      "family_medical_history": "",
-      "surgeries": "",
-      "insurance_provider": "",
+      "email": "seema@email.com",
+      "password": "$2a$10$rkvZcFHmpP1BpG2y0xYN.O0n1k.FQ/aaBaZJjwGQi5K2JBuXVatWW",
+      "fName": "seema",
+      "lName": "khanna",
+      "dob": "2021-10-21",
+      "username": "seema",
+      "mobile": "67",
+      "role": "patient",
+      "rpassword": "12345",
+      "blood_group": "o-",
+      "createdDate": "Mon Oct 18 2021 18:47:07 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 11
     },
     {
-      "fName": "na",
-      "lName": "n",
-      "dob": "2021-10-13",
-      "gender": "male",
-      "ethnicity": "na",
-      "education": "ns",
-      "employment": "nj",
-      "address": "nj",
-      "phone_number": 123456789,
-      "medical_history": "nj",
-      "family_medical_history": "ni",
-      "surgeries": "ni",
-      "insurance_provider": "i",
+      "email": "kajal@email.com",
+      "password": "$2a$10$48KfQwwsP7qO2JOdZu06R.1ZVUeOUkD3ztUSbqo9QF2GQQkK6y.12",
+      "fName": "kajal",
+      "lName": "thakur",
+      "dob": "2021-10-20",
+      "username": "kajal",
+      "mobile": "546474",
+      "role": "patient",
+      "rpassword": "12345",
+      "blood_group": "o-",
+      "createdDate": "Tue Oct 19 2021 10:15:56 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 12
     },
     {
-      "fName": "is",
-      "lName": "ij",
-      "dob": "2021-10-21",
-      "gender": "male",
-      "ethnicity": "ij",
-      "education": "ij",
-      "employment": "ij",
-      "address": "ij",
-      "phone_number": 23456,
-      "medical_history": "ij",
-      "family_medical_history": "ij",
-      "surgeries": "ij",
-      "insurance_provider": "ij",
-      "userid": 3,
+      "email": "n@email.com",
+      "password": "$2a$10$1kDN19xGZybc52h3suin/.VdNfchnq1vXuAunWwXSzpCCuoCmsOUC",
       "id": 13
     },
     {
@@ -260,7 +88,9 @@
       "id": 14
     }
   ],
-  "medic_allergy": [
+  
+  
+  "medication_allergies": [
     {
       "id": 1,
       "patient_id": "",
@@ -314,136 +144,6 @@
       "allergyName": "Ajinkya",
       "symptomsofAllergy ": "Ajinkya",
       "direction_to_consume": "Ajinkya"
-    },
-    {
-      "id": "10",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "Turmeric",
-          "dosage": "2"
-        }
-      ]
-    },
-    {
-      "id": "UXItJjQ",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "hu",
-      "dosage": "nh"
-    },
-    {
-      "id": "uz-9Ws_",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "asdf",
-      "dosage": "qwert"
-    },
-    {
-      "id": "xa6RbNw",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "dwddwd",
-      "dosage": "wdwddwdwd"
     }
   ],
   "immunization": [
@@ -478,6 +178,55 @@
       "general_vaccine": "NA",
       "userId": 5,
       "id": "GwKaUWS"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "jhhui",
+      "id": "ZBdyja5"
+    },
+    {
+      "age_category": "",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "jknj",
+      "id": "O4N8Pw1"
+    },
+    {
+      "age_category": "",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "hd",
+      "id": "g0RdcgF"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "",
+      "id": "9CI8q_u"
+    },
+    {
+      "age_category": "",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "hjh",
+      "id": "uVZ0w3W"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "hdjdj",
+      "id": "uw8XJNf"
+    },
+    {
+      "age_category": "",
+      "vaccine_brand": "",
+      "dose_detail": "",
+      "general_vaccine": "hdhf",
+      "id": "8D6h9KG"
     }
   ],
   "appointments": [

@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 import { useHistory } from "react-router";
 import "./common_style.css";
 import { connect } from "react-redux";
@@ -22,7 +22,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { propTypes } from "react-bootstrap/esm/Image";
-import Notification from "../../shared/notification/Notification";
+// import Notification from "../../shared/notification/Notification";
 
 const paperStyle = {
   padding: 20,
@@ -35,23 +35,22 @@ const avatarStyle = { backgroundColor: "#1bbd7e" };
 const btnstyle = { margin: "8px 0" };
 
 const Login = (props) => {
-  // const tempUser = {
-  //   email: "",
-  //   password: "",
-  // };
+  // const [notify, setNotify] = useState({
+  //   isOpen: false,
+  //   message: "",
+  //   type: "",
+  // });
+
+  // setNotify({
+  //   isOpen: true,
+  //   message: "Type message here..",
+  //   type: "success",
+  // });
 
   const initialValues = {
     email: "",
     password: "",
   };
-
-  const [user, setUser] = useState(initialValues);
-
-  const [notify, setNotify] = useState({
-    isOpen: false,
-    message: "",
-    type: "",
-  });
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().email("Please enter valid email").required("Required"),
@@ -59,36 +58,16 @@ const Login = (props) => {
       .required("Required")
       .min(4, "Password should be of minimum 4 characters length"),
   });
+
   const onSubmit = (values) => {
-    //const { ...user } = props
     const payload = { email: values.email, password: values.password };
-    //console.log(payload)
-    //setUser(payload).then(() => setSubmitting(false))
     props.login(payload);
   };
 
   let history = useHistory();
-  // const [user, setUser] = useState(tempUser);
-
-  // const handleUserChange = (e) => {
-  //   const name = e.target.name,
-  //     value = e.target.value;
-  //   setUser({ ...user, [name]: value });
-  // };
-
-  // const submitUserData = (e) => {
-  //   e.preventDefault();
-  //   let newUserData = { ...user };
-  //   props.login(newUserData);
-  // };
 
   useEffect(() => {
     if (props.isLoggedIn === true) {
-      setNotify({
-        isOpen: true,
-        message: `Login Successful..`,
-        type: "success",
-      });
       if (props.role === "admin") {
         history.push("/admin");
       } else if (props.role === "patient") {
@@ -96,8 +75,10 @@ const Login = (props) => {
       } else {
         history.push("/physician");
       }
+    } else {
     }
-  });
+  }, []);
+
   return (
     <>
       <Grid>
@@ -152,16 +133,6 @@ const Login = (props) => {
                   }}
                   helperText={<ErrorMessage name="password" />}
                 />
-                {/* <FormControlLabel
-                        control={
-                        <Checkbox
-                        name="checkedB"
-                        color="primary"
-                      
-                        />
-                        }
-                        label="Remember me"
-                      /> */}
 
                 <Button
                   type="submit"
@@ -175,20 +146,11 @@ const Login = (props) => {
               </Form>
             )}
           </Formik>
-          {/* <Typography >
-                     <Link to="#" >
-                       Forgot password ?
-                     </Link>
-                  </Typography> */}
-
           <Typography> Do you have an account ?</Typography>
-          {/* <Link to ="/registeruser" >
-                          Sign Up 
-                      </Link> */}
           <a href="/registeruser">Sign Up</a>
         </Paper>
+        {/* <Notification notify={notify} setNotify={setNotify} /> */}
       </Grid>
-      <Notification notify={notify} setNotify={setNotify} />
     </>
   );
 };
