@@ -69,7 +69,7 @@ function DoctorsCard() {
       
       <Container maxWidth="lg" className={classes.blogsContainer}>
         <Typography variant="h4" className={classes.blogTitle}>
-          Our Specialities
+          
         </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>

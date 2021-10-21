@@ -17,6 +17,8 @@ import "react-calendar/dist/Calendar.css";
 import { connect } from "react-redux";
 
 import PatientList from "../components/admin/PatientList";
+import PatientList1 from "../components/physician/PatientData";
+import PatientDemographics from "../components/physician/PatientDemographics";
 import PhysicianList from "../components/admin/PhysicianList";
 import Appointments from "../components/admin/Appointments";
 import ImmunizationDetails from "../components/admin/ImmunizationDetails";
@@ -26,7 +28,7 @@ import UserList from "../components/admin/Userslist";
 
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
-import Notification from "../shared/notification/Notification";
+import MyProfile from "./patient/MyProfile";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -49,16 +51,8 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export const UserContext = React.createContext();
-
 function ShellComponent(props) {
   const classes = useStyles();
-
-  const [notify, setNotify] = useState({
-    isOpen: false,
-    message: "",
-    type: "",
-  });
 
   return (
     <>
@@ -73,6 +67,7 @@ function ShellComponent(props) {
 
         <Route path="/demographics" component={Demographics} />
         <Route path="/immunization" component={Immunization} />
+        <Route path="/myprofile" component={MyProfile} />
         <Route path="/medic_allergy" component={Medication_Allergies} />
         {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
@@ -88,6 +83,8 @@ function ShellComponent(props) {
         <Route path={"/userdetails/:id"} component={UserDetails} />
         <Route path={"/edit/:id"} component={EditUser} />
         {/* *****Admin Routes***** */}
+        <Route path={"/patientdata"} component={PatientList1} />
+        <Route path={"/patientdemographics"} component={PatientDemographics} />
       </Switch>
     </>
   );

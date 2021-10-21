@@ -13,7 +13,9 @@ export const ADD_USER = "http://localhost:9999/register";
 export const USER = "http://localhost:9999/users/";
 export const GET_PATIENTS = "http://localhost:9999/users?role=patient";
 export const GET_USER_DETAILS = "http://localhost:9999/users";
+export const GET_DEMOGRAPHICS_DETAILS = "http://localhost:9999/demographics/userId"
 
+export const GET_DEMOGRAPHICS = "http://localhost:9999/demographics";
 export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false"
 
 

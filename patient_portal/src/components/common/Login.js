@@ -22,8 +22,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { propTypes } from "react-bootstrap/esm/Image";
-import Notification from "../../shared/notification/Notification";
-import { UserContext } from "../ShellComponent";
+// import Notification from "../../shared/notification/Notification";
 
 const paperStyle = {
   padding: 20,
@@ -36,8 +35,18 @@ const avatarStyle = { backgroundColor: "#1bbd7e" };
 const btnstyle = { margin: "8px 0" };
 
 const Login = (props) => {
-  const user = useContext(UserContext);
-  console.log(user);
+  // const [notify, setNotify] = useState({
+  //   isOpen: false,
+  //   message: "",
+  //   type: "",
+  // });
+
+  // setNotify({
+  //   isOpen: true,
+  //   message: "Type message here..",
+  //   type: "success",
+  // });
+
   const initialValues = {
     email: "",
     password: "",
@@ -49,6 +58,7 @@ const Login = (props) => {
       .required("Required")
       .min(4, "Password should be of minimum 4 characters length"),
   });
+
   const onSubmit = (values) => {
     const payload = { email: values.email, password: values.password };
     props.login(payload);
@@ -58,11 +68,6 @@ const Login = (props) => {
 
   useEffect(() => {
     if (props.isLoggedIn === true) {
-      user.setNotify({
-        isOpen: true,
-        message: "This is Working fine",
-        type: "success",
-      });
       if (props.role === "admin") {
         history.push("/admin");
       } else if (props.role === "patient") {
@@ -73,6 +78,7 @@ const Login = (props) => {
     } else {
     }
   }, []);
+
   return (
     <>
       <Grid>
@@ -143,6 +149,7 @@ const Login = (props) => {
           <Typography> Do you have an account ?</Typography>
           <a href="/registeruser">Sign Up</a>
         </Paper>
+        {/* <Notification notify={notify} setNotify={setNotify} /> */}
       </Grid>
     </>
   );
