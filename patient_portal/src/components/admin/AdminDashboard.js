@@ -44,22 +44,11 @@ const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
 
-  // const [notify, setNotify] = useState({
-  //   isOpen: false,
-  //   message: "",
-  //   type: "",
-  // });
 
   useEffect(() => {
     props.getallphysiciandata();
     props.getalluserdata();
     props.getAllPatients();
-
-    // setNotify({
-    //   isOpen: true,
-    //   message: "Type message here..",
-    //   type: "success",
-    // });
   }, []);
 
   const data = {

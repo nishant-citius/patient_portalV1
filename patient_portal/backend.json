@@ -14,6 +14,87 @@
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 1
+    },
+    {
+      "email": "aj@email.com",
+      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
+      "fName": "Ajinkya",
+      "lName": "Pathak",
+      "dob": "2021-09-30",
+      "username": "aj@email.com",
+      "rpassword": "12345",
+      "mobile": 9403541779,
+      "blood_group": "b+ve",
+      "role": "admin",
+      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 2
+    },
+    {
+      "email": "donald@email.com",
+      "password": "$2a$10$Fa.JfjLQYuc/ZDZZSdyYkOy.Nrn3UF/DvaciequyLTvPC9JynxuAq",
+      "fName": "Donald",
+      "lName": "Trump",
+      "dob": "2021-09-27",
+      "username": "Donald Duck",
+      "rpassword": "12345",
+      "mobile": 9876543211,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 22:45:49 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 3
+    },
+    {
+      "isAcive": true,
+      "email": "pd@email.com",
+      "password": "$2a$10$lJZUPkC4ZngMIegFA4y8heO0zhGovTnej8ucNUqXSZH3gENagMNCO",
+      "id": 4
+    },
+    {
+      "email": "qwerty@email.com",
+      "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
+      "fName": "Qwert",
+      "lName": "qwetrt",
+      "dob": "2021-09-28",
+      "username": "qwerty",
+      "rpassword": "12345",
+      "mobile": 1234567890,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 5
+    },
+    {
+      "email": "ms@email.com",
+      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
+      "fName": "Manya ",
+      "lName": "Surve",
+      "dob": "2021-09-30",
+      "username": "Mumbai ka king",
+      "rpassword": "12345",
+      "mobile": 1234567899,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 6
+    },
+    {
+      "email": "kk@email.com",
+      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
+      "fName": "Kishore ",
+      "lName": "Kumar",
+      "dob": "2021-09-27",
+      "username": "Kishore Bhai",
+      "rpassword": "12345",
+      "mobile": 2345234534,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 7
     }
   ],
   "demographics": [
@@ -36,57 +117,64 @@
       "id": 1
     },
     {
+      "email": "aj@email.com",
+      "password": "$2a$10$pCD4APZjLMDKqAEtmML/VOM8ZwXlUltpzUDJ5yI8CK1B6MO7L0qTa",
       "fName": "Steven",
-      "lName": "Morhson",
-      "dob": "2021-10-15",
-      "gender": "female",
-      "ethnicity": "asdf",
-      "race": "",
-      "education": "dqwe",
-      "employment": "qwer",
-      "address": "qwer",
-      "phone_number": "234",
-      "medical_history": "sadf",
-      "family_medical_history": "asdf",
-      "surgeries": "asdf",
-      "insurance_provider": "asdf",
-      "userId": "OxtfXFr",
+      "lName": "Strange",
+      "dob": "2021-09-29",
+      "username": "steve",
+      "mobile": "9955641258",
+      "role": "admin",
+      "rpassword": "12345",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 12:58:37 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 2
     },
     {
+      "email": "ajinkya@email.com",
+      "password": "$2a$10$11xhGyGMsrhMny0TUHHxje24D6mATcLbpiBDMcq717cYsuJi1MP2e",
       "fName": "Steven",
-      "lName": "adsfsadf",
-      "dob": "2021-10-15",
-      "gender": "female",
-      "ethnicity": "asdf",
-      "race": "",
-      "education": "asdf",
-      "employment": "asdf",
-      "address": "asdf",
-      "phone_number": "234",
-      "medical_history": "adsf",
-      "family_medical_history": "asdf",
-      "surgeries": "asdf",
-      "insurance_provider": "asdfdasf",
-      "userId": "OxtfXFr",
+      "lName": "Cold",
+      "dob": "2021-09-28",
+      "username": "StoneCold",
+      "mobile": "9921695918",
+      "role": "patient",
+      "rpassword": "12345",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 13:23:31 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 3
     },
     {
-      "fName": "asdfds",
-      "lName": "asdfdsf",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "asdfasdf",
-      "race": "",
-      "education": "asdfsadf",
-      "employment": "asdfasdfsdf",
-      "address": "asdfsadfdf",
-      "phone_number": "1234345",
-      "medical_history": "sadfadsf",
-      "family_medical_history": "asdfsdf",
-      "surgeries": "2134234",
-      "insurance_provider": "sadfasdfasdf",
-      "userId": "OxtfXFr",
+      "email": "sc@email.com",
+      "password": "$2a$10$CogcfzLqmq0Pi0RaVrkzX.XT1sfPvz.PBXZWUFdBk.so7MQU0GcHm",
+      "fName": "Supriya",
+      "lName": "Kulkarni",
+      "dob": "2021-08-30",
+      "username": "pooja@email.com",
+      "mobile": "9556644852",
+      "role": "physician",
+      "rpassword": "asdf",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 20,
+      "speciality": "Heart Surgeon"
+    },
+    {
+      "email": "user_1@email.com",
+      "password": "$2a$10$fOk8elXRELfDBsmoq7mx8eAz/OElnT3calTVCVGIxCMgKuulbmMJ2",
+      "fName": "Shital",
+      "lName": "Mane",
+      "dob": "2021-09-27",
+      "username": "Shital",
+      "mobile": "9556644852",
+      "role": "physician",
+      "rpassword": "asdf",
+      "blood_group": "B Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 4
     },
     {
@@ -260,355 +348,7 @@
       "id": 14
     }
   ],
-  "medic_allergy": [
-    {
-      "id": 1,
-      "patient_id": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "Ajinkya",
-      "dosage": "Ajinkya",
-      "directionstoconsume": "Ajinkya",
-      "frequency": "Ajinkya",
-      "physicianName ": "Ajinkya",
-      "purpose": "Ajinkya",
-      "startDate": "2021-09-30",
-      "endDate": "2021-09-27",
-      "otcDrugName": "Ajinkya",
-      "strength": "Ajinkya",
-      "directiontoconsumedosage": "Ajinkya",
-      "socialDrugs: ": "smoke",
-      "drugName": "Ajinkya",
-      "allergyName": "Ajinkya",
-      "symptomsofAllergy ": "Ajinkya",
-      "direction_to_consume": "Ajinkya"
-    },
-    {
-      "id": "10",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "Turmeric",
-          "dosage": "2"
-        }
-      ]
-    },
-    {
-      "id": "UXItJjQ",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "hu",
-      "dosage": "nh"
-    },
-    {
-      "id": "uz-9Ws_",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "asdf",
-      "dosage": "qwert"
-    },
-    {
-      "id": "xa6RbNw",
-      "userId": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "dwddwd",
-      "dosage": "wdwddwdwd"
-    },
-    {
-      "userid": 1,
-      "current_medication": {
-        "medicineName": "",
-        "dosage": "",
-        "directionstoconsume": "",
-        "frequency": "",
-        "physicianName": "",
-        "purpose": "",
-        "startDate": "",
-        "endDate": ""
-      },
-      "otc_medication": {
-        "otcDrugName": "",
-        "strength": "",
-        "directiontoconsume": "",
-        "socialDrugs": ""
-      },
-      "past_medication": {
-        "pastdrugName": "",
-        "strength": "",
-        "directiontoconsume": ""
-      },
-      "allergies": {
-        "allergyName": "",
-        "symptomsofAllergy": "",
-        "drugAllergy": ""
-      },
-      "id": "o4RhxTW"
-    },
-    {
-      "userid": 1,
-      "current_medication": {
-        "medicineName": "",
-        "dosage": "",
-        "directionstoconsume": "",
-        "frequency": "",
-        "physicianName": "",
-        "purpose": "",
-        "startDate": "",
-        "endDate": ""
-      },
-      "otc_medication": {
-        "otcDrugName": "",
-        "strength": "",
-        "directiontoconsume": "",
-        "socialDrugs": ""
-      },
-      "past_medication": {
-        "pastdrugName": "",
-        "strength": "",
-        "directiontoconsume": ""
-      },
-      "allergies": {
-        "allergyName": "",
-        "symptomsofAllergy": "",
-        "drugAllergy": ""
-      },
-      "id": "gOvdsdG"
-    },
-    {
-      "userid": 1,
-      "current_medication": {
-        "medicineName": "",
-        "dosage": "",
-        "directionstoconsume": "",
-        "frequency": "",
-        "physicianName": "",
-        "purpose": "",
-        "startDate": "",
-        "endDate": ""
-      },
-      "otc_medication": {
-        "otcDrugName": "",
-        "strength": "",
-        "directiontoconsume": "",
-        "socialDrugs": ""
-      },
-      "past_medication": {
-        "pastdrugName": "",
-        "strength": "",
-        "directiontoconsume": ""
-      },
-      "allergies": {
-        "allergyName": "",
-        "symptomsofAllergy": "",
-        "drugAllergy": ""
-      },
-      "id": "sKGksnw"
-    },
-    {
-      "userid": 1,
-      "current_medication": {
-        "medicineName": "",
-        "dosage": "",
-        "directionstoconsume": "",
-        "frequency": "",
-        "physicianName": "",
-        "purpose": "",
-        "startDate": "",
-        "endDate": ""
-      },
-      "id": "ebV-OvC"
-    },
-    {
-      "userid": 1,
-      "current_medication": {
-        "medicineName": "sasdad",
-        "dosage": "dasdasd",
-        "directionstoconsume": "sadsadad",
-        "frequency": "",
-        "physicianName": "",
-        "purpose": "sadasdads",
-        "startDate": "",
-        "endDate": ""
-      },
-      "otc_medication": {
-        "otcDrugName": "",
-        "strength": "",
-        "directiontoconsume": "",
-        "socialDrugs": ""
-      },
-      "past_medication": {
-        "pastdrugName": "",
-        "strength": "",
-        "directiontoconsume": ""
-      },
-      "allergies": {
-        "allergyName": "",
-        "symptomsofAllergy": "",
-        "drugAllergy": ""
-      },
-      "id": "3m9MPVx"
-    },
-    {
-      "userid": 1,
-      "current_medication": {
-        "medicineName": "nishant",
-        "dosage": "nj",
-        "directionstoconsume": "nj",
-        "frequency": "nj",
-        "physicianName": "",
-        "purpose": "nj",
-        "startDate": "2021-09-29",
-        "endDate": "2021-09-30"
-      },
-      "otc_medication": {
-        "strength": "nj",
-        "directiontoconsume": "nj",
-        "socialDrugs": ""
-      },
-      "past_medication": {
-        "pastdrugName": "nj",
-        "strength": "nj",
-        "directiontoconsume": "nj"
-      },
-      "allergies": {
-        "allergyName": "nj",
-        "symptomsofAllergy": "",
-        "drugAllergy": "nj"
-      },
-      "id": "Z7XpfXu"
-    }
-  ],
+  "medic_allergy": [],
   "immunization": [
     {
       "id": "",
@@ -705,6 +445,23 @@
       "AllergenSource": "Bos taurus",
       "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 3",
       "Allerginicity": "IgE but no biological test"
+    }
+  ],
+  "requests": [
+    {
+      "id": 25,
+      "email": "ajinky@email.com",
+      "isActive": false
+    },
+    {
+      "id": "rahul@email.com",
+      "email": "rahul@email.com",
+      "isActive": true
+    },
+    {
+      "id": "manij@email.com",
+      "email": "manij@email.com",
+      "isActive": true
     }
   ]
 }

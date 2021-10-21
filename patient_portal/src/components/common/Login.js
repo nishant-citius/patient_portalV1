@@ -58,11 +58,7 @@ const Login = (props) => {
       if (props.role === "admin") {
         history.push("/admin");
       } else if (props.role === "patient") {
-        /**
-         * check patient status
-         */
         patientStatus();
-        history.push("/demographics");
       } else {
         history.push("/physician");
       }
@@ -71,9 +67,9 @@ const Login = (props) => {
 
   const patientStatus = () => {
     if (props.currentUser.isActive) {
-      alert("Patient is Active...");
+      history.push("/demographics");
     } else {
-      alert("Patient Inactive...");
+      history.push("/patientinactive");
     }
   };
 

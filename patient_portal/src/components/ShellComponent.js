@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
-import { Container } from "../mui";
-import CardComponent from "./CardComponent";
-import { Button } from "../mui";
+
 import PatientPortalHome from "../components/common/PatientPortalHome";
 import { Switch, Route } from "react-router-dom";
 import Login from "../components/common/Login";
@@ -11,6 +9,8 @@ import AdminDashboard from "../components/admin/AdminDashboard";
 import Patient_dashboard from "../components/patient/Patient_dashboard";
 import Physician_dashboard from "../components/physician/Physician_dashboard";
 import Demographics from "../components/patient/Demographics";
+import PatientInactiveError from '../components/patient/PatientInactiveError'
+
 import Immunization from "../components/patient/Immunization";
 import Medication_Allergies from "../components/patient/Medication_Allergies";
 import "react-calendar/dist/Calendar.css";
@@ -36,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// calling states data
 const mapStateToProps = (rootReducer) => {
   return {
     isLoggedIn: rootReducer.login.isLoggedIn,
@@ -73,7 +72,6 @@ function ShellComponent(props) {
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
 
-        {/* *****Admin Routes***** */}
         <Route path={"/patientlist"} component={PatientList} />
         <Route path={"/allusers"} component={UserList} />
         <Route path={"/addusers"} component={AddUsers} />
@@ -82,10 +80,10 @@ function ShellComponent(props) {
         <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
         <Route path={"/userdetails/:id"} component={UserDetails} />
         <Route path={"/edit/:id"} component={EditUser} />
-        {/* *****Admin Routes***** */}
 
         <Route path={"/patientdata"} component={PatientList1} />
         <Route path={"/patientdemographics"} component={PatientDemographics} />
+        <Route path={"/patientinactive"} component={PatientInactiveError} />
       </Switch>
     </div>
   );

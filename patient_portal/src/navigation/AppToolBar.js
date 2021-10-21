@@ -28,6 +28,7 @@ const mapStateToProps = (rootReducer) => {
     isLoggedIn: rootReducer.login.isLoggedIn,
     role: rootReducer.login.role,
     authToken: rootReducer.login.authToken,
+    currentUser: rootReducer.login.loggedUserInfo,
   };
 };
 
@@ -149,8 +150,8 @@ function AppToolBar(props) {
   return (
     <AppBar position="fixed">
       <ToolBar className={classes.toolbar}>
-        <h3 className={classes.desktop}>Patient Management System</h3>
-        <h3 className={classes.mobile}>PMS</h3>
+        <h3 className={classes.desktop}>Patient Portal</h3>
+        <h3 className={classes.mobile}>P.P.</h3>
 
         {props.isLoggedIn === false ? (
           <>
@@ -195,7 +196,7 @@ function AppToolBar(props) {
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
                 onClick={HandleClick}
-                alt="Karthikeyan"
+                alt={props.currentUser.fName}
                 src="/images/user.png"
               />
               <Menu
