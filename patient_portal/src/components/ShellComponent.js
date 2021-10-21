@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import { Container } from "../mui";
 import CardComponent from "./CardComponent";
@@ -26,12 +26,14 @@ import UserList from "../components/admin/Userslist";
 
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
+import Notification from "../shared/notification/Notification";
 
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(10),
   },
 }));
+
 // calling states data
 const mapStateToProps = (rootReducer) => {
   return {
@@ -47,36 +49,47 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
+export const UserContext = React.createContext();
+
 function ShellComponent(props) {
   const classes = useStyles();
+
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: "",
+    type: "",
+  });
+
   return (
-    <Switch>
-      <Route exact path="/" component={PatientPortalHome} />
-      <Route path="/login" component={Login} />
-      <Route path="/registeruser" component={RegisterUser} />
+    <>
+      <Switch>
+        <Route exact path="/" component={PatientPortalHome} />
+        <Route path="/login" component={Login} />
+        <Route path="/registeruser" component={RegisterUser} />
 
-      <Route path="/admin" component={AdminDashboard} />
-      <Route path="/patient" component={Patient_dashboard} />
-      <Route path="/physician" component={Physician_dashboard} />
+        <Route path="/admin" component={AdminDashboard} />
+        <Route path="/patient" component={Patient_dashboard} />
+        <Route path="/physician" component={Physician_dashboard} />
 
-      <Route path="/demographics" component={Demographics} />
-      <Route path="/immunization" component={Immunization} />
-      <Route path="/medic_allergy" component={Medication_Allergies} />
-      {/* <Route path="/about" component={About} />
+        <Route path="/demographics" component={Demographics} />
+        <Route path="/immunization" component={Immunization} />
+        <Route path="/medic_allergy" component={Medication_Allergies} />
+        {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
 
-      {/* *****Admin Routes***** */}
-      <Route path={"/patientlist"} component={PatientList} />
-      <Route path={"/allusers"} component={UserList} />
-      <Route path={"/addusers"} component={AddUsers} />
-      <Route path={"/physicianlist"} component={PhysicianList} />
-      <Route path={"/appointments"} component={Appointments} />
-      <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
-      <Route path={"/userdetails/:id"} component={UserDetails} />
-      <Route path={"/edit/:id"} component={EditUser} />
-      {/* *****Admin Routes***** */}
-    </Switch>
+        {/* *****Admin Routes***** */}
+        <Route path={"/patientlist"} component={PatientList} />
+        <Route path={"/allusers"} component={UserList} />
+        <Route path={"/addusers"} component={AddUsers} />
+        <Route path={"/physicianlist"} component={PhysicianList} />
+        <Route path={"/appointments"} component={Appointments} />
+        <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
+        <Route path={"/userdetails/:id"} component={UserDetails} />
+        <Route path={"/edit/:id"} component={EditUser} />
+        {/* *****Admin Routes***** */}
+      </Switch>
+    </>
   );
 }
 
