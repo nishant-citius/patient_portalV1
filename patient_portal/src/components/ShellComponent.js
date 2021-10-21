@@ -55,7 +55,7 @@ function ShellComponent(props) {
   const classes = useStyles();
 
   return (
-    <>
+    <div className="top_mt_100">
       <Switch>
         <Route exact path="/" component={PatientPortalHome} />
         <Route path="/login" component={Login} />
@@ -83,10 +83,11 @@ function ShellComponent(props) {
         <Route path={"/userdetails/:id"} component={UserDetails} />
         <Route path={"/edit/:id"} component={EditUser} />
         {/* *****Admin Routes***** */}
+
         <Route path={"/patientdata"} component={PatientList1} />
         <Route path={"/patientdemographics"} component={PatientDemographics} />
       </Switch>
-    </>
+    </div>
   );
 }
 

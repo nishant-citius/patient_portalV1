@@ -13,4 +13,9 @@ export { default as PermContactCalendarIcon } from "@material-ui/icons/PermConta
 export { default as ReceiptIcon } from "@material-ui/icons/Receipt";
 export { default as DetailsIcon } from "@material-ui/icons/Details";
 export { default as ContactPhoneIcon } from "@material-ui/icons/ContactPhone";
+export { default as NoteAddIcon } from "@material-ui/icons/NoteAdd";
+export { default as GroupAddIcon } from "@material-ui/icons/GroupAdd";
+export { default as BorderColorIcon } from "@material-ui/icons/BorderColor";
+export { default as SchoolIcon } from "@material-ui/icons/School";
+export { default as TextsmsIcon } from "@material-ui/icons/Textsms";
 export { default as AccessTimeOutlined } from "@material-ui/icons/AccessTimeOutlined";
