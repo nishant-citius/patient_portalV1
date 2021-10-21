@@ -14,4 +14,11 @@ export const ADD_USER = "ADD_USER";
 export const GET_ALL_USERS = "GET_ALL_USERS";
 export const UPDATE_USER = "UPDATE_USER";
 export const GET_USER = "GET_USER";
+<<<<<<< HEAD
 export const GET_DEMOGRAPHICS ="GET_DEMOGRAPHICS";
+=======
+
+export const GET_INACTIVE_USERS = "GET_INACTIVE_USERS";
+
+
+>>>>>>> 8ed223fbf2039ca13ab8c6c0114da2f10f2c8261
