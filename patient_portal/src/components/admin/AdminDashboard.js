@@ -1,12 +1,21 @@
-import { React, Link, useEffect } from "react";
+import { React, Link, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import "./admin.css";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-import { Container, Card, Grid, Typography, Button } from "mui";
+import {
+  Container,
+  Card,
+  Grid,
+  Typography,
+  Button,
+  Avatar,
+  CardHeader,
+  IconButton,
+} from "mui";
 import { CardActionArea, CardActions } from "mui";
 import { CardContent } from "mui";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "mui";
 import { Line } from "react-chartjs-2";
 import {
   GroupAddIcon,
@@ -15,6 +24,7 @@ import {
   BorderColorIcon,
   NoteAddIcon,
   TextsmsIcon,
+  MoreVertIcon,
 } from "mui-icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -144,11 +154,16 @@ const AdminDashboard = (props) => {
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>
             <Card className={classes.detaildiv}>
-              <CardContent>
-                <Typography variant="subtitle1" className="mb-0 fw-bold">
-                  Hospital Status
-                </Typography>
-              </CardContent>
+              <CardHeader
+                avatar={<Avatar aria-label="recipe">R</Avatar>}
+                action={
+                  <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title="Shrimp and Chorizo Paella"
+                subheader="September 14, 2016"
+              />
               <CardActionArea></CardActionArea>
             </Card>
           </Grid>

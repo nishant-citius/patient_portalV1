@@ -12,6 +12,8 @@ export { default as Card } from "@material-ui/core/Card";
 export { default as CardActionArea } from "@material-ui/core/CardActionArea";
 export { default as CardActions } from "@material-ui/core/CardActions";
 export { default as CardContent } from "@material-ui/core/CardContent";
+export { default as CardHeader } from "@material-ui/core/CardHeader";
+export { default as IconButton } from "@material-ui/core/IconButton";
 export { default as SnackBar } from "@material-ui/core/SnackBar";
 export { default as Menu } from "@material-ui/core/Menu";
 export { default as MenuItem } from "@material-ui/core/MenuItem";
@@ -28,6 +30,5 @@ export { default as ListItemText } from "@material-ui/core/ListItemText";
 
 export { default as makeStyles } from "@material-ui/styles/makeStyles";
 export { default as Alert } from "@material-ui/lab/Alert";
-
 
 // export {default as CardMedia} from '@material-ui/core/CardMedia';
