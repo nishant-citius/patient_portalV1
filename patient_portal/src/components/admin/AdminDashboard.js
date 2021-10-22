@@ -44,11 +44,20 @@ const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
 
+  function showToaster() {
+    let _object = {
+      message: "This is Test..",
+      type: "success",
+    };
+
+    props.flashNotification(_object);
+  }
 
   useEffect(() => {
     props.getallphysiciandata();
     props.getalluserdata();
     props.getAllPatients();
+    props.getInactiveUsers();
   }, []);
 
   const data = {
@@ -240,6 +249,7 @@ const mapStatetoProps = (state) => {
     users: state.getallusers.users,
     physicians: state.physicians.physicians,
     patients: state.patients.patients,
+    inactiveUsers: state.inactiveUsers.inactiveUsers,
   };
 };
 const mapDispatchToProps = (dispatch) => {
@@ -247,6 +257,7 @@ const mapDispatchToProps = (dispatch) => {
     getallphysiciandata: () => dispatch(actionCreator.GetAllPhysicianData()),
     getalluserdata: () => dispatch(actionCreator.GetAllUserData()),
     getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
+    getInactiveUsers: () => dispatch(actionCreator.GetInactiveUsers()),
   };
 };
 
