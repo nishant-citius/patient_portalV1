@@ -25,7 +25,6 @@ import {
   WorkOutline,
 } from "@material-ui/icons";
 
-
 const useStyles = makeStyles((theme) => ({
   container: {
     height: "100vh",
@@ -67,11 +66,17 @@ const useStyles = makeStyles((theme) => ({
   headerText: {
     fontSize: "18px",
     marginBottom: "5px",
-    color: "#a9baca",
+    color: "#000000",
+    textAlign: "center",
     fontWeight: "bold",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+  },
+  HeaderColor: {
+    background: "#fff",
+    borderRadius: "3px",
+    padding: "5px",
   },
 }));
 
@@ -94,7 +99,12 @@ function SideNav(props) {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
-      <h5 className={classes.headerText}>Welcome {props.currentUser.fName}</h5>
+      <div className={classes.HeaderColor}>
+        <h5 className={classes.headerText}>
+          Welcome {props.currentUser.fName}
+        </h5>
+      </div>
+
       {
         // Admin Menu====================================================================================
         props.role === "admin" ? (
