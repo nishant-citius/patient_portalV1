@@ -91,7 +91,9 @@ function ShellComponent(props) {
         <Route path="/patient" component={Patient_dashboard} />
         <Route path="/physician" component={Physician_dashboard} />
 
-        <Route path="/demographics" component={Demographics} />
+        <Route path="/demographics" component={Demographics}>
+        <Demographics flashNotification={showSnacksBar}/>
+        </Route>
         <Route path="/immunization" component={Immunization} />
         <Route path="/myprofile" component={MyProfile} />
         <Route path="/medic_allergy" component={Medication_Allergies} />

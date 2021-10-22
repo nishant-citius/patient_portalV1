@@ -168,6 +168,10 @@ const mapStatetoProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     login: (user) => dispatch(actionCreator.Login(user)),
+
+    getDemographicsStatus: (userId) => {
+      return dispatch(actionCreator.GetPatientDemographics(userId));
+    },
   };
 };
 

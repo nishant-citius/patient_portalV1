@@ -5,7 +5,8 @@ export function PatientDemographicsReducer(state = appState, action) {
   if (action.type === actions.GET_DEMOGRAPHICS) {
     return {
       globalmessage: action.payload.globalmessage,
-      demographics: action.payload.demographics,
+      userDemographics: action.payload.userDemographics,
+      statusCode: action.payload.statusCode,
     };
   }
 
