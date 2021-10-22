@@ -9,7 +9,7 @@ import AdminDashboard from "../components/admin/AdminDashboard";
 import Patient_dashboard from "../components/patient/Patient_dashboard";
 import Physician_dashboard from "../components/physician/Physician_dashboard";
 import Demographics from "../components/patient/Demographics";
-import PatientInactiveError from '../components/patient/PatientInactiveError'
+import PatientInactiveError from "../components/patient/PatientInactiveError";
 
 import Immunization from "../components/patient/Immunization";
 import Medication_Allergies from "../components/patient/Medication_Allergies";
@@ -29,6 +29,8 @@ import UserList from "../components/admin/Userslist";
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
 import MyProfile from "./patient/MyProfile";
+import Notification from "shared/notification/Notification";
+import { object } from "yup/lib/locale";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -53,14 +55,39 @@ const mapDispatchToProps = (dispatch) => {
 function ShellComponent(props) {
   const classes = useStyles();
 
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: "",
+    type: "",
+  });
+
+  const showSnacksBar = (_object) => {
+    setNotify({
+      isOpen: true,
+      message: _object.message,
+      type: _object.type,
+    });
+  };
+
   return (
     <div className="top_mt_100">
+      <Notification notify={notify} setNotify={setNotify} />
       <Switch>
         <Route exact path="/" component={PatientPortalHome} />
-        <Route path="/login" component={Login} />
-        <Route path="/registeruser" component={RegisterUser} />
+        <Route path="/login">
+          <Login flashNotification={showSnacksBar} />
+        </Route>
 
-        <Route path="/admin" component={AdminDashboard} />
+        <Route path="/registeruser">
+          <RegisterUser flashNotification={showSnacksBar} />
+        </Route>
+
+        {/* <Route path="/admin" component={AdminDashboard} /> */}
+
+        <Route path="/admin">
+          <AdminDashboard flashNotification={showSnacksBar} />
+        </Route>
+
         <Route path="/patient" component={Patient_dashboard} />
         <Route path="/physician" component={Physician_dashboard} />
 

@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "nc@email.com",
-      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
+      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -32,7 +32,7 @@
     },
     {
       "email": "donald@email.com",
-      "password": "$2a$10$Fa.JfjLQYuc/ZDZZSdyYkOy.Nrn3UF/DvaciequyLTvPC9JynxuAq",
+      "password": "$2a$10$s7veQe9hm1Xg9jXPLiGMg..Xa0VzP/aSvM4G.OVXVqvQGwNSa9cLK",
       "fName": "Donald",
       "lName": "Trump",
       "dob": "2021-09-27",
@@ -46,12 +46,6 @@
       "id": 3
     },
     {
-      "isAcive": true,
-      "email": "pd@email.com",
-      "password": "$2a$10$lJZUPkC4ZngMIegFA4y8heO0zhGovTnej8ucNUqXSZH3gENagMNCO",
-      "id": 4
-    },
-    {
       "email": "qwerty@email.com",
       "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
       "fName": "Qwert",
@@ -63,7 +57,7 @@
       "blood_group": "o-",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 5
     },
     {
@@ -78,7 +72,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 6
     },
     {
@@ -93,8 +87,38 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 7
+    },
+    {
+      "email": "jr@email.com",
+      "password": "$2a$10$YIR.mOnyV0jxU/yx8e5WLe8pF/SN9ow5tH0tYg2mHI4.FuByoT38W",
+      "fName": "Jagruti",
+      "lName": "Ranbhor",
+      "dob": "2021-09-29",
+      "username": "jagu",
+      "rpassword": "12345",
+      "mobile": 1234567890,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Fri Oct 22 2021 00:07:07 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 8
+    },
+    {
+      "email": "ajju@email.com",
+      "password": "$2a$10$Z6VZRPVos52Vz7Q1eB1gqOXu4lGf0Y8Ylki3LkZ5rsOLw9fzfbYXK",
+      "fName": "Ajju ",
+      "lName": "Bhai",
+      "dob": "2021-09-27",
+      "username": "ajju@email.com",
+      "rpassword": "12345",
+      "mobile": 1234567890,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Fri Oct 22 2021 00:15:07 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 9
     }
   ],
   "demographics": [
@@ -128,7 +152,7 @@
       "rpassword": "12345",
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 12:58:37 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 2
     },
     {
@@ -143,7 +167,7 @@
       "rpassword": "12345",
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:23:31 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 3
     },
     {
@@ -158,7 +182,7 @@
       "rpassword": "asdf",
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 20,
       "speciality": "Heart Surgeon"
     },
@@ -174,7 +198,7 @@
       "rpassword": "asdf",
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 4
     },
     {
