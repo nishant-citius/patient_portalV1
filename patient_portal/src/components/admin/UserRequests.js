@@ -20,9 +20,9 @@ const UserRequests = (props) => {
   }, [])
 
   function fetchAllUsers() {
-    props.getalluserdata()
-    props.getInactiveUsersData()
-    setUsers(inactiveUsersList())
+    // props.getalluserdata()
+    // props.getInactiveUsersData()
+    setUsers(inactiveUsersList());
   }
 
   const inactiveUsersList = () => {
