@@ -7,15 +7,15 @@ import {
   Container,
   Card,
   Grid,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  makeStyles,
   Typography,
-  Button,
-  Avatar,
-  CardHeader,
-  IconButton,
+  ImageList,
+  ImageListItem,
+  ImageListItemBar,
 } from "mui";
-import { CardActionArea, CardActions } from "mui";
-import { CardContent } from "mui";
-import { makeStyles } from "mui";
 import { Line } from "react-chartjs-2";
 import {
   GroupAddIcon,
@@ -24,13 +24,9 @@ import {
   BorderColorIcon,
   NoteAddIcon,
   TextsmsIcon,
-  MoreVertIcon,
 } from "mui-icons";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    marginTop: "50px",
-  },
   gridcontainer: {
     background: "#f50057",
     color: "#fff",
@@ -42,18 +38,15 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     maxWidth: "700px",
   },
-  detaildiv: {
-    minHeight: "220px",
-  },
-  cardsheight: {
-    minHeight: "110px",
+  imagelistbar: {
+    backgroundColor: "#3f51b5",
+    opacity: "50%",
   },
 }));
 
 const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
-
 
   useEffect(() => {
     props.getallphysiciandata();
@@ -106,6 +99,33 @@ const AdminDashboard = (props) => {
       ],
     },
   };
+
+  const itemData = [
+    {
+      img: "https://www.seekpng.com/png/detail/266-2667175_goqii-doctor-is-a-qualified-physician-mbbs-md.png",
+      title: "Dr. ABC",
+      author: "Surgen",
+      rows: 2,
+      cols: 2,
+      featured: true,
+    },
+    {
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRThpybZHlYukfV1VjLMx-99iYSoPPEM97jKgMCMNIDcAUKto59hV2xVk543gQVmt6pD70&usqp=CAU",
+      title: "Dr. XYZ",
+      author: "Artho",
+    },
+    {
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScczgCgAPZvEptLueOQi9yXba2aWXyfNNsvYoqxfc9cEOj9ktM2NGP-z3zc4MfZv9j7E4&usqp=CAU",
+      title: "Dr. MNO",
+      author: "General Doctor",
+    },
+    {
+      img: "https://www.nicepng.com/png/detail/363-3638676_1-medical-student-image-png.png",
+      title: "Dr. PQR",
+      author: "Cancer Specialist",
+      cols: 2,
+    },
+  ];
   return (
     <>
       {/* <h1 className="text-success text-center fw-bold ">Admin Dashboard</h1> */}
@@ -154,22 +174,30 @@ const AdminDashboard = (props) => {
       <Container>
         <Grid container spacing={4}>
           <Grid item sm={6} xs={12}>
-            <Card className={classes.detaildiv}>
-              <CardHeader
-                avatar={<Avatar aria-label="recipe">R</Avatar>}
-                action={
-                  <IconButton aria-label="settings">
-                    <MoreVertIcon />
-                  </IconButton>
-                }
-                title="Shrimp and Chorizo Paella"
-                subheader="September 14, 2016"
-              />
-              <CardActionArea></CardActionArea>
+            <Card>
+              <CardContent>
+                <ImageList sx={{ width: 300, height: 450 }}>
+                  {itemData.map((item) => (
+                    <ImageListItem key={item.img}>
+                      <img
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                      />
+                      <ImageListItemBar
+                        className={classes.imagelistbar}
+                        title={item.title}
+                        subtitle={item.author}
+                      />
+                    </ImageListItem>
+                  ))}
+                </ImageList>
+              </CardContent>
             </Card>
           </Grid>
           <Grid item sm={6} xs={12}>
-            <Card className={classes.detaildiv}>
+            <Card>
               <CardContent>
                 <Typography variant="subtitle1" className="mb-2 fw-bold">
                   Hospital Status
@@ -177,11 +205,14 @@ const AdminDashboard = (props) => {
                 <Container>
                   <Grid container spacing={4}>
                     <Grid item smd={4} xs={12} lg={4}>
-                      <Card className={classes.cardsheight}>
+                      <Card>
                         <CardContent>
                           <NoteAddIcon style={{ color: "#A883BA " }} />
                           <Typography variant="body2" className="mt-3">
                             Total Appointments
+                          </Typography>
+                          <Typography variant="body2" className="fw-bold">
+                            30
                           </Typography>
                         </CardContent>
                       </Card>
@@ -193,6 +224,9 @@ const AdminDashboard = (props) => {
                           <Typography variant="body2" className="mt-3">
                             Patients per Doctor
                           </Typography>
+                          <Typography variant="body2" className="fw-bold">
+                            30
+                          </Typography>
                         </CardContent>
                       </Card>
                     </Grid>
@@ -202,6 +236,9 @@ const AdminDashboard = (props) => {
                           <BorderColorIcon style={{ color: "violet" }} />
                           <Typography variant="body2" className="mt-3">
                             Immunized Patients
+                          </Typography>
+                          <Typography variant="body2" className="fw-bold">
+                            30
                           </Typography>
                         </CardContent>
                       </Card>
@@ -215,6 +252,9 @@ const AdminDashboard = (props) => {
                           <Typography variant="body2" className="mt-3">
                             Total &nbsp;&nbsp;&nbsp; Nurse
                           </Typography>
+                          <Typography variant="body2" className="fw-bold">
+                            30
+                          </Typography>
                         </CardContent>
                       </Card>
                     </Grid>
@@ -225,6 +265,9 @@ const AdminDashboard = (props) => {
                           <Typography variant="body2" className="mt-3">
                             Total Lab Assistance
                           </Typography>
+                          <Typography variant="body2" className="fw-bold">
+                            30
+                          </Typography>
                         </CardContent>
                       </Card>
                     </Grid>
@@ -234,6 +277,9 @@ const AdminDashboard = (props) => {
                           <TextsmsIcon style={{ color: "#FFAA8A " }} />
                           <Typography variant="body2" className="mt-3">
                             Total Appointments
+                          </Typography>
+                          <Typography variant="body2" className="fw-bold">
+                            30
                           </Typography>
                         </CardContent>
                       </Card>
