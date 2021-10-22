@@ -97,11 +97,11 @@ const UserRequests = (props) => {
                 Reject
               </button>
             </ListItem>
-          )
+          );
         })}
       </List>
     </>
-  )
+  );
 }
 
 const mapStatetoProps = (state) => {
