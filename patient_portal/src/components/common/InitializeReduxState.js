@@ -15,7 +15,7 @@ export class InitializeReduxState extends Component {
       this.props.getallphysiciandata();
       this.props.getAllPatients();
       this.props.getInactiveUsersData();
-      this.props.getDemographicsStatus(this.props.currentUser.id);
+      this.props.getPatientDemographics(this.props.currentUser.id);
     }
   }
 
@@ -39,9 +39,8 @@ const mapDispatchToProps = (dispatch) => {
     getallphysiciandata: () => dispatch(actionCreator.GetAllPhysicianData()),
     getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
     getInactiveUsersData: () => dispatch(actionCreator.GetInactiveUsers()),
-    getDemographicsStatus: (userId) => {
-      return dispatch(actionCreator.GetPatientDemographics(userId));
-    },
+    getPatientDemographics: (userId) =>
+      dispatch(actionCreator.GetPatientDemographics(userId)),
   };
 };
 
