@@ -22,6 +22,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { propTypes } from "react-bootstrap/esm/Image";
+import InitializeReduxState from "./InitializeReduxState";
 
 const paperStyle = {
   padding: 20,
@@ -151,6 +152,7 @@ const Login = (props) => {
           </p>
         </Paper>
       </Grid>
+      <InitializeReduxState />
     </>
   );
 };
