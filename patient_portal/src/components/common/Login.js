@@ -22,6 +22,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { propTypes } from "react-bootstrap/esm/Image";
+import InitializeReduxState from "./InitializeReduxState";
 
 const paperStyle = {
   padding: 20,
@@ -55,6 +56,10 @@ const Login = (props) => {
 
   useEffect(() => {
     if (props.isLoggedIn === true) {
+      props.flashNotification({
+        message: "Login Succeessful...",
+        type: "success",
+      });
       if (props.role === "admin") {
         history.push("/admin");
       } else if (props.role === "patient") {
@@ -142,8 +147,12 @@ const Login = (props) => {
           </Formik>
           <Typography> Do you have an account ?</Typography>
           <a href="/registeruser">Sign Up</a>
+          <p className="text text-danger fw-bold text-center">
+            {props.globalmessage}!!!
+          </p>
         </Paper>
       </Grid>
+      <InitializeReduxState />
     </>
   );
 };

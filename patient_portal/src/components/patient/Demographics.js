@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-// import Card from "../../shared/Card";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { useHistory } from "react-router";
@@ -8,65 +7,50 @@ import * as Yup from "yup";
 import "../common/common_style.css";
 
 const Demographics = (props) => {
-  // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
-  // setpatientDemographics({
-  //   ...patientDemographics,
-  //   [userId]: userId.id
-  // });
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (props.demographicsDetails.length) {
+        setIsAvailable(true);
+      }
+    }
+  }, []);
 
-  // const [patientDemographics, setpatientDemographics] = useState({
-  //   fName: "",
-  //   lName: "",
-  //   dob: "",
-  //   gender: "",
-  //   ethnicity: "",
-  //   race: "",
-  //   education: "",
-  //   employment: "",
-  //   address: "",
-  //   phone_number: "",
-  //   medical_history: "",
-  //   family_medical_history: "",
-  //   surgeries: "",
-  //   insurance_provider: "",
-
-  // });
-
-  // let history = useHistory();
-  // const HandleChange = (e) => {
-  //   setpatientDemographics({
-  //     ...patientDemographics,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
-  // const logOutUser = () => {
-  //   const session = window.sessionStorage;
-  //   session.removeItem("userInfo");
-  //   history.push("/");
-  // };
-
-  // useEffect(() => {
-  //   if (props.statusCode === 201) {
-  //     history.push("/immunization");
-  //   }
-  // });
-  const initialValues = {
-    fName: "",
-    lName: "",
-    dob: "",
-    gender: "",
-    ethnicity: "",
-    education: "",
-    employment: "",
-    address: "",
-    phone_number: "",
-    medical_history: "",
-    family_medical_history: "",
-    surgeries: "",
-    insurance_provider: "",
-  };
-  const [patientDemographics, setpatientDemographics] = useState(initialValues);
+  const [isAvailable, setIsAvailable] = useState(false);
+  let initialValues = undefined;
+  if (isAvailable) {
+    initialValues = {
+      fName: props.currentUser.fName,
+      lName: props.currentUser.lName,
+      dob: props.currentUser.dob,
+      gender: props.demographicsDetails[0].gender,
+      ethnicity: props.demographicsDetails[0].ethnicity,
+      education: props.demographicsDetails[0].education,
+      employment: props.demographicsDetails[0].employment,
+      address: props.demographicsDetails[0].address,
+      phone_number: props.demographicsDetails[0].phone_number,
+      medical_history: props.demographicsDetails[0].medical_history,
+      family_medical_history:
+        props.demographicsDetails[0].family_medical_history,
+      surgeries: props.demographicsDetails[0].surgeries,
+      insurance_provider: props.demographicsDetails[0].insurance_provider,
+    };
+  } else {
+    initialValues = {
+      fName: props.currentUser.fName,
+      lName: props.currentUser.lName,
+      dob: props.currentUser.dob,
+      gender: "",
+      ethnicity: "",
+      education: "",
+      employment: "",
+      address: "",
+      phone_number: "",
+      medical_history: "",
+      family_medical_history: "",
+      surgeries: "",
+      insurance_provider: "",
+    };
+  }
 
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
@@ -86,13 +70,7 @@ const Demographics = (props) => {
     surgeries: Yup.string().required("Required"),
     insurance_provider: Yup.string().required("Required"),
   });
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   let newrecords = { ...patientDemographics };
-  //   // props.addUserHandler(newrecords);
-  //   console.log(newrecords)
-  //   //props.demographics(newrecords);
-  // };
+
   const onSubmit = (values) => {
     const payload = {
       fName: values.fName,
@@ -111,8 +89,12 @@ const Demographics = (props) => {
       userid: props.currentUser.id,
     };
     props.demographics(payload);
-    // props.getdemographics(payload);
+    props.flashNotification({
+      message: "Demographics added...",
+      type: "success",
+    });
   };
+
   return (
     <>
       <Formik
@@ -133,6 +115,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="fName"
                       id="fName"
+                      value={initialValues.fName}
+                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="fName" />
@@ -145,6 +129,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="lName"
                       id="lName"
+                      value={initialValues.lName}
+                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="lName" />
@@ -157,6 +143,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="dob"
                       id="dob"
+                      value={initialValues.dob}
+                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="dob" />
@@ -169,6 +157,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="gender"
                       id="gender"
+                      disabled={isAvailable}
+                      value={initialValues.gender}
                     >
                       <option value="">Select</option>
                       <option value="male">Male</option>
@@ -186,6 +176,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="ethnicity"
                       id="ethnicity/race"
+                      value={initialValues.ethnicity}
+                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="ethnicity" />
@@ -198,6 +190,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="education"
                       id="education"
+                      disabled={isAvailable}
+                      value={initialValues.education}
                     />
                     <div className="error">
                       <ErrorMessage name="education" />
@@ -211,6 +205,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="employment"
                       id="employment"
+                      disabled={isAvailable}
+                      value={initialValues.employment}
                     />
                     <div className="error">
                       <ErrorMessage name="employment" />
@@ -223,6 +219,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="address"
                       id="address"
+                      disabled={isAvailable}
+                      value={initialValues.address}
                     />
                     <div className="error">
                       <ErrorMessage name="address" />
@@ -236,6 +234,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="phone_number"
                       id="phone_number"
+                      value={initialValues.phone_number}
+                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="phone_number" />
@@ -249,6 +249,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="medical_history"
                       id="medical_history"
+                      disabled={isAvailable}
+                      value={initialValues.medical_history}
                     />
                     <div className="error">
                       <ErrorMessage name="medical_history" />
@@ -261,6 +263,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="family_medical_history"
                       id="family_medical_history"
+                      disabled={isAvailable}
+                      value={initialValues.family_medical_history}
                     />
                     <div className="error">
                       <ErrorMessage name="family_medical_history" />
@@ -273,6 +277,8 @@ const Demographics = (props) => {
                       className="form-control"
                       name="surgeries"
                       id="surgeries"
+                      disabled={isAvailable}
+                      value={initialValues.surgeries}
                     />
                     <div className="error">
                       <ErrorMessage name="surgeries" />
@@ -286,17 +292,27 @@ const Demographics = (props) => {
                       className="form-control"
                       name="insurance_provider"
                       id="insurance_provider"
+                      disabled={isAvailable}
+                      value={initialValues.insurance_provider}
                     />
                     <div className="error">
                       <ErrorMessage name="insurance_provider" />
                     </div>
                   </div>
-
-                  <button type="submit" className="btn btn-primary m-4">
-                    Submit
-                  </button>
+                  {isAvailable ? (
+                    <button
+                      type="submit"
+                      className="btn btn-primary m-4"
+                      disabled
+                    >
+                      Submit
+                    </button>
+                  ) : (
+                    <button type="submit" className="btn btn-primary m-4">
+                      Submit
+                    </button>
+                  )}
                 </Form>
-                <h4 className="text-danger">{props.globalMessage}</h4>
               </div>
             </div>
           </div>
@@ -308,10 +324,9 @@ const Demographics = (props) => {
 const mapStateToProps = (state) => {
   return {
     globalMessage: state.demographics.globalmessage,
-    // demographics: state.demographics.demographics,
-    // currentUser: state.demographics,
     currentUser: state.login.loggedUserInfo,
-    // statusCode: state.demographics.statusCode,
+    isLoggedIn: state.login.isLoggedIn,
+    demographicsDetails: state.patientDemographics.patientDemographics,
   };
 };
 

@@ -19,3 +19,8 @@ export { default as BorderColorIcon } from "@material-ui/icons/BorderColor";
 export { default as SchoolIcon } from "@material-ui/icons/School";
 export { default as TextsmsIcon } from "@material-ui/icons/Textsms";
 export { default as AccessTimeOutlined } from "@material-ui/icons/AccessTimeOutlined";
+export { default as FavoriteIcon } from "@material-ui/icons/Favorite";
+export { default as ShareIcon } from "@material-ui/icons/Share";
+export { default as ExpandMoreIcon } from "@material-ui/icons/ExpandMore";
+export { default as MoreVertIcon } from "@material-ui/icons/MoreVert";
+export { default as InfoIcon } from "@material-ui/icons/Info";

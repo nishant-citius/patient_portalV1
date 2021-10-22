@@ -20,9 +20,9 @@ const UserRequests = (props) => {
   }, [])
 
   function fetchAllUsers() {
-    props.getalluserdata()
-    props.getInactiveUsersData()
-    setUsers(inactiveUsersList())
+    // props.getalluserdata()
+    // props.getInactiveUsersData()
+    setUsers(inactiveUsersList());
   }
 
   const inactiveUsersList = () => {
@@ -97,11 +97,11 @@ const UserRequests = (props) => {
                 Reject
               </button>
             </ListItem>
-          )
+          );
         })}
       </List>
     </>
-  )
+  );
 }
 
 const mapStatetoProps = (state) => {

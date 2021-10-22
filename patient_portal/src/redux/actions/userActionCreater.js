@@ -393,27 +393,6 @@ export function updateprofile(profileImage,loggedUserInfo) {
   };
 }
 
-export function GetPatientDemographics(userId) {
-  let payload = {
-    demographics: {},
-    globalmessage: "",
-  };
-  return (dispatch, getState) => {
-    authToken = getState().login.authToken;
-    axios.get(`${URLS.GET_DEMOGRAPHICS_DETAILS}${userId}`).then(
-      (response) => {
-        payload.demographics = response.data;
-        payload.globalmessage = `Demographics details retrived`;
-        dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
-      },
-      (error) => {
-        payload.globalmessage = `Demographics Error: ${error.response.data}`;
-        // payload.statusCode = 400;
-        dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
-      }
-    );
-  };
-}
 export function GetDemographics() {
   let payload = {
     demographics: [],
@@ -433,6 +412,28 @@ export function GetDemographics() {
         payload.globalmessage = `${error.response.data}`;
         payload.demographics = [];
         dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetPatientDemographics(userId) {
+  let payload = {
+    globalmessage: "",
+    userDemographics: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_DEMOGRAPHICS}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Demographics Retrieved...`;
+        payload.userDemographics = response.data;
+        dispatch({ type: actions.GET_PATIENT_DEMOGRAPHICS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userDemographics = {};
+        dispatch({ type: actions.GET_PATIENT_DEMOGRAPHICS, payload: payload });
       }
     );
   };

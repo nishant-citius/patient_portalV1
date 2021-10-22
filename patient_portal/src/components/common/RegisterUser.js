@@ -2,12 +2,9 @@ import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { useHistory } from "react-router";
-
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-
 import { Grid, Paper, Avatar, TextField } from "@material-ui/core";
-
 import LockOpenIcon from "@material-ui/icons/LockOpen";
 
 const RegisterUser = (props) => {
@@ -72,6 +69,10 @@ const RegisterUser = (props) => {
 
   useEffect(() => {
     if (props.statusCode === 200) {
+      props.flashNotification({
+        message: "Registration Succeessful...",
+        type: "success",
+      });
       history.push("/login");
     }
   });
