@@ -8,7 +8,6 @@ import {
   Card,
   Grid,
   CardActionArea,
-  CardActions,
   CardContent,
   makeStyles,
   Typography,
