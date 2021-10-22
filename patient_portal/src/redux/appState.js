@@ -11,9 +11,10 @@ let appState = {
   physicians: [],
   patients: [],
   userDetails: {},
-  profileImage:"",
+  profileImage: "",
   userRequests: 0,
   inactiveUsers: [],
+  userDemographics: {},
 };
 
 export default appState;

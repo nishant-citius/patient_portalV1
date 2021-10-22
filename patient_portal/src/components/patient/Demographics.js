@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-// import Card from "../../shared/Card";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { useHistory } from "react-router";
@@ -8,53 +7,18 @@ import * as Yup from "yup";
 import "../common/common_style.css";
 
 const Demographics = (props) => {
-  // let userId = JSON.parse(window.sessionStorage.getItem("userInfo"));
-  // setpatientDemographics({
-  //   ...patientDemographics,
-  //   [userId]: userId.id
-  // });
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      props.getDemographicsStatus(props.currentUser.id);
 
-  // const [patientDemographics, setpatientDemographics] = useState({
-  //   fName: "",
-  //   lName: "",
-  //   dob: "",
-  //   gender: "",
-  //   ethnicity: "",
-  //   race: "",
-  //   education: "",
-  //   employment: "",
-  //   address: "",
-  //   phone_number: "",
-  //   medical_history: "",
-  //   family_medical_history: "",
-  //   surgeries: "",
-  //   insurance_provider: "",
+      console.log(props.demogrphs);
+    }
+  }, []);
 
-  // });
-
-  // let history = useHistory();
-  // const HandleChange = (e) => {
-  //   setpatientDemographics({
-  //     ...patientDemographics,
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
-  // const logOutUser = () => {
-  //   const session = window.sessionStorage;
-  //   session.removeItem("userInfo");
-  //   history.push("/");
-  // };
-
-  // useEffect(() => {
-  //   if (props.statusCode === 201) {
-  //     history.push("/immunization");
-  //   }
-  // });
   const initialValues = {
-    fName: "",
-    lName: "",
-    dob: "",
+    fName: props.currentUser.fName,
+    lName: props.currentUser.lName,
+    dob: props.currentUser.dob,
     gender: "",
     ethnicity: "",
     education: "",
@@ -86,13 +50,7 @@ const Demographics = (props) => {
     surgeries: Yup.string().required("Required"),
     insurance_provider: Yup.string().required("Required"),
   });
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   let newrecords = { ...patientDemographics };
-  //   // props.addUserHandler(newrecords);
-  //   console.log(newrecords)
-  //   //props.demographics(newrecords);
-  // };
+
   const onSubmit = (values) => {
     const payload = {
       fName: values.fName,
@@ -111,7 +69,12 @@ const Demographics = (props) => {
       userid: props.currentUser.id,
     };
     props.demographics(payload);
+    props.flashNotification({
+      message: "Demographics added...",
+      type: "success",
+    });
   };
+
   return (
     <>
       <Formik
@@ -132,6 +95,7 @@ const Demographics = (props) => {
                       className="form-control"
                       name="fName"
                       id="fName"
+                      value={initialValues.fName}
                     />
                     <div className="error">
                       <ErrorMessage name="fName" />
@@ -144,6 +108,7 @@ const Demographics = (props) => {
                       className="form-control"
                       name="lName"
                       id="lName"
+                      value={initialValues.lName}
                     />
                     <div className="error">
                       <ErrorMessage name="lName" />
@@ -156,6 +121,7 @@ const Demographics = (props) => {
                       className="form-control"
                       name="dob"
                       id="dob"
+                      value={initialValues.dob}
                     />
                     <div className="error">
                       <ErrorMessage name="dob" />
@@ -307,10 +273,9 @@ const Demographics = (props) => {
 const mapStateToProps = (state) => {
   return {
     globalMessage: state.demographics.globalmessage,
-    demographics_data: state.demographics.demographics_data,
-    // currentUser: state.demographics,
     currentUser: state.login.loggedUserInfo,
-    // statusCode: state.demographics.statusCode,
+    isLoggedIn: state.login.isLoggedIn,
+    demogrphs: state.pdemographics.userDemographics,
   };
 };
 
@@ -318,6 +283,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     demographics: (newuser) =>
       dispatch(actionCreator.AddDemographicsAsync(newuser)),
+
+    getDemographicsStatus: (userId) => {
+      return dispatch(actionCreator.GetPatientDemographics(userId));
+    },
   };
 };
 
