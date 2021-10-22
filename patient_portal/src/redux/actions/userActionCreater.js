@@ -386,20 +386,24 @@ export function updateprofile(profileImage, userId) {
 
 export function GetPatientDemographics(userId) {
   let payload = {
-    demographics_data: {},
+    userDemographics: {},
     globalmessage: "",
+    statusCode: 200,
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_DEMOGRAPHICS_DETAILS}${userId}`).then(
       (response) => {
-        payload.demographics_data = response.data;
+        payload.userDemographics = response.data;
         payload.globalmessage = `Demographics details retrived`;
+        payload.statusCode = response.status;
         dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
       },
       (error) => {
         payload.globalmessage = `Demographics Error: ${error.response.data}`;
-        // payload.statusCode = 400;
+        payload.statusCode = 401;
+        payload.userDemographics = {};
+
         dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
       }
     );

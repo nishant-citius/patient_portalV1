@@ -129,8 +129,6 @@ function AppToolBar(props) {
   const history = useHistory();
 
   function HandleClick(event) {
-    console.log("Avatar clicked");
-    console.log(event.currentTarget);
     setAnchorEl(event.currentTarget);
   }
 
