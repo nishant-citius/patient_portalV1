@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "email": "aj@email.com",
-      "password": "$2a$10$xHd6PnNwrRq9hPGazzRQE.sQha2IwghCt9I1O1LTnQ8BCJwayCWjK",
-      "profileImage": "Healthcare.png",
+      "email": "preeti@email.com",
+      "password": "$2a$10$Ebh5b5r6MOr6cM0QJvemwutimRyU93GTCGH3BOPYPaCMEx8wcoMMi",
+      "profileImage": "Healthcare.jpg",
       "id": 1
     },
     {
@@ -142,18 +142,9 @@
       "id": 9
     },
     {
-      "email": "rita@email.com",
-      "password": "$2a$10$mAzL24ojNE2Z5R402Gi2ruQAlmJS4pSyKEUwUHQFQinzJZyNw9Zda",
-      "fName": "rita",
-      "lName": "thakur",
-      "dob": "2021-10-13",
-      "username": "rita",
-      "mobile": "54645",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "o-",
-      "createdDate": "Mon Oct 18 2021 13:17:12 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "email": "meenu@email.com",
+      "password": "$2a$10$BWS/.upMMslL2yaVAFn0oupaZRJPbzOz7JnfxnLMIityY3kHWfDDO",
+      "profileImage": "Healthcare.png",
       "id": 10
     },
     {
@@ -188,7 +179,6 @@
     },
     {
       "email": "manij@email.com",
-      "password": "$2a$10$DsyeMaC3pLSrd1/xewbKe./Z4iIKTeWgMorX.RfbFahh1vQYQ5FnS",
       "fName": "Manoj",
       "lName": "Tripathi",
       "dob": "2021-09-08",
@@ -199,7 +189,9 @@
       "blood_group": "B+",
       "createdDate": "Mon Oct 18 2021 17:54:35 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 13
+      "id": 13,
+      "profileImage": "User-Profile-PNG-Free-Download.png",
+      "password": "$2a$10$JX1CA7sOdfvCeH2vSmrnS.E0HCrCUNx/hE59uxZEEekZzALjOV3wq"
     },
     {
       "email": "yuyu@email.com",
@@ -218,7 +210,6 @@
     },
     {
       "email": "sanjana@email.com",
-      "password": "$2a$10$pqud4UMDvHIPRoBpcDK6Nu7HI/hCzWfmBMERgIt876JM240yqLfw.",
       "fName": "Sanjana",
       "lName": "Roy",
       "dob": "2021-09-30",
@@ -229,7 +220,9 @@
       "blood_group": "B",
       "createdDate": "Mon Oct 18 2021 18:03:16 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 15
+      "id": 15,
+      "profileImage": "User-Profile-PNG-Free-Download.png",
+      "password": "$2a$10$.vWz5Q/MlgMxQmHuujG6CeBHL1WBN9GE8pf6Y7R4TCR8TZ1blMOSe"
     },
     {
       "email": "nurse-1@email.com",
@@ -247,7 +240,7 @@
     },
     {
       "email": "souj@email.com",
-      "password": "$2a$10$xCMjVQDg1TmNg9OQS28na.tk1VhzAqx/uCU4zFPmBJHZZrUmfGmQW",
+      "password": "$2a$10$0E2pari2DaD0AH6Xuarrd.p5JujJTvnXPSA9y0x/JDXqvkMjTP/TG",
       "fName": "soujanya",
       "lName": "G",
       "dob": "2021-10-12",
@@ -258,7 +251,30 @@
       "blood_group": "b+",
       "createdDate": "Wed Oct 20 2021 22:10:17 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 21
+      "id": 21,
+      "profileImage": "Healthcare.jpg"
+    },
+    {
+      "email": "meenu@email.com",
+      "password": "$2a$10$HUt7HMqLSKKa1TkfxXbKVu7TC0o79id/qPQCz4ebdAbqOjWmPokWe",
+      "profileImage": "Healthcare.png",
+      "id": 22
+    },
+    {
+      "email": "souj@email.com",
+      "password": "$2a$10$AM/t1/01eeXX3pUJoR1gFeb6JlHj.VI/KqziEnQfEXkkZD7pQyGXi",
+      "fName": "soujanya",
+      "lName": "G",
+      "dob": "2021-10-12",
+      "username": "souj",
+      "mobile": "2323232323",
+      "role": "patient",
+      "rpassword": "12345",
+      "blood_group": "b+",
+      "createdDate": "Wed Oct 20 2021 22:10:17 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 23,
+      "profileImage": "Healthcare.jpg"
     }
   ],
   "demographics": [
@@ -331,6 +347,74 @@
       "insurance_provider": "na",
       "userid": 10,
       "id": 14
+    },
+    {
+      "fName": "meenu",
+      "lName": "thakur",
+      "dob": "2021-10-21",
+      "gender": "female",
+      "ethnicity": "na",
+      "education": "na",
+      "employment": "na",
+      "address": "na",
+      "phone_number": 655768878787,
+      "medical_history": "na",
+      "family_medical_history": "na",
+      "surgeries": "na",
+      "insurance_provider": "na",
+      "userid": 22,
+      "id": 15
+    },
+    {
+      "fName": "meenu",
+      "lName": "thakur",
+      "dob": "2021-10-26",
+      "gender": "female",
+      "ethnicity": "na",
+      "education": "na",
+      "employment": "na",
+      "address": "na",
+      "phone_number": 767668868686,
+      "medical_history": "hdgfgfh",
+      "family_medical_history": "bn",
+      "surgeries": "na",
+      "insurance_provider": "na",
+      "userid": 22,
+      "id": 16
+    },
+    {
+      "fName": "rita",
+      "lName": "thakur",
+      "dob": "2021-10-20",
+      "gender": "female",
+      "ethnicity": "na",
+      "education": "mca",
+      "employment": "SE",
+      "address": "na",
+      "phone_number": 65757588677,
+      "medical_history": "na",
+      "family_medical_history": "na",
+      "surgeries": "na",
+      "insurance_provider": "na",
+      "userid": 10,
+      "id": 17
+    },
+    {
+      "fName": "preeti",
+      "lName": "arora",
+      "dob": "2021-10-20",
+      "gender": "female",
+      "ethnicity": "na",
+      "education": "na",
+      "employment": "na",
+      "address": "na",
+      "phone_number": 75775868669,
+      "medical_history": "na",
+      "family_medical_history": "na",
+      "surgeries": "na",
+      "insurance_provider": "na",
+      "userid": 23,
+      "id": 18
     }
   ],
   "medication_allergies": [

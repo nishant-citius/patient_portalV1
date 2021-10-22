@@ -8,7 +8,7 @@ export function DemographicsReducer(state = appState, action) {
         globalmessage: action.payload.globalmessage,
         statusCode: action.payload.statusCode,
         demographics: state.demographics.concat(action.newuser),
-        demographics: action.payload.demographics
+        demographics: action.payload.demographics,
       };
     }
 

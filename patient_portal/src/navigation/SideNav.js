@@ -64,6 +64,15 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  headerText: {
+    fontSize: "18px",
+    marginBottom: "5px",
+    color: "#a9baca",
+    fontWeight: "bold",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
 }));
 
 const mapStateToProps = (rootReducer) => {
@@ -85,7 +94,7 @@ function SideNav(props) {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
-      <h4>{props.currentUser.fName}</h4>
+      <h5 className={classes.headerText}>Welcome {props.currentUser.fName}</h5>
       {
         // Admin Menu====================================================================================
         props.role === "admin" ? (
@@ -134,8 +143,8 @@ function SideNav(props) {
             </div>
           </div>
         ) : // Patient Menu==================================================================================
-       
-        props.role === "patient" ? (
+
+        props.role === "patient" && props.currentUser.isActive ? (
           <div className="sideNav">
             <div className={classes.item}>
               <Link to="/patient">
@@ -197,13 +206,11 @@ function SideNav(props) {
                 <span className={classes.text}>Patient Education</span>
               </Link>
             </div>
-           
           </div>
-          
         ) : // physician Menu==============================================================================
         props.role === "physician" ? (
           <div className="sideNav">
-          <div className={classes.item}>
+            <div className={classes.item}>
               <Link to="/physician">
                 <DashboardIcon className={classes.icon} />
                 <span className={classes.text}>Physician Dashboard</span>
@@ -221,7 +228,6 @@ function SideNav(props) {
                 <span className={classes.text}>Patient Demographics</span>
               </Link>
             </div>
-            
           </div>
         ) : null
       }

@@ -111,6 +111,7 @@ const Demographics = (props) => {
       userid: props.currentUser.id,
     };
     props.demographics(payload);
+    // props.getdemographics(payload);
   };
   return (
     <>
@@ -307,7 +308,7 @@ const Demographics = (props) => {
 const mapStateToProps = (state) => {
   return {
     globalMessage: state.demographics.globalmessage,
-    demographics_data: state.demographics.demographics_data,
+    // demographics: state.demographics.demographics,
     // currentUser: state.demographics,
     currentUser: state.login.loggedUserInfo,
     // statusCode: state.demographics.statusCode,
@@ -318,6 +319,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     demographics: (newuser) =>
       dispatch(actionCreator.AddDemographicsAsync(newuser)),
+      // getdemographics: (userId) => dispatch(actionCreator.GetPatientDemographics(userId))
   };
 };
 

@@ -48,7 +48,7 @@ axios.interceptors.request.use((req) => {
   }
   return req;
 });
-//********AXIOS INTERCEPTOR********
+// //********AXIOS INTERCEPTOR********
 
 export function Register(user) {
   let payload = {
@@ -360,40 +360,49 @@ export function AddMedicationAndAllergiesAsync(user) {
 
 //put request for updating the profile pic
 
-export function updateprofile(profileImage, userId) {
+export function updateprofile(profileImage,loggedUserInfo) {
+  console.log(loggedUserInfo)
   let payload = {
     globalmessage: "",
     // profileImage:""
   };
+  
   return (dispatch, getState) => {
-    authToken = getState().login.authToken;
-    axios
-      .put(`${URLS.USER}${userId}`, JSON.stringify(profileImage), config)
-      .then(
-        (response) => {
-          console.log("From AC....", response);
-          payload.globalmessage = `Profile Pic updated successfully`;
-          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-        },
-        (error) => {
-          payload.globalmessage = `Updation ERROR: ${error.response.data}`;
-          // payload.statusCode = 400;
-          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-        }
-      );
+  authToken = getState().login.authToken;
+   let headers = {
+      "Content-type": "application/json; charset=UTF-8",
+      // "Authorization" : ` ${authToken}`
+};
+    
+    loggedUserInfo.profileImage=profileImage.name;
+    loggedUserInfo.password=loggedUserInfo.rpassword;
+    console.log(loggedUserInfo)
+     axios.put( `${URLS.USER}${loggedUserInfo.id}`,loggedUserInfo,{headers}
+    ).then(
+     (response) => {
+      console.log("From AC....", response);
+     payload.globalmessage = `Profile Pic updated successfully`;
+      dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `Updation ERROR: ${error.response.data}`;
+        //       // payload.statusCode = 400;
+       dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+      }
+     );
   };
 }
 
 export function GetPatientDemographics(userId) {
   let payload = {
-    demographics_data: {},
+    demographics: {},
     globalmessage: "",
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_DEMOGRAPHICS_DETAILS}${userId}`).then(
       (response) => {
-        payload.demographics_data = response.data;
+        payload.demographics = response.data;
         payload.globalmessage = `Demographics details retrived`;
         dispatch({ type: actions.GET_DEMOGRAPHICS_PATIENT, payload: payload });
       },
