@@ -11,7 +11,6 @@ export class InitializeReduxState extends Component {
 
   componentDidMount() {
     if (this.props.isLoggedIn) {
-      alert("");
       this.props.getAllUsers();
       this.props.getallphysiciandata();
       this.props.getAllPatients();
