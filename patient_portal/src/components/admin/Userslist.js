@@ -15,6 +15,7 @@ const mapStateToProps = (rootReducer) => {
   return {
     users: rootReducer.getallusers.users,
     globalmessage: rootReducer.getallusers.globalmessage,
+    demographics: rootReducer.patientDemographics.patientDemographics,
   };
 };
 
@@ -31,7 +32,8 @@ export class UserList extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getalluserdata();
+    // this.props.getalluserdata();
+    console.log(this.props.demographics);
   }
 
   render() {
