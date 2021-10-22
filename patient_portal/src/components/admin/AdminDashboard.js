@@ -54,6 +54,7 @@ const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
 
+
   useEffect(() => {
     props.getallphysiciandata();
     props.getalluserdata();
