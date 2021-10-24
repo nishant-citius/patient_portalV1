@@ -221,7 +221,70 @@
       "id": 4
     }
   ],
-  "medic_allergy": [],
+  "medic_allergy": [
+    {
+      "userid": 10,
+      "current_medication": [
+        {
+          "medicineName": "Nishant",
+          "dosage": "hikjjk",
+          "directionstoconsume": "ljojojo",
+          "frequency": "ojojoj",
+          "physicianName": "ojojoj",
+          "purpose": "ojojoj",
+          "startDate": "2021-10-13",
+          "endDate": "2021-10-19"
+        },
+        {
+          "medicineName": "uuhuh",
+          "dosage": "ijijij",
+          "directionstoconsume": "ijijiji",
+          "frequency": "ijijij",
+          "physicianName": "ijijij",
+          "purpose": "ijijij",
+          "startDate": "2021-10-27",
+          "endDate": "2021-09-30"
+        }
+      ],
+      "otc_medication": [
+        {
+          "strength": "ihihihihi",
+          "directiontoconsume": "ihihihihih",
+          "socialDrugs": "drink"
+        },
+        {
+          "strength": "ijijijij",
+          "directiontoconsume": "ijijijijiji",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "jijijihih",
+          "strength": "jijiihi",
+          "directiontoconsume": "ihihihihih"
+        },
+        {
+          "pastdrugName": "khihihih",
+          "strength": "ihihihihi",
+          "directiontoconsume": "kjojojo"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "jhuhhih",
+          "symptomsofAllergy": "kihihih",
+          "drugAllergy": "ihihihi"
+        },
+        {
+          "allergyName": "jugug",
+          "symptomsofAllergy": "uhuhih",
+          "drugAllergy": "ihihihihi"
+        }
+      ],
+      "id": 1
+    }
+  ],
   "immunization": [
     {
       "id": "",
@@ -254,6 +317,27 @@
       "general_vaccine": "NA",
       "userId": 5,
       "id": "GwKaUWS"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "dewdewdw",
+      "dose_detail": "1",
+      "general_vaccine": [
+        {
+          "vaccine_name": "sdsfsds",
+          "vaccine_date": "2021-10-12"
+        },
+        {
+          "vaccine_name": "efewfewf",
+          "vaccine_date": "2021-10-06"
+        },
+        {
+          "vaccine_name": "cewwdewd",
+          "vaccine_date": "2021-10-12"
+        }
+      ],
+      "userid": 10,
+      "id": "tmFStA6"
     }
   ],
   "appointments": [
