@@ -18,7 +18,6 @@ function ScheduleAppointment(props) {
     dob: props.currentUser.dob,
     mobile_no: "",
     doc_name: "",
-    doc_spl: "",
     appointment_title: "",
     appointment_time: "",
     appointmentDate: "",
@@ -33,7 +32,6 @@ function ScheduleAppointment(props) {
       .min(10, "Phone number required 10 digit")
       .max(12, "Phone number required 12 digit"),
     doc_name: Yup.string().required("Required"),
-    doc_spl: Yup.string().required("Required"),
     appointmentDate: Yup.string().required("Required"),
     appointment_title: Yup.string().required("Required"),
     appointment_time: Yup.string().required("Required"),
@@ -47,7 +45,6 @@ function ScheduleAppointment(props) {
       dob: props.currentUser.dob,
       mobile_no: values.mobile_no,
       doc_name: values.doc_name,
-      doc_spl: values.doc_spl,
       appointment_title: values.appointment_title,
       appointment_time: values.appointment_time,
       appointmentDate: values.appointmentDate,
@@ -55,7 +52,7 @@ function ScheduleAppointment(props) {
       vistInfo: values.vistInfo,
       patientId: props.currentUser.id,
     };
-    // scheduleAppointmentToday(payload);
+    scheduleAppointmentToday(payload);
   };
 
   function scheduleAppointmentToday(appointmentData) {
