@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -6,6 +6,12 @@ import * as Yup from "yup";
 import { adminService } from "../../services/register_user_service";
 
 function ScheduleAppointment(props) {
+  const [doctorsList, setDoctorsList] = useState([]);
+
+  useEffect(() => {
+    setDoctorsList(props.physiciandata);
+  }, []);
+
   const initialValues = {
     fName: props.currentUser.fName,
     lName: props.currentUser.lName,
@@ -15,6 +21,7 @@ function ScheduleAppointment(props) {
     doc_spl: "",
     appointment_title: "",
     appointment_time: "",
+    appointmentDate: "",
     appointment_desc: "",
     vistInfo: "",
     userid: props.currentUser.id,
@@ -27,11 +34,13 @@ function ScheduleAppointment(props) {
       .max(12, "Phone number required 12 digit"),
     doc_name: Yup.string().required("Required"),
     doc_spl: Yup.string().required("Required"),
+    appointmentDate: Yup.string().required("Required"),
     appointment_title: Yup.string().required("Required"),
     appointment_time: Yup.string().required("Required"),
   });
 
   const onSubmit = (values) => {
+    console.log("-----------", values);
     const payload = {
       fName: props.currentUser.fName,
       lName: props.currentUser.lName,
@@ -41,12 +50,12 @@ function ScheduleAppointment(props) {
       doc_spl: values.doc_spl,
       appointment_title: values.appointment_title,
       appointment_time: values.appointment_time,
+      appointmentDate: values.appointmentDate,
       appointment_desc: values.appointment_desc,
       vistInfo: values.vistInfo,
       patientId: props.currentUser.id,
     };
-
-    scheduleAppointmentToday(payload);
+    // scheduleAppointmentToday(payload);
   };
 
   function scheduleAppointmentToday(appointmentData) {
@@ -66,8 +75,8 @@ function ScheduleAppointment(props) {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={validationSchema}
       onSubmit={onSubmit}
+      validationSchema={validationSchema}
     >
       {(props) => (
         <div className="container">
@@ -77,7 +86,7 @@ function ScheduleAppointment(props) {
               <Form>
                 <div className="row">
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">First Name</label>
+                    <label>First Name</label>
                     <Field
                       type="text"
                       className="form-control"
@@ -89,7 +98,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Last Name</label>
+                    <label>Last Name</label>
                     <Field
                       type="text"
                       className="form-control"
@@ -101,7 +110,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Date of Birth</label>
+                    <label>Date of Birth</label>
                     <Field
                       type="date"
                       className="form-control"
@@ -113,7 +122,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Phone Number</label>
+                    <label>Phone Number</label>
                     <Field
                       type="number"
                       className="form-control"
@@ -124,7 +133,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Doctor's</label>
+                    <label>Doctor's</label>
                     <Field
                       as="select"
                       type="number"
@@ -132,31 +141,30 @@ function ScheduleAppointment(props) {
                       name="doc_name"
                     >
                       <option value="">Select</option>
-                      <option value="">Doc1</option>
-                      <option value="">Doc2</option>
+                      {doctorsList.map((doctor) => (
+                        <option value={doctor.id}>
+                          {doctor.fName + doctor.lName}
+                        </option>
+                      ))}
                     </Field>
                     <div className="error">
                       <ErrorMessage name="doc_name" />
                     </div>
                   </div>
-                  <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Speciality</label>
-                    <Field
-                      as="select"
-                      type="number"
-                      className="form-control"
-                      name="doc_spl"
-                    >
-                      <option value="">Select</option>
-                      <option value="">Spc1</option>
-                      <option value="">Spc2</option>
-                    </Field>
-                    <div className="error">
-                      <ErrorMessage name="doc_spl" />
-                    </div>
+                  {/* <div className="col-12 col-md-6">
+                  <label>Speciality</label>
+                  <Field type="text" className="form-control" name="doc_spl" />
+                  <option value="">Select</option>
+                    <option value="">Spc1</option>
+                    <option value="">Spc2</option>
+                  </Field>
+                  <div className="error">
+                    <ErrorMessage name="doc_spl" />
                   </div>
+                </div> */}
+
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Appointment TItle</label>
+                    <label>Appointment TItle</label>
                     <Field
                       type="text"
                       className="form-control"
@@ -166,10 +174,23 @@ function ScheduleAppointment(props) {
                       <ErrorMessage name="appointment_title" />
                     </div>
                   </div>
+
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">Appointment Time</label>
+                    <label>Appointment Date </label>
                     <Field
-                      type="text"
+                      type="date"
+                      className="form-control"
+                      name="appointmentDate"
+                    />
+                    <div className="error">
+                      <ErrorMessage name="appointmentDate" />
+                    </div>
+                  </div>
+
+                  <div className="col-12 col-md-6">
+                    <label>Appointment Time</label>
+                    <Field
+                      type="time"
                       className="form-control"
                       name="appointment_time"
                     />
@@ -178,9 +199,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label htmlFor="age_category">
-                      Appointment Description
-                    </label>
+                    <label>Appointment Description</label>
                     <Field
                       as="textarea"
                       className="form-control"
@@ -191,7 +210,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6 pt-1">
-                    <label htmlFor="age_category">First Time Visit?</label>
+                    <label>First Time Visit?</label>
                     <br />
                     <div class="form-check form-check-inline mt-3">
                       <Field
@@ -201,7 +220,7 @@ function ScheduleAppointment(props) {
                         id="inlineRadio1"
                         value="yes"
                       />
-                      <label class="form-check-label" for="inlineRadio1">
+                      <label class="form-check-label" htmlFor="inlineRadio1">
                         Yes
                       </label>
                     </div>
@@ -213,7 +232,7 @@ function ScheduleAppointment(props) {
                         id="inlineRadio2"
                         value="no"
                       />
-                      <label class="form-check-label" for="inlineRadio2">
+                      <label class="form-check-label" htmlFor="inlineRadio2">
                         No
                       </label>
                     </div>
@@ -239,6 +258,7 @@ const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
     doctorsList: state.specilizedPhysicians.specialisedPhysicians,
+    physiciandata: state.physicians.physicians,
   };
 };
 
