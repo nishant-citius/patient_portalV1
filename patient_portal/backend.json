@@ -106,21 +106,6 @@
       "id": 8
     },
     {
-      "email": "ajju@email.com",
-      "password": "$2a$10$Z6VZRPVos52Vz7Q1eB1gqOXu4lGf0Y8Ylki3LkZ5rsOLw9fzfbYXK",
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "username": "ajju@email.com",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 00:15:07 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 9
-    },
-    {
       "email": "ap@email.com",
       "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
       "fName": "Joe",

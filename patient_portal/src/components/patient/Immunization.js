@@ -194,7 +194,7 @@ const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
     allusers: state.immunization.Immunizationsreducer,
-    immunizationDetails: state.patientImmunization.patientImmunization,
+    // immunizationDetails: state.patientImmunization.patientImmunization,
   };
 };
 
