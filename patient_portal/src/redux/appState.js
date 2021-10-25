@@ -15,6 +15,7 @@ let appState = {
   userRequests: 0,
   inactiveUsers: [],
   patientDemographics: {},
+  patientImmunization: {},
 };
 
 export default appState;
