@@ -456,3 +456,25 @@ export function GetPatientDemographics(userId) {
     );
   };
 }
+
+export function GetPatientImmunization(userId) {
+  let payload = {
+    globalmessage: "",
+    userImmunization: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_IMMUNIZATION}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Demographics Retrieved...`;
+        payload.userImmunization = response.data;
+        dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userImmunization = {};
+        dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}

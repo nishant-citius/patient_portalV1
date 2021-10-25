@@ -9,49 +9,48 @@ import "../common/common_style.css";
 const Demographics = (props) => {
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.demographicsDetails.length) {
+      if (
+        props.demographicsDetails.length &&
+        props.demographicsDetails.length > 0
+      ) {
         setIsAvailable(true);
       }
     }
   }, []);
 
-  const [isAvailable, setIsAvailable] = useState(false);
-  let initialValues = undefined;
-  if (isAvailable) {
-    initialValues = {
-      fName: props.currentUser.fName,
-      lName: props.currentUser.lName,
-      dob: props.currentUser.dob,
-      gender: props.demographicsDetails[0].gender,
-      ethnicity: props.demographicsDetails[0].ethnicity,
-      education: props.demographicsDetails[0].education,
-      employment: props.demographicsDetails[0].employment,
-      address: props.demographicsDetails[0].address,
-      phone_number: props.demographicsDetails[0].phone_number,
-      medical_history: props.demographicsDetails[0].medical_history,
-      family_medical_history:
-        props.demographicsDetails[0].family_medical_history,
-      surgeries: props.demographicsDetails[0].surgeries,
-      insurance_provider: props.demographicsDetails[0].insurance_provider,
-    };
-  } else {
-    initialValues = {
-      fName: props.currentUser.fName,
-      lName: props.currentUser.lName,
-      dob: props.currentUser.dob,
-      gender: "",
-      ethnicity: "",
-      education: "",
-      employment: "",
-      address: "",
-      phone_number: "",
-      medical_history: "",
-      family_medical_history: "",
-      surgeries: "",
-      insurance_provider: "",
-    };
-  }
+  const initialValues = {
+    fName: props.currentUser.fName,
+    lName: props.currentUser.lName,
+    dob: props.currentUser.dob,
+    gender: "",
+    ethnicity: "",
+    education: "",
+    employment: "",
+    address: "",
+    phone_number: "",
+    medical_history: "",
+    family_medical_history: "",
+    surgeries: "",
+    insurance_provider: "",
+  };
 
+  const savedValues = {
+    fName: props.currentUser.fName,
+    lName: props.currentUser.lName,
+    dob: props.currentUser.dob,
+    gender: props.demographicsDetails[0]?.gender,
+    ethnicity: props.demographicsDetails[0]?.ethnicity,
+    education: props.demographicsDetails[0]?.education,
+    employment: props.demographicsDetails[0]?.employment,
+    address: props.demographicsDetails[0]?.address,
+    phone_number: props.demographicsDetails[0]?.phone_number,
+    medical_history: props.demographicsDetails[0]?.medical_history,
+    family_medical_history:
+      props.demographicsDetails[0]?.family_medical_history,
+    surgeries: props.demographicsDetails[0]?.surgeries,
+    insurance_provider: props.demographicsDetails[0]?.insurance_provider,
+  };
+  const [isAvailable, setIsAvailable] = useState(false);
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
     lName: Yup.string().required("Required"),
@@ -70,8 +69,8 @@ const Demographics = (props) => {
     surgeries: Yup.string().required("Required"),
     insurance_provider: Yup.string().required("Required"),
   });
-
-  const onSubmit = (values) => {
+  let history = useHistory();
+  const onSubmit = (values, onSubmitProps) => {
     const payload = {
       fName: values.fName,
       lName: values.lName,
@@ -93,14 +92,16 @@ const Demographics = (props) => {
       message: "Demographics added...",
       type: "success",
     });
+    history.push("/immunization");
   };
 
   return (
     <>
       <Formik
-        initialValues={initialValues}
+        initialValues={isAvailable ? savedValues : initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
+        enableReinitialize
       >
         {(props) => (
           <div className="container mt-5">
@@ -115,7 +116,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="fName"
                       id="fName"
-                      value={initialValues.fName}
                       disabled={isAvailable}
                     />
                     <div className="error">
@@ -129,7 +129,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="lName"
                       id="lName"
-                      value={initialValues.lName}
                       disabled={isAvailable}
                     />
                     <div className="error">
@@ -143,7 +142,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="dob"
                       id="dob"
-                      value={initialValues.dob}
                       disabled={isAvailable}
                     />
                     <div className="error">
@@ -158,7 +156,6 @@ const Demographics = (props) => {
                       name="gender"
                       id="gender"
                       disabled={isAvailable}
-                      value={initialValues.gender}
                     >
                       <option value="">Select</option>
                       <option value="male">Male</option>
@@ -176,7 +173,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="ethnicity"
                       id="ethnicity/race"
-                      value={initialValues.ethnicity}
                       disabled={isAvailable}
                     />
                     <div className="error">
@@ -191,7 +187,6 @@ const Demographics = (props) => {
                       name="education"
                       id="education"
                       disabled={isAvailable}
-                      value={initialValues.education}
                     />
                     <div className="error">
                       <ErrorMessage name="education" />
@@ -206,7 +201,6 @@ const Demographics = (props) => {
                       name="employment"
                       id="employment"
                       disabled={isAvailable}
-                      value={initialValues.employment}
                     />
                     <div className="error">
                       <ErrorMessage name="employment" />
@@ -220,7 +214,6 @@ const Demographics = (props) => {
                       name="address"
                       id="address"
                       disabled={isAvailable}
-                      value={initialValues.address}
                     />
                     <div className="error">
                       <ErrorMessage name="address" />
@@ -234,7 +227,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="phone_number"
                       id="phone_number"
-                      value={initialValues.phone_number}
                       disabled={isAvailable}
                     />
                     <div className="error">
@@ -250,7 +242,6 @@ const Demographics = (props) => {
                       name="medical_history"
                       id="medical_history"
                       disabled={isAvailable}
-                      value={initialValues.medical_history}
                     />
                     <div className="error">
                       <ErrorMessage name="medical_history" />
@@ -264,7 +255,6 @@ const Demographics = (props) => {
                       name="family_medical_history"
                       id="family_medical_history"
                       disabled={isAvailable}
-                      value={initialValues.family_medical_history}
                     />
                     <div className="error">
                       <ErrorMessage name="family_medical_history" />
@@ -278,7 +268,6 @@ const Demographics = (props) => {
                       name="surgeries"
                       id="surgeries"
                       disabled={isAvailable}
-                      value={initialValues.surgeries}
                     />
                     <div className="error">
                       <ErrorMessage name="surgeries" />
@@ -293,7 +282,6 @@ const Demographics = (props) => {
                       name="insurance_provider"
                       id="insurance_provider"
                       disabled={isAvailable}
-                      value={initialValues.insurance_provider}
                     />
                     <div className="error">
                       <ErrorMessage name="insurance_provider" />
