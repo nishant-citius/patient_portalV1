@@ -5,12 +5,12 @@ const BarChart  = () => {
     return <div>
         <Bar 
         data={{
-             labels:["Monday", "Tuesday", "Wednesday"," Thursday", "Friday ","Saturday","Sunday" ],
+             labels:["Monday", "Tuesday", "Wednesday"," Thursday", "Friday ","Saturday","susmitha" ],
              datasets:[
                  {
                         label:'No of patients visited',
                         data:[12,19,13,5,2,4],
-                        backgroundColor:[ 'Red','Blue','Yellow','Green','Purple','Orange'],
+                        backgroundColor:['Red'],
                      
                     },
                     { 

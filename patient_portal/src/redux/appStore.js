@@ -5,6 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import { DemographicsReducer } from "./reducers/Demographicsreducer";
 import Immunizationreducer from "./reducers/Immunizationreducer";
+import VitalsReducer from "./reducers/Vitalsreducer";
 import { LoginReducer } from "./reducers/loginReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
 import { RegisterReducer } from "./reducers/RegisterReducer";
@@ -24,6 +25,7 @@ let rootReducer = combineReducers({
   login: LoginReducer,
   demographics: DemographicsReducer,
   immunization: Immunizationreducer,
+  vitals: VitalsReducer,
   medication_allergies: MedicationandAllergiesReducer,
   physicians: PhysicianReducer,
   adduser: AddUserReducer,

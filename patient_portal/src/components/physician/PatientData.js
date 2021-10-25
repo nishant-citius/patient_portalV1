@@ -15,18 +15,16 @@ const mapStateToProps = (rootReducer) => {
   return {
     patientData: rootReducer.patients.patients,
     globalmessage: rootReducer.patients.globalmessage,
-    demographicsData:rootReducer.pdemographics.demographics
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
-    getDemographicsData : () => dispatch(actioncreators.GetDemographics())
   };
 };
 
-export class PatientList1 extends React.Component {
+export class PatientList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -34,19 +32,17 @@ export class PatientList1 extends React.Component {
 
   componentDidMount() {
     this.props.getAllPatients();
-    this.props.getDemographicsData()
-    console.log("Data----",this.props.demographicsData)
   }
 
   render() {
     return (
       <>
-        <div className="container mt-5"><br></br>
-        <Link className="btn btn-warning" to="/physician">
+        <div className="container mt-5">
+          <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
           </Link>
-          <h3 className="text-success text-center fw-bold ">Patient List</h3>
+          <h1 className="text-success text-center fw-bold ">Patient List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>
@@ -54,7 +50,7 @@ export class PatientList1 extends React.Component {
                 <th scope="col">Name</th>
                 <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
-                <th scope="col">Blood Group</th>
+                <th scope="col">Phone</th>
                 <th scope="col">Status</th>
                 <th>Action</th>
               </tr>
@@ -64,10 +60,12 @@ export class PatientList1 extends React.Component {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <Link to={`/userdetails/${user.id}`}><td>{`${user.fName} ${user.lName}`}</td></Link>
+                    <Link to={`/demographics/${user.id}`}>
+                        <td>{`${user.fName} ${user.lName}`}</td>
+                    </Link>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
-                    <td>{user.blood_group}</td>
+                    <td>{user.mobile}</td>
                     <td>
                       {user.isActive ? (
                         <>
@@ -86,18 +84,12 @@ export class PatientList1 extends React.Component {
                         <Link to={`/userdetails/${user.id}`}>
                           <BsPersonFill />
                         </Link>
-                        </span>
-                        <span className="p-2">
-                        <Link to={`/edit/${user.id}`}>
-                          <BsFillPencilFill />
-                        </Link>
-                        
                       </span>
-                      {/* <span className="p-2">
+                      <span className="p-2">
                         <Link to={`/edit/${user.id}`}>
                           <BsFillPencilFill />
                         </Link>
-                      </span> */}
+                      </span>
                       <span className="p-2">
                         <BsFillTrashFill />
                       </span>
@@ -107,11 +99,10 @@ export class PatientList1 extends React.Component {
               })}
             </tbody>
           </table>
-          
         </div>
       </>
     );
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PatientList1);
+export default connect(mapStateToProps, mapDispatchToProps)(PatientList);

@@ -134,6 +134,35 @@
       "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 10
+    },
+    {
+      "email": "sh@email.com",
+      "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
+      "fName": "soujanya",
+      "lName": "G",
+      "dob": "2021-10-07",
+      "username": "soujanya",
+      "mobile": "23214214123",
+      "role": "physician",
+      "speciality": "ww",
+      "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 11
+    },
+    {
+      "email": "rh@email.om",
+      "password": "$2a$10$LwgW0sKxII92n0kDECHpSOVZnSHhTN2KOuUndw1EkcqeiNkb5a8XG",
+      "fName": "rekha",
+      "lName": "c",
+      "dob": "2021-10-20",
+      "username": "rekhac",
+      "rpassword": "12345",
+      "mobile": 23214214123,
+      "blood_group": "b+",
+      "role": "patient",
+      "createdDate": "Mon Oct 25 2021 07:44:46 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 12
     }
   ],
   "demographics": [
@@ -200,6 +229,18 @@
       "startDate": "",
       "endDate": "",
       "timeSlot": ""
+    }
+  ],
+  "patientvitals": [
+    {
+      "height": "18_44",
+      "weight": "dfghjk",
+      "blod_pressure": "1",
+      "temperature": "dfghjk",
+      "pulse": "OxtfXFr",
+      "respiration": "TZEd-AN",
+      "oxigen_saturation": "",
+      "pain": ""
     }
   ],
   "order": [
