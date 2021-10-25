@@ -21,7 +21,7 @@ const mapStateToProps = (rootReducer) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
+    // getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
   };
 };
 
@@ -32,7 +32,6 @@ export class UserList extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.getalluserdata();
     console.log(this.props.demographics);
   }
 

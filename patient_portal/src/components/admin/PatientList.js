@@ -31,7 +31,7 @@ export class PatientList extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getAllPatients();
+    // this.props.getAllPatients();
   }
 
   render() {
