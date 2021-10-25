@@ -33,7 +33,7 @@ const mapStatetoProps = (state) => {
   return {
     isLoggedIn: state.login.isLoggedIn,
     currentUser: state.login.loggedUserInfo,
-    role: state.login.role,
+    //role: state.payload.role,
   };
 };
 
