@@ -6,26 +6,27 @@ import {
   Grid,
   CardActionArea,
   CardContent,
+  Divider,
   makeStyles,
   Typography,
   ImageList,
   ImageListItem,
   ImageListItemBar,
 } from "mui";
+import { propTypes } from "react-bootstrap/esm/Image";
 
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
-    background: "#fd7e14",
-    color: "#fff",
+    background: "#fff",
+    color: "#808080",
     textAlign: "center",
-    minHeight: "80px",
+    minHeight: "250px",
+    minWidth:"50px"
+    
   },
   chartdiv: {
     // padding: "30px 0 30px 0",
    marginBottom:"0px",
-    // margin: "auto"
-    // minHeight:"30 px",
-    // minWidth:"5px"
   },
   Doughnutdiv:{
     minHeight: "300px",
@@ -38,51 +39,6 @@ const useStyles = makeStyles((theme) => ({
   // },
 }));
 
-const data = {
-  labels: [
-    "Oct 2020",
-    "Nov 2020",
-    "Dec 2020",
-    "Jan 2021",
-    "Feb 2021",
-    "March 2021"
-    // "Male",
-    // "Female"
-  ],
-  datasets: [
-    {
-      label: "Outpatients",
-      data: [5, 15, 8, 20, 12, 26],
-      borderColor: "Red",
-      backgroundColor: "Blue",
-    },
-    {
-      label: "Inpatients",
-      data: [1, 22, 11, 25, 18, 21],
-      borderColor: "Blue",
-      backgroundColor: "Red",
-    },
-    
- ],
-};
-  // height={400}
-  // width={600}
-
-const options = {
-  title: {
-    maintainAspectRatio:false,
-  },
-  scales: {
-    yAxes: [
-      {
-        tickes: {
-          beginAtZero:true,
-        },
-      },
-    ],
-  },
-};
-
 const Patient_dashboard = () => {
   const classes = useStyles();
   return (
@@ -92,8 +48,28 @@ const Patient_dashboard = () => {
           <Grid item sm={4} xs={12}>
             <Card className={classes.gridcontainer}>
               <CardContent>
-                <Typography variant="subtitle1" className="fw-bold">
-                  New Patients
+                
+                <Typography variant="subtitle1" className="fw-bold" >
+                  Vitals Details:
+                </Typography>
+                <Typography variant="body2" className="fw-bold mb-2 mt-2" >
+                 <span style={{float:"left"}}>Height</span>: <span style={{float:"right"}}>160 cm</span>
+                </Typography>
+                {/* <Typography variant="body2" className="fw-bold" >
+                 160cm
+                </Typography> */}
+                <Divider/>
+                
+                <Typography variant="body2" className="fw-bold mb-2 mt-2">
+               <span style={{float:"left"}}>Weight</span>:<span style={{float:"right"}}>70 kg</span> 
+                </Typography>
+                <Divider/>
+                <Typography variant="body2" className="fw-bold mb-2 mt-2">
+               <p> <span style={{float:"left"}}>blood pressure</span>: <span style={{float:"right"}}>90mhg</span></p>
+                </Typography>
+                <Divider/>
+                <Typography variant="body2" className="fw-bold mb-2 mt-2">
+                <span style={{float:"left"}}> Pulse</span>: <span style={{float:"right" }}>89/m</span>
                 </Typography>
               </CardContent>
               {/* <CardActionArea>{props.users.length}</CardActionArea> */}
@@ -103,7 +79,19 @@ const Patient_dashboard = () => {
             <Card className={classes.gridcontainer}>
               <CardContent>
                 <Typography variant="subtitle1" className="fw-bold">
-                  Old Patients
+                  Current Medication
+                </Typography>
+                <Typography variant="body2" className="fw-bold">
+                  Medicine name:
+                </Typography>
+                <Typography variant="body2" className="fw-bold">
+                  Dosages:
+                </Typography>
+                <Typography variant="body2" className="fw-bold">
+                  Physician Name:
+                </Typography>
+                <Typography variant="body2" className="fw-bold">
+                  Purpose:
                 </Typography>
               </CardContent>
               {/* <CardActionArea>{props.patients.length}</CardActionArea> */}
@@ -113,7 +101,7 @@ const Patient_dashboard = () => {
             <Card className={classes.gridcontainer}>
               <CardContent>
                 <Typography variant="subtitle1" className="fw-bold">
-                 Discharges
+                 Allergies
                 </Typography>
               </CardContent>
               {/* <CardActionArea>{props.physicians.length}</CardActionArea> */}
@@ -121,25 +109,6 @@ const Patient_dashboard = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container className={classes.container}>
-        <Grid container spacing={4}>
-          <Grid item sm={4} xs={12}>
-            <Card className={classes.chartdiv}>
-              <CardContent>
-                 <div>
-                  <Bar data={data} options={options}></Bar>
-                      </div>
-                      
-                      <div>
-                      
-                  <Doughnut data={data} options={options}></Doughnut>
-                      </div>
-                      
-                </CardContent>
-               </Card>
-              </Grid>
-            </Grid>
-          </Container>      
                 </>
   );
 };

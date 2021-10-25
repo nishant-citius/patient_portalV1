@@ -423,14 +423,14 @@
       "patient_id": "",
       "current_medication": [
         {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
+          "medicineName": "paracetamol",
+          "dosage": "2",
+          "directionstoconsume": "take twice a d day",
+          "frequency": "300mg",
+          "physicianName": "gita",
+          "purpose": "fever",
+          "startDate": "1-10-2021",
+          "endDate": "1-10-2021"
         }
       ],
       "otc_medication": [
