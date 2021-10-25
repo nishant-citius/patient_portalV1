@@ -122,14 +122,12 @@
       "id": 7
     },
     {
-      "email": "arjuna@email.com",
-      "password": "$2a$10$QpSn.GBXY1lA8ysEjIWy1e/J8chmDhQ.zZ9DtVJtg7hhfHiX7fFue",
-      "fName": "arjuna",
-      "lName": "oberoi",
-      "dob": "2021-10-28",
-      "username": "arjuna",
-      "mobile": "6475858",
-      "role": "",
+      "email": "qwerty@email.com",
+      "password": "$2a$10$kNoMnUkPRDqkSNREPTwniu1xk5440xZKme7Zjd6whd3E2r9DUmHkO",
+      "fName": "Qwert",
+      "lName": "qwetrt",
+      "dob": "2021-09-28",
+      "username": "qwerty",
       "rpassword": "12345",
       "blood_group": "o-",
       "createdDate": "Mon Oct 18 2021 13:01:22 GMT+0530 (India Standard Time)",
@@ -407,85 +405,43 @@
   ],
   "immunization": [
     {
-      "id": "",
-      "patient_id": "",
-      "vaccine_brand": "",
-      "age_category": "",
-      "dose_detail": "",
-      "general_vaccine": ""
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "dfghjk",
-      "dose_detail": "1",
-      "general_vaccine": "dfghjk",
-      "userId": "OxtfXFr",
-      "id": "TZEd-AN"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "1",
-      "general_vaccine": "NA",
-      "userId": "OxtfXFr",
-      "id": "iSaFnHN"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
+      "age_category": "45",
+      "vaccine_brand": "CoVaccine",
       "dose_detail": "2",
-      "general_vaccine": "NA",
-      "userId": 5,
-      "id": "GwKaUWS"
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid Vaccine",
+          "vaccine_date": "2021-10-13"
+        }
+      ],
+      "userid": 1,
+      "id": 1
     },
     {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "jhhui",
-      "id": "ZBdyja5"
+      "age_category": "45",
+      "vaccine_brand": "CoVaccine",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid Vaccine",
+          "vaccine_date": "2021-10-15"
+        }
+      ],
+      "userid": 1,
+      "id": 2
     },
     {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "jknj",
-      "id": "O4N8Pw1"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hd",
-      "id": "g0RdcgF"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "",
-      "id": "9CI8q_u"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hjh",
-      "id": "uVZ0w3W"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hdjdj",
-      "id": "uw8XJNf"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hdhf",
-      "id": "8D6h9KG"
+      "age_category": "45",
+      "vaccine_brand": "CoVaccine",
+      "dose_detail": "1",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid General Vaccine",
+          "vaccine_date": "2021-09-27"
+        }
+      ],
+      "userid": 1,
+      "id": 3
     }
   ],
   "appointments": [

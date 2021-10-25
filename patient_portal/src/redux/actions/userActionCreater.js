@@ -281,6 +281,7 @@ export function GetInactiveUsers() {
       (response) => {
         payload.inactiveUsers = response.data;
         payload.inactiveUsersCount = response.data.length;
+        console.log("--------------", payload);
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
@@ -463,7 +464,7 @@ export function GetPatientImmunization(userId) {
     axios.get(`${URLS.GET_PATIENT_IMMUNIZATION}${userId}`).then(
       (response) => {
         payload.globalmessage = `Demographics Retrieved...`;
-        payload.userImmunization = response.data;
+        payload.userImmunization = response.data[0];
         dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
       },
       (error) => {
