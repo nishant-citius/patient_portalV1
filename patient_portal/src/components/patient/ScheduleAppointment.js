@@ -72,7 +72,7 @@ function ScheduleAppointment(props) {
   };
 
   function scheduleAppointmentToday(appointmentData) {
-    adminService.addAppointment(appointmentData).then(
+    adminService.addNewAppointment(appointmentData).then(
       (response) => {
         if (response.status === 200) {
           props.flashNotification({
@@ -81,7 +81,12 @@ function ScheduleAppointment(props) {
           });
         }
       },
-      (error) => {}
+      (error) => {
+        props.flashNotification({
+          message: "Appointment Can't be scheduled..!",
+          type: "error",
+        });
+      }
     );
   }
 
