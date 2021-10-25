@@ -6,6 +6,18 @@ import * as Yup from "yup";
 import { useHistory } from "react-router";
 
 const Immunization = (props) => {
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      debugger;
+      console.log(props.immunizationDetails);
+      if (
+        props.immunizationDetails.length &&
+        props.immunizationDetails.length > 0
+      ) {
+        alert("Hii");
+      }
+    }
+  }, []);
   const initialValues = {
     age_category: "",
     vaccine_brand: "",
