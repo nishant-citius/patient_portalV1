@@ -31,6 +31,8 @@ import AddUsers from "./admin/common/AddUsers";
 import MyProfile from "./patient/MyProfile";
 import Notification from "shared/notification/Notification";
 import { object } from "yup/lib/locale";
+import AppointmentList from "./patient/AppointmentList";
+import ScheduleAppointment from "./patient/ScheduleAppointment";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -77,22 +79,17 @@ function ShellComponent(props) {
         <Route path="/login">
           <Login flashNotification={showSnacksBar} />
         </Route>
-
         <Route path="/registeruser">
           <RegisterUser flashNotification={showSnacksBar} />
         </Route>
-
         {/* <Route path="/admin" component={AdminDashboard} /> */}
-
         <Route path="/admin">
           <AdminDashboard flashNotification={showSnacksBar} />
         </Route>
-
         <Route path="/patient" component={Patient_dashboard} />
         <Route path="/physician" component={Physician_dashboard} />
-
         <Route path="/demographics" component={Demographics}>
-        <Demographics flashNotification={showSnacksBar}/>
+          <Demographics flashNotification={showSnacksBar} />
         </Route>
         <Route path="/immunization" component={Immunization} />
         <Route path="/myprofile" component={MyProfile} />
@@ -100,7 +97,6 @@ function ShellComponent(props) {
         {/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
-
         <Route path={"/patientlist"} component={PatientList} />
         <Route path={"/allusers"} component={UserList} />
         <Route path={"/addusers"} component={AddUsers} />
@@ -109,10 +105,11 @@ function ShellComponent(props) {
         <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
         <Route path={"/userdetails/:id"} component={UserDetails} />
         <Route path={"/edit/:id"} component={EditUser} />
-
         <Route path={"/patientdata"} component={PatientList1} />
         <Route path={"/patientdemographics"} component={PatientDemographics} />
         <Route path={"/patientinactive"} component={PatientInactiveError} />
+        <Route path={"/pappointments"} component={AppointmentList} />
+        <Route path={"/schedule_appointment"} component={ScheduleAppointment} />
       </Switch>
     </div>
   );
