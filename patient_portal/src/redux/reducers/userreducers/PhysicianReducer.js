@@ -8,6 +8,5 @@ export function PhysicianReducer(state = appState, action) {
       physicians: action.payload.physicians,
     };
   }
-
   return state;
 }

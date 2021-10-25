@@ -270,6 +270,50 @@ export function GetInactiveUsers() {
   };
 }
 
+export function PhysiciansBySpeiciality(speciality) {
+  let payload = {
+    globalmessage: "",
+    sepecializedPhysicians: [],
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.SPECILISED_PHYSICIANS}${speciality}`).then(
+      (response) => {
+        payload.globalmessage = `Specility`;
+        payload.sepecializedPhysicians = response.data;
+        dispatch({ type: actions.SPECIALIZED_PHYSICIANS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.sepecializedPhysicians = [];
+        dispatch({ type: actions.SPECIALIZED_PHYSICIANS, payload: payload });
+      }
+    );
+  };
+}
+
+export function PhysiciansByName(physicianName) {
+  let payload = {
+    globalmessage: "",
+    sepecializedPhysicians: [],
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.SPECILISED_PHYSICIANS}${physicianName}`).then(
+      (response) => {
+        payload.globalmessage = `Physician By Name`;
+        payload.sepecializedPhysicians = response.data;
+        dispatch({ type: actions.SPECIALIZED_PHYSICIANS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.sepecializedPhysicians = [];
+        dispatch({ type: actions.SPECIALIZED_PHYSICIANS, payload: payload });
+      }
+    );
+  };
+}
+
 /***************Pevious******************/
 export function GetAllUsersAsync() {
   return (dispatch) => {
