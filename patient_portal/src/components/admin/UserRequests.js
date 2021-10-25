@@ -13,47 +13,46 @@ import {
 } from "../../mui";
 
 const UserRequests = (props) => {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetchAllUsers()
-  }, [])
+    fetchAllUsers();
+  }, []);
 
   function fetchAllUsers() {
-    // props.getalluserdata()
-    // props.getInactiveUsersData()
     setUsers(inactiveUsersList());
+    console.log("Inactive Users-", props.inUsersCount);
   }
 
   const inactiveUsersList = () => {
     let inactiveUsers = props.users.filter((user) => {
-      if (!user.isActive) return user
-    })
-    return inactiveUsers
-  }
+      if (!user.isActive) return user;
+    });
+    return inactiveUsers;
+  };
 
   const filterUsers = (_id) => {
     let filteredArray = users.filter((user) => {
       if (user.id !== _id) {
-        return user
+        return user;
       }
-    })
-    setUsers(filteredArray)
-  }
+    });
+    setUsers(filteredArray);
+  };
 
   const approve = (user) => {
-    filterUsers(user.id)
+    filterUsers(user.id);
     let newObj = {
       ...user,
       password: user.rpassword,
       isActive: true,
     };
     props.updateUser(user.id, newObj);
-  }
+  };
 
   const reject = (user) => {
-    filterUsers(user.id)
-  }
+    filterUsers(user.id);
+  };
 
   return (
     <>
@@ -102,16 +101,16 @@ const UserRequests = (props) => {
       </List>
     </>
   );
-}
+};
 
 const mapStatetoProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
     users: state.getallusers.users,
     inUsers: state.inactiveUsers.inactiveUsers,
-    responseText: state.updateusers.globalmessage,
-  }
-}
+    inUsersCount: state.inactiveUsers.inactiveUserCount,
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

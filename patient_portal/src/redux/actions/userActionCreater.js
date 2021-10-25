@@ -258,6 +258,7 @@ export function GetInactiveUsers() {
       (response) => {
         payload.inactiveUsers = response.data;
         payload.inactiveUsersCount = response.data.length;
+        console.log("--------------", payload);
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
