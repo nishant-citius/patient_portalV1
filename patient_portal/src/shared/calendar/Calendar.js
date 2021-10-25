@@ -1,23 +1,7 @@
 import React, { useState } from "react";
-// import Scheduler from "react-mui-scheduler";
+import Scheduler from "react-mui-scheduler";
 
 function Calendar() {
-  const handleCellClick = (event, row, day) => {
-    console.log("Cell Clicked...");
-  };
-
-  const handleEventClick = (event, item) => {
-    console.log("Event Handler...");
-  };
-
-  const handleEventsChange = (item) => {
-    console.log("Event Changed.....");
-  };
-
-  const handleAlertCloseButtonClicked = (item) => {
-    console.log("Alert Close Btn clicked...............");
-  };
-
   const [state, setState] = useState({
     options: {
       transitionMode: "zoom", // or fade
@@ -46,16 +30,16 @@ function Calendar() {
 
   const events = [
     {
-      id: "event-1", //apptId
-      label: "Medical consultation", //title
-      groupLabel: "Dr Shaun Murphy",
-      user: "Dr Shaun Murphy", //physiian Name
+      id: "event-1",
+      label: "Medical consultation", //aPPOINTMENT tITLE
+      groupLabel: "Dr Shaun Murphy", //physician name
+      user: "Dr Shaun Murphy",
       color: "#f28f6a",
-      startHour: "04:00 AM", //start Time
-      endHour: "05:00 AM", //endTime
-      date: "2021-09-28", //date
+      startHour: "04:00 AM",
+      endHour: "05:00 AM",
+      date: "2021-09-28",
       createdAt: new Date(),
-      createdBy: "Kristina Mayer", //patient Name
+      createdBy: "Kristina Mayer", //PatientName
     },
     {
       id: "event-2",
@@ -95,20 +79,33 @@ function Calendar() {
     },
   ];
 
+  const handleCellClick = (event, row, day) => {
+    // Do something...
+  };
+
+  const handleEventClick = (event, item) => {
+    // Do something...
+  };
+
+  const handleEventsChange = (item) => {
+    // Do something...
+  };
+
+  const handleAlertCloseButtonClicked = (item) => {
+    // Do something...
+  };
+
   return (
-    <>
-      {/* <Scheduler
-        events={events}
-        options={state?.options}
-        alertProps={state?.alertProps}
-        toolbarProps={state?.toolbarProps}
-        onEventsChange={handleEventsChange}
-        onCellClick={handleCellClick}
-        onTaskClick={handleEventClick}
-        onAlertCloseButtonClicked={handleAlertCloseButtonClicked}
-      /> */}
-    </>
+    <Scheduler
+      events={events}
+      options={state?.options}
+      alertProps={state?.alertProps}
+      toolbarProps={state?.toolbarProps}
+      onEventsChange={handleEventsChange}
+      onCellClick={handleCellClick}
+      onTaskClick={handleEventClick}
+      onAlertCloseButtonClicked={handleAlertCloseButtonClicked}
+    />
   );
 }
-
 export default Calendar;

@@ -26,6 +26,22 @@ function ScheduleAppointment(props) {
     userid: props.currentUser.id,
   };
 
+  function getDoc() {
+    console.log("speciality");
+    let spl_data = document.getElementById("#spl")
+      ? document.getElementById("#spl").value()
+      : "cancer";
+
+    console.log("s", spl_data);
+
+    let arr = props.physiciandata.filter((item) => {
+      return item.speciality.toLowerCase() === spl_data.toLowerCase();
+    });
+
+    console.log("ss", arr);
+    setDoctorsList(arr);
+  }
+
   const validationSchema = Yup.object().shape({
     mobile_no: Yup.string()
       .required("Required")
@@ -131,12 +147,7 @@ function ScheduleAppointment(props) {
                   </div>
                   <div className="col-12 col-md-6">
                     <label>Doctor's</label>
-                    <Field
-                      as="select"
-                      type="number"
-                      className="form-control"
-                      name="doc_name"
-                    >
+                    <Field as="select" className="form-control" name="doc_name">
                       <option value="">Select</option>
                       {doctorsList.map((doctor) => (
                         <option value={doctor.id}>
@@ -148,17 +159,22 @@ function ScheduleAppointment(props) {
                       <ErrorMessage name="doc_name" />
                     </div>
                   </div>
-                  {/* <div className="col-12 col-md-6">
-                  <label>Speciality</label>
-                  <Field type="text" className="form-control" name="doc_spl" />
-                  <option value="">Select</option>
-                    <option value="">Spc1</option>
-                    <option value="">Spc2</option>
-                  </Field>
-                  <div className="error">
-                    <ErrorMessage name="doc_spl" />
+                  <div className="col-12 col-md-6">
+                    <label>Speciality</label>
+                    <Field
+                      as="select"
+                      className="form-control"
+                      id="spl"
+                      name="doc_spl"
+                      onChange={getDoc}
+                    >
+                      <option value="">Select</option>
+                      <option value="Cancer">Cancer</option>
+                    </Field>
+                    <div className="error">
+                      <ErrorMessage name="doc_spl" />
+                    </div>
                   </div>
-                </div> */}
 
                   <div className="col-12 col-md-6">
                     <label>Appointment TItle</label>
