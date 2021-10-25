@@ -169,13 +169,13 @@ function SideNav(props) {
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="">
+              <Link to="/schedule_appointment">
                 <Icon icon="whh:appointment" className={classes.icon} />
                 <span className={classes.text}>Schedule Appointment</span>
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="">
+              <Link to="/pappointments">
                 <ListAltIcon className={classes.icon} />
                 <span className={classes.text}>Appointment History</span>
               </Link>
