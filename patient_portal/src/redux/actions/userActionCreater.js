@@ -258,6 +258,7 @@ export function GetInactiveUsers() {
       (response) => {
         payload.inactiveUsers = response.data;
         payload.inactiveUsersCount = response.data.length;
+        console.log("--------------", payload);
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
@@ -434,6 +435,28 @@ export function GetPatientDemographics(userId) {
         payload.globalmessage = `${error.response.data}`;
         payload.userDemographics = {};
         dispatch({ type: actions.GET_PATIENT_DEMOGRAPHICS, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetPatientImmunization(userId) {
+  let payload = {
+    globalmessage: "",
+    userImmunization: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_IMMUNIZATION}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Demographics Retrieved...`;
+        payload.userImmunization = response.data[0];
+        dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userImmunization = {};
+        dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
       }
     );
   };
