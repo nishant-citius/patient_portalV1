@@ -109,7 +109,9 @@ function ShellComponent(props) {
         <Route path={"/patientdemographics"} component={PatientDemographics} />
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
-        <Route path={"/schedule_appointment"} component={ScheduleAppointment} />
+        <Route path={"/schedule_appointment"}>
+          <ScheduleAppointment flashNotification={showSnacksBar} />
+        </Route>
       </Switch>
     </div>
   );
