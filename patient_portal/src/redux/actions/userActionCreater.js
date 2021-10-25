@@ -157,6 +157,29 @@ export function GetAllPhysicianData() {
   };
 }
 
+export function GetAllNurseData() {
+  let payload = {
+    nurses: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_NURSE).then(
+      (response) => {
+        payload.globalmessage = `Nurse data retrieved successfully. Count: ${response.data.length}`;
+        payload.nurses = response.data;
+        dispatch({ type: actions.NURSES, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.nurses = [];
+        dispatch({ type: actions.NURSES, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetAllPatientsData() {
   let payload = {
     patients: [],

@@ -10,6 +10,7 @@ export const REGISTER = "REGISTER";
 
 export const PHYSICIANS = "PHYSICIANS";
 export const PATIENTS = "PATIENTS";
+export const NURSES = "NURSES";
 export const ADD_USER = "ADD_USER";
 export const GET_ALL_USERS = "GET_ALL_USERS";
 export const UPDATE_USER = "UPDATE_USER";
@@ -18,5 +19,3 @@ export const GET_PATIENT_DEMOGRAPHICS = "GET_PATIENT_DEMOGRAPHICS";
 
 export const GET_DEMOGRAPHICS = "GET_DEMOGRAPHICS";
 export const GET_INACTIVE_USERS = "GET_INACTIVE_USERS";
-
-
