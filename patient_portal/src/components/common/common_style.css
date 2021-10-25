@@ -26,3 +26,11 @@ i.icon {
   margin-top: 0px !important;
   margin-bottom: 5px !important;
 }
+.mrg_20{
+  margin-left: 20px;
+}
+.btn_wdth{
+  min-width: 50px;
+  font-size: 20px;
+  margin-top: 23px;
+}

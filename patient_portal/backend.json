@@ -358,17 +358,26 @@
       ],
       "otc_medication": [
         {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
+          "strength": "ihihihihi",
+          "directiontoconsume": "ihihihihih",
+          "socialDrugs": "drink"
+        },
+        {
+          "strength": "ijijijij",
+          "directiontoconsume": "ijijijijiji",
+          "socialDrugs": "smoke"
         }
       ],
-      "pastprescribedmedication": [
+      "past_medication": [
         {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
+          "pastdrugName": "jijijihih",
+          "strength": "jijiihi",
+          "directiontoconsume": "ihihihihih"
+        },
+        {
+          "pastdrugName": "khihihih",
+          "strength": "ihihihihi",
+          "directiontoconsume": "kjojojo"
         }
       ],
       "allergies": [
