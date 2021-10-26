@@ -58,7 +58,7 @@ function ScheduleAppointment(props) {
       lName: props.currentUser.lName,
       dob: props.currentUser.dob,
       mobile_no: values.mobile_no,
-      doc_id: values.doc_name,
+      doc_id: Number(values.doc_name),
       doc_name: doctorName,
       appointment_title: values.appointment_title,
       appointment_start_time: values.appointment_start_time,
@@ -70,7 +70,6 @@ function ScheduleAppointment(props) {
       // vistInfo: values.vistInfo,
       patientId: props.currentUser.id,
     };
-    console.log("~~~~~~~~~~~~~~~~~", payload);
     scheduleAppointmentToday(payload);
     actions.resetForm();
   };

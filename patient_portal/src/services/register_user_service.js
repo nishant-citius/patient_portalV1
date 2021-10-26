@@ -85,7 +85,20 @@ class AdminServices {
     return axios.put(url, JSON.stringify(updatedData), config);
   }
 
-  getAppointmentsList() {}
+  getAllAppointments() {
+    const url = `${URLS.BASE_URL}/appointments`;
+    return axios.get(url);
+  }
+
+  getPatientAppointments(patientId) {
+    const url = `${URLS.BASE_URL}/appointments?patientid=${patientId}`;
+    return axios.get(url);
+  }
+
+  getPhysicianAppointments(physicianId) {
+    const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}`;
+    return axios.get(url);
+  }
 
   addNewAppointment(appointmentData) {
     let url = URLS.BASE_URL + "/appointments";
