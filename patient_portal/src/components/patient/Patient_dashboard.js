@@ -58,8 +58,7 @@ const Patient_dashboard = (props) => {
   
   const classes = useStyles();
   console.log(props.immunizationDetails,"after useeffect")
-  const {immunizationDetails}=props;
-  console.log(immunizationDetails,"immunization details")
+
 
   return (
    // const tableHead = Object.keys(props.user.referrerPromos[1]);
@@ -98,14 +97,9 @@ const Patient_dashboard = (props) => {
 
           <Grid item sm={4} xs={12}>
             <Card className={classes.gridcontainer}>
-           { Object.keys(immunizationDetails).map(function(key) {
-    // <option value={key}>{immunizationDetails[key]}</option>
-
-                 
-                  return(
               <CardContent>
                   <Typography variant="subtitle1" className="fw-bold">
-                  {immunizationDetails[key]}
+                  age_category
                 </Typography>
                 <Typography variant="body2" className="fw-bold">
                 {/* {immunizations.vaccine_brand} */}vaccine_brand
@@ -120,11 +114,7 @@ const Patient_dashboard = (props) => {
                 Other general Vaccines:
                 </Typography>
               </CardContent>
-                  
-                   )
-           }
-           )
-             }  
+             
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
