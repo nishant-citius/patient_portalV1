@@ -7,6 +7,7 @@ import { adminService } from "../../services/register_user_service";
 
 function ScheduleAppointment(props) {
   const [doctorsList, setDoctorsList] = useState([]);
+  const [doctorName, setDcotorName] = useState("");
 
   useEffect(() => {
     setDoctorsList(props.physiciandata);
@@ -19,26 +20,23 @@ function ScheduleAppointment(props) {
     mobile_no: "",
     doc_name: "",
     appointment_title: "",
-    appointment_time: "",
+    appointment_start_time: "",
+    appointment_end_time: "",
     appointmentDate: "",
     appointment_desc: "",
-    vistInfo: "",
+    // vistInfo: "",
     userid: props.currentUser.id,
   };
 
   function getDoc() {
-    console.log("speciality");
     let spl_data = document.getElementById("#spl")
       ? document.getElementById("#spl").value()
       : "cancer";
-
-    console.log("s", spl_data);
 
     let arr = props.physiciandata.filter((item) => {
       return item.speciality.toLowerCase() === spl_data.toLowerCase();
     });
 
-    console.log("ss", arr);
     setDoctorsList(arr);
   }
 
@@ -50,31 +48,37 @@ function ScheduleAppointment(props) {
     doc_name: Yup.string().required("Required"),
     appointmentDate: Yup.string().required("Required"),
     appointment_title: Yup.string().required("Required"),
-    appointment_time: Yup.string().required("Required"),
+    appointment_start_time: Yup.string().required("Required"),
+    appointment_end_time: Yup.string().required("Required"),
   });
 
   const onSubmit = (values) => {
-    console.log("-----------", values);
     const payload = {
       fName: props.currentUser.fName,
       lName: props.currentUser.lName,
       dob: props.currentUser.dob,
       mobile_no: values.mobile_no,
-      doc_name: values.doc_name,
+      doc_id: values.doc_name,
+      doc_name: doctorName,
       appointment_title: values.appointment_title,
-      appointment_time: values.appointment_time,
+      appointment_start_time: values.appointment_start_time,
+      appointment_end_time: values.appointment_end_time,
       appointmentDate: values.appointmentDate,
       appointment_desc: values.appointment_desc,
-      vistInfo: values.vistInfo,
+      createdBy: props.currentUser.fName + props.currentUser.lName,
+      createdDate: new Date(),
+      // vistInfo: values.vistInfo,
       patientId: props.currentUser.id,
     };
+    console.log("~~~~~~~~~~~~~~~~~", payload);
     scheduleAppointmentToday(payload);
+    // resetForm();
   };
 
   function scheduleAppointmentToday(appointmentData) {
     adminService.addNewAppointment(appointmentData).then(
       (response) => {
-        if (response.status === 200) {
+        if (response.status === 201) {
           props.flashNotification({
             message: "Appointment Scheduled Succssfully...!",
             type: "success",
@@ -156,6 +160,7 @@ function ScheduleAppointment(props) {
                       <option value="">Select</option>
                       {doctorsList.map((doctor) => (
                         <option value={doctor.id}>
+                          {setDcotorName(doctor.fName + doctor.lName)}
                           {doctor.fName + doctor.lName}
                         </option>
                       ))}
@@ -206,14 +211,25 @@ function ScheduleAppointment(props) {
                   </div>
 
                   <div className="col-12 col-md-6">
-                    <label>Appointment Time</label>
+                    <label>Appointment Start Time</label>
                     <Field
                       type="time"
                       className="form-control"
-                      name="appointment_time"
+                      name="appointment_start_time"
                     />
                     <div className="error">
-                      <ErrorMessage name="appointment_time" />
+                      <ErrorMessage name="appointment_start_time" />
+                    </div>
+                  </div>
+                  <div className="col-12 col-md-6">
+                    <label>Appointment End Time</label>
+                    <Field
+                      type="time"
+                      className="form-control"
+                      name="appointment_end_time"
+                    />
+                    <div className="error">
+                      <ErrorMessage name="appointment_end_time" />
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
@@ -227,7 +243,7 @@ function ScheduleAppointment(props) {
                       <ErrorMessage name="appointment_desc" />
                     </div>
                   </div>
-                  <div className="col-12 col-md-6 pt-1">
+                  {/* <div className="col-12 col-md-6 pt-1">
                     <label>First Time Visit?</label>
                     <br />
                     <div class="form-check form-check-inline mt-3">
@@ -254,7 +270,7 @@ function ScheduleAppointment(props) {
                         No
                       </label>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="row mt-3">
                     <div className="col-12 col-md-4 text-center">
                       <button type="submit" className="btn btn-primary mt-3">
