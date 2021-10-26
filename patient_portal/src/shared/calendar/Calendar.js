@@ -13,7 +13,6 @@ function Calendar(props) {
   function mapApiResponse(_arr) {
     let newEvents = _arr.map((appt) => {
       let colorArr = pickRandomColor();
-      console.log(colorArr);
       return {
         id: appt.id,
         label: appt.appointment_title,
@@ -34,11 +33,11 @@ function Calendar(props) {
     options: {
       transitionMode: "zoom", // or fade
       startWeekOn: "Mon", // or Sun
-      defaultMode: "month", // or week | day | timeline
-      minWidth: 540,
-      maxWidth: 540,
-      minHeight: 540,
-      maxHeight: 540,
+      defaultMode: "week", // or week | day | timeline
+      minWidth: 340,
+      maxWidth: 340,
+      minHeight: 340,
+      maxHeight: 340,
     },
     alertProps: {
       open: true,
@@ -57,19 +56,22 @@ function Calendar(props) {
   });
 
   const handleCellClick = (event, row, day) => {
-    // Do something...
+    // console.log("Event--", event);
+    // console.log("Row--", row);
+    // console.log("day--", day);
   };
 
   const handleEventClick = (event, item) => {
-    // Do something...
+    // console.log("Event--", event);
+    // console.log("Row--", item);
   };
 
   const handleEventsChange = (item) => {
-    // Do something...
+    console.log("Ajinkya-3");
   };
 
   const handleAlertCloseButtonClicked = (item) => {
-    // Do something...
+    console.log("Ajinkya-4");
   };
   return (
     <Scheduler

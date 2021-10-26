@@ -154,21 +154,6 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label>Doctor's</label>
-                    <Field as="select" className="form-control" name="doc_name">
-                      <option value="">Select</option>
-                      {doctorsList.map((doctor) => (
-                        <option value={doctor.id}>
-                          {setDcotorName(doctor.fName + doctor.lName)}
-                          {doctor.fName + doctor.lName}
-                        </option>
-                      ))}
-                    </Field>
-                    <div className="error">
-                      <ErrorMessage name="doc_name" />
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-6">
                     <label>Speciality</label>
                     <Field
                       as="select"
@@ -184,7 +169,21 @@ function ScheduleAppointment(props) {
                       <ErrorMessage name="doc_spl" />
                     </div>
                   </div>
-
+                  <div className="col-12 col-md-6">
+                    <label>Doctor's</label>
+                    <Field as="select" className="form-control" name="doc_name">
+                      <option value="">Select</option>
+                      {doctorsList.map((doctor) => (
+                        <option value={doctor.id}>
+                          {setDcotorName(doctor.fName + doctor.lName)}
+                          {doctor.fName + doctor.lName}
+                        </option>
+                      ))}
+                    </Field>
+                    <div className="error">
+                      <ErrorMessage name="doc_name" />
+                    </div>
+                  </div>
                   <div className="col-12 col-md-6">
                     <label>Appointment TItle</label>
                     <Field
