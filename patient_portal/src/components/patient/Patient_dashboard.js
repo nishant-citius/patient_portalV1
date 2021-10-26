@@ -1,5 +1,6 @@
-import React from "react";
+import {React, useEffect} from "react";
 import { Bar,Doughnut} from 'react-chartjs-2';
+import { connect } from "react-redux";
 import {
   Container,
   Card,
@@ -14,6 +15,8 @@ import {
   ImageListItemBar,
 } from "mui";
 import { propTypes } from "react-bootstrap/esm/Image";
+
+
 
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
@@ -39,17 +42,34 @@ const useStyles = makeStyles((theme) => ({
   // },
 }));
 
-const Patient_dashboard = () => {
+
+
+const Patient_dashboard = (props) => {
+
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (!props.immunizationDetails) {
+        return;
+      } else {
+        console.log("<---AAAAAAAAA--->", props.immunizationDetails);
+      }
+    }
+  }, [props.immunizationDetails, props.isLoggedIn]);
+  
   const classes = useStyles();
+  console.log(props.immunizationDetails,"after useeffect")
+  const {immunizationDetails}=props;
+  console.log(immunizationDetails,"immunization details")
+
   return (
+   // const tableHead = Object.keys(props.user.referrerPromos[1]);
     <>
      <Container className={classes.container}>
         <Grid container spacing={4}>
           <Grid item sm={4} xs={12}>
             <Card className={classes.gridcontainer}>
-              <CardContent>
-                
-                <Typography variant="subtitle1" className="fw-bold" >
+               <CardContent>
+                 <Typography variant="subtitle1" className="fw-bold" >
                   Vitals Details:
                 </Typography>
                 <Typography variant="body2" className="fw-bold mb-2 mt-2" >
@@ -75,33 +95,44 @@ const Patient_dashboard = () => {
               {/* <CardActionArea>{props.users.length}</CardActionArea> */}
             </Card>
           </Grid>
+
           <Grid item sm={4} xs={12}>
             <Card className={classes.gridcontainer}>
+           { Object.keys(immunizationDetails).map(function(key) {
+    // <option value={key}>{immunizationDetails[key]}</option>
+
+                 
+                  return(
               <CardContent>
-                <Typography variant="subtitle1" className="fw-bold">
-                  Current Medication
+                  <Typography variant="subtitle1" className="fw-bold">
+                  {immunizationDetails[key]}
                 </Typography>
                 <Typography variant="body2" className="fw-bold">
-                  Medicine name:
+                {/* {immunizations.vaccine_brand} */}vaccine_brand
+                </Typography>
+                <Typography variant="body2" className="fw-bold">p
+                  {/* {immunizations.dose_detail} */}dose_detail
                 </Typography>
                 <Typography variant="body2" className="fw-bold">
-                  Dosages:
+                Dose Details
                 </Typography>
                 <Typography variant="body2" className="fw-bold">
-                  Physician Name:
-                </Typography>
-                <Typography variant="body2" className="fw-bold">
-                  Purpose:
+                Other general Vaccines:
                 </Typography>
               </CardContent>
-              {/* <CardActionArea>{props.patients.length}</CardActionArea> */}
+                  
+                   )
+           }
+           )
+             }  
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
             <Card className={classes.gridcontainer}>
               <CardContent>
+
                 <Typography variant="subtitle1" className="fw-bold">
-                 Allergies
+                 Immunization Details:
                 </Typography>
               </CardContent>
               {/* <CardActionArea>{props.physicians.length}</CardActionArea> */}
@@ -112,5 +143,14 @@ const Patient_dashboard = () => {
                 </>
   );
 };
-
-export default Patient_dashboard;
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.login.loggedUserInfo,
+    //allusers: state.immunization.Immunizationsreducer,
+    immunizationDetails: state.patientImmunization.patientImmunization,
+    isLoggedIn: state.login.isLoggedIn,
+  };
+};
+let hof = connect(mapStateToProps,null);
+export default hof(Patient_dashboard);
+//export default Patient_dashboard;

@@ -423,14 +423,14 @@
       "patient_id": "",
       "current_medication": [
         {
-          "medicineName": "paracetamol",
-          "dosage": "2",
-          "directionstoconsume": "take twice a d day",
-          "frequency": "300mg",
-          "physicianName": "gita",
-          "purpose": "fever",
-          "startDate": "1-10-2021",
-          "endDate": "1-10-2021"
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
         }
       ],
       "otc_medication": [
@@ -475,34 +475,24 @@
   ],
   "immunization": [
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-13"
-        }
-      ],
-      "userid": 1,
-      "id": 1
+      "id": "",
+      "patient_id": "",
+      "vaccine_brand": "",
+      "age_category": "",
+      "dose_detail": "",
+      "general_vaccine": ""
     },
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-15"
-        }
-      ],
-      "userid": 1,
-      "id": 2
+      "age_category": "18_44",
+      "vaccine_brand": "dfghjk",
+      "dose_detail": "1",
+      "general_vaccine": "dfghjk",
+      "userId": "OxtfXFr",
+      "id": "TZEd-AN"
     },
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
       "dose_detail": "1",
       "general_vaccine": "NA",
       "userId": "OxtfXFr",
@@ -564,6 +554,27 @@
       "dose_detail": "",
       "general_vaccine": "hdhf",
       "id": "8D6h9KG"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "covishield",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "polio",
+          "vaccine_date": "2021-10-26"
+        },
+        {
+          "vaccine_name": "xyz",
+          "vaccine_date": "2021-10-12"
+        },
+        {
+          "vaccine_name": "abc",
+          "vaccine_date": "2021-10-04"
+        }
+      ],
+      "userid": 13,
+      "id": "xy3C_1I"
     }
   ],
   "appointments": [
