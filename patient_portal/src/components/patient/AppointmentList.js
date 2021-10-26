@@ -133,11 +133,7 @@ function AppointmentList(props) {
           Appointment List
         </TabPanel>
         <TabPanel value={value} index={1}>
-          {props.isLoggedIn ? (
-            <Calendar apopointmnets={appointmentsList} />
-          ) : (
-            ""
-          )}
+          {props.isLoggedIn ? <Calendar apopointmnets={appts} /> : ""}
         </TabPanel>
       </Box>
     </>

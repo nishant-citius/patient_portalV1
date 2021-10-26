@@ -2,39 +2,42 @@ import React, { useState, useEffect } from "react";
 import Scheduler from "react-mui-scheduler";
 
 function Calendar(props) {
-  // function mapApiResponse(_arr) {
-  //   let newEvents = _arr.map((appt) => {
-  //     return {
-  //       id: appt.id,
-  //       label: appt.appointment_title,
-  //       groupLabel: appt.doc_name,
-  //       user: appt.doc_name,
-  //       color: "#f28f6a",
-  //       startHour: appt.appointment_start_time,
-  //       endHour: appt.appointment_end_time,
-  //       date: appt.appointmentDate,
-  //       createdAt: new Date(),
-  //       createdBy: appt.createdBy,
-  //     };
-  //   });
-  //   console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~", newEvents);
-  // }
+  const events = mapApiResponse(props.apopointmnets);
 
-  // useEffect(() => {
-  //   if (props.apopointmnets.length) {
-  //     mapApiResponse(props.apopointmnets);
-  //   }
-  // }, []);
+  function pickRandomColor() {
+    let colorsArray = ["#f28f6a", "#099ce5", "#263686", "#f28f6a"],
+      randomNum = Math.round(Math.random() * (3 - 0) + 0);
+    return colorsArray[randomNum];
+  }
+
+  function mapApiResponse(_arr) {
+    let newEvents = _arr.map((appt) => {
+      let colorArr = pickRandomColor();
+      return {
+        id: appt.id,
+        label: appt.appointment_title,
+        groupLabel: appt.doc_name,
+        user: appt.doc_name,
+        color: colorArr,
+        startHour: appt.appointment_start_time,
+        endHour: appt.appointment_end_time,
+        date: appt.appointmentDate,
+        createdAt: new Date(),
+        createdBy: appt.createdBy,
+      };
+    });
+    return newEvents;
+  }
 
   const [state, setState] = useState({
     options: {
       transitionMode: "zoom", // or fade
       startWeekOn: "Mon", // or Sun
-      defaultMode: "month", // or week | day | timeline
-      minWidth: 540,
-      maxWidth: 540,
-      minHeight: 540,
-      maxHeight: 540,
+      defaultMode: "week", // or week | day | timeline
+      minWidth: 340,
+      maxWidth: 340,
+      minHeight: 340,
+      maxHeight: 340,
     },
     alertProps: {
       open: true,
@@ -53,23 +56,26 @@ function Calendar(props) {
   });
 
   const handleCellClick = (event, row, day) => {
-    // Do something...
+    // console.log("Event--", event);
+    // console.log("Row--", row);
+    // console.log("day--", day);
   };
 
   const handleEventClick = (event, item) => {
-    // Do something...
+    // console.log("Event--", event);
+    // console.log("Row--", item);
   };
 
   const handleEventsChange = (item) => {
-    // Do something...
+    console.log("Ajinkya-3");
   };
 
   const handleAlertCloseButtonClicked = (item) => {
-    // Do something...
+    console.log("Ajinkya-4");
   };
   return (
     <Scheduler
-      events={props.apopointmnets}
+      events={events}
       options={state?.options}
       alertProps={state?.alertProps}
       toolbarProps={state?.toolbarProps}
