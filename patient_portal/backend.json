@@ -283,6 +283,34 @@
       "createdDate": "Fri Oct 22 2021 18:50:02 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 22
+    },
+    {
+      "email": "doc_1@email.com",
+      "password": "$2a$10$9zEfkwBVh3AaerY.AIdLvOR74ZlyHfdWTVoU/NXdUSWV3M0g7wpp2",
+      "fName": "Doctor-1",
+      "lName": "Doctor-1",
+      "dob": "2021-09-29",
+      "username": "nc@email.com",
+      "mobile": "55665545851564",
+      "role": "physician",
+      "speciality": "Cancer",
+      "createdDate": "Mon Oct 25 2021 17:16:29 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 12
+    },
+    {
+      "email": "doc_2@email.com",
+      "password": "$2a$10$B1a6m9NeQQtxpopefcltNOdDd3iLZV3b/hEL9tbLDCXCHAXa4lPva",
+      "fName": "Doctor-2",
+      "lName": "Doctor-2",
+      "dob": "2021-10-07",
+      "username": "doc-2",
+      "mobile": "878902736983705",
+      "role": "physician",
+      "speciality": "fever",
+      "createdDate": "Mon Oct 25 2021 17:18:10 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 13
     }
   ],
   "demographics": [
@@ -439,14 +467,18 @@
   ],
   "appointments": [
     {
-      "appointmentId": "",
-      "patientId": "",
-      "physicianId": "",
-      "appointmentTitle": "",
-      "description": "",
-      "startDate": "",
-      "endDate": "",
-      "timeSlot": ""
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 9403541779,
+      "doc_name": "13",
+      "appointment_title": "This Ajinkkkkkkkkya",
+      "appointment_time": "01:11",
+      "appointmentDate": "2021-09-30",
+      "appointment_desc": "I need to attend this\n",
+      "vistInfo": "yes",
+      "patientId": 1,
+      "id": 1
     }
   ],
   "order": [

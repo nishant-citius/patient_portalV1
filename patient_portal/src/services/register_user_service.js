@@ -87,10 +87,22 @@ class AdminServices {
 
   getAppointmentsList() {}
 
+  addNewAppointment(appointmentData) {
+    debugger;
+    let url = URLS.BASE_URL + "/appointments";
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.post(url, JSON.stringify(appointmentData), config);
+  }
+
   deleteUser(userId) {
     const url = `${URLS.BASE_URL}/users/${userId}`;
     return axios.delete(url);
   }
+
   addNewUser(user) {
     let url = URLS.BASE_URL + "/users";
     let config = {

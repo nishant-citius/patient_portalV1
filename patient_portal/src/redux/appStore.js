@@ -20,6 +20,7 @@ import { PatientDemographicsReducer } from "./reducers/PatientDemographicsReduce
 import { GetNurseReducer } from "./reducers/userreducers/GetNurseReducer";
 import { PatientImmunizationReducer } from "./reducers/PatientImmunizationReducer";
 import { GetImmunizationReducer } from "./reducers/userreducers/GetImmunizationReducer";
+import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPhysicianReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -40,6 +41,7 @@ let rootReducer = combineReducers({
   inactiveUsers: InactiveUsersReducer,
   patientDemographics: PatientDemographicsReducer,
   patientImmunization: PatientImmunizationReducer,
+  specilizedPhysicians: SpecialityPhysicianReducer,
 });
 
 /**create store  */

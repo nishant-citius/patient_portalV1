@@ -15,6 +15,7 @@ const mapStateToProps = (rootReducer) => {
   return {
     immunizationData: rootReducer.immunizations.immunizations,
     globalmessage: rootReducer.immunizations.globalmessage,
+    users: rootReducer.getallusers.users,
   };
 };
 
@@ -22,6 +23,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getAllImmunizations: () =>
       dispatch(actioncreators.GetAllImmunizationData()),
+    getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
   };
 };
 
@@ -32,8 +34,10 @@ export class PatientList extends React.Component {
   }
 
   componentDidMount() {
-    //this.props.getAllImmunizations();
+    this.props.getAllImmunizations();
+    this.props.getalluserdata();
     console.log(this.props.immunizationData);
+    console.log(this.props.users);
   }
 
   render() {
@@ -60,14 +64,33 @@ export class PatientList extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {/* {this.props.immunizationData.map((user, index) => {
+              {this.props.immunizationData.map((user, index) => {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <th>{user.vaccine_name}</th>
+                    <td>{this.props.users.fName}</td>
+                    <td>{user.general_vaccine[0].vaccine_name}</td>
+                    <td>{user.vaccine_brand}</td>
+                    <td>{user.dose_detail}</td>
+                    <td>{user.general_vaccine[0].vaccine_date}</td>
+                    <td>
+                      <span className="p-2">
+                        <Link>
+                          <BsPersonFill />
+                        </Link>
+                      </span>
+                      <span className="p-2">
+                        <Link>
+                          <BsFillPencilFill />
+                        </Link>
+                      </span>
+                      <span className="p-2">
+                        <BsFillTrashFill />
+                      </span>
+                    </td>
                   </tr>
                 );
-              })} */}
+              })}
             </tbody>
           </table>
         </div>
