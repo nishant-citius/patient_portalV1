@@ -11,6 +11,7 @@ let appState = {
   physicians: [],
   patients: [],
   nurses: [],
+  immunizations: {},
   userDetails: {},
   profileImage: "",
   userRequests: 0,

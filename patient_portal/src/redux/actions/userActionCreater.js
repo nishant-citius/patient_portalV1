@@ -19,6 +19,7 @@ axios.interceptors.request.use((req) => {
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
       req.url.endsWith("patient") ||
+      req.url.endsWith("/immunization") ||
       req.url.endsWith(req.url))
   ) {
     //attach auth token to the request header
@@ -175,6 +176,30 @@ export function GetAllNurseData() {
         payload.globalmessage = `${error.response.data}`;
         payload.nurses = [];
         dispatch({ type: actions.NURSES, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetAllImmunizationData() {
+  let payload = {
+    immunizations: [],
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.IMMUNIZATION).then(
+      (response) => {
+        payload.globalmessage = `Immunization data retrieved successfully. Count: ${response.data.length}`;
+        payload.immunizations = response.data;
+        dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.immunizations = [];
+        dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
       }
     );
   };
