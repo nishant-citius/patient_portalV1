@@ -20,3 +20,7 @@ export const GET_PATIENT_IMMUNIZATION =
   "http://localhost:9999/immunization?userid=";
 export const GET_DEMOGRAPHICS = "http://localhost:9999/demographics";
 export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false";
+export const SPECILISED_PHYSICIANS = "http://localhost:9999/users?speciality=";
+export const PHYSICIAN_BY_NAME = "http://localhost:9999/users?fName=";
+
+
