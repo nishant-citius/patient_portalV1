@@ -33,7 +33,7 @@ function Calendar() {
       id: "event-1",
       label: "Medical consultation", //aPPOINTMENT tITLE
       groupLabel: "Dr Shaun Murphy", //physician name
-      user: "Dr Shaun Murphy",
+      user: "Dr Shaun Murphy", //physician name
       color: "#f28f6a",
       startHour: "04:00 AM",
       endHour: "05:00 AM",
