@@ -52,7 +52,7 @@ function ScheduleAppointment(props) {
     appointment_end_time: Yup.string().required("Required"),
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = (values, actions) => {
     const payload = {
       fName: props.currentUser.fName,
       lName: props.currentUser.lName,
@@ -72,7 +72,7 @@ function ScheduleAppointment(props) {
     };
     console.log("~~~~~~~~~~~~~~~~~", payload);
     scheduleAppointmentToday(payload);
-    // resetForm();
+    actions.resetForm();
   };
 
   function scheduleAppointmentToday(appointmentData) {
