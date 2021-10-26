@@ -48,6 +48,7 @@ export class PhysicianDataComponent extends React.Component {
               <tr>
                 <th scope="col">Sr.No</th>
                 <th scope="col">Name</th>
+                <th scope="col">Speciality</th>
                 <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
@@ -61,6 +62,7 @@ export class PhysicianDataComponent extends React.Component {
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
                     <td>{`${user.fName} ${user.lName}`}</td>
+                    <td>{user.speciality}</td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>

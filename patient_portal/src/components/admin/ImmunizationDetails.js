@@ -15,7 +15,7 @@ const mapStateToProps = (rootReducer) => {
   return {
     immunizationData: rootReducer.immunizations.immunizations,
     globalmessage: rootReducer.immunizations.globalmessage,
-    users: rootReducer.getallusers.users,
+    // users: rootReducer.getallusers.users,
   };
 };
 
@@ -68,17 +68,12 @@ export class PatientList extends React.Component {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>{this.props.users.fName}</td>
+                    <td>{user.userid}</td>
                     <td>{user.general_vaccine[0].vaccine_name}</td>
                     <td>{user.vaccine_brand}</td>
                     <td>{user.dose_detail}</td>
                     <td>{user.general_vaccine[0].vaccine_date}</td>
                     <td>
-                      <span className="p-2">
-                        <Link>
-                          <BsPersonFill />
-                        </Link>
-                      </span>
                       <span className="p-2">
                         <Link>
                           <BsFillPencilFill />
