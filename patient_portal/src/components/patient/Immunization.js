@@ -8,14 +8,15 @@ import { useHistory } from "react-router";
 const Immunization = (props) => {
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (!props.immunizationDetails) {
-        return;
-      } else {
-        console.log("<---AAAAAAAAA--->", props.immunizationDetails);
+      console.log(props.immunizationDetails);
+      if (
+        props.immunizationDetails.length &&
+        props.immunizationDetails.length > 0
+      ) {
+        alert("Hii");
       }
     }
-  }, [props.immunizationDetails, props.isLoggedIn]);
-
+  }, []);
   const initialValues = {
     age_category: "",
     vaccine_brand: "",
@@ -29,14 +30,12 @@ const Immunization = (props) => {
     userid: props.currentUser.id,
   };
   const [patientImmunization, setpatientImmunization] = useState(initialValues);
-
   const validationSchema = Yup.object().shape({
     age_category: Yup.string().required("Required"),
     vaccine_brand: Yup.string().required("Required"),
     dose_detail: Yup.string().required("Required"),
     // general_vaccine: Yup.string().required("Required"),
   });
-
   const onSubmit = (values) => {
     console.log(values);
     let gv = values.general_vaccine.map((v) => {
@@ -207,7 +206,6 @@ const mapStateToProps = (state) => {
     currentUser: state.login.loggedUserInfo,
     allusers: state.immunization.Immunizationsreducer,
     immunizationDetails: state.patientImmunization.patientImmunization,
-    isLoggedIn: state.login.isLoggedIn,
   };
 };
 

@@ -88,6 +88,7 @@ class AdminServices {
   getAppointmentsList() {}
 
   addNewAppointment(appointmentData) {
+    debugger;
     let url = URLS.BASE_URL + "/appointments";
     let config = {
       headers: {

@@ -97,6 +97,8 @@ const Patient_dashboard = (props) => {
 
           <Grid item sm={4} xs={12}>
             <Card className={classes.gridcontainer}>
+          
+             
               <CardContent>
                   <Typography variant="subtitle1" className="fw-bold">
                   age_category
@@ -114,7 +116,8 @@ const Patient_dashboard = (props) => {
                 Other general Vaccines:
                 </Typography>
               </CardContent>
-             
+                
+              
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
