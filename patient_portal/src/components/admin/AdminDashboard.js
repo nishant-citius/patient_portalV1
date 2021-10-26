@@ -111,7 +111,8 @@ const AdminDashboard = (props) => {
 
   const itemData = [
     {
-      img: "https://www.seekpng.com/png/detail/266-2667175_goqii-doctor-is-a-qualified-physician-mbbs-md.png",
+      img:
+        "https://www.seekpng.com/png/detail/266-2667175_goqii-doctor-is-a-qualified-physician-mbbs-md.png",
       title: "Dr. ABC",
       author: "Surgen",
       rows: 2,
@@ -119,17 +120,20 @@ const AdminDashboard = (props) => {
       featured: true,
     },
     {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRThpybZHlYukfV1VjLMx-99iYSoPPEM97jKgMCMNIDcAUKto59hV2xVk543gQVmt6pD70&usqp=CAU",
+      img:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRThpybZHlYukfV1VjLMx-99iYSoPPEM97jKgMCMNIDcAUKto59hV2xVk543gQVmt6pD70&usqp=CAU",
       title: "Dr. XYZ",
       author: "Artho",
     },
     {
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScczgCgAPZvEptLueOQi9yXba2aWXyfNNsvYoqxfc9cEOj9ktM2NGP-z3zc4MfZv9j7E4&usqp=CAU",
+      img:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScczgCgAPZvEptLueOQi9yXba2aWXyfNNsvYoqxfc9cEOj9ktM2NGP-z3zc4MfZv9j7E4&usqp=CAU",
       title: "Dr. MNO",
       author: "General Doctor",
     },
     {
-      img: "https://www.nicepng.com/png/detail/363-3638676_1-medical-student-image-png.png",
+      img:
+        "https://www.nicepng.com/png/detail/363-3638676_1-medical-student-image-png.png",
       title: "Dr. PQR",
       author: "Cancer Specialist",
       cols: 2,
