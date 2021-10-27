@@ -33,7 +33,7 @@ class MyProfile extends Component {
     e.preventDefault();
      //create object of formData
     const formData = new FormData();
-    formData.append("profileImage", this.profileImage);
+    formData.append("profileImage", this.state.profileImage);
     this.props.updateProfile(this.state.profileImage, this.props.currentUser)
     console.log(this.props.currentUser)
     
