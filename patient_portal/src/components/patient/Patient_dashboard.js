@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "320px" ,
     maxHeight:"100px",
     margin: "4px",
-    background:"#D3D3D3"
+    background:"#D3D3D3",
+    // color:"black"
   },
   innercard2:{
     maxWidth: "150px" ,
@@ -163,16 +164,16 @@ const Patient_dashboard = (props) => {
                   <Card className={classes.innercard2} >
                     <CardContent>
                       <Typography variant="subtitle1" className="">
-                      <b>Medicine Name</b><br/>
-                      Paracetamol
+                      Medicine Name<br/>
+                     <b>Paracetamol</b>
                       </Typography>
                     </CardContent>
                    </Card>
                   <Card className={classes.innercard2} >
                     <CardContent>
                       <Typography variant="subtitle1">
-                        <b>Dosages</b><br/>
-                         2 times
+                        Dosages<br/>
+                         <b>2 times</b>
                       </Typography>
                     </CardContent>
                   </Card>
@@ -181,8 +182,8 @@ const Patient_dashboard = (props) => {
                   <Card className={classes.innercard2} style={{ backgroundColor: "#93E9BE" }}>
                      <CardContent>
                        <Typography variant="subtitle1">
-                          <b>Physician Name</b><br/>
-                             Dr ABC
+                          Physician Name<br/>
+                            <b> Dr ABC</b>
                               <br/>
                         </Typography>
                       </CardContent>
@@ -190,8 +191,8 @@ const Patient_dashboard = (props) => {
                   <Card className={classes.innercard2}>
                      <CardContent>
                        <Typography variant="subtitle1">
-                         <b>Frequency</b><br/>
-                         200 mg
+                         Frequency<br/>
+                         <b>200 mg</b>
                        </Typography>
                      </CardContent>
                   </Card>
@@ -222,20 +223,20 @@ const Patient_dashboard = (props) => {
     </Grid>
   </Grid>
 </Container>  
-    <Container className={classes.container} className="mt-2">
+    <Container className={classes.container} className="mt-4">
     <Grid container spacing={2}>
       <Grid item sm={2} lg={2} md={2}>
        <h4 className={classes.h4} >Allergies</h4>
          <Card className={classes.gridcontainer}>
            <CardContent>
-             <Typography variant="subtitle1" className="fw-bold">
+             <Typography variant="subtitle1">
                </Typography>
                 <div className={classes.display}>
                   <Card className={classes.innercard2} >
                     <CardContent>
                       <Typography variant="subtitle1" className="">
-                      <b>Allergy Name</b><br/>
-                       skin allergy 
+                      Allergy Name<br/>
+                       <b>skin allergy</b> 
                       </Typography>
                     </CardContent>
                    </Card>
@@ -248,30 +249,42 @@ const Patient_dashboard = (props) => {
         <Card>
            <CardContent>
               <Container>
-                 <Grid container spacing={2}>
+                 <Grid container spacing={6}>
                     <Grid item>
-                       <Card className={classes.gridcontainer}>
+                       <Card className={classes.gridcontainer} style={{ backgroundColor: "#93E9BE" }}>
                           <CardContent>
                              <DirectionsWalkIcon>
                                </DirectionsWalkIcon>
                                  <Typography variant="subtitle1"  color="black">
-                                      Walk<br/>
-                                       2 hours daily
+                                     <b> Walk<br/>
+                                       2 hours <br/>daily</b>
                                  </Typography>
                           </CardContent>
                         </Card>
                      </Grid>
       <Grid item>   
-        <Card className={classes.gridcontainer}>
+        <Card className={classes.gridcontainer} style={{ backgroundColor: "#93E9BE" }}>
            <CardContent>
               <DirectionsBikeIcon></DirectionsBikeIcon>
                 <Typography variant="subtitle1"  color="black">
                    Cycling<br/>
-                    30 mins daily
+                    30 mins<br/> daily
                 </Typography>
             </CardContent>
         </Card>
         </Grid>
+        <Grid item>  
+                <Card className={classes.gridcontainer} style={{ backgroundColor: "#93E9BE" }}>
+                   <CardContent>
+                    <DirectionsRunIcon></DirectionsRunIcon>
+                     <Typography variant="subtitle1"  color="black">
+                       Running<br/>
+                       20 mins <br/>daily
+                      
+                     </Typography>
+                   </CardContent>
+                </Card>
+              </Grid>
         </Grid>
            {/* <Grid container spacing={2}>
               <Grid item>  
@@ -309,7 +322,7 @@ const Patient_dashboard = (props) => {
            <CardContent>
              <Grid container spacing={4}>
                <Grid item>
-         <Card className={classes.gridcontainer}>
+         <Card className={classes.gridcontainer} style={{ backgroundColor: "#D3D3D3" }}>
            <CardContent>
              <Typography variant="subtitle1" className="fw-bold">
                 <b>Drug Name</b><br/>
@@ -319,7 +332,7 @@ const Patient_dashboard = (props) => {
                </Card>
               </Grid>
               <Grid item>
-           <Card className={classes.gridcontainer}>
+           <Card className={classes.gridcontainer} style={{ backgroundColor: "#D3D3D3" }}>
            <CardContent>
              <Typography variant="subtitle1" className="fw-bold">
                 Strength<br/>

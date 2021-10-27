@@ -39,10 +39,10 @@ export class UserList extends React.Component {
     return (
       <>
         <div className="container mt-5">
-          <Link className="btn btn-warning" to="/admin">
+          {/* <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
-          </Link>
+          </Link> */}
           <Link to="/addusers" className="btn btn-primary float-end mr-4">
             Add User
           </Link>

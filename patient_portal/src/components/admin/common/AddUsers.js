@@ -51,10 +51,10 @@ const AddUsers = (props) => {
 
   return (
     <div className="container py-4 border-secondary  mt-5">
-      <Link className="btn btn-warning" to="/admin">
+      {/* <Link className="btn btn-warning" to="/admin">
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>
-      </Link>
+      </Link> */}
       <h3 className="text-success text-center fw-bold ">Add New User</h3>
       <div className="row justify-content-center">
         <div className="col-8">
@@ -189,7 +189,7 @@ const AddUsers = (props) => {
               Save Details
             </button>
           </form>
-          <span>{props.globalmessage}</span>
+          {/* <span>{props.globalmessage}</span> */}
         </div>
       </div>
     </div>
