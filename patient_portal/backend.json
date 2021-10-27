@@ -257,36 +257,48 @@
         {
           "vaccine_name": "Covid Vaccine",
           "vaccine_date": "2021-10-13"
+        },
+        {
+          "vaccine_name": "Pnumonia",
+          "vaccine_date": "2021-10-28"
         }
       ],
       "userid": 1,
-      "id": 1
+      "id": 4
     },
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-15"
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-07-14"
+        },
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-27"
         }
       ],
-      "userid": 1,
-      "id": 2
+      "userid": 6,
+      "id": 5
     },
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
-      "dose_detail": "1",
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "Covid General Vaccine",
-          "vaccine_date": "2021-09-27"
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-07-14"
+        },
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-27"
         }
       ],
-      "userid": 1,
-      "id": 3
+      "userid": 6,
+      "id": 6
     },
     {
       "age_category": "45",
@@ -302,8 +314,8 @@
           "vaccine_date": "2021-10-28"
         }
       ],
-      "userid": 1,
-      "id": 4
+      "userId": "1",
+      "id": 7
     }
   ],
   "appointments": [
