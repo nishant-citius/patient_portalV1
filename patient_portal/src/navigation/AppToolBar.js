@@ -29,6 +29,7 @@ const mapStateToProps = (rootReducer) => {
     role: rootReducer.login.role,
     authToken: rootReducer.login.authToken,
     currentUser: rootReducer.login.loggedUserInfo,
+    count: rootReducer.inactiveUsers.inactiveUserCount,
   };
 };
 
@@ -185,16 +186,16 @@ function AppToolBar(props) {
                 onClick={() => setOpen(true)}
               />
               {props.role === "admin" ? (
-                <Badge badgeContent={10} color="secondary">
+                <Badge badgeContent={props.count} color="secondary">
                   <NotificationsIcon onClick={handleAdminNotification} />
                 </Badge>
               ) : (
-                <Badge badgeContent={10} color="secondary">
+                <Badge badgeContent={0} color="secondary">
                   <NotificationsIcon />
                 </Badge>
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <Badge badgeContent={6} color="secondary">
+              <Badge badgeContent={0} color="secondary">
                 <MailIcon />
               </Badge>
               &nbsp;&nbsp;&nbsp;&nbsp;

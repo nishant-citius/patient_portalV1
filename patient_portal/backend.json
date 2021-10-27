@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "nc@email.com",
-      "password": "$2a$10$Xg0D5lNHPhKoRP17mZ.fRenFaJfXFuhm.XVjlDBzRUQPq9UfJQdQ.",
+      "password": "$2a$10$b2Fip18qjpm7auPbO4CrWOL7pAjV5bKXPW3X.goqiNVYqaf/cISy2",
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -42,7 +42,7 @@
       "blood_group": "o-",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 22:45:49 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 3
     },
     {
@@ -57,7 +57,7 @@
       "blood_group": "o-",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 5
     },
     {
@@ -72,12 +72,12 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 6
     },
     {
       "email": "kk@email.com",
-      "password": "$2a$10$4glWjTrw.f143e6BJp.mv.giFW3ikBoZ2UKVy6oMofL7z911Wh9Zy",
+      "password": "$2a$10$nWhU0dj5OBjvtgSY1CqZO.Jh4bC9ms1tROsq7cT3aZ5mYzLtFhcZO",
       "fName": "Kishore ",
       "lName": "Kumar",
       "dob": "2021-09-27",
@@ -102,7 +102,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Fri Oct 22 2021 00:07:07 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 8
     },
     {
@@ -117,7 +117,7 @@
       "blood_group": "B-",
       "role": "patient",
       "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 10
     },
     {
@@ -132,7 +132,7 @@
       "blood_group": "qwert",
       "role": "patient",
       "createdDate": "Sat Oct 23 2021 20:43:16 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 11
     },
     {
@@ -472,6 +472,23 @@
       "createdDate": "2021-10-26T14:05:32.345Z",
       "patientId": 1,
       "id": 7
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 1234567890,
+      "doc_id": 12,
+      "doc_name": "Doctor-1Doctor-1",
+      "appointment_title": "Shiva Fever",
+      "appointment_start_time": "20:53",
+      "appointment_end_time": "21:53",
+      "appointmentDate": "2021-10-31",
+      "appointment_desc": "Shiva is Suffering from Fever.",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-10-26T14:23:55.170Z",
+      "patientId": 1,
+      "id": 8
     }
   ],
   "order": [

@@ -249,7 +249,7 @@ export function AddNewUser(user) {
 export function GetInactiveUsers() {
   let payload = {
     inactiveUsers: [],
-    inactiveUsersCount: 0,
+    inactiveUserCount: 0,
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
@@ -257,12 +257,12 @@ export function GetInactiveUsers() {
     axios.get(URLS.INACTIVE_USERS).then(
       (response) => {
         payload.inactiveUsers = response.data;
-        payload.inactiveUsersCount = response.data.length;
+        payload.inactiveUserCount = response.data.length;
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
         payload.inactiveUsers = [];
-        payload.inactiveUsersCount = 0;
+        payload.inactiveUserCount = 0;
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       }
     );
