@@ -386,6 +386,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T08:57:59.736Z",
       "patientId": 1,
+      "status": "Approved",
       "id": 2
     },
     {
@@ -403,6 +404,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T09:22:25.530Z",
       "patientId": 1,
+      "status": "Rejected",
       "id": 3
     },
     {
@@ -420,6 +422,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T13:43:33.508Z",
       "patientId": 1,
+      "status": "Pending",
       "id": 4
     },
     {
@@ -437,6 +440,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T13:48:41.415Z",
       "patientId": 1,
+      "status": "Compleated",
       "id": 5
     },
     {
@@ -454,6 +458,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T13:50:05.557Z",
       "patientId": 1,
+      "status": "Pending",
       "id": 6
     },
     {
@@ -471,6 +476,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T14:05:32.345Z",
       "patientId": 1,
+      "status": "Pending",
       "id": 7
     },
     {
