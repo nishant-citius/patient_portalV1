@@ -52,13 +52,13 @@ function ScheduleAppointment(props) {
     appointment_end_time: Yup.string().required("Required"),
   });
 
-  const onSubmit = (values) => {
+  const onSubmit = (values, actions) => {
     const payload = {
       fName: props.currentUser.fName,
       lName: props.currentUser.lName,
       dob: props.currentUser.dob,
       mobile_no: values.mobile_no,
-      doc_id: values.doc_name,
+      doc_id: Number(values.doc_name),
       doc_name: doctorName,
       appointment_title: values.appointment_title,
       appointment_start_time: values.appointment_start_time,
@@ -70,9 +70,8 @@ function ScheduleAppointment(props) {
       // vistInfo: values.vistInfo,
       patientId: props.currentUser.id,
     };
-    console.log("~~~~~~~~~~~~~~~~~", payload);
     scheduleAppointmentToday(payload);
-    // resetForm();
+    actions.resetForm();
   };
 
   function scheduleAppointmentToday(appointmentData) {
@@ -155,21 +154,6 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label>Doctor's</label>
-                    <Field as="select" className="form-control" name="doc_name">
-                      <option value="">Select</option>
-                      {doctorsList.map((doctor) => (
-                        <option value={doctor.id}>
-                          {setDcotorName(doctor.fName + doctor.lName)}
-                          {doctor.fName + doctor.lName}
-                        </option>
-                      ))}
-                    </Field>
-                    <div className="error">
-                      <ErrorMessage name="doc_name" />
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-6">
                     <label>Speciality</label>
                     <Field
                       as="select"
@@ -185,7 +169,21 @@ function ScheduleAppointment(props) {
                       <ErrorMessage name="doc_spl" />
                     </div>
                   </div>
-
+                  <div className="col-12 col-md-6">
+                    <label>Doctor's</label>
+                    <Field as="select" className="form-control" name="doc_name">
+                      <option value="">Select</option>
+                      {doctorsList.map((doctor) => (
+                        <option value={doctor.id}>
+                          {setDcotorName(doctor.fName + doctor.lName)}
+                          {doctor.fName + doctor.lName}
+                        </option>
+                      ))}
+                    </Field>
+                    <div className="error">
+                      <ErrorMessage name="doc_name" />
+                    </div>
+                  </div>
                   <div className="col-12 col-md-6">
                     <label>Appointment TItle</label>
                     <Field

@@ -1,16 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Scheduler from "react-mui-scheduler";
 
-function Calendar() {
+function Calendar(props) {
+  const events = mapApiResponse(props.apopointmnets);
+
+  function pickRandomColor() {
+    let colorsArray = ["#f28f6a", "#099ce5", "#263686", "#f28f6a"],
+      randomNum = Math.round(Math.random() * (3 - 0) + 0);
+    return colorsArray[randomNum];
+  }
+
+  function mapApiResponse(_arr) {
+    let newEvents = _arr.map((appt) => {
+      let colorArr = pickRandomColor();
+      return {
+        id: appt.id,
+        label: appt.appointment_title,
+        groupLabel: appt.doc_name,
+        user: appt.doc_name,
+        color: colorArr,
+        startHour: appt.appointment_start_time,
+        endHour: appt.appointment_end_time,
+        date: appt.appointmentDate,
+        createdAt: new Date(),
+        createdBy: appt.createdBy,
+      };
+    });
+    return newEvents;
+  }
+
   const [state, setState] = useState({
     options: {
       transitionMode: "zoom", // or fade
       startWeekOn: "Mon", // or Sun
-      defaultMode: "month", // or week | day | timeline
-      minWidth: 540,
-      maxWidth: 540,
-      minHeight: 540,
-      maxHeight: 540,
+      defaultMode: "week", // or week | day | timeline
+      minWidth: 340,
+      maxWidth: 340,
+      minHeight: 340,
+      maxHeight: 340,
     },
     alertProps: {
       open: true,
@@ -28,73 +55,24 @@ function Calendar() {
     },
   });
 
-  const events = [
-    {
-      id: "event-1",
-      label: "Medical consultation", //aPPOINTMENT tITLE
-      groupLabel: "Dr Shaun Murphy", //physician name
-      user: "Dr Shaun Murphy", //physician name
-      color: "#f28f6a",
-      startHour: "04:00 AM",
-      endHour: "05:00 AM",
-      date: "2021-09-28",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer", //PatientName
-    },
-    {
-      id: "event-2",
-      label: "Medical consultation",
-      groupLabel: "Dr Claire Brown",
-      user: "Dr Claire Brown",
-      color: "#099ce5",
-      startHour: "09:00 AM",
-      endHour: "10:00 AM",
-      date: "2021-09-29",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-3",
-      label: "Medical consultation",
-      groupLabel: "Dr Menlendez Hary",
-      user: "Dr Menlendez Hary",
-      color: "#263686",
-      startHour: "13 PM",
-      endHour: "14 PM",
-      date: "2021-09-30",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-4",
-      label: "Consultation prénatale",
-      groupLabel: "Dr Shaun Murphy",
-      user: "Dr Shaun Murphy",
-      color: "#f28f6a",
-      startHour: "08:00 AM",
-      endHour: "09:00 AM",
-      date: "2021-10-01",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-  ];
-
   const handleCellClick = (event, row, day) => {
-    // Do something...
+    // console.log("Event--", event);
+    // console.log("Row--", row);
+    // console.log("day--", day);
   };
 
   const handleEventClick = (event, item) => {
-    // Do something...
+    // console.log("Event--", event);
+    // console.log("Row--", item);
   };
 
   const handleEventsChange = (item) => {
-    // Do something...
+    console.log("Ajinkya-3");
   };
 
   const handleAlertCloseButtonClicked = (item) => {
-    // Do something...
+    console.log("Ajinkya-4");
   };
-
   return (
     <Scheduler
       events={events}
