@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "nc@email.com",
-      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
+      "password": "$2a$10$Xg0D5lNHPhKoRP17mZ.fRenFaJfXFuhm.XVjlDBzRUQPq9UfJQdQ.",
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -17,7 +17,7 @@
     },
     {
       "email": "aj@email.com",
-      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
+      "password": "$2a$10$RENqfiuvAPkQdhdo49iOWulZys4l8Shp13KuPnySihwSnejCsV/Fm",
       "fName": "Ajinkya",
       "lName": "Pathak",
       "dob": "2021-09-30",
@@ -32,7 +32,7 @@
     },
     {
       "email": "donald@email.com",
-      "password": "$2a$10$s7veQe9hm1Xg9jXPLiGMg..Xa0VzP/aSvM4G.OVXVqvQGwNSa9cLK",
+      "password": "$2a$10$KQauGswZzjvqlgayHYvw5u4VOaVgeSu700PdxIMn0P9ICOdCrZ5gi",
       "fName": "Donald",
       "lName": "Trump",
       "dob": "2021-09-27",
@@ -47,7 +47,7 @@
     },
     {
       "email": "qwerty@email.com",
-      "password": "$2a$10$kNoMnUkPRDqkSNREPTwniu1xk5440xZKme7Zjd6whd3E2r9DUmHkO",
+      "password": "$2a$10$ZAeaDD3vTUm3hEIIhQPVR.k8tF10xBQgezDyFXwlLu0AZFF4/YFAC",
       "fName": "Qwert",
       "lName": "qwetrt",
       "dob": "2021-09-28",
@@ -62,7 +62,7 @@
     },
     {
       "email": "ms@email.com",
-      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
+      "password": "$2a$10$gFOPGwXslgpgLSzCjkceKuLXEI.vdJ4q3w84jC382jQorSq8RDDKq",
       "fName": "Manya ",
       "lName": "Surve",
       "dob": "2021-09-30",
@@ -72,12 +72,12 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 6
     },
     {
       "email": "kk@email.com",
-      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
+      "password": "$2a$10$4glWjTrw.f143e6BJp.mv.giFW3ikBoZ2UKVy6oMofL7z911Wh9Zy",
       "fName": "Kishore ",
       "lName": "Kumar",
       "dob": "2021-09-27",
@@ -87,12 +87,12 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 7
     },
     {
       "email": "jr@email.com",
-      "password": "$2a$10$YIR.mOnyV0jxU/yx8e5WLe8pF/SN9ow5tH0tYg2mHI4.FuByoT38W",
+      "password": "$2a$10$j7YogkDgimW5jIi0JLcdqurN7z1G166B0HUuIuYOm9YbAo6KJDMqW",
       "fName": "Jagruti",
       "lName": "Ranbhor",
       "dob": "2021-09-29",
@@ -102,12 +102,12 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Fri Oct 22 2021 00:07:07 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 8
     },
     {
       "email": "ap@email.com",
-      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
+      "password": "$2a$10$CuYcNPLdoiTanrmIypeyHenSSxPe3rodG9UFjlh9LJBklIkubjVvS",
       "fName": "Joe",
       "lName": "Root",
       "dob": "2021-09-27",
@@ -122,7 +122,7 @@
     },
     {
       "email": "tk@email.com",
-      "password": "$2a$10$c8GLznH5McVdupZZQ8YKf.BOrVMqfvaOCQLs.vvUy2eiEJdtcpb9i",
+      "password": "$2a$10$J9nKZRaQxZQ4N1MnkdWxEeQz5oeRO4cpggrml541I2oxApo.nKbbW",
       "fName": "hk",
       "lName": "pk",
       "dob": "2021-10-08",
@@ -162,6 +162,20 @@
       "createdDate": "Mon Oct 25 2021 17:18:10 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 13
+    },
+    {
+      "email": "vb@email.com",
+      "password": "$2a$10$jixgCA47Mk4Qg6QPRJ3waOMk6pqRbvWTA1L0Gz91Ou4aEaJXHngi6",
+      "fName": "Dr. Vishwas",
+      "lName": "Batra",
+      "dob": "2021-10-14",
+      "username": "batra doctor",
+      "mobile": "9874563210",
+      "role": "physician",
+      "speciality": "Fever",
+      "createdDate": "Wed Oct 27 2021 11:04:30 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 14
     }
   ],
   "demographics": [
@@ -510,23 +524,6 @@
       "AllergenSource": "Bos taurus",
       "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 3",
       "Allerginicity": "IgE but no biological test"
-    }
-  ],
-  "requests": [
-    {
-      "id": 25,
-      "email": "ajinky@email.com",
-      "isActive": false
-    },
-    {
-      "id": "rahul@email.com",
-      "email": "rahul@email.com",
-      "isActive": true
-    },
-    {
-      "id": "manij@email.com",
-      "email": "manij@email.com",
-      "isActive": true
     }
   ]
 }

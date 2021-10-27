@@ -141,7 +141,7 @@ function AppToolBar(props) {
     history.push("/");
   }
 
-  function handleNotification() {
+  function handleAdminNotification() {
     setOpenPopup(true);
   }
 
@@ -184,9 +184,15 @@ function AppToolBar(props) {
                 className={classes.searchbutton}
                 onClick={() => setOpen(true)}
               />
-              <Badge badgeContent={10} color="secondary">
-                <NotificationsIcon onClick={handleNotification} />
-              </Badge>
+              {props.role === "admin" ? (
+                <Badge badgeContent={10} color="secondary">
+                  <NotificationsIcon onClick={handleAdminNotification} />
+                </Badge>
+              ) : (
+                <Badge badgeContent={10} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
+              )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Badge badgeContent={6} color="secondary">
                 <MailIcon />

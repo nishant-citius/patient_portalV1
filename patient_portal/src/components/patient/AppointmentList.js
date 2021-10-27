@@ -40,6 +40,7 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
+
 function AppointmentList(props) {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
@@ -49,57 +50,6 @@ function AppointmentList(props) {
       userAppointments(props.currentUser.id);
     }
   }, []);
-
-  let appointmentsList = [
-    {
-      id: "event-1",
-      label: "Medical consultation", //aPPOINTMENT tITLE
-      groupLabel: "Dr Shaun Murphy", //physician name
-      user: "Dr Shaun Murphy", //physician name
-      color: "#f28f6a",
-      startHour: "04:00 AM",
-      endHour: "05:00 AM",
-      date: "2021-09-28",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer", //PatientName
-    },
-    {
-      id: "event-2",
-      label: "Medical consultation",
-      groupLabel: "Dr Claire Brown",
-      user: "Dr Claire Brown",
-      color: "#099ce5",
-      startHour: "09:00 AM",
-      endHour: "10:00 AM",
-      date: "2021-09-29",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-3",
-      label: "Medical consultation",
-      groupLabel: "Dr Menlendez Hary",
-      user: "Dr Menlendez Hary",
-      color: "#263686",
-      startHour: "13 PM",
-      endHour: "14 PM",
-      date: "2021-09-30",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-4",
-      label: "Consultation prénatale",
-      groupLabel: "Dr Shaun Murphy",
-      user: "Dr Shaun Murphy",
-      color: "#f28f6a",
-      startHour: "08:00 AM",
-      endHour: "09:00 AM",
-      date: "2021-10-01",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-  ];
 
   function userAppointments(patientId) {
     adminService.getPatientAppointments(patientId).then(
