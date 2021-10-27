@@ -322,6 +322,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     demographics: (newuser) =>
       dispatch(actionCreator.AddDemographicsAsync(newuser)),
+      // getdemographics: (userId) => dispatch(actionCreator.GetPatientDemographics(userId))
   };
 };
 
