@@ -40,7 +40,8 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-function AppointmentList(props) {
+
+const PhysicianAppointment = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
 
@@ -50,9 +51,10 @@ function AppointmentList(props) {
     }
   }, []);
 
-  function userAppointments(patientId) {
-    adminService.getPatientAppointments(patientId).then(
+  function userAppointments(physicianId) {
+    adminService.getPhysicianAppointments(physicianId).then(
       (response) => {
+        console.log("abcd", response.data);
         setAppts(response.data);
       },
       (error) => {
@@ -66,7 +68,6 @@ function AppointmentList(props) {
   };
   return (
     <>
-      {/* <Calendar /> */}
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
@@ -87,8 +88,7 @@ function AppointmentList(props) {
       </Box>
     </>
   );
-}
-
+};
 const mapStatetoProps = (state) => {
   return {
     isLoggedIn: state.login.isLoggedIn,
@@ -99,4 +99,4 @@ const mapStatetoProps = (state) => {
   };
 };
 
-export default connect(mapStatetoProps, null)(AppointmentList);
+export default connect(mapStatetoProps, null)(PhysicianAppointment);
