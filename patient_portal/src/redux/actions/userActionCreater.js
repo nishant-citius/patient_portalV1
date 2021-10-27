@@ -404,36 +404,34 @@ export function AddMedicationAndAllergiesAsync(user) {
 
 //put request for updating the profile pic
 
-export function updateprofile(profileImage,loggedUserInfo) {
-  console.log(loggedUserInfo)
+export function updateprofile(profileImage, loggedUserInfo) {
+  console.log(loggedUserInfo);
   let payload = {
     globalmessage: "",
-    // profileImage:""
   };
-  
+
   return (dispatch, getState) => {
-  authToken = getState().login.authToken;
-   let headers = {
+    authToken = getState().login.authToken;
+    let headers = {
       "Content-type": "application/json; charset=UTF-8",
-      // "Authorization" : ` ${authToken}`
-};
-    
-    loggedUserInfo.profileImage=profileImage.name;
-    loggedUserInfo.password=loggedUserInfo.rpassword;
-    console.log(loggedUserInfo)
-     axios.put( `${URLS.USER}${loggedUserInfo.id}`,loggedUserInfo,{headers}
-    ).then(
-     (response) => {
-      console.log("From AC....", response);
-     payload.globalmessage = `Profile Pic updated successfully`;
-      dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-      },
-      (error) => {
-        payload.globalmessage = `Updation ERROR: ${error.response.data}`;
-        //       // payload.statusCode = 400;
-       dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-      }
-     );
+    };
+
+    loggedUserInfo.profileImage = `../../images/${profileImage.name}` ;
+    loggedUserInfo.password = loggedUserInfo.rpassword;
+    axios
+      .put(`${URLS.USER}${loggedUserInfo.id}`, loggedUserInfo, { headers })
+      .then(
+        (response) => {
+          console.log("From AC....", response);
+          payload.globalmessage = `Profile Pic updated successfully`;
+          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+        },
+        (error) => {
+          payload.globalmessage = `Updation ERROR: ${error.response.data}`;
+          //       // payload.statusCode = 400;
+          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+        }
+      );
   };
 }
 

@@ -83,7 +83,6 @@
     },
     {
       "email": "nc@email.com",
-      "password": "$2a$10$tcf7U.h7sbDig84A.uFjdO.XXzeELxysxCzTDJy/HOeLlzxh7ShYK",
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-29",
@@ -94,7 +93,9 @@
       "blood_group": "b+ve",
       "createdDate": "Fri Oct 15 2021 15:16:27 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 6
+      "id": 6,
+      "profileImage": "../../images/doc_1.jpg",
+      "password": "$2a$10$3CmawsShldc2F1MxNd/gmOxpAc5jg4nX3yMUD/ha2KcBjx3HPt8KC"
     },
     {
       "email": "nisha@email.com",
@@ -253,12 +254,6 @@
       "isActive": true,
       "id": 21,
       "profileImage": "Healthcare.jpg"
-    },
-    {
-      "email": "meenu@email.com",
-      "password": "$2a$10$HUt7HMqLSKKa1TkfxXbKVu7TC0o79id/qPQCz4ebdAbqOjWmPokWe",
-      "profileImage": "Healthcare.png",
-      "id": 22
     },
     {
       "email": "souj@email.com",
