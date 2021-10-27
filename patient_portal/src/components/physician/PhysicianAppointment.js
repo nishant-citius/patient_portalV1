@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
+import PhyAppointmentList from "./PhyAppointmentList";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -80,7 +81,7 @@ const PhysicianAppointment = (props) => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          Appointment List
+          <PhyAppointmentList />
         </TabPanel>
         <TabPanel value={value} index={1}>
           {props.isLoggedIn ? <Calendar apopointmnets={appts} /> : ""}

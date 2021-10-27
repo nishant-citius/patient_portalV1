@@ -17,6 +17,7 @@ let appState = {
   patientDemographics: {},
   patientImmunization: {},
   specialisedPhysicians: [],
+  appointmentsDetails:[],
 };
 
 export default appState;

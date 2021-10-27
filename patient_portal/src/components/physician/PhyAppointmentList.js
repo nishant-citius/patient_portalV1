@@ -1,153 +1,130 @@
-import React, { useState, useEffect } from "react";
-import Calendar from "shared/calendar/Calendar";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import React from "react";
 import { connect } from "react-redux";
-import { adminService } from "../../services/register_user_service";
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+import { Link } from "react-router-dom";
+import * as actioncreators from "../../redux/actions/userActionCreater";
+import {
+  BsFillTrashFill,
+  BsFillPencilFill,
+  BsPersonFill,
+  BsCheckCircleFill,
+  BsFillXCircleFill,
+  BsFillArrowLeftSquareFill,
+} from "react-icons/bs";
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
+// const patient_id=this.props.currentUser.id;
+// const loadAppointment=(_patient_id)=>{
+//    this.props.getAppointments(patient_id)
+// }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
+
+const mapStateToProps = (rootReducer) => {
+  return {
+    currentUser: rootReducer.login.loggedUserInfo,
+    isLoggedIn: rootReducer.login.isLoggedIn,
+    appointmentList: rootReducer.appointmentsDetails.appointmentsDetails,
+    patientData: rootReducer.patients.patients,
+    // globalmessage: rootReducer.appointmentsDetails.globalmessage,
+
+  };
 };
 
-function a11yProps(index) {
+
+const mapDispatchToProps = (dispatch) => {
   return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    getAppointments: (doc_id) => dispatch(actioncreators.GetAppointments(doc_id)),
+    getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
   };
-}
-function PhyAppointmentList(props) {
-  const [value, setValue] = useState(0);
-  const [appts, setAppts] = useState([]);
+};
 
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      userAppointments(props.currentUser.id);
-    }
-  }, []);
-
-  let appointmentsList = [
-    {
-      id: "event-1",
-      label: "Medical consultation", //aPPOINTMENT tITLE
-      groupLabel: "Dr Shaun Murphy", //physician name
-      user: "Dr Shaun Murphy", //physician name
-      color: "#f28f6a",
-      startHour: "04:00 AM",
-      endHour: "05:00 AM",
-      date: "2021-09-28",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer", //PatientName
-    },
-    {
-      id: "event-2",
-      label: "Medical consultation",
-      groupLabel: "Dr Claire Brown",
-      user: "Dr Claire Brown",
-      color: "#099ce5",
-      startHour: "09:00 AM",
-      endHour: "10:00 AM",
-      date: "2021-09-29",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-3",
-      label: "Medical consultation",
-      groupLabel: "Dr Menlendez Hary",
-      user: "Dr Menlendez Hary",
-      color: "#263686",
-      startHour: "13 PM",
-      endHour: "14 PM",
-      date: "2021-09-30",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-4",
-      label: "Consultation prénatale",
-      groupLabel: "Dr Shaun Murphy",
-      user: "Dr Shaun Murphy",
-      color: "#f28f6a",
-      startHour: "08:00 AM",
-      endHour: "09:00 AM",
-      date: "2021-10-01",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-  ];
-
-  function userAppointments(physicianId) {
-    adminService.getPhysicianAppointments(physicianId).then(
-      (response) => {
-        setAppts(response.data);
-      },
-      (error) => {
-        return;
-      }
-    );
+export class AppointmentList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  return (
-    <>
-      {/* <Calendar /> */}
-      <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab label="Appointment List" {...a11yProps(0)} />
-            <Tab label="Calender View" {...a11yProps(1)} />
-          </Tabs>
-        </Box>
-        <TabPanel value={value} index={0}>
-          Appointment List
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          {props.isLoggedIn ? <Calendar apopointmnets={appts} /> : ""}
-        </TabPanel>
-      </Box>
-    </>
-  );
+  componentDidMount() {
+    this.props.getAppointments(this.props.currentUser.id);
+    this.props.getAllPatients();
+
+
+    //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",this.props.appointmentList)
+  }
+
+  render() {
+    return (
+        <div className="container mt-5">
+          <Link className="btn btn-warning" to="/admin">
+            <BsFillArrowLeftSquareFill />
+            <span className="m-2">Back</span>
+          </Link>
+          <h1 className="text-success text-center fw-bold ">Appointment List</h1>
+          <table className="table table-bordered shadow mt-4">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">Sr no </th>
+                <th scope="col">Pataient Name</th>
+                <th scope="col">PatientId</th>
+                <th scope="col">Appointment Title</th>
+              
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Time Slot</th>
+                <th scope="col">Actions</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+            {this.props.appointmentList.map((appointments, index) => {
+              {
+                return (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <td>{` ${appointments.patientId}`}</td>
+                    <td>{appointments.patientId}</td>
+                  
+                    <td>{appointments.appointment_title}</td>
+                    <td>{appointments.appointmentDate}</td>
+                    <td>{appointments.appointment_start_time}</td>
+                    <td>{appointments.appointment_end_time}</td>
+                    
+                    <td>
+                    <button type="button" onClick="" className="btn btn-primary btn-sm">Approve</button>
+                    <button type="button" nClick="" className="btn btn-secondary btn-sm m-2">postpone</button>
+                    <button type="button" nClick="" className="btn btn-danger btn-sm">Reject</button>
+                    </td>
+
+
+                    
+                    
+
+                    
+                    {/* <td>
+                      <span className="p-2">
+                        <Link to={`/userdetails/${user.id}`}>
+                          <BsPersonFill />
+                        </Link>
+                      </span>
+                      <span className="p-2">
+                        <Link to={`/edit/${user.id}`}>
+                          <BsFillPencilFill />
+                        </Link>
+                      </span>
+                      <span className="p-2">
+                        <BsFillTrashFill />
+                      </span>
+                    </td> */}
+                  </tr>
+                );
+              }
+              })}
+            </tbody>
+            
+           
+          </table>
+        </div>
+    );
+  }
 }
 
-const mapStatetoProps = (state) => {
-  return {
-    isLoggedIn: state.login.isLoggedIn,
-    role: state.login.role,
-    globalmessage: state.login.globalmessage,
-    authToken: state.login.authToken,
-    currentUser: state.login.loggedUserInfo,
-  };
-};
-
-export default connect(mapStatetoProps, null)(PhyAppointmentList);
+export default connect(mapStateToProps, mapDispatchToProps)(AppointmentList);

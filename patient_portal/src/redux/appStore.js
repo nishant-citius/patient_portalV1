@@ -19,6 +19,7 @@ import { InactiveUsersReducer } from "./reducers/userreducers/InactiveUsersReduc
 import { PatientDemographicsReducer } from "./reducers/PatientDemographicsReducer";
 import { PatientImmunizationReducer } from "./reducers/PatientImmunizationReducer";
 import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPhysicianReducer";
+import {GetAllAppointmentReducer} from "./reducers/GetAllAppointmentReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -38,6 +39,7 @@ let rootReducer = combineReducers({
   patientDemographics: PatientDemographicsReducer,
   patientImmunization: PatientImmunizationReducer,
   specilizedPhysicians: SpecialityPhysicianReducer,
+  appointmentsDetails:GetAllAppointmentReducer,
 });
 
 /**create store  */

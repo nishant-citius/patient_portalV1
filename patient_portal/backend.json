@@ -162,6 +162,20 @@
       "createdDate": "Mon Oct 25 2021 17:18:10 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 13
+    },
+    {
+      "email": "sp@gmail.com",
+      "password": "$2a$10$zJX97wLoCgcD0yzA1rOYTuZVqGCxvMntL6495m7wJYNTchfjFsVAG",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-09-26",
+      "username": "sp",
+      "mobile": "8801888988",
+      "role": "physician",
+      "speciality": "physician",
+      "createdDate": "Wed Oct 27 2021 11:45:57 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 12
     }
   ],
   "demographics": [
