@@ -100,6 +100,7 @@ const mapStatetoProps = (state) => {
     currentUser: state.login.loggedUserInfo,
     users: state.getallusers.users,
     inUsers: state.inactiveUsers.inactiveUsers,
+    count: state.inactiveUsers.inactiveUserCount,
   };
 };
 
