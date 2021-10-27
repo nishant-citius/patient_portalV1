@@ -69,6 +69,7 @@ function ScheduleAppointment(props) {
       createdDate: new Date(),
       // vistInfo: values.vistInfo,
       patientId: props.currentUser.id,
+      status: "Pending",
     };
     scheduleAppointmentToday(payload);
     actions.resetForm();
