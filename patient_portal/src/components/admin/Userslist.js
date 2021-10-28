@@ -8,7 +8,6 @@ import {
   BsPersonFill,
   BsCheckCircleFill,
   BsFillXCircleFill,
-  BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
 const mapStateToProps = (rootReducer) => {
@@ -34,6 +33,7 @@ export class UserList extends React.Component {
 
   deleteUser(userId) {
     this.props.removeUser(userId);
+    this.props.getalluserdata();
   }
 
   render() {
@@ -95,7 +95,7 @@ export class UserList extends React.Component {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2">
+                      <span className="p-2 hand-pointer">
                         <BsFillTrashFill
                           onClick={() => this.deleteUser(user.id)}
                         />

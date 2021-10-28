@@ -24,7 +24,7 @@ export { default as ImageListItemBar } from "@material-ui/core/ImageListItemBar"
 
 /**dialogue Imports */
 export { default as Dialog } from "@material-ui/core/Dialog";
-export { default as DialogTitle } from "@material-ui/core/Dialog";
+export { default as DialogTitle } from "@material-ui/core/DialogTitle";
 export { default as DialogContent } from "@material-ui/core/DialogContent";
 export { default as DialogActions } from "@material-ui/core/DialogActions";
 export { default as List } from "@material-ui/core/List";
