@@ -32,17 +32,17 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "320px" ,
     maxHeight:"100px",
     margin: "4px",
-    background:"#D3D3D3",
+    background:"rgb(72 179 226)",
     // color:"black"
   },
   innercard2:{
-    maxWidth: "150px" ,
-    maxHeight:"150px",
+    minWidth: "100px" ,
+    minHeight:"100px",
     margin: "4px",
-    background:"#D3D3D3"
+    background:"rgb(72 179 226)"
   },
   innercard:{
-    height:"600",
+    height:"185px"
   },
   innercard3:{
     background:"#D3D3D3"
@@ -51,11 +51,15 @@ const useStyles = makeStyles((theme) => ({
     width: "105px",
     textAlign:"center"
   },
-  display:{
-   display:"flex"
-  },
+  // display:{
+  //  display:"flex"
+  // },
   h5:{
-   textAlign:"center"
+   textAlign:"center",
+   color:"blue"
+  },
+  height:{
+    height:"150px"
   }
  
   // h5:{
@@ -132,7 +136,7 @@ const Patient_dashboard = (props) => {
             </div>
     
              <div className={classes.display}> 
-             <Card className={classes.innercard1} style={{ backgroundColor: "#93E9BE" }}>
+             <Card className={classes.innercard1}>
                <CardContent>
                  <Typography variant="subtitle1">
                    Pulse Rate
@@ -163,15 +167,15 @@ const Patient_dashboard = (props) => {
              <Typography variant="subtitle1" >
                </Typography>
                 <div className={classes.display}>
-                  <Card className={classes.innercard2} >
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                     <CardContent>
-                      <Typography variant="subtitle1" className="">
+                      <Typography variant="subtitle1">
                       Medicine Name<br/>
                      <b>Paracetamol</b>
                       </Typography>
                     </CardContent>
                    </Card>
-                  <Card className={classes.innercard2} >
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                     <CardContent>
                       <Typography variant="subtitle1">
                         Dosages<br/>
@@ -181,7 +185,7 @@ const Patient_dashboard = (props) => {
                   </Card>
                 </div>
                 <div className={classes.display}> 
-                  <Card className={classes.innercard2} style={{ backgroundColor: "#93E9BE" }}>
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                      <CardContent>
                        <Typography variant="subtitle1">
                           Physician Name<br/>
@@ -190,7 +194,7 @@ const Patient_dashboard = (props) => {
                         </Typography>
                       </CardContent>
                   </Card>
-                  <Card className={classes.innercard2}>
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                      <CardContent>
                        <Typography variant="subtitle1">
                          Frequency<br/>
@@ -207,17 +211,29 @@ const Patient_dashboard = (props) => {
          <Card>
             <CardMedia
             component="img"
-            height="140"
+            height="250"
            image="https://healthtechmagazine.net/sites/healthtechmagazine.net/files/styles/cdw_hero/public/articles/%5Bcdw_tech_site%3Afield_site_shortname%5D/201911/20191127_HT_Web_Perfcon_EHR-Patient-Care.jpg?itok=xzDl3EQW"
            />
           
-           <h5 className={classes.h5}>Details</h5>
+           {/* <h6 className={classes.h6}>Details</h6> */}
            <CardContent >
+           <h6 className={classes.h6}>Details</h6>
+           <Divider/>
+           <br/>
           <Typography  component="div">
-           Name: jay
+          username: jay
          </Typography>
          <Typography  component="div">
-           Age: 27
+         email: <span paddingLeft="9px">27</span>
+         </Typography>
+         <Typography  component="div">
+         dob: <span paddingLeft="9px">27</span>
+         </Typography>
+         <Typography  component="div">
+         mobile: <span paddingLeft="9px">27</span>
+         </Typography>
+         <Typography  component="div">
+         blood_group: <span paddingLeft="9px">27</span>
          </Typography>
          </CardContent>
       </Card>
@@ -252,7 +268,7 @@ const Patient_dashboard = (props) => {
               <Container>
                  <Grid container spacing={6}>
                     <Grid item>
-                       <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}>
+                       <Card style={{ backgroundColor: "rgb(62 222 182)" }} className={classes.innercard4}>
                           <CardContent>
                              <DirectionsWalkIcon>
                                </DirectionsWalkIcon>
@@ -264,7 +280,7 @@ const Patient_dashboard = (props) => {
                         </Card>
                      </Grid>
       <Grid item>   
-        <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}>
+        <Card style={{ backgroundColor: "rgb(62 222 182)" }} className={classes.innercard4}>
            <CardContent>
               <DirectionsBikeIcon></DirectionsBikeIcon>
                 <Typography variant="subtitle1"  color="black">
@@ -275,7 +291,7 @@ const Patient_dashboard = (props) => {
         </Card>
         </Grid>
         <Grid item>  
-                <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}> 
+                <Card style={{ backgroundColor: "rgb(62 222 182)" }} className={classes.innercard4}> 
                    <CardContent>
                     <DirectionsRunIcon></DirectionsRunIcon>
                      <Typography variant="subtitle1"  color="black">
@@ -323,7 +339,7 @@ const Patient_dashboard = (props) => {
            <CardContent>
              <Grid container spacing={4}>
                <Grid item>
-         <Card style={{ backgroundColor: "#D3D3D3" }}>
+         <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.height}>
            <CardContent>
              <Typography variant="subtitle1">
                 Drug Name<br/>
@@ -333,7 +349,7 @@ const Patient_dashboard = (props) => {
                </Card>
               </Grid>
               <Grid item>
-           <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.innercard}>
+           <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.height}>
            <CardContent>
              <Typography variant="subtitle1">
                 Strength<br/>
