@@ -108,7 +108,10 @@ function ShellComponent(props) {
         <Route path={"/userdetails/:id"} component={UserDetails} />
         <Route path={"/edit/:id"} component={EditUser} />
         <Route path={"/patientdata"} component={PatientList1} />
-        <Route path={"/patientdemographics"} component={PatientDemographics} />
+        <Route
+          path={"/patientdemographics/userid"}
+          component={PatientDemographics}
+        />
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
         <Route path={"/schedule_appointment"}>

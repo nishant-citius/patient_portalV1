@@ -4,7 +4,6 @@ export const IMAGE_URL = "http://localhost:3000/src/components/";
 export const REGISTER_USER = "http://localhost:9999/register";
 export const LOGIN_USER = "http://localhost:9999/login";
 export const IMMUNIZATION = "http://localhost:9999/immunization";
-export const VITALS = "http://localhost:9999/vitals";
 export const DEMOGRAPHICS = "http://localhost:9999/demographics";
 export const MED_ALLERGIES = "http://localhost:9999/medic_allergy";
 
@@ -22,5 +21,4 @@ export const GET_DEMOGRAPHICS = "http://localhost:9999/demographics";
 export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false";
 export const SPECILISED_PHYSICIANS = "http://localhost:9999/users?speciality=";
 export const PHYSICIAN_BY_NAME = "http://localhost:9999/users?fName=";
-
-
+export const PATIENT_VITALS = "http://localhost:9999/patientvitals";

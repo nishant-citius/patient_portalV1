@@ -13,13 +13,13 @@ const BarChart = () => {
             " Thursday",
             "Friday ",
             "Saturday",
-            "susmitha",
+            "Sunday",
           ],
           datasets: [
             {
               label: "No of patients visited",
-              data: [12, 19, 13, 5, 2, 4],
-              backgroundColor: ["Red"],
+              data: [32, 39, 23, 35, 20, 44],
+              backgroundColor: ["#f50057"],
             },
             {
               label: "No of patients per month",
@@ -33,13 +33,13 @@ const BarChart = () => {
                 "Sunday",
               ],
               data: [102, 109, 130, 105, 210, 40],
-              backgroundColor: "orange",
+              backgroundColor: "#3f51b5",
             },
           ],
           borderWidth: 1,
         }}
-        height={400}
-        width={600}
+        height={300}
+        width={200}
         options={{
           maintainAspectRatio: false,
           scales: {

@@ -39,7 +39,7 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
-  if (req.method === "post" && req.url.endsWith("/vitals")) {
+  if (req.method === "post" && req.url.endsWith("/patientvitals")) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -385,7 +385,7 @@ export function AddVitalsAsync(user) {
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
-    axios.post(URLS.VITALS, JSON.stringify(user), config).then(
+    axios.post(URLS.PATIENT_VITALS, JSON.stringify(user), config).then(
       (response) => {
         console.log(response);
         payload.globalmessage = `Vitals registered successfully`;

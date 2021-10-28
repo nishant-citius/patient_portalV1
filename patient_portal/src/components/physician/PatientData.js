@@ -60,9 +60,11 @@ export class PatientList extends React.Component {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <Link to={`/demographics/${user.id}`}>
-                        <td>{`${user.fName} ${user.lName}`}</td>
-                    </Link>
+                    <td>
+                      <Link to={"/patientdemographics/" + user.userid}>
+                        {`${user.fName} ${user.lName}`}
+                      </Link>
+                    </td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>

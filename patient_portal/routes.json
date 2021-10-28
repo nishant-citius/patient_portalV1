@@ -4,5 +4,6 @@
   "immunization": 660,
   "medication_allergies": 660,
   "requests": 660,
-  "medic_allergy": 660
+  "medic_allergy": 660,
+  "patientvitals":660
 }

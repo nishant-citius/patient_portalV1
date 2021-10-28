@@ -277,16 +277,9 @@
     }
   ],
   "patientvitals": [
-    {
-      "height": "18_44",
-      "weight": "dfghjk",
-      "blod_pressure": "1",
-      "temperature": "dfghjk",
-      "pulse": "OxtfXFr",
-      "respiration": "TZEd-AN",
-      "oxigen_saturation": "",
-      "pain": ""
-    }
+    
+   
+    
   ],
   "order": [
     {

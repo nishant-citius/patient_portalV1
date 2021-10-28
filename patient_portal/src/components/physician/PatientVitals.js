@@ -11,10 +11,9 @@ const Vitals = (props) => {
     weight: "",
     blood_pressure: "",
     temperature: "",
-    pulse:"",
-    respiration:"",
-    oxigen_saturation:"",
-    pain:"",
+    pulse: "",
+    respiration: "",
+    oxigen_saturation: "",
     userid: props.currentUser.id,
   };
   const [patientVitals, setpatientVitals] = useState(initialValues);
@@ -26,8 +25,6 @@ const Vitals = (props) => {
     pulse: Yup.string().required("Required"),
     respiration: Yup.string().required("Required"),
     oxigen_saturation: Yup.string().required("Required"),
-    pain: Yup.string().required("Required"),
-
   });
   const onSubmit = (values) => {
     const payload = {
@@ -40,13 +37,13 @@ const Vitals = (props) => {
       oxigen_saturation: values.oxigen_saturation,
       userid: props.currentUser.id,
     };
-    props.addUserHandler(payload);
+    props.vitals(payload);
   };
 
   let history = useHistory();
   useEffect(() => {
-    if(props.statusCode === 201){
-      history.push("/patient")
+    if (props.statusCode === 201) {
+      history.push("/patient");
     }
   });
 
@@ -59,7 +56,9 @@ const Vitals = (props) => {
       {(props) => (
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-            <div className="card-header"><h5>Patient Vitals Details</h5></div>
+            <div className="card-header">
+              <h5>Patient Vitals Details</h5>
+            </div>
             <div className="card-body">
               <Form>
                 <div className="form-group">
@@ -67,7 +66,7 @@ const Vitals = (props) => {
                     Patient Vitals
                   </label><br></br> */}
                   <div className="row">
-                  <div className="col-4">
+                    <div className="col-4">
                       <label htmlFor="height">Patient Height</label>
                       <Field
                         type="text"
@@ -116,25 +115,22 @@ const Vitals = (props) => {
                       <Field
                         type="text"
                         className="form-control"
-                        name="pulse" 
+                        name="pulse"
                       />
                       <div className="error">
                         <ErrorMessage name="pulse" />
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="oxigen_saturation">Oxygen Saturation</label>
+                      <label htmlFor="oxigen_saturation">
+                        Oxygen Saturation
+                      </label>
                       <Field
-                        as="select"
+                        type="text"
                         className="form-control"
+                        placeholder="respiration"
                         name="oxigen_saturation"
-                      >
-                        <option value="">below 93</option>
-                        <option value="1">94</option>
-                        <option value="2">96</option>
-                        <option value="3">97</option>
-                        <option value="4">98</option>
-                      </Field>
+                      />
                       <div className="error">
                         <ErrorMessage name="oxigen_saturation" />
                       </div>
@@ -143,9 +139,7 @@ const Vitals = (props) => {
                 </div>
 
                 <div className="form-group mt-4">
-                  <label htmlFor="respiration">
-                  respiration
-                  </label>
+                  <label htmlFor="respiration">respiration</label>
                   <Field
                     type="text"
                     className="form-control"
@@ -177,8 +171,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    vitals: (newuser) =>
-      dispatch(actionCreator.AddVitalsAsync(newuser)),
+    vitals: (newuser) => dispatch(actionCreator.AddVitalsAsync(newuser)),
   };
 };
 
