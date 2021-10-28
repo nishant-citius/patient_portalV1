@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import BarChart from "./chart";
 import { useHistory } from "react-router";
 import * as actionCreator from "../../redux/actions/userActionCreater";
+import AppointmentList from "../physician/PhyAppointmentList";
 
 import {
   Container,
@@ -78,7 +79,7 @@ const Physician_dashboard = () => {
       height: "45px",
     },
     textblock3: {
-      backgroundColor: "#9480c9",
+      backgroundColor: "#dc3545",
       height: "45px",
     },
     chartdiv: {
@@ -145,7 +146,7 @@ const Physician_dashboard = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container>
+      {/* <Container>
         <Grid container spacing={4}>
           <Grid item sm={12} lg={6} md={6}>
             <BarChart />
@@ -188,7 +189,7 @@ const Physician_dashboard = () => {
             </div>
           </Grid>
         </Grid>
-      </Container>
+      </Container> */}
       {/* //calendar start// */}
       {/* <div className="m-4">
         <div className="row ">
@@ -207,6 +208,13 @@ const Physician_dashboard = () => {
           </div>
         </div>
         calendar end /> */}
+      <Container>
+        <Grid container spacing={0}>
+          <Grid item sm={12} lg={12} md={12}>
+            <AppointmentList />
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 };
