@@ -33,9 +33,9 @@ class MyProfile extends Component {
     e.preventDefault();
      //create object of formData
     const formData = new FormData();
-    formData.append("profileImage", this.profileImage);
-    this.props.updateProfile(this.state.profileImage, this.state.userId)
-    console.log(this.state.profileImage)
+    formData.append("profileImage", this.state.profileImage);
+    this.props.updateProfile(this.state.profileImage, this.props.currentUser)
+    console.log(this.props.currentUser)
     
   };
 
@@ -111,8 +111,9 @@ const mapStatetoProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateProfile: (profileImage, userId) => dispatch(actions.updateprofile(profileImage, userId)),
+    updateProfile: (profileImage, loggedUserInfo) => dispatch(actions.updateprofile(profileImage, loggedUserInfo)),
   };
+
 };
 
 

@@ -24,3 +24,8 @@ export { default as ShareIcon } from "@material-ui/icons/Share";
 export { default as ExpandMoreIcon } from "@material-ui/icons/ExpandMore";
 export { default as MoreVertIcon } from "@material-ui/icons/MoreVert";
 export { default as InfoIcon } from "@material-ui/icons/Info";
+export { default as DirectionsWalkIcon } from "@material-ui/icons/DirectionsWalk";
+export { default as DirectionsBikeIcon } from "@material-ui/icons/DirectionsBike";
+export { default as DirectionsRunIcon } from "@material-ui/icons/DirectionsRun";
+export { default as PoolIcon} from "@material-ui/icons/Pool";
+
