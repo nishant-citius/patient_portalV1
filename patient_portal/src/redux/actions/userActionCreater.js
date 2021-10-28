@@ -51,6 +51,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "delete" && req.url.endsWith(req.url)) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   return req;
 });
 // //********AXIOS INTERCEPTOR********
@@ -279,21 +283,15 @@ export function EditUser(userId, upadatedData) {
 
 export function DeleteUser(userId) {
   let payload = {
-    users: [],
     globalmessage: "",
   };
   return (dispatch, getState) => {
-    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
     authToken = getState().login.authToken;
     axios.delete(`${URLS.USER}${userId}`).then(
       (response) => {
-        payload.globalmessage = `Delete Success`;
-        payload.users = [];
         dispatch({ type: actions.DELETE_USER, payload: payload });
       },
       (error) => {
-        payload.globalmessage = `ERROR: ${error.response.data}`;
-        payload.users = [];
         dispatch({ type: actions.DELETE_USER, payload: payload });
       }
     );
@@ -514,7 +512,7 @@ export function updateprofile(profileImage, loggedUserInfo) {
       "Content-type": "application/json; charset=UTF-8",
     };
 
-    loggedUserInfo.profileImage = `../../images/${profileImage.name}` ;
+    loggedUserInfo.profileImage = `../../images/${profileImage.name}`;
     loggedUserInfo.password = loggedUserInfo.rpassword;
     axios
       .put(`${URLS.USER}${loggedUserInfo.id}`, loggedUserInfo, { headers })
