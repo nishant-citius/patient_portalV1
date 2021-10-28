@@ -1,141 +1,153 @@
 {
   "users": [
     {
-      "email": "j@email.com",
-      "password": "$2a$10$QhJr/.j5wtJdoADQWCCbneHe.nLxnxV2DX7Mfba.99H2yAzWK9Ype",
-      "fName": "John",
-      "lName": "Cena",
-      "dob": "2021-10-01",
-      "username": "jon",
-      "mobile": "9955641258",
-      "role": "admin",
+      "email": "nc@email.com",
+      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "username": "nc@email.com",
       "rpassword": "12345",
-      "blood_group": "A Rh + Ve",
-      "createdDate": "Wed Oct 13 2021 12:56:33 GMT+0530 (India Standard Time)",
+      "mobile": 1234567890,
+      "blood_group": "b+ve",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1,
-      "profileImage": ""
+      "id": 1
     },
     {
       "email": "aj@email.com",
-      "password": "$2a$10$7lHQF.18HdQqlEa1pCKnc.MMTAOcnDQm4E54ODiGfXX6rNsrvAMpm",
-      "fName": "Steven",
-      "lName": "Strange",
-      "dob": "2021-09-29",
-      "username": "steve",
-      "mobile": "9955641258",
-      "role": "admin",
+      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
+      "fName": "Ajinkya",
+      "lName": "Pathak",
+      "dob": "2021-09-30",
+      "username": "aj@email.com",
       "rpassword": "12345",
-      "blood_group": "B Rh + Ve",
-      "createdDate": "Wed Oct 13 2021 12:58:37 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "mobile": 9403541779,
+      "blood_group": "b+ve",
+      "role": "admin",
+      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 2
     },
     {
-      "email": "ajinkya@email.com",
-      "password": "$2a$10$440Z2mI8vG2HXsldNo3LPuNbKVlxCddQLGD8bFOzbPE4hnw5J517q",
-      "fName": "Steven",
-      "lName": "Cold",
-      "dob": "2021-09-28",
-      "username": "StoneCold",
-      "mobile": "9921695918",
-      "role": "patient",
+      "email": "donald@email.com",
+      "password": "$2a$10$s7veQe9hm1Xg9jXPLiGMg..Xa0VzP/aSvM4G.OVXVqvQGwNSa9cLK",
+      "fName": "Donald",
+      "lName": "Trump",
+      "dob": "2021-09-27",
+      "username": "Donald Duck",
       "rpassword": "12345",
-      "blood_group": "B Rh + Ve",
-      "createdDate": "Wed Oct 13 2021 13:23:31 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "mobile": 9876543211,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 22:45:49 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 3
     },
     {
-      "email": "sc@email.com",
-      "password": "$2a$10$MEBPkYDCzkSIxvdTGLRDpeGXm58JuFcCeg59FeVqwEWofUuPoB0KC",
-      "fName": "pooja",
-      "lName": "t",
-      "dob": "2021-09-27",
-      "username": "pooja@email.com",
-      "mobile": "9556644852",
-      "role": "physician",
-      "rpassword": "asdf",
-      "blood_group": "B Rh + Ve",
-      "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 20,
-      "speciality": "Gynecology"
-    },
-    {
-      "email": "user_1@email.com",
-      "password": "$2a$10$863JJtjO8HmiXXWcLailVuow0/ddw2fveT6.rsjkBW2qLWXSmc2TO",
-      "fName": "p",
-      "lName": "t",
-      "dob": "2021-09-27",
-      "username": "pooja@email.com",
-      "mobile": "9556644852",
-      "role": "physician",
-      "rpassword": "asdf",
-      "blood_group": "B Rh + Ve",
-      "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 4,
-      "speciality": "General Surgery"
-    },
-    {
-      "email": "TShiva.prasad@citiustech.com",
-      "password": "$2a$10$WJO4fluyF7drycYYdi4h7OFdKbdQwfczp8XT6np78TaFr.d16XXtO",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-09-30",
-      "username": "TShiva.prasad@citiustech.com",
-      "mobile": "8801888988",
-      "role": "admin",
+      "email": "qwerty@email.com",
+      "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
+      "fName": "Qwert",
+      "lName": "qwetrt",
+      "dob": "2021-09-28",
+      "username": "qwerty",
       "rpassword": "12345",
-      "blood_group": "b +ve",
-      "createdDate": "Wed Oct 13 2021 14:40:37 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "mobile": 1234567890,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
+      "isActive": false,
       "id": 5
     },
     {
-      "email": "nc@email.com",
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-29",
-      "username": "nish",
-      "mobile": "1234567890",
-      "role": "patient",
+      "email": "ms@email.com",
+      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
+      "fName": "Manya ",
+      "lName": "Surve",
+      "dob": "2021-09-30",
+      "username": "Mumbai ka king",
       "rpassword": "12345",
-      "blood_group": "b+ve",
-      "createdDate": "Fri Oct 15 2021 15:16:27 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 6,
-      "profileImage": "../../images/doc_1.jpg",
-      "password": "$2a$10$3CmawsShldc2F1MxNd/gmOxpAc5jg4nX3yMUD/ha2KcBjx3HPt8KC"
+      "mobile": 1234567899,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 6
     },
     {
-      "email": "nurse-1@email.com",
-      "password": "$2a$10$E4kVowT6T2iG6g.w28A3jOwtGqkO7sJyPtTmyBZyHt2urZlgnd7YC",
-      "fName": "Nurse-1",
-      "lName": "N",
-      "dob": "2021-10-15",
-      "username": "Nurse-1.",
-      "mobile": "8857555657",
-      "role": "nurse",
-      "speciality": "",
-      "createdDate": "Tue Oct 19 2021 23:35:49 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 16
+      "email": "kk@email.com",
+      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
+      "fName": "Kishore ",
+      "lName": "Kumar",
+      "dob": "2021-09-27",
+      "username": "Kishore Bhai",
+      "rpassword": "12345",
+      "mobile": 2345234534,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 7
     },
     {
-      "email": "geeta.j@email.com",
-      "password": "$2a$10$Lc4WUg0ukFMEQ3rILE3DzeZG0bYQEda2PJLM2bcPSZetsgY5Ua.re",
-      "fName": "Geeta",
-      "lName": "J",
-      "dob": "2021-10-12",
-      "username": "geeta20",
-      "mobile": "567890099",
-      "role": "nurse",
-      "speciality": "",
-      "createdDate": "Fri Oct 22 2021 18:50:02 GMT+0530 (India Standard Time)",
+      "email": "jr@email.com",
+      "password": "$2a$10$YIR.mOnyV0jxU/yx8e5WLe8pF/SN9ow5tH0tYg2mHI4.FuByoT38W",
+      "fName": "Jagruti",
+      "lName": "Ranbhor",
+      "dob": "2021-09-29",
+      "username": "jagu",
+      "rpassword": "12345",
+      "mobile": 1234567890,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Fri Oct 22 2021 00:07:07 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 8
+    },
+    {
+      "email": "ajju@email.com",
+      "password": "$2a$10$Z6VZRPVos52Vz7Q1eB1gqOXu4lGf0Y8Ylki3LkZ5rsOLw9fzfbYXK",
+      "fName": "Ajju ",
+      "lName": "Bhai",
+      "dob": "2021-09-27",
+      "username": "ajju@email.com",
+      "rpassword": "12345",
+      "mobile": 1234567890,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Fri Oct 22 2021 00:15:07 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 9
+    },
+    {
+      "email": "ap@email.com",
+      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
+      "fName": "Joe",
+      "lName": "Root",
+      "dob": "2021-09-27",
+      "username": "joe",
+      "rpassword": "12345",
+      "mobile": 5645652548,
+      "blood_group": "B-",
+      "role": "patient",
+      "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 22
+      "id": 10
+    },
+    {
+      "email": "sh@email.com",
+      "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
+      "fName": "soujanya",
+      "lName": "G",
+      "dob": "2021-10-07",
+      "username": "soujanya",
+      "mobile": "23214214123",
+      "role": "physician",
+      "speciality": "ww",
+      "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 11
     },
     {
       "email": "sp@gmail.com",
@@ -154,237 +166,151 @@
   ],
   "demographics": [
     {
-      "email": "seema@email.com",
-      "password": "$2a$10$rkvZcFHmpP1BpG2y0xYN.O0n1k.FQ/aaBaZJjwGQi5K2JBuXVatWW",
-      "fName": "seema",
-      "lName": "khanna",
-      "dob": "2021-10-21",
-      "username": "seema",
-      "mobile": "67",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "o-",
-      "createdDate": "Mon Oct 18 2021 18:47:07 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 11
-    },
-    {
-      "email": "kajal@email.com",
-      "password": "$2a$10$48KfQwwsP7qO2JOdZu06R.1ZVUeOUkD3ztUSbqo9QF2GQQkK6y.12",
-      "fName": "kajal",
-      "lName": "thakur",
-      "dob": "2021-10-20",
-      "username": "kajal",
-      "mobile": "546474",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "o-",
-      "createdDate": "Tue Oct 19 2021 10:15:56 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 12
-    },
-    {
-      "email": "n@email.com",
-      "password": "$2a$10$1kDN19xGZybc52h3suin/.VdNfchnq1vXuAunWwXSzpCCuoCmsOUC",
-      "id": 13
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "NA",
+      "education": "BE",
+      "employment": "as",
+      "address": "as",
+      "phone_number": 1234567890,
+      "medical_history": "NA",
+      "family_medical_history": "NA",
+      "surgeries": "NA",
+      "insurance_provider": "LIC",
+      "userid": 1,
+      "id": 1
     }
   ],
-  "medication_allergies": [
-    {
-      "id": 1,
-      "patient_id": "",
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsumedosage": "",
-          "socialDrugs": ""
-        }
-      ],
-      "pastprescribedmedication": [
-        {
-          "drugName": "",
-          "strength": "",
-          "directiontoconsumedosage": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "medicineName": "Ajinkya",
-      "dosage": "Ajinkya",
-      "directionstoconsume": "Ajinkya",
-      "frequency": "Ajinkya",
-      "physicianName ": "Ajinkya",
-      "purpose": "Ajinkya",
-      "startDate": "2021-09-30",
-      "endDate": "2021-09-27",
-      "otcDrugName": "Ajinkya",
-      "strength": "Ajinkya",
-      "directiontoconsumedosage": "Ajinkya",
-      "socialDrugs: ": "smoke",
-      "drugName": "Ajinkya",
-      "allergyName": "Ajinkya",
-      "symptomsofAllergy ": "Ajinkya",
-      "direction_to_consume": "Ajinkya"
-    }
-  ],
+  "medic_allergy": [],
   "immunization": [
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-13"
-        },
-        {
-          "vaccine_name": "Pnumonia",
-          "vaccine_date": "2021-10-28"
-        }
-      ],
-      "userid": 1,
-      "id": 4
+      "id": "",
+      "patient_id": "",
+      "vaccine_brand": "",
+      "age_category": "",
+      "dose_detail": "",
+      "general_vaccine": ""
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "dfghjk",
+      "dose_detail": "1",
+      "general_vaccine": "dfghjk",
+      "userId": "OxtfXFr",
+      "id": "TZEd-AN"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "1",
+      "general_vaccine": "NA",
+      "userId": "OxtfXFr",
+      "id": "iSaFnHN"
     },
     {
       "age_category": "18_44",
       "vaccine_brand": "CoviShield",
       "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-07-14"
-        },
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-27"
-        }
-      ],
-      "userid": 6,
-      "id": 5
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-07-14"
-        },
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-27"
-        }
-      ],
-      "userid": 6,
-      "id": 6
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-13"
-        },
-        {
-          "vaccine_name": "Pnumonia",
-          "vaccine_date": "2021-10-28"
-        }
-      ],
-      "userId": "1",
-      "id": 7
+      "general_vaccine": "NA",
+      "userId": 5,
+      "id": "GwKaUWS"
     }
   ],
   "appointments": [
     {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "jhhui",
-      "id": "ZBdyja5"
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 9403541779,
+      "doc_name": "13",
+      "appointment_title": "This Ajinkkkkkkkkya",
+      "appointment_time": "01:11",
+      "appointmentDate": "2021-09-30",
+      "appointment_desc": "I need to attend this\n",
+      "vistInfo": "yes",
+      "patientId": 1,
+      "id": 1
+    }
+  ],
+  "patientvitals": [
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "96",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 1
     },
     {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "jknj",
-      "id": "O4N8Pw1"
+      "height": "4.8",
+      "weight": "",
+      "blood_pressure": "",
+      "temperature": "98",
+      "pulse": "",
+      "respiration": "",
+      "oxigen_saturation": "",
+      "userid": 11,
+      "id": 2
     },
     {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hd",
-      "id": "g0RdcgF"
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 3
     },
     {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "",
-      "id": "9CI8q_u"
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 4
     },
     {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hjh",
-      "id": "uVZ0w3W"
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 5
     },
     {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hdjdj",
-      "id": "uw8XJNf"
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 6
     },
     {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hdhf",
-      "id": "8D6h9KG"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "covishield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "polio",
-          "vaccine_date": "2021-10-26"
-        },
-        {
-          "vaccine_name": "xyz",
-          "vaccine_date": "2021-10-12"
-        },
-        {
-          "vaccine_name": "abc",
-          "vaccine_date": "2021-10-04"
-        }
-      ],
-      "userid": 13,
-      "id": "xy3C_1I"
+      "height": "4.8",
+      "weight": "49",
+      "blood_pressure": "120/80",
+      "temperature": "96",
+      "pulse": "82",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 7
     }
   ],
   "order": [

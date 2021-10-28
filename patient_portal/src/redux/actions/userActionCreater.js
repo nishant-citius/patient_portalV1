@@ -40,6 +40,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "post" && req.url.endsWith("/patientvitals")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   if (req.method === "put" && req.url.indexOf("/users/")) {
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -439,6 +443,29 @@ export function AddImmunizationsAsync(user) {
         payload.globalmessage = `Immunization ERROR: ${error.response.data}`;
         payload.statusCode = 400;
         dispatch({ type: actions.ADD_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}
+
+export function AddVitalsAsync(user) {
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.post(URLS.PATIENT_VITALS, JSON.stringify(user), config).then(
+      (response) => {
+        console.log(response);
+        payload.globalmessage = `Vitals registered successfully`;
+        payload.statusCode = response.status;
+        dispatch({ type: actions.ADD_VITALS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `Vitals ERROR: ${error.response.data}`;
+        payload.statusCode = 400;
+        dispatch({ type: actions.ADD_VITALS, payload: payload });
       }
     );
   };
