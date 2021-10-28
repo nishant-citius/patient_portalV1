@@ -8,10 +8,14 @@ import { adminService } from "../../services/register_user_service";
 function ScheduleAppointment(props) {
   const [doctorsList, setDoctorsList] = useState([]);
   const [doctorName, setDcotorName] = useState("");
+  const [specialities, setSpecialities] = useState([]);
 
   useEffect(() => {
-    setDoctorsList(props.physiciandata);
-  }, []);
+    if (props.isLoggedIn) {
+      setDoctorsList(props.physiciandata);
+      doctorSpeciality();
+    }
+  }, [0]);
 
   const initialValues = {
     fName: props.currentUser.fName,
@@ -27,6 +31,17 @@ function ScheduleAppointment(props) {
     // vistInfo: "",
     userid: props.currentUser.id,
   };
+
+  function doctorSpeciality() {
+    adminService.getDoctorSpeciality().then(
+      (response) => {
+        setSpecialities(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
 
   function getDoc() {
     let spl_data = document.getElementById("#spl")
@@ -164,7 +179,11 @@ function ScheduleAppointment(props) {
                       onChange={getDoc}
                     >
                       <option value="">Select</option>
-                      <option value="Cancer">Cancer</option>
+                      {specialities.map((specility) => (
+                        <option value={specility.value}>
+                          {specility.name}
+                        </option>
+                      ))}
                     </Field>
                     <div className="error">
                       <ErrorMessage name="doc_spl" />
@@ -289,6 +308,7 @@ function ScheduleAppointment(props) {
 
 const mapStateToProps = (state) => {
   return {
+    isLoggedIn: state.login.isLoggedIn,
     currentUser: state.login.loggedUserInfo,
     doctorsList: state.specilizedPhysicians.specialisedPhysicians,
     physiciandata: state.physicians.physicians,
