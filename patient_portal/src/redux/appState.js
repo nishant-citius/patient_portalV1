@@ -10,12 +10,15 @@ let appState = {
   loggedUserInfo: {},
   physicians: [],
   patients: [],
+  nurses: [],
+  immunizations: [],
   userDetails: {},
   profileImage: "",
   inactiveUsers: [],
   patientDemographics: {},
   patientImmunization: {},
   specialisedPhysicians: [],
+  appointmentsDetails:[],
   inactiveUserCount: 0,
 };
 

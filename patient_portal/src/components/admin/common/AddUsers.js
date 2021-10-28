@@ -112,41 +112,6 @@ const AddUsers = (props) => {
             </div>
             <br />
             <div className="form-group">
-              <label>Role</label>
-              <select
-                className="form-control"
-                name="role"
-                id="role"
-                onChange={handleUserChange}
-                value={user.role}
-              >
-                <option value="">Select</option>
-                <option value="admin">Admin</option>
-                <option value="physician">Physician</option>
-                <option value="nurse">Nurse</option>
-              </select>
-            </div>
-            <br />
-            {user.role === "physician" ? (
-              <>
-                <div className="form-group">
-                  <label>Speciality</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="speciality"
-                    id="speciality"
-                    onChange={handleUserChange}
-                    placeholder="Enter Speciality"
-                    value={user.speciality}
-                  />
-                </div>
-                <br />
-              </>
-            ) : (
-              ""
-            )}
-            <div className="form-group">
               <label>Email</label>
               <input
                 type="email"
@@ -171,6 +136,69 @@ const AddUsers = (props) => {
                 value={user.mobile}
               />
             </div>
+            <br />
+            <div className="form-group">
+              <label>Role</label>
+              <select
+                className="form-control"
+                name="role"
+                id="role"
+                onChange={handleUserChange}
+                value={user.role}
+              >
+                <option value="">Select</option>
+                <option value="admin">Admin</option>
+                <option value="physician">Physician</option>
+                <option value="nurse">Nurse</option>
+              </select>
+            </div>
+            <br />
+            {user.role === "physician" ? (
+              <>
+                <div className="form-group">
+                  <label>Speciality</label>
+                  <select
+                    className="form-control"
+                    name="speciality"
+                    id="speciality"
+                    onChange={handleUserChange}
+                    placeholder="Enter Speciality"
+                    value={user.speciality}
+                  >
+                    <option value="">Select</option>
+                    <option value="Anaesthesia">Anaesthesia</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Corneal Transplant">
+                      Corneal Transplant
+                    </option>
+                    <option value="Dermatology And Cosmetology">
+                      Dermatology And Cosmetology
+                    </option>
+                    <option value="General Surgery">General Surgen</option>
+                    <option value="Infectious Diseases">
+                      Infectious Diseases
+                    </option>
+                    <option value="Liver Transplant & Hepatic Surgery">
+                      Liver Transplant & Hepatic Surgery
+                    </option>
+                    <option value="Gynecology">Gynecology</option>
+                    <option value="Neonatology">Neonatology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Orthopedics & Joint Replacement">
+                      Orthopedics & Joint Replacement
+                    </option>
+                    <option value="Physiotherapy">Physiotherapy</option>
+                    <option value="Plastic Surgery">Plastic Surgery</option>
+                    <option value="Psychiatry">Psychiatry</option>
+                    <option value="Urology">Urology</option>
+                  </select>
+                </div>
+                <br />
+              </>
+            ) : (
+              ""
+            )}
+
             <br />
             <div className="form-group">
               <label>Password</label>

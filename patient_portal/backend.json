@@ -1,10 +1,20 @@
 {
   "users": [
     {
-      "email": "preeti@email.com",
-      "password": "$2a$10$Ebh5b5r6MOr6cM0QJvemwutimRyU93GTCGH3BOPYPaCMEx8wcoMMi",
-      "profileImage": "Healthcare.jpg",
-      "id": 1
+      "email": "j@email.com",
+      "password": "$2a$10$QhJr/.j5wtJdoADQWCCbneHe.nLxnxV2DX7Mfba.99H2yAzWK9Ype",
+      "fName": "John",
+      "lName": "Cena",
+      "dob": "2021-10-01",
+      "username": "jon",
+      "mobile": "9955641258",
+      "role": "admin",
+      "rpassword": "12345",
+      "blood_group": "A Rh + Ve",
+      "createdDate": "Wed Oct 13 2021 12:56:33 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 1,
+      "profileImage": ""
     },
     {
       "email": "aj@email.com",
@@ -38,9 +48,9 @@
     },
     {
       "email": "sc@email.com",
-      "password": "$2a$10$5a.g6y4hvfGG3W67UjLmpeH3HniqJJMA/BvX3TDcLCqQZCPN6hmN2",
-      "fName": "dfjkasdf",
-      "lName": "fdasdsda",
+      "password": "$2a$10$MEBPkYDCzkSIxvdTGLRDpeGXm58JuFcCeg59FeVqwEWofUuPoB0KC",
+      "fName": "pooja",
+      "lName": "t",
       "dob": "2021-09-27",
       "username": "pooja@email.com",
       "mobile": "9556644852",
@@ -49,13 +59,14 @@
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 20
+      "id": 20,
+      "speciality": "Gynecology"
     },
     {
       "email": "user_1@email.com",
-      "password": "$2a$10$FNAMZBlCai2o7IQRCTjcPuckJPgYX5piEGxV09Vym/KVa0KPG4cf.",
-      "fName": "Shit ",
-      "lName": "Guy",
+      "password": "$2a$10$863JJtjO8HmiXXWcLailVuow0/ddw2fveT6.rsjkBW2qLWXSmc2TO",
+      "fName": "p",
+      "lName": "t",
       "dob": "2021-09-27",
       "username": "pooja@email.com",
       "mobile": "9556644852",
@@ -64,7 +75,8 @@
       "blood_group": "B Rh + Ve",
       "createdDate": "Wed Oct 13 2021 13:25:25 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 4
+      "id": 4,
+      "speciality": "General Surgery"
     },
     {
       "email": "TShiva.prasad@citiustech.com",
@@ -97,138 +109,10 @@
       "id": 6
     },
     {
-      "email": "nisha@email.com",
-      "password": "$2a$10$rEyelk1OMgqupW1k8aJ5z.rgFOs9AkfblJz4WkLPQn8Vt2qrnGBne",
-      "fName": "nishaaaa",
-      "lName": "simmi",
-      "dob": "2021-10-27",
-      "username": "nishaaa",
-      "mobile": "57786868",
-      "role": "",
-      "rpassword": "12345",
-      "blood_group": "o-",
-      "createdDate": "Mon Oct 18 2021 09:54:36 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 7
-    },
-    {
-      "email": "arjuna@email.com",
-      "password": "$2a$10$QpSn.GBXY1lA8ysEjIWy1e/J8chmDhQ.zZ9DtVJtg7hhfHiX7fFue",
-      "fName": "arjuna",
-      "lName": "oberoi",
-      "dob": "2021-10-28",
-      "username": "arjuna",
-      "mobile": "6475858",
-      "role": "",
-      "rpassword": "12345",
-      "blood_group": "o-",
-      "createdDate": "Mon Oct 18 2021 13:01:22 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 8
-    },
-    {
-      "email": "misha@email.com",
-      "password": "$2a$10$fLP68moMeAbBl4xKo0z0JOs7nKtaf6y4MG71KnveAl/X5CCJ3ttiS",
-      "fName": "misha",
-      "lName": "thakur",
-      "dob": "2021-10-12",
-      "username": "misha",
-      "mobile": "6577586886",
-      "role": "",
-      "rpassword": "12345",
-      "blood_group": "o-",
-      "createdDate": "Mon Oct 18 2021 13:12:31 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 9
-    },
-    {
-      "email": "meenu@email.com",
-      "password": "$2a$10$BWS/.upMMslL2yaVAFn0oupaZRJPbzOz7JnfxnLMIityY3kHWfDDO",
-      "profileImage": "Healthcare.png",
-      "id": 10
-    },
-    {
-      "email": "mrindia@email.com",
-      "password": "$2a$10$Wacdqu/y88pKZhzw4YEMo.vawiQK4NTRG3LUCqLsNSLitOWXJJQzC",
-      "fName": "Mr",
-      "lName": "India",
-      "dob": "2021-10-13",
-      "username": "mrindia",
-      "mobile": "54645",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "o -",
-      "createdDate": "Mon Oct 18 2021 17:26:41 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 11
-    },
-    {
-      "email": "rahul@email.com",
-      "password": "$2a$10$5hiL.WiK8MqfEbdAyIh.AOpjn/uk8zOmN1U/sTyhCrkP5g1BkrVWi",
-      "fName": "Rahul",
-      "lName": "Dravid",
-      "dob": "2021-09-30",
-      "username": "rahul",
-      "mobile": "56556562812",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "B+",
-      "createdDate": "Mon Oct 18 2021 17:54:35 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 12
-    },
-    {
-      "email": "manij@email.com",
-      "fName": "Manoj",
-      "lName": "Tripathi",
-      "dob": "2021-09-08",
-      "username": "manoj",
-      "mobile": "123456789",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "B+",
-      "createdDate": "Mon Oct 18 2021 17:54:35 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 13,
-      "profileImage": "User-Profile-PNG-Free-Download.png",
-      "password": "$2a$10$wUsHcqphRfuQwADpHLpl3.k9APuBizGm4XjioArheJhe5W5UjLuY."
-    },
-    {
-      "email": "yuyu@email.com",
-      "password": "$2a$10$V9jEUiGKm/j3ybElble2zO.QXKMclCUMkv.X.ltQKMiB81RA5rvE6",
-      "fName": "Arjun",
-      "lName": "Rampal",
-      "dob": "2021-10-13",
-      "username": "Ra-One",
-      "mobile": "262647",
-      "role": "patient",
-      "rpassword": "55555",
-      "blood_group": "yu",
-      "createdDate": "Mon Oct 18 2021 17:58:24 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 14
-    },
-    {
-      "email": "sanjana@email.com",
-      "fName": "Sanjana",
-      "lName": "Roy",
-      "dob": "2021-09-30",
-      "username": "sanju",
-      "mobile": "9955641258",
-      "role": "patient",
-      "rpassword": "78945",
-      "blood_group": "B",
-      "createdDate": "Mon Oct 18 2021 18:03:16 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 15,
-      "profileImage": "User-Profile-PNG-Free-Download.png",
-      "password": "$2a$10$.vWz5Q/MlgMxQmHuujG6CeBHL1WBN9GE8pf6Y7R4TCR8TZ1blMOSe"
-    },
-    {
       "email": "nurse-1@email.com",
-      "password": "$2a$10$DHtFBbgkucyEBjtGni3pI.mcFScQ6yoABGeVYVgveXbO11wzwDFUO",
-      "fName": "Person-1",
-      "lName": "Person-1",
+      "password": "$2a$10$E4kVowT6T2iG6g.w28A3jOwtGqkO7sJyPtTmyBZyHt2urZlgnd7YC",
+      "fName": "Nurse-1",
+      "lName": "N",
       "dob": "2021-10-15",
       "username": "Nurse-1.",
       "mobile": "8857555657",
@@ -239,63 +123,35 @@
       "id": 16
     },
     {
-      "email": "souj@email.com",
-      "password": "$2a$10$0E2pari2DaD0AH6Xuarrd.p5JujJTvnXPSA9y0x/JDXqvkMjTP/TG",
-      "fName": "soujanya",
-      "lName": "G",
+      "email": "geeta.j@email.com",
+      "password": "$2a$10$Lc4WUg0ukFMEQ3rILE3DzeZG0bYQEda2PJLM2bcPSZetsgY5Ua.re",
+      "fName": "Geeta",
+      "lName": "J",
       "dob": "2021-10-12",
-      "username": "souj",
-      "mobile": "2323232323",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "b+",
-      "createdDate": "Wed Oct 20 2021 22:10:17 GMT+0530 (India Standard Time)",
+      "username": "geeta20",
+      "mobile": "567890099",
+      "role": "nurse",
+      "speciality": "",
+      "createdDate": "Fri Oct 22 2021 18:50:02 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 21,
-      "profileImage": "Healthcare.jpg"
-    },
-    {
-      "email": "meenu@email.com",
-      "password": "$2a$10$HUt7HMqLSKKa1TkfxXbKVu7TC0o79id/qPQCz4ebdAbqOjWmPokWe",
-      "profileImage": "Healthcare.png",
       "id": 22
     },
     {
-      "email": "souj@email.com",
-      "password": "$2a$10$AM/t1/01eeXX3pUJoR1gFeb6JlHj.VI/KqziEnQfEXkkZD7pQyGXi",
-      "fName": "soujanya",
-      "lName": "G",
+      "email": "sp@gmail.com",
+      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
+      "fName": "shiva",
+      "lName": "prasad",
       "dob": "2021-10-12",
-      "username": "souj",
-      "mobile": "2323232323",
-      "role": "patient",
-      "rpassword": "12345",
-      "blood_group": "b+",
-      "createdDate": "Wed Oct 20 2021 22:10:17 GMT+0530 (India Standard Time)",
+      "username": "shiva prasad",
+      "mobile": "8801888988",
+      "role": "physician",
+      "speciality": "Orthopedics & Joint Replacement",
+      "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 23,
-      "profileImage": "Healthcare.jpg"
+      "id": 23
     }
   ],
   "demographics": [
-    {
-      "fName": "pooja",
-      "lName": "thakur",
-      "dob": "2021-10-07",
-      "gender": "female",
-      "ethnicity": "jshs",
-      "race": "",
-      "education": "mca",
-      "employment": "engineer",
-      "address": "bhhsx4747",
-      "phone_number": "66557",
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "jsjsj",
-      "userId": "OxtfXFr",
-      "id": 1
-    },
     {
       "email": "seema@email.com",
       "password": "$2a$10$rkvZcFHmpP1BpG2y0xYN.O0n1k.FQ/aaBaZJjwGQi5K2JBuXVatWW",
@@ -330,91 +186,6 @@
       "email": "n@email.com",
       "password": "$2a$10$1kDN19xGZybc52h3suin/.VdNfchnq1vXuAunWwXSzpCCuoCmsOUC",
       "id": 13
-    },
-    {
-      "fName": "reema",
-      "lName": "thakur",
-      "dob": "2021-10-28",
-      "gender": "female",
-      "ethnicity": "na",
-      "education": "na",
-      "employment": "na",
-      "address": "na",
-      "phone_number": 545466575757,
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "na",
-      "userid": 10,
-      "id": 14
-    },
-    {
-      "fName": "meenu",
-      "lName": "thakur",
-      "dob": "2021-10-21",
-      "gender": "female",
-      "ethnicity": "na",
-      "education": "na",
-      "employment": "na",
-      "address": "na",
-      "phone_number": 655768878787,
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "na",
-      "userid": 22,
-      "id": 15
-    },
-    {
-      "fName": "meenu",
-      "lName": "thakur",
-      "dob": "2021-10-26",
-      "gender": "female",
-      "ethnicity": "na",
-      "education": "na",
-      "employment": "na",
-      "address": "na",
-      "phone_number": 767668868686,
-      "medical_history": "hdgfgfh",
-      "family_medical_history": "bn",
-      "surgeries": "na",
-      "insurance_provider": "na",
-      "userid": 22,
-      "id": 16
-    },
-    {
-      "fName": "rita",
-      "lName": "thakur",
-      "dob": "2021-10-20",
-      "gender": "female",
-      "ethnicity": "na",
-      "education": "mca",
-      "employment": "SE",
-      "address": "na",
-      "phone_number": 65757588677,
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "na",
-      "userid": 10,
-      "id": 17
-    },
-    {
-      "fName": "preeti",
-      "lName": "arora",
-      "dob": "2021-10-20",
-      "gender": "female",
-      "ethnicity": "na",
-      "education": "na",
-      "employment": "na",
-      "address": "na",
-      "phone_number": 75775868669,
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "na",
-      "userid": 23,
-      "id": 18
     }
   ],
   "medication_allergies": [
@@ -475,37 +246,75 @@
   ],
   "immunization": [
     {
-      "id": "",
-      "patient_id": "",
-      "vaccine_brand": "",
-      "age_category": "",
-      "dose_detail": "",
-      "general_vaccine": ""
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "dfghjk",
-      "dose_detail": "1",
-      "general_vaccine": "dfghjk",
-      "userId": "OxtfXFr",
-      "id": "TZEd-AN"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "1",
-      "general_vaccine": "NA",
-      "userId": "OxtfXFr",
-      "id": "iSaFnHN"
+      "age_category": "45",
+      "vaccine_brand": "CoVaccine",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid Vaccine",
+          "vaccine_date": "2021-10-13"
+        },
+        {
+          "vaccine_name": "Pnumonia",
+          "vaccine_date": "2021-10-28"
+        }
+      ],
+      "userid": 1,
+      "id": 4
     },
     {
       "age_category": "18_44",
       "vaccine_brand": "CoviShield",
       "dose_detail": "2",
-      "general_vaccine": "NA",
-      "userId": 5,
-      "id": "GwKaUWS"
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-07-14"
+        },
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-27"
+        }
+      ],
+      "userid": 6,
+      "id": 5
     },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-07-14"
+        },
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-27"
+        }
+      ],
+      "userid": 6,
+      "id": 6
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid Vaccine",
+          "vaccine_date": "2021-10-13"
+        },
+        {
+          "vaccine_name": "Pnumonia",
+          "vaccine_date": "2021-10-28"
+        }
+      ],
+      "userId": "1",
+      "id": 7
+    }
+  ],
+  "appointments": [
     {
       "age_category": "18_44",
       "vaccine_brand": "",
@@ -577,22 +386,6 @@
       "id": "xy3C_1I"
     }
   ],
-  "appointments": [
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 9403541779,
-      "doc_name": "13",
-      "appointment_title": "This Ajinkkkkkkkkya",
-      "appointment_time": "01:11",
-      "appointmentDate": "2021-09-30",
-      "appointment_desc": "I need to attend this\n",
-      "vistInfo": "yes",
-      "patientId": 1,
-      "id": 1
-    }
-  ],
   "order": [
     {
       "id": "",
@@ -643,23 +436,6 @@
       "AllergenSource": "Bos taurus",
       "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 3",
       "Allerginicity": "IgE but no biological test"
-    }
-  ],
-  "requests": [
-    {
-      "id": 25,
-      "email": "ajinky@email.com",
-      "isActive": false
-    },
-    {
-      "id": "rahul@email.com",
-      "email": "rahul@email.com",
-      "isActive": true
-    },
-    {
-      "id": "manij@email.com",
-      "email": "manij@email.com",
-      "isActive": true
     }
   ]
 }
