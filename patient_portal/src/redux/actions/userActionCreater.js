@@ -51,6 +51,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "delete" && req.url.endsWith(req.url)) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   return req;
 });
 // //********AXIOS INTERCEPTOR********
@@ -279,21 +283,15 @@ export function EditUser(userId, upadatedData) {
 
 export function DeleteUser(userId) {
   let payload = {
-    users: [],
     globalmessage: "",
   };
   return (dispatch, getState) => {
-    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
     authToken = getState().login.authToken;
     axios.delete(`${URLS.USER}${userId}`).then(
       (response) => {
-        payload.globalmessage = `Delete Success`;
-        payload.users = [];
         dispatch({ type: actions.DELETE_USER, payload: payload });
       },
       (error) => {
-        payload.globalmessage = `ERROR: ${error.response.data}`;
-        payload.users = [];
         dispatch({ type: actions.DELETE_USER, payload: payload });
       }
     );
@@ -502,36 +500,34 @@ export function AddMedicationAndAllergiesAsync(user) {
 
 //put request for updating the profile pic
 
-export function updateprofile(profileImage,loggedUserInfo) {
-  console.log(loggedUserInfo)
+export function updateprofile(profileImage, loggedUserInfo) {
+  console.log(loggedUserInfo);
   let payload = {
     globalmessage: "",
-    // profileImage:""
   };
-  
+
   return (dispatch, getState) => {
-  authToken = getState().login.authToken;
-   let headers = {
+    authToken = getState().login.authToken;
+    let headers = {
       "Content-type": "application/json; charset=UTF-8",
-      // "Authorization" : ` ${authToken}`
-};
-    
-    loggedUserInfo.profileImage=profileImage.name;
-    loggedUserInfo.password=loggedUserInfo.rpassword;
-    console.log(loggedUserInfo)
-     axios.put( `${URLS.USER}${loggedUserInfo.id}`,loggedUserInfo,{headers}
-    ).then(
-     (response) => {
-      console.log("From AC....", response);
-     payload.globalmessage = `Profile Pic updated successfully`;
-      dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-      },
-      (error) => {
-        payload.globalmessage = `Updation ERROR: ${error.response.data}`;
-        //       // payload.statusCode = 400;
-       dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-      }
-     );
+    };
+
+    loggedUserInfo.profileImage = `../../images/${profileImage.name}`;
+    loggedUserInfo.password = loggedUserInfo.rpassword;
+    axios
+      .put(`${URLS.USER}${loggedUserInfo.id}`, loggedUserInfo, { headers })
+      .then(
+        (response) => {
+          console.log("From AC....", response);
+          payload.globalmessage = `Profile Pic updated successfully`;
+          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+        },
+        (error) => {
+          payload.globalmessage = `Updation ERROR: ${error.response.data}`;
+          //       // payload.statusCode = 400;
+          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+        }
+      );
   };
 }
 
@@ -598,6 +594,27 @@ export function GetPatientImmunization(userId) {
         payload.globalmessage = `${error.response.data}`;
         payload.userImmunization = {};
         dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}
+export function GetAppointments(userId) {
+  let payload = {
+    globalmessage: "",
+    appointmentsDetails: [],
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_APPOINTMENT_DETAILS}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Appointment retived`;
+        payload.appointmentsDetails = response.data;
+        dispatch({ type: actions.GET_APPOINTMENT_DETAILS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.appointmentsDetails = [];
+        dispatch({ type: actions.GET_APPOINTMENT_DETAILS, payload: payload });
       }
     );
   };

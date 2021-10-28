@@ -84,7 +84,6 @@ function ShellComponent(props) {
         <Route path="/registeruser">
           <RegisterUser flashNotification={showSnacksBar} />
         </Route>
-        {/* <Route path="/admin" component={AdminDashboard} /> */}
         <Route path="/admin">
           <AdminDashboard flashNotification={showSnacksBar} />
         </Route>
@@ -101,7 +100,9 @@ function ShellComponent(props) {
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */}
         <Route path={"/patientlist"} component={PatientList} />
-        <Route path={"/allusers"} component={UserList} />
+        <Route path={"/allusers"}>
+          <UserList flashNotification={showSnacksBar} />
+        </Route>
         <Route path={"/addusers"} component={AddUsers} />
         <Route path={"/physicianlist"} component={PhysicianList} />
         <Route path={"/appointments"} component={Appointments} />
