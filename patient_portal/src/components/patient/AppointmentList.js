@@ -54,8 +54,6 @@ function AppointmentList(props) {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
 
-  console.log("Baba Don", appts);
-
   useEffect(() => {
     if (props.isLoggedIn) {
       userAppointments(props.currentUser.id);
@@ -76,6 +74,7 @@ function AppointmentList(props) {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <>
       {/* <Calendar /> */}

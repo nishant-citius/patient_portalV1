@@ -1,9 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { connect } from "react-redux";
 import * as actions from "../../../redux/actions/userActionCreater";
+import { adminService } from "../../../services/register_user_service";
 
 const AddUsers = (props) => {
   let tempUser = {
@@ -21,6 +20,8 @@ const AddUsers = (props) => {
   };
 
   const [user, setUser] = useState(tempUser);
+  const [specialities, setSpecialities] = useState([]);
+
   let history = useHistory();
 
   const handleUserChange = (e) => {
@@ -32,22 +33,26 @@ const AddUsers = (props) => {
   const submitUserData = (e) => {
     e.preventDefault();
     let newUserData = { ...user };
-
-    if (user.fName.length < 1) {
-      alert("please enter valid First name");
-    }
-    if (user.lName.length < 1) {
-      alert("please enter valid last name");
-    }
     props.adduser(newUserData);
     history.push("/allusers");
   };
 
   useEffect(() => {
-    if (props.status === 201) {
-      // history.push("/allusers");
+    if (props.isLoggedIn) {
+      doctorSpeciality();
     }
-  });
+  }, [0]);
+
+  function doctorSpeciality() {
+    adminService.getDoctorSpeciality().then(
+      (response) => {
+        setSpecialities(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
 
   return (
     <div className="container py-4 border-secondary  mt-5">
@@ -166,31 +171,9 @@ const AddUsers = (props) => {
                     value={user.speciality}
                   >
                     <option value="">Select</option>
-                    <option value="Anaesthesia">Anaesthesia</option>
-                    <option value="Cardiology">Cardiology</option>
-                    <option value="Corneal Transplant">
-                      Corneal Transplant
-                    </option>
-                    <option value="Dermatology And Cosmetology">
-                      Dermatology And Cosmetology
-                    </option>
-                    <option value="General Surgery">General Surgen</option>
-                    <option value="Infectious Diseases">
-                      Infectious Diseases
-                    </option>
-                    <option value="Liver Transplant & Hepatic Surgery">
-                      Liver Transplant & Hepatic Surgery
-                    </option>
-                    <option value="Gynecology">Gynecology</option>
-                    <option value="Neonatology">Neonatology</option>
-                    <option value="Neurology">Neurology</option>
-                    <option value="Orthopedics & Joint Replacement">
-                      Orthopedics & Joint Replacement
-                    </option>
-                    <option value="Physiotherapy">Physiotherapy</option>
-                    <option value="Plastic Surgery">Plastic Surgery</option>
-                    <option value="Psychiatry">Psychiatry</option>
-                    <option value="Urology">Urology</option>
+                    {specialities.map((specility) => (
+                      <option value={specility.value}>{specility.name}</option>
+                    ))}
                   </select>
                 </div>
                 <br />
@@ -228,6 +211,7 @@ const mapStateToProps = (rootReducer) => {
   return {
     globalmessage: rootReducer.adduser.globalmessage,
     status: rootReducer.adduser.statusCode,
+    isLoggedIn: rootReducer.login.isLoggedIn,
   };
 };
 
