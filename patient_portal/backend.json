@@ -225,7 +225,45 @@
       "id": 1
     }
   ],
-  "medic_allergy": [],
+  "medic_allergy": [
+    {
+      "userid": 1,
+      "current_medication": [
+        {
+          "medicineName": "Dolo 650",
+          "dosage": "1",
+          "directionstoconsume": "after lunch",
+          "frequency": "2",
+          "physicianName": "soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-27",
+          "endDate": "2021-10-28"
+        }
+      ],
+      "otc_medication": [
+        {
+          "strength": "650",
+          "directiontoconsume": "3",
+          "socialDrugs": "drink"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "telma",
+          "strength": "40",
+          "directiontoconsume": "after breakfast"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "spots on skin",
+          "symptomsofAllergy": "Itching",
+          "drugAllergy": "No"
+        }
+      ],
+      "id": 1
+    }
+  ],
   "immunization": [
     {
       "id": "",
@@ -274,6 +312,24 @@
       "vistInfo": "yes",
       "patientId": 1,
       "id": 1
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 7876654329,
+      "doc_id": 12,
+      "doc_name": "Doctor-1Doctor-1",
+      "appointment_title": "title",
+      "appointment_start_time": "17:44",
+      "appointment_end_time": "19:46",
+      "appointmentDate": "2021-10-28",
+      "appointment_desc": "gyj",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-10-28T08:10:38.149Z",
+      "patientId": 1,
+      "status": "Pending",
+      "id": 2
     }
   ],
   "patientvitals": [
