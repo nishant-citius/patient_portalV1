@@ -21,7 +21,8 @@ const mapStateToProps = (rootReducer) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
+    getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
+    removeUser: (id) => dispatch(actioncreators.DeleteUser(id)),
   };
 };
 
@@ -31,8 +32,8 @@ export class UserList extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    console.log(this.props.demographics);
+  deleteUser(userId) {
+    this.props.removeUser(userId);
   }
 
   render() {
@@ -95,7 +96,9 @@ export class UserList extends React.Component {
                         </Link>
                       </span>
                       <span className="p-2">
-                        <BsFillTrashFill />
+                        <BsFillTrashFill
+                          onClick={() => this.deleteUser(user.id)}
+                        />
                       </span>
                     </td>
                   </tr>
