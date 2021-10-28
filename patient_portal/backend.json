@@ -177,6 +177,20 @@
       "createdDate": "Thu Oct 28 2021 13:14:41 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 24
+    },
+    {
+      "email": "pooja@gmail.com",
+      "password": "$2a$10$04.IVRauxq426GW6dsbx/uEgZcz/XwGd9hl8GnzTKIxW9nlD9apAK",
+      "fName": "pooja",
+      "lName": "k",
+      "dob": "2021-09-28",
+      "username": "pooja",
+      "mobile": "9705607801",
+      "role": "physician",
+      "speciality": "General Surgery",
+      "createdDate": "Thu Oct 28 2021 19:30:12 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 25
     }
   ],
   "medic_allergy": [],
@@ -208,7 +222,62 @@
       "id": "XEhJ-HM"
     }
   ],
-  "appointments": [],
+  "appointments": [
+    {
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "mobile_no": 8801888988,
+      "doc_id": 25,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "20:50",
+      "appointment_end_time": "20:53",
+      "appointmentDate": "2021-10-19",
+      "appointment_desc": "Appointments",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T12:20:59.048Z",
+      "patientId": 24,
+      "status": "Pending",
+      "id": 1
+    },
+    {
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "mobile_no": 8801889888,
+      "doc_id": 12,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "23:11",
+      "appointment_end_time": "19:14",
+      "appointmentDate": "2021-10-30",
+      "appointment_desc": "fever",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T13:41:58.411Z",
+      "patientId": 24,
+      "status": "Pending",
+      "id": 2
+    },
+    {
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "mobile_no": 8801889888,
+      "doc_id": 12,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "23:11",
+      "appointment_end_time": "19:14",
+      "appointmentDate": "2021-10-30",
+      "appointment_desc": "fever",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T13:41:58.411Z",
+      "patientId": 24,
+      "status": "status",
+      "id": 2
+    }
+  ],
   "order": [
     {
       "id": "",

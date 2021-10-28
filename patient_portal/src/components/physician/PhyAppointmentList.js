@@ -31,6 +31,7 @@ const mapStateToProps = (rootReducer) => {
 
   const approve = (appointments) => {
     console.log(appointments);
+   
   
   };
 
@@ -98,7 +99,7 @@ export class AppointmentList extends React.Component {
                     <td>{appointments.appointment_end_time}</td>
                     
                     <td>
-                    <button type="button" onClick={() => approve(appointments)} className="btn btn-primary btn-sm">Approve</button>
+                    <button type="button" onClick={(e) => approve(appointments["status"],e)} className="btn btn-primary btn-sm">Approve</button>
                     <button type="button" onClick="" className="btn btn-secondary btn-sm m-2">postpone</button>
                     <button type="button" onClick={() => reject(appointments)} className="btn btn-danger btn-sm">Reject</button>
                     </td>
