@@ -18,6 +18,7 @@ let appState = {
   patientDemographics: {},
   patientImmunization: {},
   specialisedPhysicians: [],
+  appointmentsDetails:[],
   inactiveUserCount: 0,
 };
 
