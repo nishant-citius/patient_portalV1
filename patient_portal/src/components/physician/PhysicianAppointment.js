@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import PhyAppointmentList from "./PhyAppointmentList";
+import PostponeAppointment from "./PostponeAppointment";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

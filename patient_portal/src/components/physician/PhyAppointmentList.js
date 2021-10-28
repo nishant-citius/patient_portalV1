@@ -23,17 +23,26 @@ const mapStateToProps = (rootReducer) => {
     currentUser: rootReducer.login.loggedUserInfo,
     isLoggedIn: rootReducer.login.isLoggedIn,
     appointmentList: rootReducer.appointmentsDetails.appointmentsDetails,
-    patientData: rootReducer.patients.patients,
+    //patientData: rootReducer.patients.patients,
     // globalmessage: rootReducer.appointmentsDetails.globalmessage,
 
   };
 };
 
+  const approve = (appointments) => {
+    console.log(appointments);
+  
+  };
+
+  const reject = (appointments) => {
+    console.log(appointments);
+  
+  };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getAppointments: (doc_id) => dispatch(actioncreators.GetAppointments(doc_id)),
-    getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
+    //getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
   };
 };
 
@@ -45,7 +54,7 @@ export class AppointmentList extends React.Component {
 
   componentDidMount() {
     this.props.getAppointments(this.props.currentUser.id);
-    this.props.getAllPatients();
+   // this.props.getAllPatients();
 
 
     //console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",this.props.appointmentList)
@@ -63,13 +72,13 @@ export class AppointmentList extends React.Component {
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr no </th>
-                <th scope="col">Pataient Name</th>
-                <th scope="col">PatientId</th>
+                <th scope="col">Patient Name</th>
+                
                 <th scope="col">Appointment Title</th>
-              
-                <th scope="col">Start Date</th>
-                <th scope="col">End Date</th>
-                <th scope="col">Time Slot</th>
+               <th scope="col">Appointment Date </th>
+                <th scope="col">Start Time</th>
+                <th scope="col">End Time</th>
+               
                 <th scope="col">Actions</th>
                 
               </tr>
@@ -80,8 +89,8 @@ export class AppointmentList extends React.Component {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>{` ${appointments.patientId}`}</td>
-                    <td>{appointments.patientId}</td>
+                    <td>{`${appointments.fName} ${appointments.lName}`}</td>
+                    
                   
                     <td>{appointments.appointment_title}</td>
                     <td>{appointments.appointmentDate}</td>
@@ -89,9 +98,9 @@ export class AppointmentList extends React.Component {
                     <td>{appointments.appointment_end_time}</td>
                     
                     <td>
-                    <button type="button" onClick="" className="btn btn-primary btn-sm">Approve</button>
-                    <button type="button" nClick="" className="btn btn-secondary btn-sm m-2">postpone</button>
-                    <button type="button" nClick="" className="btn btn-danger btn-sm">Reject</button>
+                    <button type="button" onClick={() => approve(appointments)} className="btn btn-primary btn-sm">Approve</button>
+                    <button type="button" onClick="" className="btn btn-secondary btn-sm m-2">postpone</button>
+                    <button type="button" onClick={() => reject(appointments)} className="btn btn-danger btn-sm">Reject</button>
                     </td>
 
 

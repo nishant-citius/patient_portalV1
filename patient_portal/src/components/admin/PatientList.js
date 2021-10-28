@@ -38,10 +38,10 @@ export class PatientList extends React.Component {
     return (
       <>
         <div className="container mt-5">
-          <Link className="btn btn-warning" to="/admin">
+          {/* <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
-          </Link>
+          </Link> */}
           <h1 className="text-success text-center fw-bold ">Patient List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">

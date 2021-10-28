@@ -7,6 +7,15 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
+import {
+  BsFillTrashFill,
+  BsFillPencilFill,
+  BsPersonFill,
+  BsCheckCircleFill,
+  BsFillXCircleFill,
+  BsFillArrowLeftSquareFill,
+} from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,9 +49,12 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
+
 function AppointmentList(props) {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
+
+  console.log("Baba Don", appts);
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -79,7 +91,38 @@ function AppointmentList(props) {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          Appointment List
+          {/* Appointment List Start */}
+          <table className="table table-bordered shadow mt-4">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Appointment Title</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">ENd Time</th>
+                <th scope="col">Appointment Date</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {appts.map((user, index) => {
+                return (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <td>{`${user.fName} ${user.lName}`}</td>
+                    <td>{user.doc_name}</td>
+                    <td>{user.appointment_title}</td>
+                    <td>{user.appointment_start_time}</td>
+                    <td>{user.appointment_end_time}</td>
+                    <td>{user.appointmentDate}</td>
+                    <td>{user.status}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {/* Appointment List end */}
         </TabPanel>
         <TabPanel value={value} index={1}>
           {props.isLoggedIn ? <Calendar apopointmnets={appts} /> : ""}

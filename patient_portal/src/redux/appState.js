@@ -12,12 +12,12 @@ let appState = {
   patients: [],
   userDetails: {},
   profileImage: "",
-  userRequests: 0,
   inactiveUsers: [],
   patientDemographics: {},
   patientImmunization: {},
   specialisedPhysicians: [],
   appointmentsDetails:[],
+  inactiveUserCount: 0,
 };
 
 export default appState;
