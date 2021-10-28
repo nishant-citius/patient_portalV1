@@ -148,7 +148,37 @@
       "speciality": "Orthopedics & Joint Replacement",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "id": 12
+    },
+    {
+      "email": "TShivaprasad@citiustech.com",
+      "password": "$2a$10$JOWekOhaFxpdFIlcDHvSc.2o5Z27JdWFvGeTMVnx7PGIVx18eanDe",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-01-01",
+      "username": "shiva prasad",
+      "rpassword": "asdf",
+      "mobile": 8801888988,
+      "blood_group": "B+ve",
+      "role": "patient",
+      "createdDate": "Thu Oct 28 2021 13:07:29 GMT+0530 (India Standard Time)",
+      "isActive": true,
       "id": 23
+    },
+    {
+      "email": "sp@email.com",
+      "password": "$2a$10$ANJKeaMFs9AEjMtFG0O.TeBBksJ3zRjqTp3P3JXq4qHKquwCIlTjC",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "username": "sp",
+      "rpassword": "asdf",
+      "mobile": 8801888988,
+      "blood_group": "P",
+      "role": "patient",
+      "createdDate": "Thu Oct 28 2021 13:14:41 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 24
     }
   ],
   "demographics": [
@@ -314,78 +344,7 @@
       "id": 7
     }
   ],
-  "appointments": [
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "jhhui",
-      "id": "ZBdyja5"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "jknj",
-      "id": "O4N8Pw1"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hd",
-      "id": "g0RdcgF"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "",
-      "id": "9CI8q_u"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hjh",
-      "id": "uVZ0w3W"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hdjdj",
-      "id": "uw8XJNf"
-    },
-    {
-      "age_category": "",
-      "vaccine_brand": "",
-      "dose_detail": "",
-      "general_vaccine": "hdhf",
-      "id": "8D6h9KG"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "covishield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "polio",
-          "vaccine_date": "2021-10-26"
-        },
-        {
-          "vaccine_name": "xyz",
-          "vaccine_date": "2021-10-12"
-        },
-        {
-          "vaccine_name": "abc",
-          "vaccine_date": "2021-10-04"
-        }
-      ],
-      "userid": 13,
-      "id": "xy3C_1I"
-    }
-  ],
+  "appointments": [],
   "order": [
     {
       "id": "",
