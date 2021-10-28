@@ -32,11 +32,9 @@ export class PhysicianDataComponent extends React.Component {
 
   deleteUser(userId) {
     this.props.removeUser(userId);
+    this.props.getalluserdata();
   }
 
-  componentDidMount() {
-    this.props.getallphysiciandata();
-  }
 
   render() {
     return (
@@ -94,7 +92,7 @@ export class PhysicianDataComponent extends React.Component {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2">
+                      <span className="p-2 hand-pointer">
                         <BsFillTrashFill
                           onClick={() => this.deleteUser(user.id)}
                         />

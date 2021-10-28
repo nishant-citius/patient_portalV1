@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme) => ({
     // right: theme.spacing(13),
   },
   dialogTitle: {
-    // paddingRight: "0px",
-    // color: "red",
+    position: "absolute",
+    left: "0px",
+    color: "green",
   },
 }));
 
@@ -34,15 +35,15 @@ function ModalPopup(props) {
       aria-describedby="scroll-dialog-description"
       classes={{ paper: classes.dialogWrapper }}
     >
-      <DialogTitle className={classes.dialogTitle}>{title}</DialogTitle>
       <DialogActions>
+        <DialogTitle className={classes.dialogTitle}>{title}</DialogTitle>
         <Button
           size="small"
           variant="contained"
           color="success"
           onClick={() => setOpenPopup(false)}
         >
-          Close
+          X
         </Button>
       </DialogActions>
       <DialogContent>{children}</DialogContent>
