@@ -62,7 +62,7 @@
     },
     {
       "email": "kk@email.com",
-      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
+      "password": "$2a$10$tRCwVQjBbEIqsi37CwJyMuQMf3VVf8lCBMqkbA5pr4yUnHCNq7QQi",
       "fName": "Kishore ",
       "lName": "Kumar",
       "dob": "2021-09-27",
@@ -72,7 +72,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 7
     },
     {
@@ -152,30 +152,40 @@
   "medic_allergy": [],
   "immunization": [
     {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "1",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-28"
-        }
-      ],
-      "userid": 1,
-      "id": "Ct_RqfO"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "Covaccine",
+      "age_category": "45",
+      "vaccine_brand": "CoVaccine",
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-29"
+          "vaccine_name": "qqwqw",
+          "vaccine_date": "2021-09-29"
+        },
+        {
+          "vaccine_name": "Pnumonia",
+          "vaccine_date": "2021-10-11"
+        },
+        {
+          "vaccine_name": "fadsfsdfgsdfgsdfg",
+          "vaccine_date": "2021-10-21"
         }
       ],
-      "userid": 1,
-      "id": "XEhJ-HM"
+      "id": 1
+    },
+    {
+      "age_category": "45",
+      "vaccine_brand": "CoVaccine",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid Vaccine",
+          "vaccine_date": "2021-10-22"
+        },
+        {
+          "vaccine_name": "Covid Vaccine",
+          "vaccine_date": "2021-10-22"
+        }
+      ],
+      "id": 10
     }
   ],
   "appointments": [
