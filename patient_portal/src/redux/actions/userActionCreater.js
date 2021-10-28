@@ -19,6 +19,7 @@ axios.interceptors.request.use((req) => {
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
       req.url.endsWith("patient") ||
+      req.url.endsWith("/immunization") ||
       req.url.endsWith(req.url))
   ) {
     //attach auth token to the request header
@@ -52,7 +53,7 @@ axios.interceptors.request.use((req) => {
   }
   return req;
 });
-//********AXIOS INTERCEPTOR********
+// //********AXIOS INTERCEPTOR********
 
 export function Register(user) {
   let payload = {
@@ -161,6 +162,53 @@ export function GetAllPhysicianData() {
   };
 }
 
+export function GetAllNurseData() {
+  let payload = {
+    nurses: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_NURSE).then(
+      (response) => {
+        payload.globalmessage = `Nurse data retrieved successfully. Count: ${response.data.length}`;
+        payload.nurses = response.data;
+        dispatch({ type: actions.NURSES, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.nurses = [];
+        dispatch({ type: actions.NURSES, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetAllImmunizationData() {
+  let payload = {
+    immunizations: [],
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.IMMUNIZATION).then(
+      (response) => {
+        payload.globalmessage = `Immunization data retrieved successfully. Count: ${response.data.length}`;
+        payload.immunizations = response.data;
+        dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.immunizations = [];
+        dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetAllPatientsData() {
   let payload = {
     patients: [],
@@ -229,6 +277,29 @@ export function EditUser(userId, upadatedData) {
   };
 }
 
+export function DeleteUser(userId) {
+  let payload = {
+    users: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
+    authToken = getState().login.authToken;
+    axios.delete(`${URLS.USER}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Delete Success`;
+        payload.users = [];
+        dispatch({ type: actions.DELETE_USER, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `ERROR: ${error.response.data}`;
+        payload.users = [];
+        dispatch({ type: actions.DELETE_USER, payload: payload });
+      }
+    );
+  };
+}
+
 export function AddNewUser(user) {
   let payload = {
     globalmessage: "",
@@ -253,7 +324,7 @@ export function AddNewUser(user) {
 export function GetInactiveUsers() {
   let payload = {
     inactiveUsers: [],
-    inactiveUsersCount: 0,
+    inactiveUserCount: 0,
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
@@ -261,13 +332,12 @@ export function GetInactiveUsers() {
     axios.get(URLS.INACTIVE_USERS).then(
       (response) => {
         payload.inactiveUsers = response.data;
-        payload.inactiveUsersCount = response.data.length;
-        console.log("--------------", payload);
+        payload.inactiveUserCount = response.data.length;
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
         payload.inactiveUsers = [];
-        payload.inactiveUsersCount = 0;
+        payload.inactiveUserCount = 0;
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       }
     );
@@ -432,27 +502,36 @@ export function AddMedicationAndAllergiesAsync(user) {
 
 //put request for updating the profile pic
 
-export function updateprofile(profileImage, userId) {
+export function updateprofile(profileImage,loggedUserInfo) {
+  console.log(loggedUserInfo)
   let payload = {
     globalmessage: "",
     // profileImage:""
   };
+  
   return (dispatch, getState) => {
-    authToken = getState().login.authToken;
-    axios
-      .put(`${URLS.USER}${userId}`, JSON.stringify(profileImage), config)
-      .then(
-        (response) => {
-          console.log("From AC....", response);
-          payload.globalmessage = `Profile Pic updated successfully`;
-          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-        },
-        (error) => {
-          payload.globalmessage = `Updation ERROR: ${error.response.data}`;
-          // payload.statusCode = 400;
-          dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
-        }
-      );
+  authToken = getState().login.authToken;
+   let headers = {
+      "Content-type": "application/json; charset=UTF-8",
+      // "Authorization" : ` ${authToken}`
+};
+    
+    loggedUserInfo.profileImage=profileImage.name;
+    loggedUserInfo.password=loggedUserInfo.rpassword;
+    console.log(loggedUserInfo)
+     axios.put( `${URLS.USER}${loggedUserInfo.id}`,loggedUserInfo,{headers}
+    ).then(
+     (response) => {
+      console.log("From AC....", response);
+     payload.globalmessage = `Profile Pic updated successfully`;
+      dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `Updation ERROR: ${error.response.data}`;
+        //       // payload.statusCode = 400;
+       dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
+      }
+     );
   };
 }
 

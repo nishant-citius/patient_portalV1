@@ -35,5 +35,6 @@ export { default as ListSubheader } from "@material-ui/core/ListSubheader";
 
 export { default as makeStyles } from "@material-ui/styles/makeStyles";
 export { default as Alert } from "@material-ui/lab/Alert";
-
+export { default as Divider } from "@material-ui/core/Divider";
 // export {default as CardMedia} from '@material-ui/core/CardMedia';
+

@@ -18,7 +18,9 @@ import { UserDetailsReducer } from "./reducers/userreducers/UserDetailsReducer";
 import { updateprofilepicreducer } from "./reducers/updateprofilepicreducer";
 import { InactiveUsersReducer } from "./reducers/userreducers/InactiveUsersReducer";
 import { PatientDemographicsReducer } from "./reducers/PatientDemographicsReducer";
+import { GetNurseReducer } from "./reducers/userreducers/GetNurseReducer";
 import { PatientImmunizationReducer } from "./reducers/PatientImmunizationReducer";
+import { GetImmunizationReducer } from "./reducers/userreducers/GetImmunizationReducer";
 import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPhysicianReducer";
 
 /** combine reducers*/
@@ -34,6 +36,8 @@ let rootReducer = combineReducers({
   getallusers: GetAllUsersReducer,
   updateusers: EditUserReducer,
   patients: PatientReducer,
+  nurses: GetNurseReducer,
+  immunizations: GetImmunizationReducer,
   userDetails: UserDetailsReducer,
   updateprofile: updateprofilepicreducer,
   inactiveUsers: InactiveUsersReducer,

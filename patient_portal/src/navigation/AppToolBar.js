@@ -29,6 +29,7 @@ const mapStateToProps = (rootReducer) => {
     role: rootReducer.login.role,
     authToken: rootReducer.login.authToken,
     currentUser: rootReducer.login.loggedUserInfo,
+    count: rootReducer.inactiveUsers.inactiveUserCount,
   };
 };
 
@@ -141,7 +142,7 @@ function AppToolBar(props) {
     history.push("/");
   }
 
-  function handleNotification() {
+  function handleAdminNotification() {
     setOpenPopup(true);
   }
 
@@ -184,11 +185,17 @@ function AppToolBar(props) {
                 className={classes.searchbutton}
                 onClick={() => setOpen(true)}
               />
-              <Badge badgeContent={10} color="secondary">
-                <NotificationsIcon onClick={handleNotification} />
-              </Badge>
+              {props.role === "admin" ? (
+                <Badge badgeContent={props.count} color="secondary">
+                  <NotificationsIcon onClick={handleAdminNotification} />
+                </Badge>
+              ) : (
+                <Badge badgeContent={0} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
+              )}
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <Badge badgeContent={6} color="secondary">
+              <Badge badgeContent={0} color="secondary">
                 <MailIcon />
               </Badge>
               &nbsp;&nbsp;&nbsp;&nbsp;

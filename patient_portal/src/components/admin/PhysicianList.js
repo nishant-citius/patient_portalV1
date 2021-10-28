@@ -38,16 +38,17 @@ export class PhysicianDataComponent extends React.Component {
     return (
       <>
         <div className="container mt-5">
-          <Link className="btn btn-warning" to="/admin">
+          {/* <Link className="btn btn-warning" to="/admin">
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
-          </Link>
+          </Link> */}
           <h1 className="text-success text-center fw-bold ">Physician List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
                 <th scope="col">Name</th>
+                <th scope="col">Speciality</th>
                 <th scope="col">D.O.B.</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
@@ -61,6 +62,7 @@ export class PhysicianDataComponent extends React.Component {
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
                     <td>{`${user.fName} ${user.lName}`}</td>
+                    <td>{user.speciality}</td>
                     <td>{user.dob}</td>
                     <td>{user.email}</td>
                     <td>{user.mobile}</td>

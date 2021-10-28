@@ -277,9 +277,83 @@
     }
   ],
   "patientvitals": [
-    
-   
-    
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "96",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 1
+    },
+    {
+      "height": "4.8",
+      "weight": "",
+      "blood_pressure": "",
+      "temperature": "98",
+      "pulse": "",
+      "respiration": "",
+      "oxigen_saturation": "",
+      "userid": 11,
+      "id": 2
+    },
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 3
+    },
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 4
+    },
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 5
+    },
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "98",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 6
+    },
+    {
+      "height": "4.8",
+      "weight": "49",
+      "blood_pressure": "120/80",
+      "temperature": "96",
+      "pulse": "82",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 11,
+      "id": 7
+    }
   ],
   "order": [
     {
