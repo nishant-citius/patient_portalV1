@@ -2,6 +2,7 @@ let appState = {
   users: [],
   demographics: [],
   immunization: [],
+  vitals: [],
   medication_allergies: [],
   isLoggedIn: false,
   authToken: "",
