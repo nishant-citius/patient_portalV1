@@ -190,12 +190,30 @@
   ],
   "immunization": [
     {
-      "id": "",
-      "patient_id": "",
-      "vaccine_brand": "",
-      "age_category": "",
-      "dose_detail": "",
-      "general_vaccine": ""
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "1",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-28"
+        }
+      ],
+      "userid": 1,
+      "id": "Ct_RqfO"
+    },
+    {
+      "age_category": "18_44",
+      "vaccine_brand": "Covaccine",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-29"
+        }
+      ],
+      "userid": 1,
+      "id": "XEhJ-HM"
     }
   ],
   "appointments": [

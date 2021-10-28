@@ -1,11 +1,10 @@
 import {React, useEffect} from "react";
-import { Bar,Doughnut} from 'react-chartjs-2';
+//import { Bar,Doughnut} from 'react-chartjs-2';
 import { connect } from "react-redux";
 import {
   DirectionsWalkIcon,
   DirectionsBikeIcon,
-  DirectionsRunIcon,
-  PoolIcon
+  DirectionsRunIcon
 } from "mui-icons";
 import {
   Container,
@@ -15,17 +14,9 @@ import {
   CardContent,
   Divider,
   CardMedia,
-  
   makeStyles,
-  Typography,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
+  Typography
 } from "mui";
-import { propTypes } from "react-bootstrap/esm/Image";
-import { textAlign } from "@mui/system";
-
-
 
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
@@ -41,17 +32,17 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "320px" ,
     maxHeight:"100px",
     margin: "4px",
-    background:"#D3D3D3",
+    background:"rgb(72 179 226)",
     // color:"black"
   },
   innercard2:{
-    maxWidth: "150px" ,
-    maxHeight:"150px",
+    minWidth: "100px" ,
+    minHeight:"100px",
     margin: "4px",
-    background:"#D3D3D3"
+    background:"rgb(72 179 226)"
   },
   innercard:{
-    maxHeight:"600",
+    height:"185px"
   },
   innercard3:{
     background:"#D3D3D3"
@@ -60,17 +51,17 @@ const useStyles = makeStyles((theme) => ({
     width: "105px",
     textAlign:"center"
   },
-  display:{
-   display:"flex"
-  },
-  h4:{
-   paddingLeft:"38px",
+  // display:{
+  //  display:"flex"
+  // },
+  h5:{
+   textAlign:"center",
    color:"blue"
   },
-  h5:{
-    paddingLeft:"15px",
-    marginTop:"15px"
+  height:{
+    height:"150px"
   }
+ 
   // h5:{
   //   paddingLeft:"20px",
   // }
@@ -116,7 +107,7 @@ const Patient_dashboard = (props) => {
        <Container className={classes.container}>
         <Grid container spacing={2}>
          <Grid item sm={4} lg={4} md={4}>
-          <h4 className={classes.h4}>Vitals</h4>
+          <h5 className={classes.h5}>Vitals</h5>
             <Card className={classes.gridcontainer}>
              <CardContent>
               <Typography variant="subtitle1" className="fw-bold">
@@ -145,7 +136,7 @@ const Patient_dashboard = (props) => {
             </div>
     
              <div className={classes.display}> 
-             <Card className={classes.innercard1} style={{ backgroundColor: "#93E9BE" }}>
+             <Card className={classes.innercard1}>
                <CardContent>
                  <Typography variant="subtitle1">
                    Pulse Rate
@@ -170,21 +161,21 @@ const Patient_dashboard = (props) => {
   </Grid>
 
      <Grid item sm={4} md={4} lg={4}>
-       <h4 className={classes.h4}>Current Medication</h4>
-         <Card >
+       <h5 className={classes.h5}>Current Medication</h5>
+         <Card className={classes.gridcontainer}>
            <CardContent>
              <Typography variant="subtitle1" >
                </Typography>
                 <div className={classes.display}>
-                  <Card className={classes.innercard2} >
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                     <CardContent>
-                      <Typography variant="subtitle1" className="">
+                      <Typography variant="subtitle1">
                       Medicine Name<br/>
                      <b>Paracetamol</b>
                       </Typography>
                     </CardContent>
                    </Card>
-                  <Card className={classes.innercard2} >
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                     <CardContent>
                       <Typography variant="subtitle1">
                         Dosages<br/>
@@ -194,7 +185,7 @@ const Patient_dashboard = (props) => {
                   </Card>
                 </div>
                 <div className={classes.display}> 
-                  <Card className={classes.innercard2} style={{ backgroundColor: "#93E9BE" }}>
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                      <CardContent>
                        <Typography variant="subtitle1">
                           Physician Name<br/>
@@ -203,7 +194,7 @@ const Patient_dashboard = (props) => {
                         </Typography>
                       </CardContent>
                   </Card>
-                  <Card className={classes.innercard2}>
+                  <Card className={classes.innercard2} style={{ backgroundColor: "rgb(62 222 182)" }}>
                      <CardContent>
                        <Typography variant="subtitle1">
                          Frequency<br/>
@@ -216,21 +207,33 @@ const Patient_dashboard = (props) => {
                 </Card>
            </Grid>
         <Grid item sm={4} lg={4} md={4}>
-        <h4 className={classes.h4}>Patient Details</h4>
+        <h5 className={classes.h5}>Patient Details</h5>
          <Card>
             <CardMedia
             component="img"
-            height="140"
+            height="250"
            image="https://healthtechmagazine.net/sites/healthtechmagazine.net/files/styles/cdw_hero/public/articles/%5Bcdw_tech_site%3Afield_site_shortname%5D/201911/20191127_HT_Web_Perfcon_EHR-Patient-Care.jpg?itok=xzDl3EQW"
            />
           
-           <h5 className={classes.h5}>Details</h5>
+           {/* <h6 className={classes.h6}>Details</h6> */}
            <CardContent >
+           <h6 className={classes.h6}>Details</h6>
+           <Divider/>
+           <br/>
           <Typography  component="div">
-           Name: jay
+          username: jay
          </Typography>
          <Typography  component="div">
-           Age: 27
+         email: <span paddingLeft="9px">27</span>
+         </Typography>
+         <Typography  component="div">
+         dob: <span paddingLeft="9px">27</span>
+         </Typography>
+         <Typography  component="div">
+         mobile: <span paddingLeft="9px">27</span>
+         </Typography>
+         <Typography  component="div">
+         blood_group: <span paddingLeft="9px">27</span>
          </Typography>
          </CardContent>
       </Card>
@@ -240,7 +243,7 @@ const Patient_dashboard = (props) => {
     <Container className={classes.container} className="mt-2">
     <Grid container spacing={2}>
       <Grid item sm={2} lg={2} md={2}>
-       <h4 className={classes.h4} >Allergies</h4>
+       <h5 className={classes.h5} >Allergies</h5>
          <Card className={classes.gridcontainer}>
            <CardContent>
              <Typography variant="subtitle1">
@@ -259,13 +262,13 @@ const Patient_dashboard = (props) => {
         </Card>
     </Grid>
      <Grid item sm={6} lg={6} md={6}>
-       <h4 className={classes.h4} paddingLeft="25px">Activities</h4>
+       <h5 className={classes.h5}>Activities</h5>
         <Card>
            <CardContent>
               <Container>
                  <Grid container spacing={6}>
                     <Grid item>
-                       <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}>
+                       <Card style={{ backgroundColor: "rgb(62 222 182)" }} className={classes.innercard4}>
                           <CardContent>
                              <DirectionsWalkIcon>
                                </DirectionsWalkIcon>
@@ -277,7 +280,7 @@ const Patient_dashboard = (props) => {
                         </Card>
                      </Grid>
       <Grid item>   
-        <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}>
+        <Card style={{ backgroundColor: "rgb(62 222 182)" }} className={classes.innercard4}>
            <CardContent>
               <DirectionsBikeIcon></DirectionsBikeIcon>
                 <Typography variant="subtitle1"  color="black">
@@ -288,7 +291,7 @@ const Patient_dashboard = (props) => {
         </Card>
         </Grid>
         <Grid item>  
-                <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}> 
+                <Card style={{ backgroundColor: "rgb(62 222 182)" }} className={classes.innercard4}> 
                    <CardContent>
                     <DirectionsRunIcon></DirectionsRunIcon>
                      <Typography variant="subtitle1"  color="black">
@@ -331,12 +334,12 @@ const Patient_dashboard = (props) => {
                      </Grid>
            
         <Grid item sm={4} lg={4} md={4}>
-         <h4 className={classes.h4} >Past Medication</h4>
-         <Card>
+         <h4 className={classes.h5}>Past Medication</h4>
+         <Card className={classes.innercard}>
            <CardContent>
              <Grid container spacing={4}>
                <Grid item>
-         <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.innercard}>
+         <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.height}>
            <CardContent>
              <Typography variant="subtitle1">
                 Drug Name<br/>
@@ -346,7 +349,7 @@ const Patient_dashboard = (props) => {
                </Card>
               </Grid>
               <Grid item>
-           <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.innercard}>
+           <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.height}>
            <CardContent>
              <Typography variant="subtitle1">
                 Strength<br/>
