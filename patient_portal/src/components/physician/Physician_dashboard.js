@@ -78,7 +78,7 @@ const Physician_dashboard = () => {
       height: "45px",
     },
     textblock3: {
-      backgroundColor: "#5f73b8",
+      backgroundColor: "#9480c9",
       height: "45px",
     },
     chartdiv: {
@@ -145,17 +145,17 @@ const Physician_dashboard = () => {
           </Grid>
         </Grid>
       </Container>
-      {/* <Container>
+      <Container>
         <Grid container spacing={4}>
-          <Grid item sm={6} xs={12}>
+          <Grid item sm={12} lg={6} md={6}>
             <BarChart />
           </Grid>
-          <Grid item sm={6} xs={12}>
+          <Grid item sm={12} lg={6} md={6}>
             <div className="col-6 mb-4">
               <table className="table mt-4">
                 <thead className="thead-dark">
                   <tr>
-                    <th scope="col"># </th>
+                    <th scope="col">S. no </th>
                     <th scope="col">Patient id</th>
                     <th scope="col">Patient Name</th>
                     <th scope="col">catagory</th>
@@ -169,42 +169,26 @@ const Physician_dashboard = () => {
                     <td>Otto</td>
                     <td>@mdo</td>
                     <td>
-                      <button className="btn btn-success btn-sm" href="#">
+                      <button className="btn btn-success btn-sm m-2" href="#">
                         {" "}
-                        Approve
+                        Approved
                       </button>
                       <button className="btn btn-warning btn-sm m-2" href="#">
                         {" "}
                         postpone
                       </button>
-                      <button className="btn btn-danger btn-sm" href="#">
+                      <button className="btn btn-danger btn-sm m-2" href="#">
                         {" "}
                         Rejected
                       </button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
                 </tbody>
               </table>
-              <button className="btn btn-primary mt-4" href="#">
-                {" "}
-                Join Online Consultaion
-              </button>
             </div>
           </Grid>
         </Grid>
-      </Container> */}
+      </Container>
       {/* //calendar start// */}
       {/* <div className="m-4">
         <div className="row ">
