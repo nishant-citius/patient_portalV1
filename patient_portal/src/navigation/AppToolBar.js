@@ -10,7 +10,7 @@ import { InputBase } from "../mui";
 
 import { SearchIcon } from "../mui-icons";
 import { MailIcon } from "../mui-icons";
-import { NotificationsIcon } from "../mui-icons";
+import { NotificationsIcon, PersonIcon } from "../mui-icons";
 import { makeStyles, alpha } from "@material-ui/core";
 
 import { useHistory } from "react-router";
@@ -187,7 +187,7 @@ function AppToolBar(props) {
               />
               {props.role === "admin" ? (
                 <Badge badgeContent={props.count} color="secondary">
-                  <NotificationsIcon onClick={handleAdminNotification} />
+                  <PersonIcon onClick={handleAdminNotification} />
                 </Badge>
               ) : (
                 <Badge badgeContent={0} color="secondary">

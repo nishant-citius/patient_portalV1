@@ -8,7 +8,6 @@ import {
   BsPersonFill,
   BsCheckCircleFill,
   BsFillXCircleFill,
-  BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
 const mapStateToProps = (rootReducer) => {
@@ -21,6 +20,7 @@ const mapStateToProps = (rootReducer) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
+    removeUser: (id) => dispatch(actioncreators.DeleteUser(id)),
   };
 };
 
@@ -30,12 +30,12 @@ export class PatientList extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    // this.props.getAllPatients();
+  deleteUser(userId) {
+    this.props.removeUser(userId);
+    this.props.getalluserdata();
   }
 
   render() {
-    
     return (
       <>
         <div className="container mt-5">
@@ -89,8 +89,10 @@ export class PatientList extends React.Component {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2">
-                        <BsFillTrashFill />
+                      <span className="p-2 hand-pointer">
+                        <BsFillTrashFill
+                          onClick={() => this.deleteUser(user.id)}
+                        />
                       </span>
                     </td>
                   </tr>
