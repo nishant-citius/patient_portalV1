@@ -122,7 +122,7 @@ const Physician_dashboard = () => {
               {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock2}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Total Appointments Approved: 15
+                  Appointments Approved: 15
                 </h6>
               </CardContent>
             </Card>
@@ -138,7 +138,7 @@ const Physician_dashboard = () => {
               {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock3}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Total Appointments Canceled: 15
+                  Appointments Canceled: 15
                 </h6>
               </CardContent>
             </Card>
