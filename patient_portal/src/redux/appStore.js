@@ -5,6 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import { DemographicsReducer } from "./reducers/Demographicsreducer";
 import Immunizationreducer from "./reducers/Immunizationreducer";
+import VitalsReducer from "./reducers/Vitalsreducer";
 import { LoginReducer } from "./reducers/loginReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
 import { RegisterReducer } from "./reducers/RegisterReducer";
@@ -21,6 +22,8 @@ import { GetNurseReducer } from "./reducers/userreducers/GetNurseReducer";
 import { PatientImmunizationReducer } from "./reducers/PatientImmunizationReducer";
 import { GetImmunizationReducer } from "./reducers/userreducers/GetImmunizationReducer";
 import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPhysicianReducer";
+import {GetAllAppointmentReducer} from "./reducers/GetAllAppointmentReducer";
+import { DeleteUserReducer } from "./reducers/userreducers/DeleteUserReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -28,6 +31,7 @@ let rootReducer = combineReducers({
   login: LoginReducer,
   demographics: DemographicsReducer,
   immunization: Immunizationreducer,
+  vitals: VitalsReducer,
   medication_allergies: MedicationandAllergiesReducer,
   physicians: PhysicianReducer,
   adduser: AddUserReducer,
@@ -42,6 +46,8 @@ let rootReducer = combineReducers({
   patientDemographics: PatientDemographicsReducer,
   patientImmunization: PatientImmunizationReducer,
   specilizedPhysicians: SpecialityPhysicianReducer,
+  appointmentsDetails: GetAllAppointmentReducer,
+  deleteUser: DeleteUserReducer,
 });
 
 /**create store  */

@@ -2,6 +2,7 @@ let appState = {
   users: [],
   demographics: [],
   immunization: [],
+  vitals: [],
   medication_allergies: [],
   isLoggedIn: false,
   authToken: "",
@@ -18,6 +19,7 @@ let appState = {
   patientDemographics: {},
   patientImmunization: {},
   specialisedPhysicians: [],
+  appointmentsDetails:[],
   inactiveUserCount: 0,
 };
 

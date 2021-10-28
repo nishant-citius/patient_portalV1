@@ -40,10 +40,18 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "post" && req.url.endsWith("/patientvitals")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   if (req.method === "put" && req.url.indexOf("/users/")) {
     req.headers.authorization = `Bearer ${authToken}`;
   }
   if (req.method === "post" && req.url.endsWith("/medic_allergy")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
+  if (req.method === "delete" && req.url.endsWith(req.url)) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -275,20 +283,15 @@ export function EditUser(userId, upadatedData) {
 
 export function DeleteUser(userId) {
   let payload = {
-    users: [],
     globalmessage: "",
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     axios.delete(`${URLS.USER}${userId}`).then(
       (response) => {
-        payload.globalmessage = `Delete Success`;
-        payload.users = [];
         dispatch({ type: actions.DELETE_USER, payload: payload });
       },
       (error) => {
-        payload.globalmessage = `ERROR: ${error.response.data}`;
-        payload.users = [];
         dispatch({ type: actions.DELETE_USER, payload: payload });
       }
     );
@@ -443,6 +446,29 @@ export function AddImmunizationsAsync(user) {
   };
 }
 
+export function AddVitalsAsync(user) {
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.post(URLS.PATIENT_VITALS, JSON.stringify(user), config).then(
+      (response) => {
+        console.log(response);
+        payload.globalmessage = `Vitals registered successfully`;
+        payload.statusCode = response.status;
+        dispatch({ type: actions.ADD_VITALS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `Vitals ERROR: ${error.response.data}`;
+        payload.statusCode = 400;
+        dispatch({ type: actions.ADD_VITALS, payload: payload });
+      }
+    );
+  };
+}
+
 export function AddMedicationAndAllergiesAsync(user) {
   let payload = {
     globalmessage: "",
@@ -478,19 +504,16 @@ export function updateprofile(profileImage, loggedUserInfo) {
   console.log(loggedUserInfo);
   let payload = {
     globalmessage: "",
-    // profileImage:""
   };
 
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
     let headers = {
       "Content-type": "application/json; charset=UTF-8",
-      // "Authorization" : ` ${authToken}`
     };
 
-    loggedUserInfo.profileImage = profileImage.name;
+    loggedUserInfo.profileImage = `../../images/${profileImage.name}`;
     loggedUserInfo.password = loggedUserInfo.rpassword;
-    console.log(loggedUserInfo);
     axios
       .put(`${URLS.USER}${loggedUserInfo.id}`, loggedUserInfo, { headers })
       .then(
@@ -571,6 +594,27 @@ export function GetPatientImmunization(userId) {
         payload.globalmessage = `${error.response.data}`;
         payload.userImmunization = {};
         dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}
+export function GetAppointments(userId) {
+  let payload = {
+    globalmessage: "",
+    appointmentsDetails: [],
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_APPOINTMENT_DETAILS}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Appointment retived`;
+        payload.appointmentsDetails = response.data;
+        dispatch({ type: actions.GET_APPOINTMENT_DETAILS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.appointmentsDetails = [];
+        dispatch({ type: actions.GET_APPOINTMENT_DETAILS, payload: payload });
       }
     );
   };
