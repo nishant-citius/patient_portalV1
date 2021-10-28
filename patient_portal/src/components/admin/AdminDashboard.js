@@ -61,6 +61,7 @@ const AdminDashboard = (props) => {
     props.getalluserdata();
     props.getAllPatients();
     props.getInactiveUsers();
+    props.getallNursedata();
   }, []);
 
   const data = {
@@ -221,7 +222,7 @@ const AdminDashboard = (props) => {
                             Total Appointments
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            {props.users.length}
                           </Typography>
                         </CardContent>
                       </Card>
@@ -262,7 +263,7 @@ const AdminDashboard = (props) => {
                             Total &nbsp;&nbsp;&nbsp; Nurse
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            {props.nurses.length}
                           </Typography>
                         </CardContent>
                       </Card>
@@ -309,6 +310,7 @@ const mapStatetoProps = (state) => {
     currentUser: state.login.loggedUserInfo,
     users: state.getallusers.users,
     physicians: state.physicians.physicians,
+    nurses: state.nurses.nurses,
     patients: state.patients.patients,
     inactiveUsers: state.inactiveUsers.inactiveUsers,
   };
@@ -319,6 +321,7 @@ const mapDispatchToProps = (dispatch) => {
     getalluserdata: () => dispatch(actionCreator.GetAllUserData()),
     getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
     getInactiveUsers: () => dispatch(actionCreator.GetInactiveUsers()),
+    getallNursedata: () => dispatch(actionCreator.GetAllNurseData()),
   };
 };
 

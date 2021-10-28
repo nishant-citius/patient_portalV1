@@ -19,6 +19,7 @@ axios.interceptors.request.use((req) => {
     (req.url.endsWith("/users") ||
       req.url.endsWith("physician") ||
       req.url.endsWith("patient") ||
+      req.url.endsWith("/immunization") ||
       req.url.endsWith(req.url))
   ) {
     //attach auth token to the request header
@@ -157,6 +158,53 @@ export function GetAllPhysicianData() {
   };
 }
 
+export function GetAllNurseData() {
+  let payload = {
+    nurses: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_NURSE).then(
+      (response) => {
+        payload.globalmessage = `Nurse data retrieved successfully. Count: ${response.data.length}`;
+        payload.nurses = response.data;
+        dispatch({ type: actions.NURSES, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.nurses = [];
+        dispatch({ type: actions.NURSES, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetAllImmunizationData() {
+  let payload = {
+    immunizations: [],
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.IMMUNIZATION).then(
+      (response) => {
+        payload.globalmessage = `Immunization data retrieved successfully. Count: ${response.data.length}`;
+        payload.immunizations = response.data;
+        dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.immunizations = [];
+        dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetAllPatientsData() {
   let payload = {
     patients: [],
@@ -222,6 +270,29 @@ export function EditUser(userId, upadatedData) {
           dispatch({ type: actions.UPDATE_USER, payload: payload });
         }
       );
+  };
+}
+
+export function DeleteUser(userId) {
+  let payload = {
+    users: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
+    authToken = getState().login.authToken;
+    axios.delete(`${URLS.USER}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Delete Success`;
+        payload.users = [];
+        dispatch({ type: actions.DELETE_USER, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `ERROR: ${error.response.data}`;
+        payload.users = [];
+        dispatch({ type: actions.DELETE_USER, payload: payload });
+      }
+    );
   };
 }
 
