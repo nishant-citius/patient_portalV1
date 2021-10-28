@@ -36,7 +36,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
-  if (req.method === "post" && req.url.endsWith("/immunization")) {
+  if (
+    req.method === "post" &&
+    (req.url.endsWith("/immunization") || req.url.indexOf("/immunization"))
+  ) {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -386,7 +389,6 @@ export function PhysiciansByName(physicianName) {
   };
 }
 
-/***************Pevious******************/
 export function GetAllUsersAsync() {
   return (dispatch) => {
     userService.GetAllUsers().then(
@@ -420,6 +422,37 @@ export function AddDemographicsAsync(user) {
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
       }
     );
+  };
+}
+
+export function UpdatePatientImmunization(patientId, upadatedData) {
+  let payload = {
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios
+      .put(
+        `${URLS.UPDATE_PATIENT_IMMUNIZATION}/${patientId}`,
+        JSON.stringify(upadatedData),
+        config
+      )
+      .then(
+        (response) => {
+          console.log(response);
+          payload.globalmessage = "Immunization Updated...";
+          dispatch({
+            type: actions.UPDATE_PATIENT_IMMUNIZATION,
+            payload: payload,
+          });
+        },
+        (error) => {
+          dispatch({
+            type: actions.UPDATE_PATIENT_IMMUNIZATION,
+            payload: payload,
+          });
+        }
+      );
   };
 }
 
@@ -598,6 +631,7 @@ export function GetPatientImmunization(userId) {
     );
   };
 }
+
 export function GetAppointments(userId) {
   let payload = {
     globalmessage: "",
