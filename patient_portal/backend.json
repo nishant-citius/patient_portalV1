@@ -31,21 +31,6 @@
       "id": 2
     },
     {
-      "email": "donald@email.com",
-      "password": "$2a$10$s7veQe9hm1Xg9jXPLiGMg..Xa0VzP/aSvM4G.OVXVqvQGwNSa9cLK",
-      "fName": "Donald",
-      "lName": "Trump",
-      "dob": "2021-09-27",
-      "username": "Donald Duck",
-      "rpassword": "12345",
-      "mobile": 9876543211,
-      "blood_group": "o-",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 22:45:49 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 3
-    },
-    {
       "email": "qwerty@email.com",
       "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
       "fName": "Qwert",
@@ -107,7 +92,7 @@
     },
     {
       "email": "ajju@email.com",
-      "password": "$2a$10$Z6VZRPVos52Vz7Q1eB1gqOXu4lGf0Y8Ylki3LkZ5rsOLw9fzfbYXK",
+      "password": "$2a$10$4DDJ1Tw.HE1fkyLzS.sOFef0wbUoMfhSEPL4/vsirIGPJM1TSC.Hy",
       "fName": "Ajju ",
       "lName": "Bhai",
       "dob": "2021-09-27",
@@ -117,7 +102,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Fri Oct 22 2021 00:15:07 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 9
     },
     {
@@ -164,25 +149,6 @@
       "id": 23
     }
   ],
-  "demographics": [
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "NA",
-      "education": "BE",
-      "employment": "as",
-      "address": "as",
-      "phone_number": 1234567890,
-      "medical_history": "NA",
-      "family_medical_history": "NA",
-      "surgeries": "NA",
-      "insurance_provider": "LIC",
-      "userid": 1,
-      "id": 1
-    }
-  ],
   "medic_allergy": [],
   "immunization": [
     {
@@ -192,30 +158,6 @@
       "age_category": "",
       "dose_detail": "",
       "general_vaccine": ""
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "dfghjk",
-      "dose_detail": "1",
-      "general_vaccine": "dfghjk",
-      "userId": "OxtfXFr",
-      "id": "TZEd-AN"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "1",
-      "general_vaccine": "NA",
-      "userId": "OxtfXFr",
-      "id": "iSaFnHN"
-    },
-    {
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": "NA",
-      "userId": 5,
-      "id": "GwKaUWS"
     }
   ],
   "appointments": [

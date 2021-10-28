@@ -43,7 +43,7 @@ function Calendar(props) {
       open: true,
       color: "info", // info | success | warning | error
       severity: "info", // info | success | warning | error
-      message: "🚀 Let's start with awesome react-mui-scheduler 🔥 🔥 🔥",
+      message: "Calendar display.",
       showActionButton: true,
       showNotification: true,
       delay: 1500,
