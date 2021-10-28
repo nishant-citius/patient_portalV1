@@ -23,6 +23,7 @@ import {
   ImageListItemBar,
 } from "mui";
 import { propTypes } from "react-bootstrap/esm/Image";
+import { textAlign } from "@mui/system";
 
 
 
@@ -45,9 +46,19 @@ const useStyles = makeStyles((theme) => ({
   },
   innercard2:{
     maxWidth: "150px" ,
-    maxHeight:"100px",
+    maxHeight:"150px",
     margin: "4px",
     background:"#D3D3D3"
+  },
+  innercard:{
+    maxHeight:"600",
+  },
+  innercard3:{
+    background:"#D3D3D3"
+  },
+  innercard4:{
+    width: "105px",
+    textAlign:"center"
   },
   display:{
    display:"flex"
@@ -56,6 +67,10 @@ const useStyles = makeStyles((theme) => ({
    paddingLeft:"38px",
    color:"blue"
   },
+  h5:{
+    paddingLeft:"15px",
+    marginTop:"15px"
+  }
   // h5:{
   //   paddingLeft:"20px",
   // }
@@ -121,7 +136,7 @@ const Patient_dashboard = (props) => {
                <Card className={classes.innercard1} >
                  <CardContent>
                    <Typography variant="subtitle1">
-                   Blood press
+                    Blood press
                     <br/>
                     <b>80/70</b><br/>mmhg
                    </Typography>
@@ -156,9 +171,9 @@ const Patient_dashboard = (props) => {
 
      <Grid item sm={4} md={4} lg={4}>
        <h4 className={classes.h4}>Current Medication</h4>
-         <Card className={classes.gridcontainer}>
+         <Card >
            <CardContent>
-             <Typography variant="subtitle1" className="fw-bold">
+             <Typography variant="subtitle1" >
                </Typography>
                 <div className={classes.display}>
                   <Card className={classes.innercard2} >
@@ -206,12 +221,11 @@ const Patient_dashboard = (props) => {
             <CardMedia
             component="img"
             height="140"
-           image="src/images/user.png"
+           image="https://healthtechmagazine.net/sites/healthtechmagazine.net/files/styles/cdw_hero/public/articles/%5Bcdw_tech_site%3Afield_site_shortname%5D/201911/20191127_HT_Web_Perfcon_EHR-Patient-Care.jpg?itok=xzDl3EQW"
            />
           
            <h5 className={classes.h5}>Details</h5>
-           
-          <CardContent >
+           <CardContent >
           <Typography  component="div">
            Name: jay
          </Typography>
@@ -223,7 +237,7 @@ const Patient_dashboard = (props) => {
     </Grid>
   </Grid>
 </Container>  
-    <Container className={classes.container} className="mt-4">
+    <Container className={classes.container} className="mt-2">
     <Grid container spacing={2}>
       <Grid item sm={2} lg={2} md={2}>
        <h4 className={classes.h4} >Allergies</h4>
@@ -232,7 +246,7 @@ const Patient_dashboard = (props) => {
              <Typography variant="subtitle1">
                </Typography>
                 <div className={classes.display}>
-                  <Card className={classes.innercard2} >
+                  <Card className={classes.innercard3} >
                     <CardContent>
                       <Typography variant="subtitle1" className="">
                       Allergy Name<br/>
@@ -245,25 +259,25 @@ const Patient_dashboard = (props) => {
         </Card>
     </Grid>
      <Grid item sm={6} lg={6} md={6}>
-       <h4 className={classes.h4} >Activities</h4>
+       <h4 className={classes.h4} paddingLeft="25px">Activities</h4>
         <Card>
            <CardContent>
               <Container>
                  <Grid container spacing={6}>
                     <Grid item>
-                       <Card className={classes.gridcontainer} style={{ backgroundColor: "#93E9BE" }}>
+                       <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}>
                           <CardContent>
                              <DirectionsWalkIcon>
                                </DirectionsWalkIcon>
                                  <Typography variant="subtitle1"  color="black">
-                                     <b> Walk<br/>
-                                       2 hours <br/>daily</b>
+                                     Walk<br/>
+                                       2 hours <br/>daily
                                  </Typography>
                           </CardContent>
                         </Card>
                      </Grid>
       <Grid item>   
-        <Card className={classes.gridcontainer} style={{ backgroundColor: "#93E9BE" }}>
+        <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}>
            <CardContent>
               <DirectionsBikeIcon></DirectionsBikeIcon>
                 <Typography variant="subtitle1"  color="black">
@@ -274,7 +288,7 @@ const Patient_dashboard = (props) => {
         </Card>
         </Grid>
         <Grid item>  
-                <Card className={classes.gridcontainer} style={{ backgroundColor: "#93E9BE" }}>
+                <Card style={{ backgroundColor: "#93E9BE" }} className={classes.innercard4}> 
                    <CardContent>
                     <DirectionsRunIcon></DirectionsRunIcon>
                      <Typography variant="subtitle1"  color="black">
@@ -322,21 +336,21 @@ const Patient_dashboard = (props) => {
            <CardContent>
              <Grid container spacing={4}>
                <Grid item>
-         <Card className={classes.gridcontainer} style={{ backgroundColor: "#D3D3D3" }}>
+         <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.innercard}>
            <CardContent>
-             <Typography variant="subtitle1" className="fw-bold">
-                <b>Drug Name</b><br/>
-                 Antibiotics
+             <Typography variant="subtitle1">
+                Drug Name<br/>
+                <b> Antibiotics</b>
                </Typography>
                </CardContent>
                </Card>
               </Grid>
               <Grid item>
-           <Card className={classes.gridcontainer} style={{ backgroundColor: "#D3D3D3" }}>
+           <Card style={{ backgroundColor: "#D3D3D3" }} className={classes.innercard}>
            <CardContent>
-             <Typography variant="subtitle1" className="fw-bold">
+             <Typography variant="subtitle1">
                 Strength<br/>
-                500 mg
+                <b>500 mg</b>
                </Typography>
                </CardContent>
                </Card>
