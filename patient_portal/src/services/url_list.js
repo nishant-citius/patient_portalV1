@@ -12,6 +12,7 @@ export const GET_PHYSICIANS = "http://localhost:9999/users?role=physician";
 export const ADD_USER = "http://localhost:9999/register";
 export const USER = "http://localhost:9999/users/";
 export const GET_PATIENTS = "http://localhost:9999/users?role=patient";
+export const GET_NURSE = "http://localhost:9999/users?role=nurse";
 export const GET_USER_DETAILS = "http://localhost:9999/users";
 export const GET_PATIENT_DEMOGRAPHICS =
   "http://localhost:9999/demographics?userid=";
@@ -21,5 +22,3 @@ export const GET_DEMOGRAPHICS = "http://localhost:9999/demographics";
 export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false";
 export const SPECILISED_PHYSICIANS = "http://localhost:9999/users?speciality=";
 export const PHYSICIAN_BY_NAME = "http://localhost:9999/users?fName=";
-
-
