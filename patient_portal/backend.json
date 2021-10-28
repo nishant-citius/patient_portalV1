@@ -150,60 +150,18 @@
       "id": 11
     },
     {
-      "email": "rh@email.om",
-      "password": "$2a$10$LwgW0sKxII92n0kDECHpSOVZnSHhTN2KOuUndw1EkcqeiNkb5a8XG",
-      "fName": "rekha",
-      "lName": "c",
-      "dob": "2021-10-20",
-      "username": "rekhac",
-      "rpassword": "12345",
-      "mobile": 23214214123,
-      "blood_group": "b+",
-      "role": "patient",
-      "createdDate": "Mon Oct 25 2021 07:44:46 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 12
-    },
-    {
-      "email": "sa@email.com",
-      "password": "$2a$10$t/tEtbg.UM57ld7n2B1HXuDItCbdSis1.FBi3LWx6kuTJo4lr6VBe",
-      "fName": "san",
-      "lName": "g",
-      "dob": "2021-10-15",
-      "username": "sang",
-      "mobile": "7684968594",
+      "email": "sp@gmail.com",
+      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-10-12",
+      "username": "shiva prasad",
+      "mobile": "8801888988",
       "role": "physician",
-      "speciality": "ww",
-      "createdDate": "Mon Oct 25 2021 13:27:20 GMT+0530 (India Standard Time)",
-      "id": 11
-    },
-    {
-      "email": "doc_1@email.com",
-      "password": "$2a$10$9zEfkwBVh3AaerY.AIdLvOR74ZlyHfdWTVoU/NXdUSWV3M0g7wpp2",
-      "fName": "Doctor-1",
-      "lName": "Doctor-1",
-      "dob": "2021-09-29",
-      "username": "nc@email.com",
-      "mobile": "55665545851564",
-      "role": "physician",
-      "speciality": "Cancer",
-      "createdDate": "Mon Oct 25 2021 17:16:29 GMT+0530 (India Standard Time)",
+      "speciality": "Orthopedics & Joint Replacement",
+      "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 12
-    },
-    {
-      "email": "doc_2@email.com",
-      "password": "$2a$10$B1a6m9NeQQtxpopefcltNOdDd3iLZV3b/hEL9tbLDCXCHAXa4lPva",
-      "fName": "Doctor-2",
-      "lName": "Doctor-2",
-      "dob": "2021-10-07",
-      "username": "doc-2",
-      "mobile": "878902736983705",
-      "role": "physician",
-      "speciality": "fever",
-      "createdDate": "Mon Oct 25 2021 17:18:10 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 13
+      "id": 23
     }
   ],
   "demographics": [
@@ -405,23 +363,6 @@
       "AllergenSource": "Bos taurus",
       "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 3",
       "Allerginicity": "IgE but no biological test"
-    }
-  ],
-  "requests": [
-    {
-      "id": 25,
-      "email": "ajinky@email.com",
-      "isActive": false
-    },
-    {
-      "id": "rahul@email.com",
-      "email": "rahul@email.com",
-      "isActive": true
-    },
-    {
-      "id": "manij@email.com",
-      "email": "manij@email.com",
-      "isActive": true
     }
   ]
 }

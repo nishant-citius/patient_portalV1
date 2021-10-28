@@ -23,3 +23,5 @@ export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false";
 export const SPECILISED_PHYSICIANS = "http://localhost:9999/users?speciality=";
 export const PHYSICIAN_BY_NAME = "http://localhost:9999/users?fName=";
 export const PATIENT_VITALS = "http://localhost:9999/patientvitals";
+export const GET_APPOINTMENT_DETAILS ="http://localhost:9999/appointments?doc_id=";
+

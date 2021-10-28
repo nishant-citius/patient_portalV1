@@ -602,3 +602,24 @@ export function GetPatientImmunization(userId) {
     );
   };
 }
+export function GetAppointments(userId) {
+  let payload = {
+    globalmessage: "",
+    appointmentsDetails: [],
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_APPOINTMENT_DETAILS}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Appointment retived`;
+        payload.appointmentsDetails = response.data;
+        dispatch({ type: actions.GET_APPOINTMENT_DETAILS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.appointmentsDetails = [];
+        dispatch({ type: actions.GET_APPOINTMENT_DETAILS, payload: payload });
+      }
+    );
+  };
+}
