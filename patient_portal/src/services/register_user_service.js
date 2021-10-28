@@ -135,6 +135,11 @@ class AdminServices {
     };
     return axios.post(url, JSON.stringify(user), config);
   }
+
+  getDoctorSpeciality() {
+    const url = `${URLS.BASE_URL}/physician_speciality`;
+    return axios.get(url);
+  }
 }
 /*********Admin Serives***********/
 
