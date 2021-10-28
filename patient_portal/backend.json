@@ -139,24 +139,6 @@
   ],
   "demographics": [
     {
-      "fName": "pooja",
-      "lName": "thakur",
-      "dob": "2021-10-07",
-      "gender": "female",
-      "ethnicity": "jshs",
-      "race": "",
-      "education": "mca",
-      "employment": "engineer",
-      "address": "bhhsx4747",
-      "phone_number": "66557",
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "na",
-      "insurance_provider": "jsjsj",
-      "userId": "OxtfXFr",
-      "id": 1
-    },
-    {
       "email": "seema@email.com",
       "password": "$2a$10$rkvZcFHmpP1BpG2y0xYN.O0n1k.FQ/aaBaZJjwGQi5K2JBuXVatWW",
       "fName": "seema",
@@ -334,6 +316,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T08:57:59.736Z",
       "patientId": 1,
+      "status": "Approved",
       "id": 2
     },
     {
@@ -351,6 +334,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T09:22:25.530Z",
       "patientId": 1,
+      "status": "Rejected",
       "id": 3
     },
     {
@@ -368,6 +352,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T13:43:33.508Z",
       "patientId": 1,
+      "status": "Pending",
       "id": 4
     },
     {
@@ -385,6 +370,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T13:48:41.415Z",
       "patientId": 1,
+      "status": "Compleated",
       "id": 5
     },
     {
@@ -402,6 +388,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T13:50:05.557Z",
       "patientId": 1,
+      "status": "Pending",
       "id": 6
     },
     {
@@ -419,7 +406,25 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-26T14:05:32.345Z",
       "patientId": 1,
+      "status": "Pending",
       "id": 7
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 1234567890,
+      "doc_id": 12,
+      "doc_name": "Doctor-1Doctor-1",
+      "appointment_title": "Shiva Fever",
+      "appointment_start_time": "20:53",
+      "appointment_end_time": "21:53",
+      "appointmentDate": "2021-10-31",
+      "appointment_desc": "Shiva is Suffering from Fever.",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-10-26T14:23:55.170Z",
+      "patientId": 1,
+      "id": 8
     }
   ],
   "order": [
@@ -472,23 +477,6 @@
       "AllergenSource": "Bos taurus",
       "Isoforms_or_partial_sequences_of_allergen": "Bos Bos d 3",
       "Allerginicity": "IgE but no biological test"
-    }
-  ],
-  "requests": [
-    {
-      "id": 25,
-      "email": "ajinky@email.com",
-      "isActive": false
-    },
-    {
-      "id": "rahul@email.com",
-      "email": "rahul@email.com",
-      "isActive": true
-    },
-    {
-      "id": "manij@email.com",
-      "email": "manij@email.com",
-      "isActive": true
     }
   ]
 }

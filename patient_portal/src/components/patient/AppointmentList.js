@@ -7,6 +7,15 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
+import {
+  BsFillTrashFill,
+  BsFillPencilFill,
+  BsPersonFill,
+  BsCheckCircleFill,
+  BsFillXCircleFill,
+  BsFillArrowLeftSquareFill,
+} from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,66 +49,18 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
+
 function AppointmentList(props) {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
+
+  console.log("Baba Don", appts);
 
   useEffect(() => {
     if (props.isLoggedIn) {
       userAppointments(props.currentUser.id);
     }
   }, []);
-
-  let appointmentsList = [
-    {
-      id: "event-1",
-      label: "Medical consultation", //aPPOINTMENT tITLE
-      groupLabel: "Dr Shaun Murphy", //physician name
-      user: "Dr Shaun Murphy", //physician name
-      color: "#f28f6a",
-      startHour: "04:00 AM",
-      endHour: "05:00 AM",
-      date: "2021-09-28",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer", //PatientName
-    },
-    {
-      id: "event-2",
-      label: "Medical consultation",
-      groupLabel: "Dr Claire Brown",
-      user: "Dr Claire Brown",
-      color: "#099ce5",
-      startHour: "09:00 AM",
-      endHour: "10:00 AM",
-      date: "2021-09-29",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-3",
-      label: "Medical consultation",
-      groupLabel: "Dr Menlendez Hary",
-      user: "Dr Menlendez Hary",
-      color: "#263686",
-      startHour: "13 PM",
-      endHour: "14 PM",
-      date: "2021-09-30",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-    {
-      id: "event-4",
-      label: "Consultation prénatale",
-      groupLabel: "Dr Shaun Murphy",
-      user: "Dr Shaun Murphy",
-      color: "#f28f6a",
-      startHour: "08:00 AM",
-      endHour: "09:00 AM",
-      date: "2021-10-01",
-      createdAt: new Date(),
-      createdBy: "Kristina Mayer",
-    },
-  ];
 
   function userAppointments(patientId) {
     adminService.getPatientAppointments(patientId).then(
@@ -130,7 +91,38 @@ function AppointmentList(props) {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          Appointment List
+          {/* Appointment List Start */}
+          <table className="table table-bordered shadow mt-4">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Doctor Name</th>
+                <th scope="col">Appointment Title</th>
+                <th scope="col">Start Time</th>
+                <th scope="col">ENd Time</th>
+                <th scope="col">Appointment Date</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {appts.map((user, index) => {
+                return (
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
+                    <td>{`${user.fName} ${user.lName}`}</td>
+                    <td>{user.doc_name}</td>
+                    <td>{user.appointment_title}</td>
+                    <td>{user.appointment_start_time}</td>
+                    <td>{user.appointment_end_time}</td>
+                    <td>{user.appointmentDate}</td>
+                    <td>{user.status}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {/* Appointment List end */}
         </TabPanel>
         <TabPanel value={value} index={1}>
           {props.isLoggedIn ? <Calendar apopointmnets={appts} /> : ""}

@@ -273,6 +273,29 @@ export function EditUser(userId, upadatedData) {
   };
 }
 
+export function DeleteUser(userId) {
+  let payload = {
+    users: [],
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
+    authToken = getState().login.authToken;
+    axios.delete(`${URLS.USER}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Delete Success`;
+        payload.users = [];
+        dispatch({ type: actions.DELETE_USER, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `ERROR: ${error.response.data}`;
+        payload.users = [];
+        dispatch({ type: actions.DELETE_USER, payload: payload });
+      }
+    );
+  };
+}
+
 export function AddNewUser(user) {
   let payload = {
     globalmessage: "",
@@ -297,7 +320,7 @@ export function AddNewUser(user) {
 export function GetInactiveUsers() {
   let payload = {
     inactiveUsers: [],
-    inactiveUsersCount: 0,
+    inactiveUserCount: 0,
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
@@ -305,13 +328,12 @@ export function GetInactiveUsers() {
     axios.get(URLS.INACTIVE_USERS).then(
       (response) => {
         payload.inactiveUsers = response.data;
-        payload.inactiveUsersCount = response.data.length;
-        console.log("--------------", payload);
+        payload.inactiveUserCount = response.data.length;
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       },
       (error) => {
         payload.inactiveUsers = [];
-        payload.inactiveUsersCount = 0;
+        payload.inactiveUserCount = 0;
         dispatch({ type: actions.GET_INACTIVE_USERS, payload: payload });
       }
     );
