@@ -19,7 +19,7 @@ const mapStateToProps = (rootReducer) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getallphysiciandata: () => dispatch(actioncreators.GetAllPhysicianData()),
+    getAllPhysicians: () => dispatch(actioncreators.GetAllPhysicianData()),
     removeUser: (id) => dispatch(actioncreators.DeleteUser(id)),
   };
 };
@@ -32,18 +32,17 @@ export class PhysicianDataComponent extends React.Component {
 
   deleteUser(userId) {
     this.props.removeUser(userId);
-    this.props.getalluserdata();
+    this.props.flashNotification({
+      message: "Physician Deleted Successfully...!",
+      type: "success",
+    });
+    this.props.getAllPhysicians();
   }
-
 
   render() {
     return (
       <>
         <div className="container mt-5">
-          {/* <Link className="btn btn-warning" to="/admin">
-            <BsFillArrowLeftSquareFill />
-            <span className="m-2">Back</span>
-          </Link> */}
           <h1 className="text-success text-center fw-bold ">Physician List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">

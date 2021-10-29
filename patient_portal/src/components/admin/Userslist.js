@@ -33,6 +33,10 @@ export class UserList extends React.Component {
 
   deleteUser(userId) {
     this.props.removeUser(userId);
+    this.props.flashNotification({
+      message: "User Deleted Successfully...!",
+      type: "success",
+    });
     this.props.getalluserdata();
   }
 
@@ -40,10 +44,6 @@ export class UserList extends React.Component {
     return (
       <>
         <div className="container mt-5">
-          {/* <Link className="btn btn-warning" to="/admin">
-            <BsFillArrowLeftSquareFill />
-            <span className="m-2">Back</span>
-          </Link> */}
           <Link to="/addusers" className="btn btn-primary float-end mr-4">
             Add User
           </Link>
