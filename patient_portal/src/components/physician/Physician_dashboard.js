@@ -6,14 +6,15 @@ import "bootstrap/dist/css/bootstrap.css";
 import BarChart from "./chart";
 import { useHistory } from "react-router";
 import * as actionCreator from "../../redux/actions/userActionCreater";
+import AppointmentList from "../physician/PhyAppointmentList";
 
 import {
   Container,
   Card,
-  Button,
   Grid,
   CardActionArea,
   CardContent,
+  Divider,
   CardMedia,
   makeStyles,
   Typography,
@@ -35,22 +36,52 @@ const Physician_dashboard = () => {
 
   const useStyles = makeStyles((theme) => ({
     gridcontainer: {
-      background: "#3f51b5",
-      color: "#fff",
+      background: "#fff",
+      color: "#808080",
       textAlign: "center",
-      alignItems: "center",
-      width: "300px",
-      minHeight: "90px",
-      // border: "1px solid #f50057",
+      paddingLeft: "15px",
     },
-    gridcontainer2: {
-      background: "#ffffff",
-      color: "#f50057",
+    innercard1: {
+      maxWidth: "320px",
+      maxHeight: "100px",
+      margin: "4px",
+      background: "rgb(72 179 226)",
+    },
+    innercard2: {
+      minWidth: "100px",
+      minHeight: "100px",
+      margin: "4px",
+      background: "rgb(72 179 226)",
+    },
+    innercard: {
+      height: "185px",
+    },
+    innercard3: {
+      background: "#D3D3D3",
+    },
+    innercard4: {
+      width: "105px",
       textAlign: "center",
-      minHeight: "177px",
-      border: "2px solid #f50057",
     },
-
+    h5: {
+      textAlign: "center",
+      color: "blue",
+    },
+    height: {
+      height: "150px",
+    },
+    textblock2: {
+      backgroundColor: "#0077b6",
+      height: "45px",
+    },
+    textblock1: {
+      backgroundColor: "#0077b6",
+      height: "45px",
+    },
+    textblock3: {
+      backgroundColor: "#dc3545",
+      height: "45px",
+    },
     chartdiv: {
       padding: "40px 0 40px 0",
       margin: "auto",
@@ -60,81 +91,72 @@ const Physician_dashboard = () => {
       backgroundColor: "#3f51b5",
       opacity: "50%",
     },
-    image: {
-      Width: 10,
-    },
-    container: {
-      position: "relative",
-      fontFamily: "Arial",
-    },
-    textblock: {
-      backgroundColor: "#f50057",
-      color: "white",
-      textAlign: "center",
-      width: "300px",
-      height: "30px",
-    },
   }));
   const classes = useStyles();
   return (
     <>
-      <Container>
+      <Container className={classes.container}>
         <Grid container spacing={4}>
-          <Grid item lg={4} xs={12}>
-            <div className={classes.container}>
-              <img
-                src="https://ak.picdn.net/shutterstock/videos/1068724409/thumb/9.jpg?ip=x480"
-                alt="Nature"
-                style={{ width: "300px", height: "120px" }}
+          <Grid item sm={4} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="130"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjqdo4r_VEzgKMlfJtWPEGW-u31ILuS6VMjQ&usqp=CAU"
               />
-              <div className={classes.textblock}>
-                <Typography style={{ fontWeight: "bold" }}>
-                  Total Appointments Approved: 30
-                </Typography>
-              </div>
-            </div>
-          </Grid>
-
-          <Grid item lg={4} xs={12}>
-            <Card className={classes.gridcontainer}>
-              <CardContent>
-                <Typography variant="subtitle1" className="fw-bold">
-                  Number of Appointments
-                </Typography>
-                <Typography variant="body2" className="fw-bold">
-                  20
-                </Typography>
+              {/* <h6 className={classes.h6}>Details</h6> */}
+              <CardContent className={classes.textblock1}>
+                <h6 className={classes.h6} style={{ color: "white" }}>
+                  Total Appointments : 30
+                </h6>
               </CardContent>
-              <CardActionArea></CardActionArea>
             </Card>
           </Grid>
 
-          <Grid item lg={4} xs={12}>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlUf_MDMa7opx7h0CJMhyv2wh3ryH5PBvMg&usqp=CAU"
-              alt="Nature"
-              style={{ width: "300px", height: "120px" }}
-            />
-            <div className={classes.textblock}>
-              <Typography style={{ fontWeight: "bold" }}>
-                Total Appointments Canceled: 30
-              </Typography>
-            </div>
+          <Grid item sm={4} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="130"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx_Ac4EqErfBGKoDPQu_9vC-Oaf2SqODDwfw&usqp=CAU"
+              />
+              {/* <h6 className={classes.h6}>Details</h6> */}
+              <CardContent className={classes.textblock2}>
+                <h6 className={classes.h6} style={{ color: "white" }}>
+                  Appointments Approved: 15
+                </h6>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item sm={4} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="130"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlUf_MDMa7opx7h0CJMhyv2wh3ryH5PBvMg&usqp=CAU"
+              />
+              {/* <h6 className={classes.h6}>Details</h6> */}
+              <CardContent className={classes.textblock3}>
+                <h6 className={classes.h6} style={{ color: "white" }}>
+                  Appointments Canceled: 15
+                </h6>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </Container>
-
-      <Container>
+      {/* <Container>
         <Grid container spacing={4}>
-          <Grid item sm={6} xs={12}>
+          <Grid item sm={12} lg={6} md={6}>
             <BarChart />
           </Grid>
-          <Grid item sm={6} xs={12}>
+          <Grid item sm={12} lg={6} md={6}>
             <div className="col-6 mb-4">
               <table className="table mt-4">
                 <thead className="thead-dark">
                   <tr>
-                    <th scope="col"># </th>
+                    <th scope="col">S. no </th>
                     <th scope="col">Patient id</th>
                     <th scope="col">Patient Name</th>
                     <th scope="col">catagory</th>
@@ -148,43 +170,28 @@ const Physician_dashboard = () => {
                     <td>Otto</td>
                     <td>@mdo</td>
                     <td>
-                      <button className="btn btn-success btn-sm" href="#">
+                      <button className="btn btn-success btn-sm m-2" href="#">
                         {" "}
-                        Approve
+                        Approved
                       </button>
                       <button className="btn btn-warning btn-sm m-2" href="#">
                         {" "}
                         postpone
                       </button>
-                      <button className="btn btn-danger btn-sm" href="#">
+                      <button className="btn btn-danger btn-sm m-2" href="#">
                         {" "}
                         Rejected
                       </button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
                 </tbody>
               </table>
-              <button className="btn btn-primary mt-4" href="#">
-                {" "}
-                Join Online Consultaion
-              </button>
             </div>
           </Grid>
         </Grid>
-      </Container>
-      <div className="m-4">
+      </Container> */}
+      {/* //calendar start// */}
+      {/* <div className="m-4">
         <div className="row ">
           <div className="col-4">
             <Calendar onChange={onChange} value={value} className="mb-4" />
@@ -200,8 +207,14 @@ const Physician_dashboard = () => {
             </Dropdown>
           </div>
         </div>
-        {/* <PatientList /> */}
-      </div>
+        calendar end /> */}
+      <Container>
+        <Grid container spacing={0}>
+          <Grid item sm={12} lg={12} md={12}>
+            <AppointmentList />
+          </Grid>
+        </Grid>
+      </Container>
     </>
   );
 };

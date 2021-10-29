@@ -121,6 +121,16 @@ class AdminServices {
     return axios.post(url, JSON.stringify(appointmentData), config);
   }
 
+  editAppointment(appointmentId, data) {
+    let url = `${URLS.BASE_URL}/appointments/${appointmentId}`;
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.put(url, JSON.stringify(data), config);
+  }
+
   deleteUser(userId) {
     const url = `${URLS.BASE_URL}/users/${userId}`;
     return axios.delete(url);
@@ -134,6 +144,11 @@ class AdminServices {
       },
     };
     return axios.post(url, JSON.stringify(user), config);
+  }
+
+  getDoctorSpeciality() {
+    const url = `${URLS.BASE_URL}/physician_speciality`;
+    return axios.get(url);
   }
 }
 /*********Admin Serives***********/

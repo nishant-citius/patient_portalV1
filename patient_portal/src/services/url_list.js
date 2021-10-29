@@ -16,8 +16,12 @@ export const GET_NURSE = "http://localhost:9999/users?role=nurse";
 export const GET_USER_DETAILS = "http://localhost:9999/users";
 export const GET_PATIENT_DEMOGRAPHICS =
   "http://localhost:9999/demographics?userid=";
+
 export const GET_PATIENT_IMMUNIZATION =
-  "http://localhost:9999/immunization?userid=";
+  "http://localhost:9999/immunization?id=";
+
+export const UPDATE_PATIENT_IMMUNIZATION = "http://localhost:9999/immunization";
+
 export const GET_DEMOGRAPHICS = "http://localhost:9999/demographics";
 export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false";
 export const SPECILISED_PHYSICIANS = "http://localhost:9999/users?speciality=";

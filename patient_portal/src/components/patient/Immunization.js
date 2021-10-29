@@ -4,19 +4,34 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import { useHistory } from "react-router";
+import isValid from "date-fns/isValid";
+import { de } from "date-fns/locale";
 
 const Immunization = (props) => {
+  const [savedVaccines, setSavedVaccines] = useState([]);
+  const [isAvailable, setIsAvailable] = useState(false);
+
   useEffect(() => {
     if (props.isLoggedIn) {
-      console.log(props.immunizationDetails);
-      if (
-        props.immunizationDetails.length &&
-        props.immunizationDetails.length > 0
-      ) {
-        alert("Hii");
+      if (props.immunizationDetails) {
+        mapGeneralVaccines();
+        setIsAvailable(true);
       }
     }
   }, []);
+
+  const savedValues = {
+    age_category: props.immunizationDetails.age_category,
+    vaccine_brand: props.immunizationDetails.vaccine_brand,
+    dose_detail: props.immunizationDetails.dose_detail,
+    general_vaccine: [
+      {
+        vaccine_name: "",
+        vaccine_date: "",
+      },
+    ],
+  };
+
   const initialValues = {
     age_category: "",
     vaccine_brand: "",
@@ -29,32 +44,55 @@ const Immunization = (props) => {
     ],
     userid: props.currentUser.id,
   };
-  const [patientImmunization, setpatientImmunization] = useState(initialValues);
+
+  function mapGeneralVaccines() {
+    const generalVaccines = props.immunizationDetails.general_vaccine.map(
+      (vaccine) => vaccine
+    );
+  }
+
+  function checkUserId(userId) {
+    if (props.immunizationDetails.id === userId) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   const validationSchema = Yup.object().shape({
     age_category: Yup.string().required("Required"),
     vaccine_brand: Yup.string().required("Required"),
     dose_detail: Yup.string().required("Required"),
     // general_vaccine: Yup.string().required("Required"),
   });
+
   const onSubmit = (values) => {
-    console.log(values);
     let gv = values.general_vaccine.map((v) => {
       let temp = {};
       temp.vaccine_name = v.vaccine_name;
       temp.vaccine_date = v.vaccine_date;
       return temp;
     });
-    console.log("ss", gv);
+
     const payload = {
       age_category: values.age_category,
       vaccine_brand: values.vaccine_brand,
       dose_detail: values.dose_detail,
       general_vaccine: gv,
-      userid: props.currentUser.id,
+      id: props.currentUser.id,
     };
-    props.immunization(payload);
+
+    if (checkUserId(props.currentUser.id)) {
+      console.log("Record ALready added");
+      props.updateImmunization(props.currentUser.id, payload);
+    } else {
+      console.log("Record Not Added Yet");
+      props.immunization(payload);
+    }
   };
+
   let history = useHistory();
+
   useEffect(() => {
     if (props.statusCode === 201) {
       history.push("/patient");
@@ -63,7 +101,7 @@ const Immunization = (props) => {
 
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={isAvailable ? savedValues : initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
@@ -129,15 +167,6 @@ const Immunization = (props) => {
                   <label htmlFor="general_vaccine">
                     Other general Vaccines
                   </label>
-                  {/* <Field
-                    type="text"
-                    className="form-control"
-                    placeholder="Please Enter General Vaccine Details"
-                    name="general_vaccine"
-                  />
-                  <div className="error">
-                    <ErrorMessage name="general_vaccine" />
-                  </div> */}
                   <FieldArray name="general_vaccine">
                     {(fieldArrayProps) => {
                       const { push, remove, form } = fieldArrayProps;
@@ -204,8 +233,8 @@ const Immunization = (props) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    allusers: state.immunization.Immunizationsreducer,
     immunizationDetails: state.patientImmunization.patientImmunization,
+    isLoggedIn: state.login.isLoggedIn,
   };
 };
 
@@ -213,6 +242,10 @@ const mapDispatchToProps = (dispatch) => {
   return {
     immunization: (newuser) =>
       dispatch(actionCreator.AddImmunizationsAsync(newuser)),
+    getPatientImmunization: (userId) =>
+      dispatch(actionCreator.GetPatientImmunization(userId)),
+    updateImmunization: (userId, data) =>
+      dispatch(actionCreator.UpdatePatientImmunization(userId, data)),
   };
 };
 
