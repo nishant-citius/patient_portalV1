@@ -8,30 +8,18 @@ import isValid from "date-fns/isValid";
 import { de } from "date-fns/locale";
 
 const Immunization = (props) => {
-  const [savedVaccines, setSavedVaccines] = useState([]);
   const [isAvailable, setIsAvailable] = useState(false);
-
+  console.log("sss", props.immunizationDetails);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
-        mapGeneralVaccines();
+      if (
+        props.immunizationDetails.length &&
+        props.immunizationDetails.length > 0
+      ) {
         setIsAvailable(true);
       }
     }
   }, []);
-
-  const savedValues = {
-    age_category: props.immunizationDetails.age_category,
-    vaccine_brand: props.immunizationDetails.vaccine_brand,
-    dose_detail: props.immunizationDetails.dose_detail,
-    general_vaccine: [
-      {
-        vaccine_name: "",
-        vaccine_date: "",
-      },
-    ],
-  };
-
   const initialValues = {
     age_category: "",
     vaccine_brand: "",
@@ -44,20 +32,6 @@ const Immunization = (props) => {
     ],
     userid: props.currentUser.id,
   };
-
-  function mapGeneralVaccines() {
-    const generalVaccines = props.immunizationDetails.general_vaccine.map(
-      (vaccine) => vaccine
-    );
-  }
-
-  function checkUserId(userId) {
-    if (props.immunizationDetails.id === userId) {
-      return true;
-    } else {
-      return false;
-    }
-  }
 
   const validationSchema = Yup.object().shape({
     age_category: Yup.string().required("Required"),
@@ -81,14 +55,7 @@ const Immunization = (props) => {
       general_vaccine: gv,
       id: props.currentUser.id,
     };
-
-    if (checkUserId(props.currentUser.id)) {
-      console.log("Record ALready added");
-      props.updateImmunization(props.currentUser.id, payload);
-    } else {
-      console.log("Record Not Added Yet");
-      props.immunization(payload);
-    }
+    props.immunization(payload);
   };
 
   let history = useHistory();
@@ -101,9 +68,10 @@ const Immunization = (props) => {
 
   return (
     <Formik
-      initialValues={isAvailable ? savedValues : initialValues}
+      initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
     >
       {(props) => (
         <div className="container">
@@ -122,7 +90,6 @@ const Immunization = (props) => {
                         as="select"
                         className="form-control"
                         name="age_category"
-                        id="age_category"
                       >
                         <option value="">Select</option>
                         <option value="18_44">18-44</option>
@@ -150,7 +117,6 @@ const Immunization = (props) => {
                         as="select"
                         className="form-control"
                         name="dose_detail"
-                        id="dose_detail"
                       >
                         <option value="">Select</option>
                         <option value="1">1</option>

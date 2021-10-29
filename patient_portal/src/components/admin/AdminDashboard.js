@@ -1,4 +1,4 @@
-import { React, Link, useEffect, useState } from "react";
+import { React, useEffect } from "react";
 import { useHistory } from "react-router";
 import "./admin.css";
 import { connect } from "react-redux";
@@ -25,6 +25,8 @@ import {
   TextsmsIcon,
 } from "mui-icons";
 
+import CountUp from "react-countup";
+
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     background: "#f50057",
@@ -47,21 +49,12 @@ const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
 
-  function showToaster() {
-    let _object = {
-      message: "This is Test..",
-      type: "success",
-    };
-
-    props.flashNotification(_object);
-  }
-
   useEffect(() => {
-    props.getallphysiciandata();
-    props.getalluserdata();
-    props.getAllPatients();
-    props.getInactiveUsers();
-    props.getallNursedata();
+    // props.getallphysiciandata();
+    // props.getalluserdata();
+    // props.getAllPatients();
+    // props.getInactiveUsers();
+    // props.getallNursedata();
   }, []);
 
   const data = {
@@ -112,8 +105,7 @@ const AdminDashboard = (props) => {
 
   const itemData = [
     {
-      img:
-        "https://www.seekpng.com/png/detail/266-2667175_goqii-doctor-is-a-qualified-physician-mbbs-md.png",
+      img: "https://www.seekpng.com/png/detail/266-2667175_goqii-doctor-is-a-qualified-physician-mbbs-md.png",
       title: "Dr. ABC",
       author: "Surgen",
       rows: 2,
@@ -121,20 +113,17 @@ const AdminDashboard = (props) => {
       featured: true,
     },
     {
-      img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRThpybZHlYukfV1VjLMx-99iYSoPPEM97jKgMCMNIDcAUKto59hV2xVk543gQVmt6pD70&usqp=CAU",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRThpybZHlYukfV1VjLMx-99iYSoPPEM97jKgMCMNIDcAUKto59hV2xVk543gQVmt6pD70&usqp=CAU",
       title: "Dr. XYZ",
       author: "Artho",
     },
     {
-      img:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScczgCgAPZvEptLueOQi9yXba2aWXyfNNsvYoqxfc9cEOj9ktM2NGP-z3zc4MfZv9j7E4&usqp=CAU",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScczgCgAPZvEptLueOQi9yXba2aWXyfNNsvYoqxfc9cEOj9ktM2NGP-z3zc4MfZv9j7E4&usqp=CAU",
       title: "Dr. MNO",
       author: "General Doctor",
     },
     {
-      img:
-        "https://www.nicepng.com/png/detail/363-3638676_1-medical-student-image-png.png",
+      img: "https://www.nicepng.com/png/detail/363-3638676_1-medical-student-image-png.png",
       title: "Dr. PQR",
       author: "Cancer Specialist",
       cols: 2,
@@ -153,7 +142,9 @@ const AdminDashboard = (props) => {
                   Total Users
                 </Typography>
               </CardContent>
-              <CardActionArea>{props.users.length}</CardActionArea>
+              <CardActionArea>
+                <CountUp end={props.users.length} duration={4} />
+              </CardActionArea>
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
@@ -163,7 +154,9 @@ const AdminDashboard = (props) => {
                   Total Patients
                 </Typography>
               </CardContent>
-              <CardActionArea>{props.patients.length}</CardActionArea>
+              <CardActionArea>
+                <CountUp end={props.patients.length} duration={4} />
+              </CardActionArea>
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
@@ -173,7 +166,10 @@ const AdminDashboard = (props) => {
                   Total Physicians
                 </Typography>
               </CardContent>
-              <CardActionArea>{props.physicians.length}</CardActionArea>
+              <CardActionArea>
+                {" "}
+                <CountUp end={props.physicians.length} duration={4} />
+              </CardActionArea>
             </Card>
           </Grid>
         </Grid>
@@ -226,7 +222,7 @@ const AdminDashboard = (props) => {
                             Total Appointments
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            {props.users.length}
+                            <CountUp end={props.users.length} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -239,7 +235,7 @@ const AdminDashboard = (props) => {
                             Patients per Doctor
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -252,7 +248,7 @@ const AdminDashboard = (props) => {
                             Immunized Patients
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -267,7 +263,7 @@ const AdminDashboard = (props) => {
                             Total &nbsp;&nbsp;&nbsp; Nurse
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            {props.nurses.length}
+                            <CountUp end={props.nurses.length} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -280,7 +276,7 @@ const AdminDashboard = (props) => {
                             Total Lab Assistance
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -293,7 +289,7 @@ const AdminDashboard = (props) => {
                             Total Appointments
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -321,11 +317,11 @@ const mapStatetoProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    getallphysiciandata: () => dispatch(actionCreator.GetAllPhysicianData()),
-    getalluserdata: () => dispatch(actionCreator.GetAllUserData()),
-    getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
-    getInactiveUsers: () => dispatch(actionCreator.GetInactiveUsers()),
-    getallNursedata: () => dispatch(actionCreator.GetAllNurseData()),
+    // getallphysiciandata: () => dispatch(actionCreator.GetAllPhysicianData()),
+    // getalluserdata: () => dispatch(actionCreator.GetAllUserData()),
+    // getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
+    // getInactiveUsers: () => dispatch(actionCreator.GetInactiveUsers()),
+    // getallNursedata: () => dispatch(actionCreator.GetAllNurseData()),
   };
 };
 
