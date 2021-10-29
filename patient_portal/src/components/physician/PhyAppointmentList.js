@@ -53,26 +53,35 @@ export class AppointmentList extends React.Component {
     adminService.editAppointment(appointmentData.id, newData).then(
       (response) => {
         if (response.status === 200) {
-          alert("Appointment Approved");
-          // props.flashNotification({
-          //   message: "Appointment Scheduled Succssfully...!",
-          //   type: "success",
-          // });
+          this.props.getAppointments(this.props.currentUser.id); 
+          
         }
       },
       (error) => {
-        // props.flashNotification({
-        //   message: "Appointment Can't be scheduled..!",
-        //   type: "error",
-        // });
+        
+       
       }
     );
   }
 
   reject(appointments) {
-    console.log(appointments);
-  }
+    let appointmentData = appointments,
+      newData = {
+        ...appointments,
+        status: "reject",
+      };
 
+    adminService.editAppointment(appointmentData.id, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("rejected appointmewnt");
+          
+        }
+      },
+      (error) => {
+      }
+    );
+  }
   componentDidMount() {
     this.props.getAppointments(this.props.currentUser.id);
   }
@@ -117,17 +126,11 @@ export class AppointmentList extends React.Component {
                         <button
                           type="button"
                           onClick={() => this.approve(appointments)}
-                          className="btn btn-primary btn-sm"
+                          className="btn btn-success btn-sm m-2"
                         >
                           Approve
                         </button>
-                        <button
-                          type="button"
-                          onClick=""
-                          className="btn btn-secondary btn-sm m-2"
-                        >
-                          postpone
-                        </button>
+                      
                         <button
                           type="button"
                           onClick={() => this.reject(appointments)}
@@ -139,21 +142,6 @@ export class AppointmentList extends React.Component {
                     )}
                   </td>
 
-                  {/* <td>
-                      <span className="p-2">
-                        <Link to={`/userdetails/${user.id}`}>
-                          <BsPersonFill />
-                        </Link>
-                      </span>
-                      <span className="p-2">
-                        <Link to={`/edit/${user.id}`}>
-                          <BsFillPencilFill />
-                        </Link>
-                      </span>
-                      <span className="p-2">
-                        <BsFillTrashFill />
-                      </span>
-                    </td> */}
                 </tr>
               );
             })}
