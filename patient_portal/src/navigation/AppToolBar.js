@@ -220,7 +220,7 @@ function AppToolBar(props) {
         )}
       </ToolBar>
       <ModalPopup
-        title="User-Request"
+        title="User Requests"
         openPopup={openPopup}
         setOpenPopup={setOpenPopup}
       >
@@ -229,6 +229,4 @@ function AppToolBar(props) {
     </AppBar>
   );
 }
-
-//export default AppToolBar;
 export default connect(mapStateToProps, mapDispatchToProps)(AppToolBar);
