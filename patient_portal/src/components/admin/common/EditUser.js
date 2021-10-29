@@ -52,18 +52,21 @@ const EditUser = (props) => {
 
     props.updateUser(id, newUserData);
     if (props.globalmessage === "Edit Success") {
+      props.flashNotification({
+        message: "User Edit Success...",
+        type: "success",
+      });
       history.push("/allusers");
     } else {
-      alert("Failure..");
+      props.flashNotification({
+        message: "User Edit Failed...",
+        type: "error",
+      });
     }
   };
 
   return (
     <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
-      <Link className="btn btn-warning" to="/allusers">
-        <BsFillArrowLeftSquareFill />
-        <span className="m-2">Back</span>
-      </Link>
       <h3 className="text-success text-center fw-bold ">Edit Details</h3>
       <div className="row justify-content-center">
         <div className="col-8">
