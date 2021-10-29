@@ -50,4 +50,4 @@ export class PatientVitals extends React.Component {
   };
   
   
-  export default connect(mapStateToProps, mapDispatchToProps)(PatientVitals);
+  export default connect(mapStateToProps, null)(PatientVitals);

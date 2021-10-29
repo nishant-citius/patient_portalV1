@@ -3,7 +3,6 @@ import { useHistory, useParams } from "react-router";
 import { adminService } from "../../../services/register_user_service";
 import { Link } from "react-router-dom";
 import * as actions from "../../../redux/actions/userActionCreater";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { connect } from "react-redux";
 
 const EditUser = (props) => {
