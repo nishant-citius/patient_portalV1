@@ -502,6 +502,28 @@ export function AddVitalsAsync(user) {
   };
 }
 
+export function GetVitals(userId) {
+  let payload = {
+    globalmessage: "",
+    userVitals: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_VITALS}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Vitals Retrieved...`;
+        payload.userVitals = response.data[0];
+        dispatch({ type: actions.GET_PATIENT_VITALS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userVitals = {};
+        dispatch({ type: actions.GET_PATIENT_VITALS, payload: payload });
+      }
+    );
+  };
+}
+
 export function AddMedicationAndAllergiesAsync(user) {
   let payload = {
     globalmessage: "",
