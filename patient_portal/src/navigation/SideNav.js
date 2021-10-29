@@ -124,13 +124,13 @@ function SideNav(props) {
             <div className={classes.item}>
               <Link to="/patientlist">
                 <ListAltIcon className={classes.icon} />
-                <span className={classes.text}>Patient List</span>
+                <span className={classes.text}>Manage Patient</span>
               </Link>
             </div>
             <div className={classes.item}>
               <Link to="physicianlist">
                 <ListAltIcon className={classes.icon} />
-                <span className={classes.text}>Physician List</span>
+                <span className={classes.text}>Manage Physician</span>
               </Link>
             </div>
             <div className={classes.item}>
