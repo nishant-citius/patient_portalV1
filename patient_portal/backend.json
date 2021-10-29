@@ -132,6 +132,20 @@
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 23
+    },
+    {
+      "email": "sk@gmail.com",
+      "password": "$2a$10$Wq3C2j7PaHrc9Emx3vPL7uMTIw/SMYQzwwfX3OKQdQNTJ/pOMCJdu",
+      "fName": "supreeya",
+      "lName": "Kulkarni",
+      "dob": "2021-10-15",
+      "username": "supreeya56",
+      "mobile": "8787878787",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Fri Oct 29 2021 16:07:40 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 24
     }
   ],
   "medic_allergy": [],
