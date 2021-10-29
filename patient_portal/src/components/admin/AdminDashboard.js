@@ -25,6 +25,8 @@ import {
   TextsmsIcon,
 } from "mui-icons";
 
+import CountUp from "react-countup";
+
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     background: "#f50057",
@@ -46,15 +48,6 @@ const useStyles = makeStyles((theme) => ({
 const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
-
-  function showToaster() {
-    let _object = {
-      message: "This is Test..",
-      type: "success",
-    };
-
-    props.flashNotification(_object);
-  }
 
   useEffect(() => {
     props.getallphysiciandata();
@@ -149,7 +142,9 @@ const AdminDashboard = (props) => {
                   Total Users
                 </Typography>
               </CardContent>
-              <CardActionArea>{props.users.length}</CardActionArea>
+              <CardActionArea>
+                <CountUp end={props.users.length} duration={4} />
+              </CardActionArea>
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
@@ -159,7 +154,9 @@ const AdminDashboard = (props) => {
                   Total Patients
                 </Typography>
               </CardContent>
-              <CardActionArea>{props.patients.length}</CardActionArea>
+              <CardActionArea>
+                <CountUp end={props.patients.length} duration={4} />
+              </CardActionArea>
             </Card>
           </Grid>
           <Grid item sm={4} xs={12}>
@@ -169,7 +166,10 @@ const AdminDashboard = (props) => {
                   Total Physicians
                 </Typography>
               </CardContent>
-              <CardActionArea>{props.physicians.length}</CardActionArea>
+              <CardActionArea>
+                {" "}
+                <CountUp end={props.physicians.length} duration={4} />
+              </CardActionArea>
             </Card>
           </Grid>
         </Grid>
@@ -222,7 +222,7 @@ const AdminDashboard = (props) => {
                             Total Appointments
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            {props.users.length}
+                            <CountUp end={props.users.length} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -235,7 +235,7 @@ const AdminDashboard = (props) => {
                             Patients per Doctor
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -248,7 +248,7 @@ const AdminDashboard = (props) => {
                             Immunized Patients
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -263,7 +263,7 @@ const AdminDashboard = (props) => {
                             Total &nbsp;&nbsp;&nbsp; Nurse
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            {props.nurses.length}
+                            <CountUp end={props.nurses.length} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -276,7 +276,7 @@ const AdminDashboard = (props) => {
                             Total Lab Assistance
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
@@ -289,7 +289,7 @@ const AdminDashboard = (props) => {
                             Total Appointments
                           </Typography>
                           <Typography variant="body2" className="fw-bold">
-                            30
+                            <CountUp end={30} duration={4} />
                           </Typography>
                         </CardContent>
                       </Card>
