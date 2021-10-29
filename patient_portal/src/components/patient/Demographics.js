@@ -50,7 +50,9 @@ const Demographics = (props) => {
     surgeries: props.demographicsDetails[0]?.surgeries,
     insurance_provider: props.demographicsDetails[0]?.insurance_provider,
   };
+
   const [isAvailable, setIsAvailable] = useState(false);
+
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
     lName: Yup.string().required("Required"),
@@ -322,7 +324,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     demographics: (newuser) =>
       dispatch(actionCreator.AddDemographicsAsync(newuser)),
-      // getdemographics: (userId) => dispatch(actionCreator.GetPatientDemographics(userId))
+    // getdemographics: (userId) => dispatch(actionCreator.GetPatientDemographics(userId))
   };
 };
 

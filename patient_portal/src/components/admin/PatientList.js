@@ -8,7 +8,6 @@ import {
   BsPersonFill,
   BsCheckCircleFill,
   BsFillXCircleFill,
-  BsFillArrowLeftSquareFill,
 } from "react-icons/bs";
 
 const mapStateToProps = (rootReducer) => {
@@ -21,6 +20,7 @@ const mapStateToProps = (rootReducer) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
+    removeUser: (id) => dispatch(actioncreators.DeleteUser(id)),
   };
 };
 
@@ -30,19 +30,19 @@ export class PatientList extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    // this.props.getAllPatients();
+  deleteUser(userId) {
+    this.props.removeUser(userId);
+    this.props.flashNotification({
+      message: "Patient Deleted Successfully...!",
+      type: "success",
+    });
+    this.props.getAllPatients();
   }
 
   render() {
-    
     return (
       <>
         <div className="container mt-5">
-          {/* <Link className="btn btn-warning" to="/admin">
-            <BsFillArrowLeftSquareFill />
-            <span className="m-2">Back</span>
-          </Link> */}
           <h1 className="text-success text-center fw-bold ">Patient List</h1>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
@@ -89,8 +89,10 @@ export class PatientList extends React.Component {
                           <BsFillPencilFill />
                         </Link>
                       </span>
-                      <span className="p-2">
-                        <BsFillTrashFill />
+                      <span className="p-2 hand-pointer">
+                        <BsFillTrashFill
+                          onClick={() => this.deleteUser(user.id)}
+                        />
                       </span>
                     </td>
                   </tr>

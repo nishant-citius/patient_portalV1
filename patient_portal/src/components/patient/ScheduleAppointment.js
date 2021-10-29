@@ -28,7 +28,6 @@ function ScheduleAppointment(props) {
     appointment_end_time: "",
     appointmentDate: "",
     appointment_desc: "",
-    // vistInfo: "",
     userid: props.currentUser.id,
   };
 

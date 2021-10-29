@@ -22,9 +22,10 @@ import { GetNurseReducer } from "./reducers/userreducers/GetNurseReducer";
 import { PatientImmunizationReducer } from "./reducers/PatientImmunizationReducer";
 import { GetImmunizationReducer } from "./reducers/userreducers/GetImmunizationReducer";
 import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPhysicianReducer";
-import {GetAllAppointmentReducer} from "./reducers/GetAllAppointmentReducer";
+import { GetAllAppointmentReducer } from "./reducers/GetAllAppointmentReducer";
 import { DeleteUserReducer } from "./reducers/userreducers/DeleteUserReducer";
 import {GetVitalsReducer} from "./reducers/GetVitalReducer";
+import { UpdateImmunizationReducer } from "./reducers/UpdateImmunizationReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -50,6 +51,7 @@ let rootReducer = combineReducers({
   specilizedPhysicians: SpecialityPhysicianReducer,
   appointmentsDetails: GetAllAppointmentReducer,
   deleteUser: DeleteUserReducer,
+  updateImmunization: UpdateImmunizationReducer,
 });
 
 /**create store  */

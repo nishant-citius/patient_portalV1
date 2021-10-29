@@ -3,7 +3,9 @@ import { SnackBar, makeStyles, Alert } from "../../mui";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // top: theme.spacing(9),
+    position: "absolute",
+    left: "660px",
+    top: "61px",
   },
 }));
 

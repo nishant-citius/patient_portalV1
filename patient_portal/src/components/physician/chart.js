@@ -19,7 +19,8 @@ const BarChart = () => {
             {
               label: "No of patients visited",
               data: [32, 39, 23, 35, 20, 44],
-              backgroundColor: ["#f50057"],
+              // backgroundColor: ["#f50057"],
+              backgroundColor: ["#0077b6"],
             },
             {
               label: "No of patients per month",
@@ -33,7 +34,7 @@ const BarChart = () => {
                 "Sunday",
               ],
               data: [102, 109, 130, 105, 210, 40],
-              backgroundColor: "#3f51b5",
+              backgroundColor: "#9480c9",
             },
           ],
           borderWidth: 1,

@@ -15,7 +15,7 @@ export class InitializeReduxState extends Component {
       this.props.getallphysiciandata();
       this.props.getAllPatients();
       this.props.getInactiveUsersData();
-      this.props.getPatientDemographics(this.props.currentUser.id);
+      // this.props.getPatientDemographics(this.props.currentUser.id);
       // if (this.props.role === "patient") {
       this.props.getPatientImmunization(this.props.currentUser.id);
       this.props.GetVitals(this.props.currentUser.id)

@@ -75,13 +75,13 @@ const UserRequests = (props) => {
                   }
                 />
                 <button
-                  className="btn btn-sm btn-success"
+                  className="btn btn-sm btn-success mrg_20"
                   onClick={() => approve(user)}
                 >
                   Approve
                 </button>
                 <button
-                  className="btn btn-sm btn-danger"
+                  className="btn btn-sm btn-danger mrg_20"
                   onClick={() => reject(user)}
                 >
                   Reject
