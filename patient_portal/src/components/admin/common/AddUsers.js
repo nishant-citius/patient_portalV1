@@ -56,6 +56,7 @@ const AddUsers = (props) => {
       isActive: false,
     };
     props.adduser(payload);
+
     history.push("/allusers");
   };
 
@@ -405,6 +406,7 @@ const mapStateToProps = (rootReducer) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     adduser: (userinfo) => dispatch(actions.AddNewUser(userinfo)),
+    getAllUsers: () => dispatch(actions.GetAllUserData()),
   };
 };
 
