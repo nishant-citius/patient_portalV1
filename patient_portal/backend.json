@@ -288,7 +288,7 @@
       "createdBy": "JoeRoot",
       "createdDate": "2021-10-28T18:51:23.509Z",
       "patientId": 10,
-      "status": "Pending",
+      "status": "approved",
       "id": 3
     },
     {
@@ -306,7 +306,7 @@
       "createdBy": "Ajju Bhai",
       "createdDate": "2021-10-28T19:38:13.908Z",
       "patientId": 9,
-      "status": "Pending",
+      "status": "approved",
       "id": 4
     },
     {
@@ -324,7 +324,7 @@
       "createdBy": "Kishore Kumar",
       "createdDate": "2021-10-28T19:39:22.268Z",
       "patientId": 7,
-      "status": "Pending",
+      "status": "approved",
       "id": 5
     },
     {
@@ -342,7 +342,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-28T19:41:15.542Z",
       "patientId": 1,
-      "status": "Pending",
+      "status": "approved",
       "id": 6
     }
   ],
