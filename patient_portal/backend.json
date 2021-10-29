@@ -16,6 +16,21 @@
       "id": 1
     },
     {
+      "email": "aj@email.com",
+      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
+      "fName": "Ajinkya",
+      "lName": "Pathak",
+      "dob": "2021-09-30",
+      "username": "aj@email.com",
+      "rpassword": "12345",
+      "mobile": 9403541779,
+      "blood_group": "b+ve",
+      "role": "admin",
+      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 2
+    },
+    {
       "email": "qwerty@email.com",
       "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
       "fName": "Qwert",
@@ -91,21 +106,6 @@
       "id": 9
     },
     {
-      "email": "ap@email.com",
-      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
-      "fName": "Joe",
-      "lName": "Root",
-      "dob": "2021-09-27",
-      "username": "joe",
-      "rpassword": "12345",
-      "mobile": 5645652548,
-      "blood_group": "B-",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 10
-    },
-    {
       "email": "sh@email.com",
       "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
       "fName": "soujanya",
@@ -134,59 +134,21 @@
       "id": 23
     },
     {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
-      "fName": "Susmitha",
-      "lName": "C",
-      "dob": "1996-08-08",
-      "username": "Susmitha1281",
-      "mobile": "8106989754",
+      "email": "hp@email.com",
+      "password": "$2a$10$Iw3muR.Etjs4Xh62vpbbd.mjYARiajzIHqLQSUG3hvdmmfvAsow56",
+      "fName": "rtt",
+      "lName": "tytty",
+      "dob": "2021-10-23",
+      "username": "hfuier",
+      "mobile": "1234567890",
       "role": "physician",
-      "speciality": "neurology",
-      "createdDate": "Fri Oct 29 2021 00:14:03 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "speciality": "ophthalmology",
+      "createdDate": "Fri Oct 29 2021 11:47:11 GMT+0530 (India Standard Time)",
+      "isActive": false,
       "id": 24
     }
   ],
-  "medic_allergy": [
-    {
-      "userid": 1,
-      "current_medication": [
-        {
-          "medicineName": "Dolo 650",
-          "dosage": "1",
-          "directionstoconsume": "after lunch",
-          "frequency": "2",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-27",
-          "endDate": "2021-10-28"
-        }
-      ],
-      "otc_medication": [
-        {
-          "strength": "650",
-          "directiontoconsume": "3",
-          "socialDrugs": "drink"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 1
-    }
-  ],
+  "medic_allergy": [],
   "immunization": [
     {
       "age_category": "45",
@@ -227,108 +189,22 @@
   ],
   "appointments": [
     {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 9403541779,
-      "doc_name": "13",
-      "appointment_title": "This Ajinkkkkkkkkya",
-      "appointment_time": "01:11",
-      "appointmentDate": "2021-09-30",
-      "appointment_desc": "I need to attend this\n",
-      "vistInfo": "yes",
-      "patientId": 1,
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "mobile_no": 8801888988,
+      "doc_id": 23,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "20:50",
+      "appointment_end_time": "20:53",
+      "appointmentDate": "2021-10-19",
+      "appointment_desc": "Appointments",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T12:20:59.048Z",
+      "patientId": 24,
+      "status": "approved",
       "id": 1
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 7876654329,
-      "doc_id": 12,
-      "doc_name": "Doctor-1Doctor-1",
-      "appointment_title": "title",
-      "appointment_start_time": "17:44",
-      "appointment_end_time": "19:46",
-      "appointmentDate": "2021-10-28",
-      "appointment_desc": "gyj",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-28T08:10:38.149Z",
-      "patientId": 1,
-      "status": "Pending",
-      "id": 2
-    },
-    {
-      "fName": "Joe",
-      "lName": "Root",
-      "dob": "2021-09-27",
-      "mobile_no": 8245623812,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "03:21",
-      "appointment_end_time": "04:21",
-      "appointmentDate": "2021-10-31",
-      "appointment_desc": "Fever",
-      "createdBy": "JoeRoot",
-      "createdDate": "2021-10-28T18:51:23.509Z",
-      "patientId": 10,
-      "status": "Pending",
-      "id": 3
-    },
-    {
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "mobile_no": 4645733342,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "05:07",
-      "appointment_end_time": "01:10",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "bodypains",
-      "createdBy": "Ajju Bhai",
-      "createdDate": "2021-10-28T19:38:13.908Z",
-      "patientId": 9,
-      "status": "Pending",
-      "id": 4
-    },
-    {
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "mobile_no": 7463836583,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "headaque",
-      "appointment_start_time": "01:13",
-      "appointment_end_time": "01:15",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "na",
-      "createdBy": "Kishore Kumar",
-      "createdDate": "2021-10-28T19:39:22.268Z",
-      "patientId": 7,
-      "status": "Pending",
-      "id": 5
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 7373737653,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "07:10",
-      "appointment_end_time": "03:11",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "NA",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-28T19:41:15.542Z",
-      "patientId": 1,
-      "status": "Pending",
-      "id": 6
     }
   ],
   "patientvitals": [

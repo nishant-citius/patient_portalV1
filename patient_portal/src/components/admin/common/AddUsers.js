@@ -3,9 +3,11 @@ import { useHistory } from "react-router";
 import { connect } from "react-redux";
 import * as actions from "../../../redux/actions/userActionCreater";
 import { adminService } from "../../../services/register_user_service";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const AddUsers = (props) => {
-  let tempUser = {
+  const initialValues = {
     fName: "",
     lName: "",
     dob: "",
@@ -19,23 +21,56 @@ const AddUsers = (props) => {
     isActive: true,
   };
 
-  const [user, setUser] = useState(tempUser);
+  const [user, setUser] = useState(initialValues);
   const [specialities, setSpecialities] = useState([]);
 
   let history = useHistory();
 
-  const handleUserChange = (e) => {
-    const name = e.target.name,
-      value = e.target.value;
-    setUser({ ...user, [name]: value });
-  };
+  const validationSchema = Yup.object().shape({
+    fName: Yup.string().required("Required"),
+    lName: Yup.string().required("Required"),
+    dob: Yup.string().required("Required"),
+    username: Yup.string().required("Required"),
+    email: Yup.string().email("Please enter valid email").required("Required"),
+    password: Yup.string()
+      .required("This field is required")
+      .min(4, "Password should be of minimum 4 characters length"),
+    mobile: Yup.string()
+      .required("Required")
+      .min(10, "Phone number required 10 digit")
+      .max(12, "Phone number required 12 digit"),
+  });
 
-  const submitUserData = (e) => {
-    e.preventDefault();
-    let newUserData = { ...user };
-    props.adduser(newUserData);
+  const onSubmit = (values) => {
+    const payload = {
+      fName: values.fName,
+      lName: values.lName,
+      dob: values.dob,
+      username: values.username,
+      email: values.email,
+      password: values.password,
+      mobile: values.mobile,
+      role: values.role,
+      speciality: values.speciality,
+      createdDate: Date(),
+      isActive: false,
+    };
+    props.adduser(payload);
     history.push("/allusers");
   };
+
+  // const handleUserChange = (e) => {
+  //   const name = e.target.name,
+  //     value = e.target.value;
+  //   setUser({ ...user, [name]: value });
+  // };
+
+  // const submitUserData = (e) => {
+  //   e.preventDefault();
+  //   let newUserData = { ...user };
+  //   props.adduser(newUserData);
+  //   history.push("/allusers");
+  // };
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -63,7 +98,160 @@ const AddUsers = (props) => {
       <h3 className="text-success text-center fw-bold ">Add New User</h3>
       <div className="row justify-content-center">
         <div className="col-8">
-          <form name="registration_form" onSubmit={submitUserData}>
+          <Formik
+            initialValues={initialValues}
+            onSubmit={onSubmit}
+            validationSchema={validationSchema}
+            enableReinitialize
+          >
+            {(props) => (
+              <Form>
+                <div className="form-group">
+                  <label>First Name</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    name="fName"
+                    id="fName"
+                    placeholder="Enter Your First name"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="fName" />
+                  </div>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>Last Name</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    name="lName"
+                    id="lName"
+                    placeholder="Enter Your Last name"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="lName" />
+                  </div>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>DOB</label>
+                  <Field
+                    type="date"
+                    className="form-control"
+                    name="dob"
+                    id="dob"
+                    placeholder="Enter Your Dob"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="dob" />
+                  </div>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>User Name</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    name="username"
+                    id="username"
+                    placeholder="Enter User Name"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="username" />
+                  </div>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>Email</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="email" />
+                  </div>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>Phone</label>
+                  <Field
+                    type="text"
+                    className="form-control"
+                    name="mobile"
+                    id="mobile"
+                    placeholder="Enter Mobile Number"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="mobile" />
+                  </div>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>Role</label>
+                  <Field
+                    as="select"
+                    className="form-control"
+                    name="role"
+                    id="role"
+                  >
+                    <option value="">Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="physician">Physician</option>
+                    <option value="nurse">Nurse</option>
+                  </Field>
+                </div>
+                <br />
+                {props.values.role === "physician" ? (
+                  <>
+                    <div className="form-group">
+                      <label>Speciality</label>
+                      <Field
+                        as="select"
+                        className="form-control"
+                        name="speciality"
+                        id="speciality"
+                      >
+                        <option value="">Select</option>
+                        {specialities.map((specility) => (
+                          <option value={specility.value}>
+                            {specility.name}
+                          </option>
+                        ))}
+                      </Field>
+                      {/* <div className="error">
+                        <ErrorMessage name="speciality" />
+                      </div> */}
+                    </div>
+                    <br />
+                  </>
+                ) : (
+                  ""
+                )}
+                <div className="form-group">
+                  <label>Password</label>
+                  <Field
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                  />
+                  <div className="error">
+                    <ErrorMessage name="password" />
+                  </div>
+                </div>
+                <br />
+                <button type="submit" className="btn btn-primary mt-4">
+                  Save Details
+                </button>
+              </Form>
+            )}
+          </Formik>
+          {/* <form name="registration_form" onSubmit={submitUserData}>
             <div className="form-group">
               <label>First Name</label>
               <input
@@ -181,8 +369,6 @@ const AddUsers = (props) => {
             ) : (
               ""
             )}
-
-            <br />
             <div className="form-group">
               <label>Password</label>
               <input
@@ -199,7 +385,8 @@ const AddUsers = (props) => {
             <button type="submit" className="btn btn-primary mt-4">
               Save Details
             </button>
-          </form>
+          </form> */}
+
           {/* <span>{props.globalmessage}</span> */}
         </div>
       </div>
