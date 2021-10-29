@@ -121,31 +121,17 @@
     },
     {
       "email": "sp@gmail.com",
-      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
+      "password": "$2a$10$etr.tcSfxyfrb33BOD0jSu09kzbBOpWLOQpZYPnkkVpFVflEWNSey",
       "fName": "shiva",
       "lName": "prasad",
       "dob": "2021-10-12",
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "Orthopedics & Joint Replacement",
+      "speciality": "Plastic Surgery",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 23
-    },
-    {
-      "email": "hp@email.com",
-      "password": "$2a$10$Iw3muR.Etjs4Xh62vpbbd.mjYARiajzIHqLQSUG3hvdmmfvAsow56",
-      "fName": "rtt",
-      "lName": "tytty",
-      "dob": "2021-10-23",
-      "username": "hfuier",
-      "mobile": "1234567890",
-      "role": "physician",
-      "speciality": "ophthalmology",
-      "createdDate": "Fri Oct 29 2021 11:47:11 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 24
     }
   ],
   "medic_allergy": [],
