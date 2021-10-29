@@ -7,6 +7,7 @@ import BarChart from "./chart";
 import { useHistory } from "react-router";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import AppointmentList from "../physician/PhyAppointmentList";
+import { adminService } from "../../services/register_user_service";
 
 import {
   Container,
@@ -20,19 +21,73 @@ import {
   Typography,
 } from "mui";
 
-const Physician_dashboard = () => {
-  const [value, onChange] = useState(new Date());
+const Physician_dashboard = (props) => {
   const history = useHistory();
 
-  const logOutUser = () => {
-    const session = window.sessionStorage;
-    session.removeItem("userInfo");
-    history.push("/");
-  };
+  const [apptList, setApptList] = useState([]);
+
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      userAppointments(props.currentUser.id);
+    }
+  }, []);
+
+  function userAppointments(physicianId) {
+    adminService.getPhysicianAppointments(physicianId).then(
+      (response) => {
+        setApptList(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
 
   const theme = {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
   };
+
+  function approvedAppts() {
+    let approved = 0,
+      rejected = undefined,
+      pending = undefined;
+
+    apptList.map((appt) => {
+      if (appt.status === "approved") {
+        approved += 1;
+      }
+
+      if (appt.status === "rejected") {
+        rejected += 1;
+      }
+
+      if (appt.status === "pending") {
+        rejected += 1;
+      }
+    });
+    return approved;
+  }
+
+  function todaysAppts() {
+    let approved = 0,
+      rejected = undefined,
+      pending = undefined;
+
+    apptList.map((appt) => {
+      if (appt.date === "approved") {
+        approved += 1;
+      }
+
+      if (appt.status === "rejected") {
+        rejected += 1;
+      }
+
+      if (appt.status === "pending") {
+        rejected += 1;
+      }
+    });
+    return approved;
+  }
 
   const useStyles = makeStyles((theme) => ({
     gridcontainer: {
@@ -95,6 +150,7 @@ const Physician_dashboard = () => {
   const classes = useStyles();
   return (
     <>
+      {console.log(apptList)}
       <Container className={classes.container}>
         <Grid container spacing={4}>
           <Grid item sm={4} lg={4} md={4}>
@@ -107,7 +163,7 @@ const Physician_dashboard = () => {
               {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock1}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Total Appointments : 30
+                  Total Appointments :{apptList.length}
                 </h6>
               </CardContent>
             </Card>
@@ -123,7 +179,7 @@ const Physician_dashboard = () => {
               {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock2}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Appointments Approved: 15
+                  Appointments Approved: {approvedAppts()}
                 </h6>
               </CardContent>
             </Card>
@@ -146,68 +202,7 @@ const Physician_dashboard = () => {
           </Grid>
         </Grid>
       </Container>
-      {/* <Container>
-        <Grid container spacing={4}>
-          <Grid item sm={12} lg={6} md={6}>
-            <BarChart />
-          </Grid>
-          <Grid item sm={12} lg={6} md={6}>
-            <div className="col-6 mb-4">
-              <table className="table mt-4">
-                <thead className="thead-dark">
-                  <tr>
-                    <th scope="col">S. no </th>
-                    <th scope="col">Patient id</th>
-                    <th scope="col">Patient Name</th>
-                    <th scope="col">catagory</th>
-                    <th scope="col">Appointments status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row m-2">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                      <button className="btn btn-success btn-sm m-2" href="#">
-                        {" "}
-                        Approved
-                      </button>
-                      <button className="btn btn-warning btn-sm m-2" href="#">
-                        {" "}
-                        postpone
-                      </button>
-                      <button className="btn btn-danger btn-sm m-2" href="#">
-                        {" "}
-                        Rejected
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </Grid>
-        </Grid>
-      </Container> */}
-      {/* //calendar start// */}
-      {/* <div className="m-4">
-        <div className="row ">
-          <div className="col-4">
-            <Calendar onChange={onChange} value={value} className="mb-4" />
-            <Dropdown>
-              <Dropdown.Toggle variant="success">
-                Select Appointments
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#">Day</Dropdown.Item>
-                <Dropdown.Item href="#">Week</Dropdown.Item>
-                <Dropdown.Item href="#">Month</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
-        </div>
-        calendar end /> */}
+
       <Container>
         <Grid container spacing={0}>
           <Grid item sm={12} lg={12} md={12}>
@@ -219,4 +214,10 @@ const Physician_dashboard = () => {
   );
 };
 
-export default Physician_dashboard;
+const mapStatetoProps = (state) => {
+  return {
+    isLoggedIn: state.login.isLoggedIn,
+    currentUser: state.login.loggedUserInfo,
+  };
+};
+export default connect(mapStatetoProps, null)(Physician_dashboard);
