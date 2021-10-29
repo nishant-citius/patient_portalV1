@@ -80,11 +80,16 @@ export class AppointmentList extends React.Component {
   render() {
     return (
       <div className="container mt-5">
-        <Link className="btn btn-warning" to="/admin">
+        {/* <Link className="btn btn-warning" to="/physician">
           <BsFillArrowLeftSquareFill />
           <span className="m-2">Back</span>
-        </Link>
-        <h1 className="text-success text-center fw-bold ">Appointment List</h1>
+        </Link> */}
+        <h4
+          style={{ color: "yellow" }}
+          className="text-success text-center fw-bold "
+        >
+          Appointment List
+        </h4>
         <table className="table table-bordered shadow mt-4">
           <thead className="table-dark">
             <tr>
