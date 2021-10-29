@@ -4,6 +4,7 @@ import { adminService } from "../../../services/register_user_service";
 import { Link } from "react-router-dom";
 import * as actions from "../../../redux/actions/userActionCreater";
 import { connect } from "react-redux";
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 const EditUser = (props) => {
   let tempUserData = {
@@ -20,7 +21,6 @@ const EditUser = (props) => {
   };
 
   const [user, setUser] = useState(tempUserData);
-
   const { id } = useParams();
   const history = useHistory();
 
