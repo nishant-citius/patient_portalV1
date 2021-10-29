@@ -15,7 +15,6 @@ const mapStateToProps = (rootReducer) => {
   return {
     immunizationData: rootReducer.immunizations.immunizations,
     globalmessage: rootReducer.immunizations.globalmessage,
-    // users: rootReducer.getallusers.users,
   };
 };
 
@@ -23,7 +22,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getAllImmunizations: () =>
       dispatch(actioncreators.GetAllImmunizationData()),
-    getalluserdata: () => dispatch(actioncreators.GetAllUserData()),
   };
 };
 
@@ -35,9 +33,7 @@ export class PatientList extends React.Component {
 
   componentDidMount() {
     this.props.getAllImmunizations();
-    this.props.getalluserdata();
-    console.log(this.props.immunizationData);
-    console.log(this.props.users);
+    // this.props.getalluserdata();
   }
 
   render() {
@@ -55,32 +51,38 @@ export class PatientList extends React.Component {
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
-                <th scope="col">Name</th>
+                <th scope="col">Patient Id</th>
                 <th scope="col">Vaccine Name</th>
+                <th scope="col">Vaccination Date</th>
                 <th scope="col">Vaccine Brand</th>
                 <th scope="col">Vaccine Dose Number</th>
-                <th scope="col">Vaccination Date</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
+              {console.log(this.props.immunizationData)}
               {this.props.immunizationData.map((user, index) => {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>{user.userid}</td>
+                    <td>{user.id}</td>
                     <td>
-                      <ul>
-                        {/* {user.general_vaccine.map((vaccine, i) => {
-                          return(
-                              <li>vaccine.vaccine_name</li>
-                            <li>vaccine.vaccine_date</li>
-                          )
-                          
-                        })} */}
+                      <ul className="no-list-style">
+                        {user.general_vaccine.map((vac, ind) => {
+                          console.log(vac.vaccine_name);
+                          return <li>{vac.vaccine_name}</li>;
+                        })}
                       </ul>
                     </td>
-                    <td></td>
+                    <td>
+                      <ul className="no-list-style">
+                        {user.general_vaccine.map((vac, ind) => {
+                          console.log(vac.vaccine_date);
+                          return <li>{vac.vaccine_date}</li>;
+                        })}
+                      </ul>
+                    </td>
+
                     <td>{user.vaccine_brand}</td>
                     <td>{user.dose_detail}</td>
                     <td>
