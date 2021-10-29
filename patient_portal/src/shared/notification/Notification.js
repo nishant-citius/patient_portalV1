@@ -2,11 +2,7 @@ import { React } from "react";
 import { SnackBar, makeStyles, Alert } from "../../mui";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    position: "absolute",
-    left: "660px",
-    top: "61px",
-  },
+  root: {},
 }));
 
 const Notification = (props) => {
@@ -27,7 +23,7 @@ const Notification = (props) => {
       className={classes.root}
       open={notify.isOpen}
       autoHideDuration={3000}
-      anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
       onClose={handleClose}
     >
       <Alert severity={notify.type} onClose={handleClose}>

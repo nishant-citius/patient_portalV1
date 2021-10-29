@@ -106,21 +106,6 @@
       "id": 9
     },
     {
-      "email": "ap@email.com",
-      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
-      "fName": "Joe",
-      "lName": "Root",
-      "dob": "2021-09-27",
-      "username": "joe",
-      "rpassword": "12345",
-      "mobile": 5645652548,
-      "blood_group": "B-",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 10
-    },
-    {
       "email": "sh@email.com",
       "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
       "fName": "soujanya",
@@ -136,72 +121,34 @@
     },
     {
       "email": "sp@gmail.com",
-      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
+      "password": "$2a$10$etr.tcSfxyfrb33BOD0jSu09kzbBOpWLOQpZYPnkkVpFVflEWNSey",
       "fName": "shiva",
       "lName": "prasad",
       "dob": "2021-10-12",
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "Orthopedics & Joint Replacement",
+      "speciality": "Plastic Surgery",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 23
     },
     {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
-      "fName": "Susmitha",
-      "lName": "C",
-      "dob": "1996-08-08",
-      "username": "Susmitha1281",
-      "mobile": "8106989754",
+      "email": "jinx@email.com",
+      "password": "$2a$10$mP7Yl.ipS3xLiSt3Cc55duuawRf.FPFTUqlzzhcz4oxzowXt9xe2C",
+      "fName": "Ajinkya",
+      "lName": "Rahane",
+      "dob": "2021-10-22",
+      "username": "jinx",
+      "mobile": "3214567890",
       "role": "physician",
-      "speciality": "neurology",
-      "createdDate": "Fri Oct 29 2021 00:14:03 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "speciality": "pathology",
+      "createdDate": "Fri Oct 29 2021 16:35:44 GMT+0530 (India Standard Time)",
+      "isActive": false,
       "id": 24
     }
   ],
-  "medic_allergy": [
-    {
-      "userid": 1,
-      "current_medication": [
-        {
-          "medicineName": "Dolo 650",
-          "dosage": "1",
-          "directionstoconsume": "after lunch",
-          "frequency": "2",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-27",
-          "endDate": "2021-10-28"
-        }
-      ],
-      "otc_medication": [
-        {
-          "strength": "650",
-          "directiontoconsume": "3",
-          "socialDrugs": "drink"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 1
-    }
-  ],
+  "medic_allergy": [],
   "immunization": [
     {
       "age_category": "45",
@@ -209,15 +156,15 @@
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "qqwqw",
+          "vaccine_name": "Vacine-1",
           "vaccine_date": "2021-09-29"
         },
         {
-          "vaccine_name": "Pnumonia",
+          "vaccine_name": "Vacine-2",
           "vaccine_date": "2021-10-11"
         },
         {
-          "vaccine_name": "fadsfsdfgsdfgsdfg",
+          "vaccine_name": "Vacine-3",
           "vaccine_date": "2021-10-21"
         }
       ],
@@ -242,18 +189,23 @@
   ],
   "appointments": [
     {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 9403541779,
-      "doc_name": "13",
-      "appointment_title": "This Ajinkkkkkkkkya",
-      "appointment_time": "01:11",
-      "appointmentDate": "2021-09-30",
-      "appointment_desc": "I need to attend this\n",
-      "vistInfo": "yes",
-      "patientId": 1,
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "mobile_no": 8801888988,
+      "doc_id": 23,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "20:50",
+      "appointment_end_time": "20:53",
+      "appointmentDate": "2021-10-19",
+      "appointment_desc": "Appointments",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T12:20:59.048Z",
+      "patientId": 24,
+      "status": "approved",
       "id": 1
+<<<<<<< HEAD
     },
     {
       "fName": "Nishant",
@@ -344,6 +296,8 @@
       "patientId": 1,
       "status": "approved",
       "id": 6
+=======
+>>>>>>> e8be30a86999372ff9c3ed751307d8d505e76c7d
     }
   ],
   "patientvitals": [
