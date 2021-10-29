@@ -21,13 +21,19 @@ const EditUser = (props) => {
   };
 
   const [user, setUser] = useState(tempUserData);
-
+  const [specialities, setSpecialities] = useState([]);
   const { id } = useParams();
   const history = useHistory();
 
   useEffect(() => {
     loadUsers(id);
   }, [id]);
+
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      doctorSpeciality();
+    }
+  }, [0]);
 
   const loadUsers = (_id) => {
     adminService.getUserById(_id).then(
@@ -64,6 +70,17 @@ const EditUser = (props) => {
       });
     }
   };
+
+  function doctorSpeciality() {
+    adminService.getDoctorSpeciality().then(
+      (response) => {
+        setSpecialities(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
 
   return (
     <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
@@ -178,34 +195,11 @@ const EditUser = (props) => {
                     id="speciality"
                     onChange={handleUserChange}
                     placeholder="Enter Speciality"
-                    value={user.speciality}
                   >
                     <option value="">Select</option>
-                    <option value="Anaesthesia">Anaesthesia</option>
-                    <option value="Cardiology">Cardiology</option>
-                    <option value="Corneal Transplant">
-                      Corneal Transplant
-                    </option>
-                    <option value="Dermatology And Cosmetology">
-                      Dermatology And Cosmetology
-                    </option>
-                    <option value="General Surgery">General Surgen</option>
-                    <option value="Infectious Diseases">
-                      Infectious Diseases
-                    </option>
-                    <option value="Liver Transplant & Hepatic Surgery">
-                      Liver Transplant & Hepatic Surgery
-                    </option>
-                    <option value="Gynecology">Gynecology</option>
-                    <option value="Neonatology">Neonatology</option>
-                    <option value="Neurology">Neurology</option>
-                    <option value="Orthopedics & Joint Replacement">
-                      Orthopedics & Joint Replacement
-                    </option>
-                    <option value="Physiotherapy">Physiotherapy</option>
-                    <option value="Plastic Surgery">Plastic Surgery</option>
-                    <option value="Psychiatry">Psychiatry</option>
-                    <option value="Urology">Urology</option>
+                    {specialities.map((specility) => (
+                      <option value={specility.value}>{specility.name}</option>
+                    ))}
                   </select>
                 </div>
                 <br />
