@@ -69,10 +69,20 @@ export class PatientList extends React.Component {
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
                     <td>{user.userid}</td>
-                    <td>{user.general_vaccine[0].vaccine_name}</td>
+                    <td>
+                      <ul>
+                        {/* {user.general_vaccine.map((vaccine, i) => {
+                          return(
+                              <li>vaccine.vaccine_name</li>
+                            <li>vaccine.vaccine_date</li>
+                          )
+                          
+                        })} */}
+                      </ul>
+                    </td>
+                    <td></td>
                     <td>{user.vaccine_brand}</td>
                     <td>{user.dose_detail}</td>
-                    <td>{user.general_vaccine[0].vaccine_date}</td>
                     <td>
                       <span className="p-2">
                         <Link>
