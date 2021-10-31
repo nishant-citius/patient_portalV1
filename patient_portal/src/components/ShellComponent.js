@@ -137,10 +137,14 @@ function ShellComponent(props) {
         <Route path="/demographics" component={Demographics}>
           <Demographics flashNotification={showSnacksBar} />
         </Route>
-        <Route path="/immunization" component={Immunization} />
+        <Route path="/immunization" component={Immunization}>
+          <Immunization flashNotification={showSnacksBar} />
+        </Route>
         <Route path="/vitals" component={Vitals} />
         <Route path="/myprofile" component={MyProfile} />
-        <Route path="/medic_allergy" component={Medication_Allergies} />
+        <Route path="/medic_allergy" component={Medication_Allergies}>
+          <Medication_Allergies flashNotification={showSnacksBar} />
+        </Route>
         <Route
           path={"/patientdemographics/userid"}
           component={PatientDemographics}
@@ -153,7 +157,6 @@ function ShellComponent(props) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShellComponent);
 
-
-  /* <Route path="/about" component={About} />
+/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */
