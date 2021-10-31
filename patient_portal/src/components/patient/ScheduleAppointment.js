@@ -9,6 +9,7 @@ function ScheduleAppointment(props) {
   const [doctorsList, setDoctorsList] = useState([]);
   const [doctorName, setDcotorName] = useState("");
   const [specialities, setSpecialities] = useState([]);
+  const [dayAppointments, setDayAppointments] = useState([]);
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -54,6 +55,17 @@ function ScheduleAppointment(props) {
     setDoctorsList(arr);
   }
 
+  function getAppointmentsForDate(_date) {
+    adminService.getAppointmentsForDate(_date).then(
+      (response) => {
+        setDayAppointments(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
+
   const validationSchema = Yup.object().shape({
     mobile_no: Yup.string()
       .required("Required")
@@ -88,6 +100,10 @@ function ScheduleAppointment(props) {
     scheduleAppointmentToday(payload);
     actions.resetForm();
   };
+
+  function getAppts() {
+    console.log("~~~~~");
+  }
 
   function scheduleAppointmentToday(appointmentData) {
     adminService.addNewAppointment(appointmentData).then(
@@ -221,6 +237,7 @@ function ScheduleAppointment(props) {
                       type="date"
                       className="form-control"
                       name="appointmentDate"
+                      onChange={getAppts}
                     />
                     <div className="error">
                       <ErrorMessage name="appointmentDate" />
