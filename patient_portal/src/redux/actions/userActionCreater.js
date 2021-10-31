@@ -673,3 +673,31 @@ export function GetAppointments(userId) {
     );
   };
 }
+
+export function GetMedicationAllergies(userId) {
+  let payload = {
+    globalmessage: "",
+    userMedicationAllergy: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_MEDICATION_ALLERGY}${userId}`).then(
+      (response) => {
+        payload.globalmessage = `Medication Allergy Retrieved...`;
+        payload.userMedicationAllergy = response.data[0];
+        dispatch({
+          type: actions.GET_PATIENT_MEDICATION_ALLERGY,
+          payload: payload,
+        });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userMedicationAllergy = {};
+        dispatch({
+          type: actions.GET_PATIENT_MEDICATION_ALLERGY,
+          payload: payload,
+        });
+      }
+    );
+  };
+}
