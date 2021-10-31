@@ -130,6 +130,7 @@ function ShellComponent(props) {
         <Route path={"/schedule_appointment"}>
           <ScheduleAppointment flashNotification={showSnacksBar} />
         </Route>
+
         {/* -----------Physician------------- */}
 
         {/* -----------Patient------------- */}
@@ -153,7 +154,6 @@ function ShellComponent(props) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShellComponent);
 
-
-  /* <Route path="/about" component={About} />
+/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */

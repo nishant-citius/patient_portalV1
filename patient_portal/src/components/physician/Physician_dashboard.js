@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import BarChart from "./chart";
 import { useHistory } from "react-router";
 import * as actionCreator from "../../redux/actions/userActionCreater";
-import AppointmentList from "../physician/PhyAppointmentList";
+import AppointmentList from "../physician/TodaysAppointments";
 import { adminService } from "../../services/register_user_service";
 
 import {
@@ -20,6 +20,8 @@ import {
   makeStyles,
   Typography,
 } from "mui";
+import { date } from "yup/lib/locale";
+import CountUp from "react-countup";
 
 const Physician_dashboard = (props) => {
   const history = useHistory();
@@ -74,16 +76,21 @@ const Physician_dashboard = (props) => {
       pending = undefined;
 
     apptList.map((appt) => {
-      if (appt.date === "approved") {
+      if (appt.appointmentDate === "2021-10-30") {
         approved += 1;
       }
+    });
+    return approved;
+  }
 
-      if (appt.status === "rejected") {
-        rejected += 1;
-      }
+  function upcomingAppointments() {
+    let approved = 0,
+      rejected = undefined,
+      pending = undefined;
 
-      if (appt.status === "pending") {
-        rejected += 1;
+    apptList.map((appt) => {
+      if (appt.appointmentDate >= new Date()) {
+        approved += 1;
       }
     });
     return approved;
@@ -130,11 +137,19 @@ const Physician_dashboard = (props) => {
       height: "45px",
     },
     textblock1: {
-      backgroundColor: "#0077b6",
+      backgroundColor: "#fd7e14",
       height: "45px",
     },
     textblock3: {
       backgroundColor: "#dc3545",
+      height: "45px",
+    },
+    textblock4: {
+      backgroundColor: "#6f42c1",
+      height: "45px",
+    },
+    textblock5: {
+      backgroundColor: "#20c997",
       height: "45px",
     },
     chartdiv: {
@@ -150,7 +165,6 @@ const Physician_dashboard = (props) => {
   const classes = useStyles();
   return (
     <>
-      {console.log(apptList)}
       <Container className={classes.container}>
         <Grid container spacing={4}>
           <Grid item sm={4} lg={4} md={4}>
@@ -163,7 +177,8 @@ const Physician_dashboard = (props) => {
               {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock1}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Total Appointments :{apptList.length}
+                  Total Appointments :
+                  <CountUp end={apptList.length} duration={4} />
                 </h6>
               </CardContent>
             </Card>
@@ -179,7 +194,8 @@ const Physician_dashboard = (props) => {
               {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock2}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Appointments Approved: {approvedAppts()}
+                  Appointments Approved :
+                  <CountUp end={approvedAppts()} duration={4} />
                 </h6>
               </CardContent>
             </Card>
@@ -202,14 +218,50 @@ const Physician_dashboard = (props) => {
           </Grid>
         </Grid>
       </Container>
+      <br></br>
+      <Container className={classes.container}>
+        <Grid container spacing={4}>
+          <Grid item sm={4} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="130"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt2D1xLrARfpYmsY9mPTGkFIwm1NfZCB0IIrsoqIbEYWmR8OGE_XlX5IX8-fcSJQOnsgA&usqp=CAU"
+              />
+              {/* <h6 className={classes.h6}>Details</h6> */}
+              <CardContent className={classes.textblock4}>
+                <h6 className={classes.h6} style={{ color: "white" }}>
+                  Todays Appointments :
+                  <CountUp end={todaysAppts()} duration={4} />
+                </h6>
+              </CardContent>
+            </Card>
+          </Grid>
 
-      <Container>
+          <Grid item sm={4} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="130"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0F0UWdyWQlY8Wc1P9aHxeD2On0Avv15uis0A63q9jKrsa6_Z0nG1yJPVcY9eR4DKY7Hc&usqp=CAU"
+              />
+              {/* <h6 className={classes.h6}>Details</h6> */}
+              <CardContent className={classes.textblock5}>
+                <h6 className={classes.h6} style={{ color: "white" }}>
+                  Upcoming Appointments : {upcomingAppointments()}
+                </h6>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      {/* <Container>
         <Grid container spacing={0}>
           <Grid item sm={12} lg={12} md={12}>
             <AppointmentList />
           </Grid>
         </Grid>
-      </Container>
+      </Container> */}
     </>
   );
 };
