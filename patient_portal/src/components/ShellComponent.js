@@ -124,6 +124,7 @@ function ShellComponent(props) {
 
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
+        
         <Route
           path={"/physician_appointments"}
           component={PhysicianAppointment}
