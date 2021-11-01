@@ -146,6 +146,20 @@
       "createdDate": "Fri Oct 29 2021 16:35:44 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 24
+    },
+    {
+      "email": "susmitha@email.com",
+      "password": "$2a$10$Pfpz3V0nu6N7.D9LXziTwuygw5IKM3cvvkY4qBhW.Ru9m5E/G94jq",
+      "fName": "susmitha",
+      "lName": "C",
+      "dob": "2021-11-08",
+      "username": "susmitha1281",
+      "mobile": "8106989754",
+      "role": "physician",
+      "speciality": "dermatology",
+      "createdDate": "Mon Nov 01 2021 09:23:53 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 25
     }
   ],
   "medic_allergy": [],
@@ -295,6 +309,42 @@
       "patientId": 1,
       "status": "approved",
       "id": 6
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 6346536333,
+      "doc_id": 25,
+      "doc_name": "susmithaC",
+      "appointment_title": "General Health Checkup",
+      "appointment_start_time": "01:26",
+      "appointment_end_time": "02:26",
+      "appointmentDate": "2021-11-16",
+      "appointment_desc": "r",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-01T03:56:18.071Z",
+      "patientId": 1,
+      "status": "approved",
+      "id": 7
+    },
+    {
+      "fName": "Kishore ",
+      "lName": "Kumar",
+      "dob": "2021-09-27",
+      "mobile_no": 46576583436,
+      "doc_id": 25,
+      "doc_name": "susmithaC",
+      "appointment_title": "Fever",
+      "appointment_start_time": "01:27",
+      "appointment_end_time": "02:27",
+      "appointmentDate": "2021-11-01",
+      "appointment_desc": "re",
+      "createdBy": "Kishore Kumar",
+      "createdDate": "2021-11-01T03:57:57.043Z",
+      "patientId": 7,
+      "status": "approved",
+      "id": 8
     }
   ],
   "patientvitals": [

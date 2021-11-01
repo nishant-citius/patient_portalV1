@@ -76,7 +76,7 @@ const Physician_dashboard = (props) => {
       pending = undefined;
 
     apptList.map((appt) => {
-      if (appt.appointmentDate === "2021-10-30") {
+      if (appt.appointmentDate === "2021-11-01") {
         approved += 1;
       }
     });
@@ -89,7 +89,7 @@ const Physician_dashboard = (props) => {
       pending = undefined;
 
     apptList.map((appt) => {
-      if (appt.appointmentDate >= new Date()) {
+      if (appt.appointmentDate > new Date()) {
         approved += 1;
       }
     });
