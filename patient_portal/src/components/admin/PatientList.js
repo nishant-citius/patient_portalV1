@@ -73,7 +73,7 @@ export class PatientList extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
+    // debugger;
     this.props.getDemographics();
   }
 
