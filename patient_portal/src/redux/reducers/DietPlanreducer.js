@@ -7,7 +7,7 @@ function DietPlanReducer(state = appState, action) {
       ...state,
       globalmessage: action.payload.globalmessage,
       statusCode: action.payload.statusCode,
-      vitals: state.vitals.concat(action.newuser),
+      dietplan: state.dietplan.concat(action.newuser),
     };
   }
 
