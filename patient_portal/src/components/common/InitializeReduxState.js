@@ -18,7 +18,7 @@ export class InitializeReduxState extends Component {
       this.props.getPatientDemographics(this.props.currentUser.id);
       // if (this.props.role === "patient") {
       this.props.getPatientImmunization(this.props.currentUser.id);
-      this.props.GetVitals(this.props.currentUser.id);
+      this.props.getVitals(this.props.currentUser.id);
       this.props.getMedicationAllergies(this.props.currentUser.id);
       // }
     }
@@ -49,7 +49,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.GetPatientDemographics(userId)),
     getPatientImmunization: (userId) =>
       dispatch(actionCreator.GetPatientImmunization(userId)),
-    GetVitals: (userId) => dispatch(actionCreator.GetVitals(userId)),
+    getVitals: (userId) => dispatch(actionCreator.GetVitals(userId)),
     getMedicationAllergies: (userId) =>
       dispatch(actionCreator.GetMedicationAllergies(userId)),
   };
