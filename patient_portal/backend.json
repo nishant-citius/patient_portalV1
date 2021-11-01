@@ -32,7 +32,7 @@
     },
     {
       "email": "qwerty@email.com",
-      "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
+      "password": "$2a$10$BXGVz37Q/6.RUCurKRRl..nf86GWuOixtF57tjxZiE9VJzRlcUYDi",
       "fName": "Qwert",
       "lName": "qwetrt",
       "dob": "2021-09-28",
@@ -42,7 +42,7 @@
       "blood_group": "o-",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 5
     },
     {
@@ -129,7 +129,7 @@
       "username": "soujanya",
       "mobile": "23214214123",
       "role": "physician",
-      "speciality": "ww",
+      "speciality": "Anesthesiology",
       "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 11
@@ -143,7 +143,7 @@
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "Orthopedics & Joint Replacement",
+      "speciality": "Anesthesiology",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 12
@@ -590,7 +590,7 @@
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-10-19",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
