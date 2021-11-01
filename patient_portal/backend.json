@@ -361,13 +361,13 @@
     },
     {
       "height": "4.8",
-      "weight": "",
-      "blood_pressure": "",
+      "weight": "55",
+      "blood_pressure": "70/80",
       "temperature": "98",
       "pulse": "",
       "respiration": "",
       "oxigen_saturation": "",
-      "userid": 11,
+      "userid": 1,
       "id": 2
     },
     {
