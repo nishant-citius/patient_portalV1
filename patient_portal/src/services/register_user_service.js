@@ -165,6 +165,16 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
     return axios.get(url);
   }
+
+  updatePatientVitals(patientId, data) {
+    let url = `${URLS.BASE_URL}/patientvitials?patientId=${patientId}`;
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.put(url, JSON.stringify(data), config);
+  }
 }
 /*********Admin Serives***********/
 
