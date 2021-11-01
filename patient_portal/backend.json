@@ -212,14 +212,24 @@
       "userid": 24,
       "current_medication": [
         {
-          "medicineName": "Dolo 650",
-          "dosage": "1",
-          "directionstoconsume": "after lunch",
-          "frequency": "2",
+          "medicineName": "Dolo",
+          "dosage": "2",
+          "directionstoconsume": "two times",
+          "frequency": "100 mg",
+          "physicianName": "Soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "paracetamol",
+          "dosage": "2",
+          "directionstoconsume": "in morning",
+          "frequency": "50 mg",
           "physicianName": "soujanya",
           "purpose": "fever",
-          "startDate": "2021-10-27",
-          "endDate": "2021-10-28"
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
         }
       ],
       "otc_medication": [
@@ -270,47 +280,19 @@
       ],
       "past_medication": [
         {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
+          "pastdrugName": "altrokcen",
+          "strength": "50 mg",
+          "directiontoconsume": "twice a day"
+        },
         {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 2
-    },
-    {
-      "userid": 24,
-      "current_medication": [
+          "pastdrugName": "Neuomarkazol",
+          "strength": "100 mg",
+          "directiontoconsume": "twice a day"
+        },
         {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
+          "pastdrugName": "propygenta",
+          "strength": "80 mg",
+          "directiontoconsume": "twice a day"
         }
       ],
       "allergies": [
@@ -613,6 +595,30 @@
       "createdDate": "2021-10-28T08:10:38.149Z",
       "patientId": 1,
       "status": "approved",
+      "id": 3
+    }
+  ],
+  "patientvitals": [
+    {
+      "height": "4.8",
+      "weight": "42",
+      "blood_pressure": "120/80",
+      "temperature": "96",
+      "pulse": "92",
+      "respiration": "20",
+      "oxigen_saturation": "98",
+      "userid": 1,
+      "id": 1
+    },
+    {
+      "height": "4.8",
+      "weight": "55",
+      "blood_pressure": "70/80",
+      "temperature": "98",
+      "pulse": "",
+      "respiration": "",
+      "oxigen_saturation": "",
+      "userid": 2,
       "id": 2
     },
     {
@@ -688,6 +694,7 @@
       "id": 6
     }
   ],
+<<<<<<< HEAD
   "patientvitals": [
     {
       "height": "4.8",
@@ -713,6 +720,9 @@
       "id": 3
     }
   ],
+=======
+  
+>>>>>>> c4ac91a0025d289fd560e2aebdedd3d9f776d2e9
   "order": [
     {
       "id": "",
