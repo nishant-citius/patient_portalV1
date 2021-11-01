@@ -47,7 +47,7 @@
     },
     {
       "email": "ms@email.com",
-      "password": "$2a$10$Z.J6xZiEqX.KACeBL/Soqej4dAxueQL5RG/zGBCYNMxGYAWMRtpl2",
+      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
       "fName": "Manya ",
       "lName": "Surve",
       "dob": "2021-09-30",
@@ -57,7 +57,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 6
     },
     {
@@ -146,20 +146,6 @@
       "createdDate": "Fri Oct 29 2021 16:35:44 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 24
-    },
-    {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$RqQjvlH6xBEVInQI818DeeJCiqRIfm5/zt1CTVCNCtbMbxKgTm0Lu",
-      "fName": "susmitha",
-      "lName": "c",
-      "dob": "2021-10-30",
-      "username": "susmitha1281",
-      "mobile": "6789468988",
-      "role": "physician",
-      "speciality": "dermatology",
-      "createdDate": "Sat Oct 30 2021 10:38:27 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 25
     }
   ],
   "medic_allergy": [],
@@ -309,60 +295,6 @@
       "patientId": 1,
       "status": "approved",
       "id": 6
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 6589975643,
-      "doc_id": 25,
-      "doc_name": "susmithac",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "04:46",
-      "appointment_end_time": "10:52",
-      "appointmentDate": "2021-10-31",
-      "appointment_desc": "hj",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-30T05:16:21.183Z",
-      "patientId": 1,
-      "status": "approved",
-      "id": 7
-    },
-    {
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "mobile_no": 8756439923,
-      "doc_id": 25,
-      "doc_name": "susmithac",
-      "appointment_title": "headaque",
-      "appointment_start_time": "20:30",
-      "appointment_end_time": "21:30",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "consultation",
-      "createdBy": "Kishore Kumar",
-      "createdDate": "2021-10-30T11:58:26.120Z",
-      "patientId": 7,
-      "status": "approved",
-      "id": 8
-    },
-    {
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "mobile_no": 9876477654,
-      "doc_id": 25,
-      "doc_name": "susmithac",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "22:29",
-      "appointment_end_time": "17:32",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "Ear Problem",
-      "createdBy": "Ajju Bhai",
-      "createdDate": "2021-10-30T11:59:42.416Z",
-      "patientId": 9,
-      "status": "approved",
-      "id": 9
     }
   ],
   "patientvitals": [

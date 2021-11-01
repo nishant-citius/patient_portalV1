@@ -138,10 +138,14 @@ function ShellComponent(props) {
         <Route path="/demographics" component={Demographics}>
           <Demographics flashNotification={showSnacksBar} />
         </Route>
-        <Route path="/immunization" component={Immunization} />
+        <Route path="/immunization" component={Immunization}>
+          <Immunization flashNotification={showSnacksBar} />
+        </Route>
         <Route path="/vitals" component={Vitals} />
         <Route path="/myprofile" component={MyProfile} />
-        <Route path="/medic_allergy" component={Medication_Allergies} />
+        <Route path="/medic_allergy" component={Medication_Allergies}>
+          <Medication_Allergies flashNotification={showSnacksBar} />
+        </Route>
         <Route
           path={"/patientdemographics/userid"}
           component={PatientDemographics}

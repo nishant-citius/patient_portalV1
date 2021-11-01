@@ -24,8 +24,9 @@ import { GetImmunizationReducer } from "./reducers/userreducers/GetImmunizationR
 import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPhysicianReducer";
 import { GetAllAppointmentReducer } from "./reducers/GetAllAppointmentReducer";
 import { DeleteUserReducer } from "./reducers/userreducers/DeleteUserReducer";
-import {GetVitalsReducer} from "./reducers/GetVitalReducer";
+import { GetVitalsReducer } from "./reducers/GetVitalReducer";
 import { UpdateImmunizationReducer } from "./reducers/UpdateImmunizationReducer";
+import { PatientMedicationAllergyReducer } from "./reducers/PatientMedicationAllergyReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -52,6 +53,7 @@ let rootReducer = combineReducers({
   appointmentsDetails: GetAllAppointmentReducer,
   deleteUser: DeleteUserReducer,
   updateImmunization: UpdateImmunizationReducer,
+  patientMedicationAllergy: PatientMedicationAllergyReducer,
 });
 
 /**create store  */
