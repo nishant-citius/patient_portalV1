@@ -34,15 +34,36 @@ const Patient_dashboard = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
-        if (props.mediAllergyDetails) {
-          if (props.patientvitalsDetails) {
-            setIsAvailable(true);
-          }
-        }
+      if (
+        props.patientvitalsDetails &&
+        props.mediAllergyDetails &&
+        props.immunizationDetails
+      ) {
+        setIsAvailable(true);
       }
     }
   }, []);
+  // useEffect(() => {
+  //   if (props.isLoggedIn) {
+  //     if (
+  //       props.patientvitalsDetails
+  //     ) {
+  //       setIsAvailable(true);
+  //     }
+  //   }
+  // }, []);
+  // useEffect(() => {
+  //   if (props.isLoggedIn) {
+  //     if (
+
+  //       props.mediAllergyDetails
+
+  //     ) {
+  //       setIsAvailable(true);
+  //     }
+  //   }
+  // }, []);
+
   //  useEffect(() => {
   //   if (props.isLoggedIn) {
   //     if (!props.mediAllergyDetails) {
@@ -75,11 +96,17 @@ const Patient_dashboard = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>{props.patientvitalsDetails[0].height}</td>
-                      <td>{props.patientvitalsDetails[0].weight}</td>
-                      <td>{props.patientvitalsDetails[0].blood_pressure}</td>
-                    </tr>
+                    {isAvailable ? (
+                      <tr>
+                        <td>{props.patientvitalsDetails[0].height}</td>
+                        <td>{props.patientvitalsDetails[0].weight}</td>
+                        <td>{props.patientvitalsDetails[0].blood_pressure}</td>
+                      </tr>
+                    ) : (
+                      <tr>
+                        <td>No data Available</td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </CardContent>
@@ -104,17 +131,23 @@ const Patient_dashboard = (props) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {props.mediAllergyDetails.current_medication.map(
-                        function (item, index) {
-                          return (
-                            <tr key={index}>
-                              <td>{index + 1}</td>
-                              <td>{item.medicineName}</td>
-                              <td>{item.dosage}</td>
-                              <td>{item.physicianName}</td>
-                            </tr>
-                          );
-                        }
+                      {isAvailable ? (
+                        props.mediAllergyDetails.current_medication.map(
+                          function (item, index) {
+                            return (
+                              <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{item.medicineName}</td>
+                                <td>{item.dosage}</td>
+                                <td>{item.physicianName}</td>
+                              </tr>
+                            );
+                          }
+                        )
+                      ) : (
+                        <tr>
+                          <td textAlign="center">No data available</td>
+                        </tr>
                       )}
                     </tbody>
                   </table>
@@ -144,11 +177,17 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>{props.immunizationDetails.age_category}</td>
-                          <td>{props.immunizationDetails.vaccine_brand}</td>
-                          <td>{props.immunizationDetails.dose_detail}</td>
-                        </tr>
+                        {isAvailable ? (
+                          <tr>
+                            <td>{props.immunizationDetails.age_category}</td>
+                            <td>{props.immunizationDetails.vaccine_brand}</td>
+                            <td>{props.immunizationDetails.dose_detail}</td>
+                          </tr>
+                        ) : (
+                          <tr>
+                            <td>No data Available</td>
+                          </tr>
+                        )}
                       </tbody>
                     </table>
                   </Typography>
@@ -174,18 +213,23 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {props.mediAllergyDetails.past_medication.map(function (
-                          item,
-                          index
-                        ) {
-                          return (
-                            <tr key={index}>
-                              <td>{index + 1}</td>
-                              <td>{item.pastdrugName}</td>
-                              <td>{item.strength}</td>
-                            </tr>
-                          );
-                        })}
+                        {isAvailable ? (
+                          props.mediAllergyDetails.past_medication.map(
+                            function (item, index) {
+                              return (
+                                <tr key={index}>
+                                  <td>{index + 1}</td>
+                                  <td>{item.pastdrugName}</td>
+                                  <td>{item.strength}</td>
+                                </tr>
+                              );
+                            }
+                          )
+                        ) : (
+                          <tr>
+                            <td>No data Available</td>
+                          </tr>
+                        )}
                       </tbody>
                     </table>
                   </Typography>
