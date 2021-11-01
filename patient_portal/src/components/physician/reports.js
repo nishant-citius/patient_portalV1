@@ -7,37 +7,33 @@ import { useHistory } from "react-router";
 
 const LabReports = (props) => {
   const initialValues = {
-    height: "",
-    weight: "",
-    blood_pressure: "",
-    temperature: "",
-    pulse: "",
-    respiration: "",
-    oxigen_saturation: "",
-    userid: props.currentUser.id,
+    blood_test: "",
+    urine_test: "",
+    scannings: "",
+    xrays: "",
+    others: "",
+    doc_id: props.currentUser.id,
+    patientId: props.currentUser.patientId,
   };
-  const [patientVitals, setpatientVitals] = useState(initialValues);
+  const [LabReports, setLabReports] = useState(initialValues);
   const validationSchema = Yup.object().shape({
-    height: Yup.string().required("Required"),
-    weight: Yup.string().required("Required"),
-    blood_pressure: Yup.string().required("Required"),
-    temperature: Yup.string().required("Required"),
-    pulse: Yup.string().required("Required"),
-    respiration: Yup.string().required("Required"),
-    oxigen_saturation: Yup.string().required("Required"),
+    blood_test: Yup.string().required("Required/Please enter NA"),
+    urine_test: Yup.string().required("Required/Please enter NA"),
+    scannings: Yup.string().required("Required/Please enter NA"),
+    xrays: Yup.string().required("Required/Please enter NA"),
+    others: Yup.string().required("Required/Please enter NA"),
+   
   });
   const onSubmit = (values) => {
     const payload = {
-      height: values.height,
-      weight: values.weight,
-      blood_pressure: values.blood_pressure,
-      temperature: values.temperature,
-      pulse: values.pulse,
-      respiration: values.respiration,
-      oxigen_saturation: values.oxigen_saturation,
-      userid: props.currentUser.id,
+      blood_test: values.blood_test,
+      urine_test: values.urine_test,
+      scannings: values.scannings,
+      xrays: values.xrays,
+      others: values.others,
+      
     };
-    props.vitals(payload);
+    props.LabReports(payload);
   };
 
   let history = useHistory();
@@ -57,7 +53,7 @@ const LabReports = (props) => {
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
             <div className="card-header">
-              <h5>Patient Vitals Details</h5>
+              <h5>Patient Daignostics</h5>
             </div>
             <div className="card-body">
               <Form>
@@ -67,7 +63,7 @@ const LabReports = (props) => {
                   </label><br></br> */}
                   <div className="row">
                     <div className="col-4">
-                      <label htmlFor="height">Patient Height</label>
+                      <label htmlFor="height">Blod test </label>
                       <Field
                         type="text"
                         className="form-control"
@@ -78,78 +74,55 @@ const LabReports = (props) => {
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="weight">Patient weight</label>
+                      <label htmlFor="weight">Urine test</label>
                       <Field
                         type="text"
                         className="form-control"
                         name="weight"
                       />
                       <div className="error">
-                        <ErrorMessage name="weight" />
+                        <ErrorMessage name="height" />
                       </div>
+                      
                     </div>
                     <div className="col-4">
-                      <label htmlFor="blood_pressure">Blood Pressure</label>
+                      <label htmlFor="blood_pressure">Scaninings</label>
                       <Field
                         type="text"
                         className="form-control"
                         name="blood_pressure"
                       />
                       <div className="error">
-                        <ErrorMessage name="blood_pressure" />
+                        <ErrorMessage name="height" />
                       </div>
+                      
                     </div>
                     <div className="col-4">
-                      <label htmlFor="temperature">Temperature</label>
+                      <label htmlFor="temperature">X-rays</label>
                       <Field
                         type="text"
                         className="form-control"
                         name="temperature"
                       />
                       <div className="error">
-                        <ErrorMessage name="temperature" />
+                        <ErrorMessage name="height" />
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="pulse">Pulse</label>
+                      <label htmlFor="weight">other test</label>
                       <Field
                         type="text"
                         className="form-control"
-                        name="pulse"
+                        name="weight"
                       />
                       <div className="error">
-                        <ErrorMessage name="pulse" />
-                      </div>
-                    </div>
-                    <div className="col-4">
-                      <label htmlFor="oxigen_saturation">
-                        Oxygen Saturation
-                      </label>
-                      <Field
-                        type="text"
-                        className="form-control"
-                        placeholder="respiration"
-                        name="oxigen_saturation"
-                      />
-                      <div className="error">
-                        <ErrorMessage name="oxigen_saturation" />
+                        <ErrorMessage name="height" />
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="form-group mt-4">
-                  <label htmlFor="respiration">respiration</label>
-                  <Field
-                    type="text"
-                    className="form-control"
-                    placeholder="respiration"
-                    name="respiration"
-                  />
-                  <div className="error">
-                    <ErrorMessage name="respiration" />
-                  </div>
-                </div>
+            
                 <button type="submit" className="btn btn-primary mt-3">
                   Submit
                 </button>

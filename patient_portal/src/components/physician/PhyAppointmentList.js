@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
+import LabReports  from "../physician/reports";
 
 import {
   BsFillTrashFill,
@@ -53,6 +54,7 @@ export class AppointmentList extends React.Component {
     adminService.editAppointment(appointmentData.id, newData).then(
       (response) => {
         if (response.status === 200) {
+          alert("approved");
           this.props.getAppointments(this.props.currentUser.id); 
           
         }
@@ -74,7 +76,7 @@ export class AppointmentList extends React.Component {
     adminService.editAppointment(appointmentData.id, newData).then(
       (response) => {
         if (response.status === 200) {
-          alert("rejected appointmewnt");
+          alert("rejected appointment");
           
         }
       },
@@ -88,6 +90,8 @@ export class AppointmentList extends React.Component {
 
   render() {
     return (
+      <div>
+      <LabReports />
       <div className="container mt-5">
         {/* <Link className="btn btn-warning" to="/physician">
           <BsFillArrowLeftSquareFill />
@@ -152,6 +156,7 @@ export class AppointmentList extends React.Component {
             })}
           </tbody>
         </table>
+      </div>
       </div>
     );
   }

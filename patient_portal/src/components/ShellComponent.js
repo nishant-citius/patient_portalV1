@@ -77,6 +77,7 @@ function ShellComponent(props) {
     <div className="top_mt_100">
       <Notification notify={notify} setNotify={setNotify} />
       <Switch>
+        {/* -----------Common------------- */}
         <Route exact path="/" component={PatientPortalHome} />
         <Route path="/login">
           <Login flashNotification={showSnacksBar} />
@@ -84,36 +85,42 @@ function ShellComponent(props) {
         <Route path="/registeruser">
           <RegisterUser flashNotification={showSnacksBar} />
         </Route>
+        {/* -----------Common------------- */}
+
+        {/* -----------Admin------------- */}
         <Route path="/admin">
           <AdminDashboard flashNotification={showSnacksBar} />
         </Route>
-        <Route path="/patient" component={Patient_dashboard} />
-        <Route path="/physician" component={Physician_dashboard} />
-        <Route path="/demographics" component={Demographics}>
-          <Demographics flashNotification={showSnacksBar} />
+        <Route path="/patientlist">
+          <PatientList flashNotification={showSnacksBar} />
         </Route>
-        <Route path="/immunization" component={Immunization} />
-        <Route path="/vitals" component={Vitals} />
-        <Route path="/myprofile" component={MyProfile} />
-        <Route path="/medic_allergy" component={Medication_Allergies} />
-        {/* <Route path="/about" component={About} />
-          <Route path="/services" component={Services} />
-          <Route path="/contact-us" component={Contact} /> */}
-        <Route path={"/patientlist"} component={PatientList} />
         <Route path={"/allusers"}>
           <UserList flashNotification={showSnacksBar} />
         </Route>
-        <Route path={"/addusers"} component={AddUsers} />
-        <Route path={"/physicianlist"} component={PhysicianList} />
-        <Route path={"/appointments"} component={Appointments} />
-        <Route path={"/immunizationdetails"} component={ImmunizationDetails} />
-        <Route path={"/userdetails/:id"} component={UserDetails} />
-        <Route path={"/edit/:id"} component={EditUser} />
+        <Route path={"/addusers"}>
+          <AddUsers flashNotification={showSnacksBar} />
+        </Route>
+        <Route path={"/physicianlist"}>
+          <PhysicianList flashNotification={showSnacksBar} />
+        </Route>
+        <Route path={"/appointments"}>
+          <Appointments flashNotification={showSnacksBar} />
+        </Route>
+        <Route path={"/immunizationdetails"}>
+          <ImmunizationDetails flashNotification={showSnacksBar} />
+        </Route>
+        <Route path={"/userdetails/:id"}>
+          <UserDetails flashNotification={showSnacksBar} />
+        </Route>
+        <Route path={"/edit/:id"}>
+          <EditUser flashNotification={showSnacksBar} />
+        </Route>
+        {/* -----------Admin------------- */}
+
+        {/* -----------Physician------------- */}
+        <Route path="/physician" component={Physician_dashboard} />
         <Route path={"/patientdata"} component={PatientList1} />
-        <Route
-          path={"/patientdemographics/userid"}
-          component={PatientDemographics}
-        />
+
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
         <Route
@@ -123,10 +130,30 @@ function ShellComponent(props) {
         <Route path={"/schedule_appointment"}>
           <ScheduleAppointment flashNotification={showSnacksBar} />
         </Route>
+        {/* -----------Physician------------- */}
+
+        {/* -----------Patient------------- */}
+        <Route path="/patient" component={Patient_dashboard} />
+        <Route path="/demographics" component={Demographics}>
+          <Demographics flashNotification={showSnacksBar} />
+        </Route>
+        <Route path="/immunization" component={Immunization} />
+        <Route path="/vitals" component={Vitals} />
+        <Route path="/myprofile" component={MyProfile} />
+        <Route path="/medic_allergy" component={Medication_Allergies} />
+        <Route
+          path={"/patientdemographics/userid"}
+          component={PatientDemographics}
+        />
+        {/* -----------Patient------------- */}
       </Switch>
     </div>
   );
 }
 
-//export default ShellComponent;
 export default connect(mapStateToProps, mapDispatchToProps)(ShellComponent);
+
+
+  /* <Route path="/about" component={About} />
+          <Route path="/services" component={Services} />
+          <Route path="/contact-us" component={Contact} /> */
