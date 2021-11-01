@@ -45,7 +45,8 @@ const Patient_dashboard = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {props.patientvitalsDetails ? (
+                    {props.patientvitalsDetails &&
+                    props.patientvitalsDetails > 0 ? (
                       <tr>
                         <td>{props.patientvitalsDetails[0].height}</td>
                         <td>{props.patientvitalsDetails[0].weight}</td>
