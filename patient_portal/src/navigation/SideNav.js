@@ -245,12 +245,6 @@ function SideNav(props) {
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="/vitals">
-                <ContactPhoneIcon className={classes.icon} />
-                <span className={classes.text}>Patient Vitals</span>
-              </Link>
-            </div>
-            <div className={classes.item}>
               <Link to="/attendAppointments">
                 <DashboardIcon className={classes.icon} />
                 <span className={classes.text}>Todays Appointments</span>
