@@ -111,7 +111,7 @@ function UserList(props) {
         </table>
       </div>
       <ModalPopup
-        title="User-Request"
+        title="Add New User"
         openPopup={openPopup}
         setOpenPopup={setOpenPopup}
       >

@@ -1,17 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import { connect } from "react-redux";
-import {
-  DirectionsWalkIcon,
-  DirectionsBikeIcon,
-  DirectionsRunIcon,
-} from "mui-icons";
 import {
   Container,
   Card,
   Grid,
   CardContent,
-  Divider,
-  CardMedia,
   makeStyles,
   Typography,
 } from "mui";
@@ -26,33 +19,10 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100px",
     minHeight: "100px",
     margin: "4px",
-    // background:"rgb(72 179 226)"
   },
 }));
 
 const Patient_dashboard = (props) => {
-  const [isAvailable, setIsAvailable] = useState(false);
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
-        if (props.mediAllergyDetails) {
-          if (props.patientvitalsDetails) {
-            setIsAvailable(true);
-          }
-        }
-      }
-    }
-  }, []);
-  //  useEffect(() => {
-  //   if (props.isLoggedIn) {
-  //     if (!props.mediAllergyDetails) {
-  //       return;
-  //     } else {
-  //       console.log("<---AAAAAAAAA--->", props.mediAllergyDetails);
-  //     }
-  //   }
-  // }, [props.mediAllergyDetails, props.isLoggedIn]);
-
   const classes = useStyles();
   console.log(props.mediAllergyDetails, "after useeffect");
   console.log("pooja", props.patientvitalsDetails);
@@ -75,11 +45,17 @@ const Patient_dashboard = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>{props.patientvitalsDetails[0].height}</td>
-                      <td>{props.patientvitalsDetails[0].weight}</td>
-                      <td>{props.patientvitalsDetails[0].blood_pressure}</td>
-                    </tr>
+                    {props.patientvitalsDetails ? (
+                      <tr>
+                        <td>{props.patientvitalsDetails[0].height}</td>
+                        <td>{props.patientvitalsDetails[0].weight}</td>
+                        <td>{props.patientvitalsDetails[0].blood_pressure}</td>
+                      </tr>
+                    ) : (
+                      <tr>
+                        <td>No data Available</td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </CardContent>
@@ -104,17 +80,23 @@ const Patient_dashboard = (props) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {props.mediAllergyDetails.current_medication.map(
-                        function (item, index) {
-                          return (
-                            <tr key={index}>
-                              <td>{index + 1}</td>
-                              <td>{item.medicineName}</td>
-                              <td>{item.dosage}</td>
-                              <td>{item.physicianName}</td>
-                            </tr>
-                          );
-                        }
+                      {props.mediAllergyDetails ? (
+                        props.mediAllergyDetails.current_medication.map(
+                          function (item, index) {
+                            return (
+                              <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{item.medicineName}</td>
+                                <td>{item.dosage}</td>
+                                <td>{item.physicianName}</td>
+                              </tr>
+                            );
+                          }
+                        )
+                      ) : (
+                        <tr>
+                          <td textAlign="center">No data available</td>
+                        </tr>
                       )}
                     </tbody>
                   </table>
@@ -144,11 +126,17 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>{props.immunizationDetails.age_category}</td>
-                          <td>{props.immunizationDetails.vaccine_brand}</td>
-                          <td>{props.immunizationDetails.dose_detail}</td>
-                        </tr>
+                        {props.immunizationDetails ? (
+                          <tr>
+                            <td>{props.immunizationDetails.age_category}</td>
+                            <td>{props.immunizationDetails.vaccine_brand}</td>
+                            <td>{props.immunizationDetails.dose_detail}</td>
+                          </tr>
+                        ) : (
+                          <tr>
+                            <td>No data Available</td>
+                          </tr>
+                        )}
                       </tbody>
                     </table>
                   </Typography>
@@ -174,18 +162,23 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {props.mediAllergyDetails.past_medication.map(function (
-                          item,
-                          index
-                        ) {
-                          return (
-                            <tr key={index}>
-                              <td>{index + 1}</td>
-                              <td>{item.pastdrugName}</td>
-                              <td>{item.strength}</td>
-                            </tr>
-                          );
-                        })}
+                        {props.mediAllergyDetails ? (
+                          props.mediAllergyDetails.past_medication.map(
+                            function (item, index) {
+                              return (
+                                <tr key={index}>
+                                  <td>{index + 1}</td>
+                                  <td>{item.pastdrugName}</td>
+                                  <td>{item.strength}</td>
+                                </tr>
+                              );
+                            }
+                          )
+                        ) : (
+                          <tr>
+                            <td>No data Available</td>
+                          </tr>
+                        )}
                       </tbody>
                     </table>
                   </Typography>
@@ -193,66 +186,6 @@ const Patient_dashboard = (props) => {
               </CardContent>
             </Card>
           </Grid>
-
-          {/* <Grid item sm={6} lg={6} md={6}>
-            <h5 className={classes.h5}>Activities</h5>
-            <Card>
-              <CardContent>
-                <Container>
-                  <Grid container spacing={6}>
-                    <Grid item>
-                      <Card
-                        style={{ backgroundColor: "rgb(62 222 182)" }}
-                        className={classes.innercard4}
-                      >
-                        <CardContent>
-                          <DirectionsWalkIcon></DirectionsWalkIcon>
-                          <Typography variant="subtitle1" color="black">
-                            Walk
-                            <br />
-                            2 hours <br />
-                            daily
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item>
-                      <Card
-                        style={{ backgroundColor: "rgb(62 222 182)" }}
-                        className={classes.innercard4}
-                      >
-                        <CardContent>
-                          <DirectionsBikeIcon></DirectionsBikeIcon>
-                          <Typography variant="subtitle1" color="black">
-                            Cycling
-                            <br />
-                            30 mins
-                            <br /> daily
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item>
-                      <Card
-                        style={{ backgroundColor: "rgb(62 222 182)" }}
-                        className={classes.innercard4}
-                      >
-                        <CardContent>
-                          <DirectionsRunIcon></DirectionsRunIcon>
-                          <Typography variant="subtitle1" color="black">
-                            Running
-                            <br />
-                            20 mins <br />
-                            daily
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                  </Grid>
-                </Container>
-              </CardContent>
-            </Card>
-          </Grid> */}
         </Grid>
       </Container>
     </>
@@ -261,7 +194,6 @@ const Patient_dashboard = (props) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    //allusers: state.immunization.Immunizationsreducer,
     patientvitalsDetails: state.getPatientvitals.getPatientvitals,
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     immunizationDetails: state.patientImmunization.patientImmunization,

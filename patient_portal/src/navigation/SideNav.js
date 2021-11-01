@@ -239,15 +239,20 @@ function SideNav(props) {
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="/vitals">
+              <Link to="/reports">
                 <ContactPhoneIcon className={classes.icon} />
-                <span className={classes.text}>Patient Vitals</span>
+                <span className={classes.text}>Lab Reports</span>
+              </Link>
+            </div>
+            <div className={classes.item}>
+              <Link to="/attendAppointments">
+                <DashboardIcon className={classes.icon} />
+                <span className={classes.text}>Todays Appointments</span>
               </Link>
             </div>
           </div>
         ) : null
       }
-      {/* {props.currentUser} */}
     </Container>
   );
 }

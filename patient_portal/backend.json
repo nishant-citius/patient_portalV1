@@ -13,7 +13,7 @@
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1
+      "id": 24
     },
     {
       "email": "aj@email.com",
@@ -32,7 +32,7 @@
     },
     {
       "email": "qwerty@email.com",
-      "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
+      "password": "$2a$10$BXGVz37Q/6.RUCurKRRl..nf86GWuOixtF57tjxZiE9VJzRlcUYDi",
       "fName": "Qwert",
       "lName": "qwetrt",
       "dob": "2021-09-28",
@@ -42,7 +42,7 @@
       "blood_group": "o-",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 5
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "email": "kk@email.com",
-      "password": "$2a$10$tRCwVQjBbEIqsi37CwJyMuQMf3VVf8lCBMqkbA5pr4yUnHCNq7QQi",
+      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
       "fName": "Kishore ",
       "lName": "Kumar",
       "dob": "2021-09-27",
@@ -72,7 +72,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 7
     },
     {
@@ -129,7 +129,7 @@
       "username": "soujanya",
       "mobile": "23214214123",
       "role": "physician",
-      "speciality": "ww",
+      "speciality": "Anesthesiology",
       "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 11
@@ -139,148 +139,426 @@
       "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
       "fName": "shiva",
       "lName": "prasad",
-      "dob": "2021-10-12",
+      "dob": "2021-11-01",
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "Orthopedics & Joint Replacement",
+      "speciality": "Anesthesiology",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 23
-    }
-  ],
-  "demographics": [
+      "id": 12
+    },
     {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "na",
-      "education": "nan",
-      "employment": "nn",
-      "address": "na",
-      "phone_number": 1234567890,
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "an",
-      "insurance_provider": "na",
-      "userid": 1,
-      "id": 1
+      "email": "TShivaprasad@citiustech.com",
+      "password": "$2a$10$JOWekOhaFxpdFIlcDHvSc.2o5Z27JdWFvGeTMVnx7PGIVx18eanDe",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-01-01",
+      "username": "shiva prasad",
+      "rpassword": "asdf",
+      "mobile": 8801888988,
+      "blood_group": "B+ve",
+      "role": "patient",
+      "createdDate": "Thu Oct 28 2021 13:07:29 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 23
+    },
+    {
+      "email": "sp@email.com",
+      "password": "$2a$10$ANJKeaMFs9AEjMtFG0O.TeBBksJ3zRjqTp3P3JXq4qHKquwCIlTjC",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "username": "sp",
+      "rpassword": "asdf",
+      "mobile": 8801888988,
+      "blood_group": "P",
+      "role": "patient",
+      "createdDate": "Thu Oct 28 2021 13:14:41 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 24
+    },
+    {
+      "email": "pooja@gmail.com",
+      "password": "$2a$10$04.IVRauxq426GW6dsbx/uEgZcz/XwGd9hl8GnzTKIxW9nlD9apAK",
+      "fName": "pooja",
+      "lName": "k",
+      "dob": "2021-09-28",
+      "username": "pooja",
+      "mobile": "9705607801",
+      "role": "physician",
+      "speciality": "General Surgery",
+      "createdDate": "Thu Oct 28 2021 19:30:12 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 25
+    },
+    {
+      "email": "susmitha@email.com",
+      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
+      "fName": "Susmitha",
+      "lName": "C",
+      "dob": "1996-08-08",
+      "username": "Susmitha1281",
+      "mobile": "8106989754",
+      "role": "physician",
+      "speciality": "neurology",
+      "createdDate": "Fri Oct 29 2021 00:14:03 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 24
     }
   ],
   "medic_allergy": [
     {
-    "userid": 1,
-    "current_medication": [
-      {
-        "medicineName": "njnjnj",
-        "dosage": "njnjn",
-        "directionstoconsume": "njnjnj",
-        "frequency": "njnjnjn",
-        "physicianName": "jnjnjnj",
-        "purpose": "njnjnjnjn",
-        "startDate": "2021-10-20",
-        "endDate": "2021-10-20"
-      },
-      {
-        "medicineName": "knjn",
-        "dosage": "jnjnj",
-        "directionstoconsume": "jkk",
-        "frequency": "iiim",
-        "physicianName": "imimi",
-        "purpose": "mimimim",
-        "startDate": "2021-10-12",
-        "endDate": "2021-10-14"
-      }
-    ],
-    "otc_medication": [
-      {
-        "otcDrugName": "jnjnjn",
-        "strength": "jnjnjnj",
-        "directiontoconsume": "njnjnjnj",
-        "socialDrugs": "smoke"
-      },
-      {
-        "otcDrugName": "huhuh",
-        "strength": "uhuhuh",
-        "directiontoconsume": "jiiimim",
-        "socialDrugs": "illicit"
-      }
-    ],
-    "past_medication": [
-      {
-        "pastdrugName": "jijij",
-        "strength": "ijij",
-        "directiontoconsume": "ijiji"
-      },
-      {
-        "pastdrugName": "iijijij",
-        "strength": "ijiji",
-        "directiontoconsume": "ijij"
-      },
-      {
-        "pastdrugName": "nununu",
-        "strength": "nununun",
-        "directiontoconsume": "unununu"
-      }
-    ],
-    "allergies": [
-      {
-        "allergyName": "ijijij",
-        "symptomsofAllergy": "ijiji",
-        "drugAllergy": "jijiji"
-      },
-      {
-        "allergyName": "iiimi",
-        "symptomsofAllergy": "imimimi",
-        "drugAllergy": "mimimi"
-      },
-      {
-        "allergyName": "kimimi",
-        "symptomsofAllergy": "imimimi",
-        "drugAllergy": "mimimi"
-      }
-    ],
-    "id": 2
-  }
-
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "Dolo",
+          "dosage": "2",
+          "directionstoconsume": "two times",
+          "frequency": "100 mg",
+          "physicianName": "Soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "paracetamol",
+          "dosage": "2",
+          "directionstoconsume": "in morning",
+          "frequency": "50 mg",
+          "physicianName": "soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "paracetamal",
+          "strength": "650",
+          "directiontoconsume": "3",
+          "socialDrugs": "drink"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "telma",
+          "strength": "40",
+          "directiontoconsume": "after breakfast"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "spots on skin",
+          "symptomsofAllergy": "Itching",
+          "drugAllergy": "No"
+        }
+      ],
+      "id": 24
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "altrokcen",
+          "strength": "50 mg",
+          "directiontoconsume": "twice a day"
+        },
+        {
+          "pastdrugName": "Neuomarkazol",
+          "strength": "100 mg",
+          "directiontoconsume": "twice a day"
+        },
+        {
+          "pastdrugName": "propygenta",
+          "strength": "80 mg",
+          "directiontoconsume": "twice a day"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 6
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 7
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 8
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 9
+    }
   ],
   "immunization": [
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
-      "dose_detail": "2",
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "1",
       "general_vaccine": [
         {
-          "vaccine_name": "qqwqw",
-          "vaccine_date": "2021-09-29"
-        },
-        {
-          "vaccine_name": "Pnumonia",
-          "vaccine_date": "2021-10-11"
-        },
-        {
-          "vaccine_name": "fadsfsdfgsdfgsdfg",
-          "vaccine_date": "2021-10-21"
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-28"
         }
       ],
-      "id": 1
+      "userid": 1,
+      "id": "Ct_RqfO"
     },
     {
-      "age_category": "45",
-      "vaccine_brand": "CoVaccine",
+      "age_category": "18_44",
+      "vaccine_brand": "Covaccine",
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-22"
-        },
-        {
-          "vaccine_name": "Covid Vaccine",
-          "vaccine_date": "2021-10-22"
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-10-29"
         }
       ],
-      "id": 10
+      "userid": 1,
+      "id": "XEhJ-HM"
     }
   ],
   "appointments": [
@@ -289,18 +567,35 @@
       "lName": "prasad",
       "dob": "1994-01-01",
       "mobile_no": 8801888988,
-      "doc_id": 23,
+      "doc_id": 12,
       "doc_name": "shivaprasad",
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-10-19",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
       "patientId": 24,
+      "status": "reject"
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 7876654329,
+      "doc_id": 12,
+      "doc_name": "Doctor-1Doctor-1",
+      "appointment_title": "title",
+      "appointment_start_time": "17:44",
+      "appointment_end_time": "19:46",
+      "appointmentDate": "2021-10-28",
+      "appointment_desc": "gyj",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-10-28T08:10:38.149Z",
+      "patientId": 1,
       "status": "approved",
-      "id": 1
+      "id": 3
     }
   ],
   "patientvitals": [
@@ -316,70 +611,28 @@
       "id": 1
     },
     {
-      "height": "4.8",
-      "weight": "55",
-      "blood_pressure": "70/80",
-      "temperature": "98",
-      "pulse": "",
-      "respiration": "",
-      "oxigen_saturation": "",
-      "userid": 1,
-      "id": 2
-    },
-    {
-      "height": "4.8",
-      "weight": "42",
-      "blood_pressure": "120/80",
-      "temperature": "98",
-      "pulse": "92",
-      "respiration": "20",
-      "oxigen_saturation": "98",
-      "userid": 11,
+      "height": "5 Feet 4 Inch.",
+      "weight": "64 Kgs",
+      "blood_pressure": "110/25mg",
+      "temperature": "27 Deg",
+      "pulse": "72 pm",
+      "respiration": "Good",
+      "oxigen_saturation": "Good",
+      "physicianId": 12,
+      "patientId": 24,
       "id": 3
     },
     {
-      "height": "4.8",
-      "weight": "42",
-      "blood_pressure": "120/80",
-      "temperature": "98",
-      "pulse": "92",
-      "respiration": "20",
-      "oxigen_saturation": "98",
-      "userid": 11,
+      "height": "5'5",
+      "weight": "58",
+      "blood_pressure": "110/25mg",
+      "temperature": "88",
+      "pulse": "100",
+      "respiration": "Very Very Bad",
+      "oxigen_saturation": "Very Bad",
+      "physicianId": 12,
+      "patientId": 24,
       "id": 4
-    },
-    {
-      "height": "4.8",
-      "weight": "42",
-      "blood_pressure": "120/80",
-      "temperature": "98",
-      "pulse": "92",
-      "respiration": "20",
-      "oxigen_saturation": "98",
-      "userid": 11,
-      "id": 5
-    },
-    {
-      "height": "4.8",
-      "weight": "42",
-      "blood_pressure": "120/80",
-      "temperature": "98",
-      "pulse": "92",
-      "respiration": "20",
-      "oxigen_saturation": "98",
-      "userid": 11,
-      "id": 6
-    },
-    {
-      "height": "4.8",
-      "weight": "49",
-      "blood_pressure": "120/80",
-      "temperature": "96",
-      "pulse": "82",
-      "respiration": "20",
-      "oxigen_saturation": "98",
-      "userid": 11,
-      "id": 7
     }
   ],
   "order": [
@@ -434,86 +687,16 @@
       "Allerginicity": "IgE but no biological test"
     }
   ],
-  "physician_speciality": [
+  "lab_report": [
     {
-      "name": "Allergy and immunology",
-      "value": "allergy_immunology"
-    },
-    {
-      "name": "Anesthesiology",
-      "value": "anesthesiology"
-    },
-    {
-      "name": "Dermatology",
-      "value": "dermatology"
-    },
-    {
-      "name": "Diagnostic Radiology",
-      "value": "diagnostic_radiology"
-    },
-    {
-      "name": "Emergency Medicine",
-      "value": "emergency_medicine"
-    },
-    {
-      "name": "Family medicine",
-      "value": "family_medicine"
-    },
-    {
-      "name": "Internal Medicine",
-      "value": "internal_medicine"
-    },
-    {
-      "name": "Medical Genetics",
-      "value": "medical_genetics"
-    },
-    {
-      "name": "Neurology",
-      "value": "neurology"
-    },
-    {
-      "name": "Nuclear Medicine",
-      "value": "nuclear_medicine"
-    },
-    {
-      "name": "Obstetrics and Gynecology",
-      "value": "obstetrics_gynecology"
-    },
-    {
-      "name": "Ophthalmology",
-      "value": "ophthalmology"
-    },
-    {
-      "name": "Pathology",
-      "value": "pathology"
-    },
-    {
-      "name": "Pediatrics",
-      "value": "pediatrics"
-    },
-    {
-      "name": "Physical Rehabilitation",
-      "value": "physical_rehabilitation"
-    },
-    {
-      "name": "Preventive Medicine",
-      "value": "preventive_medicine"
-    },
-    {
-      "name": "Psychiatry",
-      "value": "psychiatry"
-    },
-    {
-      "name": "Radiation Oncology",
-      "value": "radiation_oncology"
-    },
-    {
-      "name": "Surgery",
-      "value": "surgery"
-    },
-    {
-      "name": "Urology",
-      "value": "urology"
+      "id": "",
+      "doc_id": "",
+      "patientId": "",
+      "blood_test": "",
+      "urine_test": "",
+      "scannings": "",
+      "xrays": "",
+      "others": ""
     }
   ]
 }
