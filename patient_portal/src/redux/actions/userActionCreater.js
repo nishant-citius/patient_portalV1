@@ -47,6 +47,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "post" && req.url.endsWith("/patientdietplan")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   if (req.method === "put" && req.url.indexOf("/users/")) {
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -502,6 +506,29 @@ export function AddVitalsAsync(user) {
   };
 }
 
+export function AddDietPlanAsync(user) {
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.post(URLS.PATIENT_DIETPLAN, JSON.stringify(user), config).then(
+      (response) => {
+        console.log(response);
+        payload.globalmessage = `Dietplan registered successfully`;
+        payload.statusCode = response.status;
+        dispatch({ type: actions.ADD_DIETPLAN, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `DietPlan ERROR: ${error.response.data}`;
+        payload.statusCode = 400;
+        dispatch({ type: actions.ADD_DIETPLAN, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetVitals(userId) {
   let payload = {
     globalmessage: "",
@@ -520,6 +547,29 @@ export function GetVitals(userId) {
         payload.globalmessage = `${error.response.data}`;
         payload.userVitals = {};
         dispatch({ type: actions.GET_PATIENT_VITALS, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetDietPlan(userId) {
+  let payload = {
+    globalmessage: "",
+    userDietPlan: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_DIETPLAN}${userId}`).then(
+      (response) => {
+        console.log("Hello", response.data);
+        payload.globalmessage = `DietPlan Retrieved...`;
+        payload.userDietPlan = response.data;
+        dispatch({ type: actions.GET_PATIENT_DIETPLAN, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userDietplan = {};
+        dispatch({ type: actions.GET_PATIENT_DIETPLAN, payload: payload });
       }
     );
   };

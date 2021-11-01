@@ -106,6 +106,21 @@
       "id": 9
     },
     {
+      "email": "ap@email.com",
+      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
+      "fName": "Joe",
+      "lName": "Root",
+      "dob": "2021-09-27",
+      "username": "joe",
+      "rpassword": "12345",
+      "mobile": 5645652548,
+      "blood_group": "B-",
+      "role": "patient",
+      "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 10
+    },
+    {
       "email": "sh@email.com",
       "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
       "fName": "soujanya",
@@ -121,48 +136,114 @@
     },
     {
       "email": "sp@gmail.com",
-      "password": "$2a$10$etr.tcSfxyfrb33BOD0jSu09kzbBOpWLOQpZYPnkkVpFVflEWNSey",
+      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
       "fName": "shiva",
       "lName": "prasad",
       "dob": "2021-10-12",
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "Plastic Surgery",
+      "speciality": "Orthopedics & Joint Replacement",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 23
-    },
-    {
-      "email": "jinx@email.com",
-      "password": "$2a$10$mP7Yl.ipS3xLiSt3Cc55duuawRf.FPFTUqlzzhcz4oxzowXt9xe2C",
-      "fName": "Ajinkya",
-      "lName": "Rahane",
-      "dob": "2021-10-22",
-      "username": "jinx",
-      "mobile": "3214567890",
-      "role": "physician",
-      "speciality": "pathology",
-      "createdDate": "Fri Oct 29 2021 16:35:44 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 24
-    },
-    {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$Pfpz3V0nu6N7.D9LXziTwuygw5IKM3cvvkY4qBhW.Ru9m5E/G94jq",
-      "fName": "susmitha",
-      "lName": "C",
-      "dob": "2021-11-08",
-      "username": "susmitha1281",
-      "mobile": "8106989754",
-      "role": "physician",
-      "speciality": "dermatology",
-      "createdDate": "Mon Nov 01 2021 09:23:53 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 25
     }
   ],
-  "medic_allergy": [],
+  "demographics": [
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "na",
+      "education": "nan",
+      "employment": "nn",
+      "address": "na",
+      "phone_number": 1234567890,
+      "medical_history": "na",
+      "family_medical_history": "na",
+      "surgeries": "an",
+      "insurance_provider": "na",
+      "userid": 1,
+      "id": 1
+    }
+  ],
+  "medic_allergy": [
+    {
+      "userid": 1,
+      "current_medication": [
+        {
+          "medicineName": "njnjnj",
+          "dosage": "njnjn",
+          "directionstoconsume": "njnjnj",
+          "frequency": "njnjnjn",
+          "physicianName": "jnjnjnj",
+          "purpose": "njnjnjnjn",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "knjn",
+          "dosage": "jnjnj",
+          "directionstoconsume": "jkk",
+          "frequency": "iiim",
+          "physicianName": "imimi",
+          "purpose": "mimimim",
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "jnjnjn",
+          "strength": "jnjnjnj",
+          "directiontoconsume": "njnjnjnj",
+          "socialDrugs": "smoke"
+        },
+        {
+          "otcDrugName": "huhuh",
+          "strength": "uhuhuh",
+          "directiontoconsume": "jiiimim",
+          "socialDrugs": "illicit"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "jijij",
+          "strength": "ijij",
+          "directiontoconsume": "ijiji"
+        },
+        {
+          "pastdrugName": "iijijij",
+          "strength": "ijiji",
+          "directiontoconsume": "ijij"
+        },
+        {
+          "pastdrugName": "nununu",
+          "strength": "nununun",
+          "directiontoconsume": "unununu"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "ijijij",
+          "symptomsofAllergy": "ijiji",
+          "drugAllergy": "jijiji"
+        },
+        {
+          "allergyName": "iiimi",
+          "symptomsofAllergy": "imimimi",
+          "drugAllergy": "mimimi"
+        },
+        {
+          "allergyName": "kimimi",
+          "symptomsofAllergy": "imimimi",
+          "drugAllergy": "mimimi"
+        }
+      ],
+      "id": 2
+    }
+  ],
   "immunization": [
     {
       "age_category": "45",
@@ -170,15 +251,15 @@
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "Vacine-1",
+          "vaccine_name": "qqwqw",
           "vaccine_date": "2021-09-29"
         },
         {
-          "vaccine_name": "Vacine-2",
+          "vaccine_name": "Pnumonia",
           "vaccine_date": "2021-10-11"
         },
         {
-          "vaccine_name": "Vacine-3",
+          "vaccine_name": "fadsfsdfgsdfgsdfg",
           "vaccine_date": "2021-10-21"
         }
       ],
@@ -224,145 +305,37 @@
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
-      "mobile_no": 7876654329,
-      "doc_id": 12,
-      "doc_name": "Doctor-1Doctor-1",
-      "appointment_title": "title",
-      "appointment_start_time": "17:44",
-      "appointment_end_time": "19:46",
-      "appointmentDate": "2021-10-28",
-      "appointment_desc": "gyj",
+      "mobile_no": 8364647474,
+      "doc_id": 23,
+      "doc_name": "shivaprasad",
+      "appointment_title": "Fever",
+      "appointment_start_time": "16:25",
+      "appointment_end_time": "17:25",
+      "appointmentDate": "2021-11-01",
+      "appointment_desc": "nn",
       "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-28T08:10:38.149Z",
+      "createdDate": "2021-11-01T07:55:28.154Z",
       "patientId": 1,
-      "status": "Pending",
+      "status": "approved",
       "id": 2
     },
     {
-      "fName": "Joe",
-      "lName": "Root",
+      "fName": "Kishore ",
+      "lName": "Kumar",
       "dob": "2021-09-27",
-      "mobile_no": 8245623812,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
+      "mobile_no": 8585656565,
+      "doc_id": 23,
+      "doc_name": "shivaprasad",
       "appointment_title": "General Health Checkup",
-      "appointment_start_time": "03:21",
-      "appointment_end_time": "04:21",
-      "appointmentDate": "2021-10-31",
-      "appointment_desc": "Fever",
-      "createdBy": "JoeRoot",
-      "createdDate": "2021-10-28T18:51:23.509Z",
-      "patientId": 10,
+      "appointment_start_time": "18:26",
+      "appointment_end_time": "19:26",
+      "appointmentDate": "2021-11-01",
+      "appointment_desc": "nn",
+      "createdBy": "Kishore Kumar",
+      "createdDate": "2021-11-01T07:56:09.400Z",
+      "patientId": 7,
       "status": "approved",
       "id": 3
-    },
-    {
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "mobile_no": 4645733342,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "05:07",
-      "appointment_end_time": "01:10",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "bodypains",
-      "createdBy": "Ajju Bhai",
-      "createdDate": "2021-10-28T19:38:13.908Z",
-      "patientId": 9,
-      "status": "approved",
-      "id": 4
-    },
-    {
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "mobile_no": 7463836583,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "headaque",
-      "appointment_start_time": "01:13",
-      "appointment_end_time": "01:15",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "na",
-      "createdBy": "Kishore Kumar",
-      "createdDate": "2021-10-28T19:39:22.268Z",
-      "patientId": 7,
-      "status": "approved",
-      "id": 5
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 7373737653,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "07:10",
-      "appointment_end_time": "03:11",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "NA",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-28T19:41:15.542Z",
-      "patientId": 1,
-      "status": "approved",
-      "id": 6
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 6346536333,
-      "doc_id": 25,
-      "doc_name": "susmithaC",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "01:26",
-      "appointment_end_time": "02:26",
-      "appointmentDate": "2021-11-16",
-      "appointment_desc": "r",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-01T03:56:18.071Z",
-      "patientId": 1,
-      "status": "approved",
-      "id": 7
-    },
-    {
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "mobile_no": 46576583436,
-      "doc_id": 25,
-      "doc_name": "susmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "01:27",
-      "appointment_end_time": "02:27",
-      "appointmentDate": "2021-11-01",
-      "appointment_desc": "re",
-      "createdBy": "Kishore Kumar",
-      "createdDate": "2021-11-01T03:57:57.043Z",
-      "patientId": 7,
-      "status": "approved",
-      "id": 8
-    },
-    {
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "mobile_no": 6585876998,
-      "doc_id": 25,
-      "doc_name": "susmithaC",
-      "appointment_title": "title",
-      "appointment_start_time": "15:45",
-      "appointment_end_time": "16:45",
-      "appointmentDate": "2021-11-01",
-      "appointment_desc": "yy",
-      "createdBy": "Kishore Kumar",
-      "createdDate": "2021-11-01T07:15:15.920Z",
-      "patientId": 7,
-      "status": "Pending",
-      "id": 9
     }
   ],
   "patientvitals": [
@@ -374,7 +347,7 @@
       "pulse": "92",
       "respiration": "20",
       "oxigen_saturation": "98",
-      "userid": 11,
+      "userid": 1,
       "id": 1
     },
     {
@@ -443,6 +416,9 @@
       "userid": 11,
       "id": 7
     }
+  ],
+  "patientdietplan": [
+    
   ],
   "order": [
     {
