@@ -50,7 +50,6 @@ function a11yProps(index) {
 const AttendAppointment = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
-  console.log(props.apptDetails);
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -72,6 +71,7 @@ const AttendAppointment = (props) => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <>
       <Box sx={{ width: "100%" }}>
@@ -89,7 +89,7 @@ const AttendAppointment = (props) => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Vitals />
+          <Vitals patientId={props.apptDetails} />
         </TabPanel>
 
         <TabPanel value={value} index={1}>

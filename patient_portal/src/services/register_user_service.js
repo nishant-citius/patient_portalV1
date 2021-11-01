@@ -160,6 +160,11 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/physician_speciality`;
     return axios.get(url);
   }
+
+  getPatientVitals(patientId) {
+    const url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
+    return axios.get(url);
+  }
 }
 /*********Admin Serives***********/
 
