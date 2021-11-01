@@ -47,7 +47,7 @@
     },
     {
       "email": "ms@email.com",
-      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
+      "password": "$2a$10$ZP976CJbY9TD6OwMjWNE/./opArtEZ0SDMrvyfSP8MC/NqQgv84vC",
       "fName": "Manya ",
       "lName": "Surve",
       "dob": "2021-09-30",
@@ -57,7 +57,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 6
     },
     {
@@ -596,6 +596,25 @@
       "patientId": 1,
       "status": "approved",
       "id": 3
+    }
+  ],
+  "demographics": [
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "na",
+      "education": "nan",
+      "employment": "nn",
+      "address": "na",
+      "phone_number": 1234567890,
+      "medical_history": "na",
+      "family_medical_history": "na",
+      "surgeries": "an",
+      "insurance_provider": "na",
+      "userid": 1,
+      "id": 1
     }
   ],
   "patientvitals": [
