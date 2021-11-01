@@ -36,6 +36,7 @@ import { object } from "yup/lib/locale";
 import AppointmentList from "./patient/AppointmentList";
 import ScheduleAppointment from "./patient/ScheduleAppointment";
 import PhysicianAppointment from "./physician/PhysicianAppointment";
+import Appointmentstoday from "./physician/Appointmentstoday";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -124,12 +125,17 @@ function ShellComponent(props) {
 
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
+
         <Route
           path={"/physician_appointments"}
           component={PhysicianAppointment}
         />
         <Route path={"/schedule_appointment"}>
           <ScheduleAppointment flashNotification={showSnacksBar} />
+        </Route>
+
+        <Route path={"/attendAppointments"}>
+          <Appointmentstoday flashNotification={showSnacksBar} />
         </Route>
 
         {/* -----------Physician------------- */}

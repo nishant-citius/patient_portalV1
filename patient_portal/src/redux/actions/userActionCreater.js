@@ -220,6 +220,31 @@ export function GetAllImmunizationData() {
   };
 }
 
+export function GetAllDemographicsData() {
+  let payload = {
+    demographics: [],
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_DEMOGRAPHICS).then(
+      (response) => {
+        console.log("Hellooo", response.data);
+        payload.globalmessage = `Demographics data retrieved successfully. Count: ${response.data.length}`;
+        payload.demographics = response.data;
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.demographics = [];
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetAllPatientsData() {
   let payload = {
     patients: [],
@@ -604,8 +629,6 @@ export function AddMedicationAndAllergiesAsync(user) {
   };
 }
 
-//put request for updating the profile pic
-
 export function updateprofile(profileImage, loggedUserInfo) {
   console.log(loggedUserInfo);
   let payload = {
@@ -634,30 +657,6 @@ export function updateprofile(profileImage, loggedUserInfo) {
           dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
         }
       );
-  };
-}
-
-export function GetDemographics() {
-  let payload = {
-    demographics: [],
-    globalmessage: "",
-  };
-  return (dispatch, getState) => {
-    authToken = getState().login.authToken;
-
-    axios.get(URLS.GET_DEMOGRAPHICS).then(
-      (response) => {
-        console.log(response.data);
-        payload.globalmessage = `Physician data retrieved successfully. Count: ${response.data.length}`;
-        payload.demographics = response.data;
-        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
-      },
-      (error) => {
-        payload.globalmessage = `${error.response.data}`;
-        payload.demographics = [];
-        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
-      }
-    );
   };
 }
 

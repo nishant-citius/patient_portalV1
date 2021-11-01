@@ -190,7 +190,6 @@ const Physician_dashboard = (props) => {
               </CardContent>
             </Card>
           </Grid>
-
           <Grid item sm={4} lg={4} md={4}>
             <Card>
               <CardMedia
@@ -198,7 +197,6 @@ const Physician_dashboard = (props) => {
                 height="130"
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx_Ac4EqErfBGKoDPQu_9vC-Oaf2SqODDwfw&usqp=CAU"
               />
-              {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock2}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
                   Appointments Approved :
@@ -207,7 +205,6 @@ const Physician_dashboard = (props) => {
               </CardContent>
             </Card>
           </Grid>
-
           <Grid item sm={4} lg={4} md={4}>
             <Card>
               <CardMedia
@@ -215,7 +212,6 @@ const Physician_dashboard = (props) => {
                 height="130"
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOlUf_MDMa7opx7h0CJMhyv2wh3ryH5PBvMg&usqp=CAU"
               />
-              {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock3}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
                   Appointments Canceled: 15

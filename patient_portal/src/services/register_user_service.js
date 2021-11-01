@@ -132,6 +132,16 @@ class AdminServices {
     return axios.post(url, JSON.stringify(appointmentData), config);
   }
 
+  getAppointmentsForDate(_id, date) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&doc_id=${_id}`;
+    return axios.get(url);
+  }
+
+  appointmentsOnDate(date) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}`;
+    return axios.get(url);
+  }
+
   editAppointment(appointmentId, data) {
     let url = `${URLS.BASE_URL}/appointments/${appointmentId}`;
     let config = {
@@ -160,6 +170,21 @@ class AdminServices {
   getDoctorSpeciality() {
     const url = `${URLS.BASE_URL}/physician_speciality`;
     return axios.get(url);
+  }
+
+  getPatientVitals(patientId) {
+    const url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
+    return axios.get(url);
+  }
+
+  updatePatientVitals(patientId, data) {
+    let url = `${URLS.BASE_URL}/patientvitials?patientId=${patientId}`;
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.put(url, JSON.stringify(data), config);
   }
 }
 /*********Admin Serives***********/
