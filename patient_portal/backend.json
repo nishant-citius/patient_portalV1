@@ -187,22 +187,22 @@
       "userid": 1,
       "current_medication": [
         {
-          "medicineName": "njnjnj",
-          "dosage": "njnjn",
-          "directionstoconsume": "njnjnj",
-          "frequency": "njnjnjn",
-          "physicianName": "jnjnjnj",
-          "purpose": "njnjnjnjn",
+          "medicineName": "Dolo",
+          "dosage": "2",
+          "directionstoconsume": "two times",
+          "frequency": "100 mg",
+          "physicianName": "Soujanya",
+          "purpose": "fever",
           "startDate": "2021-10-20",
           "endDate": "2021-10-20"
         },
         {
-          "medicineName": "knjn",
-          "dosage": "jnjnj",
-          "directionstoconsume": "jkk",
-          "frequency": "iiim",
-          "physicianName": "imimi",
-          "purpose": "mimimim",
+          "medicineName": "paracetamol",
+          "dosage": "2",
+          "directionstoconsume": "in morning",
+          "frequency": "50 mg",
+          "physicianName": "soujanya",
+          "purpose": "fever",
           "startDate": "2021-10-12",
           "endDate": "2021-10-14"
         }
@@ -223,19 +223,19 @@
       ],
       "past_medication": [
         {
-          "pastdrugName": "jijij",
-          "strength": "ijij",
-          "directiontoconsume": "ijiji"
+          "pastdrugName": "altrokcen",
+          "strength": "50 mg",
+          "directiontoconsume": "twice a day"
         },
         {
-          "pastdrugName": "iijijij",
-          "strength": "ijiji",
-          "directiontoconsume": "ijij"
+          "pastdrugName": "Neuomarkazol",
+          "strength": "100 mg",
+          "directiontoconsume": "twice a day"
         },
         {
-          "pastdrugName": "nununu",
-          "strength": "nununun",
-          "directiontoconsume": "unununu"
+          "pastdrugName": "propygenta",
+          "strength": "80 mg",
+          "directiontoconsume": "twice a day"
         }
       ],
       "allergies": [
@@ -277,7 +277,7 @@
           "vaccine_date": "2021-10-21"
         }
       ],
-      "id": 3
+      "id": 1
     },
     {
       "age_category": "45",
@@ -361,7 +361,7 @@
       "pulse": "92",
       "respiration": "20",
       "oxigen_saturation": "98",
-      "userid": 11,
+      "userid": 1,
       "id": 1
     },
     {
@@ -372,7 +372,7 @@
       "pulse": "",
       "respiration": "",
       "oxigen_saturation": "",
-      "userid": 1,
+      "userid": 2,
       "id": 2
     },
     {

@@ -31,18 +31,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Patient_dashboard = (props) => {
-  const [isAvailable, setIsAvailable] = useState(false);
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      if (
-        props.patientvitalsDetails &&
-        props.mediAllergyDetails &&
-        props.immunizationDetails
-      ) {
-        setIsAvailable(true);
-      }
-    }
-  }, []);
   // useEffect(() => {
   //   if (props.isLoggedIn) {
   //     if (
@@ -96,7 +84,7 @@ const Patient_dashboard = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {isAvailable ? (
+                    {props.patientvitalsDetails ? (
                       <tr>
                         <td>{props.patientvitalsDetails[0].height}</td>
                         <td>{props.patientvitalsDetails[0].weight}</td>
@@ -131,7 +119,7 @@ const Patient_dashboard = (props) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {isAvailable ? (
+                      {props.mediAllergyDetails ? (
                         props.mediAllergyDetails.current_medication.map(
                           function (item, index) {
                             return (
@@ -177,7 +165,7 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {isAvailable ? (
+                        {props.immunizationDetails ? (
                           <tr>
                             <td>{props.immunizationDetails.age_category}</td>
                             <td>{props.immunizationDetails.vaccine_brand}</td>
@@ -213,7 +201,7 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {isAvailable ? (
+                        {props.mediAllergyDetails ? (
                           props.mediAllergyDetails.past_medication.map(
                             function (item, index) {
                               return (
