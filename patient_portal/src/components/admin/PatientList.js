@@ -18,6 +18,7 @@ import {
 const mapStateToProps = (rootReducer) => {
   return {
     patientData: rootReducer.patients.patients,
+    demographicData: rootReducer.getalldemographics.demographics,
     globalmessage: rootReducer.patients.globalmessage,
   };
 };
@@ -26,6 +27,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
     removeUser: (id) => dispatch(actioncreators.DeleteUser(id)),
+    getDemographics: () => dispatch(actioncreators.GetAllDemographicsData()),
   };
 };
 
@@ -80,8 +82,10 @@ export class PatientList extends React.Component {
   }
 
   render() {
-    const handleChange = (event, newValue) => {
-      this.state.value(newValue);
+    let handleChange = (event, newValue) => {
+      this.setState({
+        [event]: newValue,
+      });
     };
     return (
       <>
@@ -161,7 +165,39 @@ export class PatientList extends React.Component {
             </div>
           </TabPanel>
           <TabPanel value={this.state.value} index={1}>
-            <h1>M/sfiydfiy</h1>
+            <div className="container mt-5">
+              <h1 className="text-success text-center fw-bold ">
+                Demographics List
+              </h1>
+              <table className="table table-bordered shadow mt-4">
+                <thead className="table-dark">
+                  <tr>
+                    <th scope="col">Sr.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">D.O.B.</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Education</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.props.demographicData.map((demo, index) => {
+                    return (
+                      <tr key={index}>
+                        <th scope="row">{index + 1}</th>
+                        <td>{`${demo.fName} ${demo.lName}`}</td>
+                        <td>{demo.dob}</td>
+                        <td>{demo.gender}</td>
+                        <td>{demo.education}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </TabPanel>
+          <TabPanel value={this.state.value} index={2}>
+            <h1>Lab Reports</h1>
           </TabPanel>
         </Box>
       </>

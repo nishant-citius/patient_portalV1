@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {
   DirectionsWalkIcon,
@@ -21,15 +21,6 @@ const useStyles = makeStyles((theme) => ({
     background: "#fff",
     color: "#808080",
     textAlign: "center",
-    // minHeight: "250px",
-    // minWidth:"700px",
-    // paddingLeft: "15px",
-  },
-  innercard1: {
-    maxWidth: "320px",
-    maxHeight: "100px",
-    margin: "4px",
-    background: "rgb(72 179 226)",
   },
   innercard2: {
     minWidth: "100px",
@@ -37,26 +28,31 @@ const useStyles = makeStyles((theme) => ({
     margin: "4px",
     // background:"rgb(72 179 226)"
   },
-  innercard: {
-    height: "185px",
-  },
-  innercard3: {
-    background: "#D3D3D3",
-  },
-  innercard4: {
-    width: "105px",
-    textAlign: "center",
-  },
-  h5: {
-    textAlign: "center",
-    color: "blue",
-  },
-  height: {
-    height: "150px",
-  },
 }));
 
 const Patient_dashboard = (props) => {
+  const [isAvailable, setIsAvailable] = useState(false);
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (props.immunizationDetails) {
+        if (props.mediAllergyDetails) {
+          if (props.patientvitalsDetails) {
+            setIsAvailable(true);
+          }
+        }
+      }
+    }
+  }, []);
+  //  useEffect(() => {
+  //   if (props.isLoggedIn) {
+  //     if (!props.mediAllergyDetails) {
+  //       return;
+  //     } else {
+  //       console.log("<---AAAAAAAAA--->", props.mediAllergyDetails);
+  //     }
+  //   }
+  // }, [props.mediAllergyDetails, props.isLoggedIn]);
+
   const classes = useStyles();
   console.log(props.mediAllergyDetails, "after useeffect");
   console.log("pooja", props.patientvitalsDetails);
