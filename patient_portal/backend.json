@@ -13,7 +13,7 @@
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1
+      "id": 24
     },
     {
       "email": "aj@email.com",
@@ -47,7 +47,7 @@
     },
     {
       "email": "ms@email.com",
-      "password": "$2a$10$ZP976CJbY9TD6OwMjWNE/./opArtEZ0SDMrvyfSP8MC/NqQgv84vC",
+      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
       "fName": "Manya ",
       "lName": "Surve",
       "dob": "2021-09-30",
@@ -57,7 +57,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 6
     },
     {
@@ -209,7 +209,7 @@
   ],
   "medic_allergy": [
     {
-      "userid": 24,
+      "userid": 12,
       "current_medication": [
         {
           "medicineName": "Dolo",
@@ -257,7 +257,7 @@
       "id": 24
     },
     {
-      "userid": 24,
+      "userid": 12,
       "current_medication": [
         {
           "medicineName": "",
@@ -531,6 +531,196 @@
         }
       ],
       "id": 9
+    },
+    {
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "nice",
+          "dosage": "3",
+          "directionstoconsume": "table",
+          "frequency": "3",
+          "physicianName": "shiva prasad",
+          "purpose": "body pains",
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-02"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 25
+    },
+    {
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "nice",
+          "dosage": "3",
+          "directionstoconsume": "table",
+          "frequency": "3",
+          "physicianName": "shiva prasad",
+          "purpose": "body pains",
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-02"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 26
+    },
+    {
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 27
+    },
+    {
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "fordum cream",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 28
+    },
+    {
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "fordum cream",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 29
     }
   ],
   "immunization": [
@@ -598,25 +788,6 @@
       "id": 3
     }
   ],
-  "demographics": [
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "na",
-      "education": "nan",
-      "employment": "nn",
-      "address": "na",
-      "phone_number": 1234567890,
-      "medical_history": "na",
-      "family_medical_history": "na",
-      "surgeries": "an",
-      "insurance_provider": "na",
-      "userid": 1,
-      "id": 1
-    }
-  ],
   "patientvitals": [
     {
       "height": "4.8",
@@ -626,7 +797,7 @@
       "pulse": "92",
       "respiration": "20",
       "oxigen_saturation": "98",
-      "patientId": 11,
+      "userid": 11,
       "id": 1
     },
     {
@@ -640,6 +811,18 @@
       "physicianId": 12,
       "patientId": 24,
       "id": 3
+    },
+    {
+      "height": "5 Feet 4 Inch.",
+      "weight": "64 Kgs",
+      "blood_pressure": "110/25mg",
+      "temperature": "27 Deg",
+      "pulse": "72 pm",
+      "respiration": "Good",
+      "oxigen_saturation": "Good",
+      "physicianId": 12,
+      "patientId": 24,
+      "id": 4
     }
   ],
   "patientdietplan": [

@@ -59,7 +59,7 @@ export class AppointmentList extends React.Component {
       (response) => {
         if (response.status === 200) {
           alert("rejected appointment");
-          
+          this.props.getAppointments(this.props.currentUser.id);
         }
       },
       (error) => {
