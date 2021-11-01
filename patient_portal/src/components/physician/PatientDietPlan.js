@@ -38,9 +38,9 @@ const DietPlan = (props) => {
       dinner: values.dinner,
       post_dinner_activity: values.post_dinner_activity,
       bedtime: values.bedtime,
-      userid: props.currentUser.id,
+      physicianId: props.currentUser.id,
     };
-    props.DietPlan(payload);
+    props.dietplan(payload);
   };
 
   // let history = useHistory();
@@ -218,7 +218,8 @@ const DietPlan = (props) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    allusers: state.dietplan.DietPlanreducer,
+    // allusers: state.dietplan.DietPlanreducer,
+    dietplans: state.dietplan.dietplan,
   };
 };
 
