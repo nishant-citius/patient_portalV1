@@ -1,17 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import { connect } from "react-redux";
-import {
-  DirectionsWalkIcon,
-  DirectionsBikeIcon,
-  DirectionsRunIcon,
-} from "mui-icons";
 import {
   Container,
   Card,
   Grid,
   CardContent,
-  Divider,
-  CardMedia,
   makeStyles,
   Typography,
 } from "mui";
@@ -26,42 +19,10 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "100px",
     minHeight: "100px",
     margin: "4px",
-    // background:"rgb(72 179 226)"
   },
 }));
 
 const Patient_dashboard = (props) => {
-  // useEffect(() => {
-  //   if (props.isLoggedIn) {
-  //     if (
-  //       props.patientvitalsDetails
-  //     ) {
-  //       setIsAvailable(true);
-  //     }
-  //   }
-  // }, []);
-  // useEffect(() => {
-  //   if (props.isLoggedIn) {
-  //     if (
-
-  //       props.mediAllergyDetails
-
-  //     ) {
-  //       setIsAvailable(true);
-  //     }
-  //   }
-  // }, []);
-
-  //  useEffect(() => {
-  //   if (props.isLoggedIn) {
-  //     if (!props.mediAllergyDetails) {
-  //       return;
-  //     } else {
-  //       console.log("<---AAAAAAAAA--->", props.mediAllergyDetails);
-  //     }
-  //   }
-  // }, [props.mediAllergyDetails, props.isLoggedIn]);
-
   const classes = useStyles();
   console.log(props.mediAllergyDetails, "after useeffect");
   console.log("pooja", props.patientvitalsDetails);
@@ -225,66 +186,6 @@ const Patient_dashboard = (props) => {
               </CardContent>
             </Card>
           </Grid>
-
-          {/* <Grid item sm={6} lg={6} md={6}>
-            <h5 className={classes.h5}>Activities</h5>
-            <Card>
-              <CardContent>
-                <Container>
-                  <Grid container spacing={6}>
-                    <Grid item>
-                      <Card
-                        style={{ backgroundColor: "rgb(62 222 182)" }}
-                        className={classes.innercard4}
-                      >
-                        <CardContent>
-                          <DirectionsWalkIcon></DirectionsWalkIcon>
-                          <Typography variant="subtitle1" color="black">
-                            Walk
-                            <br />
-                            2 hours <br />
-                            daily
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item>
-                      <Card
-                        style={{ backgroundColor: "rgb(62 222 182)" }}
-                        className={classes.innercard4}
-                      >
-                        <CardContent>
-                          <DirectionsBikeIcon></DirectionsBikeIcon>
-                          <Typography variant="subtitle1" color="black">
-                            Cycling
-                            <br />
-                            30 mins
-                            <br /> daily
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item>
-                      <Card
-                        style={{ backgroundColor: "rgb(62 222 182)" }}
-                        className={classes.innercard4}
-                      >
-                        <CardContent>
-                          <DirectionsRunIcon></DirectionsRunIcon>
-                          <Typography variant="subtitle1" color="black">
-                            Running
-                            <br />
-                            20 mins <br />
-                            daily
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                  </Grid>
-                </Container>
-              </CardContent>
-            </Card>
-          </Grid> */}
         </Grid>
       </Container>
     </>
@@ -293,7 +194,6 @@ const Patient_dashboard = (props) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    //allusers: state.immunization.Immunizationsreducer,
     patientvitalsDetails: state.getPatientvitals.getPatientvitals,
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     immunizationDetails: state.patientImmunization.patientImmunization,
