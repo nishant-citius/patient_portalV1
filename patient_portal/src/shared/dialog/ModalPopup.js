@@ -7,6 +7,7 @@ import {
   Button,
   makeStyles,
 } from "../../mui";
+import { CloseIcon } from "../../mui-icons";
 
 const useStyles = makeStyles((theme) => ({
   dialogWrapper: {
@@ -43,7 +44,7 @@ function ModalPopup(props) {
           color="success"
           onClick={() => setOpenPopup(false)}
         >
-          X
+          <CloseIcon />
         </Button>
       </DialogActions>
       <DialogContent>{children}</DialogContent>
