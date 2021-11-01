@@ -177,6 +177,7 @@ class AdminServices {
     return axios.get(url);
   }
 
+  
   updatePatientVitals(patientId, data) {
     let url = `${URLS.BASE_URL}/patientvitials?patientId=${patientId}`;
     let config = {
@@ -186,7 +187,14 @@ class AdminServices {
     };
     return axios.put(url, JSON.stringify(data), config);
   }
+
+  getLabReports(patientId) {
+    const url = `${URLS.BASE_URL}/labreports?patientId=${patientId}`;
+    return axios.get(url);
+  }
+
 }
+
 /*********Admin Serives***********/
 
 let userService = new UserServices();

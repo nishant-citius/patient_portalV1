@@ -3,9 +3,11 @@ import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
+import { set } from "date-fns";
 
 const PhyMedicationAllergies = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
+  const [updateMedication,setupdateMedication]=useState(true);
   useEffect(() => {
     if (props.isLoggedIn) {
       if (props.mediAllergyDetails) {
@@ -13,7 +15,7 @@ const PhyMedicationAllergies = (props) => {
       }
     }
   }, []);
-  console.log("Nishant chaubey", props.mediAllergyDetails);
+  console.log(props.mediAllergyDetails);
   const initialValues = {
     id: "",
     userId: "",
@@ -101,15 +103,20 @@ const PhyMedicationAllergies = (props) => {
       type: "success",
     });
   };
+  function updateMed(){
+      console.log("suifgsuifusuvfi")
+      setupdateMedication(false)
+  }
   return (
     <>
-      {isAvailable ? (
+      {updateMedication ? (
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
             <div className="card-header text-center">Immunization Details</div>
             <div className="card-body text-center">
               <h4>Current Medication</h4> 
-              <button className="btn btn-primary">Update the medication</button>
+              <button className="btn btn-primary" onClick={()=> updateMed()}>Update the medication</button>
+              
               <table className="table table-bordered shadow mt-4">
                 <thead className="table-dark">
                   <tr>
