@@ -33,7 +33,7 @@ function Calendar(props) {
     options: {
       transitionMode: "zoom", // or fade
       startWeekOn: "Mon", // or Sun
-      defaultMode: "week", // or week | day | timeline
+      defaultMode: "month", // or week | day | timeline
       minWidth: 340,
       maxWidth: 340,
       minHeight: 340,

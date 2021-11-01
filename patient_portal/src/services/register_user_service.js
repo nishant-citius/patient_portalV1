@@ -121,8 +121,8 @@ class AdminServices {
     return axios.post(url, JSON.stringify(appointmentData), config);
   }
 
-  getAppointmentsForDate(date) {
-    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}`;
+  getAppointmentsForDate(_id, date) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&doc_id=${_id}`;
     return axios.get(url);
   }
 

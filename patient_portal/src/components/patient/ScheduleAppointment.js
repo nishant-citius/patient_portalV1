@@ -10,13 +10,14 @@ function ScheduleAppointment(props) {
   const [doctorName, setDcotorName] = useState("");
   const [specialities, setSpecialities] = useState([]);
   const [dayAppointments, setDayAppointments] = useState([]);
+  const [date, setDate] = useState("");
 
   useEffect(() => {
     if (props.isLoggedIn) {
-      setDoctorsList(props.physiciandata);
+      // setDoctorsList(props.physiciandata);
       doctorSpeciality();
     }
-  }, [0]);
+  }, []);
 
   const initialValues = {
     fName: props.currentUser.fName,
@@ -44,20 +45,22 @@ function ScheduleAppointment(props) {
   }
 
   function getDoc() {
-    let spl_data = document.getElementById("#spl")
-      ? document.getElementById("#spl").value()
-      : "cancer";
+    let speciality = document.getElementById("spl").value;
+    if (!speciality) speciality = "cancer";
 
     let arr = props.physiciandata.filter((item) => {
-      return item.speciality.toLowerCase() === spl_data.toLowerCase();
+      if (item.speciality.toLowerCase() === speciality.toLowerCase()) {
+        return item;
+      }
     });
-
     setDoctorsList(arr);
+    return arr;
   }
 
-  function getAppointmentsForDate(_date) {
-    adminService.getAppointmentsForDate(_date).then(
+  function getAppointmentsForDate(pid, _date) {
+    adminService.getAppointmentsForDate(pid, _date).then(
       (response) => {
+        console.log(response.data);
         setDayAppointments(response.data);
       },
       (error) => {
@@ -102,7 +105,9 @@ function ScheduleAppointment(props) {
   };
 
   function getAppts() {
-    console.log("~~~~~");
+    let _date = document.getElementById("appointment-date").value;
+    setDate(_date);
+    // getAppointmentsForDate(props.currentUser.id, _date);
   }
 
   function scheduleAppointmentToday(appointmentData) {
@@ -194,8 +199,8 @@ function ScheduleAppointment(props) {
                       onChange={getDoc}
                     >
                       <option value="">Select</option>
-                      {specialities.map((specility) => (
-                        <option value={specility.value}>
+                      {specialities.map((specility, index) => (
+                        <option value={specility.value} key={index}>
                           {specility.name}
                         </option>
                       ))}
@@ -209,7 +214,7 @@ function ScheduleAppointment(props) {
                     <Field as="select" className="form-control" name="doc_name">
                       <option value="">Select</option>
                       {doctorsList.map((doctor) => (
-                        <option value={doctor.id}>
+                        <option value={doctor.id} key={doctor.id}>
                           {setDcotorName(doctor.fName + doctor.lName)}
                           {doctor.fName + doctor.lName}
                         </option>
@@ -220,7 +225,7 @@ function ScheduleAppointment(props) {
                     </div>
                   </div>
                   <div className="col-12 col-md-6">
-                    <label>Appointment TItle</label>
+                    <label>Appointment Title</label>
                     <Field
                       type="text"
                       className="form-control"
@@ -237,6 +242,8 @@ function ScheduleAppointment(props) {
                       type="date"
                       className="form-control"
                       name="appointmentDate"
+                      id="appointment-date"
+                      value={date}
                       onChange={getAppts}
                     />
                     <div className="error">

@@ -136,6 +136,7 @@ function AppToolBar(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   function Logout() {
     props.logout();
     handleClose();
