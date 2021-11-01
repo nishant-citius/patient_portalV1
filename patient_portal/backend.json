@@ -184,80 +184,79 @@
   ],
   "medic_allergy": [
     {
-    "userid": 1,
-    "current_medication": [
-      {
-        "medicineName": "njnjnj",
-        "dosage": "njnjn",
-        "directionstoconsume": "njnjnj",
-        "frequency": "njnjnjn",
-        "physicianName": "jnjnjnj",
-        "purpose": "njnjnjnjn",
-        "startDate": "2021-10-20",
-        "endDate": "2021-10-20"
-      },
-      {
-        "medicineName": "knjn",
-        "dosage": "jnjnj",
-        "directionstoconsume": "jkk",
-        "frequency": "iiim",
-        "physicianName": "imimi",
-        "purpose": "mimimim",
-        "startDate": "2021-10-12",
-        "endDate": "2021-10-14"
-      }
-    ],
-    "otc_medication": [
-      {
-        "otcDrugName": "jnjnjn",
-        "strength": "jnjnjnj",
-        "directiontoconsume": "njnjnjnj",
-        "socialDrugs": "smoke"
-      },
-      {
-        "otcDrugName": "huhuh",
-        "strength": "uhuhuh",
-        "directiontoconsume": "jiiimim",
-        "socialDrugs": "illicit"
-      }
-    ],
-    "past_medication": [
-      {
-        "pastdrugName": "jijij",
-        "strength": "ijij",
-        "directiontoconsume": "ijiji"
-      },
-      {
-        "pastdrugName": "iijijij",
-        "strength": "ijiji",
-        "directiontoconsume": "ijij"
-      },
-      {
-        "pastdrugName": "nununu",
-        "strength": "nununun",
-        "directiontoconsume": "unununu"
-      }
-    ],
-    "allergies": [
-      {
-        "allergyName": "ijijij",
-        "symptomsofAllergy": "ijiji",
-        "drugAllergy": "jijiji"
-      },
-      {
-        "allergyName": "iiimi",
-        "symptomsofAllergy": "imimimi",
-        "drugAllergy": "mimimi"
-      },
-      {
-        "allergyName": "kimimi",
-        "symptomsofAllergy": "imimimi",
-        "drugAllergy": "mimimi"
-      }
-    ],
-    "id": 2
-  }
-
+      "userid": 1,
+      "current_medication": [
+        {
+          "medicineName": "njnjnj",
+          "dosage": "njnjn",
+          "directionstoconsume": "njnjnj",
+          "frequency": "njnjnjn",
+          "physicianName": "jnjnjnj",
+          "purpose": "njnjnjnjn",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "knjn",
+          "dosage": "jnjnj",
+          "directionstoconsume": "jkk",
+          "frequency": "iiim",
+          "physicianName": "imimi",
+          "purpose": "mimimim",
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "jnjnjn",
+          "strength": "jnjnjnj",
+          "directiontoconsume": "njnjnjnj",
+          "socialDrugs": "smoke"
+        },
+        {
+          "otcDrugName": "huhuh",
+          "strength": "uhuhuh",
+          "directiontoconsume": "jiiimim",
+          "socialDrugs": "illicit"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "jijij",
+          "strength": "ijij",
+          "directiontoconsume": "ijiji"
+        },
+        {
+          "pastdrugName": "iijijij",
+          "strength": "ijiji",
+          "directiontoconsume": "ijij"
+        },
+        {
+          "pastdrugName": "nununu",
+          "strength": "nununun",
+          "directiontoconsume": "unununu"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "ijijij",
+          "symptomsofAllergy": "ijiji",
+          "drugAllergy": "jijiji"
+        },
+        {
+          "allergyName": "iiimi",
+          "symptomsofAllergy": "imimimi",
+          "drugAllergy": "mimimi"
+        },
+        {
+          "allergyName": "kimimi",
+          "symptomsofAllergy": "imimimi",
+          "drugAllergy": "mimimi"
+        }
+      ],
+      "id": 2
+    }
   ],
   "immunization": [
     {
@@ -303,12 +302,12 @@
       "lName": "prasad",
       "dob": "1994-01-01",
       "mobile_no": 8801888988,
-      "doc_id": 24,
+      "doc_id": 23,
       "doc_name": "shivaprasad",
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-10-19",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
@@ -321,12 +320,12 @@
       "lName": "prasad",
       "dob": "1994-01-01",
       "mobile_no": 8801888988,
-      "doc_id": 24,
+      "doc_id": 23,
       "doc_name": "shivaprasad",
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-10-19",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
@@ -339,12 +338,12 @@
       "lName": "Pathak",
       "dob": "1994-01-01",
       "mobile_no": 8801888988,
-      "doc_id": 24,
+      "doc_id": 23,
       "doc_name": "shivaprasad",
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-10-25",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",

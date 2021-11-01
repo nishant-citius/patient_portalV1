@@ -30,5 +30,6 @@ export { default as DirectionsRunIcon } from "@material-ui/icons/DirectionsRun";
 export { default as PoolIcon} from "@material-ui/icons/Pool";
 export { default as CloseIcon } from "@material-ui/icons/Close";
 export { default as PersonAddAlt1Icon } from "@mui/icons-material/PersonAddAlt1";
+export { default as AdminPanelSettingsIcon } from "@mui/icons-material/AdminPanelSettings";
 
 

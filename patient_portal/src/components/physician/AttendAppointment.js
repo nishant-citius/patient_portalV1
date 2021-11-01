@@ -9,6 +9,9 @@ import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import PhyAppointmentList from "./PhyAppointmentList";
 
+import Vitals from "./PatientVitals";
+import Immunization from "../patient/Immunization";
+import Medication_Allergies from "../patient/Medication_Allergies";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -76,15 +79,31 @@ const PhysicianAppointment = (props) => {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Appointment List" {...a11yProps(0)} />
-            <Tab label="Calender View" {...a11yProps(1)} />
+            <Tab label="Record Patient Vital" {...a11yProps(0)} />
+            <Tab label="Immunization" {...a11yProps(1)} />
+            <Tab label="Medication Allergies" {...a11yProps(0)} />
+            <Tab label="Diagnosis/Lab Reports" {...a11yProps(1)} />
+            <Tab label="Diet Plan" {...a11yProps(0)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <PhyAppointmentList />
+          <Vitals />
         </TabPanel>
+
         <TabPanel value={value} index={1}>
-          {props.isLoggedIn ? <Calendar apopointmnets={appts} /> : ""}
+          <Immunization />
+        </TabPanel>
+
+        <TabPanel value={value} index={2}>
+          <Vitals />
+        </TabPanel>
+
+        <TabPanel value={value} index={3}>
+          <Vitals />
+        </TabPanel>
+
+        <TabPanel value={value} index={4}>
+          <Vitals />
         </TabPanel>
       </Box>
     </>

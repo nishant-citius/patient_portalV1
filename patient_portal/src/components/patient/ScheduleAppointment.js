@@ -243,8 +243,8 @@ function ScheduleAppointment(props) {
                       className="form-control"
                       name="appointmentDate"
                       id="appointment-date"
-                      value={date}
-                      onChange={getAppts}
+                      // value={date}
+                      // onChange={getAppts}
                     />
                     <div className="error">
                       <ErrorMessage name="appointmentDate" />

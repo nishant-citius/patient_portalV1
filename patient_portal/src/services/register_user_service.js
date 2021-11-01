@@ -126,6 +126,11 @@ class AdminServices {
     return axios.get(url);
   }
 
+  appointmentsOnDate(date) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}`;
+    return axios.get(url);
+  }
+
   editAppointment(appointmentId, data) {
     let url = `${URLS.BASE_URL}/appointments/${appointmentId}`;
     let config = {

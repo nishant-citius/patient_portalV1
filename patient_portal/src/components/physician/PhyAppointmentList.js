@@ -1,31 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import { Link } from "react-router-dom";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
-
-import {
-  BsFillTrashFill,
-  BsFillPencilFill,
-  BsPersonFill,
-  BsCheckCircleFill,
-  BsFillXCircleFill,
-  BsFillArrowLeftSquareFill,
-} from "react-icons/bs";
-
-// const patient_id=this.props.currentUser.id;
-// const loadAppointment=(_patient_id)=>{
-//    this.props.getAppointments(patient_id)
-// }
 
 const mapStateToProps = (rootReducer) => {
   return {
     currentUser: rootReducer.login.loggedUserInfo,
     isLoggedIn: rootReducer.login.isLoggedIn,
     appointmentList: rootReducer.appointmentsDetails.appointmentsDetails,
-    //patientData: rootReducer.patients.patients,
-    // globalmessage: rootReducer.appointmentsDetails.globalmessage,
   };
 };
 
@@ -33,7 +15,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getAppointments: (doc_id) =>
       dispatch(actioncreators.GetAppointments(doc_id)),
-    //getAllPatients: () => dispatch(actioncreators.GetAllPatientsData()),
   };
 };
 
