@@ -46,9 +46,10 @@ function a11yProps(index) {
   };
 }
 
-const PhysicianAppointment = (props) => {
+const AttendAppointment = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
+  console.log(props.apptDetails);
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -119,4 +120,4 @@ const mapStatetoProps = (state) => {
   };
 };
 
-export default connect(mapStatetoProps, null)(PhysicianAppointment);
+export default connect(mapStatetoProps, null)(AttendAppointment);

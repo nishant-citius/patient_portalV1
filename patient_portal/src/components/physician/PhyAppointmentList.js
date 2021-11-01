@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
+import LabReports  from "../physician/reports";
+import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -34,32 +36,44 @@ export class AppointmentList extends React.Component {
     adminService.editAppointment(appointmentData.id, newData).then(
       (response) => {
         if (response.status === 200) {
-          alert("Appointment Approved");
-          // props.flashNotification({
-          //   message: "Appointment Scheduled Succssfully...!",
-          //   type: "success",
-          // });
+          alert("approved");
+          this.props.getAppointments(this.props.currentUser.id); 
+          
         }
       },
       (error) => {
-        // props.flashNotification({
-        //   message: "Appointment Can't be scheduled..!",
-        //   type: "error",
-        // });
+        
+       
       }
     );
   }
 
   reject(appointments) {
-    console.log(appointments);
-  }
+    let appointmentData = appointments,
+      newData = {
+        ...appointments,
+        status: "reject",
+      };
 
+    adminService.editAppointment(appointmentData.id, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("rejected appointment");
+          
+        }
+      },
+      (error) => {
+      }
+    );
+  }
   componentDidMount() {
     this.props.getAppointments(this.props.currentUser.id);
   }
 
   render() {
     return (
+      <div>
+      
       <div className="container mt-5">
         {/* <Link className="btn btn-warning" to="/physician">
           <BsFillArrowLeftSquareFill />
@@ -97,23 +111,17 @@ export class AppointmentList extends React.Component {
                   <td>{appointments.appointment_end_time}</td>
                   <td>
                     {appointments.status === "approved" ? (
-                      <p className="text text-success fw-bold">Approved</p>
+                      <p className="text text-success fw-bold">Approved</p> 
                     ) : (
                       <>
                         <button
                           type="button"
                           onClick={() => this.approve(appointments)}
-                          className="btn btn-primary btn-sm"
+                          className="btn btn-success btn-sm m-2"
                         >
                           Approve
                         </button>
-                        <button
-                          type="button"
-                          onClick=""
-                          className="btn btn-secondary btn-sm m-2"
-                        >
-                          postpone
-                        </button>
+                      
                         <button
                           type="button"
                           onClick={() => this.reject(appointments)}
@@ -125,26 +133,12 @@ export class AppointmentList extends React.Component {
                     )}
                   </td>
 
-                  {/* <td>
-                      <span className="p-2">
-                        <Link to={`/userdetails/${user.id}`}>
-                          <BsPersonFill />
-                        </Link>
-                      </span>
-                      <span className="p-2">
-                        <Link to={`/edit/${user.id}`}>
-                          <BsFillPencilFill />
-                        </Link>
-                      </span>
-                      <span className="p-2">
-                        <BsFillTrashFill />
-                      </span>
-                    </td> */}
                 </tr>
               );
             })}
           </tbody>
         </table>
+      </div>
       </div>
     );
   }
