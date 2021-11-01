@@ -224,7 +224,7 @@
       ],
       "otc_medication": [
         {
-          "otcDrugName":"paracetamal",
+          "otcDrugName": "paracetamal",
           "strength": "650",
           "directiontoconsume": "3",
           "socialDrugs": "drink"
@@ -701,22 +701,16 @@
       "id": 1
     },
     {
-      "fName": "shiva",
-      "lName": "p",
-      "dob": "1994-01-01",
-      "mobile_no": 8801889888,
-      "doc_id": 12,
-      "doc_name": "shivaprasad",
-      "appointment_title": "cold",
-      "appointment_start_time": "23:11",
-      "appointment_end_time": "19:14",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "fever",
-      "createdBy": "shivaprasad",
-      "createdDate": "2021-10-28T13:41:58.411Z",
-      "patientId": 21,
-      "status": "approved",
-      "id": 2
+      "height": "5 Feet 4 Inch.",
+      "weight": "64 Kgs",
+      "blood_pressure": "110/25mg",
+      "temperature": "27 Deg",
+      "pulse": "72 pm",
+      "respiration": "Good",
+      "oxigen_saturation": "Good",
+      "physicianId": 12,
+      "patientId": 24,
+      "id": 3
     }
   ],
   "order": [
