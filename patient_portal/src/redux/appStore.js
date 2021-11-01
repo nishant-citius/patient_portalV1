@@ -6,6 +6,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { DemographicsReducer } from "./reducers/Demographicsreducer";
 import Immunizationreducer from "./reducers/Immunizationreducer";
 import VitalsReducer from "./reducers/Vitalsreducer";
+import DietPlanReducer from "./reducers/DietPlanreducer";
 import { LoginReducer } from "./reducers/loginReducer";
 import { MedicationandAllergiesReducer } from "./reducers/MedicationandAllergiesreducer";
 import { RegisterReducer } from "./reducers/RegisterReducer";
@@ -25,6 +26,7 @@ import { SpecialityPhysicianReducer } from "./reducers/userreducers/SpecialityPh
 import { GetAllAppointmentReducer } from "./reducers/GetAllAppointmentReducer";
 import { DeleteUserReducer } from "./reducers/userreducers/DeleteUserReducer";
 import { GetVitalsReducer } from "./reducers/GetVitalReducer";
+import { GetDietPlanReducer } from "./reducers/GetDietPlanReducer";
 import { UpdateImmunizationReducer } from "./reducers/UpdateImmunizationReducer";
 import { PatientMedicationAllergyReducer } from "./reducers/PatientMedicationAllergyReducer";
 import { GetAllDemographicsReducer } from "./reducers/userreducers/GetAllDemographicsReducer";
@@ -36,7 +38,9 @@ let rootReducer = combineReducers({
   demographics: DemographicsReducer,
   immunization: Immunizationreducer,
   vitals: VitalsReducer,
+  dietplan: DietPlanReducer,
   getPatientvitals: GetVitalsReducer,
+  getPatientdietplan: GetDietPlanReducer,
   medication_allergies: MedicationandAllergiesReducer,
   physicians: PhysicianReducer,
   adduser: AddUserReducer,
