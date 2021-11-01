@@ -35,6 +35,7 @@ import { object } from "yup/lib/locale";
 import AppointmentList from "./patient/AppointmentList";
 import ScheduleAppointment from "./patient/ScheduleAppointment";
 import PhysicianAppointment from "./physician/PhysicianAppointment";
+import LabReports from "./physician/reports";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -123,6 +124,7 @@ function ShellComponent(props) {
 
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
+        <Route path={"/reports"} component={LabReports} />
         <Route
           path={"/physician_appointments"}
           component={PhysicianAppointment}
@@ -137,10 +139,14 @@ function ShellComponent(props) {
         <Route path="/demographics" component={Demographics}>
           <Demographics flashNotification={showSnacksBar} />
         </Route>
-        <Route path="/immunization" component={Immunization} />
+        <Route path="/immunization" component={Immunization}>
+          <Immunization flashNotification={showSnacksBar} />
+        </Route>
         <Route path="/vitals" component={Vitals} />
         <Route path="/myprofile" component={MyProfile} />
-        <Route path="/medic_allergy" component={Medication_Allergies} />
+        <Route path="/medic_allergy" component={Medication_Allergies}>
+          <Medication_Allergies flashNotification={showSnacksBar} />
+        </Route>
         <Route
           path={"/patientdemographics/userid"}
           component={PatientDemographics}
@@ -153,7 +159,6 @@ function ShellComponent(props) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShellComponent);
 
-
-  /* <Route path="/about" component={About} />
+/* <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact-us" component={Contact} /> */

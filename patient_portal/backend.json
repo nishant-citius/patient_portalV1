@@ -466,18 +466,16 @@
       "Allerginicity": "IgE but no biological test"
     }
   ],
-  "lab_report":[
+  "lab_report": [
     {
-      "id":"",
-      "doc_id":"",
-      "patientId":"",
-      "blood_test":"",
-      "urine_test":"",
-      "scannings":"",
-      "xrays":"",
-      "others":""
-      
-
+      "id": "",
+      "doc_id": "",
+      "patientId": "",
+      "blood_test": "",
+      "urine_test": "",
+      "scannings": "",
+      "xrays": "",
+      "others": ""
     }
   ]
 }

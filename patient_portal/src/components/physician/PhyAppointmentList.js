@@ -91,7 +91,7 @@ export class AppointmentList extends React.Component {
   render() {
     return (
       <div>
-      <LabReports />
+      
       <div className="container mt-5">
         {/* <Link className="btn btn-warning" to="/physician">
           <BsFillArrowLeftSquareFill />
