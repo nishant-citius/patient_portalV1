@@ -72,6 +72,11 @@ export class PatientList extends React.Component {
     };
   }
 
+  componentDidMount() {
+    debugger;
+    this.props.getDemographics();
+  }
+
   deleteUser(userId) {
     this.props.removeUser(userId);
     this.props.flashNotification({
@@ -84,7 +89,7 @@ export class PatientList extends React.Component {
   render() {
     let handleChange = (event, newValue) => {
       this.setState({
-        [event]: newValue,
+        value: newValue,
       });
     };
     return (
