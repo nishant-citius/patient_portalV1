@@ -13,6 +13,7 @@ import Vitals from "./PatientVitals";
 import Immunization from "../patient/Immunization";
 import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 import LabReports from "../physician/reports";
+import DietPlan from "../physician/PatientDietPlan";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -83,13 +84,13 @@ const AttendAppointment = (props) => {
           >
             <Tab label="Record Patient Vital" {...a11yProps(0)} />
             <Tab label="Immunization" {...a11yProps(1)} />
-            <Tab label="Medication Allergies" {...a11yProps(0)} />
-            <Tab label="Diagnosis/Lab Reports" {...a11yProps(1)} />
-            <Tab label="Diet Plan" {...a11yProps(0)} />
+            <Tab label="Medication Allergies" {...a11yProps(2)} />
+            <Tab label="Diagnosis/Lab Reports" {...a11yProps(3)} />
+            <Tab label="Diet Plan" {...a11yProps(4)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Vitals />
+          <Vitals patientId={props.apptDetails}/>
         </TabPanel>
 
         <TabPanel value={value} index={1}>
@@ -105,7 +106,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={4}>
-        <Vitals />
+        <DietPlan />
         </TabPanel>
       </Box>
     </>
