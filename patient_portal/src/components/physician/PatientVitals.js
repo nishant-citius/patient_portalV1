@@ -32,55 +32,73 @@ const Vitals = (props) => {
     );
   }
 
-  const initialValues = {
-    patient: "",
-    height: "",
-    weight: "",
-    blood_pressure: "",
-    temperature: "",
-    pulse: "",
-    respiration: "",
-    oxigen_saturation: "",
-    userid: props.currentUser.id,
-  };
+   function updatePatientVitals(appointments) {
+     let appointmentData = appointments,
+       newData = {
+         ...appointments,
+         status: "approved",
+       };
 
-  if (available) {
-    savedValues = {
-      height: patientVitals[0].height,
-      weight: patientVitals[0].weight,
-      blood_pressure: patientVitals[0].blood_pressure,
-      temperature: patientVitals[0].temperature,
-      pulse: patientVitals[0].pulse,
-      respiration: patientVitals[0].respiration,
-      oxigen_saturation: patientVitals[0].oxigen_saturation,
-      userid: props.currentUser.id,
-    };
-  }
+     adminService.editAppointment(appointmentData.id, newData).then(
+       (response) => {
+         if (response.status === 200) {
+           alert("approved");
+           this.props.getAppointments(this.props.currentUser.id);
+         }
+       },
+       (error) => {}
+     );
+   }
 
-  const validationSchema = Yup.object().shape({
-    height: Yup.string().required("Required"),
-    weight: Yup.string().required("Required"),
-    blood_pressure: Yup.string().required("Required"),
-    temperature: Yup.string().required("Required"),
-    pulse: Yup.string().required("Required"),
-    respiration: Yup.string().required("Required"),
-    oxigen_saturation: Yup.string().required("Required"),
-  });
+   const initialValues = {
+     patient: "",
+     height: "",
+     weight: "",
+     blood_pressure: "",
+     temperature: "",
+     pulse: "",
+     respiration: "",
+     oxigen_saturation: "",
+     userid: props.currentUser.id,
+   };
 
-  const onSubmit = (values) => {
-    const payload = {
-      height: values.height,
-      weight: values.weight,
-      blood_pressure: values.blood_pressure,
-      temperature: values.temperature,
-      pulse: values.pulse,
-      respiration: values.respiration,
-      oxigen_saturation: values.oxigen_saturation,
-      physicianId: props.currentUser.id,
-      patientId: patientId,
-    };
-    props.vitals(payload);
-  };
+   if (available) {
+     savedValues = {
+       height: patientVitals[0].height,
+       weight: patientVitals[0].weight,
+       blood_pressure: patientVitals[0].blood_pressure,
+       temperature: patientVitals[0].temperature,
+       pulse: patientVitals[0].pulse,
+       respiration: patientVitals[0].respiration,
+       oxigen_saturation: patientVitals[0].oxigen_saturation,
+       userid: props.currentUser.id,
+     };
+   }
+
+   const validationSchema = Yup.object().shape({
+     height: Yup.string().required("Required"),
+     weight: Yup.string().required("Required"),
+     blood_pressure: Yup.string().required("Required"),
+     temperature: Yup.string().required("Required"),
+     pulse: Yup.string().required("Required"),
+     respiration: Yup.string().required("Required"),
+     oxigen_saturation: Yup.string().required("Required"),
+   });
+
+   const onSubmit = (values) => {
+     const payload = {
+       height: values.height,
+       weight: values.weight,
+       blood_pressure: values.blood_pressure,
+       temperature: values.temperature,
+       pulse: values.pulse,
+       respiration: values.respiration,
+       oxigen_saturation: values.oxigen_saturation,
+       physicianId: props.currentUser.id,
+       patientId: patientId,
+     };
+     available ? props.vitals(payload) : props.payload();
+   };
 
   return (
     <Formik

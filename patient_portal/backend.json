@@ -621,18 +621,6 @@
       "physicianId": 12,
       "patientId": 24,
       "id": 3
-    },
-    {
-      "height": "5'5",
-      "weight": "58",
-      "blood_pressure": "110/25mg",
-      "temperature": "88",
-      "pulse": "100",
-      "respiration": "Very Very Bad",
-      "oxigen_saturation": "Very Bad",
-      "physicianId": 12,
-      "patientId": 24,
-      "id": 4
     }
   ],
   "order": [
