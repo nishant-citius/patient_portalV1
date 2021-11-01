@@ -209,7 +209,7 @@
   ],
   "medic_allergy": [
     {
-      "userid": 24,
+      "userid": 12,
       "current_medication": [
         {
           "medicineName": "Dolo 650",
@@ -247,7 +247,7 @@
       "id": 24
     },
     {
-      "userid": 24,
+      "userid": 12,
       "current_medication": [
         {
           "medicineName": "",
