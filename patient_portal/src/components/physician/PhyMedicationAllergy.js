@@ -15,7 +15,7 @@ const PhyMedicationAllergies = (props) => {
       }
     }
   }, []);
-  console.log("Nishant chaubey", props.mediAllergyDetails);
+  console.log(props.mediAllergyDetails);
   const initialValues = {
     id: "",
     userId: "",
