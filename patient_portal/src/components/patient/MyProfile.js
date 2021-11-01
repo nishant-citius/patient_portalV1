@@ -1,13 +1,14 @@
 import { render } from "@testing-library/react";
-import { Container } from "mui";
+import { CardContent, Container } from "mui";
 import React, { Component } from "react";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { connect } from "react-redux";
 import DefaultUserpic from "../../images/doc_1.jpg";
 import * as actions from "../../redux/actions/userActionCreater";
-import Grid from "@material-ui/core/Grid";
-
+import {Grid,Card} from "mui";
+import {BsFillPencilFill} from "react-icons/bs";
+import { Link } from "react-router-dom";
 class MyProfile extends Component {
   constructor(props) {
     super(props);
@@ -27,18 +28,18 @@ class MyProfile extends Component {
     };
   }
 
-  updateprofilehandler = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("profileImage", this.state.profileImage);
-    this.props.updateProfile(this.state.profileImage, this.props.currentUser);
-  };
+  // updateprofilehandler = (e) => {
+  //   e.preventDefault();
+  //   const formData = new FormData();
+  //   formData.append("profileImage", this.state.profileImage);
+  //   this.props.updateProfile(this.state.profileImage, this.props.currentUser);
+  // };
 
-  profilechange = (e) => {
-    this.setState({
-      profileImage: e.target.files[0],
-    });
-  };
+  // profilechange = (e) => {
+  //   this.setState({
+  //     profileImage: e.target.files[0],
+  //   });
+  // };
 
   render() {
     if (this.state.profileImage) {
@@ -54,9 +55,12 @@ class MyProfile extends Component {
               <img src={profilePic} alt={profilePic} width="190" />
             </Grid>
             <Grid item xl={6}>
+              <Card className="pl-9">
+                <CardContent>
               <h3 className="text-success text-center fw-bold ">
                 User Profile
               </h3>
+              
               <table className="table table-bordered shadow mt-4">
                 <thead className="table-dark">
                   <tr>
@@ -65,6 +69,7 @@ class MyProfile extends Component {
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Blood Group</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -74,25 +79,32 @@ class MyProfile extends Component {
                     <td>{this.state.email}</td>
                     <td>{this.state.mobile}</td>
                     <td>{this.state.blood_group}</td>
+                    <td>
+                    <Link to={`/edit/${this.state.userId}`}>
+                          <BsFillPencilFill />
+                        </Link>
+                    </td>
                   </tr>
                 </tbody>
               </table>
               <div class="form-group">
-                <label>Profile Image</label>
+                {/* <label>Profile Image</label>
                 <input
                   type="file"
                   name="profileImage"
                   onChange={this.profilechange}
                   class="form-control"
-                />
+                /> */}
               </div>
-              <button
+              {/* <button
                 type="submit"
                 onClick={this.updateprofilehandler}
                 className="btn btn-primary mt-2"
               >
                 Update Profile
-              </button>
+              </button> */}
+              </CardContent>
+              </Card>
             </Grid>
           </Grid>
           <br />

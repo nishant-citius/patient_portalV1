@@ -170,79 +170,80 @@
   ],
   "medic_allergy": [
     {
-      "userid": 1,
-      "current_medication": [
-        {
-          "medicineName": "njnjnj",
-          "dosage": "njnjn",
-          "directionstoconsume": "njnjnj",
-          "frequency": "njnjnjn",
-          "physicianName": "jnjnjnj",
-          "purpose": "njnjnjnjn",
-          "startDate": "2021-10-20",
-          "endDate": "2021-10-20"
-        },
-        {
-          "medicineName": "knjn",
-          "dosage": "jnjnj",
-          "directionstoconsume": "jkk",
-          "frequency": "iiim",
-          "physicianName": "imimi",
-          "purpose": "mimimim",
-          "startDate": "2021-10-12",
-          "endDate": "2021-10-14"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "jnjnjn",
-          "strength": "jnjnjnj",
-          "directiontoconsume": "njnjnjnj",
-          "socialDrugs": "smoke"
-        },
-        {
-          "otcDrugName": "huhuh",
-          "strength": "uhuhuh",
-          "directiontoconsume": "jiiimim",
-          "socialDrugs": "illicit"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "jijij",
-          "strength": "ijij",
-          "directiontoconsume": "ijiji"
-        },
-        {
-          "pastdrugName": "iijijij",
-          "strength": "ijiji",
-          "directiontoconsume": "ijij"
-        },
-        {
-          "pastdrugName": "nununu",
-          "strength": "nununun",
-          "directiontoconsume": "unununu"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "ijijij",
-          "symptomsofAllergy": "ijiji",
-          "drugAllergy": "jijiji"
-        },
-        {
-          "allergyName": "iiimi",
-          "symptomsofAllergy": "imimimi",
-          "drugAllergy": "mimimi"
-        },
-        {
-          "allergyName": "kimimi",
-          "symptomsofAllergy": "imimimi",
-          "drugAllergy": "mimimi"
-        }
-      ],
-      "id": 2
-    }
+    "userid": 1,
+    "current_medication": [
+      {
+        "medicineName": "njnjnj",
+        "dosage": "njnjn",
+        "directionstoconsume": "njnjnj",
+        "frequency": "njnjnjn",
+        "physicianName": "jnjnjnj",
+        "purpose": "njnjnjnjn",
+        "startDate": "2021-10-20",
+        "endDate": "2021-10-20"
+      },
+      {
+        "medicineName": "knjn",
+        "dosage": "jnjnj",
+        "directionstoconsume": "jkk",
+        "frequency": "iiim",
+        "physicianName": "imimi",
+        "purpose": "mimimim",
+        "startDate": "2021-10-12",
+        "endDate": "2021-10-14"
+      }
+    ],
+    "otc_medication": [
+      {
+        "otcDrugName": "jnjnjn",
+        "strength": "jnjnjnj",
+        "directiontoconsume": "njnjnjnj",
+        "socialDrugs": "smoke"
+      },
+      {
+        "otcDrugName": "huhuh",
+        "strength": "uhuhuh",
+        "directiontoconsume": "jiiimim",
+        "socialDrugs": "illicit"
+      }
+    ],
+    "past_medication": [
+      {
+        "pastdrugName": "jijij",
+        "strength": "ijij",
+        "directiontoconsume": "ijiji"
+      },
+      {
+        "pastdrugName": "iijijij",
+        "strength": "ijiji",
+        "directiontoconsume": "ijij"
+      },
+      {
+        "pastdrugName": "nununu",
+        "strength": "nununun",
+        "directiontoconsume": "unununu"
+      }
+    ],
+    "allergies": [
+      {
+        "allergyName": "ijijij",
+        "symptomsofAllergy": "ijiji",
+        "drugAllergy": "jijiji"
+      },
+      {
+        "allergyName": "iiimi",
+        "symptomsofAllergy": "imimimi",
+        "drugAllergy": "mimimi"
+      },
+      {
+        "allergyName": "kimimi",
+        "symptomsofAllergy": "imimimi",
+        "drugAllergy": "mimimi"
+      }
+    ],
+    "id": 2
+  }
+
   ],
   "immunization": [
     {
@@ -316,13 +317,13 @@
     },
     {
       "height": "4.8",
-      "weight": "",
-      "blood_pressure": "",
+      "weight": "55",
+      "blood_pressure": "70/80",
       "temperature": "98",
       "pulse": "",
       "respiration": "",
       "oxigen_saturation": "",
-      "userid": 11,
+      "userid": 1,
       "id": 2
     },
     {
