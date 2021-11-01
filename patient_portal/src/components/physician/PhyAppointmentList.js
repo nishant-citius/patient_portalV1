@@ -73,7 +73,7 @@ export class AppointmentList extends React.Component {
   render() {
     return (
       <div>
-      <PhyMedicationAllergies />
+      
       <div className="container mt-5">
         {/* <Link className="btn btn-warning" to="/physician">
           <BsFillArrowLeftSquareFill />

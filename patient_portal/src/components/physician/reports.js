@@ -63,60 +63,60 @@ const LabReports = (props) => {
                   </label><br></br> */}
                   <div className="row">
                     <div className="col-4">
-                      <label htmlFor="height">Blod test </label>
+                      <label htmlFor="blood_test">Blod test </label>
                       <Field
                         type="text"
                         className="form-control"
-                        name="height"
+                        name="blood_test"
                       />
                       <div className="error">
-                        <ErrorMessage name="height" />
+                        <ErrorMessage name="blood_test" />
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="weight">Urine test</label>
+                      <label htmlFor="urine_test">Urine test</label>
                       <Field
                         type="text"
                         className="form-control"
-                        name="weight"
+                        name="urine_test"
                       />
                       <div className="error">
-                        <ErrorMessage name="height" />
-                      </div>
-                      
-                    </div>
-                    <div className="col-4">
-                      <label htmlFor="blood_pressure">Scaninings</label>
-                      <Field
-                        type="text"
-                        className="form-control"
-                        name="blood_pressure"
-                      />
-                      <div className="error">
-                        <ErrorMessage name="height" />
+                        <ErrorMessage name="urine_test" />
                       </div>
                       
                     </div>
                     <div className="col-4">
-                      <label htmlFor="temperature">X-rays</label>
+                      <label htmlFor="scannings">Scaninings</label>
                       <Field
                         type="text"
                         className="form-control"
-                        name="temperature"
+                        name="scannings"
                       />
                       <div className="error">
-                        <ErrorMessage name="height" />
+                        <ErrorMessage name="scannings" />
+                      </div>
+                      
+                    </div>
+                    <div className="col-4">
+                      <label htmlFor="xrays">X-rays</label>
+                      <Field
+                        type="text"
+                        className="form-control"
+                        name="xrays"
+                      />
+                      <div className="error">
+                        <ErrorMessage name="xrays" />
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="weight">other test</label>
+                      <label htmlFor="others">other test</label>
                       <Field
                         type="text"
                         className="form-control"
-                        name="weight"
+                        name="others"
                       />
                       <div className="error">
-                        <ErrorMessage name="height" />
+                        <ErrorMessage name="others" />
                       </div>
                     </div>
                   </div>
@@ -136,7 +136,7 @@ const LabReports = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return {
+  return { 
     currentUser: state.login.loggedUserInfo,
     allusers: state.vitals.Vitalsreducer,
   };

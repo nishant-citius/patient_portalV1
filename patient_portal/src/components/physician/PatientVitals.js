@@ -7,7 +7,7 @@ import { useHistory } from "react-router";
 
 const Vitals = (props) => {
   const initialValues = {
-    height: "",
+    patient: "",
     weight: "",
     blood_pressure: "",
     temperature: "",
