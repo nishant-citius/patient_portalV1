@@ -57,16 +57,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Patient_dashboard = (props) => {
-  //  useEffect(() => {
-  //   if (props.isLoggedIn) {
-  //     if (!props.mediAllergyDetails) {
-  //       return;
-  //     } else {
-  //       console.log("<---AAAAAAAAA--->", props.mediAllergyDetails);
-  //     }
-  //   }
-  // }, [props.mediAllergyDetails, props.isLoggedIn]);
-
   const classes = useStyles();
   console.log(props.mediAllergyDetails, "after useeffect");
   console.log("pooja", props.patientvitalsDetails);
