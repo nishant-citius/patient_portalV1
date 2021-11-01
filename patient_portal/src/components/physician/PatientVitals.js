@@ -32,75 +32,95 @@ const Vitals = (props) => {
     );
   }
 
-   function updatePatientVitals(appointments) {
-     let appointmentData = appointments,
-       newData = {
-         ...appointments,
-         status: "approved",
-       };
+  function updatePatientVitals(patientId, newData) {
+    adminService.updatePatientVitals(patientId, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("Patient Vitals Updated Successfully...");
+        }
+      },
+      (error) => {}
+    );
+  }
 
-     adminService.editAppointment(appointmentData.id, newData).then(
-       (response) => {
-         if (response.status === 200) {
-           alert("approved");
-           this.props.getAppointments(this.props.currentUser.id);
-         }
-       },
-       (error) => {}
-     );
-   }
+  const initialValues = {
+    patient: "",
+    height: "",
+    weight: "",
+    blood_pressure: "",
+    temperature: "",
+    pulse: "",
+    respiration: "",
+    oxigen_saturation: "",
+    userid: props.currentUser.id,
+  };
 
-   const initialValues = {
-     patient: "",
-     height: "",
-     weight: "",
-     blood_pressure: "",
-     temperature: "",
-     pulse: "",
-     respiration: "",
-     oxigen_saturation: "",
-     userid: props.currentUser.id,
-   };
+  if (available) {
+    savedValues = {
+      height: patientVitals[0].height,
+      weight: patientVitals[0].weight,
+      blood_pressure: patientVitals[0].blood_pressure,
+      temperature: patientVitals[0].temperature,
+      pulse: patientVitals[0].pulse,
+      respiration: patientVitals[0].respiration,
+      oxigen_saturation: patientVitals[0].oxigen_saturation,
+      userid: props.currentUser.id,
+    };
+  }
 
-   if (available) {
-     savedValues = {
-       height: patientVitals[0].height,
-       weight: patientVitals[0].weight,
-       blood_pressure: patientVitals[0].blood_pressure,
-       temperature: patientVitals[0].temperature,
-       pulse: patientVitals[0].pulse,
-       respiration: patientVitals[0].respiration,
-       oxigen_saturation: patientVitals[0].oxigen_saturation,
-       userid: props.currentUser.id,
-     };
-   }
+  const validationSchema = Yup.object().shape({
+    height: Yup.string().required("Required"),
+    weight: Yup.string().required("Required"),
+    blood_pressure: Yup.string().required("Required"),
+    temperature: Yup.string().required("Required"),
+    pulse: Yup.string().required("Required"),
+    respiration: Yup.string().required("Required"),
+    oxigen_saturation: Yup.string().required("Required"),
+  });
 
-   const validationSchema = Yup.object().shape({
-     height: Yup.string().required("Required"),
-     weight: Yup.string().required("Required"),
-     blood_pressure: Yup.string().required("Required"),
-     temperature: Yup.string().required("Required"),
-     pulse: Yup.string().required("Required"),
-     respiration: Yup.string().required("Required"),
-     oxigen_saturation: Yup.string().required("Required"),
-   });
-
-   const onSubmit = (values) => {
-     const payload = {
-       height: values.height,
-       weight: values.weight,
-       blood_pressure: values.blood_pressure,
-       temperature: values.temperature,
-       pulse: values.pulse,
-       respiration: values.respiration,
-       oxigen_saturation: values.oxigen_saturation,
-       physicianId: props.currentUser.id,
-       patientId: patientId,
-     };
-     available ? props.vitals(payload) : props.payload();
-   };
+  const onSubmit = (values) => {
+    const payload = {
+      height: values.height,
+      weight: values.weight,
+      blood_pressure: values.blood_pressure,
+      temperature: values.temperature,
+      pulse: values.pulse,
+      respiration: values.respiration,
+      oxigen_saturation: values.oxigen_saturation,
+      physicianId: props.currentUser.id,
+      patientId: patientId,
+    };
+    available ? props.vitals(payload) : updatePatientVitals(patientId, payload);
+  };
 
   return (
+    // <div className="container mt-5">
+    //   <h1 className="text-success text-center fw-bold ">Patient Vitals</h1>
+    //   <table className="table table-bordered shadow mt-4">
+    //     <thead className="table-dark">
+    //       <tr>
+    //         <th scope="col">Patient Name</th>
+    //         <th scope="col">Height</th>
+    //         <th scope="col">Weight</th>
+    //         <th scope="col">Blood Pressure</th>
+    //         <th scope="col">Temperature</th>
+    //         <th scope="col">Pulse</th>
+    //         <th scope="col">Respiration</th>
+    //         <th scope="col">Oxygen Saturation</th>
+    //       </tr>
+    //     </thead>
+    //     <tbody>
+    //       <td>{patientVitals[0].height}</td>
+    //       <td>{patientVitals[0].weight}</td>
+    //       <td>{patientVitals[0].blood_pressure}</td>
+    //       <td>{patientVitals[0].temperature}</td>
+    //       <td>{patientVitals[0].pulse}</td>
+    //       <td>{patientVitals[0].respiration}</td>
+    //       <td>{patientVitals[0].oxigen_saturation}</td>;
+    //     </tbody>
+    //   </table>
+    // </div>
+
     <Formik
       initialValues={savedValues || initialValues}
       validationSchema={validationSchema}

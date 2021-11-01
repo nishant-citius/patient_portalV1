@@ -52,6 +52,17 @@ class UserServices {
     return axios.post(url, JSON.stringify(user), config);
   }
 
+  Addpatientdietplan(user) {
+    let url = URLS.BASE_URL + "/dietplan";
+
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.post(url, JSON.stringify(user), config);
+  }
+
   // Addmedicationandallergies(user) {
   //   let url = URLS.BASE_URL + "/medic_allergy";
 
@@ -102,7 +113,7 @@ class AdminServices {
   }
 
   getPatientAppointments(patientId) {
-    const url = `${URLS.BASE_URL}/appointments?patientid=${patientId}`;
+    const url = `${URLS.BASE_URL}/appointments?patientId=${patientId}`;
     return axios.get(url);
   }
 

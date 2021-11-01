@@ -1,0 +1,1572 @@
+﻿[
+{
+  "ApplNo": "4",
+  "ProductNo": "4",
+  "Form": "SOLUTION/DROPS;OPHTHALMIC",
+  "Strength": "1%",
+  "ReferenceDrug": "0",
+  "DrugName": "PAREDRINE",
+  "ActiveIngredient": "HYDROXYAMPHETAMINE HYDROBROMIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "159",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "500MG",
+  "ReferenceDrug": "0",
+  "DrugName": "SULFAPYRIDINE",
+  "ActiveIngredient": "SULFAPYRIDINE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "20,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "40,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "5",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "7",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "100 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN LOCK FLUSH",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "8",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "9",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "10",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "11",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "12",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "552",
+  "ProductNo": "13",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "734",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "EQ 1MG BASE/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HISTAMINE PHOSPHATE",
+  "ActiveIngredient": "HISTAMINE PHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "734",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "EQ 0.2MG BASE/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HISTAMINE PHOSPHATE",
+  "ActiveIngredient": "HISTAMINE PHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "734",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "EQ 0.1MG BASE/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HISTAMINE PHOSPHATE",
+  "ActiveIngredient": "HISTAMINE PHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "793",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "15MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "0",
+  "DrugName": "BUTISOL SODIUM",
+  "ActiveIngredient": "BUTABARBITAL SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "793",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "50MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "0",
+  "DrugName": "BUTISOL SODIUM",
+  "ActiveIngredient": "BUTABARBITAL SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "793",
+  "ProductNo": "4",
+  "Form": "TABLET;ORAL",
+  "Strength": "30MG",
+  "ReferenceDrug": "1",
+  "DrugName": "BUTISOL SODIUM",
+  "ActiveIngredient": "BUTABARBITAL SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "793",
+  "ProductNo": "5",
+  "Form": "TABLET;ORAL",
+  "Strength": "100MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "0",
+  "DrugName": "BUTISOL SODIUM",
+  "ActiveIngredient": "BUTABARBITAL SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "1104",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "DOCA",
+  "ActiveIngredient": "DESOXYCORTICOSTERONE ACETATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "1504",
+  "ProductNo": "1",
+  "Form": "UNKNOWN",
+  "Strength": "UNKNOWN",
+  "ReferenceDrug": "0",
+  "DrugName": "VERARD",
+  "ActiveIngredient": "VERARD",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "1546",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "125MG",
+  "ReferenceDrug": "0",
+  "DrugName": "GUANIDINE HYDROCHLORIDE",
+  "ActiveIngredient": "GUANIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "2139",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "MENADIONE",
+  "ActiveIngredient": "MENADIONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "2282",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "100MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "INULIN AND SODIUM CHLORIDE",
+  "ActiveIngredient": "INULIN",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "2386",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "100MG",
+  "ReferenceDrug": "0",
+  "DrugName": "AMINOPHYLLIN",
+  "ActiveIngredient": "AMINOPHYLLINE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "2386",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "200MG",
+  "ReferenceDrug": "0",
+  "DrugName": "AMINOPHYLLIN",
+  "ActiveIngredient": "AMINOPHYLLINE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "2918",
+  "ProductNo": "1",
+  "Form": "POWDER;TOPICAL",
+  "Strength": "33.32%",
+  "ReferenceDrug": "0",
+  "DrugName": "BENSULFOID",
+  "ActiveIngredient": "SULFUR",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3158",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "10MG",
+  "ReferenceDrug": "0",
+  "DrugName": "ORETON METHYL",
+  "ActiveIngredient": "METHYLTESTOSTERONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3158",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "ORETON METHYL",
+  "ActiveIngredient": "METHYLTESTOSTERONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3240",
+  "ProductNo": "1",
+  "Form": "TABLET;BUCCAL, SUBLINGUAL",
+  "Strength": "10MG",
+  "ReferenceDrug": "0",
+  "DrugName": "METANDREN",
+  "ActiveIngredient": "METHYLTESTOSTERONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3240",
+  "ProductNo": "3",
+  "Form": "TABLET;BUCCAL, SUBLINGUAL",
+  "Strength": "25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "METANDREN",
+  "ActiveIngredient": "METHYLTESTOSTERONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3240",
+  "ProductNo": "4",
+  "Form": "TABLET;BUCCAL, SUBLINGUAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "METANDREN",
+  "ActiveIngredient": "METHYLTESTOSTERONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3240",
+  "ProductNo": "5",
+  "Form": "TABLET;BUCCAL, SUBLINGUAL",
+  "Strength": "10MG",
+  "ReferenceDrug": "0",
+  "DrugName": "METANDREN",
+  "ActiveIngredient": "METHYLTESTOSTERONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3402",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5PRESSOR UNITS/ML **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "PITRESSIN TANNATE",
+  "ActiveIngredient": "VASOPRESSIN TANNATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3444",
+  "ProductNo": "1",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "50,000 IU",
+  "ReferenceDrug": "1",
+  "DrugName": "DRISDOL",
+  "ActiveIngredient": "ERGOCALCIFEROL",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "3718",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "SYNKAYVITE",
+  "ActiveIngredient": "MENADIOL SODIUM DIPHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3718",
+  "ProductNo": "6",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "SYNKAYVITE",
+  "ActiveIngredient": "MENADIOL SODIUM DIPHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3718",
+  "ProductNo": "8",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "37.5MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "SYNKAYVITE",
+  "ActiveIngredient": "MENADIOL SODIUM DIPHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3718",
+  "ProductNo": "10",
+  "Form": "TABLET;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "SYNKAYVITE",
+  "ActiveIngredient": "MENADIOL SODIUM DIPHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3977",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "THEELIN",
+  "ActiveIngredient": "ESTRONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3977",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "2MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "THEELIN",
+  "ActiveIngredient": "ESTRONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "3977",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "THEELIN",
+  "ActiveIngredient": "ESTRONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4039",
+  "ProductNo": "2",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "0.1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4039",
+  "ProductNo": "3",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4039",
+  "ProductNo": "4",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4039",
+  "ProductNo": "5",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "0.25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4039",
+  "ProductNo": "6",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4040",
+  "ProductNo": "1",
+  "Form": "SUPPOSITORY;VAGINAL",
+  "Strength": "0.1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4040",
+  "ProductNo": "2",
+  "Form": "SUPPOSITORY;VAGINAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4041",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4041",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4041",
+  "ProductNo": "4",
+  "Form": "TABLET;ORAL",
+  "Strength": "1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4041",
+  "ProductNo": "5",
+  "Form": "TABLET;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIETHYLSTILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4054",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "500MG",
+  "ReferenceDrug": "0",
+  "DrugName": "SULFADIAZINE",
+  "ActiveIngredient": "SULFADIAZINE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4054",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "250MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "SULFADIAZINE SODIUM",
+  "ActiveIngredient": "SULFADIAZINE SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "1",
+  "Form": "SUPPOSITORY;VAGINAL",
+  "Strength": "0.1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "2",
+  "Form": "SUPPOSITORY;VAGINAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "0.2MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "0.5MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "5",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "6",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBESTROL",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "7",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "8",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "9",
+  "Form": "TABLET;ORAL",
+  "Strength": "1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "10",
+  "Form": "TABLET;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "11",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "0.1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "12",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "13",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "14",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4056",
+  "ProductNo": "17",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "STILBETIN",
+  "ActiveIngredient": "DIETHYLSTILBESTROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4122",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "500MG",
+  "ReferenceDrug": "1",
+  "DrugName": "SULFADIAZINE",
+  "ActiveIngredient": "SULFADIAZINE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4125",
+  "ProductNo": "5",
+  "Form": "TABLET;ORAL",
+  "Strength": "300MG",
+  "ReferenceDrug": "0",
+  "DrugName": "SULFADIAZINE",
+  "ActiveIngredient": "SULFADIAZINE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4570",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4570",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4570",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4589",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5ML/100ML;5GM/100ML",
+  "ReferenceDrug": "0",
+  "DrugName": "ALCOHOL 5% AND DEXTROSE 5%",
+  "ActiveIngredient": "ALCOHOL; DEXTROSE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4589",
+  "ProductNo": "6",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10ML/100ML;5GM/100ML",
+  "ReferenceDrug": "0",
+  "DrugName": "ALCOHOL 10% AND DEXTROSE 5%",
+  "ActiveIngredient": "ALCOHOL; DEXTROSE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4782",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "1.25MG",
+  "ReferenceDrug": "1",
+  "DrugName": "PREMARIN",
+  "ActiveIngredient": "ESTROGENS, CONJUGATED",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "4782",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "2.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "PREMARIN",
+  "ActiveIngredient": "ESTROGENS, CONJUGATED",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4782",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.3MG",
+  "ReferenceDrug": "1",
+  "DrugName": "PREMARIN",
+  "ActiveIngredient": "ESTROGENS, CONJUGATED",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "4782",
+  "ProductNo": "4",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.625MG",
+  "ReferenceDrug": "1",
+  "DrugName": "PREMARIN",
+  "ActiveIngredient": "ESTROGENS, CONJUGATED",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "4782",
+  "ProductNo": "5",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.9MG",
+  "ReferenceDrug": "1",
+  "DrugName": "PREMARIN",
+  "ActiveIngredient": "ESTROGENS, CONJUGATED",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "4782",
+  "ProductNo": "6",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.45MG",
+  "ReferenceDrug": "1",
+  "DrugName": "PREMARIN",
+  "ActiveIngredient": "ESTROGENS, CONJUGATED",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "50MG",
+  "ReferenceDrug": "1",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "50MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "100MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "4",
+  "Form": "TABLET;ORAL",
+  "Strength": "100MG",
+  "ReferenceDrug": "1",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "5",
+  "Form": "SYRUP;ORAL",
+  "Strength": "50MG/5ML **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "0",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "7",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "25MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5010",
+  "ProductNo": "9",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "75MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "DEMEROL",
+  "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5151",
+  "ProductNo": "1",
+  "Form": "PELLET;IMPLANTATION",
+  "Strength": "125MG",
+  "ReferenceDrug": "0",
+  "DrugName": "PERCORTEN",
+  "ActiveIngredient": "DESOXYCORTICOSTERONE ACETATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5213",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "1.5MG;5MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "HYCODAN",
+  "ActiveIngredient": "HOMATROPINE METHYLBROMIDE; HYDROCODONE BITARTRATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5213",
+  "ProductNo": "2",
+  "Form": "SYRUP;ORAL",
+  "Strength": "1.5MG/5ML;5MG/5ML",
+  "ReferenceDrug": "1",
+  "DrugName": "HYCODAN",
+  "ActiveIngredient": "HOMATROPINE METHYLBROMIDE; HYDROCODONE BITARTRATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "PANHEPRIN",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "6",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "PANHEPRIN",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "7",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "PANHEPRIN",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "8",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "20,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "PANHEPRIN",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "9",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "40,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "PANHEPRIN",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "10",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "100 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN LOCK FLUSH",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "13",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "2,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM PRESERVATIVE FREE",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5264",
+  "ProductNo": "14",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "2,500 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM PRESERVATIVE FREE",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5292",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.02MG",
+  "ReferenceDrug": "0",
+  "DrugName": "ESTINYL",
+  "ActiveIngredient": "ETHINYL ESTRADIOL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5292",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.05MG",
+  "ReferenceDrug": "0",
+  "DrugName": "ESTINYL",
+  "ActiveIngredient": "ETHINYL ESTRADIOL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5292",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "ESTINYL",
+  "ActiveIngredient": "ETHINYL ESTRADIOL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5319",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "100%",
+  "ReferenceDrug": "0",
+  "DrugName": "PANTOPAQUE",
+  "ActiveIngredient": "IOPHENDYLATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5378",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "1",
+  "DrugName": "DESOXYN",
+  "ActiveIngredient": "METHAMPHETAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "5378",
+  "ProductNo": "3",
+  "Form": "TABLET, EXTENDED RELEASE;ORAL",
+  "Strength": "10MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DESOXYN",
+  "ActiveIngredient": "METHAMPHETAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5378",
+  "ProductNo": "4",
+  "Form": "TABLET, EXTENDED RELEASE;ORAL",
+  "Strength": "5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DESOXYN",
+  "ActiveIngredient": "METHAMPHETAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5378",
+  "ProductNo": "5",
+  "Form": "TABLET, EXTENDED RELEASE;ORAL",
+  "Strength": "15MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DESOXYN",
+  "ActiveIngredient": "METHAMPHETAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5490",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.05MG",
+  "ReferenceDrug": "0",
+  "DrugName": "LYNORAL",
+  "ActiveIngredient": "ETHINYL ESTRADIOL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5490",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.01MG",
+  "ReferenceDrug": "0",
+  "DrugName": "LYNORAL",
+  "ActiveIngredient": "ETHINYL ESTRADIOL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5509",
+  "ProductNo": "1",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "50MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DICUMAROL",
+  "ActiveIngredient": "DICUMAROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5509",
+  "ProductNo": "3",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DICUMAROL",
+  "ActiveIngredient": "DICUMAROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5521",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5521",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5521",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "20,000 UNITS/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "HEPARIN SODIUM",
+  "ActiveIngredient": "HEPARIN SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5545",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DICUMAROL",
+  "ActiveIngredient": "DICUMAROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5545",
+  "ProductNo": "4",
+  "Form": "TABLET;ORAL",
+  "Strength": "50MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DICUMAROL",
+  "ActiveIngredient": "DICUMAROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5545",
+  "ProductNo": "5",
+  "Form": "TABLET;ORAL",
+  "Strength": "100MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DICUMAROL",
+  "ActiveIngredient": "DICUMAROL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5619",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "20%",
+  "ReferenceDrug": "0",
+  "DrugName": "AMINOHIPPURATE SODIUM",
+  "ActiveIngredient": "AMINOHIPPURATE SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5620",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "12.5GM/50ML",
+  "ReferenceDrug": "0",
+  "DrugName": "MANNITOL 25%",
+  "ActiveIngredient": "MANNITOL",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5657",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "3MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "TUBOCURARINE CHLORIDE",
+  "ActiveIngredient": "TUBOCURARINE CHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5691",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "130CSR UNIT",
+  "ReferenceDrug": "0",
+  "DrugName": "VERTAVIS",
+  "ActiveIngredient": "VERATRUM VIRIDE ROOT",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5725",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "KAPPADIONE",
+  "ActiveIngredient": "MENADIOL SODIUM DIPHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5794",
+  "ProductNo": "1",
+  "Form": "CREAM;VAGINAL",
+  "Strength": "3.7%;2.86%;3.42%",
+  "ReferenceDrug": "0",
+  "DrugName": "SULTRIN",
+  "ActiveIngredient": "TRIPLE SULFA (SULFABENZAMIDE;SULFACETAMIDE;SULFATHIAZOLE)",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5794",
+  "ProductNo": "2",
+  "Form": "TABLET;VAGINAL",
+  "Strength": "184MG;143.75MG;172.5MG",
+  "ReferenceDrug": "0",
+  "DrugName": "SULTRIN",
+  "ActiveIngredient": "TRIPLE SULFA (SULFABENZAMIDE;SULFACETAMIDE;SULFATHIAZOLE)",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5795",
+  "ProductNo": "1",
+  "Form": "OINTMENT;TOPICAL",
+  "Strength": "0.20%",
+  "ReferenceDrug": "0",
+  "DrugName": "FURACIN",
+  "ActiveIngredient": "NITROFURAZONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5845",
+  "ProductNo": "1",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "50MG",
+  "ReferenceDrug": "0",
+  "DrugName": "BENADRYL",
+  "ActiveIngredient": "DIPHENHYDRAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5845",
+  "ProductNo": "4",
+  "Form": "ELIXIR;ORAL",
+  "Strength": "12.5MG/5ML",
+  "ReferenceDrug": "0",
+  "DrugName": "BENADRYL",
+  "ActiveIngredient": "DIPHENHYDRAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5845",
+  "ProductNo": "7",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "25MG",
+  "ReferenceDrug": "0",
+  "DrugName": "BENADRYL",
+  "ActiveIngredient": "DIPHENHYDRAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5856",
+  "ProductNo": "2",
+  "Form": "SOLUTION;ORAL",
+  "Strength": "200MG/5ML",
+  "ReferenceDrug": "0",
+  "DrugName": "TRIDIONE",
+  "ActiveIngredient": "TRIMETHADIONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5856",
+  "ProductNo": "5",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "300MG",
+  "ReferenceDrug": "0",
+  "DrugName": "TRIDIONE",
+  "ActiveIngredient": "TRIMETHADIONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5856",
+  "ProductNo": "9",
+  "Form": "TABLET;ORAL",
+  "Strength": "150MG",
+  "ReferenceDrug": "1",
+  "DrugName": "TRIDIONE",
+  "ActiveIngredient": "TRIMETHADIONE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5897",
+  "ProductNo": "4",
+  "Form": "TABLET;ORAL",
+  "Strength": "1MG",
+  "ReferenceDrug": "0",
+  "DrugName": "FOLVITE",
+  "ActiveIngredient": "FOLIC ACID",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5897",
+  "ProductNo": "8",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5MG/ML",
+  "ReferenceDrug": "1",
+  "DrugName": "FOLVITE",
+  "ActiveIngredient": "FOLIC ACID",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5914",
+  "ProductNo": "2",
+  "Form": "TABLET;ORAL",
+  "Strength": "50MG",
+  "ReferenceDrug": "0",
+  "DrugName": "PBZ",
+  "ActiveIngredient": "TRIPELENNAMINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5914",
+  "ProductNo": "4",
+  "Form": "ELIXIR;ORAL",
+  "Strength": "EQ 25MG HYDROCHLORIDE/5ML",
+  "ReferenceDrug": "0",
+  "DrugName": "PBZ",
+  "ActiveIngredient": "TRIPELENNAMINE CITRATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5929",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1MG/ML",
+  "ReferenceDrug": "1",
+  "DrugName": "D.H.E. 45",
+  "ActiveIngredient": "DIHYDROERGOTAMINE MESYLATE",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "5932",
+  "ProductNo": "12",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "5%",
+  "ReferenceDrug": "0",
+  "DrugName": "AMINOSOL 5%",
+  "ActiveIngredient": "PROTEIN HYDROLYSATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5939",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "10%",
+  "ReferenceDrug": "1",
+  "DrugName": "BAL",
+  "ActiveIngredient": "DIMERCAPROL",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "5963",
+  "ProductNo": "1",
+  "Form": "SOLUTION/DROPS;OPHTHALMIC",
+  "Strength": "10% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "SODIUM SULAMYD",
+  "ActiveIngredient": "SULFACETAMIDE SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5963",
+  "ProductNo": "2",
+  "Form": "OINTMENT;OPHTHALMIC",
+  "Strength": "10% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "SODIUM SULAMYD",
+  "ActiveIngredient": "SULFACETAMIDE SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5963",
+  "ProductNo": "3",
+  "Form": "SOLUTION/DROPS;OPHTHALMIC",
+  "Strength": "30% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "SODIUM SULAMYD",
+  "ActiveIngredient": "SULFACETAMIDE SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5970",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "1% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "SOTRADECOL",
+  "ActiveIngredient": "SODIUM TETRADECYL SULFATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "5970",
+  "ProductNo": "5",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "3% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "SOTRADECOL",
+  "ActiveIngredient": "SODIUM TETRADECYL SULFATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6002",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "500MG",
+  "ReferenceDrug": "1",
+  "DrugName": "ARALEN",
+  "ActiveIngredient": "CHLOROQUINE PHOSPHATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6002",
+  "ProductNo": "2",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "EQ 40MG BASE/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "ARALEN HYDROCHLORIDE",
+  "ActiveIngredient": "CHLOROQUINE HYDROCHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6008",
+  "ProductNo": "1",
+  "Form": "TABLET;ORAL",
+  "Strength": "100MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "MESANTOIN",
+  "ActiveIngredient": "MEPHENYTOIN",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6012",
+  "ProductNo": "3",
+  "Form": "CAPSULE;ORAL",
+  "Strength": "182MG;0.33MG",
+  "ReferenceDrug": "0",
+  "DrugName": "FOLVRON",
+  "ActiveIngredient": "FERROUS SULFATE; FOLIC ACID",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6035",
+  "ProductNo": "3",
+  "Form": "TABLET;ORAL",
+  "Strength": "0.2MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+  "ReferenceDrug": "1",
+  "DrugName": "METHERGINE",
+  "ActiveIngredient": "METHYLERGONOVINE MALEATE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6035",
+  "ProductNo": "4",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "0.2MG/ML",
+  "ReferenceDrug": "1",
+  "DrugName": "METHERGINE",
+  "ActiveIngredient": "METHYLERGONOVINE MALEATE",
+  "ReferenceStandard": "1"
+},
+{
+  "ApplNo": "6044",
+  "ProductNo": "3",
+  "Form": "TABLET, DELAYED RELEASE;ORAL",
+  "Strength": "165MG",
+  "ReferenceDrug": "0",
+  "DrugName": "DIASONE SODIUM",
+  "ActiveIngredient": "SULFOXONE SODIUM",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6071",
+  "ProductNo": "3",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "50MG/ML;0.03MG/ML;0.0025MG/ML;7.5MG/ML;100 IU/ML;0.2MG/ML;20MG/ML;2MG/ML;1.8MG/ML;1.5MG/ML;1,650 IU/ML;5 IU/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "BEROCCA PN",
+  "ActiveIngredient": "ASCORBIC ACID; BIOTIN; CYANOCOBALAMIN; DEXPANTHENOL; ERGOCALCIFEROL; FOLIC ACID; NIACINAMIDE; PYRIDOXINE HYDROCHLORIDE; RIBOFLAVIN 5'-PHOSPHATE SODIUM; THIAMINE HYDROCHLORIDE; VITAMIN A PALMITATE; VITAMIN E",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6095",
+  "ProductNo": "1",
+  "Form": "INJECTABLE;INJECTION",
+  "Strength": "3MG/ML",
+  "ReferenceDrug": "0",
+  "DrugName": "TUBOCURARINE CHLORIDE",
+  "ActiveIngredient": "TUBOCURARINE CHLORIDE",
+  "ReferenceStandard": "0"
+},
+{
+  "ApplNo": "6110",
+  "ProductNo": "5",
+  "Form": "CREAM;VAGINAL",
+  "Strength": "0.01%",
+  "ReferenceDrug": "0",
+  "DrugName": "DIENESTROL",
+  "ActiveIngredient": "DIENESTROL",
+  "ReferenceStandard": "0"
+}
+]
