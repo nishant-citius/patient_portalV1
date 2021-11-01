@@ -47,6 +47,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "post" && req.url.endsWith("/patientdietplan")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   if (req.method === "put" && req.url.indexOf("/users/")) {
     req.headers.authorization = `Bearer ${authToken}`;
   }
@@ -211,6 +215,31 @@ export function GetAllImmunizationData() {
         payload.globalmessage = `${error.response.data}`;
         payload.immunizations = [];
         dispatch({ type: actions.GET_ALL_IMMUNIZATION, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetAllDemographicsData() {
+  let payload = {
+    demographics: [],
+    globalmessage: "",
+  };
+
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.GET_DEMOGRAPHICS).then(
+      (response) => {
+        console.log("Hellooo", response.data);
+        payload.globalmessage = `Demographics data retrieved successfully. Count: ${response.data.length}`;
+        payload.demographics = response.data;
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.demographics = [];
+        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
       }
     );
   };
@@ -502,6 +531,29 @@ export function AddVitalsAsync(user) {
   };
 }
 
+export function AddDietPlanAsync(user) {
+  let payload = {
+    globalmessage: "",
+    statusCode: 200,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.post(URLS.PATIENT_DIETPLAN, JSON.stringify(user), config).then(
+      (response) => {
+        console.log(response);
+        payload.globalmessage = `Dietplan registered successfully`;
+        payload.statusCode = response.status;
+        dispatch({ type: actions.ADD_DIETPLAN, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `DietPlan ERROR: ${error.response.data}`;
+        payload.statusCode = 400;
+        dispatch({ type: actions.ADD_DIETPLAN, payload: payload });
+      }
+    );
+  };
+}
+
 export function GetVitals(userId) {
   let payload = {
     globalmessage: "",
@@ -520,6 +572,29 @@ export function GetVitals(userId) {
         payload.globalmessage = `${error.response.data}`;
         payload.userVitals = {};
         dispatch({ type: actions.GET_PATIENT_VITALS, payload: payload });
+      }
+    );
+  };
+}
+
+export function GetDietPlan(userId) {
+  let payload = {
+    globalmessage: "",
+    userDietPlan: {},
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios.get(`${URLS.GET_PATIENT_DIETPLAN}${userId}`).then(
+      (response) => {
+        console.log("Hello", response.data);
+        payload.globalmessage = `DietPlan Retrieved...`;
+        payload.userDietPlan = response.data;
+        dispatch({ type: actions.GET_PATIENT_DIETPLAN, payload: payload });
+      },
+      (error) => {
+        payload.globalmessage = `${error.response.data}`;
+        payload.userDietplan = {};
+        dispatch({ type: actions.GET_PATIENT_DIETPLAN, payload: payload });
       }
     );
   };
@@ -582,30 +657,6 @@ export function updateprofile(profileImage, loggedUserInfo) {
           dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
         }
       );
-  };
-}
-
-export function GetDemographics() {
-  let payload = {
-    demographics: [],
-    globalmessage: "",
-  };
-  return (dispatch, getState) => {
-    authToken = getState().login.authToken;
-
-    axios.get(URLS.GET_DEMOGRAPHICS).then(
-      (response) => {
-        console.log(response.data);
-        payload.globalmessage = `Physician data retrieved successfully. Count: ${response.data.length}`;
-        payload.demographics = response.data;
-        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
-      },
-      (error) => {
-        payload.globalmessage = `${error.response.data}`;
-        payload.demographics = [];
-        dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
-      }
-    );
   };
 }
 

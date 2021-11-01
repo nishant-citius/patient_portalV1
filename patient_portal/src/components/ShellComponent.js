@@ -13,6 +13,7 @@ import PatientInactiveError from "../components/patient/PatientInactiveError";
 
 import Immunization from "../components/patient/Immunization";
 import Vitals from "../components/physician/PatientVitals";
+import DietPlan from "../components/physician/PatientDietPlan";
 import Medication_Allergies from "../components/patient/Medication_Allergies";
 import "react-calendar/dist/Calendar.css";
 import { connect } from "react-redux";
@@ -124,7 +125,7 @@ function ShellComponent(props) {
 
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
-        
+
         <Route
           path={"/physician_appointments"}
           component={PhysicianAppointment}
@@ -148,6 +149,7 @@ function ShellComponent(props) {
           <Immunization flashNotification={showSnacksBar} />
         </Route>
         <Route path="/vitals" component={Vitals} />
+        <Route path="/dietplan" component={DietPlan} />
         <Route path="/myprofile" component={MyProfile} />
         <Route path="/medic_allergy" component={Medication_Allergies}>
           <Medication_Allergies flashNotification={showSnacksBar} />
