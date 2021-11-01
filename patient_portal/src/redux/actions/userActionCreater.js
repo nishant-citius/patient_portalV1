@@ -511,8 +511,9 @@ export function GetVitals(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_PATIENT_VITALS}${userId}`).then(
       (response) => {
+        console.log("Hello", response.data);
         payload.globalmessage = `Vitals Retrieved...`;
-        payload.userVitals = response.data[0];
+        payload.userVitals = response.data;
         dispatch({ type: actions.GET_PATIENT_VITALS, payload: payload });
       },
       (error) => {
