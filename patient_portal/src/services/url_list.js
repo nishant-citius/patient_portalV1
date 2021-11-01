@@ -34,6 +34,7 @@ export const PATIENT_DIETPLAN = "http://localhost:9999/patientdietplan";
 
 export const GET_APPOINTMENT_DETAILS =
   "http://localhost:9999/appointments?doc_id=";
-export const GET_PATIENT_VITALS = "http://localhost:9999/patientvitals?userid=";
+export const GET_PATIENT_VITALS =
+  "http://localhost:9999/patientvitals?patientId=";
 export const GET_PATIENT_DIETPLAN =
   "http://localhost:9999/patientdietplan?userid=";
