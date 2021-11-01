@@ -554,8 +554,6 @@ export function AddMedicationAndAllergiesAsync(user) {
   };
 }
 
-//put request for updating the profile pic
-
 export function updateprofile(profileImage, loggedUserInfo) {
   console.log(loggedUserInfo);
   let payload = {

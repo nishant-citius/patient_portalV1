@@ -32,7 +32,7 @@
     },
     {
       "email": "qwerty@email.com",
-      "password": "$2a$10$QWHjK9VxXowmTgKLXnVt2uEdbeEPBWBMVH3.ttnK.tIEyLZGBgTnS",
+      "password": "$2a$10$BXGVz37Q/6.RUCurKRRl..nf86GWuOixtF57tjxZiE9VJzRlcUYDi",
       "fName": "Qwert",
       "lName": "qwetrt",
       "dob": "2021-09-28",
@@ -42,7 +42,7 @@
       "blood_group": "o-",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 5
     },
     {
@@ -129,7 +129,7 @@
       "username": "soujanya",
       "mobile": "23214214123",
       "role": "physician",
-      "speciality": "ww",
+      "speciality": "Anesthesiology",
       "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 11
@@ -143,10 +143,24 @@
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "Orthopedics & Joint Replacement",
+      "speciality": "Anesthesiology",
       "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 23
+    },
+    {
+      "email": "lodha@email.com",
+      "password": "$2a$10$NzqBadebBNlVBq2g8skgP.wrA3IzUHtMDT9.pdEOWbMP2KFFi.uyq",
+      "fName": "Doctor",
+      "lName": "Londha",
+      "dob": "2021-10-07",
+      "username": "lodha",
+      "mobile": "1234567890",
+      "role": "physician",
+      "speciality": "pediatrics",
+      "createdDate": "Sun Oct 31 2021 18:14:13 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 24
     }
   ],
   "demographics": [
@@ -170,80 +184,79 @@
   ],
   "medic_allergy": [
     {
-    "userid": 1,
-    "current_medication": [
-      {
-        "medicineName": "njnjnj",
-        "dosage": "njnjn",
-        "directionstoconsume": "njnjnj",
-        "frequency": "njnjnjn",
-        "physicianName": "jnjnjnj",
-        "purpose": "njnjnjnjn",
-        "startDate": "2021-10-20",
-        "endDate": "2021-10-20"
-      },
-      {
-        "medicineName": "knjn",
-        "dosage": "jnjnj",
-        "directionstoconsume": "jkk",
-        "frequency": "iiim",
-        "physicianName": "imimi",
-        "purpose": "mimimim",
-        "startDate": "2021-10-12",
-        "endDate": "2021-10-14"
-      }
-    ],
-    "otc_medication": [
-      {
-        "otcDrugName": "jnjnjn",
-        "strength": "jnjnjnj",
-        "directiontoconsume": "njnjnjnj",
-        "socialDrugs": "smoke"
-      },
-      {
-        "otcDrugName": "huhuh",
-        "strength": "uhuhuh",
-        "directiontoconsume": "jiiimim",
-        "socialDrugs": "illicit"
-      }
-    ],
-    "past_medication": [
-      {
-        "pastdrugName": "jijij",
-        "strength": "ijij",
-        "directiontoconsume": "ijiji"
-      },
-      {
-        "pastdrugName": "iijijij",
-        "strength": "ijiji",
-        "directiontoconsume": "ijij"
-      },
-      {
-        "pastdrugName": "nununu",
-        "strength": "nununun",
-        "directiontoconsume": "unununu"
-      }
-    ],
-    "allergies": [
-      {
-        "allergyName": "ijijij",
-        "symptomsofAllergy": "ijiji",
-        "drugAllergy": "jijiji"
-      },
-      {
-        "allergyName": "iiimi",
-        "symptomsofAllergy": "imimimi",
-        "drugAllergy": "mimimi"
-      },
-      {
-        "allergyName": "kimimi",
-        "symptomsofAllergy": "imimimi",
-        "drugAllergy": "mimimi"
-      }
-    ],
-    "id": 2
-  }
-
+      "userid": 1,
+      "current_medication": [
+        {
+          "medicineName": "njnjnj",
+          "dosage": "njnjn",
+          "directionstoconsume": "njnjnj",
+          "frequency": "njnjnjn",
+          "physicianName": "jnjnjnj",
+          "purpose": "njnjnjnjn",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "knjn",
+          "dosage": "jnjnj",
+          "directionstoconsume": "jkk",
+          "frequency": "iiim",
+          "physicianName": "imimi",
+          "purpose": "mimimim",
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "jnjnjn",
+          "strength": "jnjnjnj",
+          "directiontoconsume": "njnjnjnj",
+          "socialDrugs": "smoke"
+        },
+        {
+          "otcDrugName": "huhuh",
+          "strength": "uhuhuh",
+          "directiontoconsume": "jiiimim",
+          "socialDrugs": "illicit"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "jijij",
+          "strength": "ijij",
+          "directiontoconsume": "ijiji"
+        },
+        {
+          "pastdrugName": "iijijij",
+          "strength": "ijiji",
+          "directiontoconsume": "ijij"
+        },
+        {
+          "pastdrugName": "nununu",
+          "strength": "nununun",
+          "directiontoconsume": "unununu"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "ijijij",
+          "symptomsofAllergy": "ijiji",
+          "drugAllergy": "jijiji"
+        },
+        {
+          "allergyName": "iiimi",
+          "symptomsofAllergy": "imimimi",
+          "drugAllergy": "mimimi"
+        },
+        {
+          "allergyName": "kimimi",
+          "symptomsofAllergy": "imimimi",
+          "drugAllergy": "mimimi"
+        }
+      ],
+      "id": 2
+    }
   ],
   "immunization": [
     {
@@ -294,13 +307,49 @@
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-10-19",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
       "patientId": 24,
       "status": "approved",
       "id": 1
+    },
+    {
+      "fName": "Ajinkya",
+      "lName": "prasad",
+      "dob": "1994-01-01",
+      "mobile_no": 8801888988,
+      "doc_id": 23,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "20:50",
+      "appointment_end_time": "20:53",
+      "appointmentDate": "2021-11-01",
+      "appointment_desc": "Appointments",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T12:20:59.048Z",
+      "patientId": 24,
+      "status": "approved",
+      "id": 2
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Pathak",
+      "dob": "1994-01-01",
+      "mobile_no": 8801888988,
+      "doc_id": 23,
+      "doc_name": "shivaprasad",
+      "appointment_title": "cold",
+      "appointment_start_time": "20:50",
+      "appointment_end_time": "20:53",
+      "appointmentDate": "2021-11-01",
+      "appointment_desc": "Appointments",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-10-28T12:20:59.048Z",
+      "patientId": 24,
+      "status": "approved",
+      "id": 3
     }
   ],
   "patientvitals": [
@@ -514,6 +563,10 @@
     {
       "name": "Urology",
       "value": "urology"
+    },
+    {
+      "name": "Orthopedics & Joint Replacement",
+      "value": "orthopedics_jointreplacement"
     }
   ]
 }
