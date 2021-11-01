@@ -156,15 +156,15 @@
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "qqwqw",
+          "vaccine_name": "Vacine-1",
           "vaccine_date": "2021-09-29"
         },
         {
-          "vaccine_name": "Pnumonia",
+          "vaccine_name": "Vacine-2",
           "vaccine_date": "2021-10-11"
         },
         {
-          "vaccine_name": "fadsfsdfgsdfgsdfg",
+          "vaccine_name": "Vacine-3",
           "vaccine_date": "2021-10-21"
         }
       ],

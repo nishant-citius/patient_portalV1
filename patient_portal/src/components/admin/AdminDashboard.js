@@ -1,4 +1,4 @@
-import { React, Link, useEffect, useState } from "react";
+import { React, useEffect } from "react";
 import { useHistory } from "react-router";
 import "./admin.css";
 import { connect } from "react-redux";
@@ -50,11 +50,11 @@ const AdminDashboard = (props) => {
   const classes = useStyles();
 
   useEffect(() => {
-    props.getallphysiciandata();
-    props.getalluserdata();
-    props.getAllPatients();
-    props.getInactiveUsers();
-    props.getallNursedata();
+    // props.getallphysiciandata();
+    // props.getalluserdata();
+    // props.getAllPatients();
+    // props.getInactiveUsers();
+    // props.getallNursedata();
   }, []);
 
   const data = {
@@ -317,11 +317,11 @@ const mapStatetoProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    getallphysiciandata: () => dispatch(actionCreator.GetAllPhysicianData()),
-    getalluserdata: () => dispatch(actionCreator.GetAllUserData()),
-    getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
-    getInactiveUsers: () => dispatch(actionCreator.GetInactiveUsers()),
-    getallNursedata: () => dispatch(actionCreator.GetAllNurseData()),
+    // getallphysiciandata: () => dispatch(actionCreator.GetAllPhysicianData()),
+    // getalluserdata: () => dispatch(actionCreator.GetAllUserData()),
+    // getAllPatients: () => dispatch(actionCreator.GetAllPatientsData()),
+    // getInactiveUsers: () => dispatch(actionCreator.GetInactiveUsers()),
+    // getallNursedata: () => dispatch(actionCreator.GetAllNurseData()),
   };
 };
 
