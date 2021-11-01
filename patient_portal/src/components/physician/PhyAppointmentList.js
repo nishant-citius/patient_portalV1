@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
 import LabReports  from "../physician/reports";
+import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 
 import {
   BsFillTrashFill,
@@ -91,7 +92,7 @@ export class AppointmentList extends React.Component {
   render() {
     return (
       <div>
-      
+      <PhyMedicationAllergies />
       <div className="container mt-5">
         {/* <Link className="btn btn-warning" to="/physician">
           <BsFillArrowLeftSquareFill />
