@@ -825,6 +825,21 @@
       "id": 4
     }
   ],
+  "patientdietplan": [
+    
+    {
+      "earlymorning": "yoga, walking/skipping",
+      "breakfast": "Dosa/Chappathi",
+      "mid_morning": "apple/gua/orange-1 cup",
+      "lunch": "Roti with lots of veggies",
+      "evening": "buscuits/tea",
+      "dinner": "Rice/Chapathi with less oil",
+      "post_dinner_activity": "try to walk for a while",
+      "bedtime": "skim milk 1-glass",
+      "physicianId": 12,
+      "id": 1
+    }
+  ],
   "order": [
     {
       "id": "",
