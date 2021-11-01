@@ -102,7 +102,7 @@ class AdminServices {
   }
 
   getPatientAppointments(patientId) {
-    const url = `${URLS.BASE_URL}/appointments?patientid=${patientId}`;
+    const url = `${URLS.BASE_URL}/appointments?patientId=${patientId}`;
     return axios.get(url);
   }
 
