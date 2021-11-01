@@ -607,103 +607,6 @@
       "pulse": "92",
       "respiration": "20",
       "oxigen_saturation": "98",
-      "userid": 1,
-      "id": 1
-    },
-    {
-      "height": "4.8",
-      "weight": "55",
-      "blood_pressure": "70/80",
-      "temperature": "98",
-      "pulse": "",
-      "respiration": "",
-      "oxigen_saturation": "",
-      "userid": 2,
-      "id": 2
-    },
-    {
-      "fName": "Joe",
-      "lName": "Root",
-      "dob": "2021-09-27",
-      "mobile_no": 8245623812,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "03:21",
-      "appointment_end_time": "04:21",
-      "appointmentDate": "2021-10-31",
-      "appointment_desc": "Fever",
-      "createdBy": "JoeRoot",
-      "createdDate": "2021-10-28T18:51:23.509Z",
-      "patientId": 10,
-      "status": "Pending",
-      "id": 3
-    },
-    {
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "mobile_no": 4645733342,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "05:07",
-      "appointment_end_time": "01:10",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "bodypains",
-      "createdBy": "Ajju Bhai",
-      "createdDate": "2021-10-28T19:38:13.908Z",
-      "patientId": 9,
-      "status": "Pending",
-      "id": 4
-    },
-    {
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "mobile_no": 7463836583,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "headaque",
-      "appointment_start_time": "01:13",
-      "appointment_end_time": "01:15",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "na",
-      "createdBy": "Kishore Kumar",
-      "createdDate": "2021-10-28T19:39:22.268Z",
-      "patientId": 7,
-      "status": "Pending",
-      "id": 5
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 7373737653,
-      "doc_id": 24,
-      "doc_name": "SusmithaC",
-      "appointment_title": "Fever",
-      "appointment_start_time": "07:10",
-      "appointment_end_time": "03:11",
-      "appointmentDate": "2021-10-30",
-      "appointment_desc": "NA",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-28T19:41:15.542Z",
-      "patientId": 1,
-      "status": "Pending",
-      "id": 6
-    }
-  ],
-<<<<<<< HEAD
-  "patientvitals": [
-    {
-      "height": "4.8",
-      "weight": "42",
-      "blood_pressure": "120/80",
-      "temperature": "96",
-      "pulse": "92",
-      "respiration": "20",
-      "oxigen_saturation": "98",
       "userid": 11,
       "id": 1
     },
@@ -718,11 +621,20 @@
       "physicianId": 12,
       "patientId": 24,
       "id": 3
+    },
+    {
+      "height": "5'5",
+      "weight": "58",
+      "blood_pressure": "110/25mg",
+      "temperature": "88",
+      "pulse": "100",
+      "respiration": "Very Very Bad",
+      "oxigen_saturation": "Very Bad",
+      "physicianId": 12,
+      "patientId": 24,
+      "id": 4
     }
   ],
-=======
-  
->>>>>>> c4ac91a0025d289fd560e2aebdedd3d9f776d2e9
   "order": [
     {
       "id": "",

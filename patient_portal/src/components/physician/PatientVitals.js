@@ -11,6 +11,8 @@ const Vitals = (props) => {
   const [patientVitals, setPatientVitals] = useState({});
   const [available, setAvailable] = useState(false);
 
+  let savedValues = {};
+
   useEffect(() => {
     setPatientId(props.patientId.patientId);
     if (patientId) {
@@ -21,7 +23,6 @@ const Vitals = (props) => {
   function getPatientVitals(patientId) {
     adminService.getPatientVitals(patientId).then(
       (response) => {
-        console.log(response.data);
         setPatientVitals(response.data);
         setAvailable(true);
       },
@@ -33,6 +34,7 @@ const Vitals = (props) => {
 
   const initialValues = {
     patient: "",
+    height: "",
     weight: "",
     blood_pressure: "",
     temperature: "",
@@ -42,17 +44,16 @@ const Vitals = (props) => {
     userid: props.currentUser.id,
   };
 
-  let savedValues = {};
   if (available) {
     savedValues = {
-      patient: patientVitals[0].patient,
+      height: patientVitals[0].height,
       weight: patientVitals[0].weight,
       blood_pressure: patientVitals[0].blood_pressure,
       temperature: patientVitals[0].temperature,
       pulse: patientVitals[0].pulse,
       respiration: patientVitals[0].respiration,
       oxigen_saturation: patientVitals[0].oxigen_saturation,
-      userid: patientVitals[0].userid,
+      userid: props.currentUser.id,
     };
   }
 
@@ -81,13 +82,12 @@ const Vitals = (props) => {
     props.vitals(payload);
   };
 
-  // let history = useHistory();
-
   return (
     <Formik
-      initialValues={available ? savedValues : initialValues}
+      initialValues={savedValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
     >
       {(props) => (
         <div className="container">
