@@ -24,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Patient_dashboard = (props) => {
   const classes = useStyles();
-  console.log(props.mediAllergyDetails, "after useeffect");
-  console.log("pooja", props.patientvitalsDetails);
   return (
     <>
       <Container className={classes.container}>

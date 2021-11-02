@@ -3,9 +3,47 @@ import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useHistory } from "react-router";
+import { adminService } from "../../services/register_user_service";
 
 const DietPlan = (props) => {
+  const [patientId, setPatientId] = useState(0);
+  const [dietAdded, setDietAdded] = useState(false);
+  const [patientDiet, addPatientDiet] = useState({});
+
+  let savedValues = {};
+
+  useEffect(() => {
+    setPatientId(props.patientId.patintId);
+    if (patientId) {
+      getPatientDiet(patientId);
+    }
+  }, [props.patientId.patientId, patientId]);
+
+  function getPatientDiet(patientId) {
+    adminService.getPatientDiet(patientId).then(
+      (response) => {
+        if (response.data.length > 0) {
+          addPatientDiet(response.data);
+          setDietAdded(true);
+        }
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
+
+  function updatePatientDiet(patientId, newData) {
+    adminService.updatePatientDiet(patientId, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("Patient Diet Updated Successfully...");
+        }
+      },
+      (error) => {}
+    );
+  }
+
   const initialValues = {
     earlymorning: "",
     breakfast: "",
@@ -15,9 +53,23 @@ const DietPlan = (props) => {
     dinner: "",
     post_dinner_activity: "",
     bedtime: "",
-    userid: props.currentUser.id,
+    doc_id: props.currentUser.id,
+    patientId: Number(props.patientId.patintId),
   };
-  const [DietPlan, setpatientDietPlan] = useState(initialValues);
+
+  if (dietAdded) {
+    savedValues = {
+      earlymorning: patientDiet[0].earlymorning,
+      breakfast: patientDiet[0].breakfast,
+      mid_morning: patientDiet[0].mid_morning,
+      lunch: patientDiet[0].lunch,
+      evening: patientDiet[0].evening,
+      dinner: patientDiet[0].dinner,
+      post_dinner_activity: patientDiet[0].post_dinner_activity,
+      bedtime: patientDiet[0].bedtime,
+    };
+  }
+
   const validationSchema = Yup.object().shape({
     earlymorning: Yup.string().required("Required"),
     breakfast: Yup.string().required("Required"),
@@ -28,7 +80,8 @@ const DietPlan = (props) => {
     post_dinner_activity: Yup.string().required("Required"),
     bedtime: Yup.string().required("Required"),
   });
-  const onSubmit = (values) => {
+
+  const onSubmit = (values, actions) => {
     const payload = {
       earlymorning: values.earlymorning,
       breakfast: values.breakfast,
@@ -39,22 +92,21 @@ const DietPlan = (props) => {
       post_dinner_activity: values.post_dinner_activity,
       bedtime: values.bedtime,
       physicianId: props.currentUser.id,
+      patientId: patientId,
     };
-    props.dietplan(payload);
+    if (dietAdded) {
+      updatePatientDiet(patientDiet[0].id, payload);
+    } else {
+      props.dietplan(payload);
+    }
   };
-
-  // let history = useHistory();
-  // useEffect(() => {
-  //   if (props.statusCode === 201) {
-  //     history.push("/patient");
-  //   }
-  // });
 
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={savedValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
     >
       {(props) => (
         <div className="container">
@@ -77,7 +129,7 @@ const DietPlan = (props) => {
                         type="text"
                         className="form-control"
                         name="earlymorning"
-                      />{" "}
+                      />
                       <div className="error">
                         <ErrorMessage name="earlymorning" />
                       </div>
@@ -109,7 +161,6 @@ const DietPlan = (props) => {
                         className="form-control"
                         name="mid_morning"
                       />
-
                       <div className="error">
                         <ErrorMessage name="mid_morning" />
                       </div>
@@ -125,7 +176,6 @@ const DietPlan = (props) => {
                         className="form-control"
                         name="lunch"
                       />
-
                       <div className="error">
                         <ErrorMessage name="lunch" />
                       </div>
@@ -140,7 +190,6 @@ const DietPlan = (props) => {
                         className="form-control"
                         name="evening"
                       />
-
                       <div className="error">
                         <ErrorMessage name="evening" />
                       </div>
@@ -157,7 +206,6 @@ const DietPlan = (props) => {
                         placeholder="dinner"
                         name="dinner"
                       />
-
                       <div className="error">
                         <ErrorMessage name="dinner" />
                       </div>
@@ -177,7 +225,6 @@ const DietPlan = (props) => {
                         placeholder="post_dinner_activity"
                         name="post_dinner_activity"
                       />
-
                       <div className="error">
                         <ErrorMessage name="post_dinner_activity" />
                       </div>
@@ -194,7 +241,6 @@ const DietPlan = (props) => {
                         placeholder="dinner"
                         name="bedtime"
                       />
-
                       <div className="error">
                         <ErrorMessage name="bedtime" />
                       </div>
@@ -202,10 +248,15 @@ const DietPlan = (props) => {
                     </div>
                   </div>
                 </div>
-
-                <button type="submit" className="btn btn-primary mt-3">
-                  Submit
-                </button>
+                {dietAdded ? (
+                  <button type="submit" className="btn btn-primary mt-3">
+                    Update Diet
+                  </button>
+                ) : (
+                  <button type="submit" className="btn btn-primary mt-3">
+                    Submit
+                  </button>
+                )}
               </Form>
             </div>
           </div>
@@ -218,7 +269,6 @@ const DietPlan = (props) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    // allusers: state.dietplan.DietPlanreducer,
     dietplans: state.dietplan.dietplan,
   };
 };

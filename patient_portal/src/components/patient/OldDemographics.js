@@ -41,7 +41,7 @@ const OldDemographics = (props) => {
     e.preventDefault();
     let newrecords = { ...patientDemographics };
     // props.addUserHandler(newrecords);
-    console.log(newrecords)
+
     props.demographics(newrecords);
   };
 

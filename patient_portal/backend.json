@@ -349,6 +349,20 @@
       "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 48
+    },
+    {
+      "email": "sudhir@email.com",
+      "password": "$2a$10$HIggkDi/p3ZsCk4Ze2C8pON6/FlmG8SUNsGrK9xW/iQWKCmgEaDli",
+      "fName": "Sudhir",
+      "lName": "Koganti",
+      "dob": "1992-06-12",
+      "username": "Sudhir K",
+      "mobile": "7655443329",
+      "role": "physician",
+      "speciality": "pathology",
+      "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 32
     }
   ],
   "medic_allergy": [
@@ -744,7 +758,7 @@
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",
       "patientId": 48,
-      "status": "approved",
+      "status": "completed",
       "id": 4
     }
   ],
@@ -767,7 +781,35 @@
       "id": 1
     }
   ],
-  "patientvitals": [],
+  "patientvitals": [
+    {
+      "height": "5 Feet 4 Inch.",
+      "weight": "Ajinkya",
+      "blood_pressure": "Ajinkya",
+      "temperature": "Ajinkya",
+      "pulse": "Ajinkya",
+      "respiration": "Ajinkya",
+      "oxigen_saturation": "Ajinkya",
+      "physicianId": 32,
+      "patientId": "48",
+      "id": 1
+    }
+  ],
+  "patientdietplan": [
+    {
+      "earlymorning": "Tea,Coffee",
+      "breakfast": "Poha,Sandwitch",
+      "mid_morning": "Toaster,Taaster",
+      "lunch": "Rice Daal",
+      "evening": "Tea",
+      "dinner": "qqq",
+      "post_dinner_activity": "Walking",
+      "bedtime": "Hot Milk with Haldi",
+      "physicianId": 32,
+      "patientId": "48",
+      "id": 1
+    }
+  ],
   "billing": [
     {
       "billingId": "",

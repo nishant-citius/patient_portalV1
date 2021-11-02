@@ -48,7 +48,6 @@ const Appointments = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
 
-  console.log("Baba Don", appts);
 
   useEffect(() => {
     if (props.isLoggedIn) {
