@@ -83,7 +83,6 @@ const AddUsers = (props) => {
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>
       </Link> */}
-      <h3 className="text-success text-center fw-bold ">Add New User</h3>
       <div className="row justify-content-center">
         <div className="col-8">
           <Formik
