@@ -194,9 +194,19 @@ const DietPlan = (props) => {
                     </div>
                   </div>
                 </div>
-                <button type="submit" className="btn btn-primary mt-3">
-                  Submit
-                </button>
+                {dietAdded ? (
+                  <button
+                    type="submit"
+                    className="btn btn-primary mt-3"
+                    disabled
+                  >
+                    Submit
+                  </button>
+                ) : (
+                  <button type="submit" className="btn btn-primary mt-3">
+                    Submit
+                  </button>
+                )}
               </Form>
             </div>
           </div>

@@ -44,7 +44,6 @@ const Physician_dashboard = (props) => {
       }
     );
   }
-  console.log("Nishant", apptList);
   const theme = {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
   };
@@ -75,7 +74,6 @@ const Physician_dashboard = (props) => {
   var year = dateObj.getUTCFullYear();
 
   let newdate = year + "-" + month + "-" + day;
-  console.log("babababab", newdate);
   function todaysAppts() {
     let approved = 0,
       rejected = undefined,

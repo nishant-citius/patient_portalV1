@@ -60,7 +60,6 @@ function ScheduleAppointment(props) {
   function getAppointmentsForDate(pid, _date) {
     adminService.getAppointmentsForDate(pid, _date).then(
       (response) => {
-        console.log(response.data);
         setDayAppointments(response.data);
       },
       (error) => {
