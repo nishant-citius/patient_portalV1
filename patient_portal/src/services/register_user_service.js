@@ -177,7 +177,7 @@ class AdminServices {
     return axios.get(url);
   }
   updatePatientVitals(patientId, data) {
-    let url = `${URLS.BASE_URL}/patientvitials?patientId=${patientId}`;
+    let url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
     let config = {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
