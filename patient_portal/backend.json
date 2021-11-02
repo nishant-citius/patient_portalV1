@@ -719,6 +719,89 @@
       "others": ""
     }
   ],
+
+  "physician_speciality": [
+    {
+      "name": "Allergy and immunology",
+      "value": "allergy_immunology"
+    },
+    {
+      "name": "Anesthesiology",
+      "value": "anesthesiology"
+    },
+    {
+      "name": "Dermatology",
+      "value": "dermatology"
+    },
+    {
+      "name": "Diagnostic Radiology",
+      "value": "diagnostic_radiology"
+    },
+    {
+      "name": "Emergency Medicine",
+      "value": "emergency_medicine"
+    },
+    {
+      "name": "Family medicine",
+      "value": "family_medicine"
+    },
+    {
+      "name": "Internal Medicine",
+      "value": "internal_medicine"
+    },
+    {
+      "name": "Medical Genetics",
+      "value": "medical_genetics"
+    },
+    {
+      "name": "Neurology",
+      "value": "neurology"
+    },
+    {
+      "name": "Nuclear Medicine",
+      "value": "nuclear_medicine"
+    },
+    {
+      "name": "Obstetrics and Gynecology",
+      "value": "obstetrics_gynecology"
+    },
+    {
+      "name": "Ophthalmology",
+      "value": "ophthalmology"
+    },
+    {
+      "name": "Pathology",
+      "value": "pathology"
+    },
+    {
+      "name": "Pediatrics",
+      "value": "pediatrics"
+    },
+    {
+      "name": "Physical Rehabilitation",
+      "value": "physical_rehabilitation"
+    },
+    {
+      "name": "Preventive Medicine",
+      "value": "preventive_medicine"
+    },
+    {
+      "name": "Psychiatry",
+      "value": "psychiatry"
+    },
+    {
+      "name": "Radiation Oncology",
+      "value": "radiation_oncology"
+    },
+    {
+      "name": "Surgery",
+      "value": "surgery"
+    },
+    {
+      "name": "Urology",
+      "value": "urology"
+    }
+  ],
   "allergies": [
     {
       "AllergyType": "Food",
