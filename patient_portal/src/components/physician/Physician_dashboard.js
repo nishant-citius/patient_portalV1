@@ -3,7 +3,7 @@ import Calendar from "react-calendar";
 import { connect } from "react-redux";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.css";
-import BarChart from "./chart";
+
 import { useHistory } from "react-router";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import AppointmentList from "../physician/TodaysAppointments";

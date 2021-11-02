@@ -31,180 +31,392 @@
       "id": 2
     },
     {
-      "email": "qwerty@email.com",
-      "password": "$2a$10$BXGVz37Q/6.RUCurKRRl..nf86GWuOixtF57tjxZiE9VJzRlcUYDi",
-      "fName": "Qwert",
-      "lName": "qwetrt",
-      "dob": "2021-09-28",
-      "username": "qwerty",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "o-",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 5
-    },
-    {
-      "email": "ms@email.com",
-      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
-      "fName": "Manya ",
-      "lName": "Surve",
-      "dob": "2021-09-30",
-      "username": "Mumbai ka king",
-      "rpassword": "12345",
-      "mobile": 1234567899,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 6
-    },
-    {
-      "email": "kk@email.com",
-      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "username": "Kishore Bhai",
-      "rpassword": "12345",
-      "mobile": 2345234534,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 7
-    },
-    {
-      "email": "jr@email.com",
-      "password": "$2a$10$YIR.mOnyV0jxU/yx8e5WLe8pF/SN9ow5tH0tYg2mHI4.FuByoT38W",
-      "fName": "Jagruti",
-      "lName": "Ranbhor",
-      "dob": "2021-09-29",
-      "username": "jagu",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 00:07:07 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 8
-    },
-    {
-      "email": "ajju@email.com",
-      "password": "$2a$10$4DDJ1Tw.HE1fkyLzS.sOFef0wbUoMfhSEPL4/vsirIGPJM1TSC.Hy",
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "username": "ajju@email.com",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 00:15:07 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 9
-    },
-    {
-      "email": "ap@email.com",
-      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
-      "fName": "Joe",
-      "lName": "Root",
-      "dob": "2021-09-27",
-      "username": "joe",
-      "rpassword": "12345",
-      "mobile": 5645652548,
-      "blood_group": "B-",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 10
-    },
-    {
-      "email": "sh@email.com",
-      "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
-      "fName": "soujanya",
-      "lName": "G",
-      "dob": "2021-10-07",
-      "username": "soujanya",
-      "mobile": "23214214123",
+      "email": "mamatha@email.com",
+      "password": "$2a$10$6o50lH8j2Ml3jLUYDtClquRu5UN8I7r5CpadsVb6mCRbDt2iLK6Ii",
+      "fName": "Mamatha",
+      "lName": "Thormamidi",
+      "dob": "1993-08-08",
+      "username": "MamathaT",
+      "mobile": "6789468988",
       "role": "physician",
-      "speciality": "Anesthesiology",
-      "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 11
-    },
-    {
-      "email": "sp@gmail.com",
-      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-11-01",
-      "username": "shiva prasad",
-      "mobile": "8801888988",
-      "role": "physician",
-      "speciality": "Anesthesiology",
-      "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 12
-    },
-    {
-      "email": "TShivaprasad@citiustech.com",
-      "password": "$2a$10$JOWekOhaFxpdFIlcDHvSc.2o5Z27JdWFvGeTMVnx7PGIVx18eanDe",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-01-01",
-      "username": "shiva prasad",
-      "rpassword": "asdf",
-      "mobile": 8801888988,
-      "blood_group": "B+ve",
-      "role": "patient",
-      "createdDate": "Thu Oct 28 2021 13:07:29 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 23
-    },
-    {
-      "email": "sp@email.com",
-      "password": "$2a$10$ANJKeaMFs9AEjMtFG0O.TeBBksJ3zRjqTp3P3JXq4qHKquwCIlTjC",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "1994-01-01",
-      "username": "sp",
-      "rpassword": "asdf",
-      "mobile": 8801888988,
-      "blood_group": "P",
-      "role": "patient",
-      "createdDate": "Thu Oct 28 2021 13:14:41 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 24
-    },
-    {
-      "email": "pooja@gmail.com",
-      "password": "$2a$10$04.IVRauxq426GW6dsbx/uEgZcz/XwGd9hl8GnzTKIxW9nlD9apAK",
-      "fName": "pooja",
-      "lName": "k",
-      "dob": "2021-09-28",
-      "username": "pooja",
-      "mobile": "9705607801",
-      "role": "physician",
-      "speciality": "General Surgery",
-      "createdDate": "Thu Oct 28 2021 19:30:12 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "speciality": "dermatology",
+      "createdDate": "Tue Nov 02 2021 10:21:39 GMT+0530 (India Standard Time)",
+      "isActive": false,
       "id": 25
     },
     {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
-      "fName": "Susmitha",
-      "lName": "C",
-      "dob": "1996-08-08",
-      "username": "Susmitha1281",
-      "mobile": "8106989754",
+      "email": "manoj@email.com",
+      "password": "$2a$10$AQ759E8Jb9njSSKcYsMxaORty6nLAHPbWK4r2SuxNRlkJFDZopE8O",
+      "fName": "Manoj",
+      "lName": "Thormamidi",
+      "dob": "1993-08-08",
+      "username": "ManojT",
+      "mobile": "7655443329",
+      "role": "physician",
+      "speciality": "allergy_immunology",
+      "createdDate": "Tue Nov 02 2021 10:23:02 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 26
+    },
+    {
+      "email": "anasuya@email.com",
+      "password": "$2a$10$bQdE78q1UGXCGb80S2RvA.ZUb9InMPyKaTMDzlArBPDtFY8VOqQvC",
+      "fName": "Anasuya",
+      "lName": "Koganti",
+      "dob": "1993-08-11",
+      "username": "AnasuyaK",
+      "mobile": "6190675483",
+      "role": "physician",
+      "speciality": "allergy_immunology",
+      "createdDate": "Tue Nov 02 2021 10:24:06 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 27
+    },
+    {
+      "email": "sandhya@email.com",
+      "password": "$2a$10$Fwx6FxBvD3N9wzmqc.HEreFl7UnOLgUB7tWCJMBEeE7hTnUMBzzrq",
+      "fName": "Sandhya",
+      "lName": "Gattumedi",
+      "dob": "2016-08-08",
+      "username": "sandhya1281",
+      "mobile": "9876897685",
+      "role": "physician",
+      "speciality": "family_medicine",
+      "createdDate": "Tue Nov 02 2021 10:25:34 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 28
+    },
+    {
+      "email": "swetha@email.com",
+      "password": "$2a$10$GvENmJ5sbV4Dbh6OJpuXbe7vXnBUW4glesRSH4SdaXhOHd.CZm8nq",
+      "fName": "Swetha",
+      "lName": "Gudapathi",
+      "dob": "2007-06-15",
+      "username": "SwethaG",
+      "mobile": "8976897685",
+      "role": "physician",
+      "speciality": "family_medicine",
+      "createdDate": "Tue Nov 02 2021 10:26:51 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 29
+    },
+    {
+      "email": "vijaya@email.com",
+      "password": "$2a$10$4ZycTCNVH9vDpauWGt/Th.zPK2R.Mnc6h3UjLpd7TcGIEzJERC8bC",
+      "fName": "Vijaya",
+      "lName": "Chinthakindi",
+      "dob": "1993-06-15",
+      "username": "VijayaC",
+      "mobile": "9776897685",
+      "role": "physician",
+      "speciality": "obstetrics_gynecology",
+      "createdDate": "Tue Nov 02 2021 10:28:23 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 30
+    },
+    {
+      "email": "ramesh@email.com",
+      "password": "$2a$10$cEP3.GCgFmuhj9TFEz14ley6Lil9QMGIYpySoqGv5OPJLgzWWRtWi",
+      "fName": "Ramesh ",
+      "lName": "Gudapathi",
+      "dob": "2005-07-02",
+      "username": "Ramesh Gudapathi",
+      "mobile": "9876897685",
       "role": "physician",
       "speciality": "neurology",
-      "createdDate": "Fri Oct 29 2021 00:14:03 GMT+0530 (India Standard Time)",
+      "createdDate": "Tue Nov 02 2021 10:31:17 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 31
+    },
+    {
+      "email": "sudhir@email.com",
+      "password": "$2a$10$HIggkDi/p3ZsCk4Ze2C8pON6/FlmG8SUNsGrK9xW/iQWKCmgEaDli",
+      "fName": "Sudhir",
+      "lName": "Koganti",
+      "dob": "1992-06-12",
+      "username": "Sudhir K",
+      "mobile": "7655443329",
+      "role": "physician",
+      "speciality": "pathology",
+      "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 32
+    },
+    {
+      "email": "vani@email.com",
+      "password": "$2a$10$qz8BfSvjJM8WDXPyI4uFve7a89GW0CqIjK5OZMB7oQEPrW70F0LRq",
+      "fName": "Vani ",
+      "lName": "Peddaboina",
+      "dob": "1997-10-01",
+      "username": "Vani Peddaboina",
+      "mobile": "9855443329",
+      "role": "physician",
+      "speciality": "psychiatry",
+      "createdDate": "Tue Nov 02 2021 10:33:22 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 33
+    },
+    {
+      "email": "ajinkya@email.com",
+      "password": "$2a$10$wNhRusjZ89jD9zTuGO9XKuCY1vUV0eBV5/aFB7wY8CFDEBpG6bp7S",
+      "fName": "Ajinkya Mohanrao ",
+      "lName": "Pathak",
+      "dob": "2016-02-10",
+      "username": "Ajinkya1281",
+      "mobile": "787698976D",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 34
+    },
+    {
+      "email": "nishanth@email.com",
+      "password": "$2a$10$FKzXNbGT1r8kJhmRmuSjGe6Kkuges.2d2ZPGAddm6dYpCrtnRc1yO",
+      "fName": "Nishantha",
+      "lName": "Choubey",
+      "dob": "2007-06-12",
+      "username": "NishanthChoubey321",
+      "mobile": "6789468988",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 35
+    },
+    {
+      "email": "supriya@email.com",
+      "password": "$2a$10$4LNpOOp5aXm3qx6kEdKPFOtTApDnzu/YhEN9ruWn.yPYp0qhKRrIu",
+      "fName": "Supriya",
+      "lName": "Kulkarni",
+      "dob": "2002-02-14",
+      "username": "SupriyaKulkarni1281",
+      "mobile": "8977567778",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 36
+    },
+    {
+      "email": "pooja@email.com",
+      "password": "$2a$10$iDSPQLXG5NmYlx9M8njPzu9ScIlkdY.VubmYvgsgh2mOdQbTkxmUS",
+      "fName": "Pooja",
+      "lName": "C",
+      "dob": "2002-02-11",
+      "username": "Pooja281",
+      "mobile": "8677567778",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 37
+    },
+    {
+      "email": "susmitha@email.com",
+      "password": "$2a$10$r9/TvG3MjZu69wg9I3bMxOaT9TdGEa/6Fk4gS6GoZO4mDV9aQwBYa",
+      "fName": "Susmitha",
+      "lName": "Chinthakindi",
+      "dob": "1996-08-08",
+      "username": "susmitha1281",
+      "mobile": "8106989754",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 38
+    },
+    {
+      "email": "shiva@email.com",
+      "password": "$2a$10$IUlN244wWXTUiKyfDT.dw.WrKfXG4gJurdTuO1klbIbwK9.Rdm5pq",
+      "fName": "Shivakumar",
+      "lName": "Chinthakindi",
+      "dob": "1996-08-08",
+      "username": "shivakumarP",
+      "mobile": "7655443329",
+      "role": "admin",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 39
+    },
+    {
+      "email": "manaiah@email.com",
+      "password": "$2a$10$YuQb0oCPVvOfly7j4PsCgO3EbIzVkKm4muVx..llOAlKbIiPglSPe",
+      "fName": "Manaiah",
+      "lName": "Chinthakindi",
+      "dob": "2015-10-15",
+      "username": "ManaiahC",
+      "rpassword": "12345",
+      "mobile": 7655443329,
+      "blood_group": "o+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:46:42 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 40
+    },
+    {
+      "email": "vijayalaxmi@email.com",
+      "password": "$2a$10$.HDZceenCNz4KKwhBmJGs..DAdkkXMKlZzbyUaDxHYRHGnz5QOnYO",
+      "fName": "Vijayalaxmi",
+      "lName": "Chinthakindi",
+      "dob": "2021-11-24",
+      "username": "VijayaC",
+      "rpassword": "12345",
+      "mobile": 7655443329,
+      "blood_group": "A+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:48:04 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 41
+    },
+    {
+      "email": "srilatha@email.com",
+      "password": "$2a$10$Pq7XzKa407ErkmMeg4.blegTFsQ0DYfSgYGGUyerjqe7XORBDvq2y",
+      "fName": "Srilatha",
+      "lName": "Chegunta",
+      "dob": "2021-11-03",
+      "username": "SrilathaC",
+      "rpassword": "12345",
+      "mobile": 9876897685,
+      "blood_group": "O+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:49:23 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 42
+    },
+    {
+      "email": "nagamma@email.com",
+      "password": "$2a$10$PClw71VJqPQE4mMHSCjCseOOnf4fC8nle/09R4BXu7rhn1ixVUSzu",
+      "fName": "Nagamma",
+      "lName": "Eleti",
+      "dob": "2021-11-16",
+      "username": "NagammaE",
+      "rpassword": "12345",
+      "mobile": 6789468988,
+      "blood_group": "A+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:50:15 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 43
+    },
+    {
+      "email": "sharon@email.com",
+      "password": "$2a$10$yNQReX1ifEy6pjtyRug3jODamhSzhqmt8/3vAf5hZZ4OojLoVxIZG",
+      "fName": "Sharon",
+      "lName": "Sharma",
+      "dob": "2021-11-08",
+      "username": "SharonSharma281",
+      "rpassword": "12345",
+      "mobile": 8977567778,
+      "blood_group": "A+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:51:13 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 44
+    },
+    {
+      "email": "saketh@email.com",
+      "password": "$2a$10$zWVpR4PleSlIIpXPbKERv.ZsfjISfYRt03Cbw94uS7hAorTFpP4hi",
+      "fName": "Saketh",
+      "lName": "Medak",
+      "dob": "2021-11-09",
+      "username": "SakethMedak",
+      "rpassword": "12345",
+      "mobile": 7655443329,
+      "blood_group": "b+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:52:05 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 45
+    },
+    {
+      "email": "nikhil@email.com",
+      "password": "$2a$10$gxchoXw05cHWlTbxjKJ0MekUgerOOTkcwTULCt9NB4ofnJ4D8V/aq",
+      "fName": "Nikhil",
+      "lName": "B",
+      "dob": "2021-12-02",
+      "username": "NikhilB",
+      "rpassword": "12345",
+      "mobile": 73652365924,
+      "blood_group": "O+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:52:52 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 24
+      "id": 46
+    },
+    {
+      "email": "gagan@email.com",
+      "password": "$2a$10$WoXTnUqk8MbnOTg68VswKO6CX7kEAfhlX1Hn/MaCTCC/cdgEKxPKO",
+      "fName": "Gagan",
+      "lName": "Mahendra",
+      "dob": "2021-11-10",
+      "username": "GaganM",
+      "rpassword": "12345",
+      "mobile": 7635872388,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:53:36 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 47
+    },
+    {
+      "email": "swapna@email.com",
+      "password": "$2a$10$jdaSEi22Y.PG7mg7/zSv4ehn2p1oq9fFJ7oHJ7gfK6zpQvIhhcE32",
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "username": "SwapnaM",
+      "rpassword": "12345",
+      "mobile": 6458987638,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 48
+    },
+    {
+      "email": "keerthi@email.com",
+      "password": "$2a$10$4GsQTQmWkw23BAIegQiQGO9niA7m5kprt54mYmb7ILenqYi50nISS",
+      "fName": "Keerthi",
+      "lName": "Datt",
+      "dob": "2021-12-03",
+      "username": "KeerthiDatt",
+      "rpassword": "12345",
+      "mobile": 7484957586,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:55:20 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 49
+    },
+    {
+      "email": "sneha@email.com",
+      "password": "$2a$10$7erkdXW8znmCkXYx.omG7eIIJAVNdtvOMF6nirXLqDKX1jL0UPRnK",
+      "fName": "Snehalatha",
+      "lName": "Reddy",
+      "dob": "2021-11-26",
+      "username": "SnehalathaR",
+      "mobile": "7688986545",
+      "role": "physician",
+      "speciality": "obstetrics_gynecology",
+      "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 50
+    },
+    {
+      "email": "susmithab@email.comil",
+      "password": "$2a$10$lAxbN9zpLvpu0KzAQOfxp.Tq0.c7/1hhRpK/UcXT8qWIHaIjkuaty",
+      "fName": "Susmitha",
+      "lName": "B",
+      "dob": "1996-08-08",
+      "username": "SusmithaBlessy",
+      "mobile": "8106989754",
+      "role": "physician",
+      "speciality": "internal_medicine",
+      "createdDate": "Tue Nov 02 2021 12:14:17 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 51
     }
   ],
   "medic_allergy": [
@@ -885,6 +1097,88 @@
       "others": ""
     }
   ],
+  "physician_speciality": [
+    {
+      "name": "Allergy and immunology",
+      "value": "allergy_immunology"
+    },
+    {
+      "name": "Anesthesiology",
+      "value": "anesthesiology"
+    },
+    {
+      "name": "Dermatology",
+      "value": "dermatology"
+    },
+    {
+      "name": "Diagnostic Radiology",
+      "value": "diagnostic_radiology"
+    },
+    {
+      "name": "Emergency Medicine",
+      "value": "emergency_medicine"
+    },
+    {
+      "name": "Family medicine",
+      "value": "family_medicine"
+    },
+    {
+      "name": "Internal Medicine",
+      "value": "internal_medicine"
+    },
+    {
+      "name": "Medical Genetics",
+      "value": "medical_genetics"
+    },
+    {
+      "name": "Neurology",
+      "value": "neurology"
+    },
+    {
+      "name": "Nuclear Medicine",
+      "value": "nuclear_medicine"
+    },
+    {
+      "name": "Obstetrics and Gynecology",
+      "value": "obstetrics_gynecology"
+    },
+    {
+      "name": "Ophthalmology",
+      "value": "ophthalmology"
+    },
+    {
+      "name": "Pathology",
+      "value": "pathology"
+    },
+    {
+      "name": "Pediatrics",
+      "value": "pediatrics"
+    },
+    {
+      "name": "Physical Rehabilitation",
+      "value": "physical_rehabilitation"
+    },
+    {
+      "name": "Preventive Medicine",
+      "value": "preventive_medicine"
+    },
+    {
+      "name": "Psychiatry",
+      "value": "psychiatry"
+    },
+    {
+      "name": "Radiation Oncology",
+      "value": "radiation_oncology"
+    },
+    {
+      "name": "Surgery",
+      "value": "surgery"
+    },
+    {
+      "name": "Urology",
+      "value": "urology"
+    }
+  ],
   "allergies": [
     {
       "AllergyType": "Food ",
@@ -894,7 +1188,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Alaska pollock"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Alder"
@@ -903,22 +1196,18 @@
       "AllergyType": "Food ",
       "AllergyName": "Almond"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "American  oyster"
     },
-
     {
       "AllergyType": "Insect",
       "AllergyName": "American cockroach"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "American lobster"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Annual mercury grass"
@@ -927,17 +1216,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Apple"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Apricot"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Arizona Cypress"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Arthropod"
@@ -954,7 +1240,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Asian Seabass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Asinus "
@@ -963,12 +1248,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Atlantic cod"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Atlantic herring"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Atlantic mackerel"
@@ -981,12 +1264,10 @@
       "AllergyType": "Bacteria airway",
       "AllergyName": "Bacteria"
     },
-
     {
       "AllergyType": "Bacteria skin",
       "AllergyName": "Bacteria"
     },
-
     {
       "AllergyType": "Bacteria skin",
       "AllergyName": "Bacteria"
@@ -995,7 +1276,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Bahia grass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Baltic cod"
@@ -1004,7 +1284,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Banana"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Banana Prawn"
@@ -1013,17 +1292,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Barley"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Barley"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Bell pepper"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Benguela hake"
@@ -1048,7 +1324,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Birch"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Black fire ant"
@@ -1065,12 +1340,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Black tiger shrimp"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Black walnut"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Blue hake"
@@ -1079,7 +1352,6 @@
       "AllergyType": "Food ",
       "AllergyName": "blue lupin"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "blue swimmer crab"
@@ -1088,17 +1360,14 @@
       "AllergyType": "Insect",
       "AllergyName": "booklice"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Bovine"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Bovine"
     },
-
     {
       "AllergyType": "Vaccine",
       "AllergyName": "Bovine"
@@ -1107,7 +1376,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Brazil nut"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Brazilian fire ant"
@@ -1128,17 +1396,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Buckwheat"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Bumblebee"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Canary grass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "caribean shrimp"
@@ -1155,32 +1420,26 @@
       "AllergyType": "Food ",
       "AllergyName": "Carrot"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Cashew"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Cassava"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Castor bean"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Cat"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Cedar"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Cherry"
@@ -1189,12 +1448,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Chicken"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Chinese mitten crab"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Chinese razor clam"
@@ -1203,7 +1460,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Chinese white shrimp"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Chinese-date"
@@ -1224,12 +1480,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Clam"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Climber (plant)"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Coffee"
@@ -1238,12 +1492,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Common Amaranth"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Common timothy"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Crab"
@@ -1280,7 +1532,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Disk abalone"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Dog"
@@ -1289,7 +1540,6 @@
       "AllergyType": "Animal",
       "AllergyName": "Domestic guinea pig"
     },
-
     {
       "AllergyType": "Mite",
       "AllergyName": "Dust mite"
@@ -1306,17 +1556,14 @@
       "AllergyType": "Food ",
       "AllergyName": "English walnut"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "European ash"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "European Beech"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "European chestnut"
@@ -1325,7 +1572,6 @@
       "AllergyType": "Food ",
       "AllergyName": "European hake"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "European hazelnut"
@@ -1338,22 +1584,18 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "European hornet"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "European pigeon tick"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "European rabbit"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "European white birch"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Farmyyard midge"
@@ -1370,22 +1612,18 @@
       "AllergyType": "Food ",
       "AllergyName": "Frog"
     },
-
     {
       "AllergyType": "Fungi",
       "AllergyName": "Fungus"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Fungus"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Garden lettuce"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Giant Bull Ant"
@@ -1394,12 +1632,10 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Giant honeybee"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "giant mud crab"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Giant ragweed"
@@ -1408,12 +1644,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Giant River Prawn"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Golden hamster"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Gould's razor shell"
@@ -1422,7 +1656,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Grape"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Greasyback shrimp"
@@ -1431,7 +1664,6 @@
       "AllergyType": "Food ",
       "AllergyName": "green mud crab"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Haliotis laevigata x Haliotis rubra"
@@ -1444,12 +1676,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Hemp"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Honeybee"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Hornbeam"
@@ -1458,7 +1688,6 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Hornet"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Horse"
@@ -1467,7 +1696,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Horse"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Horse Fly"
@@ -1476,12 +1704,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Horsehair crab"
     },
-
     {
       "AllergyType": "Mite",
       "AllergyName": "House dust mite"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Indian honeybee"
@@ -1490,12 +1716,10 @@
       "AllergyType": "Insect",
       "AllergyName": "Indian meal moth"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Japanese cedar"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Japanese cypress"
@@ -1504,7 +1728,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Japanese flying squid"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Japanese hop"
@@ -1521,12 +1744,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Japanese white birch"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Johnson grass"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Jumper ant"
@@ -1535,17 +1756,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Juniper"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Kamchatka crab"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Kentucky bluegrass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Kidney bean"
@@ -1554,7 +1772,6 @@
       "AllergyType": "Food ",
       "AllergyName": "King Prawn"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Kiwi"
@@ -1575,7 +1792,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Lentil"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Lesser banded hornet"
@@ -1584,7 +1800,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Lilac"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Lobster"
@@ -1593,7 +1808,6 @@
       "AllergyType": "Plant",
       "AllergyName": "London plane tree"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Lychee nut"
@@ -1610,17 +1824,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Mediterranean Cypress"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "mesquite"
     },
-
     {
       "AllergyType": "Insect",
       "AllergyName": "Mite"
     },
-
     {
       "AllergyType": "Mite",
       "AllergyName": "Mite"
@@ -1633,12 +1844,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Mollusc"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Mountain cedar"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Mouse"
@@ -1647,7 +1856,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Mozambique tilapia"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Mugwort"
@@ -1672,7 +1880,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Muskmelon"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Mustard"
@@ -1681,12 +1888,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Narrow-leaved plantain"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Navel orange"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Netted muskmelon"
@@ -1707,17 +1912,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Oak"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "ocean perch (red fish)"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Octopus"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Orchard grass"
@@ -1726,12 +1928,10 @@
       "AllergyType": "Plant",
       "AllergyName": "oriental plane"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Papaya"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Paper wasp"
@@ -1740,17 +1940,14 @@
       "AllergyType": "Mite",
       "AllergyName": "Para rubber tree"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Para rubber tree"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Parasitic fish worm"
     },
-
     {
       "AllergyType": "Parasite",
       "AllergyName": "Parasitic roundworm"
@@ -1767,17 +1964,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Pea"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Peach"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Peanut"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Pear"
@@ -1786,12 +1980,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Pecan"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Perennial ryegrass"
     },
-
     {
       "AllergyType": "Drug ",
       "AllergyName": "Pharmaceutical Agent"
@@ -1800,22 +1992,18 @@
       "AllergyType": "Animal",
       "AllergyName": "Pig"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Pigweed"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Pine"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Pine moth"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Pineapple"
@@ -1832,12 +2020,10 @@
       "AllergyType": "Food ",
       "AllergyName": "pistachio"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Plant hybrid"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Plum"
@@ -1846,12 +2032,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Pomegranate"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Potato"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Privet"
@@ -1860,7 +2044,6 @@
       "AllergyType": "Food ",
       "AllergyName": "rainbow trout"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Rape"
@@ -1869,7 +2052,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Rape"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "raspberry"
@@ -1882,7 +2064,6 @@
       "AllergyType": "Animal",
       "AllergyName": "Rat"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Red cedar"
@@ -1891,7 +2072,6 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Red fire ant"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "red squid"
@@ -1900,17 +2080,14 @@
       "AllergyType": "Food ",
       "AllergyName": "red swamp crayfish"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Rice"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Rye"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Rye"
@@ -1923,7 +2100,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Saffron crocus"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Salmon"
@@ -1936,7 +2112,6 @@
       "AllergyType": "Mite",
       "AllergyName": "Scabies mite"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Scabies mite"
@@ -1945,7 +2120,6 @@
       "AllergyType": "Parasite",
       "AllergyName": "Schistosoma"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Sesame"
@@ -1958,7 +2132,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Shallow-water cape hake"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Short ragweed"
@@ -2023,12 +2196,10 @@
       "AllergyType": "Food ",
       "AllergyName": "southern hake"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Southern Pacific hake"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Soybean"
@@ -2037,32 +2208,26 @@
       "AllergyType": "Mite",
       "AllergyName": "Storage mite"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Strawberry"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "summer cypress"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Sunflower"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Sunflower"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Sweet vernal grass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Swordfish"
@@ -2079,7 +2244,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Thistle"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Tobacco"
@@ -2088,17 +2252,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Tomato"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Tropical Fire Ant"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Trumpet lily"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Tsetse fly"
@@ -2107,7 +2268,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Turnip"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Turnip"
@@ -2116,17 +2276,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Turnip"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Velvet grass"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Wasp"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Weed"
@@ -2139,7 +2296,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Western ragweed"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Wheat"
@@ -2152,12 +2308,10 @@
       "AllergyType": "Food ",
       "AllergyName": "White Mulberry"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Whiteface hornet"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Whiteleg Shrimp"
@@ -2178,12 +2332,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Yak"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Yeast"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Yellow fever mosquito"
@@ -2196,7 +2348,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Yellow mealworm"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Yellowfin tuna"
