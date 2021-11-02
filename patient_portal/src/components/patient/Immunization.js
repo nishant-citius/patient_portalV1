@@ -58,15 +58,16 @@ const Immunization = (props) => {
       message: "Immunization added...",
       type: "success",
     });
+    history.push("/medic_allergy");
   };
 
   let history = useHistory();
 
-  useEffect(() => {
-    if (props.statusCode === 201) {
-      history.push("/patient");
-    }
-  });
+  // useEffect(() => {
+  //   if (props.statusCode === 201) {
+  //     history.push("/medic_allergy");
+  //   }
+  // });
   return (
     <>
       {isAvailable ? (

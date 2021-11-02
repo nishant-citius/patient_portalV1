@@ -46,12 +46,9 @@ function UserList(props) {
   return (
     <>
       <div className="container mt-5">
-        <button
-          onClick={() => addNewUser()}
-          className="btn btn-primary float-end mr-4"
-        >
+        <Link to={`/addusers`} className="btn btn-primary float-end mr-4">
           Add User
-        </button>
+        </Link>
         <h1 className="text-success text-center fw-bold ">User List</h1>
         <table className="table table-bordered shadow mt-4">
           <thead className="table-dark">
@@ -110,13 +107,13 @@ function UserList(props) {
           </tbody>
         </table>
       </div>
-      <ModalPopup
+      {/* <ModalPopup
         title="Add New User"
         openPopup={openPopup}
         setOpenPopup={setOpenPopup}
       >
         <AddUsers />
-      </ModalPopup>
+      </ModalPopup> */}
     </>
   );
 }

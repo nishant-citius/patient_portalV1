@@ -21,7 +21,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { propTypes } from "react-bootstrap/esm/Image";
+//import { propTypes } from "react-bootstrap/esm/Image";
 import InitializeReduxState from "./InitializeReduxState";
 
 const paperStyle = {
