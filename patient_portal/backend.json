@@ -13,7 +13,7 @@
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1
+      "id": 24
     },
     {
       "email": "aj@email.com",
@@ -626,7 +626,7 @@
       "pulse": "92",
       "respiration": "20",
       "oxigen_saturation": "98",
-      "patientId": 11,
+      "userid": 11,
       "id": 1
     },
     {
@@ -643,7 +643,6 @@
     }
   ],
   "patientdietplan": [
-    
     {
       "earlymorning": "yoga, walking/skipping",
       "breakfast": "Dosa/Chappathi",
