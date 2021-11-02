@@ -416,20 +416,20 @@
   "medic_allergy": [],
   "immunization": [
     {
-      "patient_name": "Nishant",
+      "first_name": "Nishant",
+      "last_name": "Chaubey",
       "age_category": "18_44",
       "vaccine_brand": "CoviShield",
-      "dose_detail": "1",
+      "dose_detail": "2",
       "general_vaccine": [
         {
           "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-31"
+          "vaccine_date": "2021-11-11"
         }
       ],
       "id": 24
     }
   ],
-  
   "appointments": [
     {
       "fName": "shiva",

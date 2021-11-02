@@ -64,7 +64,7 @@ export class PatientList extends React.Component {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>{user.patient_name}</td>
+                    <td>{`${user.first_name} ${user.last_name}`}</td>
                     <td>
                       <ul className="no-list-style">
                         {user.general_vaccine.map((vac, ind) => {
