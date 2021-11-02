@@ -17,9 +17,29 @@ class AllergiesService {
     return axios.get(url);
   }
 
-  addNewAllergy(data) {
-    const url = `${URLS.BASE_URL}/allergies`;
-    return axios.post(url);
+  addNewAllergy(newdata) {
+    let url = URLS.BASE_URL + "/allergies";
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.post(url, JSON.stringify(newdata), config);
+  }
+
+  editAllergy(id, updatedData) {
+    let url = `${URLS.BASE_URL}/allergies/${id}`;
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.put(url, JSON.stringify(updatedData), config);
+  }
+
+  deleteAllergy(id) {
+    const url = `${URLS.BASE_URL}/allergies/${id}`;
+    return axios.delete(url);
   }
 }
 

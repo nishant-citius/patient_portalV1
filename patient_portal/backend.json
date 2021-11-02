@@ -1891,6 +1891,11 @@
     {
       "AllergyType": "Food ",
       "AllergyName": "Yellowfin tuna"
+    },
+    {
+      "AllergyType": "Polution",
+      "AllergyName": "Rashes",
+      "id": 1
     }
   ],
   "procedures": [
