@@ -4,10 +4,14 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import { adminService } from "../../services/register_user_service";
+import TextField from "@mui/material/TextField";
+import Stack from "@mui/material/Stack";
+import Autocomplete from "@mui/material/Autocomplete";
 
 const Medication_Allergies = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
   const [medicationList, setMedicationList] = useState([]);
+  const [medicineStrength, setmedicineStrength] = useState([]);
   useEffect(() => {
     if (props.isLoggedIn) {
       if (props.mediAllergyDetails && props.mediAllergyDetails > 0) {
@@ -31,7 +35,19 @@ const Medication_Allergies = (props) => {
       }
     );
   }
-  console.log("Nishant chaubey", medicationList);
+
+  function getStrength() {
+    let medicine = document.getElementById("medication_name").value;
+    console.log(medicine);
+    let arr = medicationList.filter((item) => {
+      if (item.Form === medicine) {
+        return item;
+      }
+    });
+    setmedicineStrength(arr);
+    return arr;
+  }
+  console.log("Medicine Strength", medicineStrength);
   const initialValues = {
     id: "",
     userId: "",
@@ -292,6 +308,31 @@ const Medication_Allergies = (props) => {
                                                   <ErrorMessage name="current_medication.medicineName" />
                                                 </div>
                                               </div>
+                                              {/* <Stack
+                                                spacing={2}
+                                                sx={{ width: 300 }}
+                                              > */}
+                                              {/* <Autocomplete
+                                                freeSolo
+                                                id="medication_name"
+                                                name={`current_medication[${index}].medicineName`}
+                                                disableClearable
+                                                options={medicationList.map(
+                                                  (option) => option.Form
+                                                )}
+                                                onChange={getStrength}
+                                                renderInput={(params) => (
+                                                  <TextField
+                                                    {...params}
+                                                    label="Search input"
+                                                    InputProps={{
+                                                      ...params.InputProps,
+                                                      type: "search",
+                                                    }}
+                                                  />
+                                                )}
+                                              /> */}
+                                              {/* </Stack> */}
                                             </div>
                                             <div className="col-12 col-md-3">
                                               <div className="form-group">
