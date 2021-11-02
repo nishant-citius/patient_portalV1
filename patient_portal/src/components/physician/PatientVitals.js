@@ -4,10 +4,48 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useHistory } from "react-router";
+import { adminService } from "../../services/register_user_service";
 
 const Vitals = (props) => {
+  const [patientId, setPatientId] = useState(0);
+  const [patientVitals, setPatientVitals] = useState({});
+  const [available, setAvailable] = useState(false);
+
+  let savedValues = {};
+
+  useEffect(() => {
+    setPatientId(props.patientId.patientId);
+    if (patientId) {
+      getPatientVitals(patientId);
+    }
+  }, [props.patientId.patientId, patientId]);
+
+  function getPatientVitals(patientId) {
+    adminService.getPatientVitals(patientId).then(
+      (response) => {
+        setPatientVitals(response.data);
+        setAvailable(true);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
+
+  function updatePatientVitals(patientId, newData) {
+    adminService.updatePatientVitals(patientId, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("Patient Vitals Updated Successfully...");
+        }
+      },
+      (error) => {}
+    );
+  }
+
   const initialValues = {
     patient: "",
+    height: "",
     weight: "",
     blood_pressure: "",
     temperature: "",
@@ -16,7 +54,20 @@ const Vitals = (props) => {
     oxigen_saturation: "",
     userid: props.currentUser.id,
   };
-  const [patientVitals, setpatientVitals] = useState(initialValues);
+
+  if (available) {
+    savedValues = {
+      height: patientVitals[0].height,
+      weight: patientVitals[0].weight,
+      blood_pressure: patientVitals[0].blood_pressure,
+      temperature: patientVitals[0].temperature,
+      pulse: patientVitals[0].pulse,
+      respiration: patientVitals[0].respiration,
+      oxigen_saturation: patientVitals[0].oxigen_saturation,
+      userid: props.currentUser.id,
+    };
+  }
+
   const validationSchema = Yup.object().shape({
     height: Yup.string().required("Required"),
     weight: Yup.string().required("Required"),
@@ -26,6 +77,7 @@ const Vitals = (props) => {
     respiration: Yup.string().required("Required"),
     oxigen_saturation: Yup.string().required("Required"),
   });
+
   const onSubmit = (values) => {
     const payload = {
       height: values.height,
@@ -35,23 +87,45 @@ const Vitals = (props) => {
       pulse: values.pulse,
       respiration: values.respiration,
       oxigen_saturation: values.oxigen_saturation,
-      userid: props.currentUser.id,
+      physicianId: props.currentUser.id,
+      patientId: patientId,
     };
-    props.vitals(payload);
+    available ? props.vitals(payload) : updatePatientVitals(patientId, payload);
   };
 
-  let history = useHistory();
-  useEffect(() => {
-    if (props.statusCode === 201) {
-      history.push("/patient");
-    }
-  });
-
   return (
+    // <div className="container mt-5">
+    //   <h1 className="text-success text-center fw-bold ">Patient Vitals</h1>
+    //   <table className="table table-bordered shadow mt-4">
+    //     <thead className="table-dark">
+    //       <tr>
+    //         <th scope="col">Patient Name</th>
+    //         <th scope="col">Height</th>
+    //         <th scope="col">Weight</th>
+    //         <th scope="col">Blood Pressure</th>
+    //         <th scope="col">Temperature</th>
+    //         <th scope="col">Pulse</th>
+    //         <th scope="col">Respiration</th>
+    //         <th scope="col">Oxygen Saturation</th>
+    //       </tr>
+    //     </thead>
+    //     <tbody>
+    //       <td>{patientVitals[0].height}</td>
+    //       <td>{patientVitals[0].weight}</td>
+    //       <td>{patientVitals[0].blood_pressure}</td>
+    //       <td>{patientVitals[0].temperature}</td>
+    //       <td>{patientVitals[0].pulse}</td>
+    //       <td>{patientVitals[0].respiration}</td>
+    //       <td>{patientVitals[0].oxigen_saturation}</td>;
+    //     </tbody>
+    //   </table>
+    // </div>
+
     <Formik
-      initialValues={initialValues}
+      initialValues={savedValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
     >
       {(props) => (
         <div className="container">
@@ -62,9 +136,6 @@ const Vitals = (props) => {
             <div className="card-body">
               <Form>
                 <div className="form-group">
-                  {/* <label htmlFor="patient_vitals">
-                    Patient Vitals
-                  </label><br></br> */}
                   <div className="row">
                     <div className="col-4">
                       <label htmlFor="height">Patient Height</label>
@@ -72,6 +143,7 @@ const Vitals = (props) => {
                         type="text"
                         className="form-control"
                         name="height"
+                        id="height"
                       />
                       <div className="error">
                         <ErrorMessage name="height" />
@@ -166,12 +238,15 @@ const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
     allusers: state.vitals.Vitalsreducer,
+    patientvitals: state.getPatientvitals.getPatientvitals,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     vitals: (newuser) => dispatch(actionCreator.AddVitalsAsync(newuser)),
+    getPatientVitals: (patientId) =>
+      dispatch(actionCreator.GetVitals(patientId)),
   };
 };
 

@@ -13,7 +13,7 @@
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 24
+      "id": 1
     },
     {
       "email": "aj@email.com",
@@ -47,7 +47,7 @@
     },
     {
       "email": "ms@email.com",
-      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
+      "password": "$2a$10$ZP976CJbY9TD6OwMjWNE/./opArtEZ0SDMrvyfSP8MC/NqQgv84vC",
       "fName": "Manya ",
       "lName": "Surve",
       "dob": "2021-09-30",
@@ -57,7 +57,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 6
     },
     {
@@ -234,7 +234,7 @@
       ],
       "otc_medication": [
         {
-          "otcDrugName":"paracetamal",
+          "otcDrugName": "paracetamal",
           "strength": "650",
           "directiontoconsume": "3",
           "socialDrugs": "drink"
@@ -598,6 +598,25 @@
       "id": 3
     }
   ],
+  "demographics": [
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "na",
+      "education": "nan",
+      "employment": "nn",
+      "address": "na",
+      "phone_number": 1234567890,
+      "medical_history": "na",
+      "family_medical_history": "na",
+      "surgeries": "an",
+      "insurance_provider": "na",
+      "userid": 1,
+      "id": 1
+    }
+  ],
   "patientvitals": [
     {
       "height": "4.8",
@@ -607,22 +626,37 @@
       "pulse": "92",
       "respiration": "20",
       "oxigen_saturation": "98",
-      "userid": 1,
-      "id": 10
+      "patientId": 11,
+      "id": 1
     },
     {
-      "height": "4.8",
-      "weight": "55",
-      "blood_pressure": "70/80",
-      "temperature": "98",
-      "pulse": "",
-      "respiration": "",
-      "oxigen_saturation": "",
-      "userid": 2,
-      "id": 2
+      "height": "5 Feet 4 Inch.",
+      "weight": "64 Kgs",
+      "blood_pressure": "110/25mg",
+      "temperature": "27 Deg",
+      "pulse": "72 pm",
+      "respiration": "Good",
+      "oxigen_saturation": "Good",
+      "physicianId": 12,
+      "patientId": 24,
+      "id": 3
     }
   ],
-  
+  "patientdietplan": [
+    
+    {
+      "earlymorning": "yoga, walking/skipping",
+      "breakfast": "Dosa/Chappathi",
+      "mid_morning": "apple/gua/orange-1 cup",
+      "lunch": "Roti with lots of veggies",
+      "evening": "buscuits/tea",
+      "dinner": "Rice/Chapathi with less oil",
+      "post_dinner_activity": "try to walk for a while",
+      "bedtime": "skim milk 1-glass",
+      "physicianId": 12,
+      "id": 1
+    }
+  ],
   "order": [
     {
       "id": "",

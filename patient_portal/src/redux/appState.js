@@ -3,6 +3,7 @@ let appState = {
   demographics: [],
   immunization: [],
   vitals: [],
+  dietplan: [],
   medication_allergies: [],
   isLoggedIn: false,
   authToken: "",

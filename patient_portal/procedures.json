@@ -1,0 +1,1052 @@
+[
+      {
+          "id": "1",
+          "code": "16070",
+          "desc": "Bypass Cerebral Ventricle to Nasopharynx with Autologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "2",
+          "code": "16071",
+          "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "3",
+          "code": "16072",
+          "desc": "Bypass Cerebral Ventricle to Atrium with Autologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "4",
+          "code": "16073",
+          "desc": "Bypass Cerebral Ventricle to Blood Vessel with Autologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "5",
+          "code": "16074",
+          "desc": "Bypass Cerebral Ventricle to Pleural Cavity with Autologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "6",
+          "code": "16075",
+          "desc": "Bypass Cerebral Ventricle to Intestine with Autologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "7",
+          "code": "00160JA",
+          "desc": "Bypass Cerebral Ventricle to Subgaleal Space with Synthetic Substitute, Open Approach"
+      },
+      {
+          "id": "8",
+          "code": "00160JB",
+          "desc": "Bypass Cerebral Ventricle to Cerebral Cisterns with Synthetic Substitute, Open Approach"
+      },
+      {
+          "id": "9",
+          "code": "00160K0",
+          "desc": "Bypass Cerebral Ventricle to Nasopharynx with Nonautologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "10",
+          "code": "00160K1",
+          "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Nonautologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "11",
+          "code": "00160K2",
+          "desc": "Bypass Cerebral Ventricle to Atrium with Nonautologous Tissue Substitute, Open Approach"
+      },
+      {
+          "id": "12",
+          "code": "00160K3",
+          "desc": "Bypass Cerebral Ventricle to Blood Vessel with Nonautologous Tissue Substitute, Open Appro"
+      },
+      {
+          "id": "13",
+          "code": "0N9L40Z",
+          "desc": "Drainage of Left Palatine Bone with Drainage Device, Percutaneous Endoscopic Approach"
+      },
+      {
+          "id": "14",
+          "code": "0N9L4ZX",
+          "desc": "Drainage of Left Palatine Bone, Percutaneous Endoscopic Approach, Diagnostic"
+      },
+      {
+          "id": "15",
+          "code": "0N9L4ZZ",
+          "desc": "Drainage of Left Palatine Bone, Percutaneous Endoscopic Approach"
+      },
+      {
+          "id": "16",
+          "code": "0N9M00Z",
+          "desc": "Drainage of Right Zygomatic Bone with Drainage Device, Open Approach"
+      },
+      {
+          "id": "17",
+          "code": "0N9M0ZX",
+          "desc": "Drainage of Right Zygomatic Bone, Open Approach, Diagnostic"
+      },
+      {
+          "id": "18",
+          "code": "0N9M0ZZ",
+          "desc": "Drainage of Right Zygomatic Bone, Open Approach"
+      },
+      {
+          "id": "19",
+          "code": "F07K6CZ",
+          "desc": "Therapeutic Exercise Treatment of Musculoskeletal System - Upper Back / Upper Extremity using Mechanical Equipment"
+      },
+      {
+          "id": "20",
+          "code": "F07K6DZ",
+          "desc": "Therapeutic Exercise Treatment of Musculoskeletal System - Upper Back / Upper Extremity using Electrotherapeutic Equipment"
+      },
+      {
+          "id": "21",
+          "code": "F07K6EZ",
+          "desc": "Therapeutic Exercise Treatment of Musculoskeletal System - Upper Back / Upper Extremity using Orthosis"
+      },
+      {
+          "id": "22",
+          "code": "F07L3FZ",
+          "desc": "Motor Function Treatment of Musculoskeletal System - Lower Back / Lower Extremity using Assistive, Adaptive, Supportive or Protective Equipment"
+      },
+      {
+          "id": "23",
+          "code": "F07L3UZ",
+          "desc": "Motor Function Treatment of Musculoskeletal System - Lower Back / Lower Extremity using Prosthesis"
+      },
+      {
+          "id": "24",
+          "code": "F07L3YZ",
+          "desc": "Motor Function Treatment of Musculoskeletal System - Lower Back / Lower Extremity using Other Equipment"
+      },
+      {
+          "id": "25",
+          "code": "F07L3ZZ",
+          "desc": "Motor Function Treatment of Musculoskeletal System - Lower Back / Lower Extremity"
+      },
+      {
+          "id": "26",
+          "code": "F07Z5FZ",
+          "desc": "Bed Mobility Treatment using Assistive, Adaptive, Supportive or Protective Equipment"
+      },
+      {
+          "id": "27",
+          "code": "F07Z5UZ",
+          "desc": "Bed Mobility Treatment using Prosthesis"
+      },
+      {
+          "id": "28",
+          "code": "F07Z5YZ",
+          "desc": "Bed Mobility Treatment using Other Equipment"
+      },
+      {
+          "id": "29",
+          "code": "F07Z5ZZ",
+          "desc": "Bed Mobility Treatment"
+      },
+      {
+          "id": "30",
+          "code": "F08J5FZ",
+          "desc": "Wound Management Treatment of Musculoskeletal System - Head and Neck using Assistive, Adaptive, Supportive or Protective Equipment"
+      },
+      {
+          "id": "31",
+          "code": "F08J5UZ",
+          "desc": "Wound Management Treatment of Musculoskeletal System - Head and Neck using Prosthesis"
+      },
+      {
+          "id": "32",
+          "code": "F08J5YZ",
+          "desc": "Wound Management Treatment of Musculoskeletal System - Head and Neck using Other Equipment"
+      },
+      {
+          "id": "33",
+          "code": "F08J5ZZ",
+          "desc": "Wound Management Treatment of Musculoskeletal System - Head and Neck"
+      },
+      {
+          "id": "34",
+          "code": "F08Z1UZ",
+          "desc": "Dressing Techniques Treatment using Prosthesis"
+      },
+      {
+          "id": "35",
+          "code": "F08Z1YZ",
+          "desc": "Dressing Techniques Treatment using Other Equipment"
+      },
+      {
+          "id": "36",
+          "code": "F08Z1ZZ",
+          "desc": "Dressing Techniques Treatment"
+      },
+      {
+          "id": "37",
+          "code": "F08Z3YZ",
+          "desc": "Feeding/Eating Treatment using Other Equipment"
+      },
+      {
+          "id": "38",
+          "code": "F08Z3ZZ",
+          "desc": "Feeding/Eating Treatment"
+      },
+      {
+          "id": "39",
+          "code": "F08Z4DZ",
+          "desc": "Home Management Treatment using Electrotherapeutic Equipment"
+      },
+      {
+          "id": "40",
+          "code": "F08Z4EZ",
+          "desc": "Home Management Treatment using Orthosis"
+      },
+      {
+          "id": "41",
+          "code": "F08Z7YZ",
+          "desc": "Vocational Activities and Functional Community or Work Reintegration Skills Treatment using Other Equipment"
+      },
+      {
+          "id": "42",
+          "code": "F08Z7ZZ",
+          "desc": "Vocational Activities and Functional Community or Work Reintegration Skills Treatment"
+      },
+      {
+          "id": "43",
+          "code": "F09Z0KZ",
+          "desc": "Hearing and Related Disorders Counseling Treatment using Audiovisual Equipment"
+      },
+      {
+          "id": "44",
+          "code": "F09Z0ZZ",
+          "desc": "Hearing and Related Disorders Counseling Treatment"
+      },
+      {
+          "id": "45",
+          "code": "F0DZ25Z",
+          "desc": "Binaural Hearing Aid Device Fitting using Hearing Aid Selection / Fitting / Test Equipment"
+      },
+      {
+          "id": "46",
+          "code": "F0DZ2KZ",
+          "desc": "Binaural Hearing Aid Device Fitting using Audiovisual Equipment"
+      },
+      {
+          "id": "47",
+          "code": "F0DZ2LZ",
+          "desc": "Binaural Hearing Aid Device Fitting using Assistive Listening Equipment"
+      },
+      {
+          "id": "48",
+          "code": "F0DZ2ZZ",
+          "desc": "Binaural Hearing Aid Device Fitting"
+      },
+      {
+          "id": "49",
+          "code": "F0DZ8UZ",
+          "desc": "Prosthesis Device Fitting using Prosthesis"
+      },
+      {
+          "id": "50",
+          "code": "F0DZ8ZZ",
+          "desc": "Prosthesis Device Fitting"
+      },
+      {
+          "id": "51",
+          "code": "F0DZ9EZ",
+          "desc": "Assistive, Adaptive, Supportive or Protective Devices Device Fitting using Orthosis"
+      },
+      {
+          "id": "52",
+          "code": "F0FZFFZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Orthoses using Assistive, Adaptive, Supportive or Protective Equipment"
+      },
+      {
+          "id": "53",
+          "code": "F0FZFUZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Orthoses using Prosthesis"
+      },
+      {
+          "id": "54",
+          "code": "F0FZFZZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Orthoses"
+      },
+      {
+          "id": "55",
+          "code": "F0FZGEZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Prosthesis using Orthosis"
+      },
+      {
+          "id": "56",
+          "code": "F0FZGFZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Prosthesis using Assistive, Adaptive, Supportive or Protective Equipment"
+      },
+      {
+          "id": "57",
+          "code": "F0FZGUZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Prosthesis using Prosthesis"
+      },
+      {
+          "id": "58",
+          "code": "F0FZGZZ",
+          "desc": "Caregiver Training in Application, Proper Use and Care of Prosthesis"
+      },
+      {
+          "id": "59",
+          "code": "F0FZHEZ",
+          "desc": "Caregiver Training in Home Management using Orthosis"
+      },
+      {
+          "id": "60",
+          "code": "F0FZHFZ",
+          "desc": "Caregiver Training in Home Management using Assistive, Adaptive, Supportive or Protective Equipment"
+      },
+      {
+          "id": "61",
+          "code": "F0FZHUZ",
+          "desc": "Caregiver Training in Home Management using Prosthesis"
+      },
+      {
+          "id": "62",
+          "code": "F0FZHZZ",
+          "desc": "Caregiver Training in Home Management"
+      },
+      {
+          "id": "63",
+          "code": "F13Z22Z",
+          "desc": "Pure Tone Audiometry, Air and Bone Assessment using Sound Field / Booth"
+      },
+      {
+          "id": "64",
+          "code": "F13Z2ZZ",
+          "desc": "Pure Tone Audiometry, Air and Bone Assessment"
+      },
+      {
+          "id": "65",
+          "code": "F13Z31Z",
+          "desc": "Bekesy Audiometry Assessment using Audiometer"
+      },
+      {
+          "id": "66",
+          "code": "F13Z32Z",
+          "desc": "Bekesy Audiometry Assessment using Sound Field / Booth"
+      },
+      {
+          "id": "67",
+          "code": "F13Z3ZZ",
+          "desc": "Bekesy Audiometry Assessment"
+      },
+      {
+          "id": "68",
+          "code": "F13Z52Z",
+          "desc": "Select Picture Audiometry Assessment using Sound Field / Booth"
+      },
+      {
+          "id": "69",
+          "code": "F13Z5KZ",
+          "desc": "Select Picture Audiometry Assessment using Audiovisual Equipment"
+      },
+      {
+          "id": "70",
+          "code": "F13Z5ZZ",
+          "desc": "Select Picture Audiometry Assessment"
+      },
+      {
+          "id": "71",
+          "code": "F13Z61Z",
+          "desc": "Visual Reinforcement Audiometry Assessment"
+      },
+      {
+          "id": "72",
+          "code": "F13ZD3Z",
+          "desc": "Tympanometry Assessment using Tympanometer"
+      },
+      {
+          "id": "73",
+          "code": "F13ZD4Z",
+          "desc": "Tympanometry Assessment using Electroacoustic Immitance / Acoustic Reflex Equipment"
+      },
+      {
+          "id": "74",
+          "code": "F13ZDZZ",
+          "desc": "Tympanometry Assessment"
+      },
+      {
+          "id": "75",
+          "code": "F13ZF3Z",
+          "desc": "Eustachian Tube Function Assessment using Tympanometer"
+      },
+      {
+          "id": "76",
+          "code": "F13ZF4Z",
+          "desc": "Eustachian Tube Function Assessment using Electroacoustic Immitance / Acoustic Reflex Equipment"
+      },
+      {
+          "id": "77",
+          "code": "F13ZFZZ",
+          "desc": "Eustachian Tube Function Assessment"
+      },
+      {
+          "id": "78",
+          "code": "F13ZK7Z",
+          "desc": "Electrocochleography Assessment using Electrophysiologic Equipment"
+      },
+      {
+          "id": "79",
+          "code": "F13ZKZZ",
+          "desc": "Electrocochleography Assessment"
+      },
+      {
+          "id": "80",
+          "code": "F13ZL7Z",
+          "desc": "Auditory Evoked Potentials Assessment using Electrophysiologic Equipment"
+      },
+      {
+          "id": "81",
+          "code": "F13ZLZZ",
+          "desc": "Auditory Evoked Potentials Assessment"
+      },
+      {
+          "id": "82",
+          "code": "F13ZM6Z",
+          "desc": "Evoked Otoacoustic Emissions, Screening Assessment using Otoacoustic Emission (OAE) Equipment"
+      },
+      {
+          "id": "83",
+          "code": "F13ZMZZ",
+          "desc": "Evoked Otoacoustic Emissions, Screening Assessment"
+      },
+      {
+          "id": "84",
+          "code": "F13ZPLZ",
+          "desc": "Aural Rehabilitation Status Assessment using Assistive Listening Equipment"
+      },
+      {
+          "id": "85",
+          "code": "F13ZPPZ",
+          "desc": "Aural Rehabilitation Status Assessment using Computer"
+      },
+      {
+          "id": "86",
+          "code": "F13ZPZZ",
+          "desc": "Aural Rehabilitation Status Assessment"
+      },
+      {
+          "id": "87",
+          "code": "F13ZQYZ",
+          "desc": "Auditory Processing Assessment using Other Equipment"
+      },
+      {
+          "id": "88",
+          "code": "F13ZQZZ",
+          "desc": "Auditory Processing Assessment"
+      },
+      {
+          "id": "89",
+          "code": "F14Z0PZ",
+          "desc": "Cochlear Implant Assessment using Computer"
+      },
+      {
+          "id": "90",
+          "code": "F14Z0YZ",
+          "desc": "Cochlear Implant Assessment using Other Equipment"
+      },
+      {
+          "id": "91",
+          "code": "F14Z0ZZ",
+          "desc": "Cochlear Implant Assessment"
+      },
+      {
+          "id": "92",
+          "code": "F14Z23Z",
+          "desc": "Monaural Hearing Aid Assessment using Tympanometer"
+      },
+      {
+          "id": "93",
+          "code": "F14Z24Z",
+          "desc": "Monaural Hearing Aid Assessment using Electroacoustic Immitance / Acoustic Reflex Equipment"
+      },
+      {
+          "id": "94",
+          "code": "F14Z25Z",
+          "desc": "Monaural Hearing Aid Assessment using Hearing Aid Selection / Fitting / Test Equipment"
+      },
+      {
+          "id": "95",
+          "code": "F14Z2KZ",
+          "desc": "Monaural Hearing Aid Assessment using Audiovisual Equipment"
+      },
+      {
+          "id": "96",
+          "code": "F14Z3LZ",
+          "desc": "Binaural Hearing Aid Assessment using Assistive Listening Equipment"
+      },
+      {
+          "id": "97",
+          "code": "F14Z3PZ",
+          "desc": "Binaural Hearing Aid Assessment using Computer"
+      },
+      {
+          "id": "98",
+          "code": "F14Z3ZZ",
+          "desc": "Binaural Hearing Aid Assessment"
+      },
+      {
+          "id": "99",
+          "code": "F14Z41Z",
+          "desc": "Assistive Listening System/Device Selection Assessment using Audiometer"
+      },
+      {
+          "id": "100",
+          "code": "F14Z4KZ",
+          "desc": "Assistive Listening System/Device Selection Assessment using Audiovisual Equipment"
+      },
+      {
+          "id": "101",
+          "code": "F14Z4LZ",
+          "desc": "Assistive Listening System/Device Selection Assessment using Assistive Listening Equipment"
+      },
+      {
+          "id": "102",
+          "code": "F14Z4ZZ",
+          "desc": "Assistive Listening System/Device Selection Assessment"
+      },
+      {
+          "id": "103",
+          "code": "F14Z51Z",
+          "desc": "Sensory Aids Assessment using Audiometer"
+      },
+      {
+          "id": "104",
+          "code": "F14Z52Z",
+          "desc": "Sensory Aids Assessment using Sound Field / Booth"
+      },
+      {
+          "id": "105",
+          "code": "F14Z53Z",
+          "desc": "Sensory Aids Assessment using Tympanometer"
+      },
+      {
+          "id": "106",
+          "code": "F14Z5LZ",
+          "desc": "Sensory Aids Assessment using Assistive Listening Equipment"
+      },
+      {
+          "id": "107",
+          "code": "F14Z5ZZ",
+          "desc": "Sensory Aids Assessment"
+      },
+      {
+          "id": "108",
+          "code": "F14Z65Z",
+          "desc": "Binaural Electroacoustic Hearing Aid Check Assessment using Hearing Aid Selection / Fitting / Test Equipment"
+      },
+      {
+          "id": "109",
+          "code": "F14Z6ZZ",
+          "desc": "Binaural Electroacoustic Hearing Aid Check Assessment"
+      },
+      {
+          "id": "110",
+          "code": "F14Z85Z",
+          "desc": "Monaural Electroacoustic Hearing Aid Check Assessment using Hearing Aid Selection / Fitting / Test Equipment"
+      },
+      {
+          "id": "111",
+          "code": "F14Z8ZZ",
+          "desc": "Monaural Electroacoustic Hearing Aid Check Assessment"
+      },
+      {
+          "id": "112",
+          "code": "F15Z08Z",
+          "desc": "Bithermal, Binaural Caloric Irrigation Assessment using Vestibular / Balance Equipment"
+      },
+      {
+          "id": "113",
+          "code": "F15Z0ZZ",
+          "desc": "Bithermal, Binaural Caloric Irrigation Assessment"
+      },
+      {
+          "id": "114",
+          "code": "F15Z38Z",
+          "desc": "Oscillating Tracking Assessment using Vestibular / Balance Equipment"
+      },
+      {
+          "id": "115",
+          "code": "F15Z3ZZ",
+          "desc": "Oscillating Tracking Assessment"
+      },
+      {
+          "id": "116",
+          "code": "F15Z48Z",
+          "desc": "Sinusoidal Vertical Axis Rotational Assessment using Vestibular / Balance Equipment"
+      },
+      {
+          "id": "117",
+          "code": "F15Z4ZZ",
+          "desc": "Sinusoidal Vertical Axis Rotational Assessment"
+      },
+      {
+          "id": "118",
+          "code": "F15Z58Z",
+          "desc": "Dix-Hallpike Dynamic Assessment using Vestibular / Balance Equipment"
+      },
+      {
+          "id": "119",
+          "code": "F15Z5ZZ",
+          "desc": "Dix-Hallpike Dynamic Assessment"
+      },
+      {
+          "id": "120",
+          "code": "F15Z68Z",
+          "desc": "Computerized Dynamic Posturography Assessment using Vestibular / Balance Equipment"
+      },
+      {
+          "id": "121",
+          "code": "F15Z6ZZ",
+          "desc": "Computerized Dynamic Posturography Assessment"
+      },
+      {
+          "id": "122",
+          "code": "F15Z75Z",
+          "desc": "Tinnitus Masker Assessment using Hearing Aid Selection / Fitting / Test Equipment"
+      },
+      {
+          "id": "123",
+          "code": "F15Z7ZZ",
+          "desc": "Tinnitus Masker Assessment"
+      },
+      {
+          "id": "124",
+          "code": "GZ13ZZZ",
+          "desc": "Psychological Tests, Neuropsychological"
+      },
+      {
+          "id": "125",
+          "code": "GZ14ZZZ",
+          "desc": "Psychological Tests, Neurobehavioral and Cognitive Status"
+      },
+      {
+          "id": "126",
+          "code": "GZ2ZZZZ",
+          "desc": "Crisis Intervention"
+      },
+      {
+          "id": "127",
+          "code": "GZ3ZZZZ",
+          "desc": "Medication Management"
+      },
+      {
+          "id": "128",
+          "code": "GZ59ZZZ",
+          "desc": "Individual Psychotherapy, Psychophysiological"
+      },
+      {
+          "id": "129",
+          "code": "GZ60ZZZ",
+          "desc": "Educational Counseling"
+      },
+      {
+          "id": "130",
+          "code": "GZ61ZZZ",
+          "desc": "Vocational Counseling"
+      },
+      {
+          "id": "131",
+          "code": "GZB1ZZZ",
+          "desc": "Electroconvulsive Therapy, Unilateral-Multiple Seizure"
+      },
+      {
+          "id": "132",
+          "code": "GZB2ZZZ",
+          "desc": "Electroconvulsive Therapy, Bilateral-Single Seizure"
+      },
+      {
+          "id": "133",
+          "code": "GZB4ZZZ",
+          "desc": "Other Electroconvulsive Therapy"
+      },
+      {
+          "id": "134",
+          "code": "GZC9ZZZ",
+          "desc": "Biofeedback"
+      },
+      {
+          "id": "135",
+          "code": "GZFZZZZ",
+          "desc": "Hypnosis"
+      },
+      {
+          "id": "136",
+          "code": "GZGZZZZ",
+          "desc": "Narcosynthesis"
+      },
+      {
+          "id": "137",
+          "code": "GZHZZZZ",
+          "desc": "Group Psychotherapy"
+      },
+      {
+          "id": "138",
+          "code": "GZJZZZZ",
+          "desc": "Light Therapy"
+      },
+      {
+          "id": "139",
+          "code": "HZ35ZZZ",
+          "desc": "Individual Counseling for Substance Abuse Treatment, Vocational"
+      },
+      {
+          "id": "140",
+          "code": "HZ36ZZZ",
+          "desc": "Individual Counseling for Substance Abuse Treatment, Psychoeducation"
+      },
+      {
+          "id": "141",
+          "code": "HZ37ZZZ",
+          "desc": "Individual Counseling for Substance Abuse Treatment, Motivational Enhancement"
+      },
+      {
+          "id": "142",
+          "code": "HZ38ZZZ",
+          "desc": "Individual Counseling for Substance Abuse Treatment, Confrontational"
+      },
+      {
+          "id": "143",
+          "code": "HZ39ZZZ",
+          "desc": "Individual Counseling for Substance Abuse Treatment, Continuing Care"
+      },
+      {
+          "id": "144",
+          "code": "HZ3BZZZ",
+          "desc": "Individual Counseling for Substance Abuse Treatment, Spiritual"
+      },
+      {
+          "id": "145",
+          "code": "HZ49ZZZ",
+          "desc": "Group Counseling for Substance Abuse Treatment, Continuing Care"
+      },
+      {
+          "id": "146",
+          "code": "HZ4BZZZ",
+          "desc": "Group Counseling for Substance Abuse Treatment, Spiritual"
+      },
+      {
+          "id": "147",
+          "code": "HZ4CZZZ",
+          "desc": "Group Counseling for Substance Abuse Treatment, Pre/Post-Test Infectious Disease"
+      },
+      {
+          "id": "148",
+          "code": "HZ50ZZZ",
+          "desc": "Individual Psychotherapy for Substance Abuse Treatment, Cognitive"
+      },
+      {
+          "id": "149",
+          "code": "HZ51ZZZ",
+          "desc": "Individual Psychotherapy for Substance Abuse Treatment, Behavioral"
+      },
+      {
+          "id": "150",
+          "code": "HZ83ZZZ",
+          "desc": "Medication Management for Substance Abuse Treatment, Antabuse"
+      },
+      {
+          "id": "151",
+          "code": "HZ84ZZZ",
+          "desc": "Medication Management for Substance Abuse Treatment, Naltrexone"
+      },
+      {
+          "id": "152",
+          "code": "HZ85ZZZ",
+          "desc": "Medication Management for Substance Abuse Treatment, Naloxone"
+      },
+      {
+          "id": "153",
+          "code": "HZ86ZZZ",
+          "desc": "Medication Management for Substance Abuse Treatment, Clonidine"
+      },
+      {
+          "id": "154",
+          "code": "HZ93ZZZ",
+          "desc": "Pharmacotherapy for Substance Abuse Treatment, Antabuse"
+      },
+      {
+          "id": "155",
+          "code": "HZ94ZZZ",
+          "desc": "Pharmacotherapy for Substance Abuse Treatment, Naltrexone"
+      },
+      {
+          "id": "156",
+          "code": "HZ95ZZZ",
+          "desc": "Pharmacotherapy for Substance Abuse Treatment, Naloxone"
+      },
+      {
+          "id": "157",
+          "code": "HZ96ZZZ",
+          "desc": "Pharmacotherapy for Substance Abuse Treatment, Clonidine"
+      },
+      {
+          "id": "158",
+          "code": "HZ97ZZZ",
+          "desc": "Pharmacotherapy for Substance Abuse Treatment, Bupropion"
+      },
+      {
+          "id": "159",
+          "code": "X27H395",
+          "desc": "Dilation of Right Femoral Artery with Two Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "160",
+          "code": "X27H3B5",
+          "desc": "Dilation of Right Femoral Artery with Three Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "161",
+          "code": "X27H3C5",
+          "desc": "Dilation of Right Femoral Artery with Four or More Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "162",
+          "code": "X27J385",
+          "desc": "Dilation of Left Femoral Artery with Sustained Release Drug-eluting Intraluminal Device, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "163",
+          "code": "X27J395",
+          "desc": "Dilation of Left Femoral Artery with Two Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "164",
+          "code": "X27J3B5",
+          "desc": "Dilation of Left Femoral Artery with Three Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "165",
+          "code": "X27J3C5",
+          "desc": "Dilation of Left Femoral Artery with Four or More Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "166",
+          "code": "X27K385",
+          "desc": "Dilation of Proximal Right Popliteal Artery with Sustained Release Drug-eluting Intraluminal Device, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "167",
+          "code": "X27K395",
+          "desc": "Dilation of Proximal Right Popliteal Artery with Two Sustained Release Drug-eluting Intraluminal Devices, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "168",
+          "code": "X2C0361",
+          "desc": "Extirpation of Matter from Coronary Artery, One Artery using Orbital Atherectomy Technology, Percutaneous Approach, New Technology Group 1"
+      },
+      {
+          "id": "169",
+          "code": "X2C1361",
+          "desc": "Extirpation of Matter from Coronary Artery, Two Arteries using Orbital Atherectomy Technology, Percutaneous Approach, New Technology Group 1"
+      },
+      {
+          "id": "170",
+          "code": "X2C2361",
+          "desc": "Extirpation of Matter from Coronary Artery, Three Arteries using Orbital Atherectomy Technology, Percutaneous Approach, New Technology Group 1"
+      },
+      {
+          "id": "171",
+          "code": "X2C3361",
+          "desc": "Extirpation of Matter from Coronary Artery, Four or More Arteries using Orbital Atherectomy Technology, Percutaneous Approach, New Technology Group 1"
+      },
+      {
+          "id": "172",
+          "code": "X2RF032",
+          "desc": "Replacement of Aortic Valve using Zooplastic Tissue, Rapid Deployment Technique, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "173",
+          "code": "X2RF332",
+          "desc": "Replacement of Aortic Valve using Zooplastic Tissue, Rapid Deployment Technique, Percutaneous Approach, New Technology Group 2"
+      },
+      {
+          "id": "174",
+          "code": "X2RF432",
+          "desc": "Replacement of Aortic Valve using Zooplastic Tissue, Rapid Deployment Technique, Percutaneous Endoscopic Approach, New Technology Group 2"
+      },
+      {
+          "id": "175",
+          "code": "XHRPXL2",
+          "desc": "Replacement of Skin using Porcine Liver Derived Skin Substitute, External Approach, New Technology Group 2"
+      },
+      {
+          "id": "176",
+          "code": "XK02303",
+          "desc": "Introduction of Concentrated Bone Marrow Aspirate into Muscle, Percutaneous Approach, New Technology Group 3"
+      },
+      {
+          "id": "177",
+          "code": "XNS0032",
+          "desc": "Reposition of Lumbar Vertebra using Magnetically Controlled Growth Rod(s), Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "178",
+          "code": "XNS0332",
+          "desc": "Reposition of Lumbar Vertebra using Magnetically Controlled Growth Rod(s), Percutaneous Approach, New Technology Group 2"
+      },
+      {
+          "id": "179",
+          "code": "XNS3032",
+          "desc": "Reposition of Cervical Vertebra using Magnetically Controlled Growth Rod(s), Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "180",
+          "code": "XRG2092",
+          "desc": "Fusion of 2 or more Cervical Vertebral Joints using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "181",
+          "code": "XRG20F3",
+          "desc": "Fusion of 2 or more Cervical Vertebral Joints using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "182",
+          "code": "XRG4092",
+          "desc": "Fusion of Cervicothoracic Vertebral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "183",
+          "code": "XRG40F3",
+          "desc": "Fusion of Cervicothoracic Vertebral Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "184",
+          "code": "XRG6092",
+          "desc": "Fusion of Thoracic Vertebral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "185",
+          "code": "XRG60F3",
+          "desc": "Fusion of Thoracic Vertebral Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "186",
+          "code": "XRG7092",
+          "desc": "Fusion of 2 to 7 Thoracic Vertebral Joints using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "187",
+          "code": "XRG70F3",
+          "desc": "Fusion of 2 to 7 Thoracic Vertebral Joints using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "188",
+          "code": "XRG8092",
+          "desc": "Fusion of 8 or more Thoracic Vertebral Joints using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "189",
+          "code": "XRG80F3",
+          "desc": "Fusion of 8 or more Thoracic Vertebral Joints using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "190",
+          "code": "XRGA092",
+          "desc": "Fusion of Thoracolumbar Vertebral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "191",
+          "code": "XRGA0F3",
+          "desc": "Fusion of Thoracolumbar Vertebral Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "192",
+          "code": "XRGB092",
+          "desc": "Fusion of Lumbar Vertebral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "193",
+          "code": "XRGB0F3",
+          "desc": "Fusion of Lumbar Vertebral Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "194",
+          "code": "XRGC092",
+          "desc": "Fusion of 2 or more Lumbar Vertebral Joints using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "195",
+          "code": "XRGC0F3",
+          "desc": "Fusion of 2 or more Lumbar Vertebral Joints using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "196",
+          "code": "XRGD092",
+          "desc": "Fusion of Lumbosacral Joint using Nanotextured Surface Interbody Fusion Device, Open Approach, New Technology Group 2"
+      },
+      {
+          "id": "197",
+          "code": "XRGD0F3",
+          "desc": "Fusion of Lumbosacral Joint using Radiolucent Porous Interbody Fusion Device, Open Approach, New Technology Group 3"
+      },
+      {
+          "id": "198",
+          "code": "XT25XE5",
+          "desc": "Monitoring of Kidney using Fluorescent Pyrazine, External Approach, New Technology Group 5"
+      },
+      {
+          "id": "199",
+          "code": "XW04351",
+          "desc": "Introduction of Blinatumomab Antineoplastic Immunotherapy into Central Vein, Percutaneous Approach, New Technology Group 1"
+      },
+      {
+          "id": "200",
+          "code": "XW04372",
+          "desc": "Introduction of Inactivated Coagulation Factor Xa into Central Vein, Percutaneous Approach, New Technology Group 2"
+      },
+      {
+          "id": "201",
+          "code": "XW043H4",
+          "desc": "Introduction of Synthetic Human Angiotensin II into Central Vein, Percutaneous Approach, New Technology Group 4"
+      },
+      {
+          "id": "202",
+          "code": "XW043K5",
+          "desc": "Introduction of Fosfomycin Anti-infective into Central Vein, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "203",
+          "code": "XW043N5",
+          "desc": "Introduction of Meropenem-vaborbactam Anti-infective into Central Vein, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "204",
+          "code": "XW043Q5",
+          "desc": "Introduction of Tagraxofusp-erzs Antineoplastic into Central Vein, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "205",
+          "code": "XW043S5",
+          "desc": "Introduction of Iobenguane I-131 Antineoplastic into Central Vein, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "206",
+          "code": "XW043U5",
+          "desc": "Introduction of Imipenem-cilastatin-relebactam Anti-infective into Central Vein, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "207",
+          "code": "XW043W5",
+          "desc": "Introduction of Caplacizumab into Central Vein, Percutaneous Approach, New Technology Group 5"
+      },
+      {
+          "id": "208",
+          "code": "XW0DXV5",
+          "desc": "Introduction of Gilteritinib Antineoplastic into Mouth and Pharynx, External Approach, New Technology Group 5"
+      },
+      {
+          "id": "209",
+          "code": "XXE5XM5",
+          "desc": "Measurement of Infection, Whole Blood Nucleic Acid-base Microbial Detection, New Technology Group 5"
+      },
+      {
+          "id": "210",
+          "code": "XY0VX83",
+          "desc": "Extracorporeal Introduction of Endothelial Damage Inhibitor to Vein Graft, New Technology Group 3"
+      }
+]
