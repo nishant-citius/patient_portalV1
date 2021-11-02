@@ -80,7 +80,6 @@ export class AppointmentList extends React.Component {
               <tr>
                 <th scope="col">Sr no </th>
                 <th scope="col">Patient Name</th>
-
                 <th scope="col">Appointment Title</th>
                 <th scope="col">Appointment Date </th>
                 <th scope="col">Start Time</th>
