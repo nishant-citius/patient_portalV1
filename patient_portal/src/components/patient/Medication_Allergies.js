@@ -39,7 +39,6 @@ const Medication_Allergies = (props) => {
 
   function getStrength() {
     let medicine = document.getElementById("medication_name").value;
-    console.log(medicine);
     let arr = medicationList.filter((item) => {
       if (item.Form === medicine) {
         return item;

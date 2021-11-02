@@ -36,7 +36,7 @@ export class AppointmentList extends React.Component {
     adminService.editAppointment(appointmentData.id, newData).then(
       (response) => {
         if (response.status === 200) {
-          alert("approved");
+          alert("Approved Appointment");
           this.props.getAppointments(this.props.currentUser.id);
         }
       },
@@ -69,10 +69,6 @@ export class AppointmentList extends React.Component {
     return (
       <div>
         <div className="container mt-5">
-          {/* <Link className="btn btn-warning" to="/physician">
-          <BsFillArrowLeftSquareFill />
-          <span className="m-2">Back</span>
-        </Link> */}
           <h4
             style={{ color: "yellow" }}
             className="text-success text-center fw-bold "
@@ -84,12 +80,10 @@ export class AppointmentList extends React.Component {
               <tr>
                 <th scope="col">Sr no </th>
                 <th scope="col">Patient Name</th>
-
                 <th scope="col">Appointment Title</th>
                 <th scope="col">Appointment Date </th>
                 <th scope="col">Start Time</th>
                 <th scope="col">End Time</th>
-
                 <th scope="col">Actions</th>
               </tr>
             </thead>

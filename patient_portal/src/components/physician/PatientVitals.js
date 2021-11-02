@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useHistory } from "react-router";
 import { adminService } from "../../services/register_user_service";
 
 const Vitals = (props) => {
@@ -14,7 +13,7 @@ const Vitals = (props) => {
   let savedValues = {};
 
   useEffect(() => {
-    setPatientId(props.patientId.patientId);
+    setPatientId(props.patientId.patintId);
     if (patientId) {
       getPatientVitals(patientId);
     }
@@ -23,8 +22,10 @@ const Vitals = (props) => {
   function getPatientVitals(patientId) {
     adminService.getPatientVitals(patientId).then(
       (response) => {
-        setPatientVitals(response.data);
-        setAvailable(true);
+        if (response.data.length > 0) {
+          setPatientVitals(response.data);
+          setAvailable(true);
+        }
       },
       (error) => {
         return;
@@ -55,7 +56,6 @@ const Vitals = (props) => {
     userid: props.currentUser.id,
   };
 
-  
   if (available) {
     savedValues = {
       height: patientVitals[0].height,
@@ -91,42 +91,14 @@ const Vitals = (props) => {
       physicianId: props.currentUser.id,
       patientId: patientId,
     };
-
     if (available) {
-      updatePatientVitals(patientId, payload);
+      updatePatientVitals(patientVitals[0].id, payload);
     } else {
       props.vitals(payload);
     }
   };
 
   return (
-    // <div className="container mt-5">
-    //   <h1 className="text-success text-center fw-bold ">Patient Vitals</h1>
-    //   <table className="table table-bordered shadow mt-4">
-    //     <thead className="table-dark">
-    //       <tr>
-    //         <th scope="col">Patient Name</th>
-    //         <th scope="col">Height</th>
-    //         <th scope="col">Weight</th>
-    //         <th scope="col">Blood Pressure</th>
-    //         <th scope="col">Temperature</th>
-    //         <th scope="col">Pulse</th>
-    //         <th scope="col">Respiration</th>
-    //         <th scope="col">Oxygen Saturation</th>
-    //       </tr>
-    //     </thead>
-    //     <tbody>
-    //       <td>{patientVitals[0].height}</td>
-    //       <td>{patientVitals[0].weight}</td>
-    //       <td>{patientVitals[0].blood_pressure}</td>
-    //       <td>{patientVitals[0].temperature}</td>
-    //       <td>{patientVitals[0].pulse}</td>
-    //       <td>{patientVitals[0].respiration}</td>
-    //       <td>{patientVitals[0].oxigen_saturation}</td>;
-    //     </tbody>
-    //   </table>
-    // </div>
-
     <Formik
       initialValues={savedValues || initialValues}
       validationSchema={validationSchema}
@@ -228,9 +200,15 @@ const Vitals = (props) => {
                     <ErrorMessage name="respiration" />
                   </div>
                 </div>
-                <button type="submit" className="btn btn-primary mt-3">
-                  Submit
-                </button>
+                {available ? (
+                  <button type="submit" className="btn btn-primary mt-3">
+                    Update Patient Vitals
+                  </button>
+                ) : (
+                  <button type="submit" className="btn btn-primary mt-3">
+                    Submit
+                  </button>
+                )}
               </Form>
             </div>
           </div>

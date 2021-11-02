@@ -69,9 +69,7 @@ export class AppointmentList extends React.Component {
     );
   }
 
-  reject(appointments) {
-    console.log(appointments);
-  }
+  reject(appointments) {}
 
   componentDidMount() {
     this.props.getAppointments(this.props.currentUser.id);

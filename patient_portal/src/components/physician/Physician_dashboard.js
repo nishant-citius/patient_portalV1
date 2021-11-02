@@ -44,7 +44,6 @@ const Physician_dashboard = (props) => {
       }
     );
   }
-  console.log("Nishant", apptList);
   const theme = {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
   };
@@ -69,13 +68,12 @@ const Physician_dashboard = (props) => {
     });
     return approved;
   }
-  // var dateObj = new Date();
-  // var month = dateObj.getUTCMonth() + 1; //months from 1-12
-  // var day = dateObj.getUTCDate();
-  // var year = dateObj.getUTCFullYear();
+  var dateObj = new Date();
+  var month = dateObj.getUTCMonth() + 1;
+  var day = dateObj.getUTCDate();
+  var year = dateObj.getUTCFullYear();
 
-  // let newdate = year + "-" + month + "-" + day;
-  // console.log("babababab", newdate);
+  let newdate = year + "-" + month + "-" + day;
   function todaysAppts() {
     let approved = 0,
       rejected = undefined,
@@ -169,6 +167,7 @@ const Physician_dashboard = (props) => {
       opacity: "50%",
     },
   }));
+
   const classes = useStyles();
   return (
     <>
@@ -181,7 +180,6 @@ const Physician_dashboard = (props) => {
                 height="130"
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjqdo4r_VEzgKMlfJtWPEGW-u31ILuS6VMjQ&usqp=CAU"
               />
-              {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock1}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
                   Total Appointments :
