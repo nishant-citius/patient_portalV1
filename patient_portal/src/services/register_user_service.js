@@ -138,7 +138,12 @@ class AdminServices {
   }
 
   appointmentsOnDate(date) {
-    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}`;
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&status=approved`;
+    return axios.get(url);
+  }
+
+  appointmentsPendingPhysician(physicianId) {
+    const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}`;
     return axios.get(url);
   }
 
@@ -177,7 +182,6 @@ class AdminServices {
     return axios.get(url);
   }
 
-  
   updatePatientVitals(patientId, data) {
     let url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
     let config = {
@@ -192,7 +196,6 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/labreports?patientId=${patientId}`;
     return axios.get(url);
   }
-
 }
 
 /*********Admin Serives***********/
