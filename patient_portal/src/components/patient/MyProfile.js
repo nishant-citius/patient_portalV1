@@ -4,10 +4,10 @@ import React, { Component } from "react";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { connect } from "react-redux";
-import DefaultUserpic from "../../images/doc_1.jpg";
+import DefaultUserpic from "../../images/user.png";
 import * as actions from "../../redux/actions/userActionCreater";
-import {Grid,Card} from "mui";
-import {BsFillPencilFill} from "react-icons/bs";
+import { Grid, Card } from "mui";
+import { BsFillPencilFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 class MyProfile extends Component {
   constructor(props) {
@@ -51,59 +51,62 @@ class MyProfile extends Component {
       <>
         <div className="container mt-5">
           <Grid container>
-            <Grid item xl={6}>
-              <img src={profilePic} alt={profilePic} width="190" />
-            </Grid>
+            <Row>
+              <Grid item xl={6}>
+                <img src={profilePic} alt={profilePic} width="190" />
+              </Grid>
+              <Col></Col>
+            </Row>
             <Grid item xl={6}>
               <Card className="pl-9">
                 <CardContent>
-              <h3 className="text-success text-center fw-bold ">
-                User Profile
-              </h3>
-              
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">D.O.B.</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Blood Group</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{this.state.fName} </td>
-                    <td>{this.state.dob}</td>
-                    <td>{this.state.email}</td>
-                    <td>{this.state.mobile}</td>
-                    <td>{this.state.blood_group}</td>
-                    <td>
-                    <Link to={`/edit/${this.state.userId}`}>
-                          <BsFillPencilFill />
-                        </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="form-group">
-                {/* <label>Profile Image</label>
+                  <h3 className="text-success text-center fw-bold ">
+                    User Profile
+                  </h3>
+
+                  <table className="table table-bordered shadow mt-4">
+                    <thead className="table-dark">
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">D.O.B.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Blood Group</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{this.state.fName} </td>
+                        <td>{this.state.dob}</td>
+                        <td>{this.state.email}</td>
+                        <td>{this.state.mobile}</td>
+                        <td>{this.state.blood_group}</td>
+                        <td>
+                          <Link to={`/edit/${this.state.userId}`}>
+                            <BsFillPencilFill />
+                          </Link>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="form-group">
+                    {/* <label>Profile Image</label>
                 <input
                   type="file"
                   name="profileImage"
                   onChange={this.profilechange}
                   class="form-control"
                 /> */}
-              </div>
-              {/* <button
+                  </div>
+                  {/* <button
                 type="submit"
                 onClick={this.updateprofilehandler}
                 className="btn btn-primary mt-2"
               >
                 Update Profile
               </button> */}
-              </CardContent>
+                </CardContent>
               </Card>
             </Grid>
           </Grid>
