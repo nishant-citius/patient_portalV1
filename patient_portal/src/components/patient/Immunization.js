@@ -11,7 +11,7 @@ const Immunization = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
+      if (props.immunizationDetails && props.immunizationDetails > 0) {
         setIsAvailable(true);
       }
     }
@@ -62,7 +62,7 @@ const Immunization = (props) => {
 
   useEffect(() => {
     if (props.statusCode === 201) {
-      history.push("/patient");
+      history.push("/medic_allergy");
     }
   });
   return (
