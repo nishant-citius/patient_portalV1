@@ -72,6 +72,7 @@ const AttendAppointment = (props) => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <>
       <Box sx={{ width: "100%" }}>
@@ -88,8 +89,8 @@ const AttendAppointment = (props) => {
             <Tab label="Diet Plan" {...a11yProps(4)} />
           </Tabs>
         </Box>
+        <h6 className="text-success fw-bold m-3">Patient Name:</h6>
         <TabPanel value={value} index={0}>
-          {/* <Vitals patientId={props.apptDetails} /> */}
           <Vitals patientId={patientId} />
         </TabPanel>
 
@@ -112,6 +113,7 @@ const AttendAppointment = (props) => {
     </>
   );
 };
+
 const mapStatetoProps = (state) => {
   return {
     isLoggedIn: state.login.isLoggedIn,
