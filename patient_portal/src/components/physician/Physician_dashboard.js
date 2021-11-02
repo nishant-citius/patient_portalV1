@@ -59,7 +59,7 @@ const Physician_dashboard = (props) => {
         approved += 1;
       }
 
-      if (appt.status === "rejected") {
+      if (appt.status === "reject") {
         rejected += 1;
       }
 
@@ -69,22 +69,22 @@ const Physician_dashboard = (props) => {
     });
     return approved;
   }
-  var dateObj = new Date();
-  var month = dateObj.getUTCMonth() + 1; //months from 1-12
-  var day = dateObj.getUTCDate();
-  var year = dateObj.getUTCFullYear();
+  // var dateObj = new Date();
+  // var month = dateObj.getUTCMonth() + 1; //months from 1-12
+  // var day = dateObj.getUTCDate();
+  // var year = dateObj.getUTCFullYear();
 
-  let newdate = year + "-" + month + "-" + day;
-  console.log("babababab", newdate);
+  // let newdate = year + "-" + month + "-" + day;
+  // console.log("babababab", newdate);
   function todaysAppts() {
     let approved = 0,
       rejected = undefined,
       pending = undefined;
 
     apptList.map((appt) => {
-      if (appt.appointmentDate === newdate) {
+      if (appt.appointmentDate === "2021-11-02") {
         approved += 1;
-        console.log("string" + approved);
+        // console.log("string" + approved);
       }
     });
     return approved;
@@ -214,7 +214,7 @@ const Physician_dashboard = (props) => {
               />
               <CardContent className={classes.textblock3}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Appointments Canceled: 15
+                  Appointments Canceled: 0
                 </h6>
               </CardContent>
             </Card>
