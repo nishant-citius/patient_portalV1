@@ -53,7 +53,7 @@ const AddUsers = (props) => {
       role: values.role,
       speciality: values.speciality,
       createdDate: Date(),
-      isActive: false,
+      isActive: true,
     };
     props.adduser(payload);
     props.getalluserdata();
