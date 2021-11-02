@@ -332,7 +332,7 @@
     },
     {
       "email": "nikhil@email.com",
-      "password": "$2a$10$gxchoXw05cHWlTbxjKJ0MekUgerOOTkcwTULCt9NB4ofnJ4D8V/aq",
+      "password": "$2a$10$gawDkJfgc40jcqiRmFT9f.EbBndCHVxzqP7ChexLSUDtU1.uRfy/e",
       "fName": "Nikhil",
       "lName": "B",
       "dob": "2021-12-02",
@@ -342,7 +342,7 @@
       "blood_group": "O+",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:52:52 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 46
     },
     {
@@ -362,7 +362,7 @@
     },
     {
       "email": "swapna@email.com",
-      "password": "$2a$10$jdaSEi22Y.PG7mg7/zSv4ehn2p1oq9fFJ7oHJ7gfK6zpQvIhhcE32",
+      "password": "$2a$10$/QGj1R1LYyU5UxOYYohCkeopOVYkR1XaMGNLAPi8LUsGk1CdrA5M6",
       "fName": "Swapna",
       "lName": "Patil",
       "dob": "2021-11-16",
@@ -372,12 +372,12 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 48
     },
     {
       "email": "keerthi@email.com",
-      "password": "$2a$10$4GsQTQmWkw23BAIegQiQGO9niA7m5kprt54mYmb7ILenqYi50nISS",
+      "password": "$2a$10$PRbdb9AjxiChkeh8DOQwN.3fZYP3QcuA0kGAbe/OOu3BPdQIvdUgO",
       "fName": "Keerthi",
       "lName": "Datt",
       "dob": "2021-12-03",
@@ -387,7 +387,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:55:20 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 49
     },
     {
@@ -403,537 +403,10 @@
       "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 50
-    },
-    {
-      "email": "susmithab@email.comil",
-      "password": "$2a$10$lAxbN9zpLvpu0KzAQOfxp.Tq0.c7/1hhRpK/UcXT8qWIHaIjkuaty",
-      "fName": "Susmitha",
-      "lName": "B",
-      "dob": "1996-08-08",
-      "username": "SusmithaBlessy",
-      "mobile": "8106989754",
-      "role": "physician",
-      "speciality": "internal_medicine",
-      "createdDate": "Tue Nov 02 2021 12:14:17 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 51
     }
   ],
   "medic_allergy": [
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "Dolo",
-          "dosage": "2",
-          "directionstoconsume": "two times",
-          "frequency": "100 mg",
-          "physicianName": "Soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-20",
-          "endDate": "2021-10-20"
-        },
-        {
-          "medicineName": "paracetamol",
-          "dosage": "2",
-          "directionstoconsume": "in morning",
-          "frequency": "50 mg",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-12",
-          "endDate": "2021-10-14"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "paracetamal",
-          "strength": "650",
-          "directiontoconsume": "3",
-          "socialDrugs": "drink"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 24
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "50 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "Neuomarkazol",
-          "strength": "100 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "propygenta",
-          "strength": "80 mg",
-          "directiontoconsume": "twice a day"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 6
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 8
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 9
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "nice",
-          "dosage": "3",
-          "directionstoconsume": "table",
-          "frequency": "3",
-          "physicianName": "shiva prasad",
-          "purpose": "body pains",
-          "startDate": "2021-11-02",
-          "endDate": "2021-11-02"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 25
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "nice",
-          "dosage": "3",
-          "directionstoconsume": "table",
-          "frequency": "3",
-          "physicianName": "shiva prasad",
-          "purpose": "body pains",
-          "startDate": "2021-11-02",
-          "endDate": "2021-11-02"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 26
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 27
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "fordum cream",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 28
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "fordum cream",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 29
-    }
+    
   ],
   "immunization": [
     {
@@ -1023,18 +496,6 @@
       "physicianId": 12,
       "patientId": 24,
       "id": 3
-    },
-    {
-      "height": "5 Feet 4 Inch.",
-      "weight": "64 Kgs",
-      "blood_pressure": "110/25mg",
-      "temperature": "27 Deg",
-      "pulse": "72 pm",
-      "respiration": "Good",
-      "oxigen_saturation": "Good",
-      "physicianId": 12,
-      "patientId": 24,
-      "id": 4
     }
   ],
   "patientdietplan": [

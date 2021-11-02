@@ -90,7 +90,14 @@ const Vitals = (props) => {
       physicianId: props.currentUser.id,
       patientId: patientId,
     };
-    available ? props.vitals(payload) : updatePatientVitals(patientId, payload);
+    debugger;
+    if (available) {
+      debugger;
+      updatePatientVitals(patientId, payload);
+    } else {
+      debugger;
+      props.vitals(payload);
+    }
   };
 
   return (
