@@ -115,13 +115,13 @@
       "id": 30
     },
     {
-      "email": "ramesh@email.com",
-      "password": "$2a$10$cEP3.GCgFmuhj9TFEz14ley6Lil9QMGIYpySoqGv5OPJLgzWWRtWi",
-      "fName": "Ramesh ",
-      "lName": "Gudapathi",
-      "dob": "2005-07-02",
-      "username": "Ramesh Gudapathi",
-      "mobile": "9876897685",
+      "email": "sh@email.com",
+      "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
+      "fName": "soujanya",
+      "lName": "G",
+      "dob": "2021-10-07",
+      "username": "soujanya",
+      "mobile": "23214214123",
       "role": "physician",
       "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 10:31:17 GMT+0530 (India Standard Time)",
@@ -129,13 +129,13 @@
       "id": 31
     },
     {
-      "email": "sudhir@email.com",
-      "password": "$2a$10$HIggkDi/p3ZsCk4Ze2C8pON6/FlmG8SUNsGrK9xW/iQWKCmgEaDli",
-      "fName": "Sudhir",
-      "lName": "Koganti",
-      "dob": "1992-06-12",
-      "username": "Sudhir K",
-      "mobile": "7655443329",
+      "email": "sp@gmail.com",
+      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-11-01",
+      "username": "shiva prasad",
+      "mobile": "8801888988",
       "role": "physician",
       "speciality": "pathology",
       "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
@@ -143,13 +143,13 @@
       "id": 32
     },
     {
-      "email": "vani@email.com",
-      "password": "$2a$10$qz8BfSvjJM8WDXPyI4uFve7a89GW0CqIjK5OZMB7oQEPrW70F0LRq",
-      "fName": "Vani ",
-      "lName": "Peddaboina",
-      "dob": "1997-10-01",
-      "username": "Vani Peddaboina",
-      "mobile": "9855443329",
+      "email": "pooja@gmail.com",
+      "password": "$2a$10$04.IVRauxq426GW6dsbx/uEgZcz/XwGd9hl8GnzTKIxW9nlD9apAK",
+      "fName": "pooja",
+      "lName": "k",
+      "dob": "2021-09-28",
+      "username": "pooja",
+      "mobile": "9705607801",
       "role": "physician",
       "speciality": "psychiatry",
       "createdDate": "Tue Nov 02 2021 10:33:22 GMT+0530 (India Standard Time)",
@@ -210,11 +210,11 @@
     },
     {
       "email": "susmitha@email.com",
-      "password": "$2a$10$r9/TvG3MjZu69wg9I3bMxOaT9TdGEa/6Fk4gS6GoZO4mDV9aQwBYa",
+      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
       "fName": "Susmitha",
-      "lName": "Chinthakindi",
+      "lName": "C",
       "dob": "1996-08-08",
-      "username": "susmitha1281",
+      "username": "Susmitha1281",
       "mobile": "8106989754",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
@@ -235,124 +235,322 @@
       "id": 39
     },
     {
-      "email": "manaiah@email.com",
-      "password": "$2a$10$YuQb0oCPVvOfly7j4PsCgO3EbIzVkKm4muVx..llOAlKbIiPglSPe",
-      "fName": "Manaiah",
-      "lName": "Chinthakindi",
-      "dob": "2015-10-15",
-      "username": "ManaiahC",
+      "email": "sanjay@gmail.com",
+      "password": "$2a$10$ouKHhjKWt32U33eQBJjTJ..ahcv7SRU7ZQoxLCni5XG4yBMEIlgM2",
+      "fName": "sanjay",
+      "lName": "sharma",
+      "dob": "2021-11-25",
+      "username": "sanjay20",
       "rpassword": "12345",
-      "mobile": 7655443329,
-      "blood_group": "o+",
+      "mobile": 6757886868,
+      "blood_group": "o-",
       "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:46:42 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 40
+      "createdDate": "Tue Nov 02 2021 13:13:53 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 26
     },
     {
-      "email": "vijayalaxmi@email.com",
-      "password": "$2a$10$.HDZceenCNz4KKwhBmJGs..DAdkkXMKlZzbyUaDxHYRHGnz5QOnYO",
-      "fName": "Vijayalaxmi",
-      "lName": "Chinthakindi",
-      "dob": "2021-11-24",
-      "username": "VijayaC",
+      "email": "neeraj@gmail.com",
+      "password": "$2a$10$EqpOflICRwQ2BF7lLQ2rSOpOKTIbvTe799qmW221lXwqaMMUWRrey",
+      "fName": "neeraj",
+      "lName": "thakur",
+      "dob": "2021-11-26",
+      "username": "neeraj2020",
       "rpassword": "12345",
-      "mobile": 7655443329,
-      "blood_group": "A+",
+      "mobile": 5676768868,
+      "blood_group": "o-",
       "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:48:04 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 41
+      "createdDate": "Tue Nov 02 2021 13:36:17 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 27
+    }
+  ],
+  "medic_allergy": [
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "Dolo",
+          "dosage": "2",
+          "directionstoconsume": "two times",
+          "frequency": "100 mg",
+          "physicianName": "Soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "paracetamol",
+          "dosage": "2",
+          "directionstoconsume": "in morning",
+          "frequency": "50 mg",
+          "physicianName": "soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "paracetamal",
+          "strength": "650",
+          "directiontoconsume": "3",
+          "socialDrugs": "drink"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "telma",
+          "strength": "40",
+          "directiontoconsume": "after breakfast"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "spots on skin",
+          "symptomsofAllergy": "Itching",
+          "drugAllergy": "No"
+        }
+      ],
+      "id": 24
     },
     {
-      "email": "srilatha@email.com",
-      "password": "$2a$10$Pq7XzKa407ErkmMeg4.blegTFsQ0DYfSgYGGUyerjqe7XORBDvq2y",
-      "fName": "Srilatha",
-      "lName": "Chegunta",
-      "dob": "2021-11-03",
-      "username": "SrilathaC",
-      "rpassword": "12345",
-      "mobile": 9876897685,
-      "blood_group": "O+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:49:23 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 42
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "altrokcen",
+          "strength": "50 mg",
+          "directiontoconsume": "twice a day"
+        },
+        {
+          "pastdrugName": "Neuomarkazol",
+          "strength": "100 mg",
+          "directiontoconsume": "twice a day"
+        },
+        {
+          "pastdrugName": "propygenta",
+          "strength": "80 mg",
+          "directiontoconsume": "twice a day"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 3
     },
     {
-      "email": "nagamma@email.com",
-      "password": "$2a$10$PClw71VJqPQE4mMHSCjCseOOnf4fC8nle/09R4BXu7rhn1ixVUSzu",
-      "fName": "Nagamma",
-      "lName": "Eleti",
-      "dob": "2021-11-16",
-      "username": "NagammaE",
-      "rpassword": "12345",
-      "mobile": 6789468988,
-      "blood_group": "A+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:50:15 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 43
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 4
     },
     {
-      "email": "sharon@email.com",
-      "password": "$2a$10$yNQReX1ifEy6pjtyRug3jODamhSzhqmt8/3vAf5hZZ4OojLoVxIZG",
-      "fName": "Sharon",
-      "lName": "Sharma",
-      "dob": "2021-11-08",
-      "username": "SharonSharma281",
-      "rpassword": "12345",
-      "mobile": 8977567778,
-      "blood_group": "A+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:51:13 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 44
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 5
     },
     {
-      "email": "saketh@email.com",
-      "password": "$2a$10$zWVpR4PleSlIIpXPbKERv.ZsfjISfYRt03Cbw94uS7hAorTFpP4hi",
-      "fName": "Saketh",
-      "lName": "Medak",
-      "dob": "2021-11-09",
-      "username": "SakethMedak",
-      "rpassword": "12345",
-      "mobile": 7655443329,
-      "blood_group": "b+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:52:05 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 45
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 6
     },
     {
-      "email": "nikhil@email.com",
-      "password": "$2a$10$gawDkJfgc40jcqiRmFT9f.EbBndCHVxzqP7ChexLSUDtU1.uRfy/e",
-      "fName": "Nikhil",
-      "lName": "B",
-      "dob": "2021-12-02",
-      "username": "NikhilB",
-      "rpassword": "12345",
-      "mobile": 73652365924,
-      "blood_group": "O+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:52:52 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 46
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 7
     },
     {
-      "email": "gagan@email.com",
-      "password": "$2a$10$WoXTnUqk8MbnOTg68VswKO6CX7kEAfhlX1Hn/MaCTCC/cdgEKxPKO",
-      "fName": "Gagan",
-      "lName": "Mahendra",
-      "dob": "2021-11-10",
-      "username": "GaganM",
-      "rpassword": "12345",
-      "mobile": 7635872388,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:53:36 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 47
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 8
     },
     {
       "email": "swapna@email.com",
@@ -370,19 +568,42 @@
       "id": 48
     },
     {
-      "email": "keerthi@email.com",
-      "password": "$2a$10$PRbdb9AjxiChkeh8DOQwN.3fZYP3QcuA0kGAbe/OOu3BPdQIvdUgO",
-      "fName": "Keerthi",
-      "lName": "Datt",
-      "dob": "2021-12-03",
-      "username": "KeerthiDatt",
-      "rpassword": "12345",
-      "mobile": 7484957586,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:55:20 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 49
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "nice",
+          "dosage": "3",
+          "directionstoconsume": "table",
+          "frequency": "3",
+          "physicianName": "shiva prasad",
+          "purpose": "body pains",
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-02"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 25
     },
     {
       "email": "sneha@email.com",
@@ -413,22 +634,9 @@
       "id": 51
     }
   ],
-  "medic_allergy": [],
+  
   "immunization": [
-    {
-      "first_name": "Nishant",
-      "last_name": "Chaubey",
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-11-11"
-        }
-      ],
-      "id": 24
-    }
+    
   ],
   "appointments": [
     {
@@ -485,45 +693,10 @@
       "id": 4
     }
   ],
+  "demographics":[
+
+  ],
   "patientvitals": [],
-  "patientdietplan": [
-    {
-      "earlymorning": "yoga, walking/skipping",
-      "breakfast": "Dosa/Chappathi",
-      "mid_morning": "apple/gua/orange-1 cup",
-      "lunch": "Roti with lots of veggies",
-      "evening": "buscuits/tea",
-      "dinner": "Rice/Chapathi with less oil",
-      "post_dinner_activity": "try to walk for a while",
-      "bedtime": "skim milk 1-glass",
-      "physicianId": 12,
-      "id": 1
-    }
-  ],
-  "order": [
-    {
-      "id": "",
-      "patient_id": "",
-      "patient_vitals": "",
-      "procedure_code": "",
-      "diagnosis_code": "",
-      "lab_report": "",
-      "radiology_report": "",
-      "medication": ""
-    }
-  ],
-  "payment_details": [
-    {
-      "id": "",
-      "patient_id": "",
-      "patient_bill": "",
-      "payment_method": "",
-      "payment_history": "",
-      "lab_report": "",
-      "radiology_report": "",
-      "medication": ""
-    }
-  ],
   "billing": [
     {
       "billingId": "",
@@ -544,88 +717,6 @@
       "scannings": "",
       "xrays": "",
       "others": ""
-    }
-  ],
-  "physician_speciality": [
-    {
-      "name": "Allergy and immunology",
-      "value": "allergy_immunology"
-    },
-    {
-      "name": "Anesthesiology",
-      "value": "anesthesiology"
-    },
-    {
-      "name": "Dermatology",
-      "value": "dermatology"
-    },
-    {
-      "name": "Diagnostic Radiology",
-      "value": "diagnostic_radiology"
-    },
-    {
-      "name": "Emergency Medicine",
-      "value": "emergency_medicine"
-    },
-    {
-      "name": "Family medicine",
-      "value": "family_medicine"
-    },
-    {
-      "name": "Internal Medicine",
-      "value": "internal_medicine"
-    },
-    {
-      "name": "Medical Genetics",
-      "value": "medical_genetics"
-    },
-    {
-      "name": "Neurology",
-      "value": "neurology"
-    },
-    {
-      "name": "Nuclear Medicine",
-      "value": "nuclear_medicine"
-    },
-    {
-      "name": "Obstetrics and Gynecology",
-      "value": "obstetrics_gynecology"
-    },
-    {
-      "name": "Ophthalmology",
-      "value": "ophthalmology"
-    },
-    {
-      "name": "Pathology",
-      "value": "pathology"
-    },
-    {
-      "name": "Pediatrics",
-      "value": "pediatrics"
-    },
-    {
-      "name": "Physical Rehabilitation",
-      "value": "physical_rehabilitation"
-    },
-    {
-      "name": "Preventive Medicine",
-      "value": "preventive_medicine"
-    },
-    {
-      "name": "Psychiatry",
-      "value": "psychiatry"
-    },
-    {
-      "name": "Radiation Oncology",
-      "value": "radiation_oncology"
-    },
-    {
-      "name": "Surgery",
-      "value": "surgery"
-    },
-    {
-      "name": "Urology",
-      "value": "urology"
     }
   ],
   "allergies": [
