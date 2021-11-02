@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useHistory } from "react-router";
 
 const DietPlan = (props) => {
+  const [dietAdded, setDietAdded] = useState(false);
+
   const initialValues = {
     earlymorning: "",
     breakfast: "",
@@ -15,9 +16,10 @@ const DietPlan = (props) => {
     dinner: "",
     post_dinner_activity: "",
     bedtime: "",
-    userid: props.currentUser.id,
+    doc_id: props.currentUser.id,
+    patientId: Number(props.patientId.patintId),
   };
-  const [DietPlan, setpatientDietPlan] = useState(initialValues);
+
   const validationSchema = Yup.object().shape({
     earlymorning: Yup.string().required("Required"),
     breakfast: Yup.string().required("Required"),
@@ -28,7 +30,8 @@ const DietPlan = (props) => {
     post_dinner_activity: Yup.string().required("Required"),
     bedtime: Yup.string().required("Required"),
   });
-  const onSubmit = (values) => {
+
+  const onSubmit = (values, actions) => {
     const payload = {
       earlymorning: values.earlymorning,
       breakfast: values.breakfast,
@@ -41,14 +44,9 @@ const DietPlan = (props) => {
       physicianId: props.currentUser.id,
     };
     props.dietplan(payload);
+    actions.resetForm();
+    setDietAdded(true);
   };
-
-  // let history = useHistory();
-  // useEffect(() => {
-  //   if (props.statusCode === 201) {
-  //     history.push("/patient");
-  //   }
-  // });
 
   return (
     <Formik
@@ -77,7 +75,7 @@ const DietPlan = (props) => {
                         type="text"
                         className="form-control"
                         name="earlymorning"
-                      />{" "}
+                      />
                       <div className="error">
                         <ErrorMessage name="earlymorning" />
                       </div>
@@ -109,7 +107,6 @@ const DietPlan = (props) => {
                         className="form-control"
                         name="mid_morning"
                       />
-
                       <div className="error">
                         <ErrorMessage name="mid_morning" />
                       </div>
@@ -125,7 +122,6 @@ const DietPlan = (props) => {
                         className="form-control"
                         name="lunch"
                       />
-
                       <div className="error">
                         <ErrorMessage name="lunch" />
                       </div>
@@ -140,7 +136,6 @@ const DietPlan = (props) => {
                         className="form-control"
                         name="evening"
                       />
-
                       <div className="error">
                         <ErrorMessage name="evening" />
                       </div>
@@ -157,7 +152,6 @@ const DietPlan = (props) => {
                         placeholder="dinner"
                         name="dinner"
                       />
-
                       <div className="error">
                         <ErrorMessage name="dinner" />
                       </div>
@@ -177,7 +171,6 @@ const DietPlan = (props) => {
                         placeholder="post_dinner_activity"
                         name="post_dinner_activity"
                       />
-
                       <div className="error">
                         <ErrorMessage name="post_dinner_activity" />
                       </div>
@@ -194,7 +187,6 @@ const DietPlan = (props) => {
                         placeholder="dinner"
                         name="bedtime"
                       />
-
                       <div className="error">
                         <ErrorMessage name="bedtime" />
                       </div>
@@ -202,7 +194,6 @@ const DietPlan = (props) => {
                     </div>
                   </div>
                 </div>
-
                 <button type="submit" className="btn btn-primary mt-3">
                   Submit
                 </button>
@@ -218,7 +209,6 @@ const DietPlan = (props) => {
 const mapStateToProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    // allusers: state.dietplan.DietPlanreducer,
     dietplans: state.dietplan.dietplan,
   };
 };

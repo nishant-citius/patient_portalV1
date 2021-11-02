@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 function Appointmentstoday(props) {
   const [appointments, setAppointments] = useState([]);
-  const [apptDetails, setApptDetails] = useState({});
 
   useEffect(() => {
     todaysAppointments(new Date().toISOString().slice(0, 10));

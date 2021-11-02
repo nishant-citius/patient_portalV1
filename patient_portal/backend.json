@@ -749,6 +749,20 @@
   ],
   "demographics": [],
   "patientvitals": [],
+  "patientdietplan": [
+    {
+      "earlymorning": "Tea,Coffee",
+      "breakfast": "Poha",
+      "mid_morning": "Toaster",
+      "lunch": "Rice Daal",
+      "evening": "Tea",
+      "dinner": "RIce",
+      "post_dinner_activity": "Walking",
+      "bedtime": "Hot Milk",
+      "physicianId": 32,
+      "id": 1
+    }
+  ],
   "billing": [
     {
       "billingId": "",
