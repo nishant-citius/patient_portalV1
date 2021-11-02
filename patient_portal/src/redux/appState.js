@@ -23,6 +23,7 @@ let appState = {
   appointmentsDetails: [],
   inactiveUserCount: 0,
   patientMedicationAllergy: [],
+  labReports:[]
 };
 
 export default appState;
