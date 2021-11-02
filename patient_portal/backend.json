@@ -165,7 +165,6 @@
       "username": "Ajinkya1281",
       "mobile": "787698976D",
       "role": "admin",
-      "speciality": "",
       "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 34
@@ -179,7 +178,6 @@
       "username": "NishanthChoubey321",
       "mobile": "6789468988",
       "role": "admin",
-      "speciality": "",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 35
@@ -193,7 +191,6 @@
       "username": "SupriyaKulkarni1281",
       "mobile": "8977567778",
       "role": "admin",
-      "speciality": "",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 36
@@ -207,7 +204,6 @@
       "username": "Pooja281",
       "mobile": "8677567778",
       "role": "admin",
-      "speciality": "",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 37
@@ -221,7 +217,6 @@
       "username": "susmitha1281",
       "mobile": "8106989754",
       "role": "admin",
-      "speciality": "",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 38
@@ -235,7 +230,6 @@
       "username": "shivakumarP",
       "mobile": "7655443329",
       "role": "admin",
-      "speciality": "",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 39
@@ -362,7 +356,7 @@
     },
     {
       "email": "swapna@email.com",
-      "password": "$2a$10$/QGj1R1LYyU5UxOYYohCkeopOVYkR1XaMGNLAPi8LUsGk1CdrA5M6",
+      "password": "$2a$10$auytsBcGHpMWT85tEZLImugluGGz6x8gZefPF/vEoSA9PEOGrL0ly",
       "fName": "Swapna",
       "lName": "Patil",
       "dob": "2021-11-16",
@@ -372,7 +366,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 48
     },
     {
@@ -441,8 +435,8 @@
       "lName": "prasad",
       "dob": "1994-01-01",
       "mobile_no": 8801888988,
-      "doc_id": 12,
-      "doc_name": "shivaprasad",
+      "doc_id": 32,
+      "doc_name": "Sudhir Koganti",
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
@@ -450,7 +444,7 @@
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
-      "patientId": 24,
+      "patientId": 48,
       "status": "reject"
     },
     {
@@ -458,8 +452,8 @@
       "lName": "Chaubey",
       "dob": "2021-09-30",
       "mobile_no": 7876654329,
-      "doc_id": 12,
-      "doc_name": "Doctor-1Doctor-1",
+      "doc_id": 32,
+      "doc_name": "Sudhir Koganti",
       "appointment_title": "title",
       "appointment_start_time": "17:44",
       "appointment_end_time": "19:46",
@@ -467,36 +461,30 @@
       "appointment_desc": "gyj",
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-28T08:10:38.149Z",
-      "patientId": 1,
+      "patientId": 48,
       "status": "approved",
       "id": 3
-    }
-  ],
-  "patientvitals": [
-    {
-      "height": "4.8",
-      "weight": "42",
-      "blood_pressure": "120/80",
-      "temperature": "96",
-      "pulse": "92",
-      "respiration": "20",
-      "oxigen_saturation": "98",
-      "userid": 11,
-      "id": 1
     },
     {
-      "height": "5 Feet 4 Inch.",
-      "weight": "64 Kgs",
-      "blood_pressure": "110/25mg",
-      "temperature": "27 Deg",
-      "pulse": "72 pm",
-      "respiration": "Good",
-      "oxigen_saturation": "Good",
-      "physicianId": 12,
-      "patientId": 24,
-      "id": 3
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "mobile_no": 9834236968,
+      "doc_id": 32,
+      "doc_name": "Sudhir Koganti",
+      "appointment_title": "Swapna Patil - Appointment",
+      "appointment_start_time": "12:15",
+      "appointment_end_time": "13:15",
+      "appointmentDate": "2021-11-02",
+      "appointment_desc": "Swapna Patil - Appointment.",
+      "createdBy": "SwapnaPatil",
+      "createdDate": "2021-11-02T06:45:48.977Z",
+      "patientId": 48,
+      "status": "approved",
+      "id": 4
     }
   ],
+  "patientvitals": [],
   "patientdietplan": [
     {
       "earlymorning": "yoga, walking/skipping",

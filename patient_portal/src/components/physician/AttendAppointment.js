@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Calendar from "shared/calendar/Calendar";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -7,13 +6,12 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
-import PhyAppointmentList from "./PhyAppointmentList";
-
-import Vitals from "./PatientVitals";
 import Immunization from "../patient/Immunization";
 import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 import LabReports from "../physician/reports";
 import DietPlan from "../physician/PatientDietPlan";
+import Vitals from "./PatientVitals";
+import { useParams } from "react-router";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,7 +49,8 @@ function a11yProps(index) {
 const AttendAppointment = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
- 
+
+  const patientId = useParams();
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -90,7 +89,8 @@ const AttendAppointment = (props) => {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          <Vitals patientId={props.apptDetails}/>
+          {/* <Vitals patientId={props.apptDetails} /> */}
+          <Vitals patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={1}>
@@ -102,11 +102,11 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-        <LabReports />
+          <LabReports />
         </TabPanel>
 
         <TabPanel value={value} index={4}>
-        <DietPlan />
+          <DietPlan />
         </TabPanel>
       </Box>
     </>

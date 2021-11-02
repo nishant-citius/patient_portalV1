@@ -215,8 +215,8 @@ function ScheduleAppointment(props) {
                       <option value="">Select</option>
                       {doctorsList.map((doctor) => (
                         <option value={doctor.id} key={doctor.id}>
-                          {setDcotorName(doctor.fName + doctor.lName)}
-                          {doctor.fName + doctor.lName}
+                          {setDcotorName(`${doctor.fName} ${doctor.lName}`)}
+                          {`${doctor.fName} ${doctor.lName}`}
                         </option>
                       ))}
                     </Field>

@@ -1,9 +1,7 @@
-import { de } from "date-fns/locale";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
-import AttendAppointment from "./AttendAppointment";
+import { Link } from "react-router-dom";
 
 function Appointmentstoday() {
   const [appointments, setAppointments] = useState([]);
@@ -60,20 +58,26 @@ function Appointmentstoday() {
                 <td>{appointments.appointment_start_time}</td>
                 <td>{appointments.appointment_end_time}</td>
                 <td>
-                  <button
+                  <Link
+                    to={`/attendAppointment/${appointments.patientId}`}
+                    className="btn btn-primary btn-sm"
+                  >
+                    Start Appointment
+                  </Link>
+                  {/* <button
                     type="button"
                     onClick={() => startAppointment(appointments)}
                     className="btn btn-primary btn-sm"
                   >
                     Start Appointment
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-      <AttendAppointment apptDetails={apptDetails} />
+      {/* <AttendAppointment apptDetails={apptDetails} /> */}
     </div>
   );
 }
