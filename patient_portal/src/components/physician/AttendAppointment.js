@@ -12,6 +12,7 @@ import LabReports from "../physician/reports";
 import DietPlan from "../physician/PatientDietPlan";
 import Vitals from "./PatientVitals";
 import { useParams } from "react-router";
+import * as actions from "../../redux/actions/userActionCreater";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -55,6 +56,7 @@ const AttendAppointment = (props) => {
   useEffect(() => {
     if (props.isLoggedIn) {
       userAppointments(props.currentUser.id);
+      props.patientData(patientId.patintId);
     }
   }, []);
 
@@ -89,7 +91,10 @@ const AttendAppointment = (props) => {
             <Tab label="Diet Plan" {...a11yProps(4)} />
           </Tabs>
         </Box>
-        <h6 className="text-success fw-bold m-3">Patient Name:</h6>
+        <h6 className="text-success fw-bold m-3">
+          Patient Name:
+          {` ${props.userDetails.fName} ${props.userDetails.lName}`}
+        </h6>
         <TabPanel value={value} index={0}>
           <Vitals patientId={patientId} />
         </TabPanel>
@@ -117,11 +122,15 @@ const AttendAppointment = (props) => {
 const mapStatetoProps = (state) => {
   return {
     isLoggedIn: state.login.isLoggedIn,
-    role: state.login.role,
-    globalmessage: state.login.globalmessage,
-    authToken: state.login.authToken,
     currentUser: state.login.loggedUserInfo,
+    userDetails: state.userDetails.userDetails,
   };
 };
 
-export default connect(mapStatetoProps, null)(AttendAppointment);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    patientData: (userId) => dispatch(actions.GetUserDetails(userId)),
+  };
+};
+
+export default connect(mapStatetoProps, mapDispatchToProps)(AttendAppointment);
