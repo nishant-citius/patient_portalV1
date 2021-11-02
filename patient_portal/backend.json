@@ -209,7 +209,7 @@
   ],
   "medic_allergy": [
     {
-      "userid": 12,
+      "userid": 24,
       "current_medication": [
         {
           "medicineName": "Dolo",
@@ -826,7 +826,6 @@
     }
   ],
   "patientdietplan": [
-    
     {
       "earlymorning": "yoga, walking/skipping",
       "breakfast": "Dosa/Chappathi",
@@ -895,7 +894,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Alaska pollock"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Alder"
@@ -904,22 +902,18 @@
       "AllergyType": "Food ",
       "AllergyName": "Almond"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "American  oyster"
     },
-
     {
       "AllergyType": "Insect",
       "AllergyName": "American cockroach"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "American lobster"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Annual mercury grass"
@@ -928,17 +922,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Apple"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Apricot"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Arizona Cypress"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Arthropod"
@@ -955,7 +946,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Asian Seabass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Asinus "
@@ -964,12 +954,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Atlantic cod"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Atlantic herring"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Atlantic mackerel"
@@ -982,12 +970,10 @@
       "AllergyType": "Bacteria airway",
       "AllergyName": "Bacteria"
     },
-
     {
       "AllergyType": "Bacteria skin",
       "AllergyName": "Bacteria"
     },
-
     {
       "AllergyType": "Bacteria skin",
       "AllergyName": "Bacteria"
@@ -996,7 +982,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Bahia grass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Baltic cod"
@@ -1005,7 +990,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Banana"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Banana Prawn"
@@ -1014,17 +998,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Barley"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Barley"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Bell pepper"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Benguela hake"
@@ -1049,7 +1030,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Birch"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Black fire ant"
@@ -1066,12 +1046,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Black tiger shrimp"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Black walnut"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Blue hake"
@@ -1080,7 +1058,6 @@
       "AllergyType": "Food ",
       "AllergyName": "blue lupin"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "blue swimmer crab"
@@ -1089,17 +1066,14 @@
       "AllergyType": "Insect",
       "AllergyName": "booklice"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Bovine"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Bovine"
     },
-
     {
       "AllergyType": "Vaccine",
       "AllergyName": "Bovine"
@@ -1108,7 +1082,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Brazil nut"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Brazilian fire ant"
@@ -1129,17 +1102,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Buckwheat"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Bumblebee"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Canary grass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "caribean shrimp"
@@ -1156,32 +1126,26 @@
       "AllergyType": "Food ",
       "AllergyName": "Carrot"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Cashew"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Cassava"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Castor bean"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Cat"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Cedar"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Cherry"
@@ -1190,12 +1154,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Chicken"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Chinese mitten crab"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Chinese razor clam"
@@ -1204,7 +1166,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Chinese white shrimp"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Chinese-date"
@@ -1225,12 +1186,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Clam"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Climber (plant)"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Coffee"
@@ -1239,12 +1198,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Common Amaranth"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Common timothy"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Crab"
@@ -1281,7 +1238,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Disk abalone"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Dog"
@@ -1290,7 +1246,6 @@
       "AllergyType": "Animal",
       "AllergyName": "Domestic guinea pig"
     },
-
     {
       "AllergyType": "Mite",
       "AllergyName": "Dust mite"
@@ -1307,17 +1262,14 @@
       "AllergyType": "Food ",
       "AllergyName": "English walnut"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "European ash"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "European Beech"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "European chestnut"
@@ -1326,7 +1278,6 @@
       "AllergyType": "Food ",
       "AllergyName": "European hake"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "European hazelnut"
@@ -1339,22 +1290,18 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "European hornet"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "European pigeon tick"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "European rabbit"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "European white birch"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Farmyyard midge"
@@ -1371,22 +1318,18 @@
       "AllergyType": "Food ",
       "AllergyName": "Frog"
     },
-
     {
       "AllergyType": "Fungi",
       "AllergyName": "Fungus"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Fungus"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Garden lettuce"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Giant Bull Ant"
@@ -1395,12 +1338,10 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Giant honeybee"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "giant mud crab"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Giant ragweed"
@@ -1409,12 +1350,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Giant River Prawn"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Golden hamster"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Gould's razor shell"
@@ -1423,7 +1362,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Grape"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Greasyback shrimp"
@@ -1432,7 +1370,6 @@
       "AllergyType": "Food ",
       "AllergyName": "green mud crab"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Haliotis laevigata x Haliotis rubra"
@@ -1445,12 +1382,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Hemp"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Honeybee"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Hornbeam"
@@ -1459,7 +1394,6 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Hornet"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Horse"
@@ -1468,7 +1402,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Horse"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Horse Fly"
@@ -1477,12 +1410,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Horsehair crab"
     },
-
     {
       "AllergyType": "Mite",
       "AllergyName": "House dust mite"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Indian honeybee"
@@ -1491,12 +1422,10 @@
       "AllergyType": "Insect",
       "AllergyName": "Indian meal moth"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Japanese cedar"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Japanese cypress"
@@ -1505,7 +1434,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Japanese flying squid"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Japanese hop"
@@ -1522,12 +1450,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Japanese white birch"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Johnson grass"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Jumper ant"
@@ -1536,17 +1462,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Juniper"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Kamchatka crab"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Kentucky bluegrass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Kidney bean"
@@ -1555,7 +1478,6 @@
       "AllergyType": "Food ",
       "AllergyName": "King Prawn"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Kiwi"
@@ -1576,7 +1498,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Lentil"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Lesser banded hornet"
@@ -1585,7 +1506,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Lilac"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Lobster"
@@ -1594,7 +1514,6 @@
       "AllergyType": "Plant",
       "AllergyName": "London plane tree"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Lychee nut"
@@ -1611,17 +1530,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Mediterranean Cypress"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "mesquite"
     },
-
     {
       "AllergyType": "Insect",
       "AllergyName": "Mite"
     },
-
     {
       "AllergyType": "Mite",
       "AllergyName": "Mite"
@@ -1634,12 +1550,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Mollusc"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Mountain cedar"
     },
-
     {
       "AllergyType": "Animal",
       "AllergyName": "Mouse"
@@ -1648,7 +1562,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Mozambique tilapia"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Mugwort"
@@ -1673,7 +1586,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Muskmelon"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Mustard"
@@ -1682,12 +1594,10 @@
       "AllergyType": "Plant",
       "AllergyName": "Narrow-leaved plantain"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Navel orange"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Netted muskmelon"
@@ -1708,17 +1618,14 @@
       "AllergyType": "Plant",
       "AllergyName": "Oak"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "ocean perch (red fish)"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Octopus"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Orchard grass"
@@ -1727,12 +1634,10 @@
       "AllergyType": "Plant",
       "AllergyName": "oriental plane"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Papaya"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Paper wasp"
@@ -1741,17 +1646,14 @@
       "AllergyType": "Mite",
       "AllergyName": "Para rubber tree"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Para rubber tree"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Parasitic fish worm"
     },
-
     {
       "AllergyType": "Parasite",
       "AllergyName": "Parasitic roundworm"
@@ -1768,17 +1670,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Pea"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Peach"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Peanut"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Pear"
@@ -1787,12 +1686,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Pecan"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Perennial ryegrass"
     },
-
     {
       "AllergyType": "Drug ",
       "AllergyName": "Pharmaceutical Agent"
@@ -1801,22 +1698,18 @@
       "AllergyType": "Animal",
       "AllergyName": "Pig"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Pigweed"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Pine"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Pine moth"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Pineapple"
@@ -1833,12 +1726,10 @@
       "AllergyType": "Food ",
       "AllergyName": "pistachio"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Plant hybrid"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Plum"
@@ -1847,12 +1738,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Pomegranate"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Potato"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Privet"
@@ -1861,7 +1750,6 @@
       "AllergyType": "Food ",
       "AllergyName": "rainbow trout"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Rape"
@@ -1870,7 +1758,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Rape"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "raspberry"
@@ -1883,7 +1770,6 @@
       "AllergyType": "Animal",
       "AllergyName": "Rat"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Red cedar"
@@ -1892,7 +1778,6 @@
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Red fire ant"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "red squid"
@@ -1901,17 +1786,14 @@
       "AllergyType": "Food ",
       "AllergyName": "red swamp crayfish"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Rice"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Rye"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Rye"
@@ -1924,7 +1806,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Saffron crocus"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Salmon"
@@ -1937,7 +1818,6 @@
       "AllergyType": "Mite",
       "AllergyName": "Scabies mite"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Scabies mite"
@@ -1946,7 +1826,6 @@
       "AllergyType": "Parasite",
       "AllergyName": "Schistosoma"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Sesame"
@@ -1959,7 +1838,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Shallow-water cape hake"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Short ragweed"
@@ -2024,12 +1902,10 @@
       "AllergyType": "Food ",
       "AllergyName": "southern hake"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Southern Pacific hake"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Soybean"
@@ -2038,32 +1914,26 @@
       "AllergyType": "Mite",
       "AllergyName": "Storage mite"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Strawberry"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "summer cypress"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Sunflower"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Sunflower"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Sweet vernal grass"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Swordfish"
@@ -2080,7 +1950,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Thistle"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Tobacco"
@@ -2089,17 +1958,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Tomato"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Tropical Fire Ant"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Trumpet lily"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Tsetse fly"
@@ -2108,7 +1974,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Turnip"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Turnip"
@@ -2117,17 +1982,14 @@
       "AllergyType": "Food ",
       "AllergyName": "Turnip"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Velvet grass"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Wasp"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Weed"
@@ -2140,7 +2002,6 @@
       "AllergyType": "Plant",
       "AllergyName": "Western ragweed"
     },
-
     {
       "AllergyType": "Plant",
       "AllergyName": "Wheat"
@@ -2153,12 +2014,10 @@
       "AllergyType": "Food ",
       "AllergyName": "White Mulberry"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Whiteface hornet"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Whiteleg Shrimp"
@@ -2179,12 +2038,10 @@
       "AllergyType": "Food ",
       "AllergyName": "Yak"
     },
-
     {
       "AllergyType": "Contact",
       "AllergyName": "Yeast"
     },
-
     {
       "AllergyType": "Venom or Salivary",
       "AllergyName": "Yellow fever mosquito"
@@ -2197,7 +2054,6 @@
       "AllergyType": "Food ",
       "AllergyName": "Yellow mealworm"
     },
-
     {
       "AllergyType": "Food ",
       "AllergyName": "Yellowfin tuna"
