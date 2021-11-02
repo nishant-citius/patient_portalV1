@@ -3,6 +3,7 @@ let appState = {
   demographics: [],
   immunization: [],
   vitals: [],
+  dietplan: [],
   medication_allergies: [],
   isLoggedIn: false,
   authToken: "",
@@ -22,6 +23,7 @@ let appState = {
   appointmentsDetails: [],
   inactiveUserCount: 0,
   patientMedicationAllergy: [],
+  labReports:[]
 };
 
 export default appState;

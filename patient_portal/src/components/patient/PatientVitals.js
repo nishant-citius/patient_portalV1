@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as actionCreator from "../../redux/actions/userActionCreater";
+import * as actioncreators from "../../redux/actions/userActionCreater";
 
 export class PatientVitals extends React.Component {
   constructor(props) {
@@ -15,13 +15,13 @@ export class PatientVitals extends React.Component {
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>
-                <th scope="col"> height</th>
+                <th scope="col">height</th>
                 <th scope="col">weight</th>
                 <th scope="col">blood_pressure</th>
                 <th scope="col">temperature</th>
                 <th scope="col">pulse</th>
                 <th scope="col">respiration</th>
-                <th scope="col"> oxigen_saturation</th>
+                <th scope="col">oxigen_saturation</th>
               </tr>
             </thead>
             <tbody>
@@ -46,10 +46,4 @@ const mapStateToProps = (rootReducer) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    GetVitals: (userId) => dispatch(actionCreator.GetVitals(userId)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(PatientVitals);
+export default connect(mapStateToProps, null)(PatientVitals);

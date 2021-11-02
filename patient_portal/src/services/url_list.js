@@ -30,6 +30,14 @@ export const INACTIVE_USERS = "http://localhost:9999/users?isActive=false";
 export const SPECILISED_PHYSICIANS = "http://localhost:9999/users?speciality=";
 export const PHYSICIAN_BY_NAME = "http://localhost:9999/users?fName=";
 export const PATIENT_VITALS = "http://localhost:9999/patientvitals";
+export const PATIENT_DIETPLAN = "http://localhost:9999/patientdietplan";
+
 export const GET_APPOINTMENT_DETAILS =
   "http://localhost:9999/appointments?doc_id=";
-export const GET_PATIENT_VITALS = "http://localhost:9999/patientvitals?userid=";
+export const GET_PATIENT_VITALS =
+  "http://localhost:9999/patientvitals?patientId=";
+export const GET_PATIENT_DIETPLAN =
+  "http://localhost:9999/patientdietplan?userid=";
+
+export const LAB_REPORTS ="http://localhost:9999/labreports";
+export const GET_LAB_REPORTS="http://localhost:9999/labreports?patientId=";

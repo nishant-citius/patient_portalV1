@@ -206,6 +206,12 @@ function SideNav(props) {
             </div>
             <div className={classes.item}>
               <Link to="">
+                <Icon icon="mdi:heart-pulse" className={classes.icon} />
+                <span className={classes.text}>Patient DietPlan</span>
+              </Link>
+            </div>
+            <div className={classes.item}>
+              <Link to="">
                 <DetailsIcon className={classes.icon} />
                 <span className={classes.text}>Orders</span>
               </Link>
@@ -238,16 +244,18 @@ function SideNav(props) {
                 <span className={classes.text}>Patient List</span>
               </Link>
             </div>
-            <div className={classes.item}>
-              <Link to="/reports">
-                <ContactPhoneIcon className={classes.icon} />
-                <span className={classes.text}>Lab Reports</span>
-              </Link>
-            </div>
+            
+         
             <div className={classes.item}>
               <Link to="/attendAppointments">
                 <DashboardIcon className={classes.icon} />
                 <span className={classes.text}>Todays Appointments</span>
+              </Link>
+            </div>
+            <div className={classes.item}>
+              <Link to="/dietplan">
+                <ContactPhoneIcon className={classes.icon} />
+                <span className={classes.text}>Patient DietPlan</span>
               </Link>
             </div>
           </div>
