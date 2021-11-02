@@ -341,7 +341,7 @@
     },
     {
       "email": "gagan@email.com",
-      "password": "$2a$10$WoXTnUqk8MbnOTg68VswKO6CX7kEAfhlX1Hn/MaCTCC/cdgEKxPKO",
+      "password": "$2a$10$EYNYOPnDh3MWfQQ/iRkTvelajHhP3WXZU.PJ8L.0SR32/XmRhpk6e",
       "fName": "Gagan",
       "lName": "Mahendra",
       "dob": "2021-11-10",
@@ -351,7 +351,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:53:36 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 47
     },
     {
@@ -371,7 +371,7 @@
     },
     {
       "email": "keerthi@email.com",
-      "password": "$2a$10$PRbdb9AjxiChkeh8DOQwN.3fZYP3QcuA0kGAbe/OOu3BPdQIvdUgO",
+      "password": "$2a$10$b9DhO8L1Va6UVTgEGLlgVOGQSTeRX/UeYBIdUjzqJ9CrcbQGN0CeG",
       "fName": "Keerthi",
       "lName": "Datt",
       "dob": "2021-12-03",
@@ -381,7 +381,7 @@
       "blood_group": "B+",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:55:20 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 49
     },
     {
@@ -411,6 +411,49 @@
       "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 51
+    },
+    {
+      "email": "mahi@email.com",
+      "password": "$2a$10$h/.F1b/Ta9ayWwVOwRWXSup3jvoLinxnRQxvunazPOfK7OOKotFu6",
+      "fName": "Mahenda",
+      "lName": "Panpatti",
+      "dob": "2021-11-03",
+      "username": "mahi",
+      "mobile": "1234567890",
+      "role": "nurse",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 15:33:10 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 52
+    },
+    {
+      "email": "mahi_1@email.com",
+      "password": "$2a$10$8DTEPAcrIXbHGirpP./xK.pis8TWM1GwTEk8m6SnTdq5ZBBSpD1tC",
+      "fName": "Mahenda",
+      "lName": "Dhoni",
+      "dob": "2021-11-26",
+      "username": "lodha",
+      "mobile": "1234567890",
+      "role": "physician",
+      "speciality": "pediatrics",
+      "createdDate": "Tue Nov 02 2021 15:38:29 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 53
+    },
+    {
+      "email": "mahi_2@email.com",
+      "password": "$2a$10$o3iFHOkwOmqaCzPKxnYHROAqG8.fO.RPj7hPoR7V57sVHAs7TXjaC",
+      "fName": "Mahenda",
+      "lName": "Singh",
+      "dob": "2021-11-04",
+      "username": "mahi_2",
+      "rpassword": "12345",
+      "mobile": 9876543210,
+      "blood_group": "B -ve",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 15:39:32 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 54
     }
   ],
   "medic_allergy": [],
