@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
@@ -134,7 +135,9 @@ const Medication_Allergies = (props) => {
       message: "Medication and Allergy added...",
       type: "success",
     });
+    history.push("/patient");
   };
+  let history = useHistory();
   return (
     <>
       {isAvailable ? (

@@ -79,10 +79,6 @@ const AddUsers = (props) => {
 
   return (
     <div className="container py-4 border-secondary  mt-5">
-      {/* <Link className="btn btn-warning" to="/admin">
-        <BsFillArrowLeftSquareFill />
-        <span className="m-2">Back</span>
-      </Link> */}
       <div className="row justify-content-center">
         <div className="col-8">
           <Formik
