@@ -63,7 +63,6 @@ function AppointmentList(props) {
   function userAppointments(patientId) {
     adminService.getPatientAppointments(patientId).then(
       (response) => {
-        console.log(response.data);
         setAppts(response.data);
       },
       (error) => {
