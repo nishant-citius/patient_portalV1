@@ -11,7 +11,7 @@ import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 import LabReports from "../physician/reports";
 import DietPlan from "../physician/PatientDietPlan";
 import Vitals from "./PatientVitals";
-import { useParams } from "react-router";
+import { useParams, useLocation, useHistory } from "react-router";
 import * as actions from "../../redux/actions/userActionCreater";
 
 function TabPanel(props) {
@@ -51,28 +51,37 @@ const AttendAppointment = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
 
-  const patientId = useParams();
+  const location = useLocation(),
+    patientId = useParams(),
+    { appointmentDetails } = location.state,
+    history = useHistory();
 
   useEffect(() => {
     if (props.isLoggedIn) {
-      userAppointments(props.currentUser.id);
       props.patientData(patientId.patintId);
     }
   }, []);
 
-  function userAppointments(physicianId) {
-    adminService.getPhysicianAppointments(physicianId).then(
-      (response) => {
-        setAppts(response.data);
-      },
-      (error) => {
-        return;
-      }
-    );
-  }
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const finishAppointment = () => {
+    let appointmentData = appointmentDetails,
+      newData = {
+        ...appointmentData,
+        status: "completed",
+      };
+
+    adminService.editAppointment(appointmentData.id, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("Appointment Completed");
+          history.push("/physician_appointments");
+        }
+      },
+      (error) => {}
+    );
   };
 
   return (
@@ -115,6 +124,12 @@ const AttendAppointment = (props) => {
           <DietPlan patientId={patientId} />
         </TabPanel>
       </Box>
+      <button
+        onClick={() => finishAppointment()}
+        className="btn btn-primary mt-3"
+      >
+        Finish Appointment
+      </button>
     </>
   );
 };

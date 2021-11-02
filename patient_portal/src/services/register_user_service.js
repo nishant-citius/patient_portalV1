@@ -42,7 +42,6 @@ class UserServices {
 
   Addpatientvitals(user) {
     let url = URLS.BASE_URL + "/vitals";
-
     let config = {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
@@ -181,7 +180,7 @@ class AdminServices {
     return axios.get(url);
   }
   updatePatientVitals(patientId, data) {
-    let url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
+    let url = `${URLS.BASE_URL}/patientvitals/${patientId}`;
     let config = {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
@@ -197,6 +196,20 @@ class AdminServices {
   getMedication() {
     const url = `${URLS.BASE_URL}/products`;
     return axios.get(url);
+  }
+
+  getPatientDiet(patientId) {
+    const url = `${URLS.BASE_URL}/patientdietplan?patientId=${patientId}`;
+    return axios.get(url);
+  }
+  updatePatientDiet(patientId, data) {
+    let url = `${URLS.BASE_URL}/patientdietplan/${patientId}`;
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.put(url, JSON.stringify(data), config);
   }
 }
 

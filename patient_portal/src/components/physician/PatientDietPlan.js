@@ -3,9 +3,46 @@ import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { adminService } from "../../services/register_user_service";
 
 const DietPlan = (props) => {
+  const [patientId, setPatientId] = useState(0);
   const [dietAdded, setDietAdded] = useState(false);
+  const [patientDiet, addPatientDiet] = useState({});
+
+  let savedValues = {};
+
+  useEffect(() => {
+    setPatientId(props.patientId.patintId);
+    if (patientId) {
+      getPatientDiet(patientId);
+    }
+  }, [props.patientId.patientId, patientId]);
+
+  function getPatientDiet(patientId) {
+    adminService.getPatientDiet(patientId).then(
+      (response) => {
+        if (response.data.length > 0) {
+          addPatientDiet(response.data);
+          setDietAdded(true);
+        }
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
+
+  function updatePatientDiet(patientId, newData) {
+    adminService.updatePatientDiet(patientId, newData).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("Patient Diet Updated Successfully...");
+        }
+      },
+      (error) => {}
+    );
+  }
 
   const initialValues = {
     earlymorning: "",
@@ -19,6 +56,19 @@ const DietPlan = (props) => {
     doc_id: props.currentUser.id,
     patientId: Number(props.patientId.patintId),
   };
+
+  if (dietAdded) {
+    savedValues = {
+      earlymorning: patientDiet[0].earlymorning,
+      breakfast: patientDiet[0].breakfast,
+      mid_morning: patientDiet[0].mid_morning,
+      lunch: patientDiet[0].lunch,
+      evening: patientDiet[0].evening,
+      dinner: patientDiet[0].dinner,
+      post_dinner_activity: patientDiet[0].post_dinner_activity,
+      bedtime: patientDiet[0].bedtime,
+    };
+  }
 
   const validationSchema = Yup.object().shape({
     earlymorning: Yup.string().required("Required"),
@@ -42,17 +92,21 @@ const DietPlan = (props) => {
       post_dinner_activity: values.post_dinner_activity,
       bedtime: values.bedtime,
       physicianId: props.currentUser.id,
+      patientId: patientId,
     };
-    props.dietplan(payload);
-    actions.resetForm();
-    setDietAdded(true);
+    if (dietAdded) {
+      updatePatientDiet(patientDiet[0].id, payload);
+    } else {
+      props.dietplan(payload);
+    }
   };
 
   return (
     <Formik
-      initialValues={initialValues}
+      initialValues={savedValues || initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
+      enableReinitialize
     >
       {(props) => (
         <div className="container">
@@ -195,12 +249,8 @@ const DietPlan = (props) => {
                   </div>
                 </div>
                 {dietAdded ? (
-                  <button
-                    type="submit"
-                    className="btn btn-primary mt-3"
-                    disabled
-                  >
-                    Submit
+                  <button type="submit" className="btn btn-primary mt-3">
+                    Update Diet
                   </button>
                 ) : (
                   <button type="submit" className="btn btn-primary mt-3">

@@ -758,7 +758,7 @@
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",
       "patientId": 48,
-      "status": "approved",
+      "status": "completed",
       "id": 4
     }
   ],
@@ -781,31 +781,33 @@
       "id": 1
     }
   ],
-  "patientvitals": [],
+  "patientvitals": [
+    {
+      "height": "5 Feet 4 Inch.",
+      "weight": "Ajinkya",
+      "blood_pressure": "Ajinkya",
+      "temperature": "Ajinkya",
+      "pulse": "Ajinkya",
+      "respiration": "Ajinkya",
+      "oxigen_saturation": "Ajinkya",
+      "physicianId": 32,
+      "patientId": "48",
+      "id": 1
+    }
+  ],
   "patientdietplan": [
     {
       "earlymorning": "Tea,Coffee",
-      "breakfast": "Poha",
-      "mid_morning": "Toaster",
+      "breakfast": "Poha,Sandwitch",
+      "mid_morning": "Toaster,Taaster",
       "lunch": "Rice Daal",
       "evening": "Tea",
-      "dinner": "RIce",
+      "dinner": "qqq",
       "post_dinner_activity": "Walking",
-      "bedtime": "Hot Milk",
-      "physicianId": 32,
-      "id": 1
-    },
-    {
-      "earlymorning": "Tea,Coffee,Milk",
-      "breakfast": "Poha,Sandwitch",
-      "mid_morning": "Toaster",
-      "lunch": "Rice Daal,Vegetables",
-      "evening": "Tea",
-      "dinner": "RIce",
-      "post_dinner_activity": "qqq",
       "bedtime": "Hot Milk with Haldi",
       "physicianId": 32,
-      "id": 2
+      "patientId": "48",
+      "id": 1
     }
   ],
   "billing": [
