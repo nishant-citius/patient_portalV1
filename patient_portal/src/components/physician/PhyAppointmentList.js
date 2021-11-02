@@ -2,8 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
-import LabReports  from "../physician/reports";
-import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
+
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -131,7 +130,7 @@ export class AppointmentList extends React.Component {
                         </button>
                       </>
                     )}
-                    </td>
+                  </td>
 
                 </tr>
               );
