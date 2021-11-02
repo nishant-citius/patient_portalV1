@@ -45,6 +45,8 @@ const Immunization = (props) => {
     });
 
     const payload = {
+      first_name: props.currentUser.fName,
+      last_name: props.currentUser.lName,
       age_category: values.age_category,
       vaccine_brand: values.vaccine_brand,
       dose_detail: values.dose_detail,
