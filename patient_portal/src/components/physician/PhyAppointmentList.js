@@ -131,7 +131,7 @@ export class AppointmentList extends React.Component {
                         </button>
                       </>
                     )}
-                  </td>
+                    </td>
 
                 </tr>
               );
