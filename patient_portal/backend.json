@@ -349,6 +349,20 @@
       "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 48
+    },
+    {
+      "email": "sudhir@email.com",
+      "password": "$2a$10$HIggkDi/p3ZsCk4Ze2C8pON6/FlmG8SUNsGrK9xW/iQWKCmgEaDli",
+      "fName": "Sudhir",
+      "lName": "Koganti",
+      "dob": "1992-06-12",
+      "username": "Sudhir K",
+      "mobile": "7655443329",
+      "role": "physician",
+      "speciality": "pathology",
+      "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 32
     }
   ],
   "medic_allergy": [
