@@ -29,699 +29,10 @@
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 2
-    },
-    {
-      "email": "qwerty@email.com",
-      "password": "$2a$10$BXGVz37Q/6.RUCurKRRl..nf86GWuOixtF57tjxZiE9VJzRlcUYDi",
-      "fName": "Qwert",
-      "lName": "qwetrt",
-      "dob": "2021-09-28",
-      "username": "qwerty",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "o-",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 23:05:02 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 5
-    },
-    {
-      "email": "ms@email.com",
-      "password": "$2a$10$Ag.iMtPSFse9.nhN9H0kKu1ZluJnQt8d1qhCdiX/H2Ea245OOYWFK",
-      "fName": "Manya ",
-      "lName": "Surve",
-      "dob": "2021-09-30",
-      "username": "Mumbai ka king",
-      "rpassword": "12345",
-      "mobile": 1234567899,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 23:07:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 6
-    },
-    {
-      "email": "kk@email.com",
-      "password": "$2a$10$yj1zZyzVxTvJ6R2KPw22muZRMui8k4jutT9OEz39lBoKvV019lMwW",
-      "fName": "Kishore ",
-      "lName": "Kumar",
-      "dob": "2021-09-27",
-      "username": "Kishore Bhai",
-      "rpassword": "12345",
-      "mobile": 2345234534,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 23:10:42 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 7
-    },
-    {
-      "email": "jr@email.com",
-      "password": "$2a$10$YIR.mOnyV0jxU/yx8e5WLe8pF/SN9ow5tH0tYg2mHI4.FuByoT38W",
-      "fName": "Jagruti",
-      "lName": "Ranbhor",
-      "dob": "2021-09-29",
-      "username": "jagu",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 00:07:07 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 8
-    },
-    {
-      "email": "ajju@email.com",
-      "password": "$2a$10$4DDJ1Tw.HE1fkyLzS.sOFef0wbUoMfhSEPL4/vsirIGPJM1TSC.Hy",
-      "fName": "Ajju ",
-      "lName": "Bhai",
-      "dob": "2021-09-27",
-      "username": "ajju@email.com",
-      "rpassword": "12345",
-      "mobile": 1234567890,
-      "blood_group": "B+",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 00:15:07 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 9
-    },
-    {
-      "email": "ap@email.com",
-      "password": "$2a$10$arENyM32pVbQ5Wke2AgWbOHcIsEtq8pl9BHVA801RScVocfXDx2qy",
-      "fName": "Joe",
-      "lName": "Root",
-      "dob": "2021-09-27",
-      "username": "joe",
-      "rpassword": "12345",
-      "mobile": 5645652548,
-      "blood_group": "B-",
-      "role": "patient",
-      "createdDate": "Fri Oct 22 2021 16:04:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 10
-    },
-    {
-      "email": "sh@email.com",
-      "password": "$2a$10$Gjbo1GyW70RooIrR3sopf..gkrX1xkAQQt6FS2ESpNunlKyUMQ2Wy",
-      "fName": "soujanya",
-      "lName": "G",
-      "dob": "2021-10-07",
-      "username": "soujanya",
-      "mobile": "23214214123",
-      "role": "physician",
-      "speciality": "Anesthesiology",
-      "createdDate": "Sat Oct 23 2021 19:08:20 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 11
-    },
-    {
-      "email": "sp@gmail.com",
-      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-11-01",
-      "username": "shiva prasad",
-      "mobile": "8801888988",
-      "role": "physician",
-      "speciality": "Anesthesiology",
-      "createdDate": "Thu Oct 28 2021 10:29:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 12
-    },
-    {
-      "email": "TShivaprasad@citiustech.com",
-      "password": "$2a$10$JOWekOhaFxpdFIlcDHvSc.2o5Z27JdWFvGeTMVnx7PGIVx18eanDe",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-01-01",
-      "username": "shiva prasad",
-      "rpassword": "asdf",
-      "mobile": 8801888988,
-      "blood_group": "B+ve",
-      "role": "patient",
-      "createdDate": "Thu Oct 28 2021 13:07:29 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 23
-    },
-    {
-      "email": "sp@email.com",
-      "password": "$2a$10$ANJKeaMFs9AEjMtFG0O.TeBBksJ3zRjqTp3P3JXq4qHKquwCIlTjC",
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "1994-01-01",
-      "username": "sp",
-      "rpassword": "asdf",
-      "mobile": 8801888988,
-      "blood_group": "P",
-      "role": "patient",
-      "createdDate": "Thu Oct 28 2021 13:14:41 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 24
-    },
-    {
-      "email": "pooja@gmail.com",
-      "password": "$2a$10$04.IVRauxq426GW6dsbx/uEgZcz/XwGd9hl8GnzTKIxW9nlD9apAK",
-      "fName": "pooja",
-      "lName": "k",
-      "dob": "2021-09-28",
-      "username": "pooja",
-      "mobile": "9705607801",
-      "role": "physician",
-      "speciality": "General Surgery",
-      "createdDate": "Thu Oct 28 2021 19:30:12 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 25
-    },
-    {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
-      "fName": "Susmitha",
-      "lName": "C",
-      "dob": "1996-08-08",
-      "username": "Susmitha1281",
-      "mobile": "8106989754",
-      "role": "physician",
-      "speciality": "neurology",
-      "createdDate": "Fri Oct 29 2021 00:14:03 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 24
     }
   ],
   "medic_allergy": [
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "Dolo",
-          "dosage": "2",
-          "directionstoconsume": "two times",
-          "frequency": "100 mg",
-          "physicianName": "Soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-20",
-          "endDate": "2021-10-20"
-        },
-        {
-          "medicineName": "paracetamol",
-          "dosage": "2",
-          "directionstoconsume": "in morning",
-          "frequency": "50 mg",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-12",
-          "endDate": "2021-10-14"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "paracetamal",
-          "strength": "650",
-          "directiontoconsume": "3",
-          "socialDrugs": "drink"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 24
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "50 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "Neuomarkazol",
-          "strength": "100 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "propygenta",
-          "strength": "80 mg",
-          "directiontoconsume": "twice a day"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 6
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 8
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 9
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "nice",
-          "dosage": "3",
-          "directionstoconsume": "table",
-          "frequency": "3",
-          "physicianName": "shiva prasad",
-          "purpose": "body pains",
-          "startDate": "2021-11-02",
-          "endDate": "2021-11-02"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 25
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "nice",
-          "dosage": "3",
-          "directionstoconsume": "table",
-          "frequency": "3",
-          "physicianName": "shiva prasad",
-          "purpose": "body pains",
-          "startDate": "2021-11-02",
-          "endDate": "2021-11-02"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 26
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 27
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "fordum cream",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 28
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "fordum cream",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 29
-    }
+    
   ],
   "immunization": [
     {
@@ -884,6 +195,88 @@
       "scannings": "",
       "xrays": "",
       "others": ""
+    }
+  ],
+  "physician_speciality": [
+    {
+      "name": "Allergy and immunology",
+      "value": "allergy_immunology"
+    },
+    {
+      "name": "Anesthesiology",
+      "value": "anesthesiology"
+    },
+    {
+      "name": "Dermatology",
+      "value": "dermatology"
+    },
+    {
+      "name": "Diagnostic Radiology",
+      "value": "diagnostic_radiology"
+    },
+    {
+      "name": "Emergency Medicine",
+      "value": "emergency_medicine"
+    },
+    {
+      "name": "Family medicine",
+      "value": "family_medicine"
+    },
+    {
+      "name": "Internal Medicine",
+      "value": "internal_medicine"
+    },
+    {
+      "name": "Medical Genetics",
+      "value": "medical_genetics"
+    },
+    {
+      "name": "Neurology",
+      "value": "neurology"
+    },
+    {
+      "name": "Nuclear Medicine",
+      "value": "nuclear_medicine"
+    },
+    {
+      "name": "Obstetrics and Gynecology",
+      "value": "obstetrics_gynecology"
+    },
+    {
+      "name": "Ophthalmology",
+      "value": "ophthalmology"
+    },
+    {
+      "name": "Pathology",
+      "value": "pathology"
+    },
+    {
+      "name": "Pediatrics",
+      "value": "pediatrics"
+    },
+    {
+      "name": "Physical Rehabilitation",
+      "value": "physical_rehabilitation"
+    },
+    {
+      "name": "Preventive Medicine",
+      "value": "preventive_medicine"
+    },
+    {
+      "name": "Psychiatry",
+      "value": "psychiatry"
+    },
+    {
+      "name": "Radiation Oncology",
+      "value": "radiation_oncology"
+    },
+    {
+      "name": "Surgery",
+      "value": "surgery"
+    },
+    {
+      "name": "Urology",
+      "value": "urology"
     }
   ],
   "allergies": [

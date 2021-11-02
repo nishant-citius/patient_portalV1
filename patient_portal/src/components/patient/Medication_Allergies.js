@@ -3,17 +3,35 @@ import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
+import { adminService } from "../../services/register_user_service";
 
 const Medication_Allergies = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
+  const [medicationList, setMedicationList] = useState([]);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.mediAllergyDetails) {
+      if (props.mediAllergyDetails && props.mediAllergyDetails > 0) {
         setIsAvailable(true);
       }
     }
   }, []);
-  console.log("Nishant chaubey", props.mediAllergyDetails);
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      // setDoctorsList(props.physiciandata);
+      patientMedication();
+    }
+  }, []);
+  function patientMedication() {
+    adminService.getMedication().then(
+      (response) => {
+        setMedicationList(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
+  console.log("Nishant chaubey", medicationList);
   const initialValues = {
     id: "",
     userId: "",

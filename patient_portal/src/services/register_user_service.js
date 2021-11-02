@@ -176,8 +176,6 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/patientvitals?patientId=${patientId}`;
     return axios.get(url);
   }
-
-  
   updatePatientVitals(patientId, data) {
     let url = `${URLS.BASE_URL}/patientvitials?patientId=${patientId}`;
     let config = {
@@ -192,7 +190,10 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/labreports?patientId=${patientId}`;
     return axios.get(url);
   }
-
+  getMedication() {
+    const url = `${URLS.BASE_URL}/products`;
+    return axios.get(url);
+  }
 }
 
 /*********Admin Serives***********/
