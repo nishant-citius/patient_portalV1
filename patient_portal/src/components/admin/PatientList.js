@@ -73,7 +73,6 @@ export class PatientList extends React.Component {
   }
 
   componentDidMount() {
-    // debugger;
     this.props.getDemographics();
   }
 
@@ -194,6 +193,19 @@ export class PatientList extends React.Component {
                         <td>{demo.dob}</td>
                         <td>{demo.gender}</td>
                         <td>{demo.education}</td>
+                        <td>
+                          <span className="p-2">
+                            <Link>
+                              <BsPersonFill />
+                            </Link>
+                          </span>
+                          <span className="p-2">
+                            <Link>
+                              <BsFillPencilFill />
+                            </Link>
+                          </span>
+                          <span className="p-2 hand-pointer"></span>
+                        </td>
                       </tr>
                     );
                   })}
