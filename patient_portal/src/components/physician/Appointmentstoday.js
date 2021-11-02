@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
 
-function Appointmentstoday() {
+function Appointmentstoday(props) {
   const [appointments, setAppointments] = useState([]);
   const [apptDetails, setApptDetails] = useState({});
 
@@ -12,7 +12,7 @@ function Appointmentstoday() {
   }, []);
 
   const todaysAppointments = (_date) => {
-    adminService.appointmentsOnDate(_date).then(
+    adminService.appointmentsOnDate(props.currentUser.id, _date).then(
       (response) => {
         setAppointments(response.data);
       },
@@ -21,11 +21,6 @@ function Appointmentstoday() {
       }
     );
   };
-
-  const startAppointment = (details) => {
-    setApptDetails(details);
-  };
-
   return (
     <div className="container mt-5">
       <h4
@@ -39,7 +34,6 @@ function Appointmentstoday() {
           <tr>
             <th scope="col">Sr no </th>
             <th scope="col">Patient Name</th>
-
             <th scope="col">Appointment Title</th>
             <th scope="col">Appointment Date </th>
             <th scope="col">Start Time</th>
@@ -64,20 +58,12 @@ function Appointmentstoday() {
                   >
                     Start Appointment
                   </Link>
-                  {/* <button
-                    type="button"
-                    onClick={() => startAppointment(appointments)}
-                    className="btn btn-primary btn-sm"
-                  >
-                    Start Appointment
-                  </button> */}
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-      {/* <AttendAppointment apptDetails={apptDetails} /> */}
     </div>
   );
 }

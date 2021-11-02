@@ -137,13 +137,13 @@ class AdminServices {
     return axios.get(url);
   }
 
-  appointmentsOnDate(date) {
-    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&status=approved`;
+  appointmentsOnDate(_id, date) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&status=approved&&doc_id=${_id}`;
     return axios.get(url);
   }
 
   appointmentsPendingPhysician(physicianId) {
-    const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}`;
+    const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}&&status=Pending`;
     return axios.get(url);
   }
 
