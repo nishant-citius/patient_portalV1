@@ -1,16 +1,76 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+
 
 export default function ComboBox() {
+  
   return (
-    <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={top100Films}
-      sx={{ width: 600 }}
-      renderInput={(params) => <TextField {...params} label="procedures" />}
-    />
+    <div>
+    <Formik >
+      {(props) => (
+        <div className="container">
+          <div className="card shadow-lg p-6 mb-6 bg-white rounded">
+            <div className="card-header">
+              <h5>Procedures </h5>
+            </div>
+            <div className="card-body mb-2">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={top100Films}
+              sx={{ width: 600 }}
+              renderInput={(params) => <TextField {...params} label="procedures" />}
+            />
+              <Form>
+                <div className="form-group mt-2">
+                  <div className="row">
+                    <div className="col-4">
+                      <label htmlFor="id">Procedures id</label>
+                      <Field
+                        type="text"
+                        className="form-control"
+                        name="id"
+                        id="id"
+                      />
+                      <div className="error">
+                        <ErrorMessage name="id" />
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <label htmlFor="code">Procedures code</label>
+                      <Field
+                        type="text"
+                        className="form-control"
+                        name="code"
+                      />
+                      <div className="error">
+                        <ErrorMessage name="code" />
+                      </div>
+                    </div>
+                    <div className="col-4">
+                      <label htmlFor="desc">Procedures desc</label>
+                      <Field
+                        type="text"
+                        className="form-control"
+                        name="desc"
+                      />
+                      <div className="error">
+                        <ErrorMessage name="desc" />
+                      </div>
+                    </div>
+                    </div>
+                </div>
+
+              
+              </Form>
+            </div>
+          </div>
+        </div>
+      )}
+    </Formik>
+    </div>
   );
 }
 

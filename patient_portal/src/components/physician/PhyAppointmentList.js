@@ -30,6 +30,7 @@ export class AppointmentList extends React.Component {
       newData = {
         ...appointments,
         status: "approved",
+        
       };
 
     adminService.editAppointment(appointmentData.id, newData).then(
