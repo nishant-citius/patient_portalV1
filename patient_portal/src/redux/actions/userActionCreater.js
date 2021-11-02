@@ -13,7 +13,6 @@ let authToken = "";
 
 // ********AXIOS INTERCEPTOR********
 axios.interceptors.request.use((req) => {
-  console.log(`${req.method} ${req.url}`);
   if (
     req.method === "get" &&
     (req.url.endsWith("/users") ||
@@ -231,7 +230,6 @@ export function GetAllDemographicsData() {
 
     axios.get(URLS.GET_DEMOGRAPHICS).then(
       (response) => {
-        console.log("Hellooo", response.data);
         payload.globalmessage = `Demographics data retrieved successfully. Count: ${response.data.length}`;
         payload.demographics = response.data;
         dispatch({ type: actions.GET_DEMOGRAPHICS, payload: payload });
@@ -277,7 +275,6 @@ export function GetUserDetails(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_USER_DETAILS}/${userId}`).then(
       (response) => {
-        console.log(response.data);
         payload.globalmessage = `User Details Retrieved...`;
         payload.userDetails = response.data;
         dispatch({ type: actions.GET_USER, payload: payload });
@@ -296,7 +293,6 @@ export function EditUser(userId, upadatedData) {
     globalmessage: "",
   };
   return (dispatch, getState) => {
-    //console.log(`Token from ActionCreator: ${getState().login.authToken}`);
     authToken = getState().login.authToken;
     axios
       .put(`${URLS.USER}${userId}`, JSON.stringify(upadatedData), config)
@@ -440,7 +436,6 @@ export function AddDemographicsAsync(user) {
     authToken = getState().login.authToken;
     axios.post(URLS.DEMOGRAPHICS, JSON.stringify(user), config).then(
       (response) => {
-        // console.log(response)
         payload.globalmessage = `Demographics registered successfully`;
         payload.statusCode = response.status;
         dispatch({ type: actions.ADD_DEMOGRAPHICS, payload: payload });
@@ -468,7 +463,6 @@ export function UpdatePatientImmunization(patientId, upadatedData) {
       )
       .then(
         (response) => {
-          console.log(response);
           payload.globalmessage = "Immunization Updated...";
           dispatch({
             type: actions.UPDATE_PATIENT_IMMUNIZATION,
@@ -494,7 +488,6 @@ export function AddImmunizationsAsync(user) {
     authToken = getState().login.authToken;
     axios.post(URLS.IMMUNIZATION, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response);
         payload.globalmessage = `Immunization registered successfully`;
         payload.statusCode = response.status;
         dispatch({ type: actions.ADD_IMMUNIZATION, payload: payload });
@@ -517,7 +510,6 @@ export function AddVitalsAsync(user) {
     authToken = getState().login.authToken;
     axios.post(URLS.PATIENT_VITALS, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response);
         payload.globalmessage = `Vitals registered successfully`;
         payload.statusCode = response.status;
         dispatch({ type: actions.ADD_VITALS, payload: payload });
@@ -540,7 +532,6 @@ export function AddDietPlanAsync(user) {
     authToken = getState().login.authToken;
     axios.post(URLS.PATIENT_DIETPLAN, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response);
         payload.globalmessage = `Dietplan registered successfully`;
         payload.statusCode = response.status;
         dispatch({ type: actions.ADD_DIETPLAN, payload: payload });
@@ -563,7 +554,6 @@ export function GetVitals(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_PATIENT_VITALS}${userId}`).then(
       (response) => {
-        console.log("Hello", response.data);
         payload.globalmessage = `Vitals Retrieved...`;
         payload.userVitals = response.data;
         dispatch({ type: actions.GET_PATIENT_VITALS, payload: payload });
@@ -586,7 +576,6 @@ export function GetDietPlan(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_PATIENT_DIETPLAN}${userId}`).then(
       (response) => {
-        console.log("Hello", response.data);
         payload.globalmessage = `DietPlan Retrieved...`;
         payload.userDietPlan = response.data;
         dispatch({ type: actions.GET_PATIENT_DIETPLAN, payload: payload });
@@ -607,10 +596,8 @@ export function AddMedicationAndAllergiesAsync(user) {
   };
   return (dispatch, getState) => {
     authToken = getState().login.authToken;
-    console.log(authToken);
     axios.post(URLS.MED_ALLERGIES, JSON.stringify(user), config).then(
       (response) => {
-        console.log(response);
         payload.globalmessage = `Medication And Allegies Submitted successfully`;
         dispatch({
           type: actions.ADD_MEDICATIONANDALLERGIES,
@@ -630,7 +617,6 @@ export function AddMedicationAndAllergiesAsync(user) {
 }
 
 export function updateprofile(profileImage, loggedUserInfo) {
-  console.log(loggedUserInfo);
   let payload = {
     globalmessage: "",
   };
@@ -647,7 +633,6 @@ export function updateprofile(profileImage, loggedUserInfo) {
       .put(`${URLS.USER}${loggedUserInfo.id}`, loggedUserInfo, { headers })
       .then(
         (response) => {
-          console.log("From AC....", response);
           payload.globalmessage = `Profile Pic updated successfully`;
           dispatch({ type: actions.UPDATE_PROFILEPIC, payload: payload });
         },
