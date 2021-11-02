@@ -55,6 +55,7 @@ const Vitals = (props) => {
     userid: props.currentUser.id,
   };
 
+  
   if (available) {
     savedValues = {
       height: patientVitals[0].height,
@@ -90,12 +91,10 @@ const Vitals = (props) => {
       physicianId: props.currentUser.id,
       patientId: patientId,
     };
-    debugger;
+
     if (available) {
-      debugger;
       updatePatientVitals(patientId, payload);
     } else {
-      debugger;
       props.vitals(payload);
     }
   };

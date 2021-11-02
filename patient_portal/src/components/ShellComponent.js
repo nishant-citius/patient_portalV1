@@ -37,6 +37,7 @@ import AppointmentList from "./patient/AppointmentList";
 import ScheduleAppointment from "./patient/ScheduleAppointment";
 import PhysicianAppointment from "./physician/PhysicianAppointment";
 import Appointmentstoday from "./physician/Appointmentstoday";
+import AttendAppointment from "./physician/AttendAppointment";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -134,8 +135,12 @@ function ShellComponent(props) {
           <ScheduleAppointment flashNotification={showSnacksBar} />
         </Route>
 
-        <Route path={"/attendAppointments"}>
+        <Route path={"/appointmentstoday"}>
           <Appointmentstoday flashNotification={showSnacksBar} />
+        </Route>
+
+        <Route path={"/attendAppointment/:patintId"}>
+          <AttendAppointment flashNotification={showSnacksBar} />
         </Route>
 
         {/* -----------Physician------------- */}

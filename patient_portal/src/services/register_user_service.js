@@ -138,7 +138,12 @@ class AdminServices {
   }
 
   appointmentsOnDate(date) {
-    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}`;
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&status=approved`;
+    return axios.get(url);
+  }
+
+  appointmentsPendingPhysician(physicianId) {
+    const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}`;
     return axios.get(url);
   }
 
