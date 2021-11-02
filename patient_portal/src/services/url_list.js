@@ -38,3 +38,6 @@ export const GET_PATIENT_VITALS =
   "http://localhost:9999/patientvitals?patientId=";
 export const GET_PATIENT_DIETPLAN =
   "http://localhost:9999/patientdietplan?userid=";
+
+export const LAB_REPORTS ="http://localhost:9999/labreports";
+export const GET_LAB_REPORTS="http://localhost:9999/labreports?patientId=";

@@ -6,6 +6,9 @@ import * as Yup from "yup";
 import { useHistory } from "react-router";
 
 const LabReports = (props) => {
+
+  let savedValues = {};
+
   const initialValues = {
     blood_test: "",
     urine_test: "",
