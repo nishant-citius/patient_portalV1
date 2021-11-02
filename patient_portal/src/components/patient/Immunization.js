@@ -11,7 +11,7 @@ const Immunization = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
+      if (props.immunizationDetails && props.immunizationDetails > 0) {
         setIsAvailable(true);
       }
     }
@@ -45,6 +45,7 @@ const Immunization = (props) => {
     });
 
     const payload = {
+      patient_name: props.currentUser.fName,
       age_category: values.age_category,
       vaccine_brand: values.vaccine_brand,
       dose_detail: values.dose_detail,

@@ -51,12 +51,11 @@ export class PatientList extends React.Component {
             <thead className="table-dark">
               <tr>
                 <th scope="col">Sr.No</th>
-                <th scope="col">Patient Id</th>
+                <th scope="col">Patient Name</th>
                 <th scope="col">Vaccine Name</th>
                 <th scope="col">Vaccination Date</th>
                 <th scope="col">Vaccine Brand</th>
                 <th scope="col">Vaccine Dose Number</th>
-                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -65,7 +64,7 @@ export class PatientList extends React.Component {
                 return (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>{user.id}</td>
+                    <td>{user.patient_name}</td>
                     <td>
                       <ul className="no-list-style">
                         {user.general_vaccine.map((vac, ind) => {
@@ -85,16 +84,6 @@ export class PatientList extends React.Component {
 
                     <td>{user.vaccine_brand}</td>
                     <td>{user.dose_detail}</td>
-                    <td>
-                      <span className="p-2">
-                        <Link>
-                          <BsFillPencilFill />
-                        </Link>
-                      </span>
-                      <span className="p-2">
-                        <BsFillTrashFill />
-                      </span>
-                    </td>
                   </tr>
                 );
               })}
