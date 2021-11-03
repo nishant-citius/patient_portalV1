@@ -13,7 +13,7 @@
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 24
+      "id": 1
     },
     {
       "email": "aj@email.com",
@@ -413,7 +413,25 @@
       "id": 57
     }
   ],
-  "demographics": [],
+  "demographics": [
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "Ethinivity Nishant",
+      "education": "Education",
+      "employment": "BE",
+      "address": "BE",
+      "phone_number": 1234567890,
+      "medical_history": "NA",
+      "family_medical_history": "NA",
+      "surgeries": "NA",
+      "insurance_provider": "NA",
+      "userid": 1,
+      "id": 1
+    }
+  ],
   "medic_allergy": [
     {
       "userid": 24,
@@ -615,6 +633,44 @@
       "createdDate": "Tue Nov 02 2021 19:18:19 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 51
+    },
+    {
+      "userid": 1,
+      "current_medication": [
+        {
+          "medicineName": "123",
+          "dosage": "123",
+          "directionstoconsume": "123",
+          "frequency": "123",
+          "physicianName": "123123",
+          "purpose": "123213",
+          "startDate": "2021-11-04",
+          "endDate": "2021-11-04"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "123",
+          "strength": "123",
+          "directiontoconsume": "123",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "123",
+          "strength": "123",
+          "directiontoconsume": "123"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "123123",
+          "symptomsofAllergy": "123123",
+          "drugAllergy": "123123"
+        }
+      ],
+      "id": 52
     }
   ],
   "immunization": [
@@ -632,17 +688,18 @@
       "id": "Ct_RqfO"
     },
     {
-      "age_category": "18_44",
-      "vaccine_brand": "Covaccine",
-      "dose_detail": "2",
+      "first_name": "Nishant",
+      "last_name": "Chaubey",
+      "age_category": "45",
+      "vaccine_brand": "sasas",
+      "dose_detail": "1",
       "general_vaccine": [
         {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-29"
+          "vaccine_name": "asasas",
+          "vaccine_date": "2021-11-05"
         }
       ],
-      "userid": 1,
-      "id": "XEhJ-HM"
+      "id": 1
     }
   ],
   "appointments": [
@@ -697,7 +754,7 @@
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-03T06:45:48.977Z",
       "patientId": 48,
-      "status": "pending",
+      "status": "approved",
       "id": 4
     },
     {
