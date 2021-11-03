@@ -28,8 +28,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 function UserList(props) {
-  const [openPopup, setOpenPopup] = useState(false);
-
   function deleteUser(userId) {
     props.removeUser(userId);
     props.flashNotification({
@@ -37,10 +35,6 @@ function UserList(props) {
       type: "success",
     });
     props.getalluserdata();
-  }
-
-  function addNewUser() {
-    setOpenPopup(true);
   }
 
   return (
@@ -107,13 +101,6 @@ function UserList(props) {
           </tbody>
         </table>
       </div>
-      {/* <ModalPopup
-        title="Add New User"
-        openPopup={openPopup}
-        setOpenPopup={setOpenPopup}
-      >
-        <AddUsers />
-      </ModalPopup> */}
     </>
   );
 }

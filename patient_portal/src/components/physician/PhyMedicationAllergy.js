@@ -15,7 +15,6 @@ const PhyMedicationAllergies = (props) => {
       }
     }
   }, []);
-  console.log(props.mediAllergyDetails);
   const initialValues = {
     id: "",
     userId: "",
@@ -103,9 +102,8 @@ const PhyMedicationAllergies = (props) => {
       type: "success",
     });
   };
-  function updateMed(){
-      console.log("suifgsuifusuvfi")
-      setupdateMedication(false)
+  function updateMed() {
+    setupdateMedication(false);
   }
   return (
     <>

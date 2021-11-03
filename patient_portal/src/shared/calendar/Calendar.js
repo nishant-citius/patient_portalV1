@@ -55,24 +55,13 @@ function Calendar(props) {
     },
   });
 
-  const handleCellClick = (event, row, day) => {
-    // console.log("Event--", event);
-    // console.log("Row--", row);
-    // console.log("day--", day);
-  };
+  const handleCellClick = (event, row, day) => {};
 
-  const handleEventClick = (event, item) => {
-    // console.log("Event--", event);
-    // console.log("Row--", item);
-  };
+  const handleEventClick = (event, item) => {};
 
-  const handleEventsChange = (item) => {
-    console.log("Ajinkya-3");
-  };
+  const handleEventsChange = (item) => {};
 
-  const handleAlertCloseButtonClicked = (item) => {
-    console.log("Ajinkya-4");
-  };
+  const handleAlertCloseButtonClicked = (item) => {};
   return (
     <Scheduler
       events={events}

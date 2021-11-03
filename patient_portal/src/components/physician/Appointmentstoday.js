@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
+import Appointments from "components/admin/Appointments";
 
 function Appointmentstoday(props) {
   const [appointments, setAppointments] = useState([]);
-  const [apptDetails, setApptDetails] = useState({});
 
   useEffect(() => {
     todaysAppointments(new Date().toISOString().slice(0, 10));
@@ -53,7 +53,10 @@ function Appointmentstoday(props) {
                 <td>{appointments.appointment_end_time}</td>
                 <td>
                   <Link
-                    to={`/attendAppointment/${appointments.patientId}`}
+                    to={{
+                      pathname: `/attendAppointment/${appointments.patientId}`,
+                      state: { appointmentDetails: appointments },
+                    }}
                     className="btn btn-primary btn-sm"
                   >
                     Start Appointment
