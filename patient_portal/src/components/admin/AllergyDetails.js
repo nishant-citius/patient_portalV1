@@ -1,26 +1,69 @@
-function AllergyDetails() {
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import * as actioncreators from "../../redux/actions/userActionCreater";
+import { Link } from "react-router-dom";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    paddingTop: "10px",
+    height: "100vh",
+    width: "100vw",
+  },
+}));
+
+const AllergyDetails = (props) => {
+  const classes = useStyles();
+  const [allergy, setAllergy] = useState([0]);
+
   return (
-    <>
-      <div className="container mt-5">
-        <h1 className="text-success text-center fw-bold ">User List</h1>
-        <table className="table table-bordered shadow mt-4">
-          <thead className="table-dark">
-            <tr>
-              <th scope="col">Sr.No</th>
-              <th scope="col">Name</th>
-              <th scope="col">D.O.B.</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Status</th>
-              <th scope="col">Role</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </>
+    <Container className={classes.root}>
+      <TableContainer component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Sr. No</TableCell>
+              <TableCell>Allergy Type</TableCell>
+              <TableCell>Allergy Name</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>1</TableCell>
+              <TableCell>ALL</TableCell>
+              <TableCell>Covide</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>1</TableCell>
+              <TableCell>ALL</TableCell>
+              <TableCell>Covide</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>1</TableCell>
+              <TableCell>ALL</TableCell>
+              <TableCell>Covide</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>1</TableCell>
+              <TableCell>ALL</TableCell>
+              <TableCell>Covide</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Container>
   );
-}
+};
 
 export default AllergyDetails;
