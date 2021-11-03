@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
-import LabReports from "../physician/reports";
+import LabReports from "./PhyProcedure";
 import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 
 const mapStateToProps = (rootReducer) => {
@@ -65,6 +65,33 @@ export class AppointmentList extends React.Component {
     this.props.getAppointments(this.props.currentUser.id);
   }
 
+  getAppointmentStatus(appointments) {
+    if (appointments.status === "approved") {
+      return <p className="text text-success fw-bold">Approved </p>;
+    } else if (appointments.status === "reject") {
+      return <p className="text text-danger fw-bold">Rejected</p>;
+    } else {
+      return (
+        <>
+          <button
+            type="button"
+            onClick={() => this.approve(appointments)}
+            className="btn btn-primary btn-sm m-2"
+          >
+            Approve
+          </button>
+          <button
+            type="button"
+            onClick={() => this.reject(appointments)}
+            className="btn btn-danger btn-sm"
+          >
+            Reject
+          </button>
+        </>
+      );
+    }
+  }
+
   render() {
     return (
       <div>
@@ -98,7 +125,7 @@ export class AppointmentList extends React.Component {
                     <td>{appointments.appointment_start_time}</td>
                     <td>{appointments.appointment_end_time}</td>
                     <td>
-                      {appointments.status === "approved" ? (
+                      {/* {appointments.status === "approved" ? (
                         <p className="text text-success fw-bold">Approved</p>
                       ) : (
                         <>
@@ -118,7 +145,8 @@ export class AppointmentList extends React.Component {
                             Reject
                           </button>
                         </>
-                      )}
+                      )} */}
+                      {this.getAppointmentStatus(appointments)}
                     </td>
                   </tr>
                 );

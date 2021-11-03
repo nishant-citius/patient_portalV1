@@ -213,7 +213,6 @@ function AppToolBar(props) {
                 open={Boolean(anchorEl)}
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
                 <MenuItem onClick={Logout}>Logout</MenuItem>
               </Menu>
             </div>
