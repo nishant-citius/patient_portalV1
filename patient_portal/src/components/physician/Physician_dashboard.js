@@ -54,7 +54,16 @@ const Physician_dashboard = (props) => {
   function cancelledAppts() {
     let approved = 0;
     apptList.map((appt) => {
-      if (appt.status === "rejected") {
+      if (appt.status === "reject") {
+        approved += 1;
+      }
+    });
+    return approved;
+  }
+  function pendingAppts() {
+    let approved = 0;
+    apptList.map((appt) => {
+      if (appt.status === "Pending") {
         approved += 1;
       }
     });
@@ -78,7 +87,7 @@ const Physician_dashboard = (props) => {
       pending = undefined;
 
     apptList.map((appt) => {
-      if (appt.appointmentDate > new Date()) {
+      if (appt.appointmentDate > new Date().toISOString().slice(0, 10)) {
         approved += 1;
       }
     });
@@ -141,6 +150,10 @@ const Physician_dashboard = (props) => {
       backgroundColor: "#20c997",
       height: "45px",
     },
+    textblock6: {
+      backgroundColor: "#6c757d",
+      height: "45px",
+    },
     chartdiv: {
       padding: "40px 0 40px 0",
       margin: "auto",
@@ -187,6 +200,7 @@ const Physician_dashboard = (props) => {
               </CardContent>
             </Card>
           </Grid>
+
           <Grid item sm={4} lg={4} md={4}>
             <Card>
               <CardMedia
@@ -232,6 +246,21 @@ const Physician_dashboard = (props) => {
               <CardContent className={classes.textblock5}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
                   Upcoming Appointments : {upcomingAppointments()}
+                </h6>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item sm={4} lg={4} md={4}>
+            <Card>
+              <CardMedia
+                component="img"
+                height="130"
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0bY54SgBxkL4k2d07qRPsNdf4IXJiSq9Oqg&usqp=CAU"
+              />
+              <CardContent className={classes.textblock6}>
+                <h6 className={classes.h6} style={{ color: "white" }}>
+                  Pending Appointments:
+                  <CountUp end={pendingAppts()} duration={4} />
                 </h6>
               </CardContent>
             </Card>
