@@ -23,13 +23,13 @@ function Appointmentstoday(props) {
   return (
     <div className="container mt-5">
       <h4
-        style={{ color: "yellow" }}
+        style={{ color: "#3f51b5" }}
         className="text-success text-center fw-bold "
       >
         Appointment List
       </h4>
       <table className="table table-bordered shadow mt-4">
-        <thead className="table-dark">
+        <thead style={{ backgroundColor: "#3f51b5", color: "#fff" }}>
           <tr>
             <th scope="col">Sr no </th>
             <th scope="col">Patient Name</th>
@@ -58,7 +58,7 @@ function Appointmentstoday(props) {
                     }}
                     className="btn btn-primary btn-sm"
                   >
-                    Start Appointment
+                    Video
                   </Link>
                 </td>
               </tr>
