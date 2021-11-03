@@ -413,6 +413,7 @@
       "id": 57
     }
   ],
+  "demographics": [],
   "medic_allergy": [
     {
       "userid": 24,
@@ -616,7 +617,6 @@
       "id": 51
     }
   ],
-  
   "immunization": [
     {
       "age_category": "18_44",
@@ -661,7 +661,8 @@
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
       "patientId": 48,
-      "status": "pending"
+      "status": "approved",
+      "id": 2
     },
     {
       "fName": "Nishant",
@@ -678,7 +679,7 @@
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-28T08:10:38.149Z",
       "patientId": 48,
-      "status": "approved",
+      "status": "reject",
       "id": 3
     },
     {
@@ -696,7 +697,7 @@
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-03T06:45:48.977Z",
       "patientId": 48,
-      "status": "approved",
+      "status": "pending",
       "id": 4
     },
     {
@@ -714,11 +715,24 @@
       "createdBy": "shivaprasad t",
       "createdDate": "2021-11-03T13:52:07.712Z",
       "patientId": 51,
-      "status": "approved",
+      "status": "pending",
       "id": 5
     }
   ],
-  "patientvitals": [],
+  "patientvitals": [
+    {
+      "height": "wwwww",
+      "weight": "wwwww",
+      "blood_pressure": "wwwww",
+      "temperature": "wwwww",
+      "pulse": "wwwww",
+      "respiration": "wwwww",
+      "oxigen_saturation": "wwwww",
+      "physicianId": 32,
+      "patientId": "48",
+      "id": 1
+    }
+  ],
   "patientdietplan": [
     {
       "earlymorning": "yoga, walking/skipping",
@@ -851,11 +865,11 @@
   ],
   "patient_proceduers": [
     {
-      "id": "",
-      "doc_id": "",
-      "patientId": "",
-      "desc": ""
-     
+      "doc_id": 32,
+      "patientId": "48",
+      "desc": "Bypass Cerebral Ventricle to Cerebral Cisterns with Synthetic Substitute, Open Approach",
+      "code": "00160JB",
+      "id": 1
     }
   ],
   "allergies": [
