@@ -52,12 +52,6 @@ function Appointmentstoday(props) {
                 <td>{appointments.appointment_start_time}</td>
                 <td>{appointments.appointment_end_time}</td>
                 <td>
-                  {/* <Link
-                    to={`/attendAppointment/${appointments.patientId}`}
-                    className="btn btn-primary btn-sm"
-                  >
-                    Start Appointment
-                  </Link> */}
                   <Link
                     to={{
                       pathname: `/attendAppointment/${appointments.patientId}`,
