@@ -41,5 +41,5 @@ class ProcedureServices {
      }
 
 }
-
-export {ProcedureServices};
+let procedureServices = new ProcedureServices();
+export {procedureServices};
