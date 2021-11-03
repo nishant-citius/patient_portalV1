@@ -116,7 +116,7 @@ const Vitals = (props) => {
                 <div className="form-group">
                   <div className="row">
                     <div className="col-4">
-                      <label htmlFor="height">Patient Height</label>
+                      <label htmlFor="height">Patient Height in kg*</label>
                       <Field
                         type="text"
                         className="form-control"
@@ -128,7 +128,7 @@ const Vitals = (props) => {
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="weight">Patient weight</label>
+                      <label htmlFor="weight">weight in cm*</label>
                       <Field
                         type="text"
                         className="form-control"
@@ -139,7 +139,9 @@ const Vitals = (props) => {
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="blood_pressure">Blood Pressure</label>
+                      <label htmlFor="blood_pressure">
+                        Blood Pressure in mm/hg*
+                      </label>
                       <Field
                         type="text"
                         className="form-control"
@@ -150,7 +152,7 @@ const Vitals = (props) => {
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="temperature">Temperature</label>
+                      <label htmlFor="temperature">Temperature F*</label>
                       <Field
                         type="text"
                         className="form-control"
@@ -161,7 +163,7 @@ const Vitals = (props) => {
                       </div>
                     </div>
                     <div className="col-4">
-                      <label htmlFor="pulse">Pulse</label>
+                      <label htmlFor="pulse">Pulse per min*</label>
                       <Field
                         type="text"
                         className="form-control"
@@ -173,7 +175,7 @@ const Vitals = (props) => {
                     </div>
                     <div className="col-4">
                       <label htmlFor="oxigen_saturation">
-                        Oxygen Saturation
+                        Oxygen Saturation in %
                       </label>
                       <Field
                         type="text"
@@ -189,7 +191,7 @@ const Vitals = (props) => {
                 </div>
 
                 <div className="form-group mt-4">
-                  <label htmlFor="respiration">respiration</label>
+                  <label htmlFor="respiration">respiration per min*</label>
                   <Field
                     type="text"
                     className="form-control"

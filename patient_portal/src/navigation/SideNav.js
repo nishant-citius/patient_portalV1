@@ -27,10 +27,11 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    // borderRadius: "10px",
     height: "100vh",
-    color: "black",
+    // color: "black",
     paddingTop: theme.spacing(10),
-    backgroundColor: "#0C213A",
+    backgroundColor: "#3f51b5",
     position: "sticky",
     top: 0,
   },
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icon: {
-    color: "#1976D2",
+    color: "#fff",
     marginRight: theme.spacing(1),
     [theme.breakpoints.up("sm")]: {
       fontSize: "18px",
@@ -57,8 +58,8 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontSize: "14px",
     marginBottom: "0",
-    color: "#a9baca",
-    fontWeight: 400,
+    color: "#fff",
+    fontWeight: "bold",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -100,7 +101,7 @@ function SideNav(props) {
   return (
     <Container className={classes.container}>
       <div className={classes.HeaderColor}>
-        <h5 className={classes.headerText}>
+        <h5 style={{ color: "#3f51b5" }} className={classes.headerText}>
           Welcome {props.currentUser.fName}
         </h5>
       </div>
@@ -241,7 +242,7 @@ function SideNav(props) {
             <div className={classes.item}>
               <Link to="/physician_appointments">
                 <DashboardIcon className={classes.icon} />
-                <span className={classes.text}>All Appointments List</span>
+                <span className={classes.text}>Manage Appointments</span>
               </Link>
             </div>
             {/* <div className={classes.item}>
@@ -253,7 +254,7 @@ function SideNav(props) {
             <div className={classes.item}>
               <Link to="/appointmentstoday">
                 <DashboardIcon className={classes.icon} />
-                <span className={classes.text}>Todays Appointments</span>
+                <span className={classes.text}>Today's Patients</span>
               </Link>
             </div>
           </div>
