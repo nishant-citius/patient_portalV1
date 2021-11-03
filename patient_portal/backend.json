@@ -41,7 +41,7 @@
       "role": "physician",
       "speciality": "dermatology",
       "createdDate": "Tue Nov 02 2021 10:21:39 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 25
     },
     {
@@ -55,7 +55,7 @@
       "role": "physician",
       "speciality": "allergy_immunology",
       "createdDate": "Tue Nov 02 2021 10:23:02 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 26
     },
     {
@@ -69,7 +69,7 @@
       "role": "physician",
       "speciality": "allergy_immunology",
       "createdDate": "Tue Nov 02 2021 10:24:06 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 27
     },
     {
@@ -83,7 +83,7 @@
       "role": "physician",
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:25:34 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 28
     },
     {
@@ -97,7 +97,7 @@
       "role": "physician",
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:26:51 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 29
     },
     {
@@ -111,7 +111,7 @@
       "role": "physician",
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:28:23 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 30
     },
     {
@@ -125,7 +125,7 @@
       "role": "physician",
       "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 10:31:17 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 31
     },
     {
@@ -139,7 +139,7 @@
       "role": "physician",
       "speciality": "pathology",
       "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 32
     },
     {
@@ -153,7 +153,7 @@
       "role": "physician",
       "speciality": "psychiatry",
       "createdDate": "Tue Nov 02 2021 10:33:22 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 33
     },
     {
@@ -166,7 +166,7 @@
       "mobile": "787698976D",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 34
     },
     {
@@ -179,7 +179,7 @@
       "mobile": "6789468988",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 35
     },
     {
@@ -192,7 +192,7 @@
       "mobile": "8977567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 36
     },
     {
@@ -205,7 +205,7 @@
       "mobile": "8677567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 37
     },
     {
@@ -218,7 +218,7 @@
       "mobile": "8106989754",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 38
     },
     {
@@ -231,7 +231,7 @@
       "mobile": "7655443329",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 39
     },
     {
@@ -332,7 +332,7 @@
       "blood_group": "B -ve",
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 15:39:32 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 54
     },
     {
@@ -363,6 +363,50 @@
       "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 32
+    },
+    {
+      "email": "susmitha1281@email.com",
+      "password": "$2a$10$o2XWS7fS/N5zLhArVPFaFOO3/odRIJmxlpCYB7HRLog6/1ei7y4Cy",
+      "fName": "Susmitha",
+      "lName": "Chinthakindi",
+      "dob": "2021-11-08",
+      "username": "susmitha1281",
+      "mobile": "8106989754",
+      "role": "physician",
+      "speciality": "internal_medicine",
+      "createdDate": "Tue Nov 02 2021 23:29:40 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 55
+    },
+    {
+      "email": "vijayac@email.com",
+      "password": "$2a$10$diWwUt/XhifZ44E4zBOBMOr4KvCKmkauLJSIBX./2gWdf8jaRZqei",
+      "fName": "Vijaya",
+      "lName": "C",
+      "dob": "2021-11-17",
+      "username": "VijayaC",
+      "rpassword": "12345",
+      "mobile": 6789468988,
+      "blood_group": "b+",
+      "role": "patient",
+      "createdDate": "Wed Nov 03 2021 10:36:38 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 56
+    },
+    {
+      "email": "nagamma@email.com",
+      "password": "$2a$10$L1xcfJ2RAJFypEm25mxd4.Tw8f8VqnFnz8H95bl78.qX/28Gofndi",
+      "fName": "Nagamma",
+      "lName": "E",
+      "dob": "2021-12-03",
+      "username": "NagammaE",
+      "rpassword": "12345",
+      "mobile": 7865467888,
+      "blood_group": "O+",
+      "role": "patient",
+      "createdDate": "Wed Nov 03 2021 10:57:52 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 57
     }
   ],
   "medic_allergy": [
@@ -758,8 +802,216 @@
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",
       "patientId": 48,
-      "status": "completed",
+      "status": "approved",
       "id": 4
+    },
+    {
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "mobile_no": 8353638299,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "Fever",
+      "appointment_start_time": "02:35",
+      "appointment_end_time": "03:35",
+      "appointmentDate": "2021-11-03",
+      "appointment_desc": "fever",
+      "createdBy": "SwapnaPatil",
+      "createdDate": "2021-11-03T04:03:28.531Z",
+      "patientId": 48,
+      "status": "approved",
+      "id": 5
+    },
+    {
+      "fName": "neeraj",
+      "lName": "thakur",
+      "dob": "2021-11-26",
+      "mobile_no": 7698657888,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "headaque",
+      "appointment_start_time": "08:40",
+      "appointment_end_time": "15:40",
+      "appointmentDate": "2021-11-03",
+      "appointment_desc": "Headache",
+      "createdBy": "neerajthakur",
+      "createdDate": "2021-11-03T04:05:12.101Z",
+      "patientId": 27,
+      "status": "approved",
+      "id": 6
+    },
+    {
+      "fName": "sanjay",
+      "lName": "sharma",
+      "dob": "2021-11-25",
+      "mobile_no": 8999765434,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "General Health Checkup",
+      "appointment_start_time": "02:40",
+      "appointment_end_time": "03:40",
+      "appointmentDate": "2021-11-05",
+      "appointment_desc": "general checkup",
+      "createdBy": "sanjaysharma",
+      "createdDate": "2021-11-03T04:06:54.950Z",
+      "patientId": 26,
+      "status": "approved",
+      "id": 7
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 87899986576,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "Fever",
+      "appointment_start_time": "02:40",
+      "appointment_end_time": "03:40",
+      "appointmentDate": "2021-11-04",
+      "appointment_desc": "Na",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-03T04:08:09.038Z",
+      "patientId": 24,
+      "status": "approved",
+      "id": 8
+    },
+    {
+      "fName": "Vijaya",
+      "lName": "C",
+      "dob": "2021-11-17",
+      "mobile_no": 89765457688,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "General Health Checkup",
+      "appointment_start_time": "11:40",
+      "appointment_end_time": "11:44",
+      "appointmentDate": "2021-11-10",
+      "appointment_desc": "nn",
+      "createdBy": "VijayaC",
+      "createdDate": "2021-11-03T05:08:35.020Z",
+      "patientId": 56,
+      "status": "reject",
+      "id": 9
+    },
+    {
+      "fName": "Mahenda",
+      "lName": "Singh",
+      "dob": "2021-11-04",
+      "mobile_no": 6578987865,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "General Health Checkup",
+      "appointment_start_time": "13:50",
+      "appointment_end_time": "14:50",
+      "appointmentDate": "2021-11-20",
+      "appointment_desc": "Fever",
+      "createdBy": "MahendaSingh",
+      "createdDate": "2021-11-03T05:15:07.232Z",
+      "patientId": 54,
+      "status": "reject",
+      "id": 10
+    },
+    {
+      "fName": "Nagamma",
+      "lName": "E",
+      "dob": "2021-12-03",
+      "mobile_no": 8799876554,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "headaque",
+      "appointment_start_time": "14:00",
+      "appointment_end_time": "15:00",
+      "appointmentDate": "2021-11-03",
+      "appointment_desc": "Headache",
+      "createdBy": "NagammaE",
+      "createdDate": "2021-11-03T05:29:22.406Z",
+      "patientId": 57,
+      "status": "Pending",
+      "id": 11
+    }
+  ],
+  "physician_speciality": [
+    {
+      "name": "Allergy and immunology",
+      "value": "allergy_immunology"
+    },
+    {
+      "name": "Anesthesiology",
+      "value": "anesthesiology"
+    },
+    {
+      "name": "Dermatology",
+      "value": "dermatology"
+    },
+    {
+      "name": "Diagnostic Radiology",
+      "value": "diagnostic_radiology"
+    },
+    {
+      "name": "Emergency Medicine",
+      "value": "emergency_medicine"
+    },
+    {
+      "name": "Family medicine",
+      "value": "family_medicine"
+    },
+    {
+      "name": "Internal Medicine",
+      "value": "internal_medicine"
+    },
+    {
+      "name": "Medical Genetics",
+      "value": "medical_genetics"
+    },
+    {
+      "name": "Neurology",
+      "value": "neurology"
+    },
+    {
+      "name": "Nuclear Medicine",
+      "value": "nuclear_medicine"
+    },
+    {
+      "name": "Obstetrics and Gynecology",
+      "value": "obstetrics_gynecology"
+    },
+    {
+      "name": "Ophthalmology",
+      "value": "ophthalmology"
+    },
+    {
+      "name": "Pathology",
+      "value": "pathology"
+    },
+    {
+      "name": "Pediatrics",
+      "value": "pediatrics"
+    },
+    {
+      "name": "Physical Rehabilitation",
+      "value": "physical_rehabilitation"
+    },
+    {
+      "name": "Preventive Medicine",
+      "value": "preventive_medicine"
+    },
+    {
+      "name": "Psychiatry",
+      "value": "psychiatry"
+    },
+    {
+      "name": "Radiation Oncology",
+      "value": "radiation_oncology"
+    },
+    {
+      "name": "Surgery",
+      "value": "surgery"
+    },
+    {
+      "name": "Urology",
+      "value": "urology"
     }
   ],
   "demographics": [
