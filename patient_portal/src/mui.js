@@ -43,3 +43,4 @@ export { default as TableContainer } from "@material-ui/core/TableContainer";
 export { default as TableHead } from "@material-ui/core/TableHead";
 export { default as TablePagination } from "@material-ui/core/TablePagination";
 export { default as TableRow } from "@material-ui/core/TableRow";
+export { default as Box } from "@material-ui/core/Box";
