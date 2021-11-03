@@ -1,12 +1,7 @@
 import { React, link, useEffect, useState } from "react";
-import Calendar from "react-calendar";
 import { connect } from "react-redux";
-import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.css";
-import BarChart from "./chart";
 import { useHistory } from "react-router";
-import * as actionCreator from "../../redux/actions/userActionCreater";
-import AppointmentList from "../physician/TodaysAppointments";
 import { adminService } from "../../services/register_user_service";
 
 import {
@@ -20,12 +15,10 @@ import {
   makeStyles,
   Typography,
 } from "mui";
-import { date } from "yup/lib/locale";
 import CountUp from "react-countup";
 
 const Physician_dashboard = (props) => {
   const history = useHistory();
-
   const [apptList, setApptList] = useState([]);
 
   useEffect(() => {
@@ -44,50 +37,39 @@ const Physician_dashboard = (props) => {
       }
     );
   }
-  console.log("Nishant", apptList);
   const theme = {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
   };
 
   function approvedAppts() {
-    let approved = 0,
-      rejected = undefined,
-      pending = undefined;
-
+    let approved = 0;
     apptList.map((appt) => {
       if (appt.status === "approved") {
         approved += 1;
       }
+    });
+    return approved;
+  }
 
+  function cancelledAppts() {
+    let approved = 0;
+    apptList.map((appt) => {
       if (appt.status === "rejected") {
-        rejected += 1;
-      }
-
-      if (appt.status === "pending") {
-        rejected += 1;
+        approved += 1;
       }
     });
     return approved;
   }
-  var dateObj = new Date();
-  var month = dateObj.getUTCMonth() + 1; //months from 1-12
-  var day = dateObj.getUTCDate();
-  var year = dateObj.getUTCFullYear();
 
-  let newdate = year + "-" + month + "-" + day;
-  console.log("babababab", newdate);
   function todaysAppts() {
-    let approved = 0,
-      rejected = undefined,
-      pending = undefined;
+    let number = 0;
 
     apptList.map((appt) => {
-      if (appt.appointmentDate === newdate) {
-        approved += 1;
-        console.log("string" + approved);
+      if (appt.appointmentDate === new Date().toISOString().slice(0, 10)) {
+        number += 1;
       }
     });
-    return approved;
+    return number;
   }
 
   function upcomingAppointments() {
@@ -169,6 +151,7 @@ const Physician_dashboard = (props) => {
       opacity: "50%",
     },
   }));
+
   const classes = useStyles();
   return (
     <>
@@ -181,7 +164,6 @@ const Physician_dashboard = (props) => {
                 height="130"
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjqdo4r_VEzgKMlfJtWPEGW-u31ILuS6VMjQ&usqp=CAU"
               />
-              {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock1}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
                   Total Appointments :
@@ -214,7 +196,8 @@ const Physician_dashboard = (props) => {
               />
               <CardContent className={classes.textblock3}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Appointments Canceled: 15
+                  Appointments Canceled:
+                  <CountUp end={cancelledAppts()} duration={4} />
                 </h6>
               </CardContent>
             </Card>
@@ -231,16 +214,14 @@ const Physician_dashboard = (props) => {
                 height="130"
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt2D1xLrARfpYmsY9mPTGkFIwm1NfZCB0IIrsoqIbEYWmR8OGE_XlX5IX8-fcSJQOnsgA&usqp=CAU"
               />
-              {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock4}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
-                  Todays Appointments :
+                  Today's Appointments :
                   <CountUp end={todaysAppts()} duration={4} />
                 </h6>
               </CardContent>
             </Card>
           </Grid>
-
           <Grid item sm={4} lg={4} md={4}>
             <Card>
               <CardMedia
@@ -248,7 +229,6 @@ const Physician_dashboard = (props) => {
                 height="130"
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0F0UWdyWQlY8Wc1P9aHxeD2On0Avv15uis0A63q9jKrsa6_Z0nG1yJPVcY9eR4DKY7Hc&usqp=CAU"
               />
-              {/* <h6 className={classes.h6}>Details</h6> */}
               <CardContent className={classes.textblock5}>
                 <h6 className={classes.h6} style={{ color: "white" }}>
                   Upcoming Appointments : {upcomingAppointments()}

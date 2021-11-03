@@ -59,7 +59,6 @@ export class PatientList extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {console.log(this.props.immunizationData)}
               {this.props.immunizationData.map((user, index) => {
                 return (
                   <tr key={index}>
@@ -68,7 +67,6 @@ export class PatientList extends React.Component {
                     <td>
                       <ul className="no-list-style">
                         {user.general_vaccine.map((vac, ind) => {
-                          console.log(vac.vaccine_name);
                           return <li>{vac.vaccine_name}</li>;
                         })}
                       </ul>
@@ -76,7 +74,6 @@ export class PatientList extends React.Component {
                     <td>
                       <ul className="no-list-style">
                         {user.general_vaccine.map((vac, ind) => {
-                          console.log(vac.vaccine_date);
                           return <li>{vac.vaccine_date}</li>;
                         })}
                       </ul>
