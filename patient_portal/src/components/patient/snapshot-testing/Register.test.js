@@ -10,7 +10,7 @@ describe("RegisterUser Component", () => {
   let jsx;
 
   beforeEach(() => {
-    store = mockStore({ register: { email: "", password: "" } });
+    store = mockStore({ register: {} });
     jsx = (
       <Provider store={store}>
         <RegisterUser />

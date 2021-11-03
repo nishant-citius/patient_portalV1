@@ -1,4 +1,4 @@
-//import { common } from "@mui/material/colors";
+import { common } from "@mui/material/colors";
 import { shallow, mount } from "enzyme";
 import renderer from "react-test-renderer";
 import Login from "../Login";
@@ -19,39 +19,18 @@ describe("Login Component", () => {
       </Provider>
     );
   });
-
-  // it("should render properly", () => {
-  //   const tree = renderer.create(jsx).toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
-
   it("should render an email input tag", () => {
     const wrapper = shallow(jsx);
     expect(wrapper.find("Field[type='email']").exists()).toBe(true);
   });
 
-  // describe('Login Component', () => {
+  it("should render a password input tag", () => {
+    const wrapper = shallow(jsx);
+    expect(wrapper.find('Field[type="password"]').exists()).toBe(true);
+  });
 
-  // it("should render a password input tag", () => {
-  //   const wrapper = shallow(jsx);
-  //   expect(wrapper.find('Field[type="password"]').exists()).toBe(true);
-  // });
-
-  //expect(wrapper.find(CustomerAdd).dive().state("addNewOnSubmit")).toEqual(true);
-  // test("email check", () => {
-  //   const wrapper = shallow(jsx);
-
-  //   wrapper.find('input[type="text"]');
-  //   wrapper.simulate("change", {
-  //     target: { name: "email", value: "nc@email.com" },
-  //   });
-
-  // wrapper.find('input[type="text"]').simulate("change", {
-  //   target: {
-  //     value: "nc@email.com",
-  //   },
-  // });
-  // expect(wrapper.state('input[type="text"]')).toEqual("nc@email.com");
-  //     expect(wrapper.find(Login).dive().state("email")).toEqual("nc@email.com");
-  //   });
+  it("should render a submit button", () => {
+    const wrapper = shallow(jsx);
+    expect(wrapper.find('button[type="submit"]').exists()).toBe(true);
+  });
 });
