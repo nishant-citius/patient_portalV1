@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as URLS from "./url_list";
 
-class procedureServices {
+class ProcedureServices {
 
     getAllProcedure() {
         const url = `${URLS.BASE_URL}/procedures`;
@@ -42,4 +42,4 @@ class procedureServices {
 
 }
 
-export {procedureServices};
+export {ProcedureServices};
