@@ -49,8 +49,6 @@ function Proceduers(props) {
       desc: procedureDesc,
       code: procedureCode,
     };
-
-    console.log(obj);
     addPatientProcedure(obj);
   }
 

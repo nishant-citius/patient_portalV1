@@ -267,13 +267,6 @@ const Physician_dashboard = (props) => {
           </Grid>
         </Grid>
       </Container>
-      {/* <Container>
-        <Grid container spacing={0}>
-          <Grid item sm={12} lg={12} md={12}>
-            <AppointmentList />
-          </Grid>
-        </Grid>
-      </Container> */}
     </>
   );
 };
