@@ -23,7 +23,6 @@ class ProcedureServices {
     };
     return axios.put(url, JSON.stringify(data), config);
   }
-
   addNewProcedure(newdata) {
     let url = URLS.BASE_URL + "/procedures";
     let config = {
@@ -33,10 +32,19 @@ class ProcedureServices {
     };
     return axios.post(url, JSON.stringify(newdata), config);
   }
-
   deleteProcedure(id) {
     const url = `${URLS.BASE_URL}/procedures/${id}`;
     return axios.delete(url);
+  }
+
+  addPatientProcedure(_patientProcedure) {
+    let url = URLS.BASE_URL + "/patient_proceduers";
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.post(url, JSON.stringify(_patientProcedure), config);
   }
 }
 let procedureServices = new ProcedureServices();

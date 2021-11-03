@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import Immunization from "../patient/Immunization";
 import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
-import LabReports from "../physician/reports";
+import Proceduers from "./PhyProcedure";
 import DietPlan from "../physician/PatientDietPlan";
 import Vitals from "./PatientVitals";
 import { useParams, useLocation, useHistory } from "react-router";
@@ -96,7 +96,7 @@ const AttendAppointment = (props) => {
             <Tab label="Record Patient Vital" {...a11yProps(0)} />
             <Tab label="Immunization" {...a11yProps(1)} />
             <Tab label="Medication Allergies" {...a11yProps(2)} />
-            <Tab label="Diagnosis/Lab Reports" {...a11yProps(3)} />
+            <Tab label="Procedures" {...a11yProps(3)} />
             <Tab label="Diet Plan" {...a11yProps(4)} />
           </Tabs>
         </Box>
@@ -117,7 +117,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <LabReports patientId={patientId} />
+          <Proceduers patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={4}>

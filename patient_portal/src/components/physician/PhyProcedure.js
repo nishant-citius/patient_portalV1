@@ -4,11 +4,13 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { Formik, Form, Field } from "formik";
 import { procedureServices } from "services/procedures_service";
 import { useEffect, useState } from "react";
+import { connect } from "react-redux";
 
-export default function Proceduers(props) {
+function Proceduers(props) {
   const [procesduer, SetProcesduer] = useState([]);
-  const [renderInput, setrenderInput] = useState("");
-  const [FilteredResults, setFilteredResults] = useState("");
+  const [procedureCode, setProcedureCode] = useState("");
+  const [patientId, setPatientId] = useState(0);
+  const [procedureDesc, setProcedureDesc] = useState(0);
 
   const searchItems = (e, _value) => {
     if (_value !== "") {
@@ -18,7 +20,8 @@ export default function Proceduers(props) {
         }
       });
       if (filteredData.length) {
-        setFilteredResults(filteredData[0].code);
+        setProcedureCode(filteredData[0].code);
+        setProcedureDesc(filteredData[0].desc);
       }
     }
   };
@@ -33,9 +36,34 @@ export default function Proceduers(props) {
       }
     );
   };
+
   useEffect(() => {
     getAllProcedure();
-  }, []);
+    setPatientId(props.patientId.patintId);
+  }, [patientId]);
+
+  function onSubmit() {
+    let obj = {
+      doc_id: props.currentUser.id,
+      patientId: patientId,
+      desc: procedureDesc,
+      code: procedureCode,
+    };
+
+    console.log(obj);
+    addPatientProcedure(obj);
+  }
+
+  function addPatientProcedure(_procedure) {
+    procedureServices.addPatientProcedure(_procedure).then(
+      (response) => {
+        if (response.status === 200) {
+          alert("Patient Procedure Successfully...");
+        }
+      },
+      (error) => {}
+    );
+  }
 
   return (
     <div>
@@ -65,17 +93,11 @@ export default function Proceduers(props) {
                         <Field
                           className="form-control"
                           name="query"
-                          placeholder="Search . . . . ."
-                          // onChange={props.handleChange}
-                          value={FilteredResults}
+                          placeholder="Search......"
+                          value={procedureCode}
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-3">
-                    <button type="submit" className="btn btn-primary mt-3">
-                      Submit
-                    </button>
                   </div>
                 </Form>
               </div>
@@ -83,6 +105,27 @@ export default function Proceduers(props) {
           </div>
         )}
       </Formik>
+      <div className="mt-3">
+        <button className="btn btn-primary mt-3" onClick={() => onSubmit()}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.login.loggedUserInfo,
+    dietplans: state.dietplan.dietplan,
+  };
+};
+
+//  const mapDispatchToProps = (dispatch) => {
+//    return {
+//      dietplan: (newuser) => dispatch(actionCreator.AddDietPlanAsync(newuser)),
+//    };
+//  };
+
+let hof = connect(mapStateToProps, null);
+export default hof(Proceduers);
