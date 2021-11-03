@@ -80,7 +80,7 @@ const Physician_dashboard = (props) => {
       pending = undefined;
 
     apptList.map((appt) => {
-      if (appt.appointmentDate === "2021-11-02") {
+      if (appt.appointmentDate === "2021-11-03") {
         approved += 1;
         // console.log("string" + approved);
       }
