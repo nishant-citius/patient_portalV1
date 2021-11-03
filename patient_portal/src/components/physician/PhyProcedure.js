@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 function Proceduers(props) {
-  const [procesduer, SetProcesduer] = useState([]);
+  const [procedures, Setprocedures] = useState([]);
   const [procedureCode, setProcedureCode] = useState("");
   const [patientId, setPatientId] = useState(0);
   const [procedureDesc, setProcedureDesc] = useState(0);
 
   const searchItems = (e, _value) => {
     if (_value !== "") {
-      const filteredData = procesduer.filter((item) => {
+      const filteredData = procedures.filter((item) => {
         if (item.desc === _value) {
           return item;
         }
@@ -29,7 +29,7 @@ function Proceduers(props) {
   const getAllProcedure = () => {
     procedureServices.getAllProcedure().then(
       (response) => {
-        SetProcesduer(response.data);
+        Setprocedures(response.data);
       },
       (error) => {
         return;
@@ -76,8 +76,8 @@ function Proceduers(props) {
                 <Autocomplete
                   disablePortal
                   id="combo-box-demo"
-                  options={procesduer.map((option) => option.desc)}
-                  sx={{ width: 800 }}
+                  options={procedures.map((option) => option.desc)}
+                  // sx={{ width: 800 }}
                   renderInput={(params) => (
                     <TextField {...params} label="procedures" />
                   )}

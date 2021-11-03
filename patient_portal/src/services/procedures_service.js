@@ -38,7 +38,7 @@ class ProcedureServices {
   }
 
   addPatientProcedure(_patientProcedure) {
-    let url = URLS.BASE_URL + "/patient_proceduers";
+    let url = URLS.BASE_URL + "/patient_procedures";
     let config = {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
