@@ -2,7 +2,7 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { Formik, Form, Field } from "formik";
-import { dignosisServices } from "services/diagnosisService";
+import { diagnosisService } from "services/diagnosisService";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
@@ -19,7 +19,7 @@ function Diagnosis(props) {
           return item;
         }
       })
-      console.log("afgvadgvfjkgvdfgvadhkg",filteredData);
+     
       if (filteredData.length) {
         setDiagnosisCode(filteredData[0].code);
         setDiagnosisDesc(filteredData[0].description);
@@ -28,7 +28,7 @@ function Diagnosis(props) {
   };
 
   const getDiagnosis = () => {
-    dignosisServices.getDiagnosis().then(
+    diagnosisService.getDiagnosis().then(
       (response) => {
         SetDiagnosis(response.data);
       },
@@ -52,11 +52,11 @@ function Diagnosis(props) {
     };
 
     console.log(obj);
-    addPatientDiagnosis(obj);
+     addPatientDiagnosis(obj);
   }
 
-  function addPatientDiagnosis(_diagnosis) {
-    dignosisServices.addPatientDiagnosis(_diagnosis).then(
+  function addPatientDiagnosis(_diagnosis) {   
+    diagnosisService.addPatientDiagnosis(_diagnosis).then(
       (response) => {
         if (response.status === 200) {
           alert("Patient dignosis Successfully...");
@@ -80,7 +80,7 @@ function Diagnosis(props) {
                   disablePortal
                   id="combo-box-demo"
                   options={diagnosis.map((option) => option.description)}
-                  sx={{ width: 800 }}
+                  //sx={{ width: 800 }}
                   renderInput={(params) => (
                     <TextField {...params} label="diagnosis" />
                   )}
