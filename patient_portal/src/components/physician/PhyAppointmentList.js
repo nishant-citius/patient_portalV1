@@ -95,15 +95,15 @@ export class AppointmentList extends React.Component {
   render() {
     return (
       <div>
-        <div className="container mt-5">
+        <div className="container mt-2">
           <h4
-            style={{ color: "yellow" }}
+            style={{ color: "#3f51b5" }}
             className="text-success text-center fw-bold "
           >
             Appointment List
           </h4>
           <table className="table table-bordered shadow mt-4">
-            <thead className="table-dark">
+            <thead style={{ backgroundColor: "#3f51b5", color: "#fff" }}>
               <tr>
                 <th scope="col">Sr no </th>
                 <th scope="col">Patient Name</th>
