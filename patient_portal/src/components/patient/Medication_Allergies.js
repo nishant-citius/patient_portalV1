@@ -15,7 +15,7 @@ const Medication_Allergies = (props) => {
   const [medicineStrength, setmedicineStrength] = useState([]);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.mediAllergyDetails && props.mediAllergyDetails > 0) {
+      if (props.mediAllergyDetails) {
         setIsAvailable(true);
       }
     }

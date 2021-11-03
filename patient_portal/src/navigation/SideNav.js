@@ -206,7 +206,7 @@ function SideNav(props) {
               </Link>
             </div>
             <div className={classes.item}>
-              <Link to="">
+              <Link to="/patientvitals">
                 <Icon icon="mdi:heart-pulse" className={classes.icon} />
                 <span className={classes.text}>Patient Vitals</span>
               </Link>

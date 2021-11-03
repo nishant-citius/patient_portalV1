@@ -13,7 +13,63 @@
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 24
+      "id": 1
+    },
+    {
+      "email": "sumitha@gmail.com",
+      "password": "$2a$10$OJDAVU7McsRUUH2N6HcwJO5Biye5IquxhT24TcjS8eo5txRqWYhTa",
+      "fName": "sumitha",
+      "lName": "L",
+      "dob": "2021-10-31",
+      "username": "sumitha345",
+      "mobile": "8788286589",
+      "role": "physician",
+      "speciality": "pathology",
+      "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 51
+    },
+    {
+      "email": "susmitha@email.com",
+      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
+      "fName": "Susmitha",
+      "lName": "C",
+      "dob": "1996-08-08",
+      "username": "Susmitha1281",
+      "mobile": "8106989754",
+      "role": "admin",
+      "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 38
+    },
+    {
+      "email": "sneha@email.com",
+      "password": "$2a$10$7erkdXW8znmCkXYx.omG7eIIJAVNdtvOMF6nirXLqDKX1jL0UPRnK",
+      "fName": "Snehalatha",
+      "lName": "Reddy",
+      "dob": "2021-11-26",
+      "username": "SnehalathaR",
+      "mobile": "7688986545",
+      "role": "physician",
+      "speciality": "obstetrics_gynecology",
+      "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 50
+    },
+    {
+      "email": "swapna@email.com",
+      "password": "$2a$10$auytsBcGHpMWT85tEZLImugluGGz6x8gZefPF/vEoSA9PEOGrL0ly",
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "username": "SwapnaM",
+      "rpassword": "12345",
+      "mobile": 6458987638,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 48
     },
     {
       "email": "aj@email.com",
@@ -152,7 +208,7 @@
       "mobile": "787698976D",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 34
     },
     {
@@ -165,7 +221,7 @@
       "mobile": "6789468988",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 35
     },
     {
@@ -178,7 +234,7 @@
       "mobile": "8977567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 36
     },
     {
@@ -191,7 +247,7 @@
       "mobile": "8677567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 37
     },
     {
@@ -204,8 +260,22 @@
       "mobile": "8106989754",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 38
+    },
+    {
+      "email": "susmitha1281@email.com",
+      "password": "$2a$10$o2XWS7fS/N5zLhArVPFaFOO3/odRIJmxlpCYB7HRLog6/1ei7y4Cy",
+      "fName": "Susmitha",
+      "lName": "Chinthakindi",
+      "dob": "2021-11-08",
+      "username": "susmitha1281",
+      "mobile": "8106989754",
+      "role": "physician",
+      "speciality": "internal_medicine",
+      "createdDate": "Tue Nov 02 2021 23:29:40 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 55
     },
     {
       "email": "shiva@email.com",
@@ -217,7 +287,7 @@
       "mobile": "7655443329",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
-      "isActive": true,
+      "isActive": false,
       "id": 39
     },
     {
@@ -251,148 +321,19 @@
       "id": 27
     },
     {
-      "email": "sneha@email.com",
-      "password": "$2a$10$7erkdXW8znmCkXYx.omG7eIIJAVNdtvOMF6nirXLqDKX1jL0UPRnK",
-      "fName": "Snehalatha",
-      "lName": "Reddy",
-      "dob": "2021-11-26",
-      "username": "SnehalathaR",
-      "mobile": "7688986545",
-      "role": "physician",
-      "speciality": "obstetrics_gynecology",
-      "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 50
-    },
-    {
-      "email": "sumitha@gmail.com",
-      "password": "$2a$10$OJDAVU7McsRUUH2N6HcwJO5Biye5IquxhT24TcjS8eo5txRqWYhTa",
-      "fName": "sumitha",
-      "lName": "L",
-      "dob": "2021-10-31",
-      "username": "sumitha345",
-      "mobile": "8788286589",
-      "role": "physician",
-      "speciality": "pathology",
-      "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 51
-    },
-    {
-      "email": "mahi@email.com",
-      "password": "$2a$10$h/.F1b/Ta9ayWwVOwRWXSup3jvoLinxnRQxvunazPOfK7OOKotFu6",
-      "fName": "Mahenda",
-      "lName": "Panpatti",
-      "dob": "2021-11-03",
-      "username": "mahi",
-      "mobile": "1234567890",
-      "role": "nurse",
-      "speciality": "",
-      "createdDate": "Tue Nov 02 2021 15:33:10 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 52
-    },
-    {
-      "email": "mahi_1@email.com",
-      "password": "$2a$10$8DTEPAcrIXbHGirpP./xK.pis8TWM1GwTEk8m6SnTdq5ZBBSpD1tC",
-      "fName": "Mahenda",
-      "lName": "Dhoni",
-      "dob": "2021-11-26",
-      "username": "lodha",
-      "mobile": "1234567890",
-      "role": "physician",
-      "speciality": "pediatrics",
-      "createdDate": "Tue Nov 02 2021 15:38:29 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 53
-    },
-    {
-      "email": "mahi_2@email.com",
-      "password": "$2a$10$o3iFHOkwOmqaCzPKxnYHROAqG8.fO.RPj7hPoR7V57sVHAs7TXjaC",
-      "fName": "Mahenda",
-      "lName": "Singh",
-      "dob": "2021-11-04",
-      "username": "mahi_2",
-      "rpassword": "12345",
-      "mobile": 9876543210,
-      "blood_group": "B -ve",
-      "role": "patient",
-      "createdDate": "Tue Nov 02 2021 15:39:32 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 54
-    },
-    {
-      "email": "swapna@email.com",
-      "password": "$2a$10$auytsBcGHpMWT85tEZLImugluGGz6x8gZefPF/vEoSA9PEOGrL0ly",
-      "fName": "Swapna",
-      "lName": "Patil",
+      "email": "mitashi@gmail.com",
+      "password": "$2a$10$gmveacACTC5QM6EvMpaHq.kQG849e.vKXeyAZemor9YCH/sKFiz0O",
+      "fName": "Mitashi",
+      "lName": "thakur",
       "dob": "2021-11-16",
-      "username": "SwapnaM",
+      "username": "mitashi20",
       "rpassword": "12345",
-      "mobile": 6458987638,
-      "blood_group": "B+",
+      "mobile": 6576688787,
+      "blood_group": "o-",
       "role": "patient",
-      "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
+      "createdDate": "Wed Nov 03 2021 17:17:34 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 48
-    },
-    {
-      "email": "sudhir@email.com",
-      "password": "$2a$10$HIggkDi/p3ZsCk4Ze2C8pON6/FlmG8SUNsGrK9xW/iQWKCmgEaDli",
-      "fName": "Sudhir",
-      "lName": "Koganti",
-      "dob": "1992-06-12",
-      "username": "Sudhir K",
-      "mobile": "7655443329",
-      "role": "physician",
-      "speciality": "pathology",
-      "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 32
-    },
-    {
-      "email": "susmitha1281@email.com",
-      "password": "$2a$10$o2XWS7fS/N5zLhArVPFaFOO3/odRIJmxlpCYB7HRLog6/1ei7y4Cy",
-      "fName": "Susmitha",
-      "lName": "Chinthakindi",
-      "dob": "2021-11-08",
-      "username": "susmitha1281",
-      "mobile": "8106989754",
-      "role": "physician",
-      "speciality": "internal_medicine",
-      "createdDate": "Tue Nov 02 2021 23:29:40 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 55
-    },
-    {
-      "email": "vijayac@email.com",
-      "password": "$2a$10$diWwUt/XhifZ44E4zBOBMOr4KvCKmkauLJSIBX./2gWdf8jaRZqei",
-      "fName": "Vijaya",
-      "lName": "C",
-      "dob": "2021-11-17",
-      "username": "VijayaC",
-      "rpassword": "12345",
-      "mobile": 6789468988,
-      "blood_group": "b+",
-      "role": "patient",
-      "createdDate": "Wed Nov 03 2021 10:36:38 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 56
-    },
-    {
-      "email": "nagamma@email.com",
-      "password": "$2a$10$L1xcfJ2RAJFypEm25mxd4.Tw8f8VqnFnz8H95bl78.qX/28Gofndi",
-      "fName": "Nagamma",
-      "lName": "E",
-      "dob": "2021-12-03",
-      "username": "NagammaE",
-      "rpassword": "12345",
-      "mobile": 7865467888,
-      "blood_group": "O+",
-      "role": "patient",
-      "createdDate": "Wed Nov 03 2021 10:57:52 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 57
+      "id": 40
     }
   ],
   "medic_allergy": [
@@ -719,22 +660,168 @@
         }
       ],
       "id": 25
+    },
+    {
+      "userid": 27,
+      "current_medication": [
+        {
+          "medicineName": "neuomarcazol",
+          "dosage": "2",
+          "directionstoconsume": "twice",
+          "frequency": "50 mg",
+          "physicianName": "soujanya",
+          "purpose": "thyroid",
+          "startDate": "2021-11-10",
+          "endDate": "2021-11-16"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "dolo",
+          "strength": "10 mg",
+          "directiontoconsume": "once",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "altrokcen",
+          "strength": "30 mg",
+          "directiontoconsume": "twice"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "skin",
+          "symptomsofAllergy": "itching",
+          "drugAllergy": "No"
+        }
+      ],
+      "id": 52
+    },
+    {
+      "userid": 40,
+      "current_medication": [
+        {
+          "medicineName": "neuomarkazol",
+          "dosage": "2",
+          "directionstoconsume": "twice",
+          "frequency": "100 mg",
+          "physicianName": "soujanya",
+          "purpose": "thyroid",
+          "startDate": "2021-11-17",
+          "endDate": "2021-11-23"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "dolo",
+          "strength": "50 mg",
+          "directiontoconsume": "once",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "altrokcen",
+          "strength": "40 mg",
+          "directiontoconsume": "twice"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "skin",
+          "symptomsofAllergy": "itching",
+          "drugAllergy": "No"
+        }
+      ],
+      "id": 53
+    },
+    {
+      "userid": 27,
+      "current_medication": [
+        {
+          "medicineName": "dolo650",
+          "dosage": "1",
+          "directionstoconsume": "after food",
+          "frequency": "twice",
+          "physicianName": "anasuya",
+          "purpose": "body pain",
+          "startDate": "2021-11-03",
+          "endDate": "2021-11-10"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 54
     }
   ],
   "immunization": [
     {
-      "first_name": "Nishant",
-      "last_name": "Chaubey",
+      "first_name": "neeraj",
+      "last_name": "thakur",
       "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
+      "vaccine_brand": "covaccine",
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-10-31"
+          "vaccine_name": "polio",
+          "vaccine_date": "2021-11-17"
+        },
+        {
+          "vaccine_name": "tetnus",
+          "vaccine_date": "2021-11-16"
         }
       ],
-      "id": 24
+      "id": 27
+    },
+    {
+      "first_name": "Mitashi",
+      "last_name": "thakur",
+      "age_category": "45",
+      "vaccine_brand": "covvacine",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "polio",
+          "vaccine_date": "2021-11-16"
+        }
+      ],
+      "id": 40
+    },
+    {
+      "first_name": "Nishant",
+      "last_name": "Chaubey",
+      "age_category": "45",
+      "vaccine_brand": "sasas",
+      "dose_detail": "1",
+      "general_vaccine": [
+        {
+          "vaccine_name": "asasas",
+          "vaccine_date": "2021-11-05"
+        }
+      ],
+      "id": 1
     }
   ],
   "appointments": [
@@ -790,6 +877,24 @@
       "patientId": 48,
       "status": "approved",
       "id": 4
+    },
+    {
+      "fName": "neeraj",
+      "lName": "thakur",
+      "dob": "2021-11-26",
+      "mobile_no": 7657347543,
+      "doc_id": 27,
+      "doc_name": "Anasuya Koganti",
+      "appointment_title": "fever",
+      "appointment_start_time": "16:40",
+      "appointment_end_time": "17:37",
+      "appointmentDate": "2021-11-17",
+      "appointment_desc": "fever",
+      "createdBy": "neerajthakur",
+      "createdDate": "2021-11-02T11:07:25.633Z",
+      "patientId": 27,
+      "status": "approved",
+      "id": 5
     },
     {
       "fName": "Swapna",
@@ -900,22 +1005,112 @@
       "id": 10
     },
     {
-      "fName": "Nagamma",
-      "lName": "E",
-      "dob": "2021-12-03",
-      "mobile_no": 8799876554,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "headaque",
-      "appointment_start_time": "14:00",
-      "appointment_end_time": "15:00",
+      "fName": "Mitashi",
+      "lName": "thakur",
+      "dob": "2021-11-16",
+      "mobile_no": 57576687878,
+      "doc_id": 27,
+      "doc_name": "Anasuya Koganti",
+      "appointment_title": "Thryroid",
+      "appointment_start_time": "09:46",
+      "appointment_end_time": "23:47",
+      "appointmentDate": "2021-11-24",
+      "appointment_desc": "thyroid checkup",
+      "createdBy": "Mitashithakur",
+      "createdDate": "2021-11-03T12:19:24.593Z",
+      "patientId": 40,
+      "status": "approved",
+      "id": 6
+    },
+    {
+      "fName": "Mitashi",
+      "lName": "thakur",
+      "dob": "2021-11-16",
+      "mobile_no": 75757577854,
+      "doc_id": 27,
+      "doc_name": "Anasuya Koganti",
+      "appointment_title": "thyroid",
+      "appointment_start_time": "10:42",
+      "appointment_end_time": "12:42",
       "appointmentDate": "2021-11-03",
-      "appointment_desc": "Headache",
-      "createdBy": "NagammaE",
-      "createdDate": "2021-11-03T05:29:22.406Z",
-      "patientId": 57,
-      "status": "Pending",
-      "id": 11
+      "appointment_desc": "thyroid checkup",
+      "createdBy": "Mitashithakur",
+      "createdDate": "2021-11-03T15:12:41.366Z",
+      "patientId": 40,
+      "status": "approved",
+      "id": 7
+    }
+  ],
+  "demographics": [
+    {
+      "fName": "neeraj",
+      "lName": "thakur",
+      "dob": "2021-11-26",
+      "gender": "male",
+      "ethnicity": "No",
+      "education": "MCA",
+      "employment": "SE",
+      "address": "Gurgaon",
+      "phone_number": 65768688878,
+      "medical_history": "No",
+      "family_medical_history": "No",
+      "surgeries": "No",
+      "insurance_provider": "No",
+      "userid": 27,
+      "id": 1
+    },
+    {
+      "fName": "Mitashi",
+      "lName": "thakur",
+      "dob": "2021-11-16",
+      "gender": "female",
+      "ethnicity": "No",
+      "education": "No",
+      "employment": "SE",
+      "address": "Haryana",
+      "phone_number": 7547578785,
+      "medical_history": "No",
+      "family_medical_history": "No",
+      "surgeries": "No",
+      "insurance_provider": "No",
+      "userid": 40,
+      "id": 2
+    }
+  ],
+  "patientvitals": [
+    {
+      "height": "5 Feet 4 Inch.",
+      "weight": "77 kg",
+      "blood_pressure": "88",
+      "temperature": "98.5",
+      "pulse": "77",
+      "respiration": "78",
+      "oxigen_saturation": "92",
+      "physicianId": 27,
+      "patientId": "40",
+      "id": 1
+    }
+  ],
+  "billing": [
+    {
+      "billingId": "",
+      "patientId": "",
+      "physicianId": "",
+      "paymentMode": "",
+      "billAmount": "",
+      "date": ""
+    }
+  ],
+  "lab_report": [
+    {
+      "id": "",
+      "doc_id": "",
+      "patientId": "",
+      "blood_test": "",
+      "urine_test": "",
+      "scannings": "",
+      "xrays": "",
+      "others": ""
     }
   ],
   "physician_speciality": [
@@ -998,76 +1193,6 @@
     {
       "name": "Urology",
       "value": "urology"
-    }
-  ],
-  "demographics": [
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "NA",
-      "education": "MCA",
-      "employment": "CitiusTech",
-      "address": "Bihar",
-      "phone_number": 1234567890,
-      "medical_history": "NA",
-      "family_medical_history": "NA",
-      "surgeries": "NO",
-      "insurance_provider": "NO",
-      "userid": 24,
-      "id": 1
-    }
-  ],
-  "patientvitals": [
-    {
-      "height": "5 Feet 4 Inch.",
-      "weight": "Ajinkya",
-      "blood_pressure": "Ajinkya",
-      "temperature": "Ajinkya",
-      "pulse": "Ajinkya",
-      "respiration": "Ajinkya",
-      "oxigen_saturation": "Ajinkya",
-      "physicianId": 32,
-      "patientId": "48",
-      "id": 1
-    }
-  ],
-  "patientdietplan": [
-    {
-      "earlymorning": "Tea,Coffee",
-      "breakfast": "Poha,Sandwitch",
-      "mid_morning": "Toaster,Taaster",
-      "lunch": "Rice Daal",
-      "evening": "Tea",
-      "dinner": "qqq",
-      "post_dinner_activity": "Walking",
-      "bedtime": "Hot Milk with Haldi",
-      "physicianId": 32,
-      "patientId": "48",
-      "id": 1
-    }
-  ],
-  "billing": [
-    {
-      "billingId": "",
-      "patientId": "",
-      "physicianId": "",
-      "paymentMode": "",
-      "billAmount": "",
-      "date": ""
-    }
-  ],
-  "lab_report": [
-    {
-      "id": "",
-      "doc_id": "",
-      "patientId": "",
-      "blood_test": "",
-      "urine_test": "",
-      "scannings": "",
-      "xrays": "",
-      "others": ""
     }
   ],
   "allergies": [
@@ -10961,5 +11086,45 @@
       "code ": "B453",
       "description": "Osseous cryptococcosis"
     }
-  ]
+  ],
+  "order": [
+    {
+      "id": "",
+      "patient_id": "",
+      "patient_vitals": "",
+      "procedure_code": "",
+      "diagnosis_code": "",
+      "lab_report": "",
+      "radiology_report": "",
+      "medication": ""
+    }
+  ],
+  "payment_details": [
+    {
+      "id": "",
+      "patient_id": "",
+      "patient_bill": "",
+      "payment_method": "",
+      "payment_history": "",
+      "lab_report": "",
+      "radiology_report": "",
+      "medication": ""
+    }
+  ],
+  "patientdietplan": [
+    {
+      "earlymorning": "yoga, walking/skipping",
+      "breakfast": "Dosa/Chappathi",
+      "mid_morning": "apple/gua/orange-1 cup",
+      "lunch": "Roti with lots of veggies",
+      "evening": "buscuits/tea",
+      "dinner": "Rice/Chapathi with less oil",
+      "post_dinner_activity": "try to walk for a while",
+      "bedtime": "skim milk 1-glass",
+      "physicianId": 12,
+      "id": 1
+    }
+  ],
+  "patient_procedures":[
+]
 }

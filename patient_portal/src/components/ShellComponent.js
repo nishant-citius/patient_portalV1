@@ -9,6 +9,7 @@ import AdminDashboard from "../components/admin/AdminDashboard";
 import Patient_dashboard from "../components/patient/Patient_dashboard";
 import Physician_dashboard from "../components/physician/Physician_dashboard";
 import Demographics from "../components/patient/Demographics";
+import PatientVitals from "../components/patient/PatientVitals";
 import PatientInactiveError from "../components/patient/PatientInactiveError";
 
 import Immunization from "../components/patient/Immunization";
@@ -39,6 +40,7 @@ import PhysicianAppointment from "./physician/PhysicianAppointment";
 import Appointmentstoday from "./physician/Appointmentstoday";
 import AttendAppointment from "./physician/AttendAppointment";
 import AllergyDetails from "./admin/AllergyDetails";
+import AddAllergy from "./admin/AddAllergy";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -116,6 +118,9 @@ function ShellComponent(props) {
         <Route path={"/allergies"}>
           <AllergyDetails flashNotification={showSnacksBar} />
         </Route>
+        <Route path={"/addallergy"}>
+          <AddAllergy flashNotification={showSnacksBar} />
+        </Route>
         <Route path={"/userdetails/:id"}>
           <UserDetails flashNotification={showSnacksBar} />
         </Route>
@@ -157,6 +162,7 @@ function ShellComponent(props) {
         <Route path="/immunization" component={Immunization}>
           <Immunization flashNotification={showSnacksBar} />
         </Route>
+        <Route path="/patientvitals" component={PatientVitals} />
         <Route path="/vitals" component={Vitals} />
         <Route path="/dietplan" component={DietPlan} />
         <Route path="/myprofile" component={MyProfile} />

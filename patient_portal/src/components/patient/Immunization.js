@@ -11,7 +11,7 @@ const Immunization = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
   useEffect(() => {
     if (props.isLoggedIn) {
-      if (props.immunizationDetails && props.immunizationDetails > 0) {
+      if (props.immunizationDetails) {
         setIsAvailable(true);
       }
     }

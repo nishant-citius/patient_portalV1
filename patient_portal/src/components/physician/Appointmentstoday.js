@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
-import Appointments from "components/admin/Appointments";
 
 function Appointmentstoday(props) {
   const [appointments, setAppointments] = useState([]);
