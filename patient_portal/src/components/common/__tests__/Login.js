@@ -1,5 +1,6 @@
 //import { common } from "@mui/material/colors";
 import { shallow, mount } from "enzyme";
+import renderer from "react-test-renderer";
 import Login from "../Login";
 import { Provider } from "react-redux";
 //import LoginReducer from "../../../redux/reducers/loginReducer";
@@ -19,26 +20,38 @@ describe("Login Component", () => {
     );
   });
 
-  it("Should capture email correctly onChange and change the props accordingly", function () {
-    const wrapper = mount(jsx);
-    const input = wrapper.find('input[type="text"]').at(2);
-    // input.simulate('change', {target: {email: 'mail@hotmail.com'}}); -- this does not work
-
-    input.instance('input[type="text"]').value = "mail@hotmail.com";
-    input.simulate("change");
-    expect(wrapper.find('input[type="text"]').at(2).props().value).toEqual(
-      "mail@hotmail.com"
-    );
-    // Alternatively, can check state
-    // expect(component.state().email).toEqual('mail@hotmail.com');
-  });
-  // test("email check", () => {
-  //   const wrapper = mount(jsx);
-  //   wrapper.find('input[type="text"]').simulate("change", {
-  //     target: {
-  //       value: "nc@email.com",
-  //     },
-  //   });
-  //   expect(wrapper.state('input[type="text"]')).toEqual("nc@email.com");
+  // it("should render properly", () => {
+  //   const tree = renderer.create(jsx).toJSON();
+  //   expect(tree).toMatchSnapshot();
   // });
+
+  it("should render an email input tag", () => {
+    const wrapper = shallow(jsx);
+    expect(wrapper.find("Field[type='email']").exists()).toBe(true);
+  });
+
+  // describe('Login Component', () => {
+
+  // it("should render a password input tag", () => {
+  //   const wrapper = shallow(jsx);
+  //   expect(wrapper.find('Field[type="password"]').exists()).toBe(true);
+  // });
+
+  //expect(wrapper.find(CustomerAdd).dive().state("addNewOnSubmit")).toEqual(true);
+  // test("email check", () => {
+  //   const wrapper = shallow(jsx);
+
+  //   wrapper.find('input[type="text"]');
+  //   wrapper.simulate("change", {
+  //     target: { name: "email", value: "nc@email.com" },
+  //   });
+
+  // wrapper.find('input[type="text"]').simulate("change", {
+  //   target: {
+  //     value: "nc@email.com",
+  //   },
+  // });
+  // expect(wrapper.state('input[type="text"]')).toEqual("nc@email.com");
+  //     expect(wrapper.find(Login).dive().state("email")).toEqual("nc@email.com");
+  //   });
 });
