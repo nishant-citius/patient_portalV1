@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterUser Component should render properly 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded"
+  style={
+    Object {
+      "height": "",
+      "margin": "60px auto",
+      "marginTop": "110px",
+      "padding": 20,
+      "width": 400,
+    }
+  }
+>
+  <div
+    align="center"
+    className="MuiGrid-root"
+  >
+    <div
+      className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault"
+      style={
+        Object {
+          "backgroundColor": "#1bbd7e",
+        }
+      }
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+        />
+      </svg>
+    </div>
+    <br />
+    <h4>
+      Registration
+    </h4>
+    <br />
+  </div>
+  <form
+    action="#"
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="fName"
+        id="fName-label"
+      >
+        First Name
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="fName-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="fName"
+          name="fName"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter first name"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="fName-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="lName"
+        id="lName-label"
+      >
+        Last Name
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="lName-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="lName"
+          name="lName"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter last name"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="lName-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="dob"
+        id="dob-label"
+      >
+        D.O.B
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="dob-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="dob"
+          name="dob"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="date"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="dob-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="username"
+        id="username-label"
+      >
+        UserName
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="username-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="username"
+          name="username"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter username"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="username-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-filled Mui-disabled Mui-disabled MuiFormLabel-filled"
+        data-shrink={true}
+        htmlFor="role"
+        id="role-label"
+      >
+        Role
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline Mui-disabled Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input Mui-disabled Mui-disabled"
+          defaultValue="Patient"
+          disabled={true}
+          id="role"
+          name="role"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          type="text"
+          value="patient"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="mobile"
+        id="mobile-label"
+      >
+        Mobile
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="mobile-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="mobile"
+          name="mobile"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter mobile no"
+          required={false}
+          type="number"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="mobile-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="blood_group"
+        id="blood_group-label"
+      >
+        Blood Group
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="blood_group-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="blood_group"
+          name="blood_group"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Enter Blood Group"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="blood_group-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="email"
+        id="email-label"
+      >
+        Email
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="email-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="email"
+          name="email"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter email"
+          required={false}
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="email-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="password"
+        id="password-label"
+      >
+        Password
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="password-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="password"
+          name="password"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter password"
+          required={false}
+          type="password"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="password-helper-text"
+      />
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+        data-shrink={false}
+        htmlFor="rpassword"
+        id="rpassword-label"
+      >
+        Confirm password
+      </label>
+      <div
+        className="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-fullWidth MuiInputBase-formControl"
+        onClick={[Function]}
+      >
+        <input
+          aria-describedby="rpassword-helper-text"
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiFilledInput-input"
+          disabled={false}
+          id="rpassword"
+          name="rpassword"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="enter rpassword"
+          required={false}
+          type="password"
+          value=""
+        />
+      </div>
+      <p
+        className="MuiFormHelperText-root MuiFormHelperText-contained"
+        id="rpassword-helper-text"
+      />
+    </div>
+    <div>
+      <button
+        className="btn btn-primary mt-2 center"
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+  <h4
+    className="text-danger"
+  />
+</div>
+`;
