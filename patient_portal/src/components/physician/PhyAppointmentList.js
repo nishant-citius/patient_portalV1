@@ -101,7 +101,14 @@ export class AppointmentList extends React.Component {
             Appointment List
           </h4>
           <table className="table table-bordered shadow mt-4">
-            <thead style={{ backgroundColor: "#3f51b5", color: "#fff" }}>
+            <thead
+              style={{
+                backgroundColor: "#3f51b5",
+                color: "#fff",
+                fontSize: "15px",
+                fontWeight: "200",
+              }}
+            >
               <tr>
                 <th scope="col">Sr no </th>
                 <th scope="col">Patient Name</th>

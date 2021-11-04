@@ -35,18 +35,21 @@ const useStyles = makeStyles((theme) => ({
     // position: "sticky",
     // top: 0,
 
-    height: "85vh",
-    borderRadius: "10px",
-    marginLeft: "10px",
+    height: "100%",
+    borderRadius: "5px",
+    marginLeft: "5px",
     backgroundColor: "#3f51b5",
-    position: "sticky",
     position: "fixed",
     paddingTop: theme.spacing(4),
-    top: "80px",
-    width: "15%",
-    bottom: "10px",
-  },
+    top: "75px",
 
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "210px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "60px",
+    },
+  },
   item: {
     marginTop: "18px",
     display: "flex",
@@ -60,17 +63,18 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     marginRight: theme.spacing(1),
     [theme.breakpoints.up("sm")]: {
-      fontSize: "14px",
+      fontSize: "16px",
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "20px",
     },
   },
   text: {
-    fontSize: "14px",
+    fontSize: "13px",
     marginBottom: "0",
     color: "#fff",
-    fontWeight: "bold",
+    fontFamily: "sans-serif",
+    fontWeight: "normal",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -207,7 +211,7 @@ function SideNav(props) {
             <div className={classes.item}>
               <Link to="/medic_allergy">
                 <Icon icon="fa:wpforms" className={classes.icon} />
-                <span className={classes.text}>Medication and Allergies</span>
+                <span className={classes.text}>Medication & Allergies</span>
               </Link>
             </div>
             <div className={classes.item}>

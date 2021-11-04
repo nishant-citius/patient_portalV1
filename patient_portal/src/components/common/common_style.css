@@ -21,6 +21,7 @@ i.icon {
 }
 .top_mt_100{
   margin-top: 80px;
+  padding-left: 20px;
 }
 .MuiFormControl-marginNormal {
   margin-top: 0px !important;
@@ -69,4 +70,11 @@ i.icon {
   padding-top: 1rem;
   color: blue;
   font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .top_mt_100{
+    margin-top: 80px;
+    padding-left: 0px;
+  }
 }
