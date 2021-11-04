@@ -36,15 +36,14 @@ const useStyles = makeStyles((theme) => ({
     // top: 0,
 
     height: "100%",
-    borderRadius: "10px",
-    marginLeft: "10px",
+    borderRadius: "5px",
     backgroundColor: "#3f51b5",
     position: "fixed",
     paddingTop: theme.spacing(4),
     top: "80px",
 
     [theme.breakpoints.up("sm")]: {
-      maxWidth: "230px",
+      maxWidth: "210px",
     },
     [theme.breakpoints.down("sm")]: {
       maxWidth: "60px",
