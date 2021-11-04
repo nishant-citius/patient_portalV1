@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "10px",
     backgroundColor: "#3f51b5",
     position: "sticky",
-    position: "fixed",
     paddingTop: theme.spacing(4),
     top: "80px",
     maxWidth: "230px",
