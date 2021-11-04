@@ -27,24 +27,51 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    // borderRadius: "10px",
-    height: "100vh",
-    // color: "black",
-    paddingTop: theme.spacing(10),
-    backgroundColor: "#3f51b5",
-    position: "sticky",
-    top: 0,
-
-    // height: "85vh",
-    // borderRadius: "10px",
-    // marginLeft: "10px",
+    // // borderRadius: "10px",
+    // height: "100vh",
+    // // color: "black",
+    // paddingTop: theme.spacing(10),
     // backgroundColor: "#3f51b5",
     // position: "sticky",
-    // position: "fixed",
-    // paddingTop: theme.spacing(4),
-    // top: "80px",
+    // top: 0,
+
+    height: "auto",
+    borderRadius: "10px",
+    marginLeft: "10px",
+    backgroundColor: "#3f51b5",
+    position: "sticky",
+    position: "fixed",
+    paddingTop: theme.spacing(4),
+    top: "80px",
     // width: "230px",
-    // bottom: "10px",
+    bottom: "10px",
+  },
+  icon: {
+    color: "#fff",
+
+    marginRight: theme.spacing(1),
+
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "18px",
+    },
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+    },
+  },
+
+  text: {
+    fontSize: "14px",
+
+    marginBottom: "0",
+
+    color: "#fff",
+
+    fontWeight: "bold",
+
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 
   item: {
