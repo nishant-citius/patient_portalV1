@@ -1,10 +1,12 @@
 import { React, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import * as actions from "../../../redux/actions/userActionCreater";
 import { adminService } from "../../../services/register_user_service";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 const AddUsers = (props) => {
   const initialValues = {
@@ -79,6 +81,11 @@ const AddUsers = (props) => {
 
   return (
     <div className="container py-4 border-secondary  mt-5">
+      <Link className="btn btn-warning" to="/admin">
+        <BsFillArrowLeftSquareFill />
+        <span className="m-2">Back</span>
+      </Link>
+      <h3 className="text-center fw-bold ">Add New User</h3>
       <div className="row justify-content-center">
         <div className="col-8">
           <Formik

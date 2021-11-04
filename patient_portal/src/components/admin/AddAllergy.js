@@ -64,9 +64,7 @@ const AddAllergy = (props) => {
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>
       </Link>
-      <h3 className="text-success text-center fw-bold ">
-        Add New Allergy Data
-      </h3>
+      <h3 className="text-center fw-bold ">Add New Allergy Data</h3>
       <div className="row justify-content-center">
         <div className="col-8">
           <Formik

@@ -39,11 +39,11 @@ function UserList(props) {
 
   return (
     <>
-      <div className="container mt-5">
+      <div className="container">
         <Link to={`/addusers`} className="btn btn-primary float-end mr-4">
           Add User
         </Link>
-        <h1 className="text-success text-center fw-bold ">User List</h1>
+        <h4 className="text-center fw-bold ">User List</h4>
         <table className="table table-bordered shadow mt-4">
           <thead className="table-dark">
             <tr>

@@ -48,7 +48,6 @@ const Appointments = (props) => {
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
 
-
   useEffect(() => {
     if (props.isLoggedIn) {
       userAppointments(props.currentUser.id);
@@ -71,10 +70,10 @@ const Appointments = (props) => {
   };
   return (
     <>
-      <Link className="btn btn-warning" to="/admin">
+      {/* <Link className="btn btn-warning" to="/admin">
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>
-      </Link>
+      </Link> */}
 
       {/* <Calendar /> */}
       <Box sx={{ width: "100%" }}>

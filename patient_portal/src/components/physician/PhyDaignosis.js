@@ -2,34 +2,35 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { Formik, Form, Field } from "formik";
-import { procedureServices } from "services/procedures_service";
+import { diagnosisService } from "services/diagnosisService";
 import { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
-function Proceduers(props) {
-  const [procedures, Setprocedures] = useState([]);
-  const [procedureCode, setProcedureCode] = useState("");
+function Diagnosis(props) {
+  const [diagnosis, SetDiagnosis] = useState([]);
+  const [diagnosisCode, setDiagnosisCode] = useState("");
   const [patientId, setPatientId] = useState(0);
-  const [procedureDesc, setProcedureDesc] = useState(0);
+  const [diagnosisDesc, setDiagnosisDesc] = useState(0);
 
   const searchItems = (e, _value) => {
     if (_value !== "") {
-      const filteredData = procedures.filter((item) => {
-        if (item.desc === _value) {
+      const filteredData = diagnosis.filter((item) => {
+        if (item.description === _value) {
           return item;
         }
-      });
+      })
+     
       if (filteredData.length) {
-        setProcedureCode(filteredData[0].code);
-        setProcedureDesc(filteredData[0].desc);
+        setDiagnosisCode(filteredData[0].code);
+        setDiagnosisDesc(filteredData[0].description);
       }
     }
   };
 
-  const getAllProcedure = () => {
-    procedureServices.getAllProcedure().then(
+  const getDiagnosis = () => {
+    diagnosisService.getDiagnosis().then(
       (response) => {
-        Setprocedures(response.data);
+        SetDiagnosis(response.data);
       },
       (error) => {
         return;
@@ -38,7 +39,7 @@ function Proceduers(props) {
   };
 
   useEffect(() => {
-    getAllProcedure();
+    getDiagnosis();
     setPatientId(props.patientId.patintId);
   }, [patientId]);
 
@@ -46,17 +47,19 @@ function Proceduers(props) {
     let obj = {
       doc_id: props.currentUser.id,
       patientId: patientId,
-      desc: procedureDesc,
-      code: procedureCode,
+      description: diagnosisDesc,
+      code: diagnosisCode,
     };
-    addPatientProcedure(obj);
+
+    console.log(obj);
+     addPatientDiagnosis(obj);
   }
 
-  function addPatientProcedure(_procedure) {
-    procedureServices.addPatientProcedure(_procedure).then(
+  function addPatientDiagnosis(_diagnosis) {   
+    diagnosisService.addPatientDiagnosis(_diagnosis).then(
       (response) => {
         if (response.status === 200) {
-          alert("Patient Procedure Successfully...");
+          alert("Patient dignosis Successfully...");
         }
       },
       (error) => {}
@@ -76,10 +79,10 @@ function Proceduers(props) {
                 <Autocomplete
                   disablePortal
                   id="combo-box-demo"
-                  options={procedures.map((option) => option.desc)}
-                  // sx={{ width: 800 }}
+                  options={diagnosis.map((option) => option.description)}
+                  //sx={{ width: 800 }}
                   renderInput={(params) => (
-                    <TextField {...params} label="procedures" />
+                    <TextField {...params} label="diagnosis" />
                   )}
                   onChange={(e, v) => searchItems(e, v)}
                 />
@@ -87,12 +90,12 @@ function Proceduers(props) {
                   <div className="form-group mt-2">
                     <div className="row">
                       <div className="col-4">
-                        <label htmlFor="code">Procedures code</label>
+                        <label htmlFor="code">diagnosis code</label>
                         <Field
                           className="form-control"
                           name="query"
                           placeholder="Search......"
-                          value={procedureCode}
+                          value={diagnosisCode}
                         />
                       </div>
                     </div>
@@ -126,4 +129,4 @@ const mapStateToProps = (state) => {
 //  };
 
 let hof = connect(mapStateToProps, null);
-export default hof(Proceduers);
+export default hof(Diagnosis);
