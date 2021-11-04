@@ -106,10 +106,8 @@ export class PatientList extends React.Component {
             </Tabs>
           </Box>
           <TabPanel value={this.state.value} index={0}>
-            <div className="container mt-5">
-              <h1 className="text-success text-center fw-bold ">
-                Patient List
-              </h1>
+            <div className="container">
+              <h4 className="text-center fw-bold ">Patient List</h4>
               <table className="table table-bordered shadow mt-4">
                 <thead className="table-dark">
                   <tr>
@@ -169,10 +167,8 @@ export class PatientList extends React.Component {
             </div>
           </TabPanel>
           <TabPanel value={this.state.value} index={1}>
-            <div className="container mt-5">
-              <h1 className="text-success text-center fw-bold ">
-                Demographics List
-              </h1>
+            <div className="container">
+              <h4 className="text-center fw-bold ">Demographics List</h4>
               <table className="table table-bordered shadow mt-4">
                 <thead className="table-dark">
                   <tr>

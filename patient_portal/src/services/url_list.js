@@ -39,6 +39,9 @@ export const GET_PATIENT_VITALS =
 export const GET_PATIENT_DIETPLAN =
   "http://localhost:9999/patientdietplan?userid=";
 
-export const LAB_REPORTS ="http://localhost:9999/labreports";
-export const GET_LAB_REPORTS="http://localhost:9999/labreports?patientId=";
-export const GET_ALL_PROCEDURES="http://localhost:9999/procedures";
+export const LAB_REPORTS = "http://localhost:9999/labreports";
+export const GET_LAB_REPORTS = "http://localhost:9999/labreports?patientId=";
+export const GET_ALL_PROCEDURES = "http://localhost:9999/procedures";
+
+export const APPROVED_APPOINTMETS =
+  "http://localhost:9999/appointments?status=approved";

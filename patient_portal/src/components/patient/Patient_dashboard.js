@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import {
   Container,
@@ -9,6 +9,13 @@ import {
   Typography,
 } from "mui";
 
+//  useEffect(() => {
+//    if (props.isLoggedIn) {
+//      if (props.mediAllergyDetails) {
+//        setIsAvailable(true);
+//      }
+//    }
+//  }, []);
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     background: "#fff",
@@ -23,6 +30,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Patient_dashboard = (props) => {
+  const [isImmunization, setIsImmunization] = useState(false);
+  const [mediAllergy, setmediAllergy] = useState(false);
+  const [pVitals, setpVitals] = useState(false);
+  console.log("Nishant", props.patientvitalsDetails);
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (props.immunizationDetails) {
+        setIsImmunization(true);
+      }
+      if (props.mediAllergyDetails) {
+        setmediAllergy(true);
+      }
+      if (props.patientvitalsDetails.length > 0) {
+        setpVitals(true);
+      }
+    }
+  }, []);
   const classes = useStyles();
   return (
     <>
@@ -43,7 +67,7 @@ const Patient_dashboard = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {props.patientvitalsDetails ? (
+                    {pVitals ? (
                       <tr>
                         <td>{props.patientvitalsDetails[0].height}</td>
                         <td>{props.patientvitalsDetails[0].weight}</td>
@@ -78,7 +102,7 @@ const Patient_dashboard = (props) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {props.mediAllergyDetails ? (
+                      {mediAllergy ? (
                         props.mediAllergyDetails.current_medication.map(
                           function (item, index) {
                             return (
@@ -124,7 +148,7 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {props.immunizationDetails ? (
+                        {isImmunization ? (
                           <tr>
                             <td>{props.immunizationDetails.age_category}</td>
                             <td>{props.immunizationDetails.vaccine_brand}</td>
@@ -160,7 +184,7 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {props.mediAllergyDetails ? (
+                        {mediAllergy ? (
                           props.mediAllergyDetails.past_medication.map(
                             function (item, index) {
                               return (
