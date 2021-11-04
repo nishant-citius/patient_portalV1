@@ -35,15 +35,20 @@ const useStyles = makeStyles((theme) => ({
     // position: "sticky",
     // top: 0,
 
-    height: "auto",
+    height: "100%",
     borderRadius: "10px",
     marginLeft: "10px",
     backgroundColor: "#3f51b5",
-    position: "sticky",
+    position: "fixed",
     paddingTop: theme.spacing(4),
     top: "80px",
-    maxWidth: "230px",
-    bottom: "10px",
+
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "230px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "60px",
+    },
   },
   item: {
     marginTop: "18px",
