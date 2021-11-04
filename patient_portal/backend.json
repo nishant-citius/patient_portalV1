@@ -802,6 +802,67 @@
         }
       ],
       "id": 54
+    },
+    {
+      "userid": 1,
+      "current_medication": [
+        {
+          "medicineName": "ni",
+          "dosage": "ni",
+          "directionstoconsume": "ni",
+          "frequency": "ni",
+          "physicianName": "ni",
+          "purpose": "ni",
+          "startDate": "",
+          "endDate": ""
+        },
+        {
+          "medicineName": "ni",
+          "dosage": "ni",
+          "directionstoconsume": "ni",
+          "frequency": "ni",
+          "physicianName": "ni",
+          "purpose": "ni"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "ni",
+          "strength": "ni",
+          "directiontoconsume": "ni",
+          "socialDrugs": ""
+        },
+        {
+          "otcDrugName": "ni",
+          "strength": "ni",
+          "directiontoconsume": "ni"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "ni",
+          "strength": "ni",
+          "directiontoconsume": "i"
+        },
+        {
+          "pastdrugName": "ni",
+          "strength": "ni",
+          "directiontoconsume": "ni"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "ni",
+          "symptomsofAllergy": "ni",
+          "drugAllergy": "nin"
+        },
+        {
+          "allergyName": "ni",
+          "symptomsofAllergy": "ni",
+          "drugAllergy": "ni"
+        }
+      ],
+      "id": 55
     }
   ],
   "immunization": [
@@ -1139,6 +1200,23 @@
       "insurance_provider": "No",
       "userid": 40,
       "id": 2
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "nj",
+      "education": "njn",
+      "employment": "jn",
+      "address": "jnj",
+      "phone_number": 1234567890,
+      "medical_history": "njnj",
+      "family_medical_history": "njnj",
+      "surgeries": "nj",
+      "insurance_provider": "jn",
+      "userid": 1,
+      "id": 3
     }
   ],
   "patientvitals": [

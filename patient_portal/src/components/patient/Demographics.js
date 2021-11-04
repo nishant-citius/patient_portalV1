@@ -94,6 +94,7 @@ const Demographics = (props) => {
       message: "Demographics added...",
       type: "success",
     });
+    props.getdemographics();
     history.push("/immunization");
   };
 
@@ -324,7 +325,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     demographics: (newuser) =>
       dispatch(actionCreator.AddDemographicsAsync(newuser)),
-    // getdemographics: (userId) => dispatch(actionCreator.GetPatientDemographics(userId))
+    getdemographics: (userId) =>
+      dispatch(actionCreator.GetPatientDemographics(userId)),
   };
 };
 
