@@ -348,6 +348,20 @@
       "createdDate": "Thu Nov 04 2021 01:03:24 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 56
+    },
+    {
+      "email": "sudhir@email.com",
+      "password": "$2a$10$eWTZjI4PMxgsin.6C2mVQOPDXTCVFhXmtfYe9STCO8EGQHTTFwALW",
+      "fName": "Sudhir",
+      "lName": "Koganti",
+      "dob": "2007-10-23",
+      "username": "Sudhir K",
+      "mobile": "6789468988",
+      "role": "physician",
+      "speciality": "",
+      "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
+      "isActive": false,
+      "id": 32
     }
   ],
   "medic_allergy": [
@@ -884,7 +898,7 @@
       "appointment_title": "Swapna Patil - Appointment",
       "appointment_start_time": "12:15",
       "appointment_end_time": "13:15",
-      "appointmentDate": "2021-11-02",
+      "appointmentDate": "2021-11-04",
       "appointment_desc": "Swapna Patil - Appointment.",
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",

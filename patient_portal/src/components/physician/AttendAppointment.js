@@ -92,7 +92,8 @@ const AttendAppointment = (props) => {
           <Tabs
             value={value}
             onChange={handleChange}
-            aria-label="basic tabs example"
+            textColor="secondary"
+            indicatorColor="secondary"
           >
             <Tab label="Record Patient Vital" {...a11yProps(0)} />
             <Tab label="Immunization" {...a11yProps(1)} />
@@ -115,7 +116,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <PhyMedicationAllergies patientId={patientId}/>
+          <PhyMedicationAllergies patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={3}>
