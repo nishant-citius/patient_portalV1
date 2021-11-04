@@ -30,6 +30,7 @@ import { GetDietPlanReducer } from "./reducers/GetDietPlanReducer";
 import { UpdateImmunizationReducer } from "./reducers/UpdateImmunizationReducer";
 import { PatientMedicationAllergyReducer } from "./reducers/PatientMedicationAllergyReducer";
 import { GetAllDemographicsReducer } from "./reducers/userreducers/GetAllDemographicsReducer";
+import { ApprovedAppointmentsReducer } from "./reducers/userreducers/ApprovedAppointmentsReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -53,6 +54,7 @@ let rootReducer = combineReducers({
   userDetails: UserDetailsReducer,
   updateprofile: updateprofilepicreducer,
   inactiveUsers: InactiveUsersReducer,
+  approvedAppointments: ApprovedAppointmentsReducer,
   patientDemographics: PatientDemographicsReducer,
   patientImmunization: PatientImmunizationReducer,
   specilizedPhysicians: SpecialityPhysicianReducer,

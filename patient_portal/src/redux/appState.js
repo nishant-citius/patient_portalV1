@@ -17,13 +17,15 @@ let appState = {
   userDetails: {},
   profileImage: "",
   inactiveUsers: [],
+  approvedAppointments: [],
   patientDemographics: {},
   patientImmunization: {},
   specialisedPhysicians: [],
   appointmentsDetails: [],
   inactiveUserCount: 0,
+  approvedAppointmentCount: 0,
   patientMedicationAllergy: [],
-  labReports:[]
+  labReports: [],
 };
 
 export default appState;

@@ -17,12 +17,11 @@ import { BsFillTrashFill } from "react-icons/bs";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: "50px",
     height: "100vh",
     width: "80vw",
   },
   tablehead: {
-    background: "#d2d9ff",
+    background: "#b7c1f7",
   },
 }));
 
@@ -76,14 +75,12 @@ const AllergyDetails = (props) => {
 
   return (
     <>
-      <div style={{ margin: "10px" }}>
-        <Link to={`/addallergy`} className="btn btn-primary float-end">
-          Add New Allergy
-        </Link>
-      </div>
       <Container className={classes.root}>
-        <h3 className="text-center fw-bold ">Allergy List</h3>
-        <TableContainer component={Paper}>
+        <Link to={`/addallergy`} className="btn btn-primary float-end">
+          Add Allergy
+        </Link>
+        <h4 className="text-center fw-bold ">Allergy List</h4>
+        <TableContainer component={Paper} style={{ marginTop: "20px" }}>
           <Table>
             <TableHead className={classes.tablehead}>
               <TableRow>

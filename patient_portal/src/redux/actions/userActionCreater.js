@@ -370,6 +370,29 @@ export function GetInactiveUsers() {
   };
 }
 
+export function GetApprovedAppointment() {
+  let payload = {
+    approvedAppointments: [],
+    approvedAppointmentCount: 0,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.APPROVED_APPOINTMETS).then(
+      (response) => {
+        payload.approvedAppointments = response.data;
+        payload.approvedAppointmentCount = response.data.length;
+        dispatch({ type: actions.GET_APPROVED_APPOINTMENT, payload: payload });
+      },
+      (error) => {
+        payload.approvedAppointments = [];
+        payload.approvedAppointmentCount = 0;
+        dispatch({ type: actions.GET_APPROVED_APPOINTMENT, payload: payload });
+      }
+    );
+  };
+}
+
 export function PhysiciansBySpeiciality(speciality) {
   let payload = {
     globalmessage: "",
