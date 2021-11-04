@@ -1,8 +1,6 @@
-import { React, useEffect, useState } from "react";
-import { useHistory } from "react-router";
+import { React } from "react";
 import "./admin.css";
 import { connect } from "react-redux";
-import * as actionCreator from "../../redux/actions/userActionCreater";
 import {
   Container,
   Card,
@@ -46,14 +44,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AdminDashboard = (props) => {
-  const history = useHistory();
   const classes = useStyles();
-
-  const [doctors, setDoctors] = useState([]);
-
-  useEffect(() => {
-    setDoctors(randomDoctors());
-  }, [0]);
 
   const data = {
     labels: [
@@ -128,16 +119,6 @@ const AdminDashboard = (props) => {
     },
   ];
 
-  const randomDoctors = () => {
-    let n = 5,
-      array = Array.from({ length: 4 }, (v, k) => k * 1),
-      shuffled = array.sort(function () {
-        return 0.5 - Math.random();
-      }),
-      selected = shuffled.slice(0, n);
-    return selected.map((_val) => props.physicians[_val]);
-  };
-
   return (
     <>
       {/* Top 3 cards container */}
@@ -195,21 +176,25 @@ const AdminDashboard = (props) => {
             <Card>
               <CardContent>
                 <ImageList sx={{ width: 300, height: 450 }}>
-                  {doctors.map((item, ind) => (
-                    <ImageListItem key={itemData[ind].img}>
-                      <img
-                        src={`${itemData[ind].img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${itemData[ind].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={itemData[ind].title}
-                        loading="lazy"
-                      />
-                      <ImageListItemBar
-                        className={classes.imagelistbar}
-                        title={`${item.fName} ${item.lName}`}
-                        subtitle={item.speciality}
-                      />
-                    </ImageListItem>
-                  ))}
+                  {props.physicians.map((item, ind) =>
+                    ind < 4 ? (
+                      <ImageListItem key={itemData[ind].img}>
+                        <img
+                          src={`${itemData[ind].img}?w=248&fit=crop&auto=format`}
+                          srcSet={`${itemData[ind].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                          alt={itemData[ind].title}
+                          loading="lazy"
+                        />
+                        <ImageListItemBar
+                          className={classes.imagelistbar}
+                          title={`${item.fName} ${item.lName}`}
+                          subtitle={item.speciality}
+                        />
+                      </ImageListItem>
+                    ) : (
+                      ""
+                    )
+                  )}
                 </ImageList>
               </CardContent>
             </Card>
