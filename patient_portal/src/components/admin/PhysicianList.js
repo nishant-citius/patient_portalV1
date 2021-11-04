@@ -9,6 +9,19 @@ import {
   BsCheckCircleFill,
   BsFillXCircleFill,
 } from "react-icons/bs";
+import "./admin.css";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -27,8 +40,25 @@ const mapDispatchToProps = (dispatch) => {
 export class PhysicianDataComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      page: 0,
+      rowPerPage: 6,
+    };
   }
+
+  onPageChange = (event, nextPage) => {
+    this.setState({
+      ...this.state,
+      page: nextPage,
+    });
+  };
+
+  onChangeRowsPerPage = (event) => {
+    this.setState({
+      ...this.state,
+      rowPerPage: event.target.value,
+    });
+  };
 
   deleteUser(userId) {
     this.props.removeUser(userId);
@@ -42,67 +72,81 @@ export class PhysicianDataComponent extends React.Component {
   render() {
     return (
       <>
-        <div className="container mt-5">
+        <Container>
           <h4 className="text-center fw-bold ">Physician List</h4>
-          <table className="table table-bordered shadow mt-4">
-            <thead className="table-dark">
-              <tr>
-                <th scope="col">Sr.No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Speciality</th>
-                <th scope="col">D.O.B.</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.physiciandata.map((user, index) => {
-                return (
-                  <tr key={index}>
-                    <th scope="row">{index + 1}</th>
-                    <td>{`${user.fName} ${user.lName}`}</td>
-                    <td>{user.speciality}</td>
-                    <td>{user.dob}</td>
-                    <td>{user.email}</td>
-                    <td>{user.mobile}</td>
-                    <td>
-                      {user.isActive ? (
-                        <>
-                          <BsCheckCircleFill className="hand-pointer" />
-                          <span className="p-2">Active</span>
-                        </>
-                      ) : (
-                        <>
-                          <BsFillXCircleFill className="hand-pointer" />
-                          <span className="p-2">Inactive</span>
-                        </>
-                      )}
-                    </td>
-                    <td>
-                      <span className="p-2">
-                        <Link to={`/userdetails/${user.id}`}>
-                          <BsPersonFill />
-                        </Link>
-                      </span>
-                      <span className="p-2">
-                        <Link to={`/edit/${user.id}`}>
-                          <BsFillPencilFill />
-                        </Link>
-                      </span>
-                      <span className="p-2 hand-pointer">
-                        <BsFillTrashFill
-                          onClick={() => this.deleteUser(user.id)}
-                        />
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+          <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+            <Table>
+              <TableHead className="tablehead">
+                <TableRow>
+                  <TableCell className="tableCell">Sr. No</TableCell>
+                  <TableCell className="tableCell">Name</TableCell>
+                  <TableCell className="tableCell">Speciality</TableCell>
+                  <TableCell className="tableCell">Email</TableCell>
+                  <TableCell className="tableCell">Phone</TableCell>
+                  <TableCell className="tableCell">Status</TableCell>
+                  <TableCell className="tableCell">Action</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {this.props.physiciandata
+                  .slice(
+                    this.state.page * this.state.rowPerPage,
+                    this.state.page * this.state.rowPerPage +
+                      this.state.rowPerPage
+                  )
+                  .map((user, index) => {
+                    return (
+                      <TableRow key={index}>
+                        <TableCell>{index + 1}</TableCell>
+                        <TableCell>{`${user.fName} ${user.lName}`}</TableCell>
+                        <TableCell>{user.speciality}</TableCell>
+                        <TableCell>{user.email}</TableCell>
+                        <TableCell>{user.mobile}</TableCell>
+                        <TableCell>
+                          {user.isActive ? (
+                            <>
+                              <BsCheckCircleFill className="hand-pointer" />
+                              <span className="p-2">Active</span>
+                            </>
+                          ) : (
+                            <>
+                              <BsFillXCircleFill className="hand-pointer" />
+                              <span className="p-2">Inactive</span>
+                            </>
+                          )}
+                        </TableCell>
+                        <TableCell>
+                          <span className="p-2">
+                            <Link to={`/userdetails/${user.id}`}>
+                              <BsPersonFill />
+                            </Link>
+                          </span>
+                          <span className="p-2">
+                            <Link to={`/edit/${user.id}`}>
+                              <BsFillPencilFill />
+                            </Link>
+                          </span>
+                          <span className="p-2 hand-pointer">
+                            <BsFillTrashFill
+                              onClick={() => this.deleteUser(user.id)}
+                            />
+                          </span>
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
+              </TableBody>
+            </Table>
+            <TablePagination
+              rowsPerPageOptions={[6, 10, 20, 25]}
+              count={this.props.physiciandata.length}
+              rowsPerPage={this.state.rowPerPage}
+              page={this.state.page}
+              onPageChange={this.onPageChange}
+              onChangeRowsPerPage={this.onChangeRowsPerPage}
+            />
+          </TableContainer>
+        </Container>
       </>
     );
   }

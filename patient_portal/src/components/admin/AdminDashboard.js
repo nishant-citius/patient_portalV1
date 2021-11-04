@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import "./admin.css";
 import { connect } from "react-redux";
@@ -49,13 +49,11 @@ const AdminDashboard = (props) => {
   const history = useHistory();
   const classes = useStyles();
 
+  const [doctors, setDoctors] = useState([]);
+
   useEffect(() => {
-    // props.getallphysiciandata();
-    // props.getalluserdata();
-    // props.getAllPatients();
-    // props.getInactiveUsers();
-    // props.getallNursedata();
-  }, []);
+    setDoctors(randomDoctors());
+  }, [0]);
 
   const data = {
     labels: [
@@ -129,9 +127,19 @@ const AdminDashboard = (props) => {
       cols: 2,
     },
   ];
+
+  const randomDoctors = () => {
+    let n = 5,
+      array = Array.from({ length: 4 }, (v, k) => k * 1),
+      shuffled = array.sort(function () {
+        return 0.5 - Math.random();
+      }),
+      selected = shuffled.slice(0, n);
+    return selected.map((_val) => props.physicians[_val]);
+  };
+
   return (
     <>
-      {/* <h1 className="text-success text-center fw-bold ">Admin Dashboard</h1> */}
       {/* Top 3 cards container */}
       <Container className={classes.container}>
         <Grid container spacing={4}>
@@ -183,29 +191,29 @@ const AdminDashboard = (props) => {
       {/* Details Container */}
       <Container>
         <Grid container spacing={4}>
-          <Grid item sm={6} xs={12}>
+          {/* <Grid item sm={6} xs={12}>
             <Card>
               <CardContent>
                 <ImageList sx={{ width: 300, height: 450 }}>
-                  {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                  {randomDoctors().map((item, ind) => (
+                    <ImageListItem key={itemData[ind].img}>
                       <img
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={item.title}
+                        src={`${itemData[ind].img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${itemData[ind].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={itemData[ind].title}
                         loading="lazy"
                       />
                       <ImageListItemBar
                         className={classes.imagelistbar}
-                        title={item.title}
-                        subtitle={item.author}
+                        title={`${item.fName} ${item.lName}`}
+                        subtitle={item.speciality}
                       />
                     </ImageListItem>
                   ))}
                 </ImageList>
               </CardContent>
             </Card>
-          </Grid>
+          </Grid> */}
           <Grid item sm={6} xs={12}>
             <Card>
               <CardContent>

@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
     height: "100%",
     borderRadius: "5px",
+    marginLeft: "5px",
     backgroundColor: "#3f51b5",
     position: "fixed",
     paddingTop: theme.spacing(4),
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    fontSize: "14px",
+    fontSize: "13px",
     marginBottom: "0",
     color: "#fff",
     fontWeight: "normal",
@@ -209,7 +210,7 @@ function SideNav(props) {
             <div className={classes.item}>
               <Link to="/medic_allergy">
                 <Icon icon="fa:wpforms" className={classes.icon} />
-                <span className={classes.text}>Medication and Allergies</span>
+                <span className={classes.text}>Medication & Allergies</span>
               </Link>
             </div>
             <div className={classes.item}>
