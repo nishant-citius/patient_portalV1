@@ -14,7 +14,7 @@ import { NotificationsIcon, PersonIcon } from "../mui-icons";
 import { makeStyles, alpha } from "@material-ui/core";
 
 import { useHistory } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import React from "react";
@@ -28,6 +28,7 @@ import AppointmentNotifications from "components/admin/AppointmentNotifications"
 import EditUser from "components/admin/common/EditUser";
 import { Edit } from "@material-ui/icons";
 import AddUsers from "components/admin/common/AddUsers";
+import { adminService } from "services/register_user_service";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -133,6 +134,7 @@ function AppToolBar(props) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
   const [openAppointmentPopup, setOpenAppointmentPopup] = useState(false);
+  const [users, setUsers] = useState([]);
 
   const classes = useStyles({ open });
   const history = useHistory();
@@ -158,6 +160,21 @@ function AppToolBar(props) {
   function handleAppointmentNotification() {
     setOpenAppointmentPopup(true);
   }
+
+  useEffect(() => {
+    todaysAppointments(new Date().toISOString().slice(0, 10));
+  }, []);
+
+  const todaysAppointments = (_date) => {
+    adminService.appointmentsToday(_date).then(
+      (response) => {
+        setUsers(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  };
 
   return (
     <AppBar position="fixed">
@@ -209,7 +226,7 @@ function AppToolBar(props) {
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               {props.role === "admin" ? (
-                <Badge badgeContent={props.total} color="secondary">
+                <Badge badgeContent={users.length} color="secondary">
                   <MailIcon onClick={handleAppointmentNotification} />
                 </Badge>
               ) : (
