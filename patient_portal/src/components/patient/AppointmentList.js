@@ -8,14 +8,27 @@ import Box from "@mui/material/Box";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import {
-  BsFillTrashFill,
-  BsFillPencilFill,
-  BsPersonFill,
-  BsCheckCircleFill,
-  BsFillXCircleFill,
-  BsFillArrowLeftSquareFill,
-} from "react-icons/bs";
-import { Link } from "react-router-dom";
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+    width: "70vw",
+  },
+  tablehead: {
+    background: "#b7c1f7",
+  },
+}));
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,6 +64,7 @@ function a11yProps(index) {
 }
 
 function AppointmentList(props) {
+  const classes = useStyles();
   const [value, setValue] = useState(0);
   const [appts, setAppts] = useState([]);
 
@@ -89,38 +103,43 @@ function AppointmentList(props) {
             <Tab label="Calender View" {...a11yProps(1)} />
           </Tabs>
         </Box>
+
         <TabPanel value={value} index={0}>
-          {/* Appointment List Start */}
-          <table className="table table-bordered shadow mt-4">
-            <thead className="table-dark">
-              <tr>
-                <th scope="col">Sr.No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Doctor Name</th>
-                <th scope="col">Appointment Title</th>
-                <th scope="col">Start Time</th>
-                <th scope="col">ENd Time</th>
-                <th scope="col">Appointment Date</th>
-                <th scope="col">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {appts.map((user, index) => {
-                return (
-                  <tr key={index}>
-                    <th scope="row">{index + 1}</th>
-                    <td>{`${user.fName} ${user.lName}`}</td>
-                    <td>{user.doc_name}</td>
-                    <td>{user.appointment_title}</td>
-                    <td>{user.appointment_start_time}</td>
-                    <td>{user.appointment_end_time}</td>
-                    <td>{user.appointmentDate}</td>
-                    <td>{user.status}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <Container className={classes.root}>
+            <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+              {/* Appointment List Start */}
+              <Table>
+                <TableHead className={classes.tablehead}>
+                  <TableRow>
+                    <TableCell scope="col">Sr.No</TableCell>
+                    <TableCell scope="col">Name</TableCell>
+                    <TableCell scope="col">Doctor Name</TableCell>
+                    <TableCell scope="col">Appointment Title</TableCell>
+                    <TableCell scope="col">Start Time</TableCell>
+                    <TableCell scope="col">End Time</TableCell>
+                    <TableCell scope="col">Appointment Date</TableCell>
+                    <TableCell scope="col">Status</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {appts.map((user, index) => {
+                    return (
+                      <TableRow key={index}>
+                        <TableCell scope="row">{index + 1}</TableCell>
+                        <TableCell>{`${user.fName} ${user.lName}`}</TableCell>
+                        <TableCell>{user.doc_name}</TableCell>
+                        <TableCell>{user.appointment_title}</TableCell>
+                        <TableCell>{user.appointment_start_time}</TableCell>
+                        <TableCell>{user.appointment_end_time}</TableCell>
+                        <TableCell>{user.appointmentDate}</TableCell>
+                        <TableCell>{user.status}</TableCell>
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Container>
           {/* Appointment List end */}
         </TabPanel>
         <TabPanel value={value} index={1}>

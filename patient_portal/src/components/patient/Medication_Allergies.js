@@ -5,11 +5,31 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import { adminService } from "../../services/register_user_service";
-import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
-import Autocomplete from "@mui/material/Autocomplete";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+    width: "80vw",
+  },
+  tablehead: {
+    background: "#b7c1f7",
+  },
+}));
 
 const Medication_Allergies = (props) => {
+  const classes = useStyles();
   const [isAvailable, setIsAvailable] = useState(false);
   const [medicationList, setMedicationList] = useState([]);
   const [medicineStrength, setmedicineStrength] = useState([]);
@@ -142,124 +162,138 @@ const Medication_Allergies = (props) => {
       {isAvailable ? (
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-            <div className="card-header text-center">Immunization Details</div>
+            <div className="card-header text-center">
+              <h3>Immunization Details</h3>
+            </div>
             <div className="card-body text-center">
-              <h4>Current Medication</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Medicine Name</th>
-                    <th scope="col">Direction To Consume</th>
-                    <th scope="col">Dose Details</th>
-                    <th scope="col">Frequency</th>
-                    <th scope="col">Physician Name</th>
-                    <th scope="col">Purpose</th>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">End Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.current_medication.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.medicineName}</td>
-                        <td>{item.dosage}</td>
-                        <td>{item.directionstoconsume}</td>
-                        <td>{item.frequency}</td>
-                        <td>{item.physicianName}</td>
-                        <td>{item.purpose}</td>
-                        <td>{item.startDate}</td>
-                        <td>{item.endDate}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <h4>OTC Medication</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Otc Drug Name</th>
-                    <th scope="col">Strength</th>
-                    <th scope="col">Direction To Consume</th>
-                    <th scope="col">Social Drug</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.otc_medication.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.otcDrugName}</td>
-                        <td>{item.strength}</td>
-                        <td>{item.directiontoconsume}</td>
-                        <td>{item.socialDrugs}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <h4>Past Medication</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Drug Name</th>
-                    <th scope="col">Strength</th>
-                    <th scope="col">Direction To Consume</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.past_medication.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.pastdrugName}</td>
-                        <td>{item.strength}</td>
-                        <td>{item.directiontoconsume}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <h4>Allergies</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Allergy Name</th>
-                    <th scope="col">Symptoms</th>
-                    <th scope="col">Drug Allergy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.allergies.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.allergyName}</td>
-                        <td>{item.symptomsofAllergy}</td>
-                        <td>{item.drugAllergy}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <h5>Current Medication</h5>
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Medicine Name</TableCell>
+                      <TableCell scope="col">Direction To Consume</TableCell>
+                      <TableCell scope="col">Dose Details</TableCell>
+                      <TableCell scope="col">Frequency</TableCell>
+                      <TableCell scope="col">Physician Name</TableCell>
+                      <TableCell scope="col">Purpose</TableCell>
+                      <TableCell scope="col">Start Date</TableCell>
+                      <TableCell scope="col">End Date</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {props.mediAllergyDetails.current_medication.map(function (
+                      item,
+                      index
+                    ) {
+                      return (
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.medicineName}</TableCell>
+                          <TableCell>{item.dosage}</TableCell>
+                          <TableCell>{item.directionstoconsume}</TableCell>
+                          <TableCell>{item.frequency}</TableCell>
+                          <TableCell>{item.physicianName}</TableCell>
+                          <TableCell>{item.purpose}</TableCell>
+                          <TableCell>{item.startDate}</TableCell>
+                          <TableCell>{item.endDate}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+              <h5>OTC Medication</h5>
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Otc Drug Name</TableCell>
+                      <TableCell scope="col">StrengTableCell</TableCell>
+                      <TableCell scope="col">Direction To Consume</TableCell>
+                      <TableCell scope="col">Social Drug</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {props.mediAllergyDetails.otc_medication.map(function (
+                      item,
+                      index
+                    ) {
+                      return (
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.otcDrugName}</TableCell>
+                          <TableCell>{item.strengTableCell}</TableCell>
+                          <TableCell>{item.directiontoconsume}</TableCell>
+                          <TableCell>{item.socialDrugs}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+              <h5>Past Medication</h5>
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Drug Name</TableCell>
+                      <TableCell scope="col">StrengTableCell</TableCell>
+                      <TableCell scope="col">Direction To Consume</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {props.mediAllergyDetails.past_medication.map(function (
+                      item,
+                      index
+                    ) {
+                      return (
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.pastdrugName}</TableCell>
+                          <TableCell>{item.strength}</TableCell>
+                          <TableCell>{item.directiontoconsume}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+              <h5>Allergies</h5>
+
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Allergy Name</TableCell>
+                      <TableCell scope="col">Symptoms</TableCell>
+                      <TableCell scope="col">Drug Allergy</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {props.mediAllergyDetails.allergies.map(function (
+                      item,
+                      index
+                    ) {
+                      return (
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.allergyName}</TableCell>
+                          <TableCell>{item.symptomsofAllergy}</TableCell>
+                          <TableCell>{item.drugAllergy}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
             </div>
           </div>
         </div>

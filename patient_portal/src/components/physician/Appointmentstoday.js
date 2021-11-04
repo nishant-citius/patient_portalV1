@@ -9,7 +9,6 @@ import {
   Table,
   TableBody,
   TableCell,
-  Button,
   TableContainer,
   TableHead,
   TablePagination,
@@ -47,7 +46,10 @@ function Appointmentstoday(props) {
   };
   return (
     <Container className={classes.root}>
-      <h4 style={{ color: "#3f51b5" }} className=" text-center fw-bold ">
+      <h4
+        style={{ color: "#b7c1f7" }}
+        className="text-success text-center fw-bold "
+      >
         Appointment List
       </h4>
       <TableContainer component={Paper} style={{ marginTop: "20px" }}>
@@ -82,10 +84,9 @@ function Appointmentstoday(props) {
                         pathname: `/attendAppointment/${appointments.patientId}`,
                         state: { appointmentDetails: appointments },
                       }}
+                      className="btn btn-primary btn-sm"
                     >
-                      <Button variant="contained" color="primary">
-                        Start Appointment
-                      </Button>
+                      Start Appointment
                     </Link>
                   </TableCell>
                 </TableRow>
