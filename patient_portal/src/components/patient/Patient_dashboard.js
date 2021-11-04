@@ -48,6 +48,23 @@ const Patient_dashboard = (props) => {
     }
   }, []);
   const classes = useStyles();
+
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (props.immunizationDetails) {
+        setIsImmunization(true);
+      }
+
+      if (props.mediAllergyDetails) {
+        setmediAllergy(true);
+      }
+
+      if (props.patientvitalsDetails) {
+        setpVitals(true);
+      }
+    }
+  }, []);
+
   return (
     <>
       <Container className={classes.container}>
