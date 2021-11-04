@@ -31,3 +31,5 @@ export { default as PoolIcon } from "@material-ui/icons/Pool";
 export { default as CloseIcon } from "@material-ui/icons/Close";
 export { default as PersonAddAlt1Icon } from "@mui/icons-material/PersonAddAlt1";
 export { default as AdminPanelSettingsIcon } from "@mui/icons-material/AdminPanelSettings";
+export { default as HealthAndSafetyIcon } from "@mui/icons-material/HealthAndSafety";
+export { default as AssignmentIndIcon } from "@mui/icons-material/AssignmentInd";
