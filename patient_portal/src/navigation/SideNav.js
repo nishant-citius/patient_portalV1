@@ -43,37 +43,9 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     paddingTop: theme.spacing(4),
     top: "80px",
-    // width: "230px",
+    maxWidth: "230px",
     bottom: "10px",
   },
-  icon: {
-    color: "#fff",
-
-    marginRight: theme.spacing(1),
-
-    [theme.breakpoints.up("sm")]: {
-      fontSize: "18px",
-    },
-
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "25px",
-    },
-  },
-
-  text: {
-    fontSize: "14px",
-
-    marginBottom: "0",
-
-    color: "#fff",
-
-    fontWeight: "bold",
-
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-
   item: {
     marginTop: "18px",
     display: "flex",
