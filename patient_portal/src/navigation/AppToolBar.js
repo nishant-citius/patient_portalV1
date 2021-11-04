@@ -21,8 +21,13 @@ import React from "react";
 import * as actioncreators from "../redux/actions/userActionCreater";
 import { NavBtn, NavBtnLink } from "../components/Layout/NavbarElements";
 import ModalPopup from "shared/dialog/ModalPopup";
+import EditDialog from "shared/dialog/EditDialog";
+
 import UserRequests from "components/admin/UserRequests";
 import AppointmentNotifications from "components/admin/AppointmentNotifications";
+import EditUser from "components/admin/common/EditUser";
+import { Edit } from "@material-ui/icons";
+import AddUsers from "components/admin/common/AddUsers";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -239,6 +244,13 @@ function AppToolBar(props) {
       >
         <UserRequests />
       </ModalPopup>
+      {/* <EditDialog
+        title="User Requests"
+        openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+      >
+        <AddUsers />
+      </EditDialog> */}
       <ModalPopup
         title="Scheduled Appointment"
         openPopup={openAppointmentPopup}
