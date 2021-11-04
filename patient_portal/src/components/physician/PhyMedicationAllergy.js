@@ -6,8 +6,10 @@ import * as Yup from "yup";
 import { set } from "date-fns";
 
 const PhyMedicationAllergies = (props) => {
+  
   const [isAvailable, setIsAvailable] = useState(false);
-  const [updateMedication,setupdateMedication]=useState(true);
+  const [updateMedication, setupdateMedication] = useState(true);
+
   useEffect(() => {
     if (props.isLoggedIn) {
       if (props.mediAllergyDetails) {
@@ -15,6 +17,7 @@ const PhyMedicationAllergies = (props) => {
       }
     }
   }, []);
+
   const initialValues = {
     id: "",
     userId: "",
@@ -53,6 +56,7 @@ const PhyMedicationAllergies = (props) => {
       },
     ],
   };
+
   const validationSchema = Yup.object().shape({});
   const onSubmit = (values) => {
     let cm = values.current_medication.map((v) => {
@@ -67,6 +71,7 @@ const PhyMedicationAllergies = (props) => {
       temp.endDate = v.endDate;
       return temp;
     });
+
     let om = values.otc_medication.map((v) => {
       let temp = {};
       temp.otcDrugName = v.otcDrugName;
@@ -75,6 +80,7 @@ const PhyMedicationAllergies = (props) => {
       temp.socialDrugs = v.socialDrugs;
       return temp;
     });
+
     let pm = values.past_medication.map((v) => {
       let temp = {};
       temp.pastdrugName = v.pastdrugName;
@@ -82,6 +88,7 @@ const PhyMedicationAllergies = (props) => {
       temp.directiontoconsume = v.directiontoconsume;
       return temp;
     });
+
     let al = values.allergies.map((v) => {
       let temp = {};
       temp.allergyName = v.allergyName;
@@ -89,6 +96,7 @@ const PhyMedicationAllergies = (props) => {
       temp.drugAllergy = v.drugAllergy;
       return temp;
     });
+
     const payload = {
       userid: props.currentUser.id,
       current_medication: cm,
@@ -96,15 +104,18 @@ const PhyMedicationAllergies = (props) => {
       past_medication: pm,
       allergies: al,
     };
+
     props.medication_allergies(payload);
     props.flashNotification({
       message: "Medication and Allergy added...",
       type: "success",
     });
   };
+
   function updateMed() {
     setupdateMedication(false);
   }
+
   return (
     <>
       {updateMedication ? (
@@ -112,9 +123,10 @@ const PhyMedicationAllergies = (props) => {
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
             <div className="card-header text-center">Immunization Details</div>
             <div className="card-body text-center">
-              <h4>Current Medication</h4> 
-              <button className="btn btn-primary" onClick={()=> updateMed()}>Update the medication</button>
-              
+              <h4>Current Medication</h4>
+              <button className="btn btn-primary" onClick={() => updateMed()}>
+                Update the medication
+              </button>
               <table className="table table-bordered shadow mt-4">
                 <thead className="table-dark">
                   <tr>
@@ -423,7 +435,6 @@ const PhyMedicationAllergies = (props) => {
                           </div>
                         </div>
 
-                      
                         <div className="col-12 text-center mt-5">
                           <button className="btn btn-primary" type="submit">
                             Submit
