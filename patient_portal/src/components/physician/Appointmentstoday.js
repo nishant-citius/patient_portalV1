@@ -2,8 +2,32 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
+import { BsFillTrashFill } from "react-icons/bs";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+    width: "80vw",
+  },
+  tablehead: {
+    background: "#b7c1f7",
+  },
+}));
 
 function Appointmentstoday(props) {
+  const classes = useStyles();
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
@@ -21,52 +45,57 @@ function Appointmentstoday(props) {
     );
   };
   return (
-    <div className="container mt-5">
+    <Container className={classes.root}>
       <h4
-        style={{ color: "#3f51b5" }}
+        style={{ color: "#b7c1f7" }}
         className="text-success text-center fw-bold "
       >
         Appointment List
       </h4>
-      <table className="table table-bordered shadow mt-4">
-        <thead style={{ backgroundColor: "#3f51b5", color: "#fff" }}>
-          <tr>
-            <th scope="col">Sr no </th>
-            <th scope="col">Patient Name</th>
-            <th scope="col">Appointment Title</th>
-            <th scope="col">Appointment Date </th>
-            <th scope="col">Start Time</th>
-            <th scope="col">End Time</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {appointments.map((appointments, index) => {
-            return (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td>{`${appointments.fName} ${appointments.lName}`}</td>
-                <td>{appointments.appointment_title}</td>
-                <td>{appointments.appointmentDate}</td>
-                <td>{appointments.appointment_start_time}</td>
-                <td>{appointments.appointment_end_time}</td>
-                <td>
-                  <Link
-                    to={{
-                      pathname: `/attendAppointment/${appointments.patientId}`,
-                      state: { appointmentDetails: appointments },
-                    }}
-                    className="btn btn-primary btn-sm"
-                  >
-                    Start Appointment
-                  </Link>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+      <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+        {/* <table className="table table-bordered shadow mt-4"> */}
+        <Table>
+          <TableHead className={classes.tablehead}>
+            <TableRow>
+              <TableCell scope="col">Sr no </TableCell>
+              <TableCell scope="col">Patient Name </TableCell>
+              <TableCell scope="col">Appointment Title </TableCell>
+              <TableCell scope="col">Appointment Date </TableCell>
+              <TableCell scope="col">Start Time </TableCell>
+              <TableCell scope="col">End Time </TableCell>
+              <TableCell scope="col">Action </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {appointments.map((appointments, index) => {
+              return (
+                <TableRow key={index}>
+                  <TableCell scope="row">{index + 1} </TableCell>
+                  <TableCell>
+                    {`${appointments.fName} ${appointments.lName}`}{" "}
+                  </TableCell>
+                  <TableCell>{appointments.appointment_title} </TableCell>
+                  <TableCell>{appointments.appointmentDate} </TableCell>
+                  <TableCell>{appointments.appointment_start_time} </TableCell>
+                  <TableCell>{appointments.appointment_end_time} </TableCell>
+                  <TableCell>
+                    <Link
+                      to={{
+                        pathname: `/attendAppointment/${appointments.patientId}`,
+                        state: { appointmentDetails: appointments },
+                      }}
+                      className="btn btn-primary btn-sm"
+                    >
+                      Start Appointment
+                    </Link>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Container>
   );
 }
 

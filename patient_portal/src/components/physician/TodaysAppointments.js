@@ -12,12 +12,31 @@ import {
   BsCheckCircleFill,
   BsFillXCircleFill,
   BsFillArrowLeftSquareFill,
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
 } from "react-icons/bs";
 
 // const patient_id=this.props.currentUser.id;
 // const loadAppointment=(_patient_id)=>{
 //    this.props.getAppointments(patient_id)
 // }
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+    width: "80vw",
+  },
+  tablehead: {
+    background: "#b7c1f7",
+  },
+}));
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -94,6 +113,7 @@ export class AppointmentList extends React.Component {
   }
 
   getAppointmentStatus(status) {
+    const classes = useStyles();
     let _jsx = "";
 
     if (status === "approved") {
@@ -124,54 +144,57 @@ export class AppointmentList extends React.Component {
                         </button>`;
     }
 
-    return _jsx
+    return _jsx;
   }
 
   render() {
     return (
-      <div className="container mt-5">
+      <Container className={classes.root}>
         <h4
           style={{ color: "yellow" }}
           className="text-success text-center fw-bold "
         >
-          Appointment List
+          Appointment
         </h4>
-        <table className="table table-bordered shadow mt-4">
-          <thead className="table-dark">
-            <tr>
-              <th scope="col">Sr no </th>
-              <th scope="col">Patient Name</th>
-              <th scope="col">Appointment Title</th>
-              <th scope="col">Appointment Date </th>
-              <th scope="col">Start Time</th>
-              <th scope="col">End Time</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
+        <Table>
+          {" "}
+          <TableHead className={classes.tablehead}>
+            <TableRow>
+              <TableCells cope="col">Sr no </TableCells>
+              <TableCell scope="col">Patient Name </TableCell>
+              <TableCell scope="col">Appointment Title </TableCell>
+              <TableCell scope="col">Appointment Date </TableCell>
+              <TableCell scope="col">Start Time </TableCell>
+              <TableCell scope="col">End Time </TableCell>
+              <TableCell scope="col">Actions </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
             {this.props.appointmentList.map((appointments, index) => {
               return (
-                <tr key={index}>
-                  <th scope="row">{index + 1}</th>
-                  <td>{`${appointments.fName} ${appointments.lName}`}</td>
-                  <td>{appointments.appointment_title}</td>
-                  <td>{appointments.appointmentDate}</td>
-                  <td>{appointments.appointment_start_time}</td>
-                  <td>{appointments.appointment_end_time}</td>
-                  <td>
+                <TableRow key={index}>
+                  <TableHead scope="row">{index + 1}</TableHead>
+                  <TableCell>
+                    {`${appointments.fName} ${appointments.lName}`}{" "}
+                  </TableCell>
+                  <TableCell>{appointments.appointment_title} </TableCell>
+                  <TableCell>{appointments.appointmentDate} </TableCell>
+                  <TableCell>{appointments.appointment_start_time} </TableCell>
+                  <TableCell>{appointments.appointment_end_time} </TableCell>
+                  <TableCell>
                     {/* {appointments.status === "approved" ? (
                       <p className="text text-success fw-bold">Approved</p>
                     ) : (
                       
                     )} */}
                     {this.getAppointmentStatus()}
-                  </td>
-                </tr>
+                  </TableCell>
+                </TableRow>
               );
             })}
-          </tbody>
-        </table>
-      </div>
+          </TableBody>
+        </Table>
+      </Container>
     );
   }
 }

@@ -266,7 +266,7 @@
     {
       "email": "susmitha1281@email.com",
       "password": "$2a$10$o2XWS7fS/N5zLhArVPFaFOO3/odRIJmxlpCYB7HRLog6/1ei7y4Cy",
-      "fName": "Susmitha",
+      "fName": "Dr.Susmitha",
       "lName": "Chinthakindi",
       "dob": "2021-11-08",
       "username": "susmitha1281",
@@ -966,42 +966,6 @@
       "patientId": 48,
       "status": "approved",
       "id": 4
-    },
-    {
-      "fName": "Swapna",
-      "lName": "Patil",
-      "dob": "2021-11-16",
-      "mobile_no": 8353638299,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "Fever",
-      "appointment_start_time": "02:35",
-      "appointment_end_time": "03:35",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "fever",
-      "createdBy": "SwapnaPatil",
-      "createdDate": "2021-11-03T04:03:28.531Z",
-      "patientId": 48,
-      "status": "reject",
-      "id": 5
-    },
-    {
-      "fName": "Swapna",
-      "lName": "Patil",
-      "dob": "2021-11-16",
-      "mobile_no": 8353638299,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "Fever",
-      "appointment_start_time": "02:35",
-      "appointment_end_time": "03:35",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "fever",
-      "createdBy": "SwapnaPatil",
-      "createdDate": "2021-11-03T04:03:28.531Z",
-      "patientId": 48,
-      "status": "completed",
-      "id": 5
     },
     {
       "fName": "neeraj",
@@ -11297,6 +11261,20 @@
       "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
       "code": "16071",
       "id": 4
+    },
+    {
+      "doc_id": 55,
+      "patientId": "24",
+      "desc": "Bypass Cerebral Ventricle to Blood Vessel with Autologous Tissue Substitute, Open Approach",
+      "code": "16073",
+      "id": 5
+    },
+    {
+      "doc_id": 55,
+      "patientId": "24",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 6
     }
   ],
   "patient_diagnosis": [
@@ -11306,6 +11284,13 @@
       "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
       "code": "A001",
       "id": 1
+    },
+    {
+      "doc_id": 55,
+      "patientId": "24",
+      "description": "Typhoid fever",
+      "code": "A010",
+      "id": 2
     }
   ]
 }
