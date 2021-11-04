@@ -44,9 +44,7 @@ export class PatientList extends React.Component {
             <BsFillArrowLeftSquareFill />
             <span className="m-2">Back</span>
           </Link>
-          <h1 className="text-success text-center fw-bold ">
-            Immunization List
-          </h1>
+          <h3 className="text-center fw-bold ">Immunization List</h3>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>

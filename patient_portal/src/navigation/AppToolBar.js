@@ -22,6 +22,7 @@ import * as actioncreators from "../redux/actions/userActionCreater";
 import { NavBtn, NavBtnLink } from "../components/Layout/NavbarElements";
 import ModalPopup from "shared/dialog/ModalPopup";
 import UserRequests from "components/admin/UserRequests";
+import AppointmentNotifications from "components/admin/AppointmentNotifications";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -30,6 +31,7 @@ const mapStateToProps = (rootReducer) => {
     authToken: rootReducer.login.authToken,
     currentUser: rootReducer.login.loggedUserInfo,
     count: rootReducer.inactiveUsers.inactiveUserCount,
+    total: rootReducer.approvedAppointments.approvedAppointmentCount,
   };
 };
 
@@ -125,6 +127,7 @@ function AppToolBar(props) {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
+  const [openAppointmentPopup, setOpenAppointmentPopup] = useState(false);
 
   const classes = useStyles({ open });
   const history = useHistory();
@@ -145,6 +148,10 @@ function AppToolBar(props) {
 
   function handleAdminNotification() {
     setOpenPopup(true);
+  }
+
+  function handleAppointmentNotification() {
+    setOpenAppointmentPopup(true);
   }
 
   return (
@@ -168,7 +175,7 @@ function AppToolBar(props) {
           </>
         ) : (
           <>
-            <div className={classes.search}>
+            {/* <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
@@ -180,7 +187,7 @@ function AppToolBar(props) {
                 }}
                 inputProps={{ "aria-label": "search" }}
               />
-            </div>
+            </div> */}
             <div className={classes.icons}>
               <SearchIcon
                 className={classes.searchbutton}
@@ -196,9 +203,15 @@ function AppToolBar(props) {
                 </Badge>
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <Badge badgeContent={0} color="secondary">
-                <MailIcon />
-              </Badge>
+              {props.role === "admin" ? (
+                <Badge badgeContent={props.total} color="secondary">
+                  <MailIcon onClick={handleAppointmentNotification} />
+                </Badge>
+              ) : (
+                <Badge badgeContent={0} color="secondary">
+                  <MailIcon />
+                </Badge>
+              )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
                 onClick={HandleClick}
@@ -225,6 +238,13 @@ function AppToolBar(props) {
         setOpenPopup={setOpenPopup}
       >
         <UserRequests />
+      </ModalPopup>
+      <ModalPopup
+        title="Scheduled Appointment"
+        openPopup={openAppointmentPopup}
+        setOpenPopup={setOpenAppointmentPopup}
+      >
+        <AppointmentNotifications />
       </ModalPopup>
     </AppBar>
   );

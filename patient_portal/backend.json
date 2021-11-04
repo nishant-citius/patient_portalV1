@@ -3515,14 +3515,6 @@
       "AllergenSource": "Dermatophagoides farinae",
       "Isoforms_or_partial_sequences_of_allergen": "Dermatophagoides Der p 11 / Der f 11",
       "Allerginicity": "IgE plus basophil+ or SPT+"
-    },
-    {
-      "id": "NA-170",
-      "AllergyType": "Mite",
-      "AllergyName": "House dust mite",
-      "AllergenSource": "Dermatophagoides farinae",
-      "Isoforms_or_partial_sequences_of_allergen": "Dermatophagoides Der p 14 / Der f 14",
-      "Allerginicity": "IgE but no biological test"
     }
   ],
   "procedures": [

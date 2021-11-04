@@ -43,7 +43,7 @@ export class PhysicianDataComponent extends React.Component {
     return (
       <>
         <div className="container mt-5">
-          <h1 className="text-success text-center fw-bold ">Physician List</h1>
+          <h4 className="text-center fw-bold ">Physician List</h4>
           <table className="table table-bordered shadow mt-4">
             <thead className="table-dark">
               <tr>
