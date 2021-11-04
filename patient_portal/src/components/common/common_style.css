@@ -71,3 +71,10 @@ i.icon {
   color: blue;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .top_mt_100{
+    margin-top: 80px;
+    padding-left: 0px;
+  }
+}

@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
     // top: 0,
 
     height: "100%",
-    borderRadius: "10px",
-    marginLeft: "10px",
+    borderRadius: "5px",
+    marginLeft: "5px",
     backgroundColor: "#3f51b5",
     position: "fixed",
     paddingTop: theme.spacing(4),
