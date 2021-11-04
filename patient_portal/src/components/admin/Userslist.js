@@ -82,9 +82,21 @@ function UserList(props) {
                   <td>{user.role}</td>
                   <td>
                     <span className="p-2">
-                      <Link to={`/userdetails/${user.id}`}>
+                      {/* <Link to={`/userdetails/${user.id}`}> */}
+
+                      <Link
+                        to={{
+                          pathname: `/userdetails/${user.id}`,
+                          state: { user: user },
+                        }}
+                      >
                         <BsPersonFill />
                       </Link>
+                      {/* to=
+                      {{
+                        pathname: `/attendAppointment/${appointments.patientId}`,
+                        state: { appointmentDetails: appointments },
+                      }} */}
                     </span>
                     <span className="p-2">
                       <Link to={`/edit/${user.id}`}>
