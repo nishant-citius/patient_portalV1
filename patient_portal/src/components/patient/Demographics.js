@@ -107,7 +107,7 @@ const Demographics = (props) => {
         enableReinitialize
       >
         {(props) => (
-          <div className="container mt-5">
+          <div className="container">
             <h4 className="text-center pt-5">Patient Demographics</h4>
             <div className="row justify-content-center">
               <div className="col-8">

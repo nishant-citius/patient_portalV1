@@ -35,45 +35,21 @@ const useStyles = makeStyles((theme) => ({
     // position: "sticky",
     // top: 0,
 
-    height: "auto",
+    height: "100%",
     borderRadius: "10px",
     marginLeft: "10px",
     backgroundColor: "#3f51b5",
-    position: "sticky",
     position: "fixed",
     paddingTop: theme.spacing(4),
     top: "80px",
-    // width: "230px",
-    bottom: "10px",
-  },
-  icon: {
-    color: "#fff",
-
-    marginRight: theme.spacing(1),
 
     [theme.breakpoints.up("sm")]: {
-      fontSize: "18px",
+      maxWidth: "230px",
     },
-
     [theme.breakpoints.down("sm")]: {
-      fontSize: "25px",
+      maxWidth: "60px",
     },
   },
-
-  text: {
-    fontSize: "14px",
-
-    marginBottom: "0",
-
-    color: "#fff",
-
-    fontWeight: "bold",
-
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-
   item: {
     marginTop: "18px",
     display: "flex",

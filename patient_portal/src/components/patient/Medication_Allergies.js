@@ -273,7 +273,7 @@ const Medication_Allergies = (props) => {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-12">
-                  <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
+                  <div className="card shadow-lg p-10 mb-6 bg-white rounded">
                     <div className="card-header text-center ">
                       Medication and Allergies
                     </div>
