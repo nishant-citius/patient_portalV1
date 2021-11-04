@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   dialogAction: {
-    backgroundColor: "blue",
+    backgroundColor: "#3f51b5",
   },
 }));
 
