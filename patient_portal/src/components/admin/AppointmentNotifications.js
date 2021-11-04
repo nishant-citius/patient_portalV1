@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import "./admin.css";
+import { adminService } from "../../services/register_user_service";
 
 import {
   Typography,
@@ -16,8 +17,19 @@ const AppointmentNotifications = (props) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    setUsers(props.approveApt);
-  }, [props.approveApt]);
+    todaysAppointments(new Date().toISOString().slice(0, 10));
+  }, []);
+
+  const todaysAppointments = (_date) => {
+    adminService.appointmentsToday(_date).then(
+      (response) => {
+        setUsers(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  };
 
   return (
     <>

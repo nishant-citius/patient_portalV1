@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import {
   Container,
@@ -23,7 +23,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Patient_dashboard = (props) => {
+  const [isImmunization, setIsImmunization] = useState(false);
+  const [mediAllergy, setmediAllergy] = useState(false);
+  const [pVitals, setpVitals] = useState(false);
   const classes = useStyles();
+
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (props.immunizationDetails) {
+        setIsImmunization(true);
+      }
+
+      if (props.mediAllergyDetails) {
+        setmediAllergy(true);
+      }
+
+      if (props.patientvitalsDetails) {
+        setpVitals(true);
+      }
+    }
+  }, []);
+
   return (
     <>
       <Container className={classes.container}>
@@ -43,7 +63,7 @@ const Patient_dashboard = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {props.patientvitalsDetails ? (
+                    {pVitals ? (
                       <tr>
                         <td>{props.patientvitalsDetails[0].height}</td>
                         <td>{props.patientvitalsDetails[0].weight}</td>
@@ -78,7 +98,7 @@ const Patient_dashboard = (props) => {
                       </tr>
                     </thead>
                     <tbody>
-                      {props.mediAllergyDetails ? (
+                      {mediAllergy ? (
                         props.mediAllergyDetails.current_medication.map(
                           function (item, index) {
                             return (
@@ -124,7 +144,7 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {props.immunizationDetails ? (
+                        {isImmunization ? (
                           <tr>
                             <td>{props.immunizationDetails.age_category}</td>
                             <td>{props.immunizationDetails.vaccine_brand}</td>
