@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { allergyServices } from "../../services/allergiesService";
+import "./admin.css";
 import {
   makeStyles,
   Container,
@@ -19,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "80vw",
-  },
-  tablehead: {
-    background: "#b7c1f7",
   },
 }));
 
@@ -68,7 +66,6 @@ const AllergyDetails = (props) => {
   const onPageChange = (event, nextPage) => {
     setPage(nextPage);
   };
-
   const onChangeRowsPerPage = (event) => {
     setRowsPerPage(event.target.value);
   };
@@ -82,14 +79,14 @@ const AllergyDetails = (props) => {
         <h4 className="text-center fw-bold ">Allergy List</h4>
         <TableContainer component={Paper} style={{ marginTop: "20px" }}>
           <Table>
-            <TableHead className={classes.tablehead}>
+            <TableHead className="tablehead">
               <TableRow>
-                <TableCell>Id</TableCell>
-                <TableCell>Allergy Type</TableCell>
-                <TableCell>Allergy Name</TableCell>
-                <TableCell>Allergen Source</TableCell>
-                <TableCell>Allerginicity</TableCell>
-                <TableCell>Action</TableCell>
+                <TableCell className="tableCell">Id</TableCell>
+                <TableCell className="tableCell">Allergy Type</TableCell>
+                <TableCell className="tableCell">Allergy Name</TableCell>
+                <TableCell className="tableCell">Allergen Source</TableCell>
+                <TableCell className="tableCell">Allerginicity</TableCell>
+                <TableCell className="tableCell">Action</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
