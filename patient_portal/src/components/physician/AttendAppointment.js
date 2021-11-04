@@ -13,6 +13,7 @@ import DietPlan from "../physician/PatientDietPlan";
 import Vitals from "./PatientVitals";
 import { useParams, useLocation, useHistory } from "react-router";
 import * as actions from "../../redux/actions/userActionCreater";
+import Diagnosis from "./PhyDaignosis";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -91,13 +92,15 @@ const AttendAppointment = (props) => {
           <Tabs
             value={value}
             onChange={handleChange}
-            aria-label="basic tabs example"
+            textColor="secondary"
+            indicatorColor="secondary"
           >
             <Tab label="Record Patient Vital" {...a11yProps(0)} />
             <Tab label="Immunization" {...a11yProps(1)} />
             <Tab label="Medication Allergies" {...a11yProps(2)} />
             <Tab label="Procedures" {...a11yProps(3)} />
-            <Tab label="Diet Plan" {...a11yProps(4)} />
+            <Tab label="Daignosis" {...a11yProps(4)} />
+            <Tab label="Diet Plan" {...a11yProps(5)} />
           </Tabs>
         </Box>
         <h6 className="text-success fw-bold m-3">
@@ -113,7 +116,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <PhyMedicationAllergies />
+          <PhyMedicationAllergies patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={3}>
@@ -121,6 +124,10 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={4}>
+          <Diagnosis patientId={patientId} />
+        </TabPanel>
+
+        <TabPanel value={value} index={5}>
           <DietPlan patientId={patientId} />
         </TabPanel>
       </Box>

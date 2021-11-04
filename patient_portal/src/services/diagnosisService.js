@@ -36,7 +36,18 @@ class DiagnosisService {
     const url = `${URLS.BASE_URL}/diagnosis/${id}`;
     return axios.delete(url);
   }
+  
+  addPatientDiagnosis(_patientDignosis) {
+    let url = URLS.BASE_URL + "/patient_diagnosis";
+    let config = {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
+    };
+    return axios.post(url, JSON.stringify(_patientDignosis), config);
+  }
 }
 
-let dignosisServices = new DiagnosisService();
-export { dignosisServices };
+
+let diagnosisService = new DiagnosisService();
+export { diagnosisService };
