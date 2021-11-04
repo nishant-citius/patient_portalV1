@@ -9,6 +9,13 @@ import {
   Typography,
 } from "mui";
 
+//  useEffect(() => {
+//    if (props.isLoggedIn) {
+//      if (props.mediAllergyDetails) {
+//        setIsAvailable(true);
+//      }
+//    }
+//  }, []);
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     background: "#fff",
@@ -26,6 +33,20 @@ const Patient_dashboard = (props) => {
   const [isImmunization, setIsImmunization] = useState(false);
   const [mediAllergy, setmediAllergy] = useState(false);
   const [pVitals, setpVitals] = useState(false);
+  console.log("Nishant", props.patientvitalsDetails);
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      if (props.immunizationDetails) {
+        setIsImmunization(true);
+      }
+      if (props.mediAllergyDetails) {
+        setmediAllergy(true);
+      }
+      if (props.patientvitalsDetails.length > 0) {
+        setpVitals(true);
+      }
+    }
+  }, []);
   const classes = useStyles();
 
   useEffect(() => {
@@ -180,7 +201,7 @@ const Patient_dashboard = (props) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {props.mediAllergyDetails ? (
+                        {mediAllergy ? (
                           props.mediAllergyDetails.past_medication.map(
                             function (item, index) {
                               return (
