@@ -58,7 +58,7 @@ function Appointmentstoday(props) {
                     }}
                     className="btn btn-primary btn-sm"
                   >
-                    Video
+                    Start Appointment
                   </Link>
                 </td>
               </tr>
