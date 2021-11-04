@@ -37,6 +37,7 @@ const AppointmentNotifications = (props) => {
           <p>No Approved Appointments for Today...</p>
         ) : (
           users.map((user) => {
+            //console.log(users.length);
             return (
               <ListItem alignItems="flex-start" key={user.id}>
                 <ListItemAvatar>

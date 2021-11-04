@@ -23,3 +23,11 @@ i.icon {
   font-size: 20px;
   cursor: pointer;
 }
+
+.tablehead{
+  background: #3f51b5 !important;
+}
+
+.tablehead .tableCell{
+  color: white !important;
+}

@@ -61,7 +61,7 @@ const UserDetails = (props) => {
   return (
     <>
       <div className="container py-4 mt-5">
-        <h3 className="text-success text-center fw-bold ">User Details</h3>
+        <h4 className="text-center fw-bold ">User Details</h4>
         {props.userDetails.role === "patient" ? (
           <Box sx={{ width: "100%" }}>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
