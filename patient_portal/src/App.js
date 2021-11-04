@@ -34,7 +34,7 @@ function App(props) {
           <React.Fragment>
             <Grid container>
               <Grid item sm={2} xs={2}>
-                <SideNav role="physicianx" />
+                <SideNav />
               </Grid>
               <Grid item sm={10} xs={10}>
                 <ShellComponent />
