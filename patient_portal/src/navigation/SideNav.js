@@ -34,6 +34,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#3f51b5",
     position: "sticky",
     top: 0,
+
+    // height: "85vh",
+    // borderRadius: "10px",
+    // marginLeft: "10px",
+    // backgroundColor: "#3f51b5",
+    // position: "sticky",
+    // position: "fixed",
+    // paddingTop: theme.spacing(4),
+    // top: "80px",
+    // width: "230px",
+    // bottom: "10px",
   },
 
   item: {
@@ -59,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     marginBottom: "0",
     color: "#fff",
-    fontWeight: "bold",
+    fontWeight: "normal",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },

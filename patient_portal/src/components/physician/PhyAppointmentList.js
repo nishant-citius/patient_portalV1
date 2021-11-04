@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
 
-
 const mapStateToProps = (rootReducer) => {
   return {
     currentUser: rootReducer.login.loggedUserInfo,
