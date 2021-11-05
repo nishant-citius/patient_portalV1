@@ -733,7 +733,7 @@ export function GetPatientImmunization(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_PATIENT_IMMUNIZATION}${userId}`).then(
       (response) => {
-        payload.globalmessage = `Demographics Retrieved...`;
+        payload.globalmessage = `Patient Immunization Received`;
         payload.userImmunization = response.data[0];
         dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
       },

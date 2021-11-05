@@ -207,6 +207,7 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/patientdietplan?patientId=${patientId}`;
     return axios.get(url);
   }
+
   updatePatientDiet(patientId, data) {
     let url = `${URLS.BASE_URL}/patientdietplan/${patientId}`;
     let config = {
@@ -215,6 +216,14 @@ class AdminServices {
       },
     };
     return axios.put(url, JSON.stringify(data), config);
+  }
+  getPatientDiagnosis(patientId) {
+    const url = `${URLS.BASE_URL}/patient_diagnosis?patientId=${patientId}`;
+    return axios.get(url);
+  }
+  getPatientProcedures(patientId) {
+    const url = `${URLS.BASE_URL}/patient_procedures?patientId=${patientId}`;
+    return axios.get(url);
   }
 }
 

@@ -38,7 +38,7 @@ let rootReducer = combineReducers({
   register: RegisterReducer,
   login: LoginReducer,
   demographics: DemographicsReducer,
-  immunization: Immunizationreducer,
+  immunization: Immunizationreducer, //addImmunization
   vitals: VitalsReducer,
   dietplan: DietPlanReducer,
   getPatientvitals: GetVitalsReducer,
@@ -51,13 +51,13 @@ let rootReducer = combineReducers({
   patients: PatientReducer,
   nurses: GetNurseReducer,
   getalldemographics: GetAllDemographicsReducer,
-  immunizations: GetImmunizationReducer,
+  immunizations: GetImmunizationReducer, //
   userDetails: UserDetailsReducer,
   updateprofile: updateprofilepicreducer,
   inactiveUsers: InactiveUsersReducer,
   approvedAppointments: ApprovedAppointmentsReducer,
   patientDemographics: PatientDemographicsReducer,
-  patientImmunization: PatientImmunizationReducer,
+  patientImmunization: PatientImmunizationReducer, //patientImmunization
   specilizedPhysicians: SpecialityPhysicianReducer,
   appointmentsDetails: GetAllAppointmentReducer,
   deleteUser: DeleteUserReducer,

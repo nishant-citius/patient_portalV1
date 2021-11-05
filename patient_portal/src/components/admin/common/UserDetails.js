@@ -7,7 +7,8 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Immunization from "../../patient/Immunization";
+import Immunization from "../ImmunizationDetails";
+import Demographics from "../DemographicsDetails";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -106,11 +107,11 @@ const UserDetails = (props) => {
             </TabPanel>
 
             <TabPanel value={value} index={1}>
-              <h1>Demogrphics</h1>
+              <Demographics patientId={props.userDetails.id} />
             </TabPanel>
 
             <TabPanel value={value} index={2}>
-              <Immunization />
+              <Immunization patientId={props.userDetails.id} />
             </TabPanel>
 
             <TabPanel value={value} index={3}>

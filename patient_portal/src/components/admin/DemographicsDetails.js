@@ -6,22 +6,31 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../common/common_style.css";
 
-const Demographics = (props) => {
+const DemographicsDetails = (props) => {
+  const [isAvailable, setIsAvailable] = useState(false);
+  let savedValues = {};
+
   useEffect(() => {
-    if (props.isLoggedIn) {
-      if (
-        props.demographicsDetails.length &&
-        props.demographicsDetails.length > 0
-      ) {
-        setIsAvailable(true);
-      }
-    }
+    props.getdemographics(props.patientId);
   }, []);
 
+  useEffect(() => {
+    if (props.demographicsDetails) {
+      if (Object.keys(props.demographicsDetails).length === 0) {
+      } else {
+        if (isAvailable) {
+          return;
+        } else {
+          setIsAvailable(true);
+        }
+      }
+    }
+  });
+
   const initialValues = {
-    fName: props.currentUser.fName,
-    lName: props.currentUser.lName,
-    dob: props.currentUser.dob,
+    fName: props.demographicsDetails.fName,
+    lName: props.demographicsDetails.lName,
+    dob: props.demographicsDetails.dob,
     gender: "",
     ethnicity: "",
     education: "",
@@ -33,25 +42,24 @@ const Demographics = (props) => {
     surgeries: "",
     insurance_provider: "",
   };
-
-  const savedValues = {
-    fName: props.currentUser.fName,
-    lName: props.currentUser.lName,
-    dob: props.currentUser.dob,
-    gender: props.demographicsDetails[0]?.gender,
-    ethnicity: props.demographicsDetails[0]?.ethnicity,
-    education: props.demographicsDetails[0]?.education,
-    employment: props.demographicsDetails[0]?.employment,
-    address: props.demographicsDetails[0]?.address,
-    phone_number: props.demographicsDetails[0]?.phone_number,
-    medical_history: props.demographicsDetails[0]?.medical_history,
-    family_medical_history:
-      props.demographicsDetails[0]?.family_medical_history,
-    surgeries: props.demographicsDetails[0]?.surgeries,
-    insurance_provider: props.demographicsDetails[0]?.insurance_provider,
-  };
-
-  const [isAvailable, setIsAvailable] = useState(false);
+  if (isAvailable) {
+    savedValues = {
+      fName: props.demographicsDetails[0]?.fName,
+      lName: props.demographicsDetails[0]?.lName,
+      dob: props.demographicsDetails[0]?.dob,
+      gender: props.demographicsDetails[0]?.gender,
+      ethnicity: props.demographicsDetails[0]?.ethnicity,
+      education: props.demographicsDetails[0]?.education,
+      employment: props.demographicsDetails[0]?.employment,
+      address: props.demographicsDetails[0]?.address,
+      phone_number: props.demographicsDetails[0]?.phone_number,
+      medical_history: props.demographicsDetails[0]?.medical_history,
+      family_medical_history:
+        props.demographicsDetails[0]?.family_medical_history,
+      surgeries: props.demographicsDetails[0]?.surgeries,
+      insurance_provider: props.demographicsDetails[0]?.insurance_provider,
+    };
+  }
 
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
@@ -87,21 +95,28 @@ const Demographics = (props) => {
       family_medical_history: values.family_medical_history,
       surgeries: values.surgeries,
       insurance_provider: values.insurance_provider,
-      userid: props.currentUser.id,
+      userid: props.demographicsDetails[0].id,
     };
-    props.demographics(payload);
-    props.flashNotification({
-      message: "Demographics added...",
-      type: "success",
-    });
-    props.getdemographics();
-    history.push("/immunization");
+
+    if (isAvailable) {
+      props.updatedemographics(props.demographicsDetails[0].id, payload);
+      props.flashNotification({
+        message: "Demographics Updated...",
+        type: "success",
+      });
+    } else {
+      props.demographics(payload);
+      props.flashNotification({
+        message: "Demographics added...",
+        type: "success",
+      });
+    }
   };
 
   return (
     <>
       <Formik
-        initialValues={isAvailable ? savedValues : initialValues}
+        initialValues={savedValues || initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
         enableReinitialize
@@ -120,7 +135,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="fName"
                       id="fName"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="fName" />
@@ -133,7 +147,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="lName"
                       id="lName"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="lName" />
@@ -146,7 +159,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="dob"
                       id="dob"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="dob" />
@@ -159,7 +171,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="gender"
                       id="gender"
-                      disabled={isAvailable}
                     >
                       <option value="">Select</option>
                       <option value="male">Male</option>
@@ -177,7 +188,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="ethnicity"
                       id="ethnicity/race"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="ethnicity" />
@@ -190,7 +200,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="education"
                       id="education"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="education" />
@@ -204,7 +213,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="employment"
                       id="employment"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="employment" />
@@ -219,7 +227,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="address"
                       id="address"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="address" />
@@ -233,7 +240,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="phone_number"
                       id="phone_number"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="phone_number" />
@@ -247,7 +253,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="medical_history"
                       id="medical_history"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="medical_history" />
@@ -260,7 +265,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="family_medical_history"
                       id="family_medical_history"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="family_medical_history" />
@@ -273,7 +277,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="surgeries"
                       id="surgeries"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="surgeries" />
@@ -287,7 +290,6 @@ const Demographics = (props) => {
                       className="form-control"
                       name="insurance_provider"
                       id="insurance_provider"
-                      disabled={isAvailable}
                     />
                     <div className="error">
                       <ErrorMessage name="insurance_provider" />
@@ -296,19 +298,11 @@ const Demographics = (props) => {
                 </div>
                 <div className="col-4">
                   {isAvailable ? (
-                    <button
-                      type="submit"
-                      className="btn btn-primary m-4"
-                      disabled
-                    >
-                      Submit
+                    <button type="submit" className="btn btn-primary mt-3">
+                      Update Details
                     </button>
                   ) : (
-                    <button
-                      className="ptient_btn"
-                      type="submit"
-                      className="btn btn-primary w-100 m-4"
-                    >
+                    <button type="submit" className="btn btn-primary mt-3">
                       Submit
                     </button>
                   )}
@@ -336,8 +330,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.AddDemographicsAsync(newuser)),
     getdemographics: (userId) =>
       dispatch(actionCreator.GetPatientDemographics(userId)),
+    updatedemographics: (userId, newData) =>
+      dispatch(actionCreator.UpdatePatientDemographics(userId, newData)),
   };
 };
 
 let hof = connect(mapStateToProps, mapDispatchToProps);
-export default hof(Demographics);
+export default hof(DemographicsDetails);
