@@ -74,7 +74,6 @@ const UserDetails = (props) => {
                 <Tab label="Demographics" {...a11yProps(1)} />
                 <Tab label="Immunization" {...a11yProps(2)} />
                 <Tab label="Medication and Allergies" {...a11yProps(3)} />
-                <Tab label="Lab Reports" {...a11yProps(4)} />
               </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
@@ -116,10 +115,6 @@ const UserDetails = (props) => {
 
             <TabPanel value={value} index={3}>
               <h1>Medication and Allergies</h1>
-            </TabPanel>
-
-            <TabPanel value={value} index={4}>
-              <h1>Lab Reports</h1>
             </TabPanel>
           </Box>
         ) : (

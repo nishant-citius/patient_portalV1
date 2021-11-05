@@ -31,6 +31,7 @@ import { UpdateImmunizationReducer } from "./reducers/UpdateImmunizationReducer"
 import { PatientMedicationAllergyReducer } from "./reducers/PatientMedicationAllergyReducer";
 import { GetAllDemographicsReducer } from "./reducers/userreducers/GetAllDemographicsReducer";
 import { ApprovedAppointmentsReducer } from "./reducers/userreducers/ApprovedAppointmentsReducer";
+import { UpdateDemographicsReducer } from "./reducers/UpdateDemographicsReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
@@ -61,6 +62,7 @@ let rootReducer = combineReducers({
   appointmentsDetails: GetAllAppointmentReducer,
   deleteUser: DeleteUserReducer,
   updateImmunization: UpdateImmunizationReducer,
+  updateDemographics: UpdateDemographicsReducer,
   patientMedicationAllergy: PatientMedicationAllergyReducer,
 });
 
