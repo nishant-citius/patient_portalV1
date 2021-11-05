@@ -27,9 +27,4 @@ export default [
 
     urls: "https://kimsthospital.in/images/abt-bnr07.jpg",
   },
-  {
-    title: "",
-
-    urls: "https://kims-app-server.s3.ap-south-1.amazonaws.com/images/blogs/endoscopy-in-the-treatment-of-pancreatic-diseases_1615443806.png",
-  },
 ];
