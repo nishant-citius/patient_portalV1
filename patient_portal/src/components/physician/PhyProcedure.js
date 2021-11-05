@@ -40,6 +40,7 @@ function Proceduers(props) {
   useEffect(() => {
     getAllProcedure();
     setPatientId(props.patientId.patintId);
+    
   }, [patientId]);
 
   function onSubmit() {
