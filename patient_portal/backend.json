@@ -73,18 +73,18 @@
     },
     {
       "email": "aj@email.com",
-      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
       "fName": "Ajinkya",
       "lName": "Pathak",
       "dob": "2021-09-30",
-      "username": "aj@email.com",
+      "username": "Ajinkya20",
       "rpassword": "12345",
       "mobile": 9403541779,
       "blood_group": "b+ve",
       "role": "admin",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 2
+      "id": 2,
+      "password": "$2a$10$lPqkRUJQaApGdKtW/0AGjutbkDmFnEh6.xyd5hEcAu5FpHXF8Oa5S"
     },
     {
       "email": "mamatha@email.com",

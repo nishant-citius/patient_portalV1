@@ -9,6 +9,17 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Immunization from "../ImmunizationDetails";
 import Demographics from "../DemographicsDetails";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import ButtonBase from "@mui/material/ButtonBase";
+import { styled } from "@mui/material/styles";
+
+const Img = styled("img")({
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "100%",
+});
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -79,30 +90,52 @@ const UserDetails = (props) => {
             </Box>
             <TabPanel value={value} index={0}>
               <>
-                <div className="d-flex">
-                  <ul className="list-group w-50">
-                    <li className="list-group-item">
-                      <span className="fw-bold">Name:</span>
-                      {`${props.userDetails.fName}  ${props.userDetails.lName}`}
-                    </li>
-                    <li className="list-group-item">
-                      <span className="fw-bold">DOB:</span>
-                      {props.userDetails.dob}
-                    </li>
-                    <li className="list-group-item">
-                      <span className="fw-bold">Email:</span>
-                      {props.userDetails.email}
-                    </li>
-                    <li className="list-group-item">
-                      <span className="fw-bold">Contact No:</span>
-                      {props.userDetails.mobile}
-                    </li>
-                    <li className="list-group-item">
-                      <span className="fw-bold">Username:</span>
-                      {props.userDetails.username}
-                    </li>
-                  </ul>
-                </div>
+                <br></br>
+                <Paper
+                  sx={{ p: 2, margin: "auto", maxWidth: 500, flexGrow: 1 }}
+                >
+                  <Grid container spacing={4}>
+                    <Grid item>
+                      <ButtonBase sx={{ width: 128, height: 128 }}>
+                        <Img
+                          alt="complex"
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWU5Tv-gm4fwZdFgthv_z2a5sLSbdnGIJLw&usqp=CAU"
+                        />
+                      </ButtonBase>
+                    </Grid>
+                    <Grid item xs={12} sm container>
+                      <Grid item xs container direction="column" spacing={4}>
+                        <Grid item xs>
+                          <Typography variant="body2" gutterBottom>
+                            <span className="fw-bold"> Name : </span>
+                            {`${props.userDetails.fName}  ${props.userDetails.lName}`}
+                          </Typography>
+                          <hr></hr>
+                          <Typography variant="body2" gutterBottom>
+                            <span className="fw-bold">DOB : </span>
+                            {props.userDetails.dob}
+                          </Typography>
+                          <hr></hr>
+                          <Typography variant="body2" gutterBottom>
+                            <span className="fw-bold">Email : </span>
+                            {props.userDetails.email}
+                          </Typography>
+                          <hr></hr>
+                          <Typography variant="body2" gutterBottom>
+                            <span className="fw-bold">Contact No : </span>
+                            {props.userDetails.mobile}
+                          </Typography>
+                          <hr></hr>
+                          <Typography variant="body2" gutterBottom>
+                            <span className="fw-bold">Username : </span>
+                            {props.userDetails.username}
+                          </Typography>
+                          <hr></hr>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Paper>
               </>
             </TabPanel>
 
@@ -119,29 +152,52 @@ const UserDetails = (props) => {
             </TabPanel>
           </Box>
         ) : (
-          <div className="d-flex justify-content-center">
-            <ul className="list-group w-50">
-              <li className="list-group-item">
-                <span className="fw-bold">Name:</span>
-                {`${props.userDetails.fName}  ${props.userDetails.lName}`}
-              </li>
-              <li className="list-group-item">
-                <span className="fw-bold">DOB:</span> {props.userDetails.dob}
-              </li>
-              <li className="list-group-item">
-                <span className="fw-bold">Email:</span>
-                {props.userDetails.email}
-              </li>
-              <li className="list-group-item">
-                <span className="fw-bold">Contact No:</span>
-                {props.userDetails.mobile}
-              </li>
-              <li className="list-group-item">
-                <span className="fw-bold">Username:</span>
-                {props.userDetails.username}
-              </li>
-            </ul>
-          </div>
+          <>
+            <br></br>
+            <Paper sx={{ p: 2, margin: "auto", maxWidth: 500, flexGrow: 1 }}>
+              <Grid container spacing={4}>
+                <Grid item>
+                  <ButtonBase sx={{ width: 128, height: 128 }}>
+                    <Img
+                      alt="complex"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWU5Tv-gm4fwZdFgthv_z2a5sLSbdnGIJLw&usqp=CAU"
+                    />
+                  </ButtonBase>
+                </Grid>
+                <Grid item xs={12} sm container>
+                  <Grid item xs container direction="column" spacing={4}>
+                    <Grid item xs>
+                      <Typography variant="body2" gutterBottom>
+                        <span className="fw-bold"> Name : </span>
+                        {`${props.userDetails.fName}  ${props.userDetails.lName}`}
+                      </Typography>
+                      <hr></hr>
+                      <Typography variant="body2" gutterBottom>
+                        <span className="fw-bold">DOB : </span>
+                        {props.userDetails.dob}
+                      </Typography>
+                      <hr></hr>
+                      <Typography variant="body2" gutterBottom>
+                        <span className="fw-bold">Email : </span>
+                        {props.userDetails.email}
+                      </Typography>
+                      <hr></hr>
+                      <Typography variant="body2" gutterBottom>
+                        <span className="fw-bold">Contact No : </span>
+                        {props.userDetails.mobile}
+                      </Typography>
+                      <hr></hr>
+                      <Typography variant="body2" gutterBottom>
+                        <span className="fw-bold">Username : </span>
+                        {props.userDetails.username}
+                      </Typography>
+                      <hr></hr>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Paper>
+          </>
         )}
       </div>
     </>

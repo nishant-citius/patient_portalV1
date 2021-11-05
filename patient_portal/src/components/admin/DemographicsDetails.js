@@ -123,8 +123,6 @@ const DemographicsDetails = (props) => {
       >
         {(props) => (
           <div className="container">
-            <h4 className="text-center pt-5">Patient Demographics</h4>
-
             <Form>
               <div className="row justify-content-center">
                 <div className="col-12 col-md-6">
