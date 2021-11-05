@@ -165,6 +165,11 @@ function AppToolBar(props) {
     todaysAppointments(new Date().toISOString().slice(0, 10));
   }, []);
 
+  function userProfile() {
+    handleClose();
+    history.push("/userProfile");
+  }
+
   const todaysAppointments = (_date) => {
     adminService.appointmentsToday(_date).then(
       (response) => {
@@ -247,7 +252,7 @@ function AppToolBar(props) {
                 keepMounted
                 open={Boolean(anchorEl)}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={userProfile}>Profile</MenuItem>
                 <MenuItem onClick={Logout}>Logout</MenuItem>
               </Menu>
             </div>

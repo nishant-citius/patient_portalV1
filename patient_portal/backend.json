@@ -2,18 +2,18 @@
   "users": [
     {
       "email": "nc@email.com",
-      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
       "username": "nc@email.com",
       "rpassword": "12345",
-      "mobile": 1234567890,
+      "mobile": "9403541779",
       "blood_group": "b+ve",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1
+      "id": 1,
+      "password": "$2a$10$09301WyTUTj518VadM9W.eiLTabSsgnOQsJ9LgxeLPg2goLFwuh4a"
     },
     {
       "email": "sumitha@gmail.com",
@@ -358,7 +358,7 @@
       "username": "Sudhir K",
       "mobile": "6789468988",
       "role": "physician",
-      "speciality": "",
+      "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 32
