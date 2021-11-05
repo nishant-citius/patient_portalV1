@@ -64,6 +64,7 @@ const Patient_dashboard = (props) => {
       }
     }
   }, []);
+  console.log(props.patientvitalsDetails);
 
   return (
     <>

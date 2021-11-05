@@ -41,6 +41,8 @@ import Appointmentstoday from "./physician/Appointmentstoday";
 import AttendAppointment from "./physician/AttendAppointment";
 import AllergyDetails from "./admin/AllergyDetails";
 import AddAllergy from "./admin/AddAllergy";
+import Patient_Education from "./patient/Patient_Education";
+import Patient_orders from "./patient/Patient_orders";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -92,7 +94,6 @@ function ShellComponent(props) {
           <RegisterUser flashNotification={showSnacksBar} />
         </Route>
         {/* -----------Common------------- */}
-
         {/* -----------Admin------------- */}
         <Route path="/admin">
           <AdminDashboard flashNotification={showSnacksBar} />
@@ -128,14 +129,11 @@ function ShellComponent(props) {
           <EditUser flashNotification={showSnacksBar} />
         </Route>
         {/* -----------Admin------------- */}
-
         {/* -----------Physician------------- */}
         <Route path="/physician" component={Physician_dashboard} />
         <Route path={"/patientdata"} component={PatientList1} />
-
         <Route path={"/patientinactive"} component={PatientInactiveError} />
         <Route path={"/pappointments"} component={AppointmentList} />
-
         <Route
           path={"/physician_appointments"}
           component={PhysicianAppointment}
@@ -143,17 +141,13 @@ function ShellComponent(props) {
         <Route path={"/schedule_appointment"}>
           <ScheduleAppointment flashNotification={showSnacksBar} />
         </Route>
-
         <Route path={"/appointmentstoday"}>
           <Appointmentstoday flashNotification={showSnacksBar} />
         </Route>
-
         <Route path={"/attendAppointment/:patintId"}>
           <AttendAppointment flashNotification={showSnacksBar} />
         </Route>
-
         {/* -----------Physician------------- */}
-
         {/* -----------Patient------------- */}
         <Route path="/patient" component={Patient_dashboard} />
         <Route path="/demographics" component={Demographics}>
@@ -173,6 +167,9 @@ function ShellComponent(props) {
           path={"/patientdemographics/userid"}
           component={PatientDemographics}
         />
+        <Route path="/order" component={Patient_orders} />
+
+        <Route path="/patient_education" component={Patient_Education} />
         {/* -----------Patient------------- */}
       </Switch>
     </div>
