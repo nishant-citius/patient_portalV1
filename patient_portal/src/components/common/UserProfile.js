@@ -26,7 +26,6 @@ function UserProfile(props) {
   useEffect(() => {
     setUser(props.currentUser);
     doctorSpeciality();
-    console.log(user);
   }, [0]);
 
   function handleAdminNotification() {
@@ -41,9 +40,10 @@ function UserProfile(props) {
 
   const submitUserData = (e) => {
     e.preventDefault();
-    let newUserData = { ...user };
-
+    let newUserData = { ...user, password: props.currentUser.rpassword };
     props.updateUser(props.currentUser.id, newUserData);
+    props.getUserDetails(props.currentUser.id);
+    setUser(props.userDetails);
     setOpenPopup(false);
   };
 
@@ -156,21 +156,26 @@ function UserProfile(props) {
               </select>
             </div>
             <br />
-            <div className="form-group">
-              <label>Speciality</label>
-              <select
-                className="form-control"
-                name="speciality"
-                id="speciality"
-                value={user.speciality}
-                onChange={handleUserChange}
-                disabled={true}
-              >
-                <option value={user.speciality}>
-                  {user.speciality.toUpperCase()}
-                </option>
-              </select>
-            </div>
+            {user.role === "physician" ? (
+              <div className="form-group">
+                <label>Speciality</label>
+                <select
+                  className="form-control"
+                  name="speciality"
+                  id="speciality"
+                  value={user.speciality}
+                  onChange={handleUserChange}
+                  disabled={true}
+                >
+                  <option value={user.speciality}>
+                    {user.speciality.toUpperCase()}
+                  </option>
+                </select>
+              </div>
+            ) : (
+              ""
+            )}
+
             <br />
             <button type="submit" className="btn btn-primary mt-4">
               Save Details
@@ -229,6 +234,7 @@ function UserProfile(props) {
 const mapStatetoProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
+    userDetails: state.userDetails.userDetails,
   };
 };
 
@@ -236,6 +242,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     updateUser: (userId, updatedData) =>
       dispatch(actions.EditUser(userId, updatedData)),
+    getUserDetails: (userId) => dispatch(actions.GetUserDetails(userId)),
   };
 };
 
