@@ -28,7 +28,7 @@ import {
 const useStyles = makeStyles((theme) => ({
   container: {
     // // borderRadius: "10px",
-    // height: "100vh",
+    // height: "auto",
     // // color: "black",
     // paddingTop: theme.spacing(10),
     // backgroundColor: "#3f51b5",
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#3f51b5",
     position: "fixed",
     paddingTop: theme.spacing(4),
-    top: "80px",
+    top: "75px",
 
     [theme.breakpoints.up("sm")]: {
       maxWidth: "210px",
@@ -63,16 +63,17 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     marginRight: theme.spacing(1),
     [theme.breakpoints.up("sm")]: {
-      fontSize: "18px",
+      fontSize: "16px",
     },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "25px",
+      fontSize: "20px",
     },
   },
   text: {
     fontSize: "13px",
     marginBottom: "0",
     color: "#fff",
+    fontFamily: "sans-serif",
     fontWeight: "normal",
     [theme.breakpoints.down("sm")]: {
       display: "none",

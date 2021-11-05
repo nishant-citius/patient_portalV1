@@ -6,8 +6,31 @@ import * as Yup from "yup";
 import { useHistory } from "react-router";
 import isValid from "date-fns/isValid";
 import { de } from "date-fns/locale";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+    width: "80vw",
+  },
+  tablehead: {
+    background: "#b7c1f7",
+  },
+}));
 
 const Immunization = (props) => {
+  const classes = useStyles();
   const [isAvailable, setIsAvailable] = useState(false);
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -76,46 +99,58 @@ const Immunization = (props) => {
             <div className="card-header text-center">Immunization Details</div>
             <div className="card-body text-center">
               <h4>Covid Vaccine Details</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Age Category</th>
-                    <th scope="col">Vaccine Brand</th>
-                    <th scope="col">Dose Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{props.immunizationDetails.age_category}</td>
-                    <td>{props.immunizationDetails.vaccine_brand}</td>
-                    <td>{props.immunizationDetails.dose_detail}</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Age Category</TableCell>
+                      <TableCell scope="col">Vaccine Brand</TableCell>
+                      <TableCell scope="col">Dose Details</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>
+                        {props.immunizationDetails.age_category}
+                      </TableCell>
+                      <TableCell>
+                        {props.immunizationDetails.vaccine_brand}
+                      </TableCell>
+                      <TableCell>
+                        {props.immunizationDetails.dose_detail}
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
               <h4>General Vaccine Details</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Vaccine Name</th>
-                    <th scope="col">Vaccine Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.immunizationDetails.general_vaccine.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.vaccine_name}</td>
-                        <td>{item.vaccine_date}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Vaccine Name</TableCell>
+                      <TableCell scope="col">Vaccine Date</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {props.immunizationDetails.general_vaccine.map(function (
+                      item,
+                      index
+                    ) {
+                      return (
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.vaccine_name}</TableCell>
+                          <TableCell>{item.vaccine_date}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
             </div>
           </div>
         </div>
