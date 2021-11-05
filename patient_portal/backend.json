@@ -2,18 +2,18 @@
   "users": [
     {
       "email": "nc@email.com",
+      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
       "fName": "Nishant",
       "lName": "Chaubey",
-      "dob": "2021-04-06",
-      "username": "Nishant C.",
+      "dob": "2021-09-30",
+      "username": "nc@email.com",
       "rpassword": "12345",
-      "mobile": "8888888888",
+      "mobile": 1234567890,
       "blood_group": "b+ve",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1,
-      "password": "$2a$10$Nco9qlh6BpU1krvCpWUKVewsrjxSjPreOZQntKVa8Lz0pxDlQiLsa"
+      "id": 1
     },
     {
       "email": "sumitha@gmail.com",
@@ -344,7 +344,6 @@
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "rpassword": "12345",
       "speciality": "neurology",
       "createdDate": "Thu Nov 04 2021 01:03:24 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -359,44 +358,15 @@
       "username": "Sudhir K",
       "mobile": "6789468988",
       "role": "physician",
-      "speciality": "neurology",
+      "speciality": "",
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 32
-    },
-    {
-      "email": "renu@email.com",
-      "password": "$2a$10$lfxQwiC/CM1hwJvRSaJ0k.sue6dTHm9JmJiAhekKwWg6rHrrcrkOO",
-      "fName": "Renu",
-      "lName": "Mahendra",
-      "dob": "2021-11-05",
-      "username": "RenuMahendra",
-      "mobile": "9876897685",
-      "role": "nurse",
-      "speciality": "",
-      "createdDate": "Fri Nov 05 2021 10:30:15 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 57
-    },
-    {
-      "email": "drsteve@email.com",
-      "password": "$2a$10$mPxYY81alJo3oKwK0Bk5ge/Q06Bz8uvCxNQjwfLILsjPezuonEBAm",
-      "fName": "Dr. Steven",
-      "lName": "Strange",
-      "dob": "2020-12-28",
-      "username": "Steve",
-      "mobile": "1234567890",
-      "role": "physician",
-      "speciality": "surgery",
-      "rpassword": "12345",
-      "createdDate": "Fri Nov 05 2021 15:37:07 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 58
     }
   ],
   "medic_allergy": [
     {
-      "userid": 1,
+      "userid": 56,
       "current_medication": [
         {
           "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
@@ -431,12 +401,159 @@
       ],
       "allergies": [
         {
+          "allergyName": "skin",
+          "symptomsofAllergy": "rashes",
+          "drugAllergy": "dolo"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "HEPARIN SODIUM10,000 UNITS/ML",
+          "dosage": "1.0",
+          "directionstoconsume": "injection",
+          "physicianName": "shiva prasad",
+          "startDate": "2021-11-04",
+          "endDate": "2021-11-05"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "na",
+          "symptomsofAllergy": "na",
+          "drugAllergy": "na"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
+          "dosage": "",
+          "directionstoconsume": "",
+          "physicianName": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
           "allergyName": "",
           "symptomsofAllergy": "",
           "drugAllergy": ""
         }
       ],
-      "id": 1
+      "id": 3
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
+          "dosage": "gvfvs",
+          "directionstoconsume": "qdvv",
+          "physicianName": "uwgfug",
+          "startDate": "2021-11-04",
+          "endDate": "2021-11-13"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "iwgdu",
+          "symptomsofAllergy": "fkudvf",
+          "drugAllergy": "afljhbah"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
+          "dosage": "dquyouy",
+          "directionstoconsume": "iowuhri",
+          "physicianName": "rywgeriy",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "geig",
+          "symptomsofAllergy": "riygr",
+          "drugAllergy": "irehiugy"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
+          "dosage": "dquyouy",
+          "directionstoconsume": "iowuhri",
+          "physicianName": "rywgeriy",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "geig",
+          "symptomsofAllergy": "riygr",
+          "drugAllergy": "irehiugy"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE1,000 UNITS/ML",
+          "dosage": "",
+          "directionstoconsume": "",
+          "physicianName": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 7
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "BUTISOL SODIUM50MG",
+          "dosage": "",
+          "directionstoconsume": "",
+          "physicianName": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 8
     }
   ],
   "immunization": [
@@ -560,7 +677,7 @@
       "createdBy": "neerajthakur",
       "createdDate": "2021-11-03T04:05:12.101Z",
       "patientId": 27,
-      "status": "approved",
+      "status": "reject",
       "id": 6
     },
     {
@@ -614,7 +731,7 @@
       "createdBy": "VijayaC",
       "createdDate": "2021-11-03T05:08:35.020Z",
       "patientId": 56,
-      "status": "approved",
+      "status": "reject",
       "id": 9
     },
     {
@@ -632,7 +749,7 @@
       "createdBy": "MahendaSingh",
       "createdDate": "2021-11-03T05:15:07.232Z",
       "patientId": 54,
-      "status": "approved",
+      "status": "reject",
       "id": 10
     },
     {
@@ -729,16 +846,16 @@
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
-      "mobile_no": 1234567890,
-      "doc_id": 26,
-      "doc_name": "Manoj Thormamidi",
-      "appointment_title": "High Fever",
-      "appointment_start_time": "17:05",
-      "appointment_end_time": "18:06",
+      "mobile_no": 8801888988,
+      "doc_id": 56,
+      "doc_name": "shiva  prasad",
+      "appointment_title": "neck pain",
+      "appointment_start_time": "01:39",
+      "appointment_end_time": "10:43",
       "appointmentDate": "2021-11-05",
-      "appointment_desc": "High Fever With Body Pain",
+      "appointment_desc": "neck pain",
       "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-05T10:36:27.356Z",
+      "createdDate": "2021-11-05T05:11:47.771Z",
       "patientId": 1,
       "status": "approved",
       "id": 14
@@ -806,7 +923,7 @@
       "pulse": "77",
       "respiration": "78",
       "oxigen_saturation": "92",
-      "physicianId": 26,
+      "physicianId": 56,
       "patientId": "1",
       "id": 1
     }
@@ -10806,7 +10923,18 @@
     }
   ],
   "patientdietplan": [
-    
+    {
+      "earlymorning": "yoga, walking/skipping",
+      "breakfast": "Dosa/Chappathi",
+      "mid_morning": "apple/gua/orange-1 cup",
+      "lunch": "Roti with lots of veggies",
+      "evening": "buscuits/tea",
+      "dinner": "Rice/Chapathi with less oil",
+      "post_dinner_activity": "try to walk for a while",
+      "bedtime": "skim milk 1-glass",
+      "physicianId": 12,
+      "id": 1
+    }
   ],
   "patient_procedures": [
     {
@@ -10817,11 +10945,39 @@
       "id": 1
     },
     {
+      "doc_id": 56,
+      "patientId": "1",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 2
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "desc": "Bypass Cerebral Ventricle to Pleural Cavity with Autologous Tissue Substitute, Open Approach",
+      "code": "16074",
+      "id": 3
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 4
+    },
+    {
       "doc_id": 55,
       "patientId": "24",
       "desc": "Bypass Cerebral Ventricle to Blood Vessel with Autologous Tissue Substitute, Open Approach",
       "code": "16073",
       "id": 5
+    },
+    {
+      "doc_id": 55,
+      "patientId": "24",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 6
     }
   ],
   "patient_diagnosis": [
@@ -10838,6 +10994,20 @@
       "description": "Typhoid fever",
       "code": "A010",
       "id": 2
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": 0,
+      "code": "",
+      "id": 3
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Typhoid and paratyphoid fevers",
+      "code": "A01",
+      "id": 4
     }
   ]
 }
