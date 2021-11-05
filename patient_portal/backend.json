@@ -366,194 +366,95 @@
   ],
   "medic_allergy": [
     {
-      "userid": 56,
+      "id": 1,
+      "userid": "1",
       "current_medication": [
         {
-          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
-          "dosage": "hjghjgjgj",
-          "directionstoconsume": "uhuhihkh",
-          "frequency": "",
-          "physicianName": "uiiiohih",
-          "purpose": "",
-          "startDate": "2021-11-17",
-          "endDate": "2021-12-03"
+          "medicineName": "DIETHYLSTILBESTROL0.1MG",
+          "dosage": "10",
+          "directionstoconsume": "once",
+          "physicianName": "Nishant",
+          "startDate": "2021-11-26",
+          "endDate": "2021-11-26"
         }
       ],
       "otc_medication": [
         {
-          "otcDrugName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "strength": "",
-          "directiontoconsume": "jhiuiku",
-          "socialDrugs": "smoke"
-        },
-        {
-          "otcDrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
-          "directiontoconsume": "jgjgjgug",
+          "otcDrugName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
+          "directiontoconsume": "niununi",
           "socialDrugs": "drink"
         }
       ],
       "past_medication": [
         {
-          "pastdrugName": "HEPARIN SODIUM5,000 UNITS/ML",
-          "strength": "",
-          "directiontoconsume": "khkhlkl"
+          "pastdrugName": "HISTAMINE PHOSPHATEEQ 1MG BASE/ML",
+          "directiontoconsume": "kmkmii"
+        },
+        null,
+        [
+          null
+        ],
+        [
+          null
+        ],
+        {
+          "medicineName": "DIETHYLSTILBESTROL0.1MG",
+          "dosage": "10",
+          "directionstoconsume": "once",
+          "physicianName": "Nishant",
+          "startDate": "2021-11-26",
+          "endDate": "2021-11-26"
         }
       ],
       "allergies": [
         {
-          "allergyName": "skin",
-          "symptomsofAllergy": "rashes",
-          "drugAllergy": "dolo"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "HEPARIN SODIUM10,000 UNITS/ML",
-          "dosage": "1.0",
-          "directionstoconsume": "injection",
-          "physicianName": "shiva prasad",
-          "startDate": "2021-11-04",
-          "endDate": "2021-11-05"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "na",
-          "symptomsofAllergy": "na",
-          "drugAllergy": "na"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
-          "dosage": "gvfvs",
-          "directionstoconsume": "qdvv",
-          "physicianName": "uwgfug",
-          "startDate": "2021-11-04",
-          "endDate": "2021-11-13"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "iwgdu",
-          "symptomsofAllergy": "fkudvf",
-          "drugAllergy": "afljhbah"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "dosage": "dquyouy",
-          "directionstoconsume": "iowuhri",
-          "physicianName": "rywgeriy",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "geig",
-          "symptomsofAllergy": "riygr",
-          "drugAllergy": "irehiugy"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "dosage": "dquyouy",
-          "directionstoconsume": "iowuhri",
-          "physicianName": "rywgeriy",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "geig",
-          "symptomsofAllergy": "riygr",
-          "drugAllergy": "irehiugy"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE1,000 UNITS/ML",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "BUTISOL SODIUM50MG",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 8
+          "allergyName": "jbuybyub",
+          "symptomsofAllergy": "inunun",
+          "drugAllergy": "ununun"
+        },
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ]
+      ]
     }
   ],
   "immunization": [
@@ -859,6 +760,24 @@
       "patientId": 1,
       "status": "approved",
       "id": 14
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 1234567890,
+      "doc_id": 26,
+      "doc_name": "Manoj Thormamidi",
+      "appointment_title": "edeedededede",
+      "appointment_start_time": "23:51",
+      "appointment_end_time": "12:51",
+      "appointmentDate": "2021-11-05",
+      "appointment_desc": "ccrrr",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-05T14:21:50.487Z",
+      "patientId": 1,
+      "status": "approved",
+      "id": 15
     }
   ],
   "demographics": [
