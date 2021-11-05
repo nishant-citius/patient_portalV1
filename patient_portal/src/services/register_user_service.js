@@ -207,6 +207,7 @@ class AdminServices {
     const url = `${URLS.BASE_URL}/patientdietplan?patientId=${patientId}`;
     return axios.get(url);
   }
+
   updatePatientDiet(patientId, data) {
     let url = `${URLS.BASE_URL}/patientdietplan/${patientId}`;
     let config = {

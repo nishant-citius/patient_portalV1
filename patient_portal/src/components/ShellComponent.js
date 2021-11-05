@@ -31,9 +31,7 @@ import UserList from "../components/admin/Userslist";
 
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
-import MyProfile from "./patient/MyProfile";
 import Notification from "shared/notification/Notification";
-import { object } from "yup/lib/locale";
 import AppointmentList from "./patient/AppointmentList";
 import ScheduleAppointment from "./patient/ScheduleAppointment";
 import PhysicianAppointment from "./physician/PhysicianAppointment";
@@ -41,6 +39,7 @@ import Appointmentstoday from "./physician/Appointmentstoday";
 import AttendAppointment from "./physician/AttendAppointment";
 import AllergyDetails from "./admin/AllergyDetails";
 import AddAllergy from "./admin/AddAllergy";
+import UserProfile from "components/common/UserProfile";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -90,6 +89,9 @@ function ShellComponent(props) {
         </Route>
         <Route path="/registeruser">
           <RegisterUser flashNotification={showSnacksBar} />
+        </Route>
+        <Route path="/userProfile">
+          <UserProfile flashNotification={showSnacksBar} />
         </Route>
         {/* -----------Common------------- */}
 
@@ -165,7 +167,6 @@ function ShellComponent(props) {
         <Route path="/patientvitals" component={PatientVitals} />
         <Route path="/vitals" component={Vitals} />
         <Route path="/dietplan" component={DietPlan} />
-        <Route path="/myprofile" component={MyProfile} />
         <Route path="/medic_allergy" component={Medication_Allergies}>
           <Medication_Allergies flashNotification={showSnacksBar} />
         </Route>

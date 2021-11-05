@@ -2,18 +2,18 @@
   "users": [
     {
       "email": "nc@email.com",
-      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
       "fName": "Nishant",
       "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "username": "nc@email.com",
+      "dob": "2021-04-06",
+      "username": "Nishant C.",
       "rpassword": "12345",
-      "mobile": 1234567890,
+      "mobile": "8888888888",
       "blood_group": "b+ve",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1
+      "id": 1,
+      "password": "$2a$10$Nco9qlh6BpU1krvCpWUKVewsrjxSjPreOZQntKVa8Lz0pxDlQiLsa"
     },
     {
       "email": "sumitha@gmail.com",
@@ -344,6 +344,7 @@
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "neurology",
       "createdDate": "Thu Nov 04 2021 01:03:24 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -358,7 +359,7 @@
       "username": "Sudhir K",
       "mobile": "6789468988",
       "role": "physician",
-      "speciality": "",
+      "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 32
@@ -376,6 +377,21 @@
       "createdDate": "Fri Nov 05 2021 10:30:15 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 57
+    },
+    {
+      "email": "drsteve@email.com",
+      "password": "$2a$10$mPxYY81alJo3oKwK0Bk5ge/Q06Bz8uvCxNQjwfLILsjPezuonEBAm",
+      "fName": "Dr. Steven",
+      "lName": "Strange",
+      "dob": "2020-12-28",
+      "username": "Steve",
+      "mobile": "1234567890",
+      "role": "physician",
+      "speciality": "surgery",
+      "rpassword": "12345",
+      "createdDate": "Fri Nov 05 2021 15:37:07 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 58
     }
   ],
   "medic_allergy": [
