@@ -3,6 +3,18 @@ import { connect } from "react-redux";
 import EditDialog from "shared/dialog/EditDialog";
 import * as actions from "../../redux/actions/userActionCreater";
 import { adminService } from "../../services/register_user_service";
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import ButtonBase from "@mui/material/ButtonBase";
+
+const Img = styled("img")({
+  margin: "auto",
+  display: "block",
+  maxWidth: "100%",
+  maxHeight: "100%",
+});
 
 function UserProfile(props) {
   const [openPopup, setOpenPopup] = useState(false);
@@ -188,38 +200,66 @@ function UserProfile(props) {
 
   return (
     <>
-      <h1>This is UserProile</h1>
-      <div className="d-flex">
-        <ul className="list-group w-50">
-          <li className="list-group-item">
-            <span className="fw-bold">Name:</span>
-            {`${props.currentUser.fName}  ${props.currentUser.lName}`}
-          </li>
-          <li className="list-group-item">
-            <span className="fw-bold">DOB:</span>
-            {props.currentUser.dob}
-          </li>
-          <li className="list-group-item">
-            <span className="fw-bold">Email:</span>
-            {props.currentUser.email}
-          </li>
-          <li className="list-group-item">
-            <span className="fw-bold">Contact No:</span>
-            {props.currentUser.mobile}
-          </li>
-          <li className="list-group-item">
-            <span className="fw-bold">Username:</span>
-            {props.currentUser.username}
-          </li>
-        </ul>
-      </div>
-      <br />
-      <button
-        onClick={() => handleAdminNotification()}
-        className="btn btn-primary mt-4"
+      <br></br>
+      <h5
+        style={{ color: "#b7c1f7" }}
+        className="text-success text-center fw-bold "
       >
-        Edit User Details
-      </button>
+        UPDATE PROFILE
+      </h5>
+      <br></br>
+      <Paper sx={{ p: 2, margin: "auto", maxWidth: 500, flexGrow: 1 }}>
+        <Grid container spacing={4}>
+          <Grid item>
+            <ButtonBase sx={{ width: 128, height: 128 }}>
+              <Img
+                alt="complex"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWU5Tv-gm4fwZdFgthv_z2a5sLSbdnGIJLw&usqp=CAU"
+              />
+            </ButtonBase>
+          </Grid>
+          <Grid item xs={12} sm container>
+            <Grid item xs container direction="column" spacing={4}>
+              <Grid item xs>
+                <Typography variant="body2" gutterBottom>
+                  <span className="fw-bold"> Name : </span>
+                  {`${props.currentUser.fName}  ${props.currentUser.lName}`}
+                </Typography>
+                <hr></hr>
+                <Typography variant="body2" gutterBottom>
+                  <span className="fw-bold">DOB : </span>
+                  {props.currentUser.dob}
+                </Typography>
+                <hr></hr>
+                <Typography variant="body2" gutterBottom>
+                  <span className="fw-bold">Email : </span>
+                  {props.currentUser.email}
+                </Typography>
+                <hr></hr>
+                <Typography variant="body2" gutterBottom>
+                  <span className="fw-bold">Contact No : </span>
+                  {props.currentUser.mobile}
+                </Typography>
+                <hr></hr>
+                <Typography variant="body2" gutterBottom>
+                  <span className="fw-bold">Username : </span>
+                  {props.currentUser.username}
+                </Typography>
+                <hr></hr>
+                <Typography variant="subtitle1" component="div">
+                  <button
+                    onClick={() => handleAdminNotification()}
+                    className="btn btn-primary mt-4"
+                  >
+                    Edit User Details
+                  </button>
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Paper>
+
       <EditDialog
         title="Edit User Details"
         openPopup={openPopup}
