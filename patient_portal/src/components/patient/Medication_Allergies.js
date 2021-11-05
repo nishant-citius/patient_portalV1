@@ -60,14 +60,15 @@ const Medication_Allergies = (props) => {
   function getStrength() {
     let medicine = document.getElementById("medication_name").value;
     let arr = medicationList.filter((item) => {
-      if (item.Form === medicine) {
+      if (item.DrugName === medicine) {
         return item;
       }
     });
+    console.log("Medicine Strength", medicine);
     setmedicineStrength(arr);
     return arr;
   }
-  console.log("Medicine Strength", medicineStrength);
+
   const initialValues = {
     id: "",
     userId: "",
@@ -113,9 +114,7 @@ const Medication_Allergies = (props) => {
       temp.medicineName = v.medicineName;
       temp.dosage = v.dosage;
       temp.directionstoconsume = v.directionstoconsume;
-      temp.frequency = v.frequency;
       temp.physicianName = v.physicianName;
-      temp.purpose = v.purpose;
       temp.startDate = v.startDate;
       temp.endDate = v.endDate;
       return temp;
@@ -123,7 +122,6 @@ const Medication_Allergies = (props) => {
     let om = values.otc_medication.map((v) => {
       let temp = {};
       temp.otcDrugName = v.otcDrugName;
-      temp.strength = v.strength;
       temp.directiontoconsume = v.directiontoconsume;
       temp.socialDrugs = v.socialDrugs;
       return temp;
@@ -131,7 +129,6 @@ const Medication_Allergies = (props) => {
     let pm = values.past_medication.map((v) => {
       let temp = {};
       temp.pastdrugName = v.pastdrugName;
-      temp.strength = v.strength;
       temp.directiontoconsume = v.directiontoconsume;
       return temp;
     });
@@ -149,6 +146,7 @@ const Medication_Allergies = (props) => {
       past_medication: pm,
       allergies: al,
     };
+    console.log("Happpppppppp", payload);
     props.medication_allergies(payload);
     props.flashNotification({
       message: "Medication and Allergy added...",
@@ -163,7 +161,7 @@ const Medication_Allergies = (props) => {
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
             <div className="card-header text-center">
-              <h3>Immunization Details</h3>
+              <h3>Medication And Allergies</h3>
             </div>
             <div className="card-body text-center">
               <h5>Current Medication</h5>
@@ -173,11 +171,9 @@ const Medication_Allergies = (props) => {
                     <TableRow>
                       <TableCell scope="col">Sr.No</TableCell>
                       <TableCell scope="col">Medicine Name</TableCell>
-                      <TableCell scope="col">Direction To Consume</TableCell>
                       <TableCell scope="col">Dose Details</TableCell>
-                      <TableCell scope="col">Frequency</TableCell>
+                      <TableCell scope="col">Direction To Consume</TableCell>
                       <TableCell scope="col">Physician Name</TableCell>
-                      <TableCell scope="col">Purpose</TableCell>
                       <TableCell scope="col">Start Date</TableCell>
                       <TableCell scope="col">End Date</TableCell>
                     </TableRow>
@@ -193,9 +189,7 @@ const Medication_Allergies = (props) => {
                           <TableCell>{item.medicineName}</TableCell>
                           <TableCell>{item.dosage}</TableCell>
                           <TableCell>{item.directionstoconsume}</TableCell>
-                          <TableCell>{item.frequency}</TableCell>
                           <TableCell>{item.physicianName}</TableCell>
-                          <TableCell>{item.purpose}</TableCell>
                           <TableCell>{item.startDate}</TableCell>
                           <TableCell>{item.endDate}</TableCell>
                         </TableRow>
@@ -212,7 +206,6 @@ const Medication_Allergies = (props) => {
                     <TableRow>
                       <TableCell scope="col">Sr.No</TableCell>
                       <TableCell scope="col">Otc Drug Name</TableCell>
-                      <TableCell scope="col">StrengTableCell</TableCell>
                       <TableCell scope="col">Direction To Consume</TableCell>
                       <TableCell scope="col">Social Drug</TableCell>
                     </TableRow>
@@ -226,7 +219,6 @@ const Medication_Allergies = (props) => {
                         <TableRow key={index}>
                           <TableCell>{index + 1}</TableCell>
                           <TableCell>{item.otcDrugName}</TableCell>
-                          <TableCell>{item.strengTableCell}</TableCell>
                           <TableCell>{item.directiontoconsume}</TableCell>
                           <TableCell>{item.socialDrugs}</TableCell>
                         </TableRow>
@@ -243,7 +235,6 @@ const Medication_Allergies = (props) => {
                     <TableRow>
                       <TableCell scope="col">Sr.No</TableCell>
                       <TableCell scope="col">Drug Name</TableCell>
-                      <TableCell scope="col">StrengTableCell</TableCell>
                       <TableCell scope="col">Direction To Consume</TableCell>
                     </TableRow>
                   </TableHead>
@@ -256,7 +247,6 @@ const Medication_Allergies = (props) => {
                         <TableRow key={index}>
                           <TableCell>{index + 1}</TableCell>
                           <TableCell>{item.pastdrugName}</TableCell>
-                          <TableCell>{item.strength}</TableCell>
                           <TableCell>{item.directiontoconsume}</TableCell>
                         </TableRow>
                       );
@@ -329,46 +319,31 @@ const Medication_Allergies = (props) => {
                                       (current_medication, index) => (
                                         <div key={index}>
                                           <div className="row">
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
-                                                  Medicine Name
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`current_medication[${index}].medicineName`}
-                                                  placeholder="Please enter medicine name"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="current_medication.medicineName" />
-                                                </div>
-                                              </div>
-                                              {/* <Stack
-                                                spacing={2}
-                                                sx={{ width: 300 }}
-                                              > */}
-                                              {/* <Autocomplete
-                                                freeSolo
-                                                id="medication_name"
+                                            <div className="col-12 col-md-6">
+                                              <label htmlFor="user name">
+                                                Medicine Name
+                                              </label>
+                                              <Field
+                                                as="select"
+                                                className="form-control"
                                                 name={`current_medication[${index}].medicineName`}
-                                                disableClearable
-                                                options={medicationList.map(
-                                                  (option) => option.Form
+                                              >
+                                                <option value="">Select</option>
+                                                {medicationList.map(
+                                                  (medicine, index) => (
+                                                    <option
+                                                      value={
+                                                        medicine.DrugName +
+                                                        medicine.Strength
+                                                      }
+                                                      key={index}
+                                                    >
+                                                      {medicine.DrugName +
+                                                        medicine.Strength}
+                                                    </option>
+                                                  )
                                                 )}
-                                                onChange={getStrength}
-                                                renderInput={(params) => (
-                                                  <TextField
-                                                    {...params}
-                                                    label="Search input"
-                                                    InputProps={{
-                                                      ...params.InputProps,
-                                                      type: "search",
-                                                    }}
-                                                  />
-                                                )}
-                                              /> */}
-                                              {/* </Stack> */}
+                                              </Field>
                                             </div>
                                             <div className="col-12 col-md-3">
                                               <div className="form-group">
@@ -405,22 +380,6 @@ const Medication_Allergies = (props) => {
                                             <div className="col-12 col-md-3">
                                               <div className="form-group">
                                                 <label htmlFor="user name">
-                                                  Frequency
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`current_medication[${index}].frequency`}
-                                                  placeholder="Please enter frequency"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="current_medication.directionstoconsume" />
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
                                                   Physician Name
                                                 </label>
                                                 <Field
@@ -431,22 +390,6 @@ const Medication_Allergies = (props) => {
                                                 />
                                                 <div className="error">
                                                   <ErrorMessage name="current_medication.physicianName" />
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
-                                                  Purpose
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`current_medication[${index}].purpose`}
-                                                  placeholder="Please enter purpose"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="current_medication.purpose" />
                                                 </div>
                                               </div>
                                             </div>
@@ -528,35 +471,42 @@ const Medication_Allergies = (props) => {
                                       (otc_medication, index) => (
                                         <div key={index}>
                                           <div className="row">
-                                            <div className="col-12 col-md-3">
+                                            <div className="col-12 col-md-6">
                                               <div className="form-group">
                                                 <label htmlFor="user name">
                                                   Otc Drug Name
                                                 </label>
-                                                <Field
+                                                {/* <Field
                                                   type="text"
                                                   className="form-control"
                                                   name={`otc_medication[${index}].otcDrugName`}
                                                   placeholder="Please enter medicine name"
-                                                />
+                                                /> */}
+                                                <Field
+                                                  as="select"
+                                                  className="form-control"
+                                                  name={`otc_medication[${index}].otcDrugName`}
+                                                >
+                                                  <option value="">
+                                                    Select
+                                                  </option>
+                                                  {medicationList.map(
+                                                    (medicine, index) => (
+                                                      <option
+                                                        value={
+                                                          medicine.DrugName +
+                                                          medicine.Strength
+                                                        }
+                                                        key={index}
+                                                      >
+                                                        {medicine.DrugName +
+                                                          medicine.Strength}
+                                                      </option>
+                                                    )
+                                                  )}
+                                                </Field>
                                                 <div className="error">
                                                   <ErrorMessage name="otc_medication.otcDrugName" />
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
-                                                  Strength
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`otc_medication[${index}].strength`}
-                                                  placeholder="Please enter strength"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="otc_medication.strength" />
                                                 </div>
                                               </div>
                                             </div>
@@ -654,34 +604,42 @@ const Medication_Allergies = (props) => {
                                       (past_medication, index) => (
                                         <div key={index}>
                                           <div className="row">
-                                            <div className="col-12 col-md-3">
+                                            <div className="col-12 col-md-6">
                                               <div className="form-group">
                                                 <label htmlFor="user name">
                                                   Drug Name
                                                 </label>
-                                                <Field
+                                                {/* <Field
                                                   type="text"
                                                   className="form-control"
                                                   name={`past_medication[${index}].pastdrugName`}
                                                   placeholder="Please enter medicine name"
-                                                />
+                                                /> */}
+                                                <Field
+                                                  as="select"
+                                                  className="form-control"
+                                                  name={`past_medication[${index}].pastdrugName`}
+                                                >
+                                                  <option value="">
+                                                    Select
+                                                  </option>
+                                                  {medicationList.map(
+                                                    (medicine, index) => (
+                                                      <option
+                                                        value={
+                                                          medicine.DrugName +
+                                                          medicine.Strength
+                                                        }
+                                                        key={index}
+                                                      >
+                                                        {medicine.DrugName +
+                                                          medicine.Strength}
+                                                      </option>
+                                                    )
+                                                  )}
+                                                </Field>
                                                 <div className="error">
                                                   <ErrorMessage name="past_medication.pastdrugName" />
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
-                                                  Strength
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`past_medication[${index}].strength`}
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="past_medication.strength" />
                                                 </div>
                                               </div>
                                             </div>
@@ -839,7 +797,7 @@ const Medication_Allergies = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    globalMessage: state.demographics.globalmessage,
+    globalMessage: state.medication_allergies.globalmessage,
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     currentUser: state.login.loggedUserInfo,
     isLoggedIn: state.login.isLoggedIn,

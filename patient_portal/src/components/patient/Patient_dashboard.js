@@ -42,28 +42,28 @@ const Patient_dashboard = (props) => {
       if (props.mediAllergyDetails) {
         setmediAllergy(true);
       }
-      if (props.patientvitalsDetails.length > 0) {
+      if (props.patientvitalsDetails) {
         setpVitals(true);
       }
     }
   }, []);
   const classes = useStyles();
 
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
-        setIsImmunization(true);
-      }
+  // useEffect(() => {
+  //   if (props.isLoggedIn) {
+  //     if (props.immunizationDetails) {
+  //       setIsImmunization(true);
+  //     }
 
-      if (props.mediAllergyDetails) {
-        setmediAllergy(true);
-      }
+  //     if (props.mediAllergyDetails) {
+  //       setmediAllergy(true);
+  //     }
 
-      if (props.patientvitalsDetails) {
-        setpVitals(true);
-      }
-    }
-  }, []);
+  //     if (props.patientvitalsDetails.length > 0) {
+  //       setpVitals(true);
+  //     }
+  //   }
+  // }, []);
 
   return (
     <>
@@ -197,7 +197,6 @@ const Patient_dashboard = (props) => {
                         <tr>
                           <th scope="col">Sr.No</th>
                           <th scope="col">Drug Name</th>
-                          <th scope="col">Strength</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -208,7 +207,6 @@ const Patient_dashboard = (props) => {
                                 <tr key={index}>
                                   <td>{index + 1}</td>
                                   <td>{item.pastdrugName}</td>
-                                  <td>{item.strength}</td>
                                 </tr>
                               );
                             }

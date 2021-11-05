@@ -314,9 +314,9 @@ const Demographics = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
+    isLoggedIn: state.login.isLoggedIn,
     globalMessage: state.demographics.globalmessage,
     currentUser: state.login.loggedUserInfo,
-    isLoggedIn: state.login.isLoggedIn,
     demographicsDetails: state.patientDemographics.patientDemographics,
   };
 };
