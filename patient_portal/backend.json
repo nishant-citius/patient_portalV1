@@ -366,7 +366,7 @@
   ],
   "medic_allergy": [
     {
-      "userid": 1,
+      "userid": 56,
       "current_medication": [
         {
           "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
@@ -401,12 +401,75 @@
       ],
       "allergies": [
         {
+          "allergyName": "skin",
+          "symptomsofAllergy": "rashes",
+          "drugAllergy": "dolo"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "HEPARIN SODIUM10,000 UNITS/ML",
+          "dosage": "1.0",
+          "directionstoconsume": "injection",
+          "physicianName": "shiva prasad",
+          "startDate": "2021-11-04",
+          "endDate": "2021-11-05"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "na",
+          "symptomsofAllergy": "na",
+          "drugAllergy": "na"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
+          "dosage": "",
+          "directionstoconsume": "",
+          "physicianName": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
           "allergyName": "",
           "symptomsofAllergy": "",
           "drugAllergy": ""
         }
       ],
-      "id": 1
+      "id": 3
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
+          "dosage": "gvfvs",
+          "directionstoconsume": "qdvv",
+          "physicianName": "uwgfug",
+          "startDate": "2021-11-04",
+          "endDate": "2021-11-13"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "iwgdu",
+          "symptomsofAllergy": "fkudvf",
+          "drugAllergy": "afljhbah"
+        }
+      ],
+      "id": 4
     }
   ],
   "immunization": [
@@ -690,6 +753,24 @@
       "patientId": 26,
       "status": "approved",
       "id": 13
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 8801888988,
+      "doc_id": 56,
+      "doc_name": "shiva  prasad",
+      "appointment_title": "neck pain",
+      "appointment_start_time": "01:39",
+      "appointment_end_time": "10:43",
+      "appointmentDate": "2021-11-05",
+      "appointment_desc": "neck pain",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-05T05:11:47.771Z",
+      "patientId": 1,
+      "status": "approved",
+      "id": 14
     }
   ],
   "demographics": [
@@ -754,7 +835,7 @@
       "pulse": "77",
       "respiration": "78",
       "oxigen_saturation": "92",
-      "physicianId": 27,
+      "physicianId": 56,
       "patientId": "1",
       "id": 1
     }
@@ -10825,6 +10906,20 @@
       "description": "Typhoid fever",
       "code": "A010",
       "id": 2
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": 0,
+      "code": "",
+      "id": 3
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Typhoid and paratyphoid fevers",
+      "code": "A01",
+      "id": 4
     }
   ]
 }
