@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { adminService } from "../../services/register_user_service";
 import { Link } from "react-router-dom";
+import "../admin/admin.css";
 import {
   makeStyles,
   Container,
@@ -20,9 +21,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "80vw",
-  },
-  tablehead: {
-    background: "#b7c1f7",
   },
 }));
 
@@ -48,22 +46,22 @@ function Appointmentstoday(props) {
     <Container className={classes.root}>
       <h4
         style={{ color: "#b7c1f7" }}
-        className="text-success text-center fw-bold "
+        className="text-primary text-center fw-bold "
       >
         Appointment List
       </h4>
       <TableContainer component={Paper} style={{ marginTop: "20px" }}>
         {/* <table className="table table-bordered shadow mt-4"> */}
         <Table>
-          <TableHead className={classes.tablehead}>
+          <TableHead className="tablehead">
             <TableRow>
-              <TableCell scope="col">Sr no </TableCell>
-              <TableCell scope="col">Patient Name </TableCell>
-              <TableCell scope="col">Appointment Title </TableCell>
-              <TableCell scope="col">Appointment Date </TableCell>
-              <TableCell scope="col">Start Time </TableCell>
-              <TableCell scope="col">End Time </TableCell>
-              <TableCell scope="col">Action </TableCell>
+              <TableCell className="tableCell">Sr no </TableCell>
+              <TableCell className="tableCell">Patient Name </TableCell>
+              <TableCell className="tableCell">Appointment Title </TableCell>
+              <TableCell className="tableCell">Appointment Date </TableCell>
+              <TableCell className="tableCell">Start Time </TableCell>
+              <TableCell className="tableCell">End Time </TableCell>
+              <TableCell className="tableCell">Action </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

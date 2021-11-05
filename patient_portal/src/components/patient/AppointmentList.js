@@ -19,14 +19,12 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
+import "../admin/admin.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "70vw",
-  },
-  tablehead: {
-    background: "#b7c1f7",
   },
 }));
 
@@ -109,16 +107,20 @@ function AppointmentList(props) {
             <TableContainer component={Paper} style={{ marginTop: "20px" }}>
               {/* Appointment List Start */}
               <Table>
-                <TableHead className={classes.tablehead}>
+                <TableHead className="tablehead">
                   <TableRow>
-                    <TableCell scope="col">Sr.No</TableCell>
-                    <TableCell scope="col">Name</TableCell>
-                    <TableCell scope="col">Doctor Name</TableCell>
-                    <TableCell scope="col">Appointment Title</TableCell>
-                    <TableCell scope="col">Start Time</TableCell>
-                    <TableCell scope="col">End Time</TableCell>
-                    <TableCell scope="col">Appointment Date</TableCell>
-                    <TableCell scope="col">Status</TableCell>
+                    <TableCell className="tableCell">Sr.No</TableCell>
+                    <TableCell className="tableCell">Name</TableCell>
+                    <TableCell className="tableCell">Doctor Name</TableCell>
+                    <TableCell className="tableCell">
+                      Appointment Title
+                    </TableCell>
+                    <TableCell className="tableCell">Start Time</TableCell>
+                    <TableCell className="tableCell">End Time</TableCell>
+                    <TableCell className="tableCell">
+                      Appointment Date
+                    </TableCell>
+                    <TableCell className="tableCell">Status</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>

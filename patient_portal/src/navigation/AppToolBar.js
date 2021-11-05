@@ -21,8 +21,13 @@ import React from "react";
 import * as actioncreators from "../redux/actions/userActionCreater";
 import { NavBtn, NavBtnLink } from "../components/Layout/NavbarElements";
 import ModalPopup from "shared/dialog/ModalPopup";
+import EditDialog from "shared/dialog/EditDialog";
+
 import UserRequests from "components/admin/UserRequests";
 import AppointmentNotifications from "components/admin/AppointmentNotifications";
+import EditUser from "components/admin/common/EditUser";
+import { Edit } from "@material-ui/icons";
+import AddUsers from "components/admin/common/AddUsers";
 import { adminService } from "services/register_user_service";
 
 const mapStateToProps = (rootReducer) => {
@@ -160,6 +165,11 @@ function AppToolBar(props) {
     todaysAppointments(new Date().toISOString().slice(0, 10));
   }, []);
 
+  function userProfile() {
+    handleClose();
+    history.push("/userProfile");
+  }
+
   const todaysAppointments = (_date) => {
     adminService.appointmentsToday(_date).then(
       (response) => {
@@ -242,7 +252,7 @@ function AppToolBar(props) {
                 keepMounted
                 open={Boolean(anchorEl)}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={userProfile}>Profile</MenuItem>
                 <MenuItem onClick={Logout}>Logout</MenuItem>
               </Menu>
             </div>
@@ -256,6 +266,13 @@ function AppToolBar(props) {
       >
         <UserRequests />
       </ModalPopup>
+      {/* <EditDialog
+        title="User Requests"
+        openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+      >
+        <AddUsers />
+      </EditDialog> */}
       <ModalPopup
         title="Scheduled Appointment"
         openPopup={openAppointmentPopup}
