@@ -5,6 +5,7 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import { adminService } from "../../services/register_user_service";
+import "../admin/admin.css";
 import {
   makeStyles,
   Container,
@@ -22,9 +23,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "80vw",
-  },
-  tablehead: {
-    background: "#b7c1f7",
   },
 }));
 
@@ -163,23 +161,27 @@ const Medication_Allergies = (props) => {
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
             <div className="card-header text-center">
-              <h3>Immunization Details</h3>
+              <h4 className="text-success">Immunization Details</h4>
             </div>
             <div className="card-body text-center">
-              <h5>Current Medication</h5>
+              <h5 className="text-primary">Current Medication</h5>
               <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                 <Table>
-                  <TableHead className={classes.tablehead}>
+                  <TableHead className="tablehead">
                     <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Medicine Name</TableCell>
-                      <TableCell scope="col">Direction To Consume</TableCell>
-                      <TableCell scope="col">Dose Details</TableCell>
-                      <TableCell scope="col">Frequency</TableCell>
-                      <TableCell scope="col">Physician Name</TableCell>
-                      <TableCell scope="col">Purpose</TableCell>
-                      <TableCell scope="col">Start Date</TableCell>
-                      <TableCell scope="col">End Date</TableCell>
+                      <TableCell className="tableCell">Sr.No</TableCell>
+                      <TableCell className="tableCell">Medicine Name</TableCell>
+                      <TableCell className="tableCell">
+                        Direction To Consume
+                      </TableCell>
+                      <TableCell className="tableCell">Dose Details</TableCell>
+                      <TableCell className="tableCell">Frequency</TableCell>
+                      <TableCell className="tableCell">
+                        Physician Name
+                      </TableCell>
+                      <TableCell className="tableCell">Purpose</TableCell>
+                      <TableCell className="tableCell">Start Date</TableCell>
+                      <TableCell className="tableCell">End Date</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -204,17 +206,21 @@ const Medication_Allergies = (props) => {
                   </TableBody>
                 </Table>
               </TableContainer>
-
-              <h5>OTC Medication</h5>
+              <br></br>
+              <h5 className="text-primary">OTC Medication</h5>
               <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                 <Table>
-                  <TableHead className={classes.tablehead}>
+                  <TableHead className="tablehead">
                     <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Otc Drug Name</TableCell>
-                      <TableCell scope="col">StrengTableCell</TableCell>
-                      <TableCell scope="col">Direction To Consume</TableCell>
-                      <TableCell scope="col">Social Drug</TableCell>
+                      <TableCell className="tableCell">Sr.No</TableCell>
+                      <TableCell className="tableCell">Otc Drug Name</TableCell>
+                      <TableCell className="tableCell">
+                        StrengTableCell
+                      </TableCell>
+                      <TableCell className="tableCell">
+                        Direction To Consume
+                      </TableCell>
+                      <TableCell className="tableCell">Social Drug</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -234,17 +240,21 @@ const Medication_Allergies = (props) => {
                     })}
                   </TableBody>
                 </Table>
-              </TableContainer>
-
-              <h5>Past Medication</h5>
+              </TableContainer>{" "}
+              <br></br>
+              <h5 className="text-primary">Past Medication</h5>
               <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                 <Table>
-                  <TableHead className={classes.tablehead}>
+                  <TableHead className="tablehead">
                     <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Drug Name</TableCell>
-                      <TableCell scope="col">StrengTableCell</TableCell>
-                      <TableCell scope="col">Direction To Consume</TableCell>
+                      <TableCell className="tableCell">Sr.No</TableCell>
+                      <TableCell className="tableCell">Drug Name</TableCell>
+                      <TableCell className="tableCell">
+                        StrengTableCell
+                      </TableCell>
+                      <TableCell className="tableCell">
+                        Direction To Consume
+                      </TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -264,17 +274,16 @@ const Medication_Allergies = (props) => {
                   </TableBody>
                 </Table>
               </TableContainer>
-
-              <h5>Allergies</h5>
-
+              <br></br>
+              <h5 className="text-primary">Allergies</h5>
               <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                 <Table>
-                  <TableHead className={classes.tablehead}>
+                  <TableHead className="tablehead">
                     <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Allergy Name</TableCell>
-                      <TableCell scope="col">Symptoms</TableCell>
-                      <TableCell scope="col">Drug Allergy</TableCell>
+                      <TableCell className="tableCell">Sr.No</TableCell>
+                      <TableCell className="tableCell">Allergy Name</TableCell>
+                      <TableCell className="tableCell">Symptoms</TableCell>
+                      <TableCell className="tableCell">Drug Allergy</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>

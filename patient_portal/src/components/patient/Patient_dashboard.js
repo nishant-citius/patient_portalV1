@@ -8,6 +8,17 @@ import {
   makeStyles,
   Typography,
 } from "mui";
+import "../admin/admin.css";
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
 
 //  useEffect(() => {
 //    if (props.isLoggedIn) {
@@ -27,9 +38,14 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100px",
     margin: "4px",
   },
+  root: {
+    height: "100vh",
+    width: "80vw",
+  },
 }));
 
 const Patient_dashboard = (props) => {
+  const classes = useStyles();
   const [isImmunization, setIsImmunization] = useState(false);
   const [mediAllergy, setmediAllergy] = useState(false);
   const [pVitals, setpVitals] = useState(false);
@@ -47,7 +63,6 @@ const Patient_dashboard = (props) => {
       }
     }
   }, []);
-  const classes = useStyles();
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -72,31 +87,41 @@ const Patient_dashboard = (props) => {
           <Grid item sm={12} lg={6} md={6}>
             <Card className={classes.gridcontainer}>
               <div className="showcard-header">
-                <p className="prem-1">Vitals</p>
+                <h5 className="text-primary">Vitals</h5>
               </div>
               <CardContent>
-                <table className="dashboard-table tbwd ">
-                  <thead>
-                    <tr>
-                      <th scope="col">Height</th>
-                      <th scope="col">Weight</th>
-                      <th scope="col">Blood Pressure</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {pVitals ? (
-                      <tr>
-                        <td>{props.patientvitalsDetails[0].height}</td>
-                        <td>{props.patientvitalsDetails[0].weight}</td>
-                        <td>{props.patientvitalsDetails[0].blood_pressure}</td>
-                      </tr>
-                    ) : (
-                      <tr>
-                        <td>No data Available</td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
+                <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                  <Table>
+                    <TableHead className="tablehead">
+                      <TableRow>
+                        <TableCell className="tableCell">Height</TableCell>
+                        <TableCell className="tableCell">Weight</TableCell>
+                        <TableCell className="tableCell">
+                          Blood Pressure
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {pVitals ? (
+                        <TableRow>
+                          <TableCell>
+                            {props.patientvitalsDetails[0].height}
+                          </TableCell>
+                          <TableCell>
+                            {props.patientvitalsDetails[0].weight}
+                          </TableCell>
+                          <TableCell>
+                            {props.patientvitalsDetails[0].blood_pressure}
+                          </TableCell>
+                        </TableRow>
+                      ) : (
+                        <TableRow>
+                          <TableCell>No data Available</TableCell>
+                        </TableRow>
+                      )}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
               </CardContent>
             </Card>
           </Grid>
@@ -104,41 +129,51 @@ const Patient_dashboard = (props) => {
           <Grid item sm={12} md={6} lg={6}>
             <Card className={classes.gridcontainer}>
               <div className="showcard-header">
-                <p className="prem-1">Current Medication</p>
+                <h5 className="text-primary">Current Medication </h5>
               </div>
               <CardContent>
                 <Typography variant="subtitle1"></Typography>
                 <div className={classes.display}>
-                  <table className="dashboard-table tbwd ">
-                    <thead>
-                      <tr>
-                        <th scope="col">Sr.No</th>
-                        <th scope="col">Medicine</th>
-                        <th scope="col">Dose</th>
-                        <th scope="col">Physician</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+                  <TableContainer
+                    component={Paper}
+                    style={{ marginTop: "20px" }}
+                  >
+                    <Table>
+                      {/* <TableBody> */}
+                      <TableHead className="tablehead">
+                        <TableRow>
+                          <TableCell className="tableCell"> Sr.No</TableCell>
+                          <TableCell className="tableCell"> Medicine</TableCell>
+                          <TableCell className="tableCell"> Dose</TableCell>
+                          <TableCell className="tableCell">
+                            {" "}
+                            Physician
+                          </TableCell>
+                        </TableRow>
+                      </TableHead>
+                      {/* </TableBody> */}
                       {mediAllergy ? (
                         props.mediAllergyDetails.current_medication.map(
                           function (item, index) {
                             return (
-                              <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{item.medicineName}</td>
-                                <td>{item.dosage}</td>
-                                <td>{item.physicianName}</td>
-                              </tr>
+                              <TableBody>
+                                <TableRow key={index}>
+                                  <TableCell>{index + 1}</TableCell>
+                                  <TableCell>{item.medicineName}</TableCell>
+                                  <TableCell>{item.dosage}</TableCell>
+                                  <TableCell>{item.physicianName}</TableCell>
+                                </TableRow>
+                              </TableBody>
                             );
                           }
                         )
                       ) : (
-                        <tr>
-                          <td textAlign="center">No data available</td>
-                        </tr>
+                        <TableRow>
+                          <TableCell>No data available</TableCell>
+                        </TableRow>
                       )}
-                    </tbody>
-                  </table>
+                    </Table>
+                  </TableContainer>
                 </div>
               </CardContent>
             </Card>
@@ -150,34 +185,49 @@ const Patient_dashboard = (props) => {
           <Grid item sm={12} lg={6} md={6}>
             <Card className={classes.gridcontainer}>
               <div className="showcard-header">
-                <p className="prem-1">Immunization</p>
+                <h5 className="text-primary">Immunization</h5>
               </div>
               <CardContent>
                 <div className={classes.display}>
                   <Typography variant="subtitle1">
-                    <table className="dashboard-table tbwd ">
-                      <thead>
-                        <tr>
-                          <th scope="col">Age</th>
-                          <th scope="col">Vaccine Brand</th>
-                          <th scope="col">Dose Detail</th>
-                          {/* <th scope="col">Dose Details</th> */}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {isImmunization ? (
-                          <tr>
-                            <td>{props.immunizationDetails.age_category}</td>
-                            <td>{props.immunizationDetails.vaccine_brand}</td>
-                            <td>{props.immunizationDetails.dose_detail}</td>
-                          </tr>
-                        ) : (
-                          <tr>
-                            <td>No data Available</td>
-                          </tr>
-                        )}
-                      </tbody>
-                    </table>
+                    <TableContainer
+                      component={Paper}
+                      style={{ marginTop: "20px" }}
+                    >
+                      <Table>
+                        <TableHead className="tablehead">
+                          <TableRow>
+                            <TableCell className="tableCell">Age</TableCell>
+                            <TableCell className="tableCell">
+                              Vaccine Brand
+                            </TableCell>
+                            <TableCell className="tableCell">
+                              Dose Detail
+                            </TableCell>
+                            {/* <TableCell> scope="col">Dose Details</TableCell> */}
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {isImmunization ? (
+                            <TableRow>
+                              <TableCell className="tableCell">
+                                {props.immunizationDetails.age_category}
+                              </TableCell>
+                              <TableCell className="tableCell">
+                                {props.immunizationDetails.vaccine_brand}
+                              </TableCell>
+                              <TableCell className="tableCell">
+                                {props.immunizationDetails.dose_detail}
+                              </TableCell>
+                            </TableRow>
+                          ) : (
+                            <TableRow>
+                              <TableCell>No data Available</TableCell>
+                            </TableRow>
+                          )}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                   </Typography>
                 </div>
               </CardContent>
@@ -187,39 +237,50 @@ const Patient_dashboard = (props) => {
           <Grid item sm={12} lg={6} md={6}>
             <Card className={classes.gridcontainer}>
               <div className="showcard-header">
-                <p className="prem-1">Past Medication</p>
+                <h5 className="text-primary">Past Medication</h5>
               </div>
               <CardContent>
                 <div className={classes.display}>
                   <Typography variant="subtitle1">
-                    <table className="dashboard-table tbwd ">
-                      <thead>
-                        <tr>
-                          <th scope="col">Sr.No</th>
-                          <th scope="col">Drug Name</th>
-                          <th scope="col">Strength</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {mediAllergy ? (
-                          props.mediAllergyDetails.past_medication.map(
-                            function (item, index) {
-                              return (
-                                <tr key={index}>
-                                  <td>{index + 1}</td>
-                                  <td>{item.pastdrugName}</td>
-                                  <td>{item.strength}</td>
-                                </tr>
-                              );
-                            }
-                          )
-                        ) : (
-                          <tr>
-                            <td>No data Available</td>
-                          </tr>
-                        )}
-                      </tbody>
-                    </table>
+                    <TableContainer
+                      component={Paper}
+                      style={{ marginTop: "20px" }}
+                    >
+                      <Table>
+                        <TableHead className="tablehead">
+                          <TableRow>
+                            <TableCell className="tableCell">Sr.No</TableCell>
+                            <TableCell className="tableCell">
+                              {" "}
+                              Drug Name
+                            </TableCell>
+                            <TableCell className="tableCell">
+                              {" "}
+                              Strength
+                            </TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {mediAllergy ? (
+                            props.mediAllergyDetails.past_medication.map(
+                              function (item, index) {
+                                return (
+                                  <TableRow key={index}>
+                                    <TableCell>{index + 1}</TableCell>
+                                    <TableCell>{item.pastdrugName}</TableCell>
+                                    <TableCell>{item.strength}</TableCell>
+                                  </TableRow>
+                                );
+                              }
+                            )
+                          ) : (
+                            <TableRow>
+                              <TableCell>No data Available</TableCell>
+                            </TableRow>
+                          )}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
                   </Typography>
                 </div>
               </CardContent>

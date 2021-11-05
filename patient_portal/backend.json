@@ -362,6 +362,20 @@
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 32
+    },
+    {
+      "email": "renu@email.com",
+      "password": "$2a$10$lfxQwiC/CM1hwJvRSaJ0k.sue6dTHm9JmJiAhekKwWg6rHrrcrkOO",
+      "fName": "Renu",
+      "lName": "Mahendra",
+      "dob": "2021-11-05",
+      "username": "RenuMahendra",
+      "mobile": "9876897685",
+      "role": "nurse",
+      "speciality": "",
+      "createdDate": "Fri Nov 05 2021 10:30:15 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 57
     }
   ],
   "medic_allergy": [
@@ -982,7 +996,7 @@
       "createdBy": "neerajthakur",
       "createdDate": "2021-11-03T04:05:12.101Z",
       "patientId": 27,
-      "status": "reject",
+      "status": "approved",
       "id": 6
     },
     {
@@ -1036,7 +1050,7 @@
       "createdBy": "VijayaC",
       "createdDate": "2021-11-03T05:08:35.020Z",
       "patientId": 56,
-      "status": "reject",
+      "status": "approved",
       "id": 9
     },
     {
@@ -1054,7 +1068,7 @@
       "createdBy": "MahendaSingh",
       "createdDate": "2021-11-03T05:15:07.232Z",
       "patientId": 54,
-      "status": "reject",
+      "status": "approved",
       "id": 10
     },
     {
