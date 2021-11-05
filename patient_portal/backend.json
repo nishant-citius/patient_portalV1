@@ -366,90 +366,37 @@
   ],
   "medic_allergy": [
     {
-      "userid": 24,
+      "userid": 1,
       "current_medication": [
         {
-          "medicineName": "Dolo",
-          "dosage": "2",
-          "directionstoconsume": "two times",
-          "frequency": "100 mg",
-          "physicianName": "Soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-20",
-          "endDate": "2021-10-20"
-        },
-        {
-          "medicineName": "paracetamol",
-          "dosage": "2",
-          "directionstoconsume": "in morning",
-          "frequency": "50 mg",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-12",
-          "endDate": "2021-10-14"
+          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
+          "dosage": "hjghjgjgj",
+          "directionstoconsume": "uhuhihkh",
+          "frequency": "",
+          "physicianName": "uiiiohih",
+          "purpose": "",
+          "startDate": "2021-11-17",
+          "endDate": "2021-12-03"
         }
       ],
       "otc_medication": [
         {
-          "otcDrugName": "paracetamal",
-          "strength": "650",
-          "directiontoconsume": "3",
+          "otcDrugName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
+          "strength": "",
+          "directiontoconsume": "jhiuiku",
+          "socialDrugs": "smoke"
+        },
+        {
+          "otcDrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
+          "directiontoconsume": "jgjgjgug",
           "socialDrugs": "drink"
         }
       ],
       "past_medication": [
         {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 24
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
+          "pastdrugName": "HEPARIN SODIUM5,000 UNITS/ML",
           "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "50 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "Neuomarkazol",
-          "strength": "100 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "propygenta",
-          "strength": "80 mg",
-          "directiontoconsume": "twice a day"
+          "directiontoconsume": "khkhlkl"
         }
       ],
       "allergies": [
@@ -459,410 +406,7 @@
           "drugAllergy": ""
         }
       ],
-      "id": 3
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 6
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 8
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "nice",
-          "dosage": "3",
-          "directionstoconsume": "table",
-          "frequency": "3",
-          "physicianName": "shiva prasad",
-          "purpose": "body pains",
-          "startDate": "2021-11-02",
-          "endDate": "2021-11-02"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 25
-    },
-    {
-      "userid": 27,
-      "current_medication": [
-        {
-          "medicineName": "neuomarcazol",
-          "dosage": "2",
-          "directionstoconsume": "twice",
-          "frequency": "50 mg",
-          "physicianName": "soujanya",
-          "purpose": "thyroid",
-          "startDate": "2021-11-10",
-          "endDate": "2021-11-16"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "dolo",
-          "strength": "10 mg",
-          "directiontoconsume": "once",
-          "socialDrugs": "smoke"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "30 mg",
-          "directiontoconsume": "twice"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "skin",
-          "symptomsofAllergy": "itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 52
-    },
-    {
-      "userid": 40,
-      "current_medication": [
-        {
-          "medicineName": "neuomarkazol",
-          "dosage": "2",
-          "directionstoconsume": "twice",
-          "frequency": "100 mg",
-          "physicianName": "soujanya",
-          "purpose": "thyroid",
-          "startDate": "2021-11-17",
-          "endDate": "2021-11-23"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "dolo",
-          "strength": "50 mg",
-          "directiontoconsume": "once",
-          "socialDrugs": "smoke"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "40 mg",
-          "directiontoconsume": "twice"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "skin",
-          "symptomsofAllergy": "itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 53
-    },
-    {
-      "userid": 27,
-      "current_medication": [
-        {
-          "medicineName": "dolo650",
-          "dosage": "1",
-          "directionstoconsume": "after food",
-          "frequency": "twice",
-          "physicianName": "anasuya",
-          "purpose": "body pain",
-          "startDate": "2021-11-03",
-          "endDate": "2021-11-10"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 54
-    },
-    {
-      "userid": 1,
-      "current_medication": [
-        {
-          "medicineName": "ni",
-          "dosage": "ni",
-          "directionstoconsume": "ni",
-          "frequency": "ni",
-          "physicianName": "ni",
-          "purpose": "ni",
-          "startDate": "",
-          "endDate": ""
-        },
-        {
-          "medicineName": "ni",
-          "dosage": "ni",
-          "directionstoconsume": "ni",
-          "frequency": "ni",
-          "physicianName": "ni",
-          "purpose": "ni"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "ni",
-          "strength": "ni",
-          "directiontoconsume": "ni",
-          "socialDrugs": ""
-        },
-        {
-          "otcDrugName": "ni",
-          "strength": "ni",
-          "directiontoconsume": "ni"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "ni",
-          "strength": "ni",
-          "directiontoconsume": "i"
-        },
-        {
-          "pastdrugName": "ni",
-          "strength": "ni",
-          "directiontoconsume": "ni"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "ni",
-          "symptomsofAllergy": "ni",
-          "drugAllergy": "nin"
-        },
-        {
-          "allergyName": "ni",
-          "symptomsofAllergy": "ni",
-          "drugAllergy": "ni"
-        }
-      ],
-      "id": 55
+      "id": 1
     }
   ],
   "immunization": [
@@ -4796,7 +4340,7 @@
       "ApplNo": "793",
       "ProductNo": "2",
       "Form": "TABLET;ORAL",
-      "Strength": "15MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "15MG ",
       "ReferenceDrug": "0",
       "DrugName": "BUTISOL SODIUM",
       "ActiveIngredient": "BUTABARBITAL SODIUM",
@@ -4806,7 +4350,7 @@
       "ApplNo": "793",
       "ProductNo": "3",
       "Form": "TABLET;ORAL",
-      "Strength": "50MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "50MG",
       "ReferenceDrug": "0",
       "DrugName": "BUTISOL SODIUM",
       "ActiveIngredient": "BUTABARBITAL SODIUM",
@@ -4826,7 +4370,7 @@
       "ApplNo": "793",
       "ProductNo": "5",
       "Form": "TABLET;ORAL",
-      "Strength": "100MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "100MG",
       "ReferenceDrug": "0",
       "DrugName": "BUTISOL SODIUM",
       "ActiveIngredient": "BUTABARBITAL SODIUM",
@@ -4976,7 +4520,7 @@
       "ApplNo": "3402",
       "ProductNo": "1",
       "Form": "INJECTABLE;INJECTION",
-      "Strength": "5PRESSOR UNITS/ML **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "5PRESSOR UNITS/ML ",
       "ReferenceDrug": "1",
       "DrugName": "PITRESSIN TANNATE",
       "ActiveIngredient": "VASOPRESSIN TANNATE",
@@ -5516,7 +5060,7 @@
       "ApplNo": "5010",
       "ProductNo": "5",
       "Form": "SYRUP;ORAL",
-      "Strength": "50MG/5ML **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "50MG/5ML ",
       "ReferenceDrug": "0",
       "DrugName": "DEMEROL",
       "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
@@ -5556,7 +5100,7 @@
       "ApplNo": "5213",
       "ProductNo": "1",
       "Form": "TABLET;ORAL",
-      "Strength": "1.5MG;5MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "1.5MG;5MG ",
       "ReferenceDrug": "1",
       "DrugName": "HYCODAN",
       "ActiveIngredient": "HOMATROPINE METHYLBROMIDE; HYDROCODONE BITARTRATE",
@@ -6046,7 +5590,7 @@
       "ApplNo": "5963",
       "ProductNo": "1",
       "Form": "SOLUTION/DROPS;OPHTHALMIC",
-      "Strength": "10% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "10% ",
       "ReferenceDrug": "1",
       "DrugName": "SODIUM SULAMYD",
       "ActiveIngredient": "SULFACETAMIDE SODIUM",
@@ -6056,7 +5600,7 @@
       "ApplNo": "5963",
       "ProductNo": "2",
       "Form": "OINTMENT;OPHTHALMIC",
-      "Strength": "10% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "10% ",
       "ReferenceDrug": "1",
       "DrugName": "SODIUM SULAMYD",
       "ActiveIngredient": "SULFACETAMIDE SODIUM",
@@ -6066,7 +5610,7 @@
       "ApplNo": "5963",
       "ProductNo": "3",
       "Form": "SOLUTION/DROPS;OPHTHALMIC",
-      "Strength": "30% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "30% ",
       "ReferenceDrug": "1",
       "DrugName": "SODIUM SULAMYD",
       "ActiveIngredient": "SULFACETAMIDE SODIUM",
@@ -6076,7 +5620,7 @@
       "ApplNo": "5970",
       "ProductNo": "4",
       "Form": "INJECTABLE;INJECTION",
-      "Strength": "1% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "1% ",
       "ReferenceDrug": "1",
       "DrugName": "SOTRADECOL",
       "ActiveIngredient": "SODIUM TETRADECYL SULFATE",
@@ -6086,7 +5630,7 @@
       "ApplNo": "5970",
       "ProductNo": "5",
       "Form": "INJECTABLE;INJECTION",
-      "Strength": "3% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "3% ",
       "ReferenceDrug": "1",
       "DrugName": "SOTRADECOL",
       "ActiveIngredient": "SODIUM TETRADECYL SULFATE",
@@ -6116,7 +5660,7 @@
       "ApplNo": "6008",
       "ProductNo": "1",
       "Form": "TABLET;ORAL",
-      "Strength": "100MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "100MG ",
       "ReferenceDrug": "1",
       "DrugName": "MESANTOIN",
       "ActiveIngredient": "MEPHENYTOIN",
@@ -6136,7 +5680,7 @@
       "ApplNo": "6035",
       "ProductNo": "3",
       "Form": "TABLET;ORAL",
-      "Strength": "0.2MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+      "Strength": "0.2MG ",
       "ReferenceDrug": "1",
       "DrugName": "METHERGINE",
       "ActiveIngredient": "METHYLERGONOVINE MALEATE",
@@ -6160,16 +5704,6 @@
       "ReferenceDrug": "0",
       "DrugName": "DIASONE SODIUM",
       "ActiveIngredient": "SULFOXONE SODIUM",
-      "ReferenceStandard": "0"
-    },
-    {
-      "ApplNo": "6071",
-      "ProductNo": "3",
-      "Form": "INJECTABLE;INJECTION",
-      "Strength": "50MG/ML;0.03MG/ML;0.0025MG/ML;7.5MG/ML;100 IU/ML;0.2MG/ML;20MG/ML;2MG/ML;1.8MG/ML;1.5MG/ML;1,650 IU/ML;5 IU/ML",
-      "ReferenceDrug": "0",
-      "DrugName": "BEROCCA PN",
-      "ActiveIngredient": "ASCORBIC ACID; BIOTIN; CYANOCOBALAMIN; DEXPANTHENOL; ERGOCALCIFEROL; FOLIC ACID; NIACINAMIDE; PYRIDOXINE HYDROCHLORIDE; RIBOFLAVIN 5'-PHOSPHATE SODIUM; THIAMINE HYDROCHLORIDE; VITAMIN A PALMITATE; VITAMIN E",
       "ReferenceStandard": "0"
     },
     {

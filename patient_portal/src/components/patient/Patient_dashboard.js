@@ -42,7 +42,7 @@ const Patient_dashboard = (props) => {
       if (props.mediAllergyDetails) {
         setmediAllergy(true);
       }
-      if (props.patientvitalsDetails.length > 0) {
+      if (props.patientvitalsDetails) {
         setpVitals(true);
       }
     }
@@ -197,7 +197,6 @@ const Patient_dashboard = (props) => {
                         <tr>
                           <th scope="col">Sr.No</th>
                           <th scope="col">Drug Name</th>
-                          <th scope="col">Strength</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -208,7 +207,6 @@ const Patient_dashboard = (props) => {
                                 <tr key={index}>
                                   <td>{index + 1}</td>
                                   <td>{item.pastdrugName}</td>
-                                  <td>{item.strength}</td>
                                 </tr>
                               );
                             }
