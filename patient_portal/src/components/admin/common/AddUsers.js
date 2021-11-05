@@ -18,6 +18,7 @@ const AddUsers = (props) => {
     mobile: "",
     role: "",
     password: "",
+    rpassword: "",
     speciality: "",
     createdDate: Date(),
     isActive: true,
@@ -54,6 +55,7 @@ const AddUsers = (props) => {
       mobile: values.mobile,
       role: values.role,
       speciality: values.speciality,
+      rpassword: values.password,
       createdDate: Date(),
       isActive: true,
     };
