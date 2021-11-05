@@ -1,55 +1,58 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
-import { Link } from "react-router-dom";
-import {
-  BsFillTrashFill,
-  BsFillPencilFill,
-  BsPersonFill,
-  BsCheckCircleFill,
-  BsFillXCircleFill,
-  BsFillArrowLeftSquareFill,
-} from "react-icons/bs";
+import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
+import * as Yup from "yup";
 import "./admin.css";
-import {
-  makeStyles,
-  Container,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-} from "mui";
-
-const mapStateToProps = (rootReducer) => {
-  return {
-    immunizationData: rootReducer.immunizations.immunizations,
-    globalmessage: rootReducer.immunizations.globalmessage,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getAllImmunizations: () =>
-      dispatch(actioncreators.GetAllImmunizationData()),
-  };
-};
 
 export class PatientList extends React.Component {
+  savedValues = {};
   constructor(props) {
     super(props);
     this.state = {
       page: 0,
       rowPerPage: 6,
+      isAvailable: false,
     };
   }
 
   componentDidMount() {
-    this.props.getAllImmunizations();
-    // this.props.getalluserdata();
+    this.props.getPatientsImmunization(this.props.patientId);
+  }
+
+  componentDidUpdate() {
+    if (this.props.pImmunnization) {
+      if (Object.keys(this.props.pImmunnization).length === 0) {
+      } else {
+        if (this.state.isAvailable) {
+          this.getSavedValues();
+          return;
+        } else {
+          this.setState({
+            isAvailable: true,
+          });
+        }
+      }
+    }
+  }
+
+  generalVaccines(_arr) {
+    let vaccinesArr = _arr.map((_vac) => _vac);
+    return vaccinesArr;
+  }
+
+  getSavedValues() {
+    let savedValues = {
+      age_category: this.props.pImmunnization.age_category,
+      vaccine_brand: this.props.pImmunnization.vaccine_brand,
+      dose_detail: this.props.pImmunnization.dose_detail,
+      general_vaccine: this.generalVaccines(
+        this.props.pImmunnization.general_vaccine
+      ),
+      userid: this.props.currentUser.id,
+    };
+
+    return savedValues;
   }
 
   onPageChange = (event, nextPage) => {
@@ -66,121 +69,210 @@ export class PatientList extends React.Component {
     });
   };
 
+  initialValues = {
+    age_category: "",
+    vaccine_brand: "",
+    dose_detail: "",
+    general_vaccine: [
+      {
+        vaccine_name: "",
+        vaccine_date: "",
+      },
+    ],
+    userid: this.props.currentUser.id,
+  };
+
+  validationSchema = Yup.object().shape({
+    age_category: Yup.string().required("Required"),
+    vaccine_brand: Yup.string().required("Required"),
+    dose_detail: Yup.string().required("Required"),
+    // general_vaccine: Yup.string().required("Required"),
+  });
+
+  onSubmit = (values) => {
+    let gv = values.general_vaccine.map((v) => {
+      let temp = {};
+      temp.vaccine_name = v.vaccine_name;
+      temp.vaccine_date = v.vaccine_date;
+      return temp;
+    });
+
+    const payload = {
+      first_name: this.props.currentUser.fName,
+      last_name: this.props.currentUser.lName,
+      age_category: values.age_category,
+      vaccine_brand: values.vaccine_brand,
+      dose_detail: values.dose_detail,
+      general_vaccine: gv,
+      id: this.props.currentUser.id,
+    };
+
+    if (this.state.isAvailable) {
+      this.props.updateImmunization(this.props.pImmunnization.id, payload);
+    } else {
+      this.props.immunization(payload);
+    }
+  };
+
   render() {
+    if (this.state.isAvailable) this.savedValues = this.getSavedValues();
     return (
       <>
-        {/* <div className="container mt-5">
-          <Link className="btn btn-warning" to="/admin">
-            <BsFillArrowLeftSquareFill />
-            <span className="m-2">Back</span>
-          </Link>
-          <h3 className="text-center fw-bold ">Immunization List</h3>
-          <table className="table table-bordered shadow mt-4">
-            <thead className="table-dark">
-              <tr>
-                <th scope="col">Sr.No</th>
-                <th scope="col">Patient Name</th>
-                <th scope="col">Vaccine Name</th>
-                <th scope="col">Vaccination Date</th>
-                <th scope="col">Vaccine Brand</th>
-                <th scope="col">Vaccine Dose Number</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.props.immunizationData.map((user, index) => {
-                return (
-                  <tr key={index}>
-                    <th scope="row">{index + 1}</th>
-                    <td>{`${user.first_name} ${user.last_name}`}</td>
-                    <td>
-                      <ul className="no-list-style">
-                        {user.general_vaccine.map((vac, ind) => {
-                          return <li>{vac.vaccine_name}</li>;
-                        })}
-                      </ul>
-                    </td>
-                    <td>
-                      <ul className="no-list-style">
-                        {user.general_vaccine.map((vac, ind) => {
-                          return <li>{vac.vaccine_date}</li>;
-                        })}
-                      </ul>
-                    </td>
+        <Formik
+          initialValues={this.savedValues || this.initialValues}
+          validationSchema={this.validationSchema}
+          onSubmit={this.onSubmit}
+          enableReinitialize
+        >
+          {(props) => (
+            <div className="container">
+              <div className="card shadow-lg p-10 mb-6 bg-white rounded">
+                <div className="card-header">Immunization Details</div>
+                <div className="card-body">
+                  <Form>
+                    <div className="form-group">
+                      <label htmlFor="covid_vaccine">
+                        COVID-19 Vaccine Details
+                      </label>
+                      <div className="row">
+                        <div className="col-12 col-md-4">
+                          <label htmlFor="age_category">Age Category</label>
+                          <Field
+                            as="select"
+                            className="form-control"
+                            name="age_category"
+                          >
+                            <option value="">Select</option>
+                            <option value="18_44">18-44</option>
+                            <option value="45">45+</option>
+                          </Field>
+                          <div className="error">
+                            <ErrorMessage name="age_category" />
+                          </div>
+                        </div>
+                        <div className="col-12 col-md-4">
+                          <label htmlFor="vaccine_brand">Vaccine Brand</label>
+                          <Field
+                            type="text"
+                            className="form-control"
+                            name="vaccine_brand"
+                            placeholder="Please Enter Covid Vaccine Details"
+                          />
+                          <div className="error">
+                            <ErrorMessage name="vaccine_brand" />
+                          </div>
+                        </div>
+                        <div className="col-12 col-md-4">
+                          <label htmlFor="dose_detail">Dose Details</label>
+                          <Field
+                            as="select"
+                            className="form-control"
+                            name="dose_detail"
+                          >
+                            <option value="">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </Field>
+                          <div className="error">
+                            <ErrorMessage name="dose_detail" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                    <td>{user.vaccine_brand}</td>
-                    <td>{user.dose_detail}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div> */}
-        <Container>
-          <Link className="btn btn-warning" to="/admin">
-            <BsFillArrowLeftSquareFill />
-            <span className="m-2">Back</span>
-          </Link>
-          <h3 className="text-center fw-bold ">Immunization List</h3>
-          <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-            <Table>
-              <TableHead className="tablehead">
-                <TableRow>
-                  <TableCell className="tableCell">Sr. No</TableCell>
-                  <TableCell className="tableCell">Patient Name</TableCell>
-                  <TableCell className="tableCell">Vaccine Name</TableCell>
-                  <TableCell className="tableCell">Vaccination Date</TableCell>
-                  <TableCell className="tableCell">Vaccine Brand</TableCell>
-                  <TableCell className="tableCell">
-                    Vaccine Dose Number
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {this.props.immunizationData
-                  .slice(
-                    this.state.page * this.state.rowPerPage,
-                    this.state.page * this.state.rowPerPage +
-                      this.state.rowPerPage
-                  )
-                  .map((user, index) => {
-                    return (
-                      <TableRow key={index}>
-                        <TableCell>{index + 1}</TableCell>
-                        <TableCell>{`${user.first_name} ${user.last_name}`}</TableCell>
-                        <TableCell>
-                          <ul className="no-list-style">
-                            {user.general_vaccine.map((vac, ind) => {
-                              return <li>{vac.vaccine_name}</li>;
-                            })}
-                          </ul>
-                        </TableCell>
-                        <TableCell>
-                          <ul className="no-list-style">
-                            {user.general_vaccine.map((vac, ind) => {
-                              return <li>{vac.vaccine_date}</li>;
-                            })}
-                          </ul>
-                        </TableCell>
-                        <TableCell>{user.vaccine_brand}</TableCell>
-                        <TableCell>{user.dose_detail}</TableCell>
-                      </TableRow>
-                    );
-                  })}
-              </TableBody>
-            </Table>
-            <TablePagination
-              rowsPerPageOptions={[6, 10, 20, 25]}
-              count={this.props.immunizationData.length}
-              rowsPerPage={this.state.rowPerPage}
-              page={this.state.page}
-              onPageChange={this.onPageChange}
-              onChangeRowsPerPage={this.onChangeRowsPerPage}
-            />
-          </TableContainer>
-        </Container>
+                    <div className="form-group mt-4">
+                      <label htmlFor="general_vaccine">
+                        Other general Vaccines
+                      </label>
+                      <FieldArray name="general_vaccine">
+                        {(fieldArrayProps) => {
+                          const { push, remove, form } = fieldArrayProps;
+                          const { values } = form;
+                          const { general_vaccine } = values;
+
+                          return (
+                            <div>
+                              {general_vaccine &&
+                                general_vaccine.map(
+                                  (general_vaccine, index) => (
+                                    <div className="row" key={index}>
+                                      <div className="col-12 col-md-5">
+                                        <label htmlFor="">Vaccine Name</label>
+                                        <Field
+                                          type="text"
+                                          className="form-control"
+                                          name={`general_vaccine[${index}].vaccine_name`}
+                                        />
+                                      </div>
+                                      <div className="col-12 col-md-5">
+                                        <label htmlFor="">Vaccine Date</label>
+                                        <Field
+                                          type="date"
+                                          className="form-control"
+                                          name={`general_vaccine[${index}].vaccine_date`}
+                                        />
+                                      </div>
+                                      <div className="col-12 col-md-2">
+                                        {index > 0 && (
+                                          <button
+                                            className="btn btn-danger btn-number  btn_wdth"
+                                            type="button"
+                                            onClick={() => remove(index)}
+                                          >
+                                            -
+                                          </button>
+                                        )}
+
+                                        <button
+                                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                                          type="button"
+                                          onClick={() => push("")}
+                                        >
+                                          +
+                                        </button>
+                                      </div>
+                                    </div>
+                                  )
+                                )}
+                            </div>
+                          );
+                        }}
+                      </FieldArray>
+                    </div>
+                    {this.state.isAvailable ? (
+                      <button type="submit" className="btn btn-primary mt-3">
+                        Update Details
+                      </button>
+                    ) : (
+                      <button type="submit" className="btn btn-primary mt-3">
+                        Submit
+                      </button>
+                    )}
+                  </Form>
+                </div>
+              </div>
+            </div>
+          )}
+        </Formik>
       </>
     );
   }
 }
 
+const mapStateToProps = (rootReducer) => {
+  return {
+    immunizationData: rootReducer.immunizations.immunizations,
+    currentUser: rootReducer.login.loggedUserInfo,
+    pImmunnization: rootReducer.patientImmunization.patientImmunization,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getPatientsImmunization: (userId) =>
+      dispatch(actioncreators.GetPatientImmunization(userId)),
+    updateImmunization: (userId, data) =>
+      dispatch(actioncreators.UpdatePatientImmunization(userId, data)),
+  };
+};
 export default connect(mapStateToProps, mapDispatchToProps)(PatientList);
