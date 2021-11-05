@@ -60,8 +60,8 @@ const PhyMedicationAllergies = (props) => {
       }
     );
   }
-  function updateMedication(id, data){
-    adminService.updateMedications(id).then(
+  function updateMedication(userId){
+    adminService.updateMedications(userId).then(
       (response) =>{
         setupdateMedications(response.data);
       },
@@ -70,7 +70,7 @@ const PhyMedicationAllergies = (props) => {
       }
     );
   }
- console.log("sssssssssssssssss",updateMedication)
+ 
   function getStrength() {
     let medicine = document.getElementById("medication_name").value;
     let arr = medicationList.filter((item) => {
@@ -109,6 +109,7 @@ const PhyMedicationAllergies = (props) => {
   };
   const validationSchema = Yup.object().shape({});
   const onSubmit = (values) => {
+   
     let cm = values.current_medication.map((v) => {
       let temp = {};
       temp.medicineName = v.medicineName;
@@ -134,7 +135,7 @@ const PhyMedicationAllergies = (props) => {
       allergies: al,
     };
     console.log("Happpppppppp......", payload);
-    props.medication_allergies(payload);
+    //props.medication_allergies(payload);
     props.updateMedication_allergies(payload);
     props.flashNotification({
       message: "Medication and Allergy added...",

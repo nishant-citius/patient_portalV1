@@ -533,6 +533,27 @@
         }
       ],
       "id": 7
+    },
+    {
+      "userid": 56,
+      "current_medication": [
+        {
+          "medicineName": "BUTISOL SODIUM50MG",
+          "dosage": "",
+          "directionstoconsume": "",
+          "physicianName": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 8
     }
   ],
   "immunization": [
@@ -821,7 +842,6 @@
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
-<<<<<<< HEAD
       "mobile_no": 8801888988,
       "doc_id": 56,
       "doc_name": "shiva  prasad",
@@ -832,18 +852,6 @@
       "appointment_desc": "neck pain",
       "createdBy": "NishantChaubey",
       "createdDate": "2021-11-05T05:11:47.771Z",
-=======
-      "mobile_no": 1234567890,
-      "doc_id": 26,
-      "doc_name": "Manoj Thormamidi",
-      "appointment_title": "High Fever",
-      "appointment_start_time": "17:05",
-      "appointment_end_time": "18:06",
-      "appointmentDate": "2021-11-05",
-      "appointment_desc": "High Fever With Body Pain",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-05T10:36:27.356Z",
->>>>>>> affe0fa297015b53588edfb5de748812ed0c7fbe
       "patientId": 1,
       "status": "approved",
       "id": 14
@@ -911,11 +919,7 @@
       "pulse": "77",
       "respiration": "78",
       "oxigen_saturation": "92",
-<<<<<<< HEAD
       "physicianId": 56,
-=======
-      "physicianId": 26,
->>>>>>> affe0fa297015b53588edfb5de748812ed0c7fbe
       "patientId": "1",
       "id": 1
     }
@@ -10915,7 +10919,18 @@
     }
   ],
   "patientdietplan": [
-    
+    {
+      "earlymorning": "yoga, walking/skipping",
+      "breakfast": "Dosa/Chappathi",
+      "mid_morning": "apple/gua/orange-1 cup",
+      "lunch": "Roti with lots of veggies",
+      "evening": "buscuits/tea",
+      "dinner": "Rice/Chapathi with less oil",
+      "post_dinner_activity": "try to walk for a while",
+      "bedtime": "skim milk 1-glass",
+      "physicianId": 12,
+      "id": 1
+    }
   ],
   "patient_procedures": [
     {
@@ -10926,11 +10941,39 @@
       "id": 1
     },
     {
+      "doc_id": 56,
+      "patientId": "1",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 2
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "desc": "Bypass Cerebral Ventricle to Pleural Cavity with Autologous Tissue Substitute, Open Approach",
+      "code": "16074",
+      "id": 3
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 4
+    },
+    {
       "doc_id": 55,
       "patientId": "24",
       "desc": "Bypass Cerebral Ventricle to Blood Vessel with Autologous Tissue Substitute, Open Approach",
       "code": "16073",
       "id": 5
+    },
+    {
+      "doc_id": 55,
+      "patientId": "24",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 6
     }
   ],
   "patient_diagnosis": [

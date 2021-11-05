@@ -116,7 +116,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <PhyMedicationAllergies />
+          <PhyMedicationAllergies patientId={patientId}/>
         </TabPanel>
 
         <TabPanel value={value} index={3}>
