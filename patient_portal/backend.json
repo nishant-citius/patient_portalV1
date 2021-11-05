@@ -27,17 +27,19 @@
       "speciality": "pathology",
       "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 51
     },
     {
       "email": "susmitha@email.com",
-      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
+      "password": "$2a$10$UZIMXKBd6iwF3YywL30uw.9nOZCWlJSTFOdsPykVfN2ooxU0fhKH6",
       "fName": "Susmitha",
       "lName": "C",
       "dob": "1996-08-08",
       "username": "Susmitha1281",
       "mobile": "8106989754",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 38
@@ -51,6 +53,7 @@
       "username": "SnehalathaR",
       "mobile": "7688986545",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -73,10 +76,10 @@
     },
     {
       "email": "aj@email.com",
-      "fName": "Ajinkya",
+      "fName": "Ajinkya Mohanrao",
       "lName": "Pathak",
       "dob": "2021-09-30",
-      "username": "Ajinkya20",
+      "username": "AjinkyaPathak2021",
       "rpassword": "12345",
       "mobile": 9403541779,
       "blood_group": "b+ve",
@@ -84,7 +87,7 @@
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 2,
-      "password": "$2a$10$lPqkRUJQaApGdKtW/0AGjutbkDmFnEh6.xyd5hEcAu5FpHXF8Oa5S"
+      "password": "$2a$10$UQjGulj6yyO3MCRb9fLVbeEy0SZVYp8PWqPMT6spESJ9hNYNJXQne"
     },
     {
       "email": "mamatha@email.com",
@@ -95,6 +98,7 @@
       "username": "MamathaT",
       "mobile": "6789468988",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "dermatology",
       "createdDate": "Tue Nov 02 2021 10:21:39 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -109,6 +113,7 @@
       "username": "ManojT",
       "mobile": "7655443329",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "allergy_immunology",
       "createdDate": "Tue Nov 02 2021 10:23:02 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -126,6 +131,7 @@
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:25:34 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 28
     },
     {
@@ -140,6 +146,7 @@
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:26:51 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 29
     },
     {
@@ -154,6 +161,7 @@
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:28:23 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 30
     },
     {
@@ -168,6 +176,7 @@
       "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 10:31:17 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 31
     },
     {
@@ -180,6 +189,7 @@
       "mobile": "8801888988",
       "role": "physician",
       "speciality": "Neurology",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 32
@@ -194,60 +204,51 @@
       "mobile": "9705607801",
       "role": "physician",
       "speciality": "psychiatry",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:33:22 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 33
     },
     {
-      "email": "ajinkya@email.com",
-      "password": "$2a$10$wNhRusjZ89jD9zTuGO9XKuCY1vUV0eBV5/aFB7wY8CFDEBpG6bp7S",
-      "fName": "Ajinkya Mohanrao ",
-      "lName": "Pathak",
-      "dob": "2016-02-10",
-      "username": "Ajinkya1281",
-      "mobile": "787698976D",
-      "role": "admin",
-      "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 34
-    },
-    {
       "email": "nishanth@email.com",
-      "password": "$2a$10$FKzXNbGT1r8kJhmRmuSjGe6Kkuges.2d2ZPGAddm6dYpCrtnRc1yO",
+      "password": "$2a$10$l605wx40CDtJnNbjBt8Qj.qujpO/l9tjqY8ZBfZtOMyPzdAWxlkG6",
       "fName": "Nishantha",
       "lName": "Choubey",
       "dob": "2007-06-12",
       "username": "NishanthChoubey321",
       "mobile": "6789468988",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 35
     },
     {
       "email": "supriya@email.com",
-      "password": "$2a$10$4LNpOOp5aXm3qx6kEdKPFOtTApDnzu/YhEN9ruWn.yPYp0qhKRrIu",
+      "password": "$2a$10$AnmArX3QAw7J8dqrZ/lIPOhNwvznC54Aw3UzM3sw9NPuOZIw1Nu8e",
       "fName": "Supriya",
       "lName": "Kulkarni",
       "dob": "2002-02-14",
       "username": "SupriyaKulkarni1281",
       "mobile": "8977567778",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 36
     },
     {
       "email": "pooja@email.com",
-      "password": "$2a$10$iDSPQLXG5NmYlx9M8njPzu9ScIlkdY.VubmYvgsgh2mOdQbTkxmUS",
+      "password": "$2a$10$pwQUodCPZIufR3fmXxTHsetFQLnXDSd4HS9DdYG7SYjB4eJMkH192",
       "fName": "Pooja",
       "lName": "C",
       "dob": "2002-02-11",
       "username": "Pooja281",
       "mobile": "8677567778",
+      "rpassword": "12345",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 37
     },
     {
@@ -259,8 +260,9 @@
       "username": "Susmitha1281",
       "mobile": "8106989754",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 38
     },
     {
@@ -272,6 +274,7 @@
       "username": "susmitha1281",
       "mobile": "8106989754",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "internal_medicine",
       "createdDate": "Tue Nov 02 2021 23:29:40 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -279,15 +282,16 @@
     },
     {
       "email": "shiva@email.com",
-      "password": "$2a$10$IUlN244wWXTUiKyfDT.dw.WrKfXG4gJurdTuO1klbIbwK9.Rdm5pq",
+      "password": "$2a$10$kXR1IGt.COxo99pC3iWynutUytSGaioOWDlw8bmJzlNlId.dVeNzu",
       "fName": "Shivakumar",
       "lName": "Chinthakindi",
       "dob": "1996-08-08",
       "username": "shivakumarP",
       "mobile": "7655443329",
+      "rpassword": "12345",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 39
     },
     {
@@ -343,6 +347,7 @@
       "dob": "1994-11-02",
       "username": "shiva prasad",
       "mobile": "8801888988",
+      "rpassword": "12345",
       "role": "physician",
       "speciality": "neurology",
       "createdDate": "Thu Nov 04 2021 01:03:24 GMT+0530 (India Standard Time)",
@@ -358,6 +363,7 @@
       "username": "Sudhir K",
       "mobile": "6789468988",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "Neurology",
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -1013,7 +1019,7 @@
       "createdDate": "2021-11-05T07:30:39.818Z",
       "patientId": 26
     },
-      {
+    {
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
