@@ -1,14 +1,41 @@
 import { useState, useEffect } from "react";
+import { useHistory,useParams } from "react-router";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
-import { set } from "date-fns";
+import { adminService } from "../../services/register_user_service";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
+import { TrainRounded } from "@material-ui/icons";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: "100vh",
+    width: "80vw",
+  },
+  tablehead: {
+    background: "#b7c1f7",
+  },
+}));
 
 const PhyMedicationAllergies = (props) => {
-  
+  const classes = useStyles();
   const [isAvailable, setIsAvailable] = useState(false);
-  const [updateMedication, setupdateMedication] = useState(true);
+  const [medicationList, setMedicationList] = useState([]);
+  const [medicineStrength, setmedicineStrength] = useState([]);
+  const [updateMedications, setupdateMedications] = useState(true);
+  const { id } = useParams();
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -17,6 +44,44 @@ const PhyMedicationAllergies = (props) => {
       }
     }
   }, []);
+  useEffect(() => {
+    if (props.isLoggedIn) {
+      // setDoctorsList(props.physiciandata);
+      patientMedication();      
+        }
+  }, []);
+  function patientMedication() {
+    adminService.getMedication().then(
+      (response) => {
+        setMedicationList(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  }
+  // function updateMedication(userId){
+  //   adminService.updateMedications(userId).then(
+  //     (response) =>{
+  //       setupdateMedications(response.data);
+  //     },
+  //     (error) =>{
+  //       return;
+  //     }
+  //   );
+  // }
+ 
+  function getStrength() {
+    let medicine = document.getElementById("medication_name").value;
+    let arr = medicationList.filter((item) => {
+      if (item.DrugName === medicine) {
+        return item;
+      }
+    });
+    console.log("Medicine Strength", medicine);
+    setmedicineStrength(arr);
+    return arr;
+  }
 
   const initialValues = {
     id: "",
@@ -33,21 +98,7 @@ const PhyMedicationAllergies = (props) => {
         endDate: "",
       },
     ],
-    otc_medication: [
-      {
-        otcDrugName: "",
-        strength: "",
-        directiontoconsume: "",
-        socialDrugs: "",
-      },
-    ],
-    past_medication: [
-      {
-        pastdrugName: "",
-        strength: "",
-        directiontoconsume: "",
-      },
-    ],
+   
     allergies: [
       {
         allergyName: "",
@@ -56,39 +107,21 @@ const PhyMedicationAllergies = (props) => {
       },
     ],
   };
-
   const validationSchema = Yup.object().shape({});
   const onSubmit = (values) => {
+   
     let cm = values.current_medication.map((v) => {
       let temp = {};
       temp.medicineName = v.medicineName;
       temp.dosage = v.dosage;
       temp.directionstoconsume = v.directionstoconsume;
-      temp.frequency = v.frequency;
       temp.physicianName = v.physicianName;
-      temp.purpose = v.purpose;
       temp.startDate = v.startDate;
       temp.endDate = v.endDate;
       return temp;
+      
     });
-
-    let om = values.otc_medication.map((v) => {
-      let temp = {};
-      temp.otcDrugName = v.otcDrugName;
-      temp.strength = v.strength;
-      temp.directiontoconsume = v.directiontoconsume;
-      temp.socialDrugs = v.socialDrugs;
-      return temp;
-    });
-
-    let pm = values.past_medication.map((v) => {
-      let temp = {};
-      temp.pastdrugName = v.pastdrugName;
-      temp.strength = v.strength;
-      temp.directiontoconsume = v.directiontoconsume;
-      return temp;
-    });
-
+    
     let al = values.allergies.map((v) => {
       let temp = {};
       temp.allergyName = v.allergyName;
@@ -96,152 +129,116 @@ const PhyMedicationAllergies = (props) => {
       temp.drugAllergy = v.drugAllergy;
       return temp;
     });
-
     const payload = {
+      
       userid: props.currentUser.id,
       current_medication: cm,
-      otc_medication: om,
-      past_medication: pm,
       allergies: al,
     };
 
-    props.medication_allergies(payload);
+    
+    console.log("Happpppppppp......", payload);
+
+
+    if( updateMedications ===false ){
+     props.medication_allergies(payload);
+ }else{
+     props.updateMedication_allergies(payload);
+     }
+    
     props.flashNotification({
       message: "Medication and Allergy added...",
       type: "success",
     });
+    //history.push("/patient");
   };
+  let history = useHistory();
 
   function updateMed() {
-    setupdateMedication(false);
+    setupdateMedications(false);
   }
 
   return (
     <>
-      {updateMedication ? (
+      {updateMedications ? (
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-            <div className="card-header text-center">Immunization Details</div>
-            <div className="card-body text-center">
-              <h4>Current Medication</h4>
-              <button className="btn btn-primary" onClick={() => updateMed()}>
+            <div className="card-header text-center">
+              <h3>Medication And Allergies</h3>
+              <button className="btn btn-primary" onClick={() => updateMed()} >
                 Update the medication
               </button>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Medicine Name</th>
-                    <th scope="col">Direction To Consume</th>
-                    <th scope="col">Dose Details</th>
-                    <th scope="col">Frequency</th>
-                    <th scope="col">Physician Name</th>
-                    <th scope="col">Purpose</th>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">End Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.current_medication.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.medicineName}</td>
-                        <td>{item.dosage}</td>
-                        <td>{item.directionstoconsume}</td>
-                        <td>{item.frequency}</td>
-                        <td>{item.physicianName}</td>
-                        <td>{item.purpose}</td>
-                        <td>{item.startDate}</td>
-                        <td>{item.endDate}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <h4>OTC Medication</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Otc Drug Name</th>
-                    <th scope="col">Strength</th>
-                    <th scope="col">Direction To Consume</th>
-                    <th scope="col">Social Drug</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.otc_medication.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.otcDrugName}</td>
-                        <td>{item.strength}</td>
-                        <td>{item.directiontoconsume}</td>
-                        <td>{item.socialDrugs}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <h4>Past Medication</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Drug Name</th>
-                    <th scope="col">Strength</th>
-                    <th scope="col">Direction To Consume</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.past_medication.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.pastdrugName}</td>
-                        <td>{item.strength}</td>
-                        <td>{item.directiontoconsume}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-              <h4>Allergies</h4>
-              <table className="table table-bordered shadow mt-4">
-                <thead className="table-dark">
-                  <tr>
-                    <th scope="col">Sr.No</th>
-                    <th scope="col">Allergy Name</th>
-                    <th scope="col">Symptoms</th>
-                    <th scope="col">Drug Allergy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {props.mediAllergyDetails.allergies.map(function (
-                    item,
-                    index
-                  ) {
-                    return (
-                      <tr key={index}>
-                        <td>{index + 1}</td>
-                        <td>{item.allergyName}</td>
-                        <td>{item.symptomsofAllergy}</td>
-                        <td>{item.drugAllergy}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+            </div>
+           
+            <div className="card-body text-center">
+              <h5>Current Medication</h5>
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Medicine Name</TableCell>
+                      <TableCell scope="col">Dose Details</TableCell>
+                      <TableCell scope="col">Direction To Consume</TableCell>
+                      <TableCell scope="col">Physician Name</TableCell>
+                      <TableCell scope="col">Start Date</TableCell>
+                      <TableCell scope="col">End Date</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+              
+                    {props.mediAllergyDetails.current_medication.map(function (
+                      item,
+                      index
+                    ) {
+                      
+                      return (
+                        
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.medicineName}</TableCell>
+                          <TableCell>{item.dosage}</TableCell>
+                          <TableCell>{item.directionstoconsume}</TableCell>
+                          <TableCell>{item.physicianName}</TableCell>
+                          <TableCell>{item.startDate}</TableCell>
+                          <TableCell>{item.endDate}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+            
+              <h5>Allergies</h5>
+
+              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+                <Table>
+                  <TableHead className={classes.tablehead}>
+                    <TableRow>
+                      <TableCell scope="col">Sr.No</TableCell>
+                      <TableCell scope="col">Allergy Name</TableCell>
+                      <TableCell scope="col">Symptoms</TableCell>
+                      <TableCell scope="col">Drug Allergy</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {props.mediAllergyDetails.allergies.map(function (
+                      item,
+                      index
+                    ) {
+                      return (
+                        <TableRow key={index}>
+                          <TableCell>{index + 1}</TableCell>
+                          <TableCell>{item.allergyName}</TableCell>
+                          <TableCell>{item.symptomsofAllergy}</TableCell>
+                          <TableCell>{item.drugAllergy}</TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  </TableBody>
+                </Table>
+              </TableContainer>
             </div>
           </div>
         </div>
@@ -255,12 +252,14 @@ const PhyMedicationAllergies = (props) => {
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-12">
-                  <div className="card shadow-lg p-10 mb-6 bg-white rounded mt-5">
+                  <div className="card shadow-lg p-10 mb-6 bg-white rounded">
                     <div className="card-header text-center ">
-                      Medication and Allergies
+                      Medication and Allergies 
                     </div>
+                    
                     <div className="card-body">
                       <Form>
+                      
                         <div className="row mt-2">
                           <div className="col-12">
                             <hr />
@@ -277,21 +276,31 @@ const PhyMedicationAllergies = (props) => {
                                       (current_medication, index) => (
                                         <div key={index}>
                                           <div className="row">
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
-                                                  Medicine Name
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`current_medication[${index}].medicineName`}
-                                                  placeholder="Please enter medicine name"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="current_medication.medicineName" />
-                                                </div>
-                                              </div>
+                                            <div className="col-12 col-md-6">
+                                              <label htmlFor="user name">
+                                                Medicine Name
+                                              </label>
+                                              <Field
+                                                as="select"
+                                                className="form-control"
+                                                name={`current_medication[${index}].medicineName`}
+                                              >
+                                                <option value="">Select</option>
+                                                {medicationList.map(
+                                                  (medicine, index) => (
+                                                    <option
+                                                      value={
+                                                        medicine.DrugName +
+                                                        medicine.Strength
+                                                      }
+                                                      key={index}
+                                                    >
+                                                      {medicine.DrugName +
+                                                        medicine.Strength}
+                                                    </option>
+                                                  )
+                                                )}
+                                              </Field>
                                             </div>
                                             <div className="col-12 col-md-3">
                                               <div className="form-group">
@@ -328,22 +337,6 @@ const PhyMedicationAllergies = (props) => {
                                             <div className="col-12 col-md-3">
                                               <div className="form-group">
                                                 <label htmlFor="user name">
-                                                  Frequency
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`current_medication[${index}].frequency`}
-                                                  placeholder="Please enter frequency"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="current_medication.directionstoconsume" />
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
                                                   Physician Name
                                                 </label>
                                                 <Field
@@ -354,22 +347,6 @@ const PhyMedicationAllergies = (props) => {
                                                 />
                                                 <div className="error">
                                                   <ErrorMessage name="current_medication.physicianName" />
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div className="col-12 col-md-3">
-                                              <div className="form-group">
-                                                <label htmlFor="user name">
-                                                  Purpose
-                                                </label>
-                                                <Field
-                                                  type="text"
-                                                  className="form-control"
-                                                  name={`current_medication[${index}].purpose`}
-                                                  placeholder="Please enter purpose"
-                                                />
-                                                <div className="error">
-                                                  <ErrorMessage name="current_medication.purpose" />
                                                 </div>
                                               </div>
                                             </div>
@@ -435,6 +412,95 @@ const PhyMedicationAllergies = (props) => {
                           </div>
                         </div>
 
+                       <div className="row mt-2">
+                          <div className="col-12">
+                            <hr />
+                            <h5 className="text-center">Allerigies</h5>
+                            <hr />
+                            <FieldArray name="allergies">
+                              {(fieldArrayProps) => {
+                                const { push, remove, form } = fieldArrayProps;
+                                const { values } = form;
+                                const { allergies } = values;
+                                return (
+                                  <div>
+                                    {allergies.map((allergies, index) => (
+                                      <div key={index}>
+                                        <div className="row">
+                                          <div className="col-12 col-md-3">
+                                            <div className="form-group">
+                                              <label htmlFor="user name">
+                                                Allergy Name
+                                              </label>
+                                              <Field
+                                                type="text"
+                                                className="form-control"
+                                                name={`allergies[${index}].allergyName`}
+                                              />
+                                              <div className="error">
+                                                <ErrorMessage name="allergies.allergyName" />
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="col-12 col-md-3">
+                                            <div className="form-group">
+                                              <label htmlFor="user name">
+                                                Symptoms of Allergy
+                                              </label>
+                                              <Field
+                                                type="text"
+                                                className="form-control"
+                                                name={`allergies[${index}].symptomsofAllergy`}
+                                              />
+                                              <div className="error">
+                                                <ErrorMessage name="allergies.symptomsofAllergy" />
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="col-12 col-md-3">
+                                            <div className="form-group">
+                                              <label htmlFor="user name">
+                                                Any Drug Allergy
+                                              </label>
+                                              <Field
+                                                type="text"
+                                                className="form-control"
+                                                name={`allergies[${index}].drugAllergy`}
+                                              />
+                                              <div className="error">
+                                                <ErrorMessage name="allergies.drugAllergy" />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="col-12 col-md-2">
+                                          {index > 0 && (
+                                            <button
+                                              className="btn btn-danger btn-number  btn_wdth"
+                                              type="button"
+                                              onClick={() => remove(index)}
+                                            >
+                                              -
+                                            </button>
+                                          )}
+
+                                          <button
+                                            className="btn btn-success btn-number mrg_20 btn_wdth"
+                                            type="button"
+                                            onClick={() => push("")}
+                                          >
+                                            +
+                                          </button>
+                                        </div>
+                                      </div>
+                                    ))}
+                                  </div>
+                                );
+                              }}
+                            </FieldArray>
+                          </div>
+                        </div>
+
                         <div className="col-12 text-center mt-5">
                           <button className="btn btn-primary" type="submit">
                             Submit
@@ -459,6 +525,7 @@ const mapStateToProps = (state) => {
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     currentUser: state.login.loggedUserInfo,
     isLoggedIn: state.login.isLoggedIn,
+    
   };
 };
 
@@ -468,6 +535,8 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
     getMedicationAllergies: (userId) =>
       dispatch(actionCreator.GetMedicationAllergies(userId)),
+    updateMedication_allergies: (userId, data) =>
+    dispatch(actionCreator.UpdateMedicationAndAllergies(userId, data)),  
   };
 };
 

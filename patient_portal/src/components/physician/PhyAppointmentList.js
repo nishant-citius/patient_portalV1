@@ -191,7 +191,9 @@ export class AppointmentList extends React.Component {
       //   </div>
       // </div>
       <Container>
-        <h4 className="text-center fw-bold text-primary">Appointment List</h4>
+        <h4 className="text-center fw-bold text-primary">
+          Appointments Manage List
+        </h4>
         <TableContainer component={Paper} style={{ marginTop: "20px" }}>
           <Table>
             <TableHead className="tablehead">
