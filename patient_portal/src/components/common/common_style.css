@@ -2,6 +2,13 @@
   top: 50px !important;
 }
 
+.txt_757575{
+  color: #757575;
+}
+.txt_9e9e9e{
+  color: #9e9e9e;
+}
+
 .item {
   padding: 15px 0px !important;
 }
@@ -70,6 +77,10 @@ i.icon {
   padding-top: 1rem;
   color: blue;
   font-size: 20px;
+}
+.vdo_size{
+  width: 310px !important;
+    height: 188px !important;
 }
 
 @media only screen and (max-width: 600px) {
