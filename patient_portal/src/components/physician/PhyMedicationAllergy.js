@@ -17,6 +17,7 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
+import { TrainRounded } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,8 +47,7 @@ const PhyMedicationAllergies = (props) => {
   useEffect(() => {
     if (props.isLoggedIn) {
       // setDoctorsList(props.physiciandata);
-      patientMedication();
-      
+      patientMedication();      
         }
   }, []);
   function patientMedication() {
@@ -60,16 +60,16 @@ const PhyMedicationAllergies = (props) => {
       }
     );
   }
-  function updateMedication(userId){
-    adminService.updateMedications(userId).then(
-      (response) =>{
-        setupdateMedications(response.data);
-      },
-      (error) =>{
-        return;
-      }
-    );
-  }
+  // function updateMedication(userId){
+  //   adminService.updateMedications(userId).then(
+  //     (response) =>{
+  //       setupdateMedications(response.data);
+  //     },
+  //     (error) =>{
+  //       return;
+  //     }
+  //   );
+  // }
  
   function getStrength() {
     let medicine = document.getElementById("medication_name").value;
@@ -130,13 +130,22 @@ const PhyMedicationAllergies = (props) => {
       return temp;
     });
     const payload = {
+      
       userid: props.currentUser.id,
       current_medication: cm,
       allergies: al,
     };
+
+    
     console.log("Happpppppppp......", payload);
-    //props.medication_allergies(payload);
-    props.updateMedication_allergies(payload);
+
+
+    if( updateMedications ===false ){
+     props.medication_allergies(payload);
+ }else{
+     props.updateMedication_allergies(payload);
+     }
+    
     props.flashNotification({
       message: "Medication and Allergy added...",
       type: "success",
@@ -516,6 +525,7 @@ const mapStateToProps = (state) => {
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     currentUser: state.login.loggedUserInfo,
     isLoggedIn: state.login.isLoggedIn,
+    
   };
 };
 
