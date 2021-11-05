@@ -53,17 +53,16 @@ const EditUser = (props) => {
     if (props.globalmessage === "Edit Success") {
       history.push("/allusers");
     } else {
-      alert("Failure..");
     }
   };
 
   return (
-    <div className="container py-4 border border-3 border-secondary rounded-3 mt-5">
+    <div className="container  mt-5">
       <Link className="btn btn-warning" to="/allusers">
         <BsFillArrowLeftSquareFill />
         <span className="m-2">Back</span>
       </Link>
-      <h3 className="text-success text-center fw-bold ">Edit Details</h3>
+      <h3 className="text-center fw-bold ">Edit Details</h3>
       <div className="row justify-content-center">
         <div className="col-8">
           <form name="registration_form" onSubmit={submitUserData}>

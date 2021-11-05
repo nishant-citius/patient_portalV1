@@ -45,3 +45,5 @@ export const GET_ALL_PROCEDURES = "http://localhost:9999/procedures";
 
 export const APPROVED_APPOINTMETS =
   "http://localhost:9999/appointments?status=approved";
+
+export const UPDATE_PATIENT_MEDICATIONANDALLERGIES="http://localhost:9999/medic_allergy";

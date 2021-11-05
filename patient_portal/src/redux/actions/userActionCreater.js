@@ -61,6 +61,10 @@ axios.interceptors.request.use((req) => {
     //attach auth token to the request header
     req.headers.authorization = `Bearer ${authToken}`;
   }
+  if (req.method === "put" && req.url.indexOf("/demographics/")) {
+    //attach auth token to the request header
+    req.headers.authorization = `Bearer ${authToken}`;
+  }
   return req;
 });
 // //********AXIOS INTERCEPTOR********
@@ -638,6 +642,35 @@ export function AddMedicationAndAllergiesAsync(user) {
     );
   };
 }
+export function UpdateMedicationAndAllergies(patientId, upadatedData) {
+  let payload = {
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios
+      .put(
+        `${URLS.MED_ALLERGIES}/${patientId}`,
+        JSON.stringify(upadatedData),
+        config
+      )
+      .then(
+        (response) => {
+          payload.globalmessage = "Medcation and alergy is Updated...";
+          dispatch({
+            type: actions.UPDATE_PATIENT_MEDICATIONANDALLERGIES,
+            payload: payload,
+          });
+        },
+        (error) => {
+          dispatch({
+            type: actions.UPDATE_PATIENT_MEDICATIONANDALLERGIES,
+            payload: payload,
+          });
+        }
+      );
+  };
+}
 
 export function updateprofile(profileImage, loggedUserInfo) {
   let payload = {
@@ -687,6 +720,36 @@ export function GetPatientDemographics(userId) {
         dispatch({ type: actions.GET_PATIENT_DEMOGRAPHICS, payload: payload });
       }
     );
+  };
+}
+
+export function UpdatePatientDemographics(patientId, upadatedData) {
+  let payload = {
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios
+      .put(
+        `${URLS.DEMOGRAPHICS}/${patientId}`,
+        JSON.stringify(upadatedData),
+        config
+      )
+      .then(
+        (response) => {
+          payload.globalmessage = "Demographics Updated...";
+          dispatch({
+            type: actions.UPDATE_PATIENT_DEMOGRAPHICS,
+            payload: payload,
+          });
+        },
+        (error) => {
+          dispatch({
+            type: actions.UPDATE_PATIENT_DEMOGRAPHICS,
+            payload: payload,
+          });
+        }
+      );
   };
 }
 
