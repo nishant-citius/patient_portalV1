@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router";
+import { useHistory,useParams } from "react-router";
 import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
@@ -33,7 +33,9 @@ const PhyMedicationAllergies = (props) => {
   const [isAvailable, setIsAvailable] = useState(false);
   const [medicationList, setMedicationList] = useState([]);
   const [medicineStrength, setmedicineStrength] = useState([]);
-  const [updateMedication, setupdateMedication] = useState(true);
+  const [updateMedications, setupdateMedications] = useState(true);
+  const { id } = useParams();
+
   useEffect(() => {
     if (props.isLoggedIn) {
       if (props.mediAllergyDetails) {
@@ -45,7 +47,8 @@ const PhyMedicationAllergies = (props) => {
     if (props.isLoggedIn) {
       // setDoctorsList(props.physiciandata);
       patientMedication();
-    }
+      
+        }
   }, []);
   function patientMedication() {
     adminService.getMedication().then(
@@ -57,7 +60,17 @@ const PhyMedicationAllergies = (props) => {
       }
     );
   }
-
+  function updateMedication(id, data){
+    adminService.updateMedications(id).then(
+      (response) =>{
+        setupdateMedications(response.data);
+      },
+      (error) =>{
+        return;
+      }
+    );
+  }
+ console.log("sssssssssssssssss",updateMedication)
   function getStrength() {
     let medicine = document.getElementById("medication_name").value;
     let arr = medicationList.filter((item) => {
@@ -121,7 +134,7 @@ const PhyMedicationAllergies = (props) => {
       allergies: al,
     };
     console.log("Happpppppppp......", payload);
-    //props.medication_allergies(payload);
+    props.medication_allergies(payload);
     props.updateMedication_allergies(payload);
     props.flashNotification({
       message: "Medication and Allergy added...",
@@ -132,12 +145,12 @@ const PhyMedicationAllergies = (props) => {
   let history = useHistory();
 
   function updateMed() {
-    setupdateMedication(false);
+    setupdateMedications(false);
   }
 
   return (
     <>
-      {updateMedication ? (
+      {updateMedications ? (
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
             <div className="card-header text-center">
