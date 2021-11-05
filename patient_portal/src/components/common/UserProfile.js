@@ -36,7 +36,7 @@ function UserProfile(props) {
   const [user, setUser] = useState(tempUserData);
 
   useEffect(() => {
-    setUser(props.currentUser);
+    setUser(props.userDetails);
     doctorSpeciality();
   }, [0]);
 
@@ -54,9 +54,10 @@ function UserProfile(props) {
     e.preventDefault();
     let newUserData = { ...user, password: props.currentUser.rpassword };
     props.updateUser(props.currentUser.id, newUserData);
-    props.getUserDetails(props.currentUser.id);
-    setUser(props.userDetails);
     setOpenPopup(false);
+
+    props.getUserDetails(props.currentUser.id);
+    setUser(newUserData);
   };
 
   function doctorSpeciality() {
@@ -223,27 +224,27 @@ function UserProfile(props) {
               <Grid item xs>
                 <Typography variant="body2" gutterBottom>
                   <span className="fw-bold"> Name : </span>
-                  {`${props.currentUser.fName}  ${props.currentUser.lName}`}
+                  {`${user.fName}  ${user.lName}`}
                 </Typography>
                 <hr></hr>
                 <Typography variant="body2" gutterBottom>
                   <span className="fw-bold">DOB : </span>
-                  {props.currentUser.dob}
+                  {user.dob}
                 </Typography>
                 <hr></hr>
                 <Typography variant="body2" gutterBottom>
                   <span className="fw-bold">Email : </span>
-                  {props.currentUser.email}
+                  {user.email}
                 </Typography>
                 <hr></hr>
                 <Typography variant="body2" gutterBottom>
                   <span className="fw-bold">Contact No : </span>
-                  {props.currentUser.mobile}
+                  {user.mobile}
                 </Typography>
                 <hr></hr>
                 <Typography variant="body2" gutterBottom>
                   <span className="fw-bold">Username : </span>
-                  {props.currentUser.username}
+                  {user.username}
                 </Typography>
                 <hr></hr>
                 <Typography variant="subtitle1" component="div">
