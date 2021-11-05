@@ -1,13 +1,42 @@
 import React from "react";
 import { connect } from "react-redux";
+import "../admin/admin.css";
+import {
+  makeStyles,
+  Container,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TablePagination,
+  TableRow,
+} from "mui";
 
 export class PatientVitals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      page: 0,
+      rowPerPage: 6,
       isAvailable: false,
     };
   }
+
+  onPageChange = (event, nextPage) => {
+    this.setState({
+      ...this.state,
+      page: nextPage,
+    });
+  };
+
+  onChangeRowsPerPage = (event) => {
+    this.setState({
+      ...this.state,
+      rowPerPage: event.target.value,
+    });
+  };
 
   componentDidMount() {
     if (this.props.patientvitalsDetails.length > 0) {
@@ -19,50 +48,59 @@ export class PatientVitals extends React.Component {
 
   render() {
     return (
-      <>
-        <div className="container mt-5">
-          <h5 className="text-success text-center fw-bold">Patient Vital</h5>
-          <table
-            className="dashboard-table"
-            style={{ marginLeft: "auto", marginRight: "auto" }}
-          >
-            <thead>
-              <tr>
-                <th scope="col">Height</th>
-                <th scope="col">Weight</th>
-                <th scope="col">Blood Pressure</th>
-                <th scope="col">Temperature</th>
-                <th scope="col">Pulse</th>
-                <th scope="col">Respiration</th>
-                <th scope="col">Oxygen Saturation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
+      <Container>
+        <h4 className="text-center fw-bold text-primary">Patient Vitals</h4>
+        <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+          <Table>
+            <TableHead className="tablehead">
+              <TableRow>
+                <TableCell className="tableCell">Height</TableCell>
+                <TableCell className="tableCell">Weight</TableCell>
+                <TableCell className="tableCell">Blood Pressure</TableCell>
+                <TableCell className="tableCell">Temperature</TableCell>
+                <TableCell className="tableCell">Pulse</TableCell>
+                <TableCell className="tableCell">Respiration</TableCell>
+                <TableCell className="tableCell">Oxygen Saturation</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
                 {this.state.isAvailable ? (
                   <>
-                    <td>{this.props.patientvitalsDetails[0].height}</td>
-                    <td>{this.props.patientvitalsDetails[0].weight}</td>
-                    <td>{this.props.patientvitalsDetails[0].blood_pressure}</td>
-                    <td>{this.props.patientvitalsDetails[0].temperature}</td>
-                    <td>{this.props.patientvitalsDetails[0].pulse}</td>
-                    <td>{this.props.patientvitalsDetails[0].respiration}</td>
-                    <td>
+                    <TableCell>
+                      {this.props.patientvitalsDetails[0].height}
+                    </TableCell>
+                    <TableCell>
+                      {this.props.patientvitalsDetails[0].weight}
+                    </TableCell>
+                    <TableCell>
+                      {this.props.patientvitalsDetails[0].blood_pressure}
+                    </TableCell>
+                    <TableCell>
+                      {this.props.patientvitalsDetails[0].temperature}
+                    </TableCell>
+                    <TableCell>
+                      {this.props.patientvitalsDetails[0].pulse}
+                    </TableCell>
+                    <TableCell>
+                      {this.props.patientvitalsDetails[0].respiration}
+                    </TableCell>
+                    <TableCell>
                       {this.props.patientvitalsDetails[0].oxigen_saturation}
-                    </td>
+                    </TableCell>
                   </>
                 ) : (
-                  <td>
+                  <TableCell>
                     <p className="text text-center fw-bold succeess">
                       No Patient Vitals Available...
                     </p>
-                  </td>
+                  </TableCell>
                 )}
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Container>
     );
   }
 }

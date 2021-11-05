@@ -4,8 +4,7 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import { useHistory } from "react-router";
-import isValid from "date-fns/isValid";
-import { de } from "date-fns/locale";
+import "../admin/admin.css";
 import {
   makeStyles,
   Container,
@@ -23,9 +22,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "80vw",
-  },
-  tablehead: {
-    background: "#b7c1f7",
   },
 }));
 
@@ -96,17 +92,19 @@ const Immunization = (props) => {
       {isAvailable ? (
         <div className="container">
           <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-            <div className="card-header text-center">Immunization Details</div>
+            <div className="card-header text-center">
+              <h4 className="text-success">Immunization Details</h4>
+            </div>
             <div className="card-body text-center">
-              <h4>Covid Vaccine Details</h4>
+              <h5 className="text-primary">Covid Vaccine Details</h5>
 
               <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                 <Table>
-                  <TableHead className={classes.tablehead}>
+                  <TableHead className="tablehead">
                     <TableRow>
-                      <TableCell scope="col">Age Category</TableCell>
-                      <TableCell scope="col">Vaccine Brand</TableCell>
-                      <TableCell scope="col">Dose Details</TableCell>
+                      <TableCell className="tableCell">Age Category</TableCell>
+                      <TableCell className="tableCell">Vaccine Brand</TableCell>
+                      <TableCell className="tableCell">Dose Details</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -124,15 +122,16 @@ const Immunization = (props) => {
                   </TableBody>
                 </Table>
               </TableContainer>
+              <br></br>
 
-              <h4>General Vaccine Details</h4>
+              <h5 className="text-primary">General Vaccine Details</h5>
               <TableContainer component={Paper} style={{ marginTop: "20px" }}>
                 <Table>
-                  <TableHead className={classes.tablehead}>
+                  <TableHead className="tablehead">
                     <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Vaccine Name</TableCell>
-                      <TableCell scope="col">Vaccine Date</TableCell>
+                      <TableCell className="tableCell">Sr.No</TableCell>
+                      <TableCell className="tableCell">Vaccine Name</TableCell>
+                      <TableCell className="tableCell">Vaccine Date</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
