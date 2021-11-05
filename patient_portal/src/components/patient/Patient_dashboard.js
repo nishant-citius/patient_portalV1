@@ -58,7 +58,7 @@ const Patient_dashboard = (props) => {
       if (props.mediAllergyDetails) {
         setmediAllergy(true);
       }
-      if (props.patientvitalsDetails.length > 0) {
+      if (props.patientvitalsDetails) {
         setpVitals(true);
       }
     }
