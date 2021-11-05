@@ -395,7 +395,7 @@ const Medication_Allergies = (props) => {
                                                   type="text"
                                                   className="form-control"
                                                   name={`current_medication[${index}].directionstoconsume`}
-                                                  placeholder="Please enter medicine name"
+                                                  placeholder="Please enter directions to consume"
                                                 />
                                                 <div className="error">
                                                   <ErrorMessage name="current_medication.directionstoconsume" />
