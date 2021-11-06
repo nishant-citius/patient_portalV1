@@ -29,6 +29,7 @@ import EditUser from "components/admin/common/EditUser";
 import { Edit } from "@material-ui/icons";
 import AddUsers from "components/admin/common/AddUsers";
 import { adminService } from "services/register_user_service";
+import PhyAppointmentNotifications from "../components/physician/PhyAppointmentNotification";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -134,6 +135,7 @@ function AppToolBar(props) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
   const [openAppointmentPopup, setOpenAppointmentPopup] = useState(false);
+  const [openPhyAppointmentPopup, setOpenPhyAppointmentPopup] = useState(false);
   const [users, setUsers] = useState([]);
 
   const classes = useStyles({ open });
@@ -159,6 +161,9 @@ function AppToolBar(props) {
 
   function handleAppointmentNotification() {
     setOpenAppointmentPopup(true);
+  }
+  function handlePhyAppointmentNotification() {
+    setOpenPhyAppointmentPopup(true);
   }
 
   useEffect(() => {
@@ -239,6 +244,17 @@ function AppToolBar(props) {
                   <MailIcon />
                 </Badge>
               )}
+
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              {props.role === "physician" ? (
+                <Badge badgeContent={users.length} color="secondary">
+                  <MailIcon onClick={handlePhyAppointmentNotification} />
+                </Badge>
+              ) : (
+                <Badge badgeContent={0} color="secondary">
+                  <MailIcon />
+                </Badge>
+              )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
                 onClick={HandleClick}
@@ -280,6 +296,15 @@ function AppToolBar(props) {
       >
         <AppointmentNotifications />
       </ModalPopup>
+      <ModalPopup
+        title="Scheduled Appointment"
+        openPopup={openPhyAppointmentPopup}
+        setOpenPopup={setOpenPhyAppointmentPopup}
+      >
+        <PhyAppointmentNotifications />
+      </ModalPopup>
+
+      
     </AppBar>
   );
 }

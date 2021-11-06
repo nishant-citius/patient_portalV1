@@ -247,6 +247,7 @@ const PhyMedicationAllergies = (props) => {
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={onSubmit}
+          enableReinitialize
         >
           {(props) => (
             <div className="container">
