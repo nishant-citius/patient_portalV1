@@ -9,7 +9,6 @@ const DietPlan = (props) => {
   const [patientId, setPatientId] = useState(0);
   const [dietAdded, setDietAdded] = useState(false);
   const [patientDiet, addPatientDiet] = useState({});
-
   let savedValues = {};
 
   useEffect(() => {

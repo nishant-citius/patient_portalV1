@@ -1,0 +1,504 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Demographics snapshot test should render properly 1`] = `
+Array [
+  <div
+    className="MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded"
+      style={
+        Object {
+          "height": "70vh",
+          "margin": "60px auto",
+          "marginTop": "110px",
+          "padding": 20,
+          "width": 280,
+        }
+      }
+    >
+      <div
+        align="center"
+        className="MuiGrid-root"
+      >
+        <div
+          className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault"
+          style={
+            Object {
+              "backgroundColor": "#1bbd7e",
+            }
+          }
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+            />
+          </svg>
+        </div>
+        <br />
+        <h4>
+          Sign In
+        </h4>
+      </div>
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+            data-shrink={true}
+          >
+            Email
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+              disabled={false}
+              name="email"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Enter email"
+              required={false}
+              type="text"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root"
+          />
+        </div>
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+            data-shrink={true}
+          >
+            password
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+              disabled={false}
+              name="password"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Enter password"
+              required={false}
+              type="password"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root"
+          />
+        </div>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "margin": "8px 0",
+            }
+          }
+          tabIndex={0}
+          type="submit"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Sign in
+          </span>
+        </button>
+      </form>
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+         Do you have an account ?
+      </p>
+      <a
+        href="/registeruser"
+      >
+        Sign Up
+      </a>
+      <p
+        className="text text-danger fw-bold text-center"
+      >
+        
+        !!!
+      </p>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <h4
+      className="text-center pt-5"
+    >
+      Patient Demographics
+    </h4>
+    <form
+      action="#"
+      onReset={[Function]}
+      onSubmit={[Function]}
+    >
+      <div
+        className="row justify-content-center"
+      >
+        <div
+          className="col-12 col-md-6"
+        >
+          <div
+            className="form-group"
+          >
+            <label>
+              First Name
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="fName"
+              name="fName"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Last Name
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="lName"
+              name="lName"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              D.O.B
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="dob"
+              name="dob"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="date"
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Gender
+            </label>
+            <select
+              className="form-control"
+              disabled={false}
+              id="gender"
+              name="gender"
+              onBlur={[Function]}
+              onChange={[Function]}
+              value=""
+            >
+              <option
+                value=""
+              >
+                Select
+              </option>
+              <option
+                value="male"
+              >
+                Male
+              </option>
+              <option
+                value="female"
+              >
+                Female
+              </option>
+            </select>
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Ethnicity/Race
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="ethnicity/race"
+              name="ethnicity"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Education
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="education"
+              name="education"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Employment
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="employment"
+              name="employment"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+        </div>
+        <div
+          className="col-12 col-md-6"
+        >
+          <div
+            className="form-group"
+          >
+            <label>
+              Address
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="address"
+              name="address"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text-"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Phone Number
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="phone_number"
+              name="phone_number"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="number"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Medical History
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="medical_history"
+              name="medical_history"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Family Medical History 
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="family_medical_history"
+              name="family_medical_history"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Surgeries
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="surgeries"
+              name="surgeries"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label>
+              Insurance Provider
+            </label>
+            <input
+              className="form-control"
+              disabled={false}
+              id="insurance_provider"
+              name="insurance_provider"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+            <div
+              className="error"
+            />
+          </div>
+        </div>
+        <div
+          className="col-4"
+        >
+          <button
+            className="btn btn-primary w-100 m-4"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>,
+]
+`;

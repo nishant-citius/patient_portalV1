@@ -27,7 +27,22 @@
       "speciality": "pathology",
       "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 51
+    },
+    {
+      "email": "susmitha@email.com",
+      "password": "$2a$10$UZIMXKBd6iwF3YywL30uw.9nOZCWlJSTFOdsPykVfN2ooxU0fhKH6",
+      "fName": "Susmitha",
+      "lName": "C",
+      "dob": "1996-08-08",
+      "username": "Susmitha1281",
+      "mobile": "8106989754",
+      "role": "admin",
+      "rpassword": "12345",
+      "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 38
     },
     {
       "email": "sneha@email.com",
@@ -38,6 +53,7 @@
       "username": "SnehalathaR",
       "mobile": "7688986545",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -60,18 +76,18 @@
     },
     {
       "email": "aj@email.com",
-      "password": "$2a$10$M7ZK.hovGd44BOP6iJstIOnMwd1pLTOizVwsRfG2S5sY.xt4xMVxG",
-      "fName": "Ajinkya",
+      "fName": "Ajinkya Mohanrao",
       "lName": "Pathak",
       "dob": "2021-09-30",
-      "username": "aj@email.com",
+      "username": "AjinkyaPathak2021",
       "rpassword": "12345",
       "mobile": 9403541779,
       "blood_group": "b+ve",
       "role": "admin",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 2
+      "id": 2,
+      "password": "$2a$10$UQjGulj6yyO3MCRb9fLVbeEy0SZVYp8PWqPMT6spESJ9hNYNJXQne"
     },
     {
       "email": "mamatha@email.com",
@@ -82,6 +98,7 @@
       "username": "MamathaT",
       "mobile": "6789468988",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "dermatology",
       "createdDate": "Tue Nov 02 2021 10:21:39 GMT+0530 (India Standard Time)",
       "isActive": true,
@@ -96,10 +113,11 @@
       "username": "ManojT",
       "mobile": "7655443329",
       "role": "physician",
+      "rpassword": "12345",
       "speciality": "allergy_immunology",
       "createdDate": "Tue Nov 02 2021 10:23:02 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 26
+      "id": 23
     },
     {
       "email": "anasuya@email.com",
@@ -127,6 +145,7 @@
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:25:34 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 28
     },
     {
@@ -141,6 +160,7 @@
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:26:51 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 29
     },
     {
@@ -155,6 +175,7 @@
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:28:23 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 30
     },
     {
@@ -169,18 +190,20 @@
       "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 10:31:17 GMT+0530 (India Standard Time)",
       "isActive": true,
+      "rpassword": "12345",
       "id": 31
     },
     {
       "email": "sp@gmail.com",
-      "password": "$2a$10$tDnaHD.yopAybBqQbuC9cOKhoN7MiuVxwNtdWsiQAZOTK/sYKh12K",
+      "password": "$2a$10$MLPW4NH7/mmlZw.ngr67oem/4LW9Dr0XnHWaeqRwZGfO6ATsW4gWq",
       "fName": "shiva",
       "lName": "prasad",
       "dob": "2021-11-01",
       "username": "shiva prasad",
       "mobile": "8801888988",
       "role": "physician",
-      "speciality": "pathology",
+      "speciality": "Neurology",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 32
@@ -195,60 +218,51 @@
       "mobile": "9705607801",
       "role": "physician",
       "speciality": "psychiatry",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:33:22 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 33
     },
     {
-      "email": "ajinkya@email.com",
-      "password": "$2a$10$wNhRusjZ89jD9zTuGO9XKuCY1vUV0eBV5/aFB7wY8CFDEBpG6bp7S",
-      "fName": "Ajinkya Mohanrao ",
-      "lName": "Pathak",
-      "dob": "2016-02-10",
-      "username": "Ajinkya1281",
-      "mobile": "787698976D",
-      "role": "admin",
-      "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
-      "isActive": false,
-      "id": 34
-    },
-    {
       "email": "nishanth@email.com",
-      "password": "$2a$10$FKzXNbGT1r8kJhmRmuSjGe6Kkuges.2d2ZPGAddm6dYpCrtnRc1yO",
+      "password": "$2a$10$l605wx40CDtJnNbjBt8Qj.qujpO/l9tjqY8ZBfZtOMyPzdAWxlkG6",
       "fName": "Nishantha",
       "lName": "Choubey",
       "dob": "2007-06-12",
       "username": "NishanthChoubey321",
       "mobile": "6789468988",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 35
     },
     {
       "email": "supriya@email.com",
-      "password": "$2a$10$4LNpOOp5aXm3qx6kEdKPFOtTApDnzu/YhEN9ruWn.yPYp0qhKRrIu",
+      "password": "$2a$10$AnmArX3QAw7J8dqrZ/lIPOhNwvznC54Aw3UzM3sw9NPuOZIw1Nu8e",
       "fName": "Supriya",
       "lName": "Kulkarni",
       "dob": "2002-02-14",
       "username": "SupriyaKulkarni1281",
       "mobile": "8977567778",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 36
     },
     {
       "email": "pooja@email.com",
-      "password": "$2a$10$iDSPQLXG5NmYlx9M8njPzu9ScIlkdY.VubmYvgsgh2mOdQbTkxmUS",
+      "password": "$2a$10$pwQUodCPZIufR3fmXxTHsetFQLnXDSd4HS9DdYG7SYjB4eJMkH192",
       "fName": "Pooja",
       "lName": "C",
       "dob": "2002-02-11",
       "username": "Pooja281",
       "mobile": "8677567778",
+      "rpassword": "12345",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 37
     },
     {
@@ -260,21 +274,38 @@
       "username": "Susmitha1281",
       "mobile": "8106989754",
       "role": "admin",
+      "rpassword": "12345",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 38
     },
     {
+      "email": "susmitha1281@email.com",
+      "password": "$2a$10$o2XWS7fS/N5zLhArVPFaFOO3/odRIJmxlpCYB7HRLog6/1ei7y4Cy",
+      "fName": "Susmitha",
+      "lName": "Chinthakindi",
+      "dob": "2021-11-08",
+      "username": "susmitha1281",
+      "mobile": "8106989754",
+      "role": "physician",
+      "rpassword": "12345",
+      "speciality": "internal_medicine",
+      "createdDate": "Tue Nov 02 2021 23:29:40 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 55
+    },
+    {
       "email": "shiva@email.com",
-      "password": "$2a$10$IUlN244wWXTUiKyfDT.dw.WrKfXG4gJurdTuO1klbIbwK9.Rdm5pq",
+      "password": "$2a$10$kXR1IGt.COxo99pC3iWynutUytSGaioOWDlw8bmJzlNlId.dVeNzu",
       "fName": "Shivakumar",
       "lName": "Chinthakindi",
       "dob": "1996-08-08",
       "username": "shivakumarP",
       "mobile": "7655443329",
+      "rpassword": "12345",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 39
     },
     {
@@ -323,69 +354,160 @@
       "id": 40
     },
     {
-      "email": "shruti@gmail.com",
-      "password": "$2a$10$bfrsmWv7w7EZ6XB7YqEA7u/qQGvjBikqyoI6KGir5SCmVtpGgbjN.",
-      "fName": "Shruti",
-      "lName": "Yadav",
-      "dob": "2021-11-09",
-      "username": "Shruti20",
+      "email": "sp@email.com",
+      "password": "$2a$10$JbFRkJCgLjcZXat10ZtLgecw8VYTrXEtRpKrgX04rSWadG7DFnGs2",
+      "fName": "shiva ",
+      "lName": "prasad",
+      "dob": "1994-11-02",
+      "username": "shiva prasad",
+      "mobile": "8801888988",
       "rpassword": "12345",
-      "mobile": 657678688787,
-      "blood_group": "o-",
-      "role": "patient",
-      "createdDate": "Fri Nov 05 2021 09:29:37 GMT+0530 (India Standard Time)",
+      "role": "physician",
+      "speciality": "neurology",
+      "createdDate": "Thu Nov 04 2021 01:03:24 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 52
     },
     {
-      "email": "rashmi@gmail.com",
-      "password": "$2a$10$n9lwFuxd9Qj94JJ3CGuexOfqTKxtkg3ogRPfTBOC7tRmgHGqrzB02",
-      "fName": "Rashmi",
-      "lName": "Sharma",
-      "dob": "2021-11-02",
-      "username": "Rashmi20",
+      "email": "sudhir@email.com",
+      "password": "$2a$10$zer0nXPJPLvhf4pQB4sRme.yK7i.oLu1SoYE8X/zWQpdae7dApunG",
+      "fName": "Sudhir",
+      "lName": "Koganti",
+      "dob": "2007-10-23",
+      "username": "Sudhir K",
+      "mobile": "6789468988",
+      "role": "physician",
       "rpassword": "12345",
-      "mobile": 6577688687,
-      "blood_group": "o-",
-      "role": "patient",
-      "createdDate": "Fri Nov 05 2021 10:02:21 GMT+0530 (India Standard Time)",
+      "speciality": "Neurology",
+      "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 53
+      "id": 20
     }
   ],
   "medic_allergy": [
     {
-      "userid": 56,
+      "userid": 24,
       "current_medication": [
         {
-          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
-          "dosage": "hjghjgjgj",
-          "directionstoconsume": "uhuhihkh",
-          "frequency": "",
-          "physicianName": "uiiiohih",
-          "purpose": "",
-          "startDate": "2021-11-17",
-          "endDate": "2021-12-03"
+          "medicineName": "Dolo",
+          "dosage": "2",
+          "directionstoconsume": "two times",
+          "frequency": "100 mg",
+          "physicianName": "Soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-20",
+          "endDate": "2021-10-20"
+        },
+        {
+          "medicineName": "paracetamol",
+          "dosage": "2",
+          "directionstoconsume": "in morning",
+          "frequency": "50 mg",
+          "physicianName": "soujanya",
+          "purpose": "fever",
+          "startDate": "2021-10-12",
+          "endDate": "2021-10-14"
         }
       ],
       "otc_medication": [
         {
-          "otcDrugName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "strength": "",
-          "directiontoconsume": "jhiuiku",
-          "socialDrugs": "smoke"
-        },
-        {
-          "otcDrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
-          "directiontoconsume": "jgjgjgug",
+          "otcDrugName": "paracetamal",
+          "strength": "650",
+          "directiontoconsume": "3",
           "socialDrugs": "drink"
         }
       ],
       "past_medication": [
         {
-          "pastdrugName": "HEPARIN SODIUM5,000 UNITS/ML",
+          "pastdrugName": "telma",
+          "strength": "40",
+          "directiontoconsume": "after breakfast"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "spots on skin",
+          "symptomsofAllergy": "Itching",
+          "drugAllergy": "No"
+        }
+      ],
+      "id": 24
+    },
+    {
+      "userid": 12,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
           "strength": "",
-          "directiontoconsume": "khkhlkl"
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "altrokcen",
+          "strength": "50 mg",
+          "directiontoconsume": "twice a day"
+        },
+        {
+          "pastdrugName": "Neuomarkazol",
+          "strength": "100 mg",
+          "directiontoconsume": "twice a day"
+        },
+        {
+          "pastdrugName": "propygenta",
+          "strength": "80 mg",
+          "directiontoconsume": "twice a day"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyName": "",
+          "symptomsofAllergy": "",
+          "drugAllergy": ""
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userid": 24,
+      "current_medication": [
+        {
+          "medicineName": "",
+          "dosage": "",
+          "directionstoconsume": "",
+          "frequency": "",
+          "physicianName": "",
+          "purpose": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "",
+          "strength": "",
+          "directiontoconsume": "",
+          "socialDrugs": ""
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "",
+          "strength": "",
+          "directiontoconsume": ""
         }
       ],
       "allergies": [
@@ -590,50 +712,50 @@
       "id": 40
     },
     {
-      "first_name": "Ajinkya",
-      "last_name": "Pathak",
-      "age_category": "18_44",
-      "vaccine_brand": "Covishield",
-      "dose_detail": "2",
+      "first_name": "Nishant",
+      "last_name": "Chaubey",
+      "age_category": "45",
+      "vaccine_brand": "sasas",
+      "dose_detail": "1",
       "general_vaccine": [
         {
-          "vaccine_name": "Polio",
-          "vaccine_date": "2013-06-05"
-        },
-        {
-          "vaccine_name": "Dengue",
-          "vaccine_date": "2021-11-16"
+          "vaccine_name": "asasas",
+          "vaccine_date": "2021-11-05"
         }
       ],
       "id": 1
     },
     {
-      "first_name": "Shruti",
-      "last_name": "Yadav",
-      "age_category": "18_44",
-      "vaccine_brand": "Covaccine",
-      "dose_detail": "1",
-      "general_vaccine": [
-        {
-          "vaccine_name": "TRESIVAC™",
-          "vaccine_date": "2021-11-01"
-        }
-      ],
-      "id": 52
-    },
-    {
-      "first_name": "Rashmi",
-      "last_name": "Sharma",
-      "age_category": "18_44",
-      "vaccine_brand": "Covishield",
+      "first_name": "sanjay",
+      "last_name": "sharma",
+      "age_category": "45",
+      "vaccine_brand": "CoviShield",
       "dose_detail": "2",
       "general_vaccine": [
         {
-          "vaccine_name": "hepatitis B",
-          "vaccine_date": "2021-11-02"
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-11-01"
         }
       ],
-      "id": 53
+      "id": 26
+    },
+    {
+      "first_name": "Swapna",
+      "last_name": "Patil",
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
+      "dose_detail": "1",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-11-01"
+        },
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-11-03"
+        }
+      ],
+      "id": 48
     }
   ],
   "appointments": [
@@ -689,6 +811,42 @@
       "patientId": 48,
       "status": "approved",
       "id": 4
+    },
+    {
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "mobile_no": 8353638299,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "Fever",
+      "appointment_start_time": "02:35",
+      "appointment_end_time": "03:35",
+      "appointmentDate": "2021-11-03",
+      "appointment_desc": "fever",
+      "createdBy": "SwapnaPatil",
+      "createdDate": "2021-11-03T04:03:28.531Z",
+      "patientId": 48,
+      "status": "reject",
+      "id": 5
+    },
+    {
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "mobile_no": 8353638299,
+      "doc_id": 55,
+      "doc_name": "Susmitha Chinthakindi",
+      "appointment_title": "Fever",
+      "appointment_start_time": "02:35",
+      "appointment_end_time": "03:35",
+      "appointmentDate": "2021-11-03",
+      "appointment_desc": "fever",
+      "createdBy": "SwapnaPatil",
+      "createdDate": "2021-11-03T04:03:28.531Z",
+      "patientId": 48,
+      "status": "completed",
+      "id": 5
     },
     {
       "fName": "neeraj",
@@ -799,6 +957,22 @@
       "id": 13
     },
     {
+      "fName": "sanjay",
+      "lName": "sharma",
+      "dob": "2021-11-25",
+      "mobile_no": 8788286580,
+      "doc_id": 20,
+      "doc_name": "Sudhir Koganti",
+      "appointment_title": "Checking",
+      "appointment_start_time": "16:03",
+      "appointment_end_time": "17:04",
+      "appointmentDate": "2021-11-05",
+      "appointment_desc": "Checking",
+      "createdBy": "sanjaysharma",
+      "createdDate": "2021-11-05T07:30:39.818Z",
+      "patientId": 26
+    },
+    {
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -853,38 +1027,55 @@
       "id": 2
     },
     {
-      "fName": "Shruti",
-      "lName": "Yadav",
-      "dob": "2021-11-09",
-      "gender": "female",
-      "ethnicity": "No",
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "gender": "male",
+      "ethnicity": "NA",
       "education": "MCA",
-      "employment": "Software Engineer",
-      "address": "Gurgaon",
-      "phone_number": 65757678686,
-      "medical_history": "Skin allergy",
-      "family_medical_history": "No",
-      "surgeries": "No",
-      "insurance_provider": "No",
-      "userid": 52,
-      "id": 3
+      "employment": "CitiusTech",
+      "address": "jnj",
+      "phone_number": 1234567890,
+      "medical_history": "NA",
+      "family_medical_history": "NA",
+      "surgeries": "NA",
+      "insurance_provider": "LIC",
+      "userid": 1,
+      "id": 1
     },
     {
-      "fName": "Rashmi",
+      "fName": "Sanjay",
       "lName": "Sharma",
-      "dob": "2021-11-02",
-      "gender": "female",
-      "ethnicity": "No",
-      "education": "MCA",
-      "employment": "SE",
-      "address": "Delhi",
-      "phone_number": 6757756886,
-      "medical_history": "No",
-      "family_medical_history": "No",
-      "surgeries": "No",
-      "insurance_provider": "No",
-      "userid": 53,
+      "dob": "2021-11-25",
+      "gender": "male",
+      "ethnicity": "Pune",
+      "education": "BE",
+      "employment": "Infosys",
+      "address": "Pune",
+      "phone_number": 8788286580,
+      "medical_history": "Cancer",
+      "family_medical_history": "NA",
+      "surgeries": "Applied",
+      "insurance_provider": "Muthut Finance",
+      "userid": 4,
       "id": 4
+    },
+    {
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-08",
+      "gender": "female",
+      "ethnicity": "Pune",
+      "education": "MCom",
+      "employment": "TATA",
+      "address": "Satara",
+      "phone_number": 1234567890,
+      "medical_history": "BP",
+      "family_medical_history": "Sugar",
+      "surgeries": "Okay yes",
+      "insurance_provider": "Bank",
+      "userid": 48,
+      "id": 5
     }
   ],
   "patientvitals": [
@@ -4498,7 +4689,7 @@
       "ApplNo": "793",
       "ProductNo": "2",
       "Form": "TABLET;ORAL",
-      "Strength": "15MG ",
+      "Strength": "15MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "0",
       "DrugName": "BUTISOL SODIUM",
       "ActiveIngredient": "BUTABARBITAL SODIUM",
@@ -4508,7 +4699,7 @@
       "ApplNo": "793",
       "ProductNo": "3",
       "Form": "TABLET;ORAL",
-      "Strength": "50MG",
+      "Strength": "50MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "0",
       "DrugName": "BUTISOL SODIUM",
       "ActiveIngredient": "BUTABARBITAL SODIUM",
@@ -4528,7 +4719,7 @@
       "ApplNo": "793",
       "ProductNo": "5",
       "Form": "TABLET;ORAL",
-      "Strength": "100MG",
+      "Strength": "100MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "0",
       "DrugName": "BUTISOL SODIUM",
       "ActiveIngredient": "BUTABARBITAL SODIUM",
@@ -4678,7 +4869,7 @@
       "ApplNo": "3402",
       "ProductNo": "1",
       "Form": "INJECTABLE;INJECTION",
-      "Strength": "5PRESSOR UNITS/ML ",
+      "Strength": "5PRESSOR UNITS/ML **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "PITRESSIN TANNATE",
       "ActiveIngredient": "VASOPRESSIN TANNATE",
@@ -5218,7 +5409,7 @@
       "ApplNo": "5010",
       "ProductNo": "5",
       "Form": "SYRUP;ORAL",
-      "Strength": "50MG/5ML ",
+      "Strength": "50MG/5ML **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "0",
       "DrugName": "DEMEROL",
       "ActiveIngredient": "MEPERIDINE HYDROCHLORIDE",
@@ -5258,7 +5449,7 @@
       "ApplNo": "5213",
       "ProductNo": "1",
       "Form": "TABLET;ORAL",
-      "Strength": "1.5MG;5MG ",
+      "Strength": "1.5MG;5MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "HYCODAN",
       "ActiveIngredient": "HOMATROPINE METHYLBROMIDE; HYDROCODONE BITARTRATE",
@@ -5748,7 +5939,7 @@
       "ApplNo": "5963",
       "ProductNo": "1",
       "Form": "SOLUTION/DROPS;OPHTHALMIC",
-      "Strength": "10% ",
+      "Strength": "10% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "SODIUM SULAMYD",
       "ActiveIngredient": "SULFACETAMIDE SODIUM",
@@ -5758,7 +5949,7 @@
       "ApplNo": "5963",
       "ProductNo": "2",
       "Form": "OINTMENT;OPHTHALMIC",
-      "Strength": "10% ",
+      "Strength": "10% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "SODIUM SULAMYD",
       "ActiveIngredient": "SULFACETAMIDE SODIUM",
@@ -5768,7 +5959,7 @@
       "ApplNo": "5963",
       "ProductNo": "3",
       "Form": "SOLUTION/DROPS;OPHTHALMIC",
-      "Strength": "30% ",
+      "Strength": "30% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "SODIUM SULAMYD",
       "ActiveIngredient": "SULFACETAMIDE SODIUM",
@@ -5778,7 +5969,7 @@
       "ApplNo": "5970",
       "ProductNo": "4",
       "Form": "INJECTABLE;INJECTION",
-      "Strength": "1% ",
+      "Strength": "1% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "SOTRADECOL",
       "ActiveIngredient": "SODIUM TETRADECYL SULFATE",
@@ -5788,7 +5979,7 @@
       "ApplNo": "5970",
       "ProductNo": "5",
       "Form": "INJECTABLE;INJECTION",
-      "Strength": "3% ",
+      "Strength": "3% **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "SOTRADECOL",
       "ActiveIngredient": "SODIUM TETRADECYL SULFATE",
@@ -5818,7 +6009,7 @@
       "ApplNo": "6008",
       "ProductNo": "1",
       "Form": "TABLET;ORAL",
-      "Strength": "100MG ",
+      "Strength": "100MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "MESANTOIN",
       "ActiveIngredient": "MEPHENYTOIN",
@@ -5838,7 +6029,7 @@
       "ApplNo": "6035",
       "ProductNo": "3",
       "Form": "TABLET;ORAL",
-      "Strength": "0.2MG ",
+      "Strength": "0.2MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
       "ReferenceDrug": "1",
       "DrugName": "METHERGINE",
       "ActiveIngredient": "METHYLERGONOVINE MALEATE",
@@ -5862,6 +6053,16 @@
       "ReferenceDrug": "0",
       "DrugName": "DIASONE SODIUM",
       "ActiveIngredient": "SULFOXONE SODIUM",
+      "ReferenceStandard": "0"
+    },
+    {
+      "ApplNo": "6071",
+      "ProductNo": "3",
+      "Form": "INJECTABLE;INJECTION",
+      "Strength": "50MG/ML;0.03MG/ML;0.0025MG/ML;7.5MG/ML;100 IU/ML;0.2MG/ML;20MG/ML;2MG/ML;1.8MG/ML;1.5MG/ML;1,650 IU/ML;5 IU/ML",
+      "ReferenceDrug": "0",
+      "DrugName": "BEROCCA PN",
+      "ActiveIngredient": "ASCORBIC ACID; BIOTIN; CYANOCOBALAMIN; DEXPANTHENOL; ERGOCALCIFEROL; FOLIC ACID; NIACINAMIDE; PYRIDOXINE HYDROCHLORIDE; RIBOFLAVIN 5'-PHOSPHATE SODIUM; THIAMINE HYDROCHLORIDE; VITAMIN A PALMITATE; VITAMIN E",
       "ReferenceStandard": "0"
     },
     {

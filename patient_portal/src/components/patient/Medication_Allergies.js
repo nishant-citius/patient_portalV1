@@ -171,7 +171,7 @@ const Medication_Allergies = (props) => {
                       <TableCell className="tableCell">Medicine Name</TableCell>
                       <TableCell className="tableCell">Dose Details</TableCell>
                       <TableCell className="tableCell">
-                        Direction To Consume
+                        Direction To Consumeghh
                       </TableCell>
 
                       <TableCell className="tableCell">

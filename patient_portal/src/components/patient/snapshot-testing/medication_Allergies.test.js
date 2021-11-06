@@ -1,25 +1,33 @@
 import renderer from "react-test-renderer";
 import Medication_Allergies from "../../patient/Medication_Allergies";
+import Login from "../../common/Login";
+import { LoginReducer } from "redux/reducers/loginReducer";
+import { MedicationandAllergiesReducer } from "redux/reducers/MedicationandAllergiesreducer";
+import { PatientMedicationAllergyReducer } from "redux/reducers/PatientMedicationAllergyReducer";
 import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
+import { createStore, combineReducers } from "redux";
 
-const mockStore = configureStore([]);
-
-describe("  M&A Component", () => {
+describe("Medication&Allergy snapshot Test", () => {
   let store;
   let jsx;
+  let rootReducer;
 
   beforeEach(() => {
-    store = mockStore({ medication_allergies: {} });
+    rootReducer = combineReducers({
+      login: LoginReducer,
+      medication_allergies: MedicationandAllergiesReducer,
+      patientMedicationAllergy: PatientMedicationAllergyReducer,
+    });
+    store = createStore(rootReducer);
     jsx = (
       <Provider store={store}>
+        <Login />
         <Medication_Allergies />
       </Provider>
     );
   });
   it("should render properly", () => {
     const tree = renderer.create(jsx).toJSON();
-    console.log(tree);
     expect(tree).toMatchSnapshot();
   });
 });

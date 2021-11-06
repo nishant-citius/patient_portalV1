@@ -9,6 +9,7 @@ export class PatientList extends React.Component {
   savedValues = {};
   constructor(props) {
     super(props);
+
     this.state = {
       page: 0,
       rowPerPage: 6,
@@ -275,4 +276,5 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(actioncreators.UpdatePatientImmunization(userId, data)),
   };
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(PatientList);
