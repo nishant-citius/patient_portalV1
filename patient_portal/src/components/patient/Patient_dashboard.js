@@ -20,13 +20,6 @@ import {
   TableRow,
 } from "mui";
 
-//  useEffect(() => {
-//    if (props.isLoggedIn) {
-//      if (props.mediAllergyDetails) {
-//        setIsAvailable(true);
-//      }
-//    }
-//  }, []);
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     background: "#fff",
@@ -55,15 +48,16 @@ const Patient_dashboard = (props) => {
       if (props.immunizationDetails) {
         setIsImmunization(true);
       }
+
       if (props.mediAllergyDetails) {
         setmediAllergy(true);
       }
-      if (props.patientvitalsDetails) {
+      debugger;
+      if (props.patientvitalsDetails.length > 0) {
         setpVitals(true);
       }
     }
   }, []);
-  console.log(props.patientvitalsDetails);
 
   return (
     <>
