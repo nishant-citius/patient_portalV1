@@ -11,6 +11,7 @@ function Diagnosis(props) {
   const [diagnosisCode, setDiagnosisCode] = useState("");
   const [patientId, setPatientId] = useState(0);
   const [diagnosisDesc, setDiagnosisDesc] = useState(0);
+  const [disable , setDisable]=useState(false);
 
   const searchItems = (e, _value) => {
     if (_value !== "") {
@@ -44,15 +45,19 @@ function Diagnosis(props) {
   }, [patientId]);
 
   function onSubmit() {
+
     let obj = {
       doc_id: props.currentUser.id,
       patientId: patientId,
       description: diagnosisDesc,
       code: diagnosisCode,
+     
     };
-
+    
     console.log(obj);
      addPatientDiagnosis(obj);
+     alert("sucessfully submited");
+     setDisable(true);
   }
 
   function addPatientDiagnosis(_diagnosis) {   
@@ -107,7 +112,7 @@ function Diagnosis(props) {
         )}
       </Formik>
       <div className="mt-3">
-        <button className="btn btn-primary mt-3" onClick={() => onSubmit()}>
+        <button disabled={disable} className="btn btn-primary mt-3" onClick={() => onSubmit()}>
           Submit
         </button>
       </div>
