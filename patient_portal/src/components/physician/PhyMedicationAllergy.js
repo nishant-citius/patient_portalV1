@@ -65,6 +65,33 @@ const PhyMedicationAllergies = (props) => {
       }
     );
   }
+  // function currentMedication(_arr) {
+  //   let cMadicationArr = _arr.map((_cmed) => _cmed);
+  //   return cMadicationArr;
+  // }
+  // function otcMedication(_arr) {
+  //   let otcMedicationArr = _arr.map((_otcmed) => _otcmed);
+  //   return otcMedicationArr;
+  // }
+  // function pastMedication(_arr) {
+  //   let pastMedicationArr = _arr.map((_pastmed) => _pastmed);
+  //   return pastMedicationArr;
+  // }
+  // function allergyMedication(_arr) {
+  //   let allergyMedicationArr = _arr.map((_alrgmed) => _alrgmed);
+  //   return allergyMedicationArr;
+  // }
+  // const savedValues = {
+  //   current_medication: currentMedication(
+  //     props.mediAllergyDetails.current_medication
+  //   ),
+  //   otc_medication: otcMedication(props.mediAllergyDetails.otc_medication),
+  //   past_medication: pastMedication(props.mediAllergyDetails.past_medication),
+  //   allergies: allergyMedication(props.mediAllergyDetails.allergies),
+  //   userid: patientId,
+  //   id: patientId,
+  // };
+  // console.log(savedValues);
   const initialValues = {
     id: "",
     userId: "",
