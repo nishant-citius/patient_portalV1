@@ -2,18 +2,18 @@
   "users": [
     {
       "email": "nc@email.com",
-      "password": "$2a$10$O82BzF58.C.eqjC/nkOkFurcToHl84t7g8Pk7qMyugfcPUgeUI7BG",
       "fName": "Nishant",
       "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "username": "nc@email.com",
+      "dob": "2021-04-06",
+      "username": "Nishant C.",
       "rpassword": "12345",
-      "mobile": 1234567890,
+      "mobile": "8888888888",
       "blood_group": "b+ve",
       "role": "patient",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 1
+      "id": 1,
+      "password": "$2a$10$Nco9qlh6BpU1krvCpWUKVewsrjxSjPreOZQntKVa8Lz0pxDlQiLsa"
     },
     {
       "email": "sumitha@gmail.com",
@@ -335,6 +335,7 @@
       "isActive": true,
       "id": 40
     },
+<<<<<<< HEAD
     {
       "email": "sp@email.com",
       "password": "$2a$10$JbFRkJCgLjcZXat10ZtLgecw8VYTrXEtRpKrgX04rSWadG7DFnGs2",
@@ -349,6 +350,9 @@
       "isActive": true,
       "id": 56
     },
+=======
+    
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
     {
       "email": "sudhir@email.com",
       "password": "$2a$10$eWTZjI4PMxgsin.6C2mVQOPDXTCVFhXmtfYe9STCO8EGQHTTFwALW",
@@ -358,12 +362,17 @@
       "username": "Sudhir K",
       "mobile": "6789468988",
       "role": "physician",
+<<<<<<< HEAD
       "speciality": "",
+=======
+      "speciality": "neurology",
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": false,
       "id": 32
     },
     {
+<<<<<<< HEAD
       "email": "psp@email.com",
       "password": "$2a$10$2qdKJINDBNhswioJshD2VOHCMUwP363qH/9LyKjkI3Rmu6grdmOlu",
       "fName": "shiva",
@@ -377,11 +386,44 @@
       "createdDate": "Fri Nov 05 2021 19:15:53 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 57
+=======
+      "email": "renu@email.com",
+      "password": "$2a$10$lfxQwiC/CM1hwJvRSaJ0k.sue6dTHm9JmJiAhekKwWg6rHrrcrkOO",
+      "fName": "Renu",
+      "lName": "Mahendra",
+      "dob": "2021-11-05",
+      "username": "RenuMahendra",
+      "mobile": "9876897685",
+      "role": "nurse",
+      "speciality": "",
+      "createdDate": "Fri Nov 05 2021 10:30:15 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 57
+    },
+    {
+      "email": "drsteve@email.com",
+      "password": "$2a$10$mPxYY81alJo3oKwK0Bk5ge/Q06Bz8uvCxNQjwfLILsjPezuonEBAm",
+      "fName": "Dr. Steven",
+      "lName": "Strange",
+      "dob": "2020-12-28",
+      "username": "Steve",
+      "mobile": "1234567890",
+      "role": "physician",
+      "speciality": "surgery",
+      "rpassword": "12345",
+      "createdDate": "Fri Nov 05 2021 15:37:07 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 58
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
     }
   ],
   "medic_allergy": [
     {
+<<<<<<< HEAD
       "userid": 55,
+=======
+      "userid": 1,
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
       "current_medication": [
         {
           "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
@@ -646,7 +688,7 @@
       "createdBy": "neerajthakur",
       "createdDate": "2021-11-03T04:05:12.101Z",
       "patientId": 27,
-      "status": "reject",
+      "status": "approved",
       "id": 6
     },
     {
@@ -664,7 +706,7 @@
       "createdBy": "sanjaysharma",
       "createdDate": "2021-11-03T04:06:54.950Z",
       "patientId": 26,
-      "status": "approved",
+      "status": "completed",
       "id": 7
     },
     {
@@ -700,7 +742,7 @@
       "createdBy": "VijayaC",
       "createdDate": "2021-11-03T05:08:35.020Z",
       "patientId": 56,
-      "status": "reject",
+      "status": "approved",
       "id": 9
     },
     {
@@ -718,7 +760,7 @@
       "createdBy": "MahendaSingh",
       "createdDate": "2021-11-03T05:15:07.232Z",
       "patientId": 54,
-      "status": "reject",
+      "status": "approved",
       "id": 10
     },
     {
@@ -812,6 +854,7 @@
       "id": 13
     },
     {
+<<<<<<< HEAD
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -861,6 +904,21 @@
       "appointment_desc": "backpain appointment",
       "createdBy": "NishantChaubey",
       "createdDate": "2021-11-05T13:06:17.099Z",
+=======
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 1234567890,
+      "doc_id": 26,
+      "doc_name": "Manoj Thormamidi",
+      "appointment_title": "High Fever",
+      "appointment_start_time": "17:05",
+      "appointment_end_time": "18:06",
+      "appointmentDate": "2021-11-05",
+      "appointment_desc": "High Fever With Body Pain",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-05T10:36:27.356Z",
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
       "patientId": 1,
       "status": "approved",
       "id": 16
@@ -10996,6 +11054,7 @@
       "desc": "Bypass Cerebral Ventricle to Blood Vessel with Autologous Tissue Substitute, Open Approach",
       "code": "16073",
       "id": 5
+<<<<<<< HEAD
     },
     {
       "doc_id": 56,
@@ -11014,6 +11073,12 @@
     {
       "doc_id": 56,
       "patientId": "1",
+=======
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
       "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
       "code": "16071",
       "id": 8
@@ -11035,20 +11100,21 @@
       "id": 2
     },
     {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": 0,
-      "code": "",
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Typhoid fever",
+      "code": "A010",
       "id": 3
     },
     {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": "Typhoid and paratyphoid fevers",
-      "code": "A01",
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Typhoid fever",
+      "code": "A010",
       "id": 4
     },
     {
+<<<<<<< HEAD
       "doc_id": 56,
       "patientId": "1",
       "description": "Cholera due to Vibrio cholerae 01, biovar cholerae",
@@ -11082,6 +11148,34 @@
       "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
       "code": "A001",
       "id": 9
+=======
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Typhoid fever",
+      "code": "A010",
+      "id": 5
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Typhoid fever",
+      "code": "A010",
+      "id": 6
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Cholera",
+      "code": "A00",
+      "id": 7
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Cholera",
+      "code": "A00",
+      "id": 8
+>>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
     }
   ]
 }
