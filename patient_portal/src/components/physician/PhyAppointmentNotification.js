@@ -16,11 +16,11 @@ const PhyAppointmentNotifications = (props) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    getPhysicianAppointments(new Date().toISOString().slice(0, 10));
+    todaysAppointments(new Date().toISOString().slice(0, 10));
   }, []);
 
-  const getPhysicianAppointments = (_date) => {
-    adminService.getPhysicianAppointments(_date).then(
+  const todaysAppointments = (_date) => {
+    adminService.appointmentsToday(_date).then(
       (response) => {
         setUsers(response.data);
       },
@@ -87,7 +87,7 @@ const PhyAppointmentNotifications = (props) => {
 const mapStatetoProps = (state) => {
   return {
     currentUser: state.login.loggedUserInfo,
-    getPhysicianAppointments: state.appointmentsDetails.appointmentsDetails,
+    appointments: state.appointmentsDetails.appointmentsDetails,
     approveApt: state.approvedAppointments.approvedAppointments,
     count: state.approvedAppointments.approvedAppointmentCount,
   };
