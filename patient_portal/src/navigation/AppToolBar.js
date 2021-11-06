@@ -251,9 +251,7 @@ function AppToolBar(props) {
                   <MailIcon onClick={handlePhyAppointmentNotification} />
                 </Badge>
               ) : (
-                <Badge badgeContent={0} color="secondary">
-                  <MailIcon />
-                </Badge>
+                <div></div>
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
