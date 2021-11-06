@@ -7,16 +7,29 @@ import * as Yup from "yup";
 import "../common/common_style.css";
 
 const Demographics = (props) => {
+  const [isAvailable, setIsAvailable] = useState(false);
+  let savedValues = {};
+
   useEffect(() => {
-    if (props.isLoggedIn) {
-      if (
-        props.demographicsDetails.length &&
-        props.demographicsDetails.length > 0
-      ) {
-        setIsAvailable(true);
+    // if (props.isLoggedIn) {
+    //   if (
+    //     props.demographicsDetails.length &&
+    //     props.demographicsDetails.length > 0
+    //   ) {
+    //     setIsAvailable(true);
+    //   }
+    // }
+    if (props.demographicsDetails) {
+      if (Object.keys(props.demographicsDetails).length === 0) {
+      } else {
+        if (isAvailable) {
+          return;
+        } else {
+          setIsAvailable(true);
+        }
       }
     }
-  }, []);
+  });
 
   const initialValues = {
     fName: props.currentUser.fName,
@@ -34,7 +47,7 @@ const Demographics = (props) => {
     insurance_provider: "",
   };
 
-  const savedValues = {
+  savedValues = {
     fName: props.currentUser.fName,
     lName: props.currentUser.lName,
     dob: props.currentUser.dob,
@@ -51,7 +64,6 @@ const Demographics = (props) => {
     insurance_provider: props.demographicsDetails[0]?.insurance_provider,
   };
 
-  const [isAvailable, setIsAvailable] = useState(false);
 
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
