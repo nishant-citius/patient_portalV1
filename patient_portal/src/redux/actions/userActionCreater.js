@@ -638,6 +638,35 @@ export function AddMedicationAndAllergiesAsync(user) {
     );
   };
 }
+export function UpdateMedicationAndAllergies(patientId, upadatedData) {
+  let payload = {
+    globalmessage: "",
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+    axios
+      .put(
+        `${URLS.MED_ALLERGIES}/${patientId}`,
+        JSON.stringify(upadatedData),
+        config
+      )
+      .then(
+        (response) => {
+          payload.globalmessage = "Medcation and alergy is Updated...";
+          dispatch({
+            type: actions.UPDATE_PATIENT_MEDICATIONANDALLERGIES,
+            payload: payload,
+          });
+        },
+        (error) => {
+          dispatch({
+            type: actions.UPDATE_PATIENT_MEDICATIONANDALLERGIES,
+            payload: payload,
+          });
+        }
+      );
+  };
+}
 
 export function updateprofile(profileImage, loggedUserInfo) {
   let payload = {
@@ -699,7 +728,7 @@ export function GetPatientImmunization(userId) {
     authToken = getState().login.authToken;
     axios.get(`${URLS.GET_PATIENT_IMMUNIZATION}${userId}`).then(
       (response) => {
-        payload.globalmessage = `Demographics Retrieved...`;
+        payload.globalmessage = `Patient Immunization Received`;
         payload.userImmunization = response.data[0];
         dispatch({ type: actions.GET_PATIENT_IMMUNIZATION, payload: payload });
       },

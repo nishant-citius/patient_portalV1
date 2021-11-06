@@ -31,9 +31,7 @@ import UserList from "../components/admin/Userslist";
 
 import * as actioncreators from "../redux/actions/userActionCreater";
 import AddUsers from "./admin/common/AddUsers";
-import MyProfile from "./patient/MyProfile";
 import Notification from "shared/notification/Notification";
-import { object } from "yup/lib/locale";
 import AppointmentList from "./patient/AppointmentList";
 import ScheduleAppointment from "./patient/ScheduleAppointment";
 import PhysicianAppointment from "./physician/PhysicianAppointment";
@@ -41,6 +39,9 @@ import Appointmentstoday from "./physician/Appointmentstoday";
 import AttendAppointment from "./physician/AttendAppointment";
 import AllergyDetails from "./admin/AllergyDetails";
 import AddAllergy from "./admin/AddAllergy";
+import Patient_Education from "./patient/Patient_Education";
+import Patient_orders from "./patient/Patient_orders";
+import UserProfile from "components/common/UserProfile";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -80,102 +81,101 @@ function ShellComponent(props) {
   };
 
   return (
-    <div className="top_mt_100">
+    <>
       <Notification notify={notify} setNotify={setNotify} />
       <Switch>
         {/* -----------Common------------- */}
         <Route exact path="/" component={PatientPortalHome} />
-        <Route path="/login">
-          <Login flashNotification={showSnacksBar} />
-        </Route>
-        <Route path="/registeruser">
-          <RegisterUser flashNotification={showSnacksBar} />
-        </Route>
-        {/* -----------Common------------- */}
+        <div className="top_mt_100">
+          <Route path="/login">
+            <Login flashNotification={showSnacksBar} />
+          </Route>
+          <Route path="/registeruser">
+            <RegisterUser flashNotification={showSnacksBar} />
+          </Route>
+          <Route path="/userProfile">
+            <UserProfile flashNotification={showSnacksBar} />
+          </Route>
+          {/* -----------Common------------- */}
+          {/* -----------Admin------------- */}
+          <Route path="/admin">
+            <AdminDashboard flashNotification={showSnacksBar} />
+          </Route>
+          <Route path="/patientlist">
+            <PatientList flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/allusers"}>
+            <UserList flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/addusers"}>
+            <AddUsers flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/physicianlist"}>
+            <PhysicianList flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/appointments"}>
+            <Appointments flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/immunizationdetails"}>
+            <ImmunizationDetails flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/allergies"}>
+            <AllergyDetails flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/addallergy"}>
+            <AddAllergy flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/userdetails/:id"}>
+            <UserDetails flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/edit/:id"}>
+            <EditUser flashNotification={showSnacksBar} />
+          </Route>
+          {/* -----------Admin------------- */}
+          {/* -----------Physician------------- */}
+          <Route path="/physician" component={Physician_dashboard} />
+          <Route path={"/patientdata"} component={PatientList1} />
+          <Route path={"/patientinactive"} component={PatientInactiveError} />
+          <Route path={"/pappointments"} component={AppointmentList} />
+          <Route
+            path={"/physician_appointments"}
+            component={PhysicianAppointment}
+          />
+          <Route path={"/schedule_appointment"}>
+            <ScheduleAppointment flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/appointmentstoday"}>
+            <Appointmentstoday flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/attendAppointment/:patintId"}>
+            <AttendAppointment flashNotification={showSnacksBar} />
+          </Route>
+          {/* -----------Physician------------- */}
+          {/* -----------Patient------------- */}
+          <Route path="/patient" component={Patient_dashboard} />
+          <Route path="/demographics" component={Demographics}>
+            <Demographics flashNotification={showSnacksBar} />
+          </Route>
+          <Route path="/immunization" component={Immunization}>
+            <Immunization flashNotification={showSnacksBar} />
+          </Route>
+          <Route path="/patientvitals" component={PatientVitals} />
+          <Route path="/vitals" component={Vitals} />
+          <Route path="/dietplan" component={DietPlan} />
+          <Route path="/medic_allergy" component={Medication_Allergies}>
+            <Medication_Allergies flashNotification={showSnacksBar} />
+          </Route>
+          <Route
+            path={"/patientdemographics/userid"}
+            component={PatientDemographics}
+          />
+          <Route path="/order" component={Patient_orders} />
 
-        {/* -----------Admin------------- */}
-        <Route path="/admin">
-          <AdminDashboard flashNotification={showSnacksBar} />
-        </Route>
-        <Route path="/patientlist">
-          <PatientList flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/allusers"}>
-          <UserList flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/addusers"}>
-          <AddUsers flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/physicianlist"}>
-          <PhysicianList flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/appointments"}>
-          <Appointments flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/immunizationdetails"}>
-          <ImmunizationDetails flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/allergies"}>
-          <AllergyDetails flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/addallergy"}>
-          <AddAllergy flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/userdetails/:id"}>
-          <UserDetails flashNotification={showSnacksBar} />
-        </Route>
-        <Route path={"/edit/:id"}>
-          <EditUser flashNotification={showSnacksBar} />
-        </Route>
-        {/* -----------Admin------------- */}
-
-        {/* -----------Physician------------- */}
-        <Route path="/physician" component={Physician_dashboard} />
-        <Route path={"/patientdata"} component={PatientList1} />
-
-        <Route path={"/patientinactive"} component={PatientInactiveError} />
-        <Route path={"/pappointments"} component={AppointmentList} />
-
-        <Route
-          path={"/physician_appointments"}
-          component={PhysicianAppointment}
-        />
-        <Route path={"/schedule_appointment"}>
-          <ScheduleAppointment flashNotification={showSnacksBar} />
-        </Route>
-
-        <Route path={"/appointmentstoday"}>
-          <Appointmentstoday flashNotification={showSnacksBar} />
-        </Route>
-
-        <Route path={"/attendAppointment/:patintId"}>
-          <AttendAppointment flashNotification={showSnacksBar} />
-        </Route>
-
-        {/* -----------Physician------------- */}
-
-        {/* -----------Patient------------- */}
-        <Route path="/patient" component={Patient_dashboard} />
-        <Route path="/demographics" component={Demographics}>
-          <Demographics flashNotification={showSnacksBar} />
-        </Route>
-        <Route path="/immunization" component={Immunization}>
-          <Immunization flashNotification={showSnacksBar} />
-        </Route>
-        <Route path="/patientvitals" component={PatientVitals} />
-        <Route path="/vitals" component={Vitals} />
-        <Route path="/dietplan" component={DietPlan} />
-        <Route path="/myprofile" component={MyProfile} />
-        <Route path="/medic_allergy" component={Medication_Allergies}>
-          <Medication_Allergies flashNotification={showSnacksBar} />
-        </Route>
-        <Route
-          path={"/patientdemographics/userid"}
-          component={PatientDemographics}
-        />
-        {/* -----------Patient------------- */}
+          <Route path="/patient_education" component={Patient_Education} />
+          {/* -----------Patient------------- */}
+        </div>
       </Switch>
-    </div>
+    </>
   );
 }
 

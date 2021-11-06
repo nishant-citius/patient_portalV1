@@ -31,13 +31,14 @@ import { UpdateImmunizationReducer } from "./reducers/UpdateImmunizationReducer"
 import { PatientMedicationAllergyReducer } from "./reducers/PatientMedicationAllergyReducer";
 import { GetAllDemographicsReducer } from "./reducers/userreducers/GetAllDemographicsReducer";
 import { ApprovedAppointmentsReducer } from "./reducers/userreducers/ApprovedAppointmentsReducer";
+import { UpdateMedicationAndAllergiesReducer } from "./reducers/updateMedicationAllergyReducer";
 
 /** combine reducers*/
 let rootReducer = combineReducers({
   register: RegisterReducer,
   login: LoginReducer,
   demographics: DemographicsReducer,
-  immunization: Immunizationreducer,
+  immunization: Immunizationreducer, //addImmunization
   vitals: VitalsReducer,
   dietplan: DietPlanReducer,
   getPatientvitals: GetVitalsReducer,
@@ -50,18 +51,19 @@ let rootReducer = combineReducers({
   patients: PatientReducer,
   nurses: GetNurseReducer,
   getalldemographics: GetAllDemographicsReducer,
-  immunizations: GetImmunizationReducer,
+  immunizations: GetImmunizationReducer, //
   userDetails: UserDetailsReducer,
   updateprofile: updateprofilepicreducer,
   inactiveUsers: InactiveUsersReducer,
   approvedAppointments: ApprovedAppointmentsReducer,
   patientDemographics: PatientDemographicsReducer,
-  patientImmunization: PatientImmunizationReducer,
+  patientImmunization: PatientImmunizationReducer, //patientImmunization
   specilizedPhysicians: SpecialityPhysicianReducer,
   appointmentsDetails: GetAllAppointmentReducer,
   deleteUser: DeleteUserReducer,
   updateImmunization: UpdateImmunizationReducer,
   patientMedicationAllergy: PatientMedicationAllergyReducer,
+  updateMedicationAndAllergies:UpdateMedicationAndAllergiesReducer,
 });
 
 /**create store  */

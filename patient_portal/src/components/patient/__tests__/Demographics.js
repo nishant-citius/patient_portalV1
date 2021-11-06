@@ -28,12 +28,15 @@ describe("Demographics test", () => {
   });
   test("Should render Demographics Component", () => {
     const wrapper = mount(jsx);
-    console.log(expect(wrapper.exists("Demographics")).toBe(true));
+    console.log(wrapper);
+    // console.log(wrapper.exists("Demographics"));
+    expect(wrapper.exists("Demographics")).toBe(true);
   });
 
   test("Should render one button", () => {
     const wrapper = mount(jsx);
-    //console.log(expect(wrapper.exists('button[children="Submit"]')).toBe(true));
+    //console.log(jsx);
+    // console.log(wrapper.exists('button[children="Submit"]'));
     expect(wrapper.exists('button[children="Submit"]')).toBe(true);
   });
 });

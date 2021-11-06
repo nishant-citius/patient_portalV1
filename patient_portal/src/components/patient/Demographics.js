@@ -109,9 +109,10 @@ const Demographics = (props) => {
         {(props) => (
           <div className="container">
             <h4 className="text-center pt-5">Patient Demographics</h4>
-            <div className="row justify-content-center">
-              <div className="col-8">
-                <Form>
+
+            <Form>
+              <div className="row justify-content-center">
+                <div className="col-12 col-md-6">
                   <div className="form-group">
                     <label>First Name</label>
                     <Field
@@ -209,6 +210,8 @@ const Demographics = (props) => {
                       <ErrorMessage name="employment" />
                     </div>
                   </div>
+                </div>
+                <div className="col-12 col-md-6">
                   <div className="form-group">
                     <label>Address</label>
                     <Field
@@ -290,6 +293,8 @@ const Demographics = (props) => {
                       <ErrorMessage name="insurance_provider" />
                     </div>
                   </div>
+                </div>
+                <div className="col-4">
                   {isAvailable ? (
                     <button
                       type="submit"
@@ -299,13 +304,17 @@ const Demographics = (props) => {
                       Submit
                     </button>
                   ) : (
-                    <button type="submit" className="btn btn-primary m-4">
+                    <button
+                      className="ptient_btn"
+                      type="submit"
+                      className="btn btn-primary w-100 m-4"
+                    >
                       Submit
                     </button>
                   )}
-                </Form>
+                </div>
               </div>
-            </div>
+            </Form>
           </div>
         )}
       </Formik>
