@@ -138,6 +138,7 @@ const Medication_Allergies = (props) => {
       return temp;
     });
     const payload = {
+      id: props.currentUser.id,
       userid: props.currentUser.id,
       current_medication: cm,
       otc_medication: om,

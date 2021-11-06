@@ -635,22 +635,63 @@
       "userid": 56,
       "current_medication": [
         {
-          "medicineName": "BUTISOL SODIUM50MG",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
+          "medicineName": "DIETHYLSTILBESTROL0.1MG",
+          "dosage": "10",
+          "directionstoconsume": "once",
+          "physicianName": "Nishant",
+          "startDate": "2021-11-26",
+          "endDate": "2021-11-26"
         }
       ],
       "allergies": [
         {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 8
+          "allergyName": "jbuybyub",
+          "symptomsofAllergy": "inunun",
+          "drugAllergy": "ununun"
+        },
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ],
+        [
+          {
+            "allergyName": "",
+            "symptomsofAllergy": "",
+            "drugAllergy": ""
+          }
+        ]
+      ]
     }
   ],
   "immunization": [
@@ -1036,6 +1077,42 @@
       "patientId": 1,
       "status": "approved",
       "id": 14
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 1234567890,
+      "doc_id": 26,
+      "doc_name": "Manoj Thormamidi",
+      "appointment_title": "edeedededede",
+      "appointment_start_time": "23:51",
+      "appointment_end_time": "12:51",
+      "appointmentDate": "2021-11-05",
+      "appointment_desc": "ccrrr",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-05T14:21:50.487Z",
+      "patientId": 1,
+      "status": "approved",
+      "id": 15
+    },
+    {
+      "fName": "Nishant",
+      "lName": "Chaubey",
+      "dob": "2021-09-30",
+      "mobile_no": 1234567890,
+      "doc_id": 23,
+      "doc_name": "Manoj Thormamidi",
+      "appointment_title": "Fever",
+      "appointment_start_time": "11:35",
+      "appointment_end_time": "00:36",
+      "appointmentDate": "2021-11-06",
+      "appointment_desc": "",
+      "createdBy": "NishantChaubey",
+      "createdDate": "2021-11-06T04:06:14.788Z",
+      "patientId": 1,
+      "status": "approved",
+      "id": 16
     }
   ],
   "demographics": [
