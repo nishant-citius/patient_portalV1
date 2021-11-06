@@ -43,7 +43,6 @@ const Patient_dashboard = (props) => {
   const [mediAllergy, setmediAllergy] = useState(false);
   const [pVitals, setpVitals] = useState(false);
   console.log("Nishant", props.patientvitalsDetails);
-
   useEffect(() => {
     if (props.isLoggedIn) {
       if (props.immunizationDetails) {
