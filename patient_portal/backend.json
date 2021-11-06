@@ -578,7 +578,7 @@
       "createdBy": "sanjaysharma",
       "createdDate": "2021-11-03T04:06:54.950Z",
       "patientId": 26,
-      "status": "approved",
+      "status": "completed",
       "id": 7
     },
     {
@@ -10820,6 +10820,13 @@
       "desc": "Bypass Cerebral Ventricle to Blood Vessel with Autologous Tissue Substitute, Open Approach",
       "code": "16073",
       "id": 5
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 6
     }
   ],
   "patient_diagnosis": [
@@ -10864,6 +10871,20 @@
       "description": "Typhoid fever",
       "code": "A010",
       "id": 6
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Cholera",
+      "code": "A00",
+      "id": 7
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Cholera",
+      "code": "A00",
+      "id": 8
     }
   ]
 }
