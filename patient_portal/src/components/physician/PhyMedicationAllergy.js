@@ -30,20 +30,20 @@ const useStyles = makeStyles((theme) => ({
 
 export class PhyMedicationAllergies extends React.Component {
   savedValues = {};
+
   constructor(props) {
     super(props);
-    //this.patientId = this.props.patientId;
+
     this.state = {
       isAvailable: false,
       medicationList: [],
-      pId: this.props.patientId,
     };
   }
 
   componentDidMount() {
-    // this.props.getMedicationAllergies(this.props.patientId.patientId);
+    this.props.fromAdmin ? this.props.getMedicationAllergies(this.props.patientId):
+    this.props.getMedicationAllergies(this.props.patientId.patintId);
     this.patientMedication();
-    console.log(this.state.pid);
   }
 
   componentDidUpdate() {
@@ -65,7 +65,6 @@ export class PhyMedicationAllergies extends React.Component {
   patientMedication() {
     adminService.getMedication().then(
       (response) => {
-        // setMedicationList(response.data);
         this.setState({
           medicationList: response.data,
         });
@@ -114,9 +113,6 @@ export class PhyMedicationAllergies extends React.Component {
       ),
       userid: this.props.patientId,
       id: this.props.patientId,
-      age_category: this.props.pImmunnization.age_category,
-      vaccine_brand: this.props.pImmunnization.vaccine_brand,
-      dose_detail: this.props.pImmunnization.dose_detail,
     };
 
     return savedValues;
@@ -174,8 +170,7 @@ export class PhyMedicationAllergies extends React.Component {
       return temp;
     });
     const payload = {
-      id: this.props.patientId,
-      userid: this.props.patientId,
+      userid: this.props.patientId.patintId,
       current_medication: cm,
       otc_medication: [...this.props.mediAllergyDetails.otc_medication],
       past_medication: [
@@ -185,15 +180,17 @@ export class PhyMedicationAllergies extends React.Component {
       allergies: [...this.props.mediAllergyDetails.allergies],
     };
 
-    // if (this.state.isAvailable) {
-    //   this.props.updateImmunization(this.props.pImmunnization.id, payload);
-    // } else {
-    //   this.props.immunization(payload);
-    // }
+    if (this.state.isAvailable) {
+      this.props.updateMedication_allergies(
+        this.props.mediAllergyDetails.id,
+        payload
+      );
+    } else {
+      this.props.medication_allergies(payload);
+    }
   };
 
   render() {
-    // const {patientId} = this.props.patientId
     if (this.state.isAvailable) this.savedValues = this.getSavedValues();
     return (
       <>

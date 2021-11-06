@@ -13,6 +13,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import ButtonBase from "@mui/material/ButtonBase";
 import { styled } from "@mui/material/styles";
+import PhyMedicationAllergy from "components/physician/PhyMedicationAllergy";
 
 const Img = styled("img")({
   margin: "auto",
@@ -148,7 +149,10 @@ const UserDetails = (props) => {
             </TabPanel>
 
             <TabPanel value={value} index={3}>
-              <h1>Medication and Allergies</h1>
+              <PhyMedicationAllergy
+                patientId={props.userDetails.id}
+                fromAdmin={true}
+              />
             </TabPanel>
           </Box>
         ) : (
