@@ -20,13 +20,6 @@ import {
   TableRow,
 } from "mui";
 
-//  useEffect(() => {
-//    if (props.isLoggedIn) {
-//      if (props.mediAllergyDetails) {
-//        setIsAvailable(true);
-//      }
-//    }
-//  }, []);
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
     background: "#fff",
@@ -50,19 +43,6 @@ const Patient_dashboard = (props) => {
   const [mediAllergy, setmediAllergy] = useState(false);
   const [pVitals, setpVitals] = useState(false);
   console.log("Nishant", props.patientvitalsDetails);
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      if (props.immunizationDetails) {
-        setIsImmunization(true);
-      }
-      if (props.mediAllergyDetails) {
-        setmediAllergy(true);
-      }
-      if (props.patientvitalsDetails) {
-        setpVitals(true);
-      }
-    }
-  }, []);
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -73,13 +53,12 @@ const Patient_dashboard = (props) => {
       if (props.mediAllergyDetails) {
         setmediAllergy(true);
       }
-
-      if (props.patientvitalsDetails) {
+      debugger;
+      if (props.patientvitalsDetails.length > 0) {
         setpVitals(true);
       }
     }
   }, []);
-  console.log(props.patientvitalsDetails);
 
   return (
     <>
