@@ -62,7 +62,6 @@ const Medication_Allergies = (props) => {
         return item;
       }
     });
-    console.log("Medicine Strength", medicine);
     setmedicineStrength(arr);
     return arr;
   }
@@ -130,6 +129,7 @@ const Medication_Allergies = (props) => {
       temp.directiontoconsume = v.directiontoconsume;
       return temp;
     });
+
     let al = values.allergies.map((v) => {
       let temp = {};
       temp.allergyName = v.allergyName;
@@ -137,14 +137,15 @@ const Medication_Allergies = (props) => {
       temp.drugAllergy = v.drugAllergy;
       return temp;
     });
+
     const payload = {
-      id: props.currentUser.id,
       userid: props.currentUser.id,
       current_medication: cm,
       otc_medication: om,
       past_medication: pm,
       allergies: al,
     };
+
     console.log("Happpppppppp", payload);
     props.medication_allergies(payload);
     props.flashNotification({

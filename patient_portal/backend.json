@@ -75,19 +75,19 @@
       "id": 48
     },
     {
-      "email": "aj@email.com",
-      "fName": "Ajinkya Mohanrao",
-      "lName": "Pathak",
-      "dob": "2021-09-30",
-      "username": "AjinkyaPathak2021",
+      "email": "swapna@email.com",
+      "password": "$2a$10$tNrcK8iwOXts/Ml35baNF.O45S8ag/20nDgquy9v7KkBrkWS1CMmO",
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "username": "MyDearSwapna",
       "rpassword": "12345",
-      "mobile": 9403541779,
-      "blood_group": "b+ve",
-      "role": "admin",
-      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
+      "mobile": 6458987638,
+      "blood_group": "B+",
+      "role": "patient",
+      "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 2,
-      "password": "$2a$10$UQjGulj6yyO3MCRb9fLVbeEy0SZVYp8PWqPMT6spESJ9hNYNJXQne"
+      "id": 2
     },
     {
       "email": "mamatha@email.com",
@@ -372,326 +372,54 @@
   ],
   "medic_allergy": [
     {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "Dolo",
-          "dosage": "2",
-          "directionstoconsume": "two times",
-          "frequency": "100 mg",
-          "physicianName": "Soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-20",
-          "endDate": "2021-10-20"
-        },
-        {
-          "medicineName": "paracetamol",
-          "dosage": "2",
-          "directionstoconsume": "in morning",
-          "frequency": "50 mg",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-12",
-          "endDate": "2021-10-14"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "paracetamal",
-          "strength": "650",
-          "directiontoconsume": "3",
-          "socialDrugs": "drink"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 24
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "50 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "Neuomarkazol",
-          "strength": "100 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "propygenta",
-          "strength": "80 mg",
-          "directiontoconsume": "twice a day"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "skin",
-          "symptomsofAllergy": "rashes",
-          "drugAllergy": "dolo"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "HEPARIN SODIUM10,000 UNITS/ML",
-          "dosage": "1.0",
-          "directionstoconsume": "injection",
-          "physicianName": "shiva prasad",
-          "startDate": "2021-11-04",
-          "endDate": "2021-11-05"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "na",
-          "symptomsofAllergy": "na",
-          "drugAllergy": "na"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "userid": 56,
+      "userid": "48",
       "current_medication": [
         {
           "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
+          "dosage": "20",
+          "directionstoconsume": "A dose 45 per Min",
+          "physicianName": "Dr.Sudhir Babu",
+          "startDate": "2021-11-12",
+          "endDate": "2021-11-19"
+        },
         {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
+          "medicineName": "BUTISOL SODIUM50MG **Federal Register determination that product was not discontinued or withdrawn for safety or efficacy reasons**",
+          "dosage": "24",
+          "directionstoconsume": "1 Drug per Hour in a Day",
+          "physicianName": "Dr.Sudhir Kumar Batra",
+          "startDate": "2021-11-04",
+          "endDate": "2021-11-10"
         }
       ],
-      "id": 3
-    },
-    {
-      "userid": 56,
-      "current_medication": [
+      "otc_medication": [
+        {
+          "otcDrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE5,000 UNITS/ML",
+          "directiontoconsume": "20",
+          "socialDrugs": "illicit"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "HISTAMINE PHOSPHATEEQ 1MG BASE/ML",
+          "directiontoconsume": "2-3times/Day"
+        },
         {
           "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
-          "dosage": "gvfvs",
-          "directionstoconsume": "qdvv",
-          "physicianName": "uwgfug",
-          "startDate": "2021-11-04",
-          "endDate": "2021-11-13"
+          "dosage": "20",
+          "directionstoconsume": "A dose 45 per Min",
+          "physicianName": "Dr.Sudhir Babu",
+          "startDate": "2021-11-12",
+          "endDate": "2021-11-19"
         }
       ],
       "allergies": [
         {
-          "allergyName": "iwgdu",
-          "symptomsofAllergy": "fkudvf",
-          "drugAllergy": "afljhbah"
+          "allergyName": "ALlergy",
+          "symptomsofAllergy": "Irritation in Eyes",
+          "drugAllergy": "Alleretic to Zodiac Drug"
         }
       ],
-      "id": 4
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "dosage": "dquyouy",
-          "directionstoconsume": "iowuhri",
-          "physicianName": "rywgeriy",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "geig",
-          "symptomsofAllergy": "riygr",
-          "drugAllergy": "irehiugy"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "dosage": "dquyouy",
-          "directionstoconsume": "iowuhri",
-          "physicianName": "rywgeriy",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "geig",
-          "symptomsofAllergy": "riygr",
-          "drugAllergy": "irehiugy"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE1,000 UNITS/ML",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "DIETHYLSTILBESTROL0.1MG",
-          "dosage": "10",
-          "directionstoconsume": "once",
-          "physicianName": "Nishant",
-          "startDate": "2021-11-26",
-          "endDate": "2021-11-26"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "jbuybyub",
-          "symptomsofAllergy": "inunun",
-          "drugAllergy": "ununun"
-        },
-        [
-          {
-            "allergyName": "",
-            "symptomsofAllergy": "",
-            "drugAllergy": ""
-          }
-        ],
-        [
-          {
-            "allergyName": "",
-            "symptomsofAllergy": "",
-            "drugAllergy": ""
-          }
-        ],
-        [
-          {
-            "allergyName": "",
-            "symptomsofAllergy": "",
-            "drugAllergy": ""
-          }
-        ],
-        [
-          {
-            "allergyName": "",
-            "symptomsofAllergy": "",
-            "drugAllergy": ""
-          }
-        ],
-        [
-          {
-            "allergyName": "",
-            "symptomsofAllergy": "",
-            "drugAllergy": ""
-          }
-        ],
-        [
-          {
-            "allergyName": "",
-            "symptomsofAllergy": "",
-            "drugAllergy": ""
-          }
-        ]
-      ]
+      "id": 48
     }
   ],
   "immunization": [
@@ -785,7 +513,7 @@
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-11-01",
+      "appointmentDate": "2021-11-06",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
@@ -815,7 +543,7 @@
       "lName": "Patil",
       "dob": "2021-11-16",
       "mobile_no": 9834236968,
-      "doc_id": 32,
+      "doc_id": 20,
       "doc_name": "Sudhir Koganti",
       "appointment_title": "Swapna Patil - Appointment",
       "appointment_start_time": "12:15",
@@ -825,7 +553,7 @@
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",
       "patientId": 48,
-      "status": "approved",
+      "status": "pending",
       "id": 4
     },
     {
@@ -833,17 +561,17 @@
       "lName": "Patil",
       "dob": "2021-11-16",
       "mobile_no": 8353638299,
-      "doc_id": 55,
+      "doc_id": 20,
       "doc_name": "Susmitha Chinthakindi",
       "appointment_title": "Fever",
       "appointment_start_time": "02:35",
       "appointment_end_time": "03:35",
-      "appointmentDate": "2021-11-03",
+      "appointmentDate": "2021-11-06",
       "appointment_desc": "fever",
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-03T04:03:28.531Z",
       "patientId": 48,
-      "status": "reject",
+      "status": "approved",
       "id": 5
     },
     {
@@ -1204,16 +932,16 @@
   ],
   "patientvitals": [
     {
-      "height": "5 Feet 4 Inch.",
-      "weight": "77 kg",
-      "blood_pressure": "88",
-      "temperature": "98.5",
-      "pulse": "77",
-      "respiration": "78",
-      "oxigen_saturation": "92",
-      "physicianId": 56,
-      "patientId": "1",
-      "id": 1
+      "height": "168",
+      "weight": "64",
+      "blood_pressure": "110/90",
+      "temperature": "97",
+      "pulse": "72",
+      "respiration": "100",
+      "oxigen_saturation": "99",
+      "physicianId": 20,
+      "patientId": "48",
+      "id": 2
     }
   ],
   "billing": [
