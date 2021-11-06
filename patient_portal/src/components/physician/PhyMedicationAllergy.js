@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router";
-import { connect, useDispatch } from "react-redux";
+import React from "react";
+import { connect } from "react-redux";
 import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
+//import "./admin.css";
 import { adminService } from "../../services/register_user_service";
 import {
   makeStyles,
@@ -18,7 +18,6 @@ import {
   TableRow,
 } from "mui";
 import { TrainRounded } from "@material-ui/icons";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
@@ -29,70 +28,115 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PhyMedicationAllergies = (props) => {
-  const classes = useStyles();
-  const [isAvailable, setIsAvailable] = useState(false);
-  const [medicationList, setMedicationList] = useState([]);
-  const [updateMedications, setupdateMedications] = useState(false);
-  const [patientId, setPatientId] = useState(0);
-  const dispatch = useDispatch();
+export class PhyMedicationAllergies extends React.Component {
+  savedValues = {};
+  constructor(props) {
+    super(props);
+    //this.patientId = this.props.patientId;
+    this.state = {
+      isAvailable: false,
+      medicationList: [],
+      pId: this.props.patientId,
+    };
+  }
 
-  useEffect(() => {
-    dispatch(actionCreator.GetMedicationAllergies(patientId));
-  }, [patientId]);
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      if (props.mediAllergyDetails) {
-        setIsAvailable(true);
+  componentDidMount() {
+    // this.props.getMedicationAllergies(this.props.patientId.patientId);
+    this.patientMedication();
+    console.log(this.state.pid);
+  }
+
+  componentDidUpdate() {
+    if (this.props.mediAllergyDetails) {
+      if (Object.keys(this.props.mediAllergyDetails).length === 0) {
+      } else {
+        if (this.state.isAvailable) {
+          this.getSavedValues();
+          return;
+        } else {
+          this.setState({
+            isAvailable: true,
+          });
+        }
       }
     }
-  }, [props.mediAllergyDetails]);
-  useEffect(() => {
-    if (props.isLoggedIn) {
-      // setDoctorsList(props.physiciandata);
-      patientMedication();
-      setPatientId(props.patientId.patintId);
-    }
-  }, [patientId]);
+  }
 
-  function patientMedication() {
+  patientMedication() {
     adminService.getMedication().then(
       (response) => {
-        setMedicationList(response.data);
+        // setMedicationList(response.data);
+        this.setState({
+          medicationList: response.data,
+        });
       },
       (error) => {
         return;
       }
     );
   }
-  // function currentMedication(_arr) {
-  //   let cMadicationArr = _arr.map((_cmed) => _cmed);
-  //   return cMadicationArr;
-  // }
-  // function otcMedication(_arr) {
-  //   let otcMedicationArr = _arr.map((_otcmed) => _otcmed);
-  //   return otcMedicationArr;
-  // }
-  // function pastMedication(_arr) {
-  //   let pastMedicationArr = _arr.map((_pastmed) => _pastmed);
-  //   return pastMedicationArr;
-  // }
-  // function allergyMedication(_arr) {
-  //   let allergyMedicationArr = _arr.map((_alrgmed) => _alrgmed);
-  //   return allergyMedicationArr;
-  // }
-  // const savedValues = {
-  //   current_medication: currentMedication(
-  //     props.mediAllergyDetails.current_medication
-  //   ),
-  //   otc_medication: otcMedication(props.mediAllergyDetails.otc_medication),
-  //   past_medication: pastMedication(props.mediAllergyDetails.past_medication),
-  //   allergies: allergyMedication(props.mediAllergyDetails.allergies),
-  //   userid: patientId,
-  //   id: patientId,
-  // };
-  // console.log(savedValues);
-  const initialValues = {
+
+  currentMedication(_arr) {
+    let cMadicationArr = _arr.map((_cmed) => _cmed);
+    return cMadicationArr;
+  }
+  otcMedication(_arr) {
+    let otcMedicationArr = _arr.map((_otcmed) => _otcmed);
+    return otcMedicationArr;
+  }
+  pastMedication(_arr) {
+    let pastMedicationArr = _arr.map((_pastmed) => _pastmed);
+    return pastMedicationArr;
+  }
+  allergyMedication(_arr) {
+    let allergyMedicationArr = _arr.map((_alrgmed) => _alrgmed);
+    return allergyMedicationArr;
+  }
+
+  generalVaccines(_arr) {
+    let vaccinesArr = _arr.map((_vac) => _vac);
+    return vaccinesArr;
+  }
+
+  getSavedValues() {
+    let savedValues = {
+      current_medication: this.currentMedication(
+        this.props.mediAllergyDetails.current_medication
+      ),
+      otc_medication: this.otcMedication(
+        this.props.mediAllergyDetails.otc_medication
+      ),
+      past_medication: this.pastMedication(
+        this.props.mediAllergyDetails.past_medication
+      ),
+      allergies: this.allergyMedication(
+        this.props.mediAllergyDetails.allergies
+      ),
+      userid: this.props.patientId,
+      id: this.props.patientId,
+      age_category: this.props.pImmunnization.age_category,
+      vaccine_brand: this.props.pImmunnization.vaccine_brand,
+      dose_detail: this.props.pImmunnization.dose_detail,
+    };
+
+    return savedValues;
+  }
+
+  onPageChange = (event, nextPage) => {
+    this.setState({
+      ...this.state,
+      page: nextPage,
+    });
+  };
+
+  onChangeRowsPerPage = (event) => {
+    this.setState({
+      ...this.state,
+      rowPerPage: event.target.value,
+    });
+  };
+
+  initialValues = {
     id: "",
     userId: "",
     current_medication: [
@@ -107,17 +151,11 @@ const PhyMedicationAllergies = (props) => {
         endDate: "",
       },
     ],
-
-    allergies: [
-      {
-        allergyName: "",
-        symptomsofAllergy: "",
-        drugAllergy: "",
-      },
-    ],
   };
-  const validationSchema = Yup.object().shape({});
-  const onSubmit = (values) => {
+
+  validationSchema = Yup.object().shape({});
+
+  onSubmit = (values) => {
     let cm = values.current_medication.map((v) => {
       let temp = {};
       temp.medicineName = v.medicineName;
@@ -136,398 +174,231 @@ const PhyMedicationAllergies = (props) => {
       return temp;
     });
     const payload = {
-      id: patientId,
-      userid: patientId,
+      id: this.props.patientId,
+      userid: this.props.patientId,
       current_medication: cm,
-      otc_medication: [...props.mediAllergyDetails.otc_medication],
+      otc_medication: [...this.props.mediAllergyDetails.otc_medication],
       past_medication: [
-        ...props.mediAllergyDetails.past_medication,
-        ...props.mediAllergyDetails.current_medication,
+        ...this.props.mediAllergyDetails.past_medication,
+        ...this.props.mediAllergyDetails.current_medication,
       ],
-      allergies: [...props.mediAllergyDetails.allergies, al],
+      allergies: [...this.props.mediAllergyDetails.allergies],
     };
 
-    console.log("Happpppppppp......", payload);
-    props.updateMedication_allergies(patientId, payload);
-    props.flashNotification({
-      message: "Medication and Allergy added...",
-      type: "success",
-    });
-    //history.push("/patient");
+    // if (this.state.isAvailable) {
+    //   this.props.updateImmunization(this.props.pImmunnization.id, payload);
+    // } else {
+    //   this.props.immunization(payload);
+    // }
   };
-  let history = useHistory();
 
-  function updateMed() {
-    setIsAvailable(false);
-  }
-
-  return (
-    <>
-      {/* {updateMedications ? (
-        <div className="container">
-          <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-            <div className="card-header text-center">
-              <h3>Medication And Allergies</h3>
-              <button className="btn btn-primary" onClick={() => updateMed()}>
-                Update the medication
-              </button>
-            </div>
-
-            <div className="card-body text-center">
-              <h5>Current Medication</h5>
-              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-                <Table>
-                  <TableHead className={classes.tablehead}>
-                    <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Medicine Name</TableCell>
-                      <TableCell scope="col">Dose Details</TableCell>
-                      <TableCell scope="col">Direction To Consume</TableCell>
-                      <TableCell scope="col">Physician Name</TableCell>
-                      <TableCell scope="col">Start Date</TableCell>
-                      <TableCell scope="col">End Date</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {props.mediAllergyDetails.current_medication.map(function (
-                      item,
-                      index
-                    ) {
-                      return (
-                        <TableRow key={index}>
-                          <TableCell>{index + 1}</TableCell>
-                          <TableCell>{item.medicineName}</TableCell>
-                          <TableCell>{item.dosage}</TableCell>
-                          <TableCell>{item.directionstoconsume}</TableCell>
-                          <TableCell>{item.physicianName}</TableCell>
-                          <TableCell>{item.startDate}</TableCell>
-                          <TableCell>{item.endDate}</TableCell>
-                        </TableRow>
-                      );
-                    })}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-
-              <h5>Allergies</h5>
-
-              <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-                <Table>
-                  <TableHead className={classes.tablehead}>
-                    <TableRow>
-                      <TableCell scope="col">Sr.No</TableCell>
-                      <TableCell scope="col">Allergy Name</TableCell>
-                      <TableCell scope="col">Symptoms</TableCell>
-                      <TableCell scope="col">Drug Allergy</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {props.mediAllergyDetails.allergies.map(function (
-                      item,
-                      index
-                    ) {
-                      return (
-                        <TableRow key={index}>
-                          <TableCell>{index + 1}</TableCell>
-                          <TableCell>{item.allergyName}</TableCell>
-                          <TableCell>{item.symptomsofAllergy}</TableCell>
-                          <TableCell>{item.drugAllergy}</TableCell>
-                        </TableRow>
-                      );
-                    })}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </div>
-          </div>
-        </div>
-      ) : ( */}
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={onSubmit}
-      >
-        {(props) => (
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-12">
-                <div className="card shadow-lg p-10 mb-6 bg-white rounded">
-                  <div className="card-header text-center ">
-                    Medication and Allergies
-                  </div>
-
-                  <div className="card-body">
-                    <Form>
-                      <div className="row mt-2">
-                        <div className="col-12">
-                          <hr />
-                          <h5 className="text-center">Current Medication</h5>
-                          <hr />
-                          <FieldArray name="current_medication">
-                            {(fieldArrayProps) => {
-                              const { push, remove, form } = fieldArrayProps;
-                              const { values } = form;
-                              const { current_medication } = values;
-                              return (
-                                <div>
-                                  {current_medication.map(
-                                    (current_medication, index) => (
-                                      <div key={index}>
-                                        <div className="row">
-                                          <div className="col-12 col-md-6">
-                                            <label htmlFor="user name">
-                                              Medicine Name
-                                            </label>
-                                            <Field
-                                              as="select"
-                                              className="form-control"
-                                              name={`current_medication[${index}].medicineName`}
-                                            >
-                                              <option value="">Select</option>
-                                              {medicationList.map(
-                                                (medicine, index) => (
-                                                  <option
-                                                    value={
-                                                      medicine.DrugName +
-                                                      medicine.Strength
-                                                    }
-                                                    key={index}
-                                                  >
-                                                    {medicine.DrugName +
-                                                      medicine.Strength}
+  render() {
+    // const {patientId} = this.props.patientId
+    if (this.state.isAvailable) this.savedValues = this.getSavedValues();
+    return (
+      <>
+        <Formik
+          initialValues={this.savedValues || this.initialValues}
+          validationSchema={this.validationSchema}
+          onSubmit={this.onSubmit}
+          enableReinitialize
+        >
+          {(props) => (
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-12">
+                  <div className="card shadow-lg p-10 mb-6 bg-white rounded">
+                    <div className="card-header text-center ">
+                      Medication and Allergies
+                    </div>
+                    <div className="card-body">
+                      <Form>
+                        <div className="row mt-2">
+                          <div className="col-12">
+                            <hr />
+                            <h5 className="text-center">Current Medication</h5>
+                            <hr />
+                            <FieldArray name="current_medication">
+                              {(fieldArrayProps) => {
+                                const { push, remove, form } = fieldArrayProps;
+                                const { values } = form;
+                                const { current_medication } = values;
+                                return (
+                                  <div>
+                                    {current_medication &&
+                                      current_medication.map(
+                                        (current_medication, index) => (
+                                          <div key={index}>
+                                            <div className="row">
+                                              <div className="col-12 col-md-6">
+                                                <label htmlFor="user name">
+                                                  Medicine Name
+                                                </label>
+                                                <Field
+                                                  as="select"
+                                                  className="form-control"
+                                                  name={`current_medication[${index}].medicineName`}
+                                                >
+                                                  <option value="">
+                                                    Select
                                                   </option>
-                                                )
+                                                  {this.state.medicationList.map(
+                                                    (medicine, index) => (
+                                                      <option
+                                                        value={
+                                                          medicine.DrugName +
+                                                          medicine.Strength
+                                                        }
+                                                        key={index}
+                                                      >
+                                                        {medicine.DrugName +
+                                                          medicine.Strength}
+                                                      </option>
+                                                    )
+                                                  )}
+                                                </Field>
+                                              </div>
+                                              <div className="col-12 col-md-3">
+                                                <div className="form-group">
+                                                  <label htmlFor="user name">
+                                                    Dosages
+                                                  </label>
+                                                  <Field
+                                                    type="text"
+                                                    className="form-control"
+                                                    name={`current_medication[${index}].dosage`}
+                                                    placeholder="Please enter dosages"
+                                                  />
+                                                  <div className="error">
+                                                    <ErrorMessage name="current_medication.dosage" />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="col-12 col-md-3">
+                                                <div className="form-group">
+                                                  <label htmlFor="user name">
+                                                    Direction to consume dosage
+                                                  </label>
+                                                  <Field
+                                                    type="text"
+                                                    className="form-control"
+                                                    name={`current_medication[${index}].directionstoconsume`}
+                                                    placeholder="Please enter medicine name"
+                                                  />
+                                                  <div className="error">
+                                                    <ErrorMessage name="current_medication.directionstoconsume" />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="col-12 col-md-3">
+                                                <div className="form-group">
+                                                  <label htmlFor="user name">
+                                                    Physician Name
+                                                  </label>
+                                                  <Field
+                                                    type="text"
+                                                    className="form-control"
+                                                    name={`current_medication[${index}].physicianName`}
+                                                    placeholder="Please enter Physician Name"
+                                                  />
+                                                  <div className="error">
+                                                    <ErrorMessage name="current_medication.physicianName" />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="col-12 col-md-3">
+                                                <div className="form-group">
+                                                  <label htmlFor="user name">
+                                                    Start Date
+                                                  </label>
+                                                  <Field
+                                                    type="date"
+                                                    className="form-control"
+                                                    name={`current_medication[${index}].startDate`}
+                                                    placeholder="Please enter frequency"
+                                                  />
+                                                  <div className="error">
+                                                    <ErrorMessage name="current_medication.startDate" />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div className="col-12 col-md-3">
+                                                <div className="form-group">
+                                                  <label htmlFor="user name">
+                                                    End Date
+                                                  </label>
+                                                  <Field
+                                                    type="date"
+                                                    className="form-control"
+                                                    name={`current_medication[${index}].endDate`}
+                                                    placeholder="Please enter frequency"
+                                                  />
+                                                  <div className="error">
+                                                    <ErrorMessage name="current_medication.endDate" />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div className="col-12 col-md-2">
+                                              {index > 0 && (
+                                                <button
+                                                  className="btn btn-danger btn-number  btn_wdth"
+                                                  type="button"
+                                                  onClick={() => remove(index)}
+                                                >
+                                                  -
+                                                </button>
                                               )}
-                                            </Field>
-                                          </div>
-                                          <div className="col-12 col-md-3">
-                                            <div className="form-group">
-                                              <label htmlFor="user name">
-                                                Dosages
-                                              </label>
-                                              <Field
-                                                type="text"
-                                                className="form-control"
-                                                name={`current_medication[${index}].dosage`}
-                                                placeholder="Please enter dosages"
-                                              />
-                                              <div className="error">
-                                                <ErrorMessage name="current_medication.dosage" />
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="col-12 col-md-3">
-                                            <div className="form-group">
-                                              <label htmlFor="user name">
-                                                Direction to consume dosage
-                                              </label>
-                                              <Field
-                                                type="text"
-                                                className="form-control"
-                                                name={`current_medication[${index}].directionstoconsume`}
-                                                placeholder="Please enter medicine name"
-                                              />
-                                              <div className="error">
-                                                <ErrorMessage name="current_medication.directionstoconsume" />
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="col-12 col-md-3">
-                                            <div className="form-group">
-                                              <label htmlFor="user name">
-                                                Physician Name
-                                              </label>
-                                              <Field
-                                                type="text"
-                                                className="form-control"
-                                                name={`current_medication[${index}].physicianName`}
-                                                placeholder="Please enter Physician Name"
-                                              />
-                                              <div className="error">
-                                                <ErrorMessage name="current_medication.physicianName" />
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="col-12 col-md-3">
-                                            <div className="form-group">
-                                              <label htmlFor="user name">
-                                                Start Date
-                                              </label>
-                                              <Field
-                                                type="date"
-                                                className="form-control"
-                                                name={`current_medication[${index}].startDate`}
-                                                placeholder="Please enter frequency"
-                                              />
-                                              <div className="error">
-                                                <ErrorMessage name="current_medication.startDate" />
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div className="col-12 col-md-3">
-                                            <div className="form-group">
-                                              <label htmlFor="user name">
-                                                End Date
-                                              </label>
-                                              <Field
-                                                type="date"
-                                                className="form-control"
-                                                name={`current_medication[${index}].endDate`}
-                                                placeholder="Please enter frequency"
-                                              />
-                                              <div className="error">
-                                                <ErrorMessage name="current_medication.endDate" />
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="col-12 col-md-2">
-                                          {index > 0 && (
-                                            <button
-                                              className="btn btn-danger btn-number  btn_wdth"
-                                              type="button"
-                                              onClick={() => remove(index)}
-                                            >
-                                              -
-                                            </button>
-                                          )}
 
-                                          <button
-                                            className="btn btn-success btn-number mrg_20 btn_wdth"
-                                            type="button"
-                                            onClick={() => push("")}
-                                          >
-                                            +
-                                          </button>
-                                        </div>
-                                      </div>
-                                    )
-                                  )}
-                                </div>
-                              );
-                            }}
-                          </FieldArray>
+                                              <button
+                                                className="btn btn-success btn-number mrg_20 btn_wdth"
+                                                type="button"
+                                                onClick={() => push("")}
+                                              >
+                                                +
+                                              </button>
+                                            </div>
+                                          </div>
+                                        )
+                                      )}
+                                  </div>
+                                );
+                              }}
+                            </FieldArray>
+                          </div>
                         </div>
-                      </div>
-
-                      <div className="row mt-2">
-                        <div className="col-12">
-                          <hr />
-                          <h5 className="text-center">Allerigies</h5>
-                          <hr />
-                          <FieldArray name="allergies">
-                            {(fieldArrayProps) => {
-                              const { push, remove, form } = fieldArrayProps;
-                              const { values } = form;
-                              const { allergies } = values;
-                              return (
-                                <div>
-                                  {allergies.map((allergies, index) => (
-                                    <div key={index}>
-                                      <div className="row">
-                                        <div className="col-12 col-md-3">
-                                          <div className="form-group">
-                                            <label htmlFor="user name">
-                                              Allergy Name
-                                            </label>
-                                            <Field
-                                              type="text"
-                                              className="form-control"
-                                              name={`allergies[${index}].allergyName`}
-                                            />
-                                            <div className="error">
-                                              <ErrorMessage name="allergies.allergyName" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="col-12 col-md-3">
-                                          <div className="form-group">
-                                            <label htmlFor="user name">
-                                              Symptoms of Allergy
-                                            </label>
-                                            <Field
-                                              type="text"
-                                              className="form-control"
-                                              name={`allergies[${index}].symptomsofAllergy`}
-                                            />
-                                            <div className="error">
-                                              <ErrorMessage name="allergies.symptomsofAllergy" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="col-12 col-md-3">
-                                          <div className="form-group">
-                                            <label htmlFor="user name">
-                                              Any Drug Allergy
-                                            </label>
-                                            <Field
-                                              type="text"
-                                              className="form-control"
-                                              name={`allergies[${index}].drugAllergy`}
-                                            />
-                                            <div className="error">
-                                              <ErrorMessage name="allergies.drugAllergy" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="col-12 col-md-2">
-                                        {index > 0 && (
-                                          <button
-                                            className="btn btn-danger btn-number  btn_wdth"
-                                            type="button"
-                                            onClick={() => remove(index)}
-                                          >
-                                            -
-                                          </button>
-                                        )}
-
-                                        <button
-                                          className="btn btn-success btn-number mrg_20 btn_wdth"
-                                          type="button"
-                                          onClick={() => push("")}
-                                        >
-                                          +
-                                        </button>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              );
-                            }}
-                          </FieldArray>
+                        <div className="col-12 text-center mt-5">
+                          <button className="btn btn-primary" type="submit">
+                            Submit
+                          </button>
                         </div>
-                      </div>
-
-                      <div className="col-12 text-center mt-5">
-                        <button className="btn btn-primary" type="submit">
-                          Submit
-                        </button>
-                      </div>
-                    </Form>
+                      </Form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
-      </Formik>
-      {/* )} */}
-    </>
-  );
-};
+          )}
+        </Formik>
+      </>
+    );
+  }
+}
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (rootReducer) => {
   return {
-    globalMessage: state.demographics.globalmessage,
-    mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
-    currentUser: state.login.loggedUserInfo,
-    isLoggedIn: state.login.isLoggedIn,
+    globalMessage: rootReducer.demographics.globalmessage,
+    mediAllergyDetails:
+      rootReducer.patientMedicationAllergy.patientMedicationAllergy,
+    currentUser: rootReducer.login.loggedUserInfo,
+    isLoggedIn: rootReducer.login.isLoggedIn,
   };
 };
 
 const mapDispatchToProps = (dispatch, state) => {
   return {
+    getMedicationAllergies: (userId) =>
+      dispatch(actionCreator.GetMedicationAllergies(userId)),
     medication_allergies: (newuser) =>
       dispatch(actionCreator.AddMedicationAndAllergiesAsync(newuser)),
     updateMedication_allergies: (userId, data) =>
