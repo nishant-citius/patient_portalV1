@@ -152,7 +152,10 @@ const Medication_Allergies = (props) => {
       message: "Medication and Allergy added...",
       type: "success",
     });
-    //history.push("/patient");
+    /**redirect to
+     * PAtient Dashboard
+     */
+    history.push("/patient");
   };
   let history = useHistory();
   return (
