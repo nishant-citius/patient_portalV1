@@ -11,7 +11,7 @@ function Diagnosis(props) {
   const [diagnosisCode, setDiagnosisCode] = useState("");
   const [patientId, setPatientId] = useState(0);
   const [diagnosisDesc, setDiagnosisDesc] = useState(0);
-  const [disable , setDisable]=useState(false);
+  const [disable, setDisable] = useState(false);
 
   const searchItems = (e, _value) => {
     if (_value !== "") {
@@ -19,8 +19,9 @@ function Diagnosis(props) {
         if (item.description === _value) {
           return item;
         }
-      })
-     
+      });
+      console.log(filteredData);
+
       if (filteredData.length) {
         setDiagnosisCode(filteredData[0].code);
         setDiagnosisDesc(filteredData[0].description);
@@ -45,22 +46,20 @@ function Diagnosis(props) {
   }, [patientId]);
 
   function onSubmit() {
-
     let obj = {
       doc_id: props.currentUser.id,
       patientId: patientId,
       description: diagnosisDesc,
       code: diagnosisCode,
-     
     };
-    
+
     console.log(obj);
-     addPatientDiagnosis(obj);
-     alert("sucessfully submited");
-     setDisable(true);
+    addPatientDiagnosis(obj);
+    alert("sucessfully submited");
+    setDisable(true);
   }
 
-  function addPatientDiagnosis(_diagnosis) {   
+  function addPatientDiagnosis(_diagnosis) {
     diagnosisService.addPatientDiagnosis(_diagnosis).then(
       (response) => {
         if (response.status === 200) {
@@ -78,14 +77,20 @@ function Diagnosis(props) {
           <div className="container">
             <div className="card shadow-lg p-6 mb-6 bg-white rounded">
               <div className="card-header">
-                <h5>Procedures </h5>
+                <h5>Diagnosis</h5>
               </div>
               <div className="card-body mb-2">
                 <Autocomplete
                   disablePortal
                   id="combo-box-demo"
-                  options={diagnosis.map((option) => option.description)}
-                  //sx={{ width: 800 }}
+                  // options={diagnosis.map((option) => option.description)}
+                  options={[
+                    ...new Set(
+                      diagnosis.map((option) => {
+                        return option.description;
+                      })
+                    ),
+                  ]}
                   renderInput={(params) => (
                     <TextField {...params} label="diagnosis" />
                   )}
@@ -112,7 +117,11 @@ function Diagnosis(props) {
         )}
       </Formik>
       <div className="mt-3">
-        <button disabled={disable} className="btn btn-primary mt-3" onClick={() => onSubmit()}>
+        <button
+          disabled={disable}
+          className="btn btn-primary mt-3"
+          onClick={() => onSubmit()}
+        >
           Submit
         </button>
       </div>

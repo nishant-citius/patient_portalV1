@@ -11,7 +11,7 @@ function Proceduers(props) {
   const [procedureCode, setProcedureCode] = useState("");
   const [patientId, setPatientId] = useState(0);
   const [procedureDesc, setProcedureDesc] = useState(0);
-  const [disable , setDisable]=useState(false);
+  const [disable, setDisable] = useState(false);
 
   const searchItems = (e, _value) => {
     if (_value !== "") {
@@ -41,13 +41,12 @@ function Proceduers(props) {
   useEffect(() => {
     getAllProcedure();
     setPatientId(props.patientId.patintId);
-    
   }, [patientId]);
 
   function onSubmit() {
     let obj = {
       doc_id: props.currentUser.id,
-      patientId: patientId,
+      patientId: Number(patientId),
       desc: procedureDesc,
       code: procedureCode,
     };
@@ -108,7 +107,11 @@ function Proceduers(props) {
         )}
       </Formik>
       <div className="mt-3">
-        <button disabled={disable} className="btn btn-primary mt-3" onClick={() => onSubmit()}>
+        <button
+          disabled={disable}
+          className="btn btn-primary mt-3"
+          onClick={() => onSubmit()}
+        >
           Submit
         </button>
       </div>

@@ -15,7 +15,6 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
-import { BsFillTrashFill } from "react-icons/bs";
 
 const useStyles = makeStyles((theme) => ({
   root: {

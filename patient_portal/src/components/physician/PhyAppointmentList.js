@@ -98,6 +98,8 @@ export class AppointmentList extends React.Component {
       return <p className="text text-success fw-bold">Approved </p>;
     } else if (appointments.status === "reject") {
       return <p className="text text-danger fw-bold">Rejected</p>;
+    } else if (appointments.status === "completed") {
+      return <p className="text text-success fw-bold">Completed</p>;
     } else {
       return (
         <>

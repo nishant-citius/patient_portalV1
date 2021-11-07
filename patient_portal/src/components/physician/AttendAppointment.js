@@ -67,23 +67,23 @@ const AttendAppointment = (props) => {
     setValue(newValue);
   };
 
-  const finishAppointment = () => {
-    let appointmentData = appointmentDetails,
-      newData = {
-        ...appointmentData,
-        status: "completed",
-      };
+  // const finishAppointment = () => {
+  //   let appointmentData = appointmentDetails,
+  //     newData = {
+  //       ...appointmentData,
+  //       status: "completed",
+  //     };
 
-    adminService.editAppointment(appointmentData.id, newData).then(
-      (response) => {
-        if (response.status === 200) {
-          alert("Appointment Completed");
-          history.push("/physician_appointments");
-        }
-      },
-      (error) => {}
-    );
-  };
+  //   adminService.editAppointment(appointmentData.id, newData).then(
+  //     (response) => {
+  //       if (response.status === 200) {
+  //         alert("Appointment Completed");
+  //         history.push("/physician_appointments");
+  //       }
+  //     },
+  //     (error) => {}
+  //   );
+  // };
 
   return (
     <>
@@ -116,11 +116,11 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <PhyMedicationAllergies patientId={patientId}/>
+          <PhyMedicationAllergies patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <Proceduers patientId={patientId}/>
+          <Proceduers patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={4}>
@@ -128,15 +128,15 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={5}>
-          <DietPlan patientId={patientId} />
+          <DietPlan patientId={patientId} apptDetails={appointmentDetails} />
         </TabPanel>
       </Box>
-      <button
+      {/* <button
         onClick={() => finishAppointment()}
         className="btn btn-primary mt-3"
       >
         Finish Appointment
-      </button>
+      </button> */}
     </>
   );
 };
