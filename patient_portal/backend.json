@@ -854,7 +854,6 @@
       "id": 13
     },
     {
-<<<<<<< HEAD
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -904,21 +903,6 @@
       "appointment_desc": "backpain appointment",
       "createdBy": "NishantChaubey",
       "createdDate": "2021-11-05T13:06:17.099Z",
-=======
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 1234567890,
-      "doc_id": 26,
-      "doc_name": "Manoj Thormamidi",
-      "appointment_title": "High Fever",
-      "appointment_start_time": "17:05",
-      "appointment_end_time": "18:06",
-      "appointmentDate": "2021-11-05",
-      "appointment_desc": "High Fever With Body Pain",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-05T10:36:27.356Z",
->>>>>>> d86e96631a3dfc741a4fa1a703023528e30235c9
       "patientId": 1,
       "status": "approved",
       "id": 16
