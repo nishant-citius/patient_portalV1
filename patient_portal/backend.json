@@ -1,35 +1,6 @@
 {
   "users": [
     {
-      "email": "nc@email.com",
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-04-06",
-      "username": "Nishant C.",
-      "rpassword": "12345",
-      "mobile": "8888888888",
-      "blood_group": "b+ve",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 1,
-      "password": "$2a$10$Nco9qlh6BpU1krvCpWUKVewsrjxSjPreOZQntKVa8Lz0pxDlQiLsa"
-    },
-    {
-      "email": "sumitha@gmail.com",
-      "password": "$2a$10$HWunBRwedClHDlpIy9p97ucNQnRkOhmTwTzeDL8xnUS5LyNPc8Cqq",
-      "fName": "Sumitha",
-      "lName": "LLB",
-      "dob": "2021-10-31",
-      "username": "sumitha345",
-      "mobile": "8788286589",
-      "role": "physician",
-      "speciality": "Orthopedics & Joint Replacement",
-      "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 51
-    },
-    {
       "email": "susmitha@email.com",
       "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
       "fName": "Susmitha",
@@ -41,20 +12,6 @@
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 38
-    },
-    {
-      "email": "sneha@email.com",
-      "password": "$2a$10$7erkdXW8znmCkXYx.omG7eIIJAVNdtvOMF6nirXLqDKX1jL0UPRnK",
-      "fName": "Snehalatha",
-      "lName": "Reddy",
-      "dob": "2021-11-26",
-      "username": "SnehalathaR",
-      "mobile": "7688986545",
-      "role": "physician",
-      "speciality": "obstetrics_gynecology",
-      "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 50
     },
     {
       "email": "swapna@email.com",

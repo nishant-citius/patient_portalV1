@@ -21,6 +21,7 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
+import ConfirmDialog from "../../shared/dialog/ConfirmDialog";
 
 const mapStateToProps = (rootReducer) => {
   return {
