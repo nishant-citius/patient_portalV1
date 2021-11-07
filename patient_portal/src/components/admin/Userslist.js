@@ -168,7 +168,7 @@ function UserList(props) {
                               onClick={() => {
                                 setConfirmDialog({
                                   isOpen: true,
-                                  title: "Are you sure to delete this user?",
+                                  title: `Are you sure to delete this ${user.role} record?`,
                                   subTitle:
                                     "User Record will be removed permanently!!",
                                   onConfirm: () => {
