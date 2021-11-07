@@ -53,7 +53,7 @@ const Patient_orders = (props) => {
       userProcedure(props.currentUser.id);
       userDiagnosis(props.currentUser.id);
     }
-    if (props.patientvitalsDetails) {
+    if (props.patientvitalsDetails.length > 0) {
       setpVitals(true);
     }
   }, []);
