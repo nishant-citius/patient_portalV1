@@ -655,12 +655,13 @@
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-11-01",
+      "appointmentDate": "2021-11-08",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
       "patientId": 48,
-      "status": "reject"
+      "status": "reject",
+      "id": 2
     },
     {
       "fName": "Nishant",
@@ -672,7 +673,7 @@
       "appointment_title": "title",
       "appointment_start_time": "17:44",
       "appointment_end_time": "19:46",
-      "appointmentDate": "2021-10-28",
+      "appointmentDate": "2021-11-07",
       "appointment_desc": "gyj",
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-28T08:10:38.149Z",
@@ -690,12 +691,12 @@
       "appointment_title": "Swapna Patil - Appointment",
       "appointment_start_time": "12:15",
       "appointment_end_time": "13:15",
-      "appointmentDate": "2021-11-02",
+      "appointmentDate": "2021-11-07",
       "appointment_desc": "Swapna Patil - Appointment.",
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",
       "patientId": 48,
-      "status": "approved",
+      "status": "reject",
       "id": 4
     },
     {
@@ -713,7 +714,7 @@
       "createdBy": "neerajthakur",
       "createdDate": "2021-11-02T11:07:25.633Z",
       "patientId": 27,
-      "status": "approved",
+      "status": "pending",
       "id": 5
     },
     {
@@ -980,6 +981,18 @@
       "physicianId": 27,
       "patientId": "40",
       "id": 1
+    },
+    {
+      "height": "168",
+      "weight": "64",
+      "blood_pressure": "110/90",
+      "temperature": "97",
+      "pulse": "72",
+      "respiration": "100",
+      "oxigen_saturation": "sdfgdfsg",
+      "physicianId": 32,
+      "patientId": "48",
+      "id": 2
     }
   ],
   "billing": [

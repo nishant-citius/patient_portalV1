@@ -122,74 +122,6 @@ export class AppointmentList extends React.Component {
 
   render() {
     return (
-      // <div>
-      //   <div className="container mt-2">
-      //     <h4
-      //       style={{ color: "#3f51b5" }}
-      //       className="text-success text-center fw-bold "
-      //     >
-      //       Appointment List
-      //     </h4>
-      //     <table className="table table-bordered shadow mt-4">
-      //       <thead
-      //         style={{
-      //           backgroundColor: "#3f51b5",
-      //           color: "#fff",
-      //           fontSize: "15px",
-      //           fontWeight: "200",
-      //         }}
-      //       >
-      //         <tr>
-      //           <th scope="col">Sr no </th>
-      //           <th scope="col">Patient Name</th>
-      //           <th scope="col">Appointment Title</th>
-      //           <th scope="col">Appointment Date </th>
-      //           <th scope="col">Start Time</th>
-      //           <th scope="col">End Time</th>
-      //           <th scope="col">Actions</th>
-      //         </tr>
-      //       </thead>
-      //       <tbody>
-      //         {this.props.appointmentList.map((appointments, index) => {
-      //           return (
-      //             <tr key={index}>
-      //               <th scope="row">{index + 1}</th>
-      //               <td>{`${appointments.fName} ${appointments.lName}`}</td>
-      //               <td>{appointments.appointment_title}</td>
-      //               <td>{appointments.appointmentDate}</td>
-      //               <td>{appointments.appointment_start_time}</td>
-      //               <td>{appointments.appointment_end_time}</td>
-      //               <td>
-      //                 {appointments.status === "approved" ? (
-      //                   <p className="text text-success fw-bold">Approved</p>
-      //                 ) : (
-      //                   <>
-      //                     <button
-      //                       type="button"
-      //                       onClick={() => this.approve(appointments)}
-      //                       className="btn btn-success btn-sm m-2"
-      //                     >
-      //                       Approve
-      //                     </button>
-
-      //                     <button
-      //                       type="button"
-      //                       onClick={() => this.reject(appointments)}
-      //                       className="btn btn-danger btn-sm"
-      //                     >
-      //                       Reject
-      //                     </button>
-      //                   </>
-      //                 )}
-      //                 {this.getAppointmentStatus(appointments)}
-      //               </td>
-      //             </tr>
-      //           );
-      //         })}
-      //       </tbody>
-      //     </table>
-      //   </div>
-      // </div>
       <Container>
         <h4 className="text-center fw-bold text-primary">
           Appointments Manage List
@@ -227,7 +159,7 @@ export class AppointmentList extends React.Component {
 
                       <TableCell>{appointments.appointment_end_time}</TableCell>
                       <TableCell>
-                        {appointments.status === "approved" ? (
+                        {/* {appointments.status === "approved" ? (
                           <p className="text text-success fw-bold">Approved</p>
                         ) : (
                           <>
@@ -247,8 +179,8 @@ export class AppointmentList extends React.Component {
                               Reject
                             </button>
                           </>
-                        )}
-                        {/* {this.getAppointmentStatus(appointments)} */}
+                        )} */}
+                        {this.getAppointmentStatus(appointments)}
                       </TableCell>
                     </TableRow>
                   );

@@ -23,6 +23,8 @@ import {
   TableRow,
 } from "mui";
 
+import Preloader from "../../shared/preloder/Preloder";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
@@ -83,94 +85,98 @@ function UserList(props) {
 
   return (
     <>
-      <Container className={classes.root}>
-        <Link to={`/addusers`} className="btn btn-primary float-end mr-4">
-          Add User
-        </Link>
-        <h4 className="text-center fw-bold ">User List</h4>
-        <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-          <Table>
-            <TableHead className="tablehead">
-              <TableRow>
-                <TableCell className="tableCell">Sr. No</TableCell>
-                <TableCell className="tableCell">Name</TableCell>
-                <TableCell className="tableCell">D.O.B.</TableCell>
-                <TableCell className="tableCell">Email</TableCell>
-                <TableCell className="tableCell">Phone</TableCell>
-                <TableCell className="tableCell">Status</TableCell>
-                <TableCell className="tableCell">Role</TableCell>
-                <TableCell className="tableCell">Action</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {props.users
-                .slice(page * rowPerPage, page * rowPerPage + rowPerPage)
-                .map((user, index) => {
-                  return (
-                    <TableRow key={index}>
-                      <TableCell>{index + 1}</TableCell>
-                      <TableCell>{`${user.fName} ${user.lName}`}</TableCell>
-                      <TableCell>{user.dob}</TableCell>
-                      <TableCell>{user.email}</TableCell>
-                      <TableCell>{user.mobile}</TableCell>
-                      <TableCell>
-                        {user.isActive ? (
-                          <>
-                            <BsCheckCircleFill className="hand-pointer" />
-                            <span className="p-2">Active</span>
-                          </>
-                        ) : (
-                          <>
-                            <BsFillXCircleFill className="hand-pointer" />
-                            <span className="p-2">Inactive</span>
-                          </>
-                        )}
-                      </TableCell>
-                      <TableCell>{user.role}</TableCell>
-                      <TableCell>
-                        <span className="p-2">
-                          {/* <Link to={`/userdetails/${user.id}`}> */}
+      {detailFetched ? (
+        <Container className={classes.root}>
+          <Link to={`/addusers`} className="btn btn-primary float-end mr-4">
+            Add User
+          </Link>
+          <h4 className="text-center fw-bold ">User List</h4>
+          <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+            <Table>
+              <TableHead className="tablehead">
+                <TableRow>
+                  <TableCell className="tableCell">Sr. No</TableCell>
+                  <TableCell className="tableCell">Name</TableCell>
+                  <TableCell className="tableCell">D.O.B.</TableCell>
+                  <TableCell className="tableCell">Email</TableCell>
+                  <TableCell className="tableCell">Phone</TableCell>
+                  <TableCell className="tableCell">Status</TableCell>
+                  <TableCell className="tableCell">Role</TableCell>
+                  <TableCell className="tableCell">Action</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {props.users
+                  .slice(page * rowPerPage, page * rowPerPage + rowPerPage)
+                  .map((user, index) => {
+                    return (
+                      <TableRow key={index}>
+                        <TableCell>{index + 1}</TableCell>
+                        <TableCell>{`${user.fName} ${user.lName}`}</TableCell>
+                        <TableCell>{user.dob}</TableCell>
+                        <TableCell>{user.email}</TableCell>
+                        <TableCell>{user.mobile}</TableCell>
+                        <TableCell>
+                          {user.isActive ? (
+                            <>
+                              <BsCheckCircleFill className="hand-pointer" />
+                              <span className="p-2">Active</span>
+                            </>
+                          ) : (
+                            <>
+                              <BsFillXCircleFill className="hand-pointer" />
+                              <span className="p-2">Inactive</span>
+                            </>
+                          )}
+                        </TableCell>
+                        <TableCell>{user.role}</TableCell>
+                        <TableCell>
+                          <span className="p-2">
+                            {/* <Link to={`/userdetails/${user.id}`}> */}
 
-                          <Link
-                            to={{
-                              pathname: `/userdetails/${user.id}`,
-                              state: { user: user },
-                            }}
-                          >
-                            <BsPersonFill />
-                          </Link>
-                          {/* to=
+                            <Link
+                              to={{
+                                pathname: `/userdetails/${user.id}`,
+                                state: { user: user },
+                              }}
+                            >
+                              <BsPersonFill />
+                            </Link>
+                            {/* to=
                       {{
                         pathname: `/attendAppointment/${appointments.patientId}`,
                         state: { appointmentDetails: appointments },
                       }} */}
-                        </span>
-                        <span className="p-2">
-                          <Link to={`/edit/${user.id}`}>
-                            <BsFillPencilFill />
-                          </Link>
-                        </span>
-                        <span className="p-2 hand-pointer">
-                          <BsFillTrashFill
-                            onClick={() => deleteUser(user.id)}
-                          />
-                        </span>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-            </TableBody>
-          </Table>
-          <TablePagination
-            rowsPerPageOptions={[6, 10, 20, 25]}
-            count={props.users.length}
-            rowsPerPage={rowPerPage}
-            page={page}
-            onPageChange={onPageChange}
-            onChangeRowsPerPage={onChangeRowsPerPage}
-          />
-        </TableContainer>
-      </Container>
+                          </span>
+                          <span className="p-2">
+                            <Link to={`/edit/${user.id}`}>
+                              <BsFillPencilFill />
+                            </Link>
+                          </span>
+                          <span className="p-2 hand-pointer">
+                            <BsFillTrashFill
+                              onClick={() => deleteUser(user.id)}
+                            />
+                          </span>
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
+              </TableBody>
+            </Table>
+            <TablePagination
+              rowsPerPageOptions={[6, 10, 20, 25]}
+              count={props.users.length}
+              rowsPerPage={rowPerPage}
+              page={page}
+              onPageChange={onPageChange}
+              onChangeRowsPerPage={onChangeRowsPerPage}
+            />
+          </TableContainer>
+        </Container>
+      ) : (
+        <Preloader />
+      )}
     </>
   );
 }

@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 function Appointmentstoday(props) {
   const classes = useStyles();
   const [appointments, setAppointments] = useState([]);
+  const [isAvaialable, setIsAvailable] = useState(false);
 
   useEffect(() => {
     todaysAppointments(new Date().toISOString().slice(0, 10));
@@ -36,6 +37,7 @@ function Appointmentstoday(props) {
     adminService.appointmentsOnDate(props.currentUser.id, _date).then(
       (response) => {
         setAppointments(response.data);
+        if (response.data.length > 0) setIsAvailable(true);
       },
       (error) => {
         return;
@@ -65,31 +67,43 @@ function Appointmentstoday(props) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {appointments.map((appointments, index) => {
-              return (
-                <TableRow key={index}>
-                  <TableCell scope="row">{index + 1} </TableCell>
-                  <TableCell>
-                    {`${appointments.fName} ${appointments.lName}`}{" "}
-                  </TableCell>
-                  <TableCell>{appointments.appointment_title} </TableCell>
-                  <TableCell>{appointments.appointmentDate} </TableCell>
-                  <TableCell>{appointments.appointment_start_time} </TableCell>
-                  <TableCell>{appointments.appointment_end_time} </TableCell>
-                  <TableCell>
-                    <Link
-                      to={{
-                        pathname: `/attendAppointment/${appointments.patientId}`,
-                        state: { appointmentDetails: appointments },
-                      }}
-                      className="btn btn-primary btn-sm"
-                    >
-                      Start Appointment
-                    </Link>
-                  </TableCell>
-                </TableRow>
-              );
-            })}
+            {isAvaialable ? (
+              <>
+                {appointments.map((appointments, index) => {
+                  return (
+                    <TableRow key={index}>
+                      <TableCell scope="row">{index + 1} </TableCell>
+                      <TableCell>
+                        {`${appointments.fName} ${appointments.lName}`}
+                      </TableCell>
+                      <TableCell>{appointments.appointment_title} </TableCell>
+                      <TableCell>{appointments.appointmentDate} </TableCell>
+                      <TableCell>
+                        {appointments.appointment_start_time}
+                      </TableCell>
+                      <TableCell>{appointments.appointment_end_time}</TableCell>
+                      <TableCell>
+                        <Link
+                          to={{
+                            pathname: `/attendAppointment/${appointments.patientId}`,
+                            state: { appointmentDetails: appointments },
+                          }}
+                          className="btn btn-primary btn-sm"
+                        >
+                          Start Appointment
+                        </Link>
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
+              </>
+            ) : (
+              <TableRow>
+                <TableCell className="fw-bold text-center">
+                  No Appointments Scheduled For Today!!
+                </TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </TableContainer>

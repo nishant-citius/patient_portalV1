@@ -14,14 +14,11 @@ import {
   Link,
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import LockIcon from "@material-ui/icons/Lock";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-//import { propTypes } from "react-bootstrap/esm/Image";
 import InitializeReduxState from "./InitializeReduxState";
 
 const paperStyle = {
@@ -55,7 +52,7 @@ const Login = (props) => {
   let history = useHistory();
 
   useEffect(() => {
-    if (props.isLoggedIn === true) {
+    if (props.isLoggedIn) {
       props.flashNotification({
         message: "Login Succeessful...",
         type: "success",
@@ -68,7 +65,7 @@ const Login = (props) => {
         history.push("/physician");
       }
     }
-  }, []);
+  }, [0]);
 
   const patientStatus = () => {
     if (props.currentUser.isActive) {
