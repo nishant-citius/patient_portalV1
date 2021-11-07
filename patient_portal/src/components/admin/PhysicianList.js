@@ -173,9 +173,9 @@ function PhysicianDataComponent(props) {
                             onClick={() => {
                               setConfirmDialog({
                                 isOpen: true,
-                                title: "Are you sure to delete this user?",
+                                title: "Are you sure to delete this Physician?",
                                 subTitle:
-                                  "User Record will be removed permanently!!",
+                                  "Physician Record will be removed permanently!!",
                                 onConfirm: () => {
                                   deleteUser(user.id);
                                 },
