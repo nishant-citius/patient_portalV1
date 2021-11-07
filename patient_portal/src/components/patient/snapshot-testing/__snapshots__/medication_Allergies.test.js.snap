@@ -1,0 +1,1485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddAlergy snapshot Test should render properly 1`] = `
+Array [
+  <div
+    className="MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded"
+      style={
+        Object {
+          "height": "70vh",
+          "margin": "60px auto",
+          "marginTop": "110px",
+          "padding": 20,
+          "width": 280,
+        }
+      }
+    >
+      <div
+        align="center"
+        className="MuiGrid-root"
+      >
+        <div
+          className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault"
+          style={
+            Object {
+              "backgroundColor": "#1bbd7e",
+            }
+          }
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+            />
+          </svg>
+        </div>
+        <br />
+        <h4>
+          Sign In
+        </h4>
+      </div>
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+            data-shrink={true}
+          >
+            Email
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+              disabled={false}
+              name="email"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Enter email"
+              required={false}
+              type="text"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root"
+          />
+        </div>
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+            data-shrink={true}
+          >
+            password
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+              disabled={false}
+              name="password"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Enter password"
+              required={false}
+              type="password"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root"
+          />
+        </div>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "margin": "8px 0",
+            }
+          }
+          tabIndex={0}
+          type="submit"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Sign in
+          </span>
+        </button>
+      </form>
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+         Do you have an account ?
+      </p>
+      <a
+        href="/registeruser"
+      >
+        Sign Up
+      </a>
+      <p
+        className="text text-danger fw-bold text-center"
+      >
+        
+        !!!
+      </p>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <div
+      className="row justify-content-center"
+    >
+      <div
+        className="col-12"
+      >
+        <div
+          className="card shadow-lg p-10 mb-6 bg-white rounded"
+        >
+          <div
+            className="card-header text-center "
+          >
+            Medication and Allergies
+          </div>
+          <div
+            className="card-body"
+          >
+            <form
+              action="#"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Current Medication
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-6"
+                        >
+                          <label
+                            htmlFor="user name"
+                          >
+                            Medicine Name
+                          </label>
+                          <select
+                            className="form-control"
+                            name="current_medication[0].medicineName"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            value=""
+                          >
+                            <option
+                              value=""
+                            >
+                              Select
+                            </option>
+                          </select>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Dosages
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].dosage"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter dosages"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Direction to consume dosage
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].directionstoconsume"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter directions to consume"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Physician Name
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].physicianName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter Physician Name"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Start Date
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].startDate"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter frequency"
+                              type="date"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              End Date
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].endDate"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter frequency"
+                              type="date"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Otc Medication
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-6"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Otc Drug Name
+                            </label>
+                            <select
+                              className="form-control"
+                              name="otc_medication[0].otcDrugName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              value=""
+                            >
+                              <option
+                                value=""
+                              >
+                                Select
+                              </option>
+                            </select>
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Direction to consume dosage
+                            </label>
+                            <input
+                              className="form-control"
+                              name="otc_medication[0].directiontoconsume"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter medicine name"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Social Drugs
+                            </label>
+                            <select
+                              className="form-control"
+                              id="otc_medication.socialDrugs"
+                              name="otc_medication[0].socialDrugs"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              value=""
+                            >
+                              <option
+                                value=""
+                              >
+                                Select
+                              </option>
+                              <option
+                                value="smoke"
+                              >
+                                Smoke
+                              </option>
+                              <option
+                                value="drink"
+                              >
+                                Drink
+                              </option>
+                              <option
+                                value="illicit"
+                              >
+                                Illicit Drug
+                              </option>
+                            </select>
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Past Prescribed Medication
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-6"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Drug Name
+                            </label>
+                            <select
+                              className="form-control"
+                              name="past_medication[0].pastdrugName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              value=""
+                            >
+                              <option
+                                value=""
+                              >
+                                Select
+                              </option>
+                            </select>
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Direction to consume dosage
+                            </label>
+                            <input
+                              className="form-control"
+                              name="past_medication[0].directiontoconsume"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Allerigies
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Allergy Name
+                            </label>
+                            <input
+                              className="form-control"
+                              name="allergies[0].allergyName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Symptoms of Allergy
+                            </label>
+                            <input
+                              className="form-control"
+                              name="allergies[0].symptomsofAllergy"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Any Drug Allergy
+                            </label>
+                            <input
+                              className="form-control"
+                              name="allergies[0].drugAllergy"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-12 text-center mt-5"
+              >
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Medication&Allergy snapshot Test should render properly 1`] = `
+Array [
+  <div
+    className="MuiGrid-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded"
+      style={
+        Object {
+          "height": "70vh",
+          "margin": "60px auto",
+          "marginTop": "110px",
+          "padding": 20,
+          "width": 280,
+        }
+      }
+    >
+      <div
+        align="center"
+        className="MuiGrid-root"
+      >
+        <div
+          className="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault"
+          style={
+            Object {
+              "backgroundColor": "#1bbd7e",
+            }
+          }
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+            />
+          </svg>
+        </div>
+        <br />
+        <h4>
+          Sign In
+        </h4>
+      </div>
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+            data-shrink={true}
+          >
+            Email
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+              disabled={false}
+              name="email"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Enter email"
+              required={false}
+              type="text"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root"
+          />
+        </div>
+        <div
+          className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink"
+            data-shrink={true}
+          >
+            password
+          </label>
+          <div
+            className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart"
+            onClick={[Function]}
+          >
+            <div
+              className="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart"
+              disabled={false}
+              name="password"
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Enter password"
+              required={false}
+              type="password"
+              value=""
+            />
+          </div>
+          <p
+            className="MuiFormHelperText-root"
+          />
+        </div>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "margin": "8px 0",
+            }
+          }
+          tabIndex={0}
+          type="submit"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Sign in
+          </span>
+        </button>
+      </form>
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+         Do you have an account ?
+      </p>
+      <a
+        href="/registeruser"
+      >
+        Sign Up
+      </a>
+      <p
+        className="text text-danger fw-bold text-center"
+      >
+        
+        !!!
+      </p>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <div
+      className="row justify-content-center"
+    >
+      <div
+        className="col-12"
+      >
+        <div
+          className="card shadow-lg p-10 mb-6 bg-white rounded"
+        >
+          <div
+            className="card-header text-center "
+          >
+            Medication and Allergies
+          </div>
+          <div
+            className="card-body"
+          >
+            <form
+              action="#"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Current Medication
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-6"
+                        >
+                          <label
+                            htmlFor="user name"
+                          >
+                            Medicine Name
+                          </label>
+                          <select
+                            className="form-control"
+                            name="current_medication[0].medicineName"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            value=""
+                          >
+                            <option
+                              value=""
+                            >
+                              Select
+                            </option>
+                          </select>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Dosages
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].dosage"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter dosages"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Direction to consume dosage
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].directionstoconsume"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter directions to consume"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Physician Name
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].physicianName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter Physician Name"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Start Date
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].startDate"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter frequency"
+                              type="date"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              End Date
+                            </label>
+                            <input
+                              className="form-control"
+                              name="current_medication[0].endDate"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter frequency"
+                              type="date"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Otc Medication
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-6"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Otc Drug Name
+                            </label>
+                            <select
+                              className="form-control"
+                              name="otc_medication[0].otcDrugName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              value=""
+                            >
+                              <option
+                                value=""
+                              >
+                                Select
+                              </option>
+                            </select>
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Direction to consume dosage
+                            </label>
+                            <input
+                              className="form-control"
+                              name="otc_medication[0].directiontoconsume"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Please enter medicine name"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Social Drugs
+                            </label>
+                            <select
+                              className="form-control"
+                              id="otc_medication.socialDrugs"
+                              name="otc_medication[0].socialDrugs"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              value=""
+                            >
+                              <option
+                                value=""
+                              >
+                                Select
+                              </option>
+                              <option
+                                value="smoke"
+                              >
+                                Smoke
+                              </option>
+                              <option
+                                value="drink"
+                              >
+                                Drink
+                              </option>
+                              <option
+                                value="illicit"
+                              >
+                                Illicit Drug
+                              </option>
+                            </select>
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Past Prescribed Medication
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-6"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Drug Name
+                            </label>
+                            <select
+                              className="form-control"
+                              name="past_medication[0].pastdrugName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              value=""
+                            >
+                              <option
+                                value=""
+                              >
+                                Select
+                              </option>
+                            </select>
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Direction to consume dosage
+                            </label>
+                            <input
+                              className="form-control"
+                              name="past_medication[0].directiontoconsume"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="row mt-2"
+              >
+                <div
+                  className="col-12"
+                >
+                  <hr />
+                  <h5
+                    className="text-center"
+                  >
+                    Allerigies
+                  </h5>
+                  <hr />
+                  <div>
+                    <div>
+                      <div
+                        className="row"
+                      >
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Allergy Name
+                            </label>
+                            <input
+                              className="form-control"
+                              name="allergies[0].allergyName"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Symptoms of Allergy
+                            </label>
+                            <input
+                              className="form-control"
+                              name="allergies[0].symptomsofAllergy"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="col-12 col-md-3"
+                        >
+                          <div
+                            className="form-group"
+                          >
+                            <label
+                              htmlFor="user name"
+                            >
+                              Any Drug Allergy
+                            </label>
+                            <input
+                              className="form-control"
+                              name="allergies[0].drugAllergy"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              className="error"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="col-12 col-md-2"
+                      >
+                        <button
+                          className="btn btn-success btn-number mrg_20 btn_wdth"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="col-12 text-center mt-5"
+              >
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

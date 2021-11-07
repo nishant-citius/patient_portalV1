@@ -174,7 +174,7 @@ const Medication_Allergies = (props) => {
                       <TableCell className="tableCell">Medicine Name</TableCell>
                       <TableCell className="tableCell">Dose Details</TableCell>
                       <TableCell className="tableCell">
-                        Direction To Consume
+                        Direction To Consumeghh
                       </TableCell>
 
                       <TableCell className="tableCell">
@@ -382,7 +382,7 @@ const Medication_Allergies = (props) => {
                                                   type="text"
                                                   className="form-control"
                                                   name={`current_medication[${index}].directionstoconsume`}
-                                                  placeholder="Please enter medicine name"
+                                                  placeholder="Please enter directions to consume"
                                                 />
                                                 <div className="error">
                                                   <ErrorMessage name="current_medication.directionstoconsume" />
@@ -870,7 +870,7 @@ const Medication_Allergies = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    globalMessage: state.demographics.globalmessage,
+    globalMessage: state.medication_allergies.globalmessage,
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     currentUser: state.login.loggedUserInfo,
     isLoggedIn: state.login.isLoggedIn,
