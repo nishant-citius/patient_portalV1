@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
 import { Link } from "react-router-dom";
@@ -22,8 +22,6 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
-import ModalPopup from "shared/dialog/ModalPopup";
-import AddUsers from "../admin/common/AddUsers";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,6 +49,20 @@ function UserList(props) {
   const classes = useStyles();
   const [page, setPage] = useState(0);
   const [rowPerPage, setRowsPerPage] = useState(6);
+  const [detailFetched, setDetailsFetched] = useState(false);
+
+  useEffect(() => {
+    fetchUserDetails();
+  });
+
+  function fetchUserDetails() {
+    if (detailFetched) {
+      return;
+    } else {
+      props.getalluserdata();
+      setDetailsFetched(true);
+    }
+  }
 
   function deleteUser(userId) {
     props.removeUser(userId);
@@ -64,6 +76,7 @@ function UserList(props) {
   const onPageChange = (event, nextPage) => {
     setPage(nextPage);
   };
+
   const onChangeRowsPerPage = (event) => {
     setRowsPerPage(event.target.value);
   };

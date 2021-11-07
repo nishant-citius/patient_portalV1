@@ -19,6 +19,7 @@ const Img = styled("img")({
 function UserProfile(props) {
   const [openPopup, setOpenPopup] = useState(false);
   const [specialities, setSpecialities] = useState([]);
+  const [detailFetched, setDetailsFetched] = useState(false);
 
   let tempUserData = {
     fName: "",
@@ -36,9 +37,23 @@ function UserProfile(props) {
   const [user, setUser] = useState(tempUserData);
 
   useEffect(() => {
-    setUser(props.userDetails);
-    doctorSpeciality();
-  }, [0]);
+    // if (props.userDetails) {
+    //   // setUser(props.userDetails);
+    //   console.log("Yes...", props.userDetails);
+    // }
+    // // doctorSpeciality();
+
+    fetchUserDetails();
+  });
+
+  function fetchUserDetails() {
+    if (detailFetched) {
+      return;
+    } else {
+      setUser(props.currentUser);
+      setDetailsFetched(true);
+    }
+  }
 
   function handleAdminNotification() {
     setOpenPopup(true);

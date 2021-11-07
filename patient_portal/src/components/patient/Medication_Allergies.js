@@ -5,6 +5,7 @@ import * as actionCreator from "../../redux/actions/userActionCreater";
 import { Formik, Form, Field, ErrorMessage, FieldArray } from "formik";
 import * as Yup from "yup";
 import { adminService } from "../../services/register_user_service";
+import { allergyServices } from "../../services/allergiesService";
 import "../admin/admin.css";
 import {
   makeStyles,
@@ -30,7 +31,7 @@ const Medication_Allergies = (props) => {
   const classes = useStyles();
   const [isAvailable, setIsAvailable] = useState(false);
   const [medicationList, setMedicationList] = useState([]);
-  const [medicineStrength, setmedicineStrength] = useState([]);
+  const [allergyList, setAllergyList] = useState([]);
   useEffect(() => {
     if (props.isLoggedIn) {
       if (props.mediAllergyDetails) {
@@ -42,6 +43,7 @@ const Medication_Allergies = (props) => {
     if (props.isLoggedIn) {
       // setDoctorsList(props.physiciandata);
       patientMedication();
+      patientAllergy();
     }
   }, []);
   function patientMedication() {
@@ -54,16 +56,15 @@ const Medication_Allergies = (props) => {
       }
     );
   }
-
-  function getStrength() {
-    let medicine = document.getElementById("medication_name").value;
-    let arr = medicationList.filter((item) => {
-      if (item.DrugName === medicine) {
-        return item;
+  function patientAllergy() {
+    allergyServices.getAllAllergies().then(
+      (response) => {
+        setAllergyList(response.data);
+      },
+      (error) => {
+        return;
       }
-    });
-    setmedicineStrength(arr);
-    return arr;
+    );
   }
 
   const initialValues = {
@@ -98,8 +99,8 @@ const Medication_Allergies = (props) => {
     ],
     allergies: [
       {
+        allergyType: "",
         allergyName: "",
-        symptomsofAllergy: "",
         drugAllergy: "",
       },
     ],
@@ -132,8 +133,8 @@ const Medication_Allergies = (props) => {
 
     let al = values.allergies.map((v) => {
       let temp = {};
+      temp.allergyType = v.allergyType;
       temp.allergyName = v.allergyName;
-      temp.symptomsofAllergy = v.symptomsofAllergy;
       temp.drugAllergy = v.drugAllergy;
       return temp;
     });
@@ -152,7 +153,7 @@ const Medication_Allergies = (props) => {
       message: "Medication and Allergy added...",
       type: "success",
     });
-    //history.push("/patient");
+    history.push("/patient");
   };
   let history = useHistory();
   return (
@@ -173,7 +174,7 @@ const Medication_Allergies = (props) => {
                       <TableCell className="tableCell">Medicine Name</TableCell>
                       <TableCell className="tableCell">Dose Details</TableCell>
                       <TableCell className="tableCell">
-                        Direction To Consume
+                        Direction To Consumeghh
                       </TableCell>
 
                       <TableCell className="tableCell">
@@ -381,7 +382,7 @@ const Medication_Allergies = (props) => {
                                                   type="text"
                                                   className="form-control"
                                                   name={`current_medication[${index}].directionstoconsume`}
-                                                  placeholder="Please enter medicine name"
+                                                  placeholder="Please enter directions to consume"
                                                 />
                                                 <div className="error">
                                                   <ErrorMessage name="current_medication.directionstoconsume" />
@@ -719,13 +720,45 @@ const Medication_Allergies = (props) => {
                                               <label htmlFor="user name">
                                                 Allergy Name
                                               </label>
-                                              <Field
+                                              {/* <Field
                                                 type="text"
                                                 className="form-control"
                                                 name={`allergies[${index}].allergyName`}
-                                              />
+                                              /> */}
+                                              <Field
+                                                as="select"
+                                                className="form-control"
+                                                name={`allergies[${index}].allergyType`}
+                                              >
+                                                <option value="">Select</option>
+                                                {Array.from(
+                                                  new Set(
+                                                    allergyList.map(
+                                                      (obj) => obj.AllergyType
+                                                    )
+                                                  )
+                                                ).map((AllergyType) => {
+                                                  return (
+                                                    <option value={AllergyType}>
+                                                      {AllergyType}
+                                                    </option>
+                                                  );
+                                                })}
+                                                {/* {allergyList.map(
+                                                  (allergy, index) => (
+                                                    <option
+                                                      value={
+                                                        allergy.AllergyType
+                                                      }
+                                                      key={index}
+                                                    >
+                                                      {allergy.AllergyType}
+                                                    </option>
+                                                  )
+                                                )} */}
+                                              </Field>
                                               <div className="error">
-                                                <ErrorMessage name="allergies.allergyName" />
+                                                <ErrorMessage name="allergies.allergyType" />
                                               </div>
                                             </div>
                                           </div>
@@ -735,12 +768,41 @@ const Medication_Allergies = (props) => {
                                                 Symptoms of Allergy
                                               </label>
                                               <Field
-                                                type="text"
+                                                as="select"
                                                 className="form-control"
-                                                name={`allergies[${index}].symptomsofAllergy`}
-                                              />
+                                                name={`allergies[${index}].allergyName`}
+                                              >
+                                                <option value="">Select</option>
+                                                {Array.from(
+                                                  new Set(
+                                                    allergyList.map(
+                                                      (obj) => obj.AllergyName
+                                                    )
+                                                  )
+                                                ).map((AllergyName) => {
+                                                  return (
+                                                    <option value={AllergyName}>
+                                                      {AllergyName}
+                                                    </option>
+                                                  );
+                                                })}
+                                                {/* {allergyList.map(
+                                                  (allergy, index) => (
+                                                    <option
+                                                      value={
+                                                        allergy.AllergyName
+                                                      }
+                                                      key={index}
+                                                    >
+                                                      {allergy.AllergyName +
+                                                        "   " +
+                                                        allergy.AllergenSource}
+                                                    </option>
+                                                  )
+                                                )} */}
+                                              </Field>
                                               <div className="error">
-                                                <ErrorMessage name="allergies.symptomsofAllergy" />
+                                                <ErrorMessage name="allergies.allergyName" />
                                               </div>
                                             </div>
                                           </div>
@@ -808,7 +870,7 @@ const Medication_Allergies = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    globalMessage: state.demographics.globalmessage,
+    globalMessage: state.medication_allergies.globalmessage,
     mediAllergyDetails: state.patientMedicationAllergy.patientMedicationAllergy,
     currentUser: state.login.loggedUserInfo,
     isLoggedIn: state.login.isLoggedIn,

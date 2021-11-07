@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 const mockStore = configureStore([]);
 
-describe("RegisterUser Component", () => {
+describe("Register snapshot test", () => {
   let store;
   let jsx;
 
