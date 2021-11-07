@@ -17,14 +17,14 @@
     },
     {
       "email": "sumitha@gmail.com",
-      "password": "$2a$10$OJDAVU7McsRUUH2N6HcwJO5Biye5IquxhT24TcjS8eo5txRqWYhTa",
-      "fName": "sumitha",
-      "lName": "L",
+      "password": "$2a$10$HWunBRwedClHDlpIy9p97ucNQnRkOhmTwTzeDL8xnUS5LyNPc8Cqq",
+      "fName": "Sumitha",
+      "lName": "LLB",
       "dob": "2021-10-31",
       "username": "sumitha345",
       "mobile": "8788286589",
       "role": "physician",
-      "speciality": "pathology",
+      "speciality": "Orthopedics & Joint Replacement",
       "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 51
@@ -76,7 +76,7 @@
       "fName": "Ajinkya Mohanrao",
       "lName": "Pathak",
       "dob": "2021-09-30",
-      "username": "AjinkyaPathak2021",
+      "username": "JinxPathak",
       "rpassword": "12345",
       "mobile": 9403541779,
       "blood_group": "b+ve",
@@ -84,7 +84,7 @@
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 2,
-      "password": "$2a$10$UQjGulj6yyO3MCRb9fLVbeEy0SZVYp8PWqPMT6spESJ9hNYNJXQne"
+      "password": "$2a$10$sDi5PRvvZnVhCQgSlA9XRuzTXu.s2LkZ6CQHOqwxh5W9dsxB2LShC"
     },
     {
       "email": "mamatha@email.com",
