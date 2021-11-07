@@ -77,6 +77,7 @@ const Immunization = (props) => {
       message: "Immunization added...",
       type: "success",
     });
+    props.getPatientImmunization(props.currentUser.id);
     history.push("/medic_allergy");
   };
 

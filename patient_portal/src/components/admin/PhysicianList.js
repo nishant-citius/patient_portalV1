@@ -46,6 +46,10 @@ export class PhysicianDataComponent extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.getAllPhysicians();
+  }
+
   onPageChange = (event, nextPage) => {
     this.setState({
       ...this.state,

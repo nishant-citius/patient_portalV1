@@ -147,14 +147,16 @@ const Medication_Allergies = (props) => {
       allergies: al,
     };
 
-    console.log("Happpppppppp", payload);
     props.medication_allergies(payload);
     props.flashNotification({
       message: "Medication and Allergy added...",
       type: "success",
     });
+
     history.push("/patient");
+    props.getMedicationAllergies(props.currentUser.id);
   };
+
   let history = useHistory();
   return (
     <>
