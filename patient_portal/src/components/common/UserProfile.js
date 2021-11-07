@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
+import Notification from "../../shared/notification/Notification";
 
 const Img = styled("img")({
   margin: "auto",
@@ -46,6 +47,12 @@ function UserProfile(props) {
     fetchUserDetails();
   });
 
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: "",
+    type: "",
+  });
+
   function fetchUserDetails() {
     if (detailFetched) {
       return;
@@ -70,9 +77,13 @@ function UserProfile(props) {
     let newUserData = { ...user, password: props.currentUser.rpassword };
     props.updateUser(props.currentUser.id, newUserData);
     setOpenPopup(false);
-
     props.getUserDetails(props.currentUser.id);
     setUser(newUserData);
+    setNotify({
+      isOpen: true,
+      message: `${newUserData.fName} ${newUserData.lName} profile updated Successfully...`,
+      type: "success",
+    });
   };
 
   function doctorSpeciality() {
@@ -275,7 +286,6 @@ function UserProfile(props) {
           </Grid>
         </Grid>
       </Paper>
-
       <EditDialog
         title="Edit User Details"
         openPopup={openPopup}
@@ -283,6 +293,7 @@ function UserProfile(props) {
       >
         {EDIT_JSX}
       </EditDialog>
+      <Notification notify={notify} setNotify={setNotify} />
     </>
   );
 }
