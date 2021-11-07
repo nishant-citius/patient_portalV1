@@ -1,5 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { adminService } from "../../services/register_user_service";
+
 import {
   Container,
   Card,
@@ -19,6 +21,7 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
+import * as actionCreator from "../../redux/actions/userActionCreater";
 
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
@@ -42,22 +45,35 @@ const Patient_dashboard = (props) => {
   const [isImmunization, setIsImmunization] = useState(false);
   const [mediAllergy, setmediAllergy] = useState(false);
   const [pVitals, setpVitals] = useState(false);
-  console.log("Nishant", props.patientvitalsDetails);
+
   useEffect(() => {
     if (props.isLoggedIn) {
+      loadInitialData();
       if (props.immunizationDetails) {
         setIsImmunization(true);
       }
-
       if (props.mediAllergyDetails) {
         setmediAllergy(true);
       }
-      debugger;
       if (props.patientvitalsDetails.length > 0) {
         setpVitals(true);
       }
     }
   }, []);
+
+  function getPatientVitals(userId) {
+    adminService.getPatientVitals(userId).then(
+      (response) => {},
+      (error) => {
+        return;
+      }
+    );
+  }
+
+  function loadInitialData() {
+    getPatientVitals(props.currentUser.id);
+    props.getMedicalAllergy(props.currentUser.id);
+  }
 
   return (
     <>
@@ -159,7 +175,7 @@ const Patient_dashboard = (props) => {
           </Grid>
         </Grid>
       </Container>
-      <Container className={classes.container} className="mt-2">
+      <Container className={`${classes.container} mt-2`}>
         <Grid container spacing={1}>
           <Grid item sm={12} lg={6} md={6}>
             <Card className={classes.gridcontainer}>
@@ -279,5 +295,13 @@ const mapStateToProps = (state) => {
     isLoggedIn: state.login.isLoggedIn,
   };
 };
-let hof = connect(mapStateToProps, null);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getMedicalAllergy: (userId) =>
+      dispatch(actionCreator.GetMedicationAllergies(userId)),
+    getImmunization: (userId) =>
+      dispatch(actionCreator.GetPatientImmunization(userId)),
+  };
+};
+let hof = connect(mapStateToProps, mapDispatchToProps);
 export default hof(Patient_dashboard);
