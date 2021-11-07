@@ -37,7 +37,6 @@ const PhyAppointmentNotifications = (props) => {
           <p>No pending Appointments for Today...</p>
         ) : (
           users.map((user) => {
-            //console.log(users.length);
             return (
               <ListItem alignItems="flex-start" key={user.id}>
                 <ListItemAvatar>
@@ -57,8 +56,6 @@ const PhyAppointmentNotifications = (props) => {
                         variant="body2"
                         color="text.secondary"
                       >
-                        
-                       
                         <span className="text-primary fw-bold">
                           Appointment Date:
                         </span>
@@ -70,7 +67,6 @@ const PhyAppointmentNotifications = (props) => {
                         &nbsp;&nbsp; {user.appointment_start_time} -
                         {user.appointment_start_time}
                         <br />
-                       
                       </Typography>
                     </>
                   }

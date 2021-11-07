@@ -53,18 +53,14 @@ const Patient_orders = (props) => {
       userProcedure(props.currentUser.id);
       userDiagnosis(props.currentUser.id);
     }
-    if (props.patientvitalsDetails) {
+    if (props.patientvitalsDetails.length > 0) {
       setpVitals(true);
     }
   }, []);
 
-  console.log("Diiiiiiiiiiii", Procedure);
-  console.log("Hiiiiiiiiiiii", Diagnosis);
-
   function userDiet(patientId) {
     adminService.getPatientDiet(patientId).then(
       (response) => {
-        console.log(response.data);
         setpDiet(response.data);
       },
       (error) => {
@@ -76,7 +72,6 @@ const Patient_orders = (props) => {
   function userProcedure(patientId) {
     adminService.getPatientProcedures(patientId).then(
       (response) => {
-        console.log(response.data);
         setProcedure(response.data);
       },
       (error) => {
@@ -88,7 +83,6 @@ const Patient_orders = (props) => {
   function userDiagnosis(patientId) {
     adminService.getPatientDiagnosis(patientId).then(
       (response) => {
-        console.log(response.data);
         setDiagnosis(response.data);
       },
       (error) => {

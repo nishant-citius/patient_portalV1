@@ -5,15 +5,14 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
-import { adminService } from "../../services/register_user_service";
 import Immunization from "../patient/Immunization";
 import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 import Proceduers from "./PhyProcedure";
 import DietPlan from "../physician/PatientDietPlan";
 import Vitals from "./PatientVitals";
-import { useParams, useLocation, useHistory } from "react-router";
+import { useParams, useLocation } from "react-router";
 import * as actions from "../../redux/actions/userActionCreater";
-import Diagnosis from "./PhyDaignosis";
+import Diagnosis from "./PhyDiagnosis";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -50,12 +49,10 @@ function a11yProps(index) {
 
 const AttendAppointment = (props) => {
   const [value, setValue] = useState(0);
-  const [appts, setAppts] = useState([]);
 
   const location = useLocation(),
     patientId = useParams(),
-    { appointmentDetails } = location.state,
-    history = useHistory();
+    { appointmentDetails } = location.state;
 
   useEffect(() => {
     if (props.isLoggedIn) {
@@ -65,24 +62,6 @@ const AttendAppointment = (props) => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
-
-  const finishAppointment = () => {
-    let appointmentData = appointmentDetails,
-      newData = {
-        ...appointmentData,
-        status: "completed",
-      };
-
-    adminService.editAppointment(appointmentData.id, newData).then(
-      (response) => {
-        if (response.status === 200) {
-          alert("Appointment Completed");
-          history.push("/physician_appointments");
-        }
-      },
-      (error) => {}
-    );
   };
 
   return (
@@ -116,11 +95,11 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <PhyMedicationAllergies patientId={patientId}/>
+          <PhyMedicationAllergies patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <Proceduers patientId={patientId}/>
+          <Proceduers patientId={patientId} />
         </TabPanel>
 
         <TabPanel value={value} index={4}>
@@ -128,15 +107,9 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={5}>
-          <DietPlan patientId={patientId} />
+          <DietPlan patientId={patientId} apptDetails={appointmentDetails} />
         </TabPanel>
       </Box>
-      <button
-        onClick={() => finishAppointment()}
-        className="btn btn-primary mt-3"
-      >
-        Finish Appointment
-      </button>
     </>
   );
 };

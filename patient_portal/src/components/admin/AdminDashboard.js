@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState, useEffect } from "react";
 import "./admin.css";
 import { connect } from "react-redux";
 import {
@@ -24,6 +24,7 @@ import {
 } from "mui-icons";
 
 import CountUp from "react-countup";
+import Preloader from "../../shared/preloder/Preloder";
 
 const useStyles = makeStyles((theme) => ({
   gridcontainer: {
@@ -45,6 +46,13 @@ const useStyles = makeStyles((theme) => ({
 
 const AdminDashboard = (props) => {
   const classes = useStyles();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!loading && props.users) {
+      setLoading(true);
+    }
+  });
 
   const data = {
     labels: [
@@ -118,182 +126,191 @@ const AdminDashboard = (props) => {
       cols: 2,
     },
   ];
-
   return (
     <>
       {/* Top 3 cards container */}
-      <Container className={classes.container}>
-        <Grid container spacing={4}>
-          <Grid item sm={4} xs={12}>
-            <Card className={classes.gridcontainer}>
-              <CardContent>
-                <Typography variant="subtitle1" className="fw-bold">
-                  Total Users
-                </Typography>
-              </CardContent>
-              <CardActionArea>
-                <CountUp end={props.users.length} duration={4} />
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item sm={4} xs={12}>
-            <Card className={classes.gridcontainer}>
-              <CardContent>
-                <Typography variant="subtitle1" className="fw-bold">
-                  Total Patients
-                </Typography>
-              </CardContent>
-              <CardActionArea>
-                <CountUp end={props.patients.length} duration={4} />
-              </CardActionArea>
-            </Card>
-          </Grid>
-          <Grid item sm={4} xs={12}>
-            <Card className={classes.gridcontainer}>
-              <CardContent>
-                <Typography variant="subtitle1" className="fw-bold">
-                  Total Physicians
-                </Typography>
-              </CardContent>
-              <CardActionArea>
-                {" "}
-                <CountUp end={props.physicians.length} duration={4} />
-              </CardActionArea>
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
-
-      {/* Line Chart */}
-      <div className={classes.chartdiv}>
-        <Line data={data} options={options}></Line>
-      </div>
-
-      {/* Details Container */}
-      <Container>
-        <Grid container spacing={4}>
-          <Grid item sm={6} xs={12}>
-            <Card>
-              <CardContent>
-                <ImageList sx={{ width: 300, height: 450 }}>
-                  {props.physicians.map((item, ind) =>
-                    ind < 4 ? (
-                      <ImageListItem key={itemData[ind].img}>
-                        <img
-                          src={`${itemData[ind].img}?w=248&fit=crop&auto=format`}
-                          srcSet={`${itemData[ind].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                          alt={itemData[ind].title}
-                          loading="lazy"
-                        />
-                        <ImageListItemBar
-                          className={classes.imagelistbar}
-                          title={`${item.fName} ${item.lName}`}
-                          subtitle={item.speciality}
-                        />
-                      </ImageListItem>
-                    ) : (
-                      ""
-                    )
-                  )}
-                </ImageList>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item sm={6} xs={12}>
-            <Card>
-              <CardContent>
-                <Typography variant="subtitle1" className="mb-2 fw-bold">
-                  Hospital Status
-                </Typography>
-                <Container>
-                  <Grid container spacing={4}>
-                    <Grid item smd={4} xs={12} lg={4}>
-                      <Card>
-                        <CardContent>
-                          <NoteAddIcon style={{ color: "#A883BA " }} />
-                          <Typography variant="body2" className="mt-3">
-                            Total Appointments
-                          </Typography>
-                          <Typography variant="body2" className="fw-bold">
-                            <CountUp end={props.users.length} duration={4} />
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item md={4} xs={12} lg={4}>
-                      <Card className={classes.cardsheight}>
-                        <CardContent>
-                          <GroupAddIcon style={{ color: "#a7daff " }} />
-                          <Typography variant="body2" className="mt-3">
-                            Patients per Doctor
-                          </Typography>
-                          <Typography variant="body2" className="fw-bold">
-                            <CountUp end={30} duration={4} />
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item md={4} xs={12} lg={4}>
-                      <Card className={classes.cardsheight}>
-                        <CardContent>
-                          <BorderColorIcon style={{ color: "violet" }} />
-                          <Typography variant="body2" className="mt-3">
-                            Immunized Patients
-                          </Typography>
-                          <Typography variant="body2" className="fw-bold">
-                            <CountUp end={30} duration={4} />
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                  </Grid>
-                  <Grid container spacing={4}>
-                    <Grid item md={4} xs={12} lg={4}>
-                      <Card className={classes.cardsheight}>
-                        <CardContent>
-                          <SchoolIcon style={{ color: "#CF9EAC " }} />
-                          <Typography variant="body2" className="mt-3">
-                            Total &nbsp;&nbsp;&nbsp; Nurse
-                          </Typography>
-                          <Typography variant="body2" className="fw-bold">
-                            <CountUp end={props.nurses.length} duration={4} />
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item md={4} xs={12} lg={4}>
-                      <Card className={classes.cardsheight}>
-                        <CardContent>
-                          <ListAltIcon style={{ color: "#A0D9B4 " }} />
-                          <Typography variant="body2" className="mt-3">
-                            Total Lab Assistance
-                          </Typography>
-                          <Typography variant="body2" className="fw-bold">
-                            <CountUp end={30} duration={4} />
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item md={4} xs={12} lg={4}>
-                      <Card className={classes.cardsheight}>
-                        <CardContent>
-                          <TextsmsIcon style={{ color: "#FFAA8A " }} />
-                          <Typography variant="body2" className="mt-3">
-                            Total Appointments
-                          </Typography>
-                          <Typography variant="body2" className="fw-bold">
-                            <CountUp end={30} duration={4} />
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                  </Grid>
-                </Container>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </Container>
+      {!loading ? (
+        <Preloader />
+      ) : (
+        <>
+          <Container className={classes.container}>
+            <Grid container spacing={4}>
+              <Grid item sm={4} xs={12}>
+                <Card className={classes.gridcontainer}>
+                  <CardContent>
+                    <Typography variant="subtitle1" className="fw-bold">
+                      Total Users
+                    </Typography>
+                  </CardContent>
+                  <CardActionArea>
+                    <CountUp end={props.users.length} duration={4} />
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item sm={4} xs={12}>
+                <Card className={classes.gridcontainer}>
+                  <CardContent>
+                    <Typography variant="subtitle1" className="fw-bold">
+                      Total Patients
+                    </Typography>
+                  </CardContent>
+                  <CardActionArea>
+                    <CountUp end={props.patients.length} duration={4} />
+                  </CardActionArea>
+                </Card>
+              </Grid>
+              <Grid item sm={4} xs={12}>
+                <Card className={classes.gridcontainer}>
+                  <CardContent>
+                    <Typography variant="subtitle1" className="fw-bold">
+                      Total Physicians
+                    </Typography>
+                  </CardContent>
+                  <CardActionArea>
+                    {" "}
+                    <CountUp end={props.physicians.length} duration={4} />
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            </Grid>
+          </Container>
+          {/* Line Chart */}
+          <div className={classes.chartdiv}>
+            <Line data={data} options={options}></Line>
+          </div>
+          {/* Details Container */}
+          <Container>
+            <Grid container spacing={4}>
+              <Grid item sm={6} xs={12}>
+                <Card>
+                  <CardContent>
+                    <ImageList sx={{ width: 300, height: 450 }}>
+                      {props.physicians.map((item, ind) =>
+                        ind < 4 ? (
+                          <ImageListItem key={itemData[ind].img}>
+                            <img
+                              src={`${itemData[ind].img}?w=248&fit=crop&auto=format`}
+                              srcSet={`${itemData[ind].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                              alt={itemData[ind].title}
+                              loading="lazy"
+                            />
+                            <ImageListItemBar
+                              className={classes.imagelistbar}
+                              title={`${item.fName} ${item.lName}`}
+                              subtitle={item.speciality}
+                            />
+                          </ImageListItem>
+                        ) : (
+                          ""
+                        )
+                      )}
+                    </ImageList>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item sm={6} xs={12}>
+                <Card>
+                  <CardContent>
+                    <Typography variant="subtitle1" className="mb-2 fw-bold">
+                      Hospital Status
+                    </Typography>
+                    <Container>
+                      <Grid container spacing={4}>
+                        <Grid item smd={4} xs={12} lg={4}>
+                          <Card>
+                            <CardContent>
+                              <NoteAddIcon style={{ color: "#A883BA " }} />
+                              <Typography variant="body2" className="mt-3">
+                                Total Appointments
+                              </Typography>
+                              <Typography variant="body2" className="fw-bold">
+                                <CountUp
+                                  end={props.users.length}
+                                  duration={4}
+                                />
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Grid>
+                        <Grid item md={4} xs={12} lg={4}>
+                          <Card className={classes.cardsheight}>
+                            <CardContent>
+                              <GroupAddIcon style={{ color: "#a7daff " }} />
+                              <Typography variant="body2" className="mt-3">
+                                Patients per Doctor
+                              </Typography>
+                              <Typography variant="body2" className="fw-bold">
+                                <CountUp end={30} duration={4} />
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Grid>
+                        <Grid item md={4} xs={12} lg={4}>
+                          <Card className={classes.cardsheight}>
+                            <CardContent>
+                              <BorderColorIcon style={{ color: "violet" }} />
+                              <Typography variant="body2" className="mt-3">
+                                Immunized Patients
+                              </Typography>
+                              <Typography variant="body2" className="fw-bold">
+                                <CountUp end={30} duration={4} />
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Grid>
+                      </Grid>
+                      <Grid container spacing={4}>
+                        <Grid item md={4} xs={12} lg={4}>
+                          <Card className={classes.cardsheight}>
+                            <CardContent>
+                              <SchoolIcon style={{ color: "#CF9EAC " }} />
+                              <Typography variant="body2" className="mt-3">
+                                Total &nbsp;&nbsp;&nbsp; Nurse
+                              </Typography>
+                              <Typography variant="body2" className="fw-bold">
+                                <CountUp
+                                  end={props.nurses.length}
+                                  duration={4}
+                                />
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Grid>
+                        <Grid item md={4} xs={12} lg={4}>
+                          <Card className={classes.cardsheight}>
+                            <CardContent>
+                              <ListAltIcon style={{ color: "#A0D9B4 " }} />
+                              <Typography variant="body2" className="mt-3">
+                                Total Lab Assistance
+                              </Typography>
+                              <Typography variant="body2" className="fw-bold">
+                                <CountUp end={30} duration={4} />
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Grid>
+                        <Grid item md={4} xs={12} lg={4}>
+                          <Card className={classes.cardsheight}>
+                            <CardContent>
+                              <TextsmsIcon style={{ color: "#FFAA8A " }} />
+                              <Typography variant="body2" className="mt-3">
+                                Total Appointments
+                              </Typography>
+                              <Typography variant="body2" className="fw-bold">
+                                <CountUp end={30} duration={4} />
+                              </Typography>
+                            </CardContent>
+                          </Card>
+                        </Grid>
+                      </Grid>
+                    </Container>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+          </Container>
+        </>
+      )}
     </>
   );
 };
