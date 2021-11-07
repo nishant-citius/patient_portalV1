@@ -20,7 +20,7 @@ const PhyAppointmentNotifications = (props) => {
   }, []);
 
   const todaysAppointments = (_date) => {
-    adminService.appointmentsToday(_date).then(
+    adminService.appointmentsPendingPhysician(_date).then(
       (response) => {
         setUsers(response.data);
       },
@@ -34,7 +34,7 @@ const PhyAppointmentNotifications = (props) => {
     <>
       <List>
         {users.length === 0 ? (
-          <p>No Approved Appointments for Today...</p>
+          <p>No pending Appointments for Today...</p>
         ) : (
           users.map((user) => {
             //console.log(users.length);
@@ -103,3 +103,4 @@ export default connect(
   mapStatetoProps,
   mapDispatchToProps
 )(PhyAppointmentNotifications);
+ 

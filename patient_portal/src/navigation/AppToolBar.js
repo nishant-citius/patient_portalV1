@@ -251,7 +251,9 @@ function AppToolBar(props) {
                   <MailIcon onClick={handlePhyAppointmentNotification} />
                 </Badge>
               ) : (
-                <div></div>
+                <Badge badgeContent={0} color="secondary">
+                <MailIcon />
+              </Badge>
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
@@ -292,7 +294,9 @@ function AppToolBar(props) {
         openPopup={openAppointmentPopup}
         setOpenPopup={setOpenAppointmentPopup}
       >
-        <AppointmentNotifications />
+        <AppointmentNotifications  title="Scheduled Appointment"
+        openPopup={openAppointmentPopup}
+        setOpenPopup={setOpenAppointmentPopup}/>
       </ModalPopup>
       <ModalPopup
         title="Scheduled Appointment"
