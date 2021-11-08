@@ -145,7 +145,7 @@ const Login = (props) => {
           <Typography> Do you have an account ?</Typography>
           <a href="/registeruser">Sign Up</a>
           <p className="text text-danger fw-bold text-center">
-            {props.globalmessage}!!!
+            {props.globalmessage}
           </p>
         </Paper>
       </Grid>
