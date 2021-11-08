@@ -30,6 +30,7 @@ import { Edit } from "@material-ui/icons";
 import AddUsers from "components/admin/common/AddUsers";
 import { adminService } from "services/register_user_service";
 import PhyAppointmentNotifications from "../components/physician/PhyAppointmentNotification";
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -248,11 +249,11 @@ function AppToolBar(props) {
               &nbsp;&nbsp;&nbsp;&nbsp;
               {props.role === "physician" ? (
                 <Badge badgeContent={users.length} color="secondary">
-                  <MailIcon onClick={handlePhyAppointmentNotification} />
+                  <CalendarTodayIcon onClick={handlePhyAppointmentNotification} />
                 </Badge>
               ) : (
                 <Badge badgeContent={0} color="secondary">
-                <MailIcon />
+                <CalendarTodayIcon />
               </Badge>
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
