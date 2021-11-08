@@ -88,27 +88,47 @@ const AttendAppointment = (props) => {
           {` ${props.userDetails.fName} ${props.userDetails.lName}`}
         </h6>
         <TabPanel value={value} index={0}>
-          <Vitals patientId={patientId} />
+          <Vitals
+            patientId={patientId}
+            flashNotification={props.flashNotification}
+          />
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <ImmunizationDetails patientId={patientId} fromAdmin={true} />
+          <ImmunizationDetails
+            patientId={patientId}
+            fromAdmin={true}
+            flashNotification={props.flashNotification}
+          />
         </TabPanel>
 
         <TabPanel value={value} index={2}>
-          <PhyMedicationAllergies patientId={patientId} />
+          <PhyMedicationAllergies
+            patientId={patientId}
+            flashNotification={props.flashNotification}
+          />
         </TabPanel>
 
         <TabPanel value={value} index={3}>
-          <Proceduers patientId={patientId} />
+          <Proceduers
+            patientId={patientId}
+            flashNotification={props.flashNotification}
+          />
         </TabPanel>
 
         <TabPanel value={value} index={4}>
-          <Diagnosis patientId={patientId} />
+          <Diagnosis
+            patientId={patientId}
+            flashNotification={props.flashNotification}
+          />
         </TabPanel>
 
         <TabPanel value={value} index={5}>
-          <DietPlan patientId={patientId} apptDetails={appointmentDetails} />
+          <DietPlan
+            patientId={patientId}
+            apptDetails={appointmentDetails}
+            flashNotification={props.flashNotification}
+          />
         </TabPanel>
       </Box>
     </>

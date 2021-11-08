@@ -113,8 +113,16 @@ export class PatientList extends React.Component {
 
     if (this.state.isAvailable) {
       this.props.updateImmunization(this.props.pImmunnization.id, payload);
+       this.props.flashNotification({
+         message: "Immunization Updated Successfully...!",
+         type: "success",
+       });
     } else {
       this.props.immunization(payload);
+        this.props.flashNotification({
+          message: "Immunization Updated Successfully...!",
+          type: "success",
+        });
     }
   };
 

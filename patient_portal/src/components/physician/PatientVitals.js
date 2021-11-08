@@ -37,7 +37,11 @@ const Vitals = (props) => {
     adminService.updatePatientVitals(patientId, newData).then(
       (response) => {
         if (response.status === 200) {
-          alert("Patient Vitals Updated Successfully...");
+          // alert("Patient Vitals Updated Successfully...");
+          props.flashNotification({
+            message: "Patient Vitals Updated Successfully...!",
+            type: "success",
+          });
         }
       },
       (error) => {}

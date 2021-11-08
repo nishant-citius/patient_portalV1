@@ -15,6 +15,7 @@ import {
   TableRow,
 } from "mui";
 import { BsFillTrashFill } from "react-icons/bs";
+import ConfirmDialog from "../../shared/dialog/ConfirmDialog";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,11 +29,15 @@ const AllergyDetails = (props) => {
   const [allergy, setAllergy] = useState([0]);
   const [page, setPage] = useState(0);
   const [rowPerPage, setRowsPerPage] = useState(6);
+  const [confirmDialog, setConfirmDialog] = useState({
+    isOpen: false,
+    title: "",
+    subTitle: "",
+  });
 
   function getAllergies() {
     allergyServices.getAllAllergies().then(
       (response) => {
-        console.log(response);
         setAllergy(response.data);
       },
       (error) => {
@@ -48,6 +53,10 @@ const AllergyDetails = (props) => {
   function deleteAllergies(id) {
     allergyServices.deleteAllergy(id).then(
       (response) => {
+        setConfirmDialog({
+          ...confirmDialog,
+          isOpen: false,
+        });
         props.flashNotification({
           message: "Data Deleted Succssfully...!",
           type: "success",
@@ -103,7 +112,18 @@ const AllergyDetails = (props) => {
                       <TableCell>
                         <span className="p-2 hand-pointer">
                           <BsFillTrashFill
-                            onClick={() => deleteAllergies(allergies.id)}
+                            // onClick={() => deleteAllergies(allergies.id)}
+                            onClick={() => {
+                              setConfirmDialog({
+                                isOpen: true,
+                                title: `Are you sure to delete this record?`,
+                                subTitle:
+                                  "Allergy Record will be removed permanently!!",
+                                onConfirm: () => {
+                                  deleteAllergies(allergies.id);
+                                },
+                              });
+                            }}
                           />
                         </span>
                       </TableCell>
@@ -121,6 +141,10 @@ const AllergyDetails = (props) => {
             onChangeRowsPerPage={onChangeRowsPerPage}
           />
         </TableContainer>
+        <ConfirmDialog
+          confirmDialog={confirmDialog}
+          setConfirmDialog={setConfirmDialog}
+        />
       </Container>
     </>
   );

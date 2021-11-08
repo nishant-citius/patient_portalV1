@@ -41,8 +41,9 @@ export class PhyMedicationAllergies extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fromAdmin ? this.props.getMedicationAllergies(this.props.patientId):
-    this.props.getMedicationAllergies(this.props.patientId.patintId);
+    this.props.fromAdmin
+      ? this.props.getMedicationAllergies(this.props.patientId)
+      : this.props.getMedicationAllergies(this.props.patientId.patintId);
     this.patientMedication();
   }
 
@@ -185,6 +186,10 @@ export class PhyMedicationAllergies extends React.Component {
         this.props.mediAllergyDetails.id,
         payload
       );
+      this.props.flashNotification({
+        message: "Medication & Allergies Updated Successfully...!",
+        type: "success",
+      });
     } else {
       this.props.medication_allergies(payload);
     }
