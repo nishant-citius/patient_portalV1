@@ -99,7 +99,7 @@ function UserList(props) {
           <Link to={`/addusers`} className="btn btn-primary float-end mr-4">
             Add User
           </Link>
-          <h4 className="text-center fw-bold ">User List</h4>
+          <h4 className="text-center  fw-bold ">User List</h4>
           <TableContainer component={Paper} style={{ marginTop: "20px" }}>
             <Table>
               <TableHead className="tablehead">

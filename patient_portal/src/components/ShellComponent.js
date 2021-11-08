@@ -42,6 +42,7 @@ import AddAllergy from "./admin/AddAllergy";
 import Patient_Education from "./patient/Patient_Education";
 import Patient_orders from "./patient/Patient_orders";
 import UserProfile from "components/common/UserProfile";
+import Billing from "components/admin/Billing";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -130,6 +131,9 @@ function ShellComponent(props) {
           </Route>
           <Route path={"/edit/:id"}>
             <EditUser flashNotification={showSnacksBar} />
+          </Route>
+          <Route path={"/billing"}>
+            <Billing flashNotification={showSnacksBar} />
           </Route>
           {/* -----------Admin------------- */}
           {/* -----------Physician------------- */}
