@@ -12,7 +12,7 @@ import {
   Avatar,
 } from "../../mui";
 
-const PhyAppointmentNotifications = (props) => {
+const PatientAppointmentNotification = (props) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -22,8 +22,8 @@ const PhyAppointmentNotifications = (props) => {
     );
   }, []);
 
-  const todaysAppointments = (_date,_id) => {
-    adminService.appointmentsPendingPhysician(_date,_id).then(
+  const todaysAppointments = (_id) => {
+    adminService.getPatientApprovedAppointments(_id).then(
       (response) => {
         setUsers(response.data);
       },
@@ -101,5 +101,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStatetoProps,
   mapDispatchToProps
-)(PhyAppointmentNotifications);
- 
+)(PatientAppointmentNotification);

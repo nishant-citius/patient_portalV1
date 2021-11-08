@@ -31,6 +31,7 @@ import AddUsers from "components/admin/common/AddUsers";
 import { adminService } from "services/register_user_service";
 import PhyAppointmentNotifications from "../components/physician/PhyAppointmentNotification";
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import PatientAppointmentNotification from "../components/patient/PatientAppointmentNotification";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -138,6 +139,7 @@ function AppToolBar(props) {
   const [openAppointmentPopup, setOpenAppointmentPopup] = useState(false);
   const [openPhyAppointmentPopup, setOpenPhyAppointmentPopup] = useState(false);
   const [users, setUsers] = useState([]);
+  const [phy, setPhy] = useState([]);
 
   const classes = useStyles({ open });
   const history = useHistory();
@@ -169,6 +171,10 @@ function AppToolBar(props) {
 
   useEffect(() => {
     todaysAppointments(new Date().toISOString().slice(0, 10));
+    todaysAppointmentsPhy(
+      new Date().toISOString().slice(0, 10),
+      props.currentUser.id
+    );
   }, []);
 
   function userProfile() {
@@ -187,6 +193,16 @@ function AppToolBar(props) {
     );
   };
 
+  const todaysAppointmentsPhy = (_date, _id) => {
+    adminService.appointmentsPendingPhysician(_date, _id).then(
+      (response) => {
+        setPhy(response.data);
+      },
+      (error) => {
+        return;
+      }
+    );
+  };
 
   const displayNotificationIcons = () => {
     let iconJSX = null;
@@ -206,7 +222,7 @@ function AppToolBar(props) {
     } else if (props.role === "physician") {
       iconJSX = (
         <>
-          <Badge badgeContent={users.length} color="secondary">
+          <Badge badgeContent={phy.length} color="secondary">
             <CalendarTodayIcon onClick={handlePhyAppointmentNotification} />
           </Badge>
           &nbsp;&nbsp;&nbsp;&nbsp;
