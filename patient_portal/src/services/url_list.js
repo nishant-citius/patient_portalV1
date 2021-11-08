@@ -47,3 +47,6 @@ export const APPROVED_APPOINTMETS =
   "http://localhost:9999/appointments?status=approved";
 
 export const UPDATE_PATIENT_MEDICATIONANDALLERGIES="http://localhost:9999/medic_allergy";
+
+export const PENDING_APPOINTMETS =
+  "http://localhost:9999/appointments?status=pending";

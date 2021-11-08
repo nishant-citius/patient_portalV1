@@ -26,6 +26,8 @@ let appState = {
   approvedAppointmentCount: 0,
   patientMedicationAllergy: [],
   labReports: [],
+  pendingAppointmentCount: 0,
+  pendingAppointments:[],
 };
 
 export default appState;
