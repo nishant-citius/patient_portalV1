@@ -18,7 +18,11 @@ export class PatientList extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getPatientsImmunization(this.props.patientId);
+    if (this.props.fromAdmin) {
+      this.props.getPatientsImmunization(this.props.patientId.patintId);
+    } else {
+      this.props.getPatientsImmunization(this.props.patientId);
+    }
   }
 
   componentDidUpdate() {

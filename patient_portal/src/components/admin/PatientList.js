@@ -39,16 +39,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-// export class PatientList extends React.Component {
 function PatientList(props) {
-  // constructor(props) {
-  //   super(props);
-  //   state = {
-  //     page: 0,
-  //     rowPerPage: 6,
-  //   };
-  // }
-
   const [page, setPage] = useState(0);
   const [rowPerPage, setRowsPerPage] = useState(6);
   const [detailFetched, setDetailsFetched] = useState(false);
@@ -58,20 +49,6 @@ function PatientList(props) {
     subTitle: "",
   });
 
-  // onPageChange = (event, nextPage) => {
-  //   setState({
-  //     ...state,
-  //     page: nextPage,
-  //   });
-  // };
-
-  // onChangeRowsPerPage = (event) => {
-  //   setState({
-  //     ...state,
-  //     rowPerPage: event.target.value,
-  //   });
-  // };
-
   const onPageChange = (event, nextPage) => {
     setPage(nextPage);
   };
@@ -79,12 +56,6 @@ function PatientList(props) {
   const onChangeRowsPerPage = (event) => {
     setRowsPerPage(event.target.value);
   };
-
-  // componentDidMount() {
-  //   props.getAllPatients();
-  //   props.getDemographics();
-  // }
-
   useEffect(() => {
     fetchUserDetails();
   });
@@ -112,7 +83,6 @@ function PatientList(props) {
     props.getAllPatients();
   }
 
-  // render() {
   return (
     <>
       <Container>

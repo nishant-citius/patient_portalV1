@@ -66,20 +66,6 @@ function PhysicianDataComponent(props) {
     subTitle: "",
   });
 
-  //  onPageChange = (event, nextPage) => {
-  //   this.setState({
-  //     ...this.state,
-  //     page: nextPage,
-  //   });
-  // };
-
-  //  onChangeRowsPerPage = (event) => {
-  //   this.setState({
-  //     ...this.state,
-  //     rowPerPage: event.target.value,
-  //   });
-  // };
-
   const onPageChange = (event, nextPage) => {
     setPage(nextPage);
   };
@@ -114,7 +100,6 @@ function PhysicianDataComponent(props) {
     props.getAllPhysicians();
   }
 
-  // render() {
   return (
     <>
       <Container>
@@ -169,7 +154,6 @@ function PhysicianDataComponent(props) {
                         </span>
                         <span className="p-2 hand-pointer">
                           <BsFillTrashFill
-                            // onClick={() => this.deleteUser(user.id)}
                             onClick={() => {
                               setConfirmDialog({
                                 isOpen: true,
