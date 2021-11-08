@@ -62,7 +62,11 @@ const DietPlan = (props) => {
     adminService.editAppointment(appointmentData.id, newData).then(
       (response) => {
         if (response.status === 200) {
-          alert("Appointment Completed");
+          //alert("Appointment Completed");
+          props.flashNotification({
+            message: "Appointment Completed Successfully...!",
+            type: "success",
+          });
           history.push("/physician_appointments");
         }
       },
@@ -122,8 +126,16 @@ const DietPlan = (props) => {
     };
     if (dietAdded) {
       updatePatientDiet(patientDiet[0].id, payload);
+      props.flashNotification({
+        message: "Patient Diet Plan Updated Successfully...!",
+        type: "success",
+      });
     } else {
       props.dietplan(payload);
+      props.flashNotification({
+        message: "Patient Diet Plan Added Successfully...!",
+        type: "success",
+      });
     }
   };
 

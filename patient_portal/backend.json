@@ -27,7 +27,7 @@
       "speciality": "pathology",
       "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 51
+      "id": 2
     },
     {
       "email": "susmitha@email.com",
@@ -40,7 +40,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 38
+      "id": 3
     },
     {
       "email": "sneha@email.com",
@@ -54,7 +54,7 @@
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 50
+      "id": 4
     },
     {
       "email": "swapna@email.com",
@@ -69,7 +69,7 @@
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 10:54:19 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 48
+      "id": 5
     },
     {
       "email": "aj@email.com",
@@ -83,7 +83,7 @@
       "role": "admin",
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 2,
+      "id": 6,
       "password": "$2a$10$/64yA0nvpsPFdSDxDgHvD.MkyGN5YGl0sDQo0QD8zqY12pSEb78oi"
     },
     {
@@ -98,7 +98,7 @@
       "speciality": "dermatology",
       "createdDate": "Tue Nov 02 2021 10:21:39 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 25
+      "id": 7
     },
     {
       "email": "manoj@email.com",
@@ -112,7 +112,7 @@
       "speciality": "allergy_immunology",
       "createdDate": "Tue Nov 02 2021 10:23:02 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 23
+      "id": 8
     },
     {
       "email": "sandhya@email.com",
@@ -126,7 +126,7 @@
       "speciality": "family_medicine",
       "createdDate": "Tue Nov 02 2021 10:25:34 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 28
+      "id": 9
     },
     {
       "email": "vijaya@email.com",
@@ -140,7 +140,7 @@
       "speciality": "obstetrics_gynecology",
       "createdDate": "Tue Nov 02 2021 10:28:23 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 30
+      "id": 10
     },
     {
       "email": "sh@email.com",
@@ -154,7 +154,7 @@
       "speciality": "neurology",
       "createdDate": "Tue Nov 02 2021 10:31:17 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 31
+      "id": 11
     },
     {
       "email": "sp@gmail.com",
@@ -168,7 +168,7 @@
       "speciality": "Neurology",
       "createdDate": "Tue Nov 02 2021 10:32:08 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 32
+      "id": 12
     },
     {
       "email": "pooja@gmail.com",
@@ -182,7 +182,7 @@
       "speciality": "psychiatry",
       "createdDate": "Tue Nov 02 2021 10:33:22 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 33
+      "id": 13
     },
     {
       "email": "ajinkya@email.com",
@@ -195,7 +195,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 34
+      "id": 14
     },
     {
       "email": "nishanth@email.com",
@@ -208,7 +208,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 35
+      "id": 15
     },
     {
       "email": "supriya@email.com",
@@ -221,7 +221,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 36
+      "id": 16
     },
     {
       "email": "pooja@email.com",
@@ -234,7 +234,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 37
+      "id": 17
     },
     {
       "email": "susmitha@email.com",
@@ -247,7 +247,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 38
+      "id": 18
     },
     {
       "email": "susmitha1281@email.com",
@@ -261,7 +261,7 @@
       "speciality": "internal_medicine",
       "createdDate": "Tue Nov 02 2021 23:29:40 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 55
+      "id": 19
     },
     {
       "email": "shiva@email.com",
@@ -274,7 +274,7 @@
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 39
+      "id": 20
     },
     {
       "email": "sanjay@gmail.com",
@@ -289,7 +289,7 @@
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 13:13:53 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 26
+      "id": 21
     },
     {
       "email": "neeraj@gmail.com",
@@ -304,7 +304,7 @@
       "role": "patient",
       "createdDate": "Tue Nov 02 2021 13:36:17 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 27
+      "id": 22
     },
     {
       "email": "sp@email.com",
@@ -318,7 +318,7 @@
       "speciality": "neurology",
       "createdDate": "Thu Nov 04 2021 01:03:24 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 56
+      "id": 23
     },
     {
       "email": "sudhir@email.com",
@@ -332,7 +332,7 @@
       "speciality": "Neurology",
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 20
+      "id": 24
     },
     {
       "email": "amar@gmail.com",
@@ -346,7 +346,7 @@
       "rpassword": "12345",
       "createdDate": "Mon Nov 08 2021 11:52:34 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 57,
+      "id": 25,
       "password": "$2a$10$anafbt/iHnKRJhDT./y41ekM4E4bv.nNaieOqIjXh.P6Y5x3K1ESS"
     },
     {
@@ -361,7 +361,7 @@
       "role": "patient",
       "createdDate": "Mon Nov 08 2021 11:59:45 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 58,
+      "id": 26,
       "password": "$2a$10$GFkG91zRPNBcmlfCAQblTe7d37GapD9el66mBwJ2MttK8OpN8RCKy"
     },
     {
@@ -377,7 +377,7 @@
       "rpassword": "12345",
       "createdDate": "Mon Nov 08 2021 13:50:25 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 59
+      "id": 27
     },
     {
       "email": "suraj@gmail.com",
@@ -391,976 +391,207 @@
       "role": "patient",
       "createdDate": "Mon Nov 08 2021 14:19:52 GMT+0530 (India Standard Time)",
       "isActive": true,
-      "id": 61,
+      "id": 28,
       "password": "$2a$10$NyPgxOAHaN9/iD8Uz2lzO.Cx5YPojOO7zd.AazhaCC1Fw.cS8DnCS"
     }
   ],
   "medic_allergy": [
     {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "Dolo",
-          "dosage": "2",
-          "directionstoconsume": "two times",
-          "frequency": "100 mg",
-          "physicianName": "Soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-20",
-          "endDate": "2021-10-20"
-        },
-        {
-          "medicineName": "paracetamol",
-          "dosage": "2",
-          "directionstoconsume": "in morning",
-          "frequency": "50 mg",
-          "physicianName": "soujanya",
-          "purpose": "fever",
-          "startDate": "2021-10-12",
-          "endDate": "2021-10-14"
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "paracetamal",
-          "strength": "650",
-          "directiontoconsume": "3",
-          "socialDrugs": "drink"
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "telma",
-          "strength": "40",
-          "directiontoconsume": "after breakfast"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "spots on skin",
-          "symptomsofAllergy": "Itching",
-          "drugAllergy": "No"
-        }
-      ],
-      "id": 24
-    },
-    {
-      "userid": 12,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "altrokcen",
-          "strength": "50 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "Neuomarkazol",
-          "strength": "100 mg",
-          "directiontoconsume": "twice a day"
-        },
-        {
-          "pastdrugName": "propygenta",
-          "strength": "80 mg",
-          "directiontoconsume": "twice a day"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userid": 24,
-      "current_medication": [
-        {
-          "medicineName": "",
-          "dosage": "",
-          "directionstoconsume": "",
-          "frequency": "",
-          "physicianName": "",
-          "purpose": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "otc_medication": [
-        {
-          "otcDrugName": "",
-          "strength": "",
-          "directiontoconsume": "",
-          "socialDrugs": ""
-        }
-      ],
-      "past_medication": [
-        {
-          "pastdrugName": "",
-          "strength": "",
-          "directiontoconsume": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "skin",
-          "symptomsofAllergy": "rashes",
-          "drugAllergy": "dolo"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "HEPARIN SODIUM10,000 UNITS/ML",
-          "dosage": "1.0",
-          "directionstoconsume": "injection",
-          "physicianName": "shiva prasad",
-          "startDate": "2021-11-04",
-          "endDate": "2021-11-05"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "na",
-          "symptomsofAllergy": "na",
-          "drugAllergy": "na"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 3
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
-          "dosage": "gvfvs",
-          "directionstoconsume": "qdvv",
-          "physicianName": "uwgfug",
-          "startDate": "2021-11-04",
-          "endDate": "2021-11-13"
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "iwgdu",
-          "symptomsofAllergy": "fkudvf",
-          "drugAllergy": "afljhbah"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "dosage": "dquyouy",
-          "directionstoconsume": "iowuhri",
-          "physicianName": "rywgeriy",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "geig",
-          "symptomsofAllergy": "riygr",
-          "drugAllergy": "irehiugy"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
-          "dosage": "dquyouy",
-          "directionstoconsume": "iowuhri",
-          "physicianName": "rywgeriy",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "geig",
-          "symptomsofAllergy": "riygr",
-          "drugAllergy": "irehiugy"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE1,000 UNITS/ML",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 7
-    },
-    {
-      "userid": 56,
-      "current_medication": [
-        {
-          "medicineName": "BUTISOL SODIUM50MG",
-          "dosage": "",
-          "directionstoconsume": "",
-          "physicianName": "",
-          "startDate": "",
-          "endDate": ""
-        }
-      ],
-      "allergies": [
-        {
-          "allergyName": "",
-          "symptomsofAllergy": "",
-          "drugAllergy": ""
-        }
-      ],
-      "id": 8
-    },
-    {
-      "userid": 60,
+      "userid": 5,
       "current_medication": [
         {
           "medicineName": "HEPARIN SODIUM1,000 UNITS/ML",
           "dosage": "2",
           "directionstoconsume": "Before food",
-          "physicianName": "NA",
-          "startDate": "2021-11-08",
-          "endDate": "2021-11-17"
+          "physicianName": "Dr. Abdul",
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-10"
         }
       ],
       "otc_medication": [
         {
           "otcDrugName": "HEPARIN SODIUM10,000 UNITS/ML",
           "directiontoconsume": "After Food",
-          "socialDrugs": "drink"
+          "socialDrugs": "smoke"
         }
       ],
       "past_medication": [
         {
-          "pastdrugName": "SULFADIAZINE500MG",
+          "pastdrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE10,000 UNITS/ML",
           "directiontoconsume": "Aftr breakfast"
         }
       ],
       "allergies": [
         {
-          "allergyType": "Mite",
-          "allergyName": "Storage mite",
+          "allergyType": "Insect",
+          "allergyName": "Fungus",
           "drugAllergy": "NA"
         }
       ],
-      "id": 25
+      "id": 1
     },
     {
-      "userid": "61",
+      "userid": 26,
       "current_medication": [
         {
-          "medicineName": "BENSULFOID33.32%",
-          "dosage": "2",
+          "medicineName": "HEPARIN SODIUM5,000 UNITS/ML",
+          "dosage": "1",
           "directionstoconsume": "Before food",
-          "physicianName": "NA",
-          "startDate": "2021-11-03",
-          "endDate": "2021-11-10"
-        },
-        {
-          "medicineName": "LIQUAEMIN SODIUM PRESERVATIVE FREE5,000 UNITS/ML",
-          "dosage": "2",
-          "directionstoconsume": "after breakfast",
-          "physicianName": "amar",
+          "physicianName": "Sayyad",
           "startDate": "2021-11-09",
-          "endDate": "2021-11-17"
+          "endDate": "2021-11-30"
         }
       ],
       "otc_medication": [
         {
           "otcDrugName": "HEPARIN SODIUM5,000 UNITS/ML",
           "directiontoconsume": "After Food",
-          "socialDrugs": "smoke"
+          "socialDrugs": "drink"
         }
       ],
       "past_medication": [
         {
-          "pastdrugName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
+          "pastdrugName": "LIQUAEMIN SODIUM PRESERVATIVE FREE1,000 UNITS/ML",
           "directiontoconsume": "Aftr breakfast"
-        },
-        {
-          "medicineName": "BENSULFOID33.32%",
-          "dosage": "2",
-          "directionstoconsume": "Before food",
-          "physicianName": "NA",
-          "startDate": "2021-11-03",
-          "endDate": "2021-11-10"
         }
       ],
       "allergies": [
         {
           "allergyType": "Insect",
-          "allergyName": "Mite",
+          "allergyName": "Fungus",
           "drugAllergy": "NA"
         }
       ],
-      "id": 26
+      "id": 2
     }
   ],
   "immunization": [
-    {
-      "first_name": "neeraj",
-      "last_name": "thakur",
-      "age_category": "18_44",
-      "vaccine_brand": "covaccine",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "polio",
-          "vaccine_date": "2021-11-17"
-        },
-        {
-          "vaccine_name": "tetnus",
-          "vaccine_date": "2021-11-16"
-        }
-      ],
-      "id": 27
-    },
-    {
-      "first_name": "Mitashi",
-      "last_name": "thakur",
-      "age_category": "45",
-      "vaccine_brand": "covvacine",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "polio",
-          "vaccine_date": "2021-11-16"
-        }
-      ],
-      "id": 40
-    },
-    {
-      "first_name": "Nishant",
-      "last_name": "Chaubey",
-      "age_category": "45",
-      "vaccine_brand": "sasas",
-      "dose_detail": "1",
-      "general_vaccine": [
-        {
-          "vaccine_name": "asasas",
-          "vaccine_date": "2021-11-05"
-        }
-      ],
-      "id": 1
-    },
-    {
-      "first_name": "sanjay",
-      "last_name": "sharma",
-      "age_category": "45",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-11-01"
-        }
-      ],
-      "id": 26
-    },
     {
       "first_name": "Swapna",
       "last_name": "Patil",
       "age_category": "18_44",
       "vaccine_brand": "CoviShield",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Covid",
+          "vaccine_date": "2021-11-02"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "first_name": "sham",
+      "last_name": "rautt",
+      "age_category": "18_44",
+      "vaccine_brand": "CoviShield",
       "dose_detail": "1",
       "general_vaccine": [
         {
           "vaccine_name": "Covid",
-          "vaccine_date": "2021-11-01"
-        },
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-11-03"
+          "vaccine_date": "2021-10-31"
         }
       ],
-      "id": 48
-    },
-    {
-      "first_name": "deepak",
-      "last_name": "Seth",
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-11-03"
-        }
-      ],
-      "id": 60
-    },
-    {
-      "first_name": "Ajinkya",
-      "last_name": "Pathak",
-      "age_category": "18_44",
-      "vaccine_brand": "CoviShield",
-      "dose_detail": "2",
-      "general_vaccine": [
-        {
-          "vaccine_name": "Covid",
-          "vaccine_date": "2021-11-03"
-        },
-        {
-          "vaccine_name": "Flue",
-          "vaccine_date": "2021-11-03"
-        }
-      ],
-      "id": 61
+      "id": 26
     }
   ],
   "appointments": [
     {
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "1994-01-01",
-      "mobile_no": 8801888988,
-      "doc_id": 32,
-      "doc_name": "Sudhir Koganti",
-      "appointment_title": "cold",
-      "appointment_start_time": "20:50",
-      "appointment_end_time": "20:53",
-      "appointmentDate": "2021-11-01",
-      "appointment_desc": "Appointments",
-      "createdBy": "shivaprasad",
-      "createdDate": "2021-10-28T12:20:59.048Z",
-      "patientId": 48,
-      "status": "reject"
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 7876654329,
-      "doc_id": 32,
-      "doc_name": "Sudhir Koganti",
-      "appointment_title": "title",
-      "appointment_start_time": "17:44",
-      "appointment_end_time": "19:46",
-      "appointmentDate": "2021-10-28",
-      "appointment_desc": "gyj",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-10-28T08:10:38.149Z",
-      "patientId": 48,
-      "status": "approved",
-      "id": 3
-    },
-    {
-      "fName": "Swapna",
-      "lName": "Patil",
-      "dob": "2021-11-16",
-      "mobile_no": 9834236968,
-      "doc_id": 32,
-      "doc_name": "Sudhir Koganti",
-      "appointment_title": "Swapna Patil - Appointment",
-      "appointment_start_time": "12:15",
-      "appointment_end_time": "13:15",
-      "appointmentDate": "2021-11-04",
-      "appointment_desc": "Swapna Patil - Appointment.",
-      "createdBy": "SwapnaPatil",
-      "createdDate": "2021-11-02T06:45:48.977Z",
-      "patientId": 48,
-      "status": "approved",
-      "id": 4
-    },
-    {
-      "fName": "Swapna",
-      "lName": "Patil",
-      "dob": "2021-11-16",
-      "mobile_no": 8353638299,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "Fever",
-      "appointment_start_time": "02:35",
-      "appointment_end_time": "03:35",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "fever",
-      "createdBy": "SwapnaPatil",
-      "createdDate": "2021-11-03T04:03:28.531Z",
-      "patientId": 48,
-      "status": "reject",
-      "id": 5
-    },
-    {
-      "fName": "Swapna",
-      "lName": "Patil",
-      "dob": "2021-11-16",
-      "mobile_no": 8353638299,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "Fever",
-      "appointment_start_time": "02:35",
-      "appointment_end_time": "03:35",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "fever",
-      "createdBy": "SwapnaPatil",
-      "createdDate": "2021-11-03T04:03:28.531Z",
-      "patientId": 48,
-      "status": "completed",
-      "id": 5
-    },
-    {
-      "fName": "neeraj",
-      "lName": "thakur",
-      "dob": "2021-11-26",
-      "mobile_no": 7698657888,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "headaque",
-      "appointment_start_time": "08:40",
-      "appointment_end_time": "15:40",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "Headache",
-      "createdBy": "neerajthakur",
-      "createdDate": "2021-11-03T04:05:12.101Z",
-      "patientId": 27,
-      "status": "reject",
-      "id": 6
-    },
-    {
-      "fName": "sanjay",
-      "lName": "sharma",
-      "dob": "2021-11-25",
-      "mobile_no": 8999765434,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "02:40",
-      "appointment_end_time": "03:40",
-      "appointmentDate": "2021-11-05",
-      "appointment_desc": "general checkup",
-      "createdBy": "sanjaysharma",
-      "createdDate": "2021-11-03T04:06:54.950Z",
-      "patientId": 26,
-      "status": "approved",
-      "id": 7
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 87899986576,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "Fever",
-      "appointment_start_time": "02:40",
-      "appointment_end_time": "03:40",
-      "appointmentDate": "2021-11-04",
-      "appointment_desc": "Na",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-03T04:08:09.038Z",
-      "patientId": 24,
-      "status": "approved",
-      "id": 8
-    },
-    {
-      "fName": "Vijaya",
-      "lName": "C",
-      "dob": "2021-11-17",
-      "mobile_no": 89765457688,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "11:40",
-      "appointment_end_time": "11:44",
-      "appointmentDate": "2021-11-10",
-      "appointment_desc": "nn",
-      "createdBy": "VijayaC",
-      "createdDate": "2021-11-03T05:08:35.020Z",
-      "patientId": 56,
-      "status": "reject",
-      "id": 9
-    },
-    {
-      "fName": "Mahenda",
-      "lName": "Singh",
-      "dob": "2021-11-04",
-      "mobile_no": 6578987865,
-      "doc_id": 55,
-      "doc_name": "Susmitha Chinthakindi",
-      "appointment_title": "General Health Checkup",
-      "appointment_start_time": "13:50",
-      "appointment_end_time": "14:50",
-      "appointmentDate": "2021-11-20",
-      "appointment_desc": "Fever",
-      "createdBy": "MahendaSingh",
-      "createdDate": "2021-11-03T05:15:07.232Z",
-      "patientId": 54,
-      "status": "reject",
-      "id": 10
-    },
-    {
-      "fName": "Mitashi",
-      "lName": "thakur",
-      "dob": "2021-11-16",
-      "mobile_no": 57576687878,
-      "doc_id": 27,
-      "doc_name": "Anasuya Koganti",
-      "appointment_title": "Thryroid",
-      "appointment_start_time": "09:46",
-      "appointment_end_time": "23:47",
-      "appointmentDate": "2021-11-24",
-      "appointment_desc": "thyroid checkup",
-      "createdBy": "Mitashithakur",
-      "createdDate": "2021-11-03T12:19:24.593Z",
-      "patientId": 40,
-      "status": "approved",
-      "id": 6
-    },
-    {
-      "fName": "Mitashi",
-      "lName": "thakur",
-      "dob": "2021-11-16",
-      "mobile_no": 75757577854,
-      "doc_id": 27,
-      "doc_name": "Anasuya Koganti",
-      "appointment_title": "thyroid",
-      "appointment_start_time": "10:42",
-      "appointment_end_time": "12:42",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "thyroid checkup",
-      "createdBy": "Mitashithakur",
-      "createdDate": "2021-11-03T15:12:41.366Z",
-      "patientId": 40,
-      "status": "approved",
-      "id": 7
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 9848022338,
-      "doc_id": 56,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "neck pain",
-      "appointment_start_time": "05:05",
-      "appointment_end_time": "01:08",
-      "appointmentDate": "2021-11-04",
-      "appointment_desc": "Neack pain",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-03T19:35:51.444Z",
-      "patientId": 1,
-      "status": "approved",
-      "id": 11
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 9848022338,
-      "doc_id": 56,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "backpain",
-      "appointment_start_time": "02:08",
-      "appointment_end_time": "01:09",
-      "appointmentDate": "2021-11-03",
-      "appointment_desc": "heavy backpain",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-03T19:39:06.523Z",
-      "patientId": 1,
-      "status": "approved",
-      "id": 12
-    },
-    {
-      "fName": "sanjay",
-      "lName": "sharma",
-      "dob": "2021-11-25",
-      "mobile_no": 8788286580,
-      "doc_id": 31,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "Something",
-      "appointment_start_time": "17:42",
-      "appointment_end_time": "18:44",
-      "appointmentDate": "2021-11-04",
-      "appointment_desc": "Checking notifications",
-      "createdBy": "sanjaysharma",
-      "createdDate": "2021-11-04T10:11:27.496Z",
-      "patientId": 26,
-      "status": "approved",
-      "id": 13
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "mobile_no": 8801888988,
-      "doc_id": 56,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "neck pain",
-      "appointment_start_time": "01:39",
-      "appointment_end_time": "10:43",
-      "appointmentDate": "2021-11-05",
-      "appointment_desc": "neck pain",
-      "createdBy": "NishantChaubey",
-      "createdDate": "2021-11-05T05:11:47.771Z",
-      "patientId": 1,
-      "status": "approved",
-      "id": 14
-    },
-    {
       "fName": "sham",
-      "lName": "raut",
+      "lName": "rautt",
       "dob": "2021-11-02",
-      "mobile_no": 2345678895,
-      "doc_id": 57,
+      "mobile_no": 9087654321,
+      "doc_id": 25,
       "doc_name": "Amar Varma",
-      "appointment_title": "Something",
-      "appointment_start_time": "14:06",
-      "appointment_end_time": "14:08",
-      "appointmentDate": "2021-11-09",
-      "appointment_desc": "jshdk",
-      "createdBy": "shamraut",
-      "createdDate": "2021-11-08T06:36:43.081Z",
-      "patientId": 58,
-      "status": "approved",
-      "id": 15
+      "appointment_title": "Fever Cough Cold",
+      "appointment_start_time": "19:31",
+      "appointment_end_time": "19:34",
+      "appointmentDate": "2021-11-08",
+      "appointment_desc": "Health Issues related to fever",
+      "createdBy": "shamrautt",
+      "createdDate": "2021-11-08T10:59:18.643Z",
+      "patientId": 26,
+      "status": "completed",
+      "id": 1
+    },
+    {
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "mobile_no": 8765432109,
+      "doc_id": 25,
+      "doc_name": "Amar Varma",
+      "appointment_title": "Cough",
+      "appointment_start_time": "19:42",
+      "appointment_end_time": "19:45",
+      "appointmentDate": "2021-11-08",
+      "appointment_desc": "Health Issues",
+      "createdBy": "SwapnaPatil",
+      "createdDate": "2021-11-08T11:09:37.785Z",
+      "patientId": 5,
+      "status": "completed",
+      "id": 2
+    }
+  ],
+  "demographics": [
+    {
+      "fName": "Swapna",
+      "lName": "Patil",
+      "dob": "2021-11-16",
+      "gender": "female",
+      "ethnicity": "NO",
+      "education": "BE",
+      "employment": "CitiusTech",
+      "address": "Pune",
+      "phone_number": 8788464523,
+      "medical_history": "NA",
+      "family_medical_history": "NA",
+      "surgeries": "No",
+      "insurance_provider": "Muthut Finance",
+      "userid": 5,
+      "id": 1
     },
     {
       "fName": "sham",
       "lName": "rautt",
       "dob": "2021-11-02",
-      "mobile_no": 65342425252,
-      "doc_id": 57,
-      "doc_name": "Amar Varma",
-      "appointment_title": "Something",
-      "appointment_start_time": "14:12",
-      "appointment_end_time": "14:17",
-      "appointmentDate": "2021-11-08",
-      "appointment_desc": "Checking..",
-      "createdBy": "shamrautt",
-      "createdDate": "2021-11-08T06:42:54.922Z",
-      "patientId": 58,
-      "status": "completed",
-      "id": 16
-    },
-    {
-      "fName": "suraj",
-      "lName": "gurav",
-      "dob": "2021-05-06",
-      "mobile_no": 9876543213,
-      "doc_id": 57,
-      "doc_name": "Amar Varma",
-      "appointment_title": "Checking",
-      "appointment_start_time": "17:29",
-      "appointment_end_time": "17:32",
-      "appointmentDate": "2021-11-08",
-      "appointment_desc": "Checking ",
-      "createdBy": "surajgurav",
-      "createdDate": "2021-11-08T08:56:37.809Z",
-      "patientId": 61,
-      "status": "approved",
-      "id": 17
-    }
-  ],
-  "demographics": [
-    {
-      "fName": "neeraj",
-      "lName": "thakur",
-      "dob": "2021-11-26",
       "gender": "male",
       "ethnicity": "No",
-      "education": "MCA",
-      "employment": "SE",
-      "address": "Gurgaon",
-      "phone_number": 65768688878,
-      "medical_history": "No",
-      "family_medical_history": "No",
-      "surgeries": "No",
-      "insurance_provider": "No",
-      "userid": 27,
-      "id": 3
-    },
-    {
-      "fName": "Mitashi",
-      "lName": "thakur",
-      "dob": "2021-11-16",
-      "gender": "female",
-      "ethnicity": "No",
-      "education": "No",
-      "employment": "SE",
-      "address": "Haryana",
-      "phone_number": 7547578785,
-      "medical_history": "No",
-      "family_medical_history": "No",
-      "surgeries": "No",
-      "insurance_provider": "No",
-      "userid": 40,
-      "id": 2
-    },
-    {
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-09-30",
-      "gender": "male",
-      "ethnicity": "NA",
-      "education": "MCA",
-      "employment": "CitiusTech",
-      "address": "jnj",
-      "phone_number": 1234567890,
-      "medical_history": "NA",
-      "family_medical_history": "NA",
-      "surgeries": "NA",
-      "insurance_provider": "LIC",
-      "userid": 1,
-      "id": 1
-    },
-    {
-      "fName": "Sanjay",
-      "lName": "Sharma",
-      "dob": "2021-11-25",
-      "gender": "male",
-      "ethnicity": "Pune",
-      "education": "BE",
-      "employment": "Infosys",
-      "address": "Pune",
-      "phone_number": 8788286580,
-      "medical_history": "Cancer",
-      "family_medical_history": "NA",
-      "surgeries": "Applied",
-      "insurance_provider": "Muthut Finance",
-      "userid": 4,
-      "id": 4
-    },
-    {
-      "fName": "Swapna",
-      "lName": "Patil",
-      "dob": "2021-11-08",
-      "gender": "female",
-      "ethnicity": "Pune",
-      "education": "MCom",
+      "education": "MA",
       "employment": "TATA",
       "address": "Pune",
-      "phone_number": 1234567890,
-      "medical_history": "BP",
-      "family_medical_history": "Sugar",
-      "surgeries": "Okay yes",
-      "insurance_provider": "Bank",
-      "userid": 5,
-      "id": 5
-    },
-    {
-      "fName": "deepak",
-      "lName": "Seth",
-      "dob": "2021-11-02",
-      "gender": "male",
-      "ethnicity": "NA",
-      "education": "MCA",
-      "employment": "CitiusTech",
-      "address": "Pune",
-      "phone_number": 8788654321,
-      "medical_history": "BP",
-      "family_medical_history": "NA",
-      "surgeries": "NA",
-      "insurance_provider": "LIC",
-      "userid": 60,
-      "id": 6
-    },
-    {
-      "fName": "suraj",
-      "lName": "gurav",
-      "dob": "2021-05-06",
-      "gender": "male",
-      "ethnicity": "NA",
-      "education": "MCA",
-      "employment": "CitiusTech",
-      "address": "Hydrabad",
-      "phone_number": 8765432189,
-      "medical_history": "BP",
-      "family_medical_history": "NA",
+      "phone_number": 8787865432,
+      "medical_history": "NA",
+      "family_medical_history": "Yes",
       "surgeries": "Applied",
-      "insurance_provider": "Muthut Finance",
-      "userid": 7,
-      "id": 7
+      "insurance_provider": "LIC",
+      "userid": 26,
+      "id": 2
     }
   ],
   "patientvitals": [
     {
-      "height": "5 Feet 4 Inch.",
-      "weight": "77 kg",
-      "blood_pressure": "88",
-      "temperature": "98.5",
-      "pulse": "77",
-      "respiration": "78",
-      "oxigen_saturation": "92",
-      "physicianId": 56,
-      "patientId": "1",
+      "height": "160",
+      "weight": "56",
+      "blood_pressure": "120/80",
+      "temperature": "96",
+      "pulse": "72",
+      "respiration": "23",
+      "oxigen_saturation": "83",
+      "physicianId": 25,
+      "patientId": "26",
       "id": 1
     },
     {
-      "height": "5.5",
-      "weight": "62kg",
-      "blood_pressure": "120",
-      "temperature": "96",
-      "pulse": "89",
-      "respiration": "68",
-      "oxigen_saturation": "67",
-      "physicianId": 57,
-      "patientId": "61",
+      "height": "160",
+      "weight": "56",
+      "blood_pressure": "120/80",
+      "temperature": "97",
+      "pulse": "65",
+      "respiration": "20",
+      "oxigen_saturation": "83",
+      "physicianId": 25,
+      "patientId": "5",
       "id": 2
     }
   ],
@@ -11362,17 +10593,30 @@
   ],
   "patientdietplan": [
     {
-      "earlymorning": "Milk",
-      "breakfast": "asdasdafs",
-      "mid_morning": "uehdjw",
-      "lunch": "iuwei",
-      "evening": "oiuer",
-      "dinner": "nska",
-      "post_dinner_activity": "uyedsd",
-      "bedtime": "nakjsau",
-      "physicianId": 57,
-      "patientId": "58",
-      "id": 1
+      "earlymorning": "Apple",
+      "breakfast": "Eggs",
+      "mid_morning": "No",
+      "lunch": "2 rotis",
+      "evening": "Fruit",
+      "dinner": "Rise only",
+      "post_dinner_activity": "Milk",
+      "bedtime": "No",
+      "physicianId": 25,
+      "patientId": "26",
+      "id": 2
+    },
+    {
+      "earlymorning": "Juice",
+      "breakfast": "Apple",
+      "mid_morning": "No",
+      "lunch": "2 rotis",
+      "evening": "NO need",
+      "dinner": "1 roti",
+      "post_dinner_activity": "no",
+      "bedtime": "Milk",
+      "physicianId": 25,
+      "patientId": "5",
+      "id": 3
     }
   ],
   "patient_procedures": [
@@ -11424,6 +10668,20 @@
       "desc": "Bypass Cerebral Ventricle to Atrium with Autologous Tissue Substitute, Open Approach",
       "code": "16072",
       "id": 7
+    },
+    {
+      "doc_id": 25,
+      "patientId": 26,
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 8
+    },
+    {
+      "doc_id": 25,
+      "patientId": 5,
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 9
     }
   ],
   "patient_diagnosis": [
@@ -11475,6 +10733,20 @@
       "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
       "code": "A001",
       "id": 7
+    },
+    {
+      "doc_id": 25,
+      "patientId": "26",
+      "description": "Cholera, unspecified",
+      "code": "A009",
+      "id": 8
+    },
+    {
+      "doc_id": 25,
+      "patientId": "5",
+      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
+      "code": "A001",
+      "id": 9
     }
   ]
 }

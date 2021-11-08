@@ -97,8 +97,16 @@ const Vitals = (props) => {
     };
     if (available) {
       updatePatientVitals(patientVitals[0].id, payload);
+      props.flashNotification({
+        message: "Patient Vitals Updated Successfully...!",
+        type: "success",
+      });
     } else {
       props.vitals(payload);
+      props.flashNotification({
+        message: "Patient Vitals Added Successfully...!",
+        type: "success",
+      });
     }
   };
 
