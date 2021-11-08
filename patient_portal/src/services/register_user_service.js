@@ -145,8 +145,8 @@ class AdminServices {
     return axios.get(url);
   }
 
-  appointmentsPendingPhysician(physicianId) {
-    const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}&&status=Pending`;
+  appointmentsPendingPhysician(date,physicianId) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&doc_id=${physicianId}&&status=pending`;
     return axios.get(url);
   }
 

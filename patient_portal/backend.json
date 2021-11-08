@@ -475,20 +475,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "first_name": "Sudhir",
-      "last_name": "Koganti",
-      "age_category": "18_44",
-      "vaccine_brand": "sasas",
-      "dose_detail": "1",
-      "general_vaccine": [
-        {
-          "vaccine_name": "asasas",
-          "vaccine_date": "2021-11-05"
-        }
-      ],
-      "id": 32
     }
   ],
   "appointments": [
@@ -502,13 +488,12 @@
       "appointment_title": "cold",
       "appointment_start_time": "20:50",
       "appointment_end_time": "20:53",
-      "appointmentDate": "2021-11-08",
+      "appointmentDate": "2021-11-01",
       "appointment_desc": "Appointments",
       "createdBy": "shivaprasad",
       "createdDate": "2021-10-28T12:20:59.048Z",
       "patientId": 48,
-      "status": "reject",
-      "id": 2
+      "status": "reject"
     },
     {
       "fName": "Nishant",
@@ -520,12 +505,12 @@
       "appointment_title": "title",
       "appointment_start_time": "17:44",
       "appointment_end_time": "19:46",
-      "appointmentDate": "2021-11-07",
+      "appointmentDate": "2021-10-28",
       "appointment_desc": "gyj",
       "createdBy": "NishantChaubey",
       "createdDate": "2021-10-28T08:10:38.149Z",
       "patientId": 48,
-      "status": "completed",
+      "status": "approved",
       "id": 3
     },
     {
@@ -538,12 +523,12 @@
       "appointment_title": "Swapna Patil - Appointment",
       "appointment_start_time": "12:15",
       "appointment_end_time": "13:15",
-      "appointmentDate": "2021-11-07",
+      "appointmentDate": "2021-11-02",
       "appointment_desc": "Swapna Patil - Appointment.",
       "createdBy": "SwapnaPatil",
       "createdDate": "2021-11-02T06:45:48.977Z",
       "patientId": 48,
-      "status": "reject",
+      "status": "approved",
       "id": 4
     },
     {
@@ -597,7 +582,7 @@
       "createdBy": "neerajthakur",
       "createdDate": "2021-11-02T11:07:25.633Z",
       "patientId": 27,
-      "status": "pending",
+      "status": "approved",
       "id": 5
     },
     {
@@ -797,6 +782,60 @@
       "patientId": 1,
       "status": "approved",
       "id": 19
+    },
+    {
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-11-04",
+      "mobile_no": 8801888988,
+      "doc_id": 52,
+      "doc_name": "shiva  prasad",
+      "appointment_title": "Neck pain",
+      "appointment_start_time": "23:05",
+      "appointment_end_time": "23:09",
+      "appointmentDate": "2021-11-07",
+      "appointment_desc": "",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-11-07T15:35:57.178Z",
+      "patientId": 57,
+      "status": "completed",
+      "id": 20
+    },
+    {
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-11-04",
+      "mobile_no": 8801888988,
+      "doc_id": 52,
+      "doc_name": "shiva  prasad",
+      "appointment_title": "Backpain",
+      "appointment_start_time": "11:10",
+      "appointment_end_time": "22:15",
+      "appointmentDate": "2021-11-07",
+      "appointment_desc": "apointment is booked for  backpain",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-11-07T15:41:27.751Z",
+      "patientId": 57,
+      "status": "approved",
+      "id": 21
+    },
+    {
+      "fName": "shiva",
+      "lName": "prasad",
+      "dob": "2021-11-04",
+      "mobile_no": 8801888988,
+      "doc_id": 52,
+      "doc_name": "shiva  prasad",
+      "appointment_title": "leg pain",
+      "appointment_start_time": "13:43",
+      "appointment_end_time": "14:43",
+      "appointmentDate": "2021-11-08",
+      "appointment_desc": "",
+      "createdBy": "shivaprasad",
+      "createdDate": "2021-11-08T18:14:04.169Z",
+      "patientId": 57,
+      "status": "pending",
+      "id": 22
     }
   ],
   "demographics": [
@@ -864,18 +903,6 @@
       "physicianId": 56,
       "patientId": "1",
       "id": 1
-    },
-    {
-      "height": "168",
-      "weight": "64",
-      "blood_pressure": "110/90",
-      "temperature": "97",
-      "pulse": "72",
-      "respiration": "100",
-      "oxigen_saturation": "sdfgdfsg",
-      "physicianId": 32,
-      "patientId": "48",
-      "id": 2
     }
   ],
   "billing": [
@@ -5865,5002 +5892,5002 @@
   "diagnosis": [
     {
       "id": "1",
-      "code": "A00",
+      "code ": "A00",
       "description": "Cholera"
     },
     {
       "id": "2",
-      "code": "A000",
+      "code ": "A000",
       "description": "Cholera due to Vibrio cholerae 01, biovar cholerae"
     },
     {
       "id": "3",
-      "code": "A001",
+      "code ": "A001",
       "description": "Cholera due to Vibrio cholerae 01, biovar eltor"
     },
     {
       "id": "4",
-      "code": "A009",
+      "code ": "A009",
       "description": "Cholera, unspecified"
     },
     {
       "id": "5",
-      "code": "A01",
+      "code ": "A01",
       "description": "Typhoid and paratyphoid fevers"
     },
     {
       "id": "6",
-      "code": "A010",
+      "code ": "A010",
       "description": "Typhoid fever"
     },
     {
       "id": "7",
-      "code": "A0100",
+      "code ": "A0100",
       "description": "Typhoid fever, unspecified"
     },
     {
       "id": "8",
-      "code": "A0101",
+      "code ": "A0101",
       "description": "Typhoid meningitis"
     },
     {
       "id": "9",
-      "code": "A0102",
+      "code ": "A0102",
       "description": "Typhoid fever with heart involvement"
     },
     {
       "id": "10",
-      "code": "A0103",
+      "code ": "A0103",
       "description": "Typhoid pneumonia"
     },
     {
       "id": "11",
-      "code": "A0104",
+      "code ": "A0104",
       "description": "Typhoid arthritis"
     },
     {
       "id": "12",
-      "code": "A0105",
+      "code ": "A0105",
       "description": "Typhoid osteomyelitis"
     },
     {
       "id": "13",
-      "code": "A0109",
+      "code ": "A0109",
       "description": "Typhoid fever with other complications"
     },
     {
       "id": "14",
-      "code": "A011",
+      "code ": "A011",
       "description": "Paratyphoid fever A"
     },
     {
       "id": "15",
-      "code": "A012",
+      "code ": "A012",
       "description": "Paratyphoid fever B"
     },
     {
       "id": "16",
-      "code": "A013",
+      "code ": "A013",
       "description": "Paratyphoid fever C"
     },
     {
       "id": "17",
-      "code": "A014",
+      "code ": "A014",
       "description": "Paratyphoid fever, unspecified"
     },
     {
       "id": "18",
-      "code": "A02",
+      "code ": "A02",
       "description": "Other salmonella infections"
     },
     {
       "id": "19",
-      "code": "A020",
+      "code ": "A020",
       "description": "Salmonella enteritis"
     },
     {
       "id": "20",
-      "code": "A021",
+      "code ": "A021",
       "description": "Salmonella sepsis"
     },
     {
       "id": "21",
-      "code": "A022",
+      "code ": "A022",
       "description": "Localized salmonella infections"
     },
     {
       "id": "22",
-      "code": "A0220",
+      "code ": "A0220",
       "description": "Localized salmonella infection, unspecified"
     },
     {
       "id": "23",
-      "code": "A0221",
+      "code ": "A0221",
       "description": "Salmonella meningitis"
     },
     {
       "id": "24",
-      "code": "A0222",
+      "code ": "A0222",
       "description": "Salmonella pneumonia"
     },
     {
       "id": "25",
-      "code": "A0223",
+      "code ": "A0223",
       "description": "Salmonella arthritis"
     },
     {
       "id": "26",
-      "code": "A0224",
+      "code ": "A0224",
       "description": "Salmonella osteomyelitis"
     },
     {
       "id": "27",
-      "code": "A0225",
+      "code ": "A0225",
       "description": "Salmonella pyelonephritis"
     },
     {
       "id": "28",
-      "code": "A0229",
+      "code ": "A0229",
       "description": "Salmonella with other localized infection"
     },
     {
       "id": "29",
-      "code": "A028",
+      "code ": "A028",
       "description": "Other specified salmonella infections"
     },
     {
       "id": "30",
-      "code": "A029",
+      "code ": "A029",
       "description": "Salmonella infection, unspecified"
     },
     {
       "id": "31",
-      "code": "A03",
+      "code ": "A03",
       "description": "Shigellosis"
     },
     {
       "id": "32",
-      "code": "A030",
+      "code ": "A030",
       "description": "Shigellosis due to Shigella dysenteriae"
     },
     {
       "id": "33",
-      "code": "A031",
+      "code ": "A031",
       "description": "Shigellosis due to Shigella flexneri"
     },
     {
       "id": "34",
-      "code": "A032",
+      "code ": "A032",
       "description": "Shigellosis due to Shigella boydii"
     },
     {
       "id": "35",
-      "code": "A033",
+      "code ": "A033",
       "description": "Shigellosis due to Shigella sonnei"
     },
     {
       "id": "36",
-      "code": "A038",
+      "code ": "A038",
       "description": "Other shigellosis"
     },
     {
       "id": "37",
-      "code": "A039",
+      "code ": "A039",
       "description": "Shigellosis, unspecified"
     },
     {
       "id": "38",
-      "code": "A04",
+      "code ": "A04",
       "description": "Other bacterial intestinal infections"
     },
     {
       "id": "39",
-      "code": "A040",
+      "code ": "A040",
       "description": "Enteropathogenic Escherichia coli infection"
     },
     {
       "id": "40",
-      "code": "A041",
+      "code ": "A041",
       "description": "Enterotoxigenic Escherichia coli infection"
     },
     {
       "id": "41",
-      "code": "A042",
+      "code ": "A042",
       "description": "Enteroinvasive Escherichia coli infection"
     },
     {
       "id": "42",
-      "code": "A043",
+      "code ": "A043",
       "description": "Enterohemorrhagic Escherichia coli infection"
     },
     {
       "id": "43",
-      "code": "A044",
+      "code ": "A044",
       "description": "Other intestinal Escherichia coli infections"
     },
     {
       "id": "44",
-      "code": "A045",
+      "code ": "A045",
       "description": "Campylobacter enteritis"
     },
     {
       "id": "45",
-      "code": "A046",
+      "code ": "A046",
       "description": "Enteritis due to Yersinia enterocolitica"
     },
     {
       "id": "46",
-      "code": "A047",
+      "code ": "A047",
       "description": "Enterocolitis due to Clostridium difficile"
     },
     {
       "id": "47",
-      "code": "A0471",
+      "code ": "A0471",
       "description": "Enterocolitis due to Clostridium difficile, recurrent"
     },
     {
       "id": "48",
-      "code": "A0472",
+      "code ": "A0472",
       "description": "Enterocolitis d/t Clostridium difficile, not spcf as recur"
     },
     {
       "id": "49",
-      "code": "A048",
+      "code ": "A048",
       "description": "Other specified bacterial intestinal infections"
     },
     {
       "id": "50",
-      "code": "A049",
+      "code ": "A049",
       "description": "Bacterial intestinal infection, unspecified"
     },
     {
       "id": "51",
-      "code": "A05",
+      "code ": "A05",
       "description": "Oth bacterial foodborne intoxications, NEC"
     },
     {
       "id": "52",
-      "code": "A050",
+      "code ": "A050",
       "description": "Foodborne staphylococcal intoxication"
     },
     {
       "id": "53",
-      "code": "A051",
+      "code ": "A051",
       "description": "Botulism food poisoning"
     },
     {
       "id": "54",
-      "code": "A052",
+      "code ": "A052",
       "description": "Foodborne Clostridium perfringens intoxication"
     },
     {
       "id": "55",
-      "code": "A053",
+      "code ": "A053",
       "description": "Foodborne Vibrio parahaemolyticus intoxication"
     },
     {
       "id": "56",
-      "code": "A054",
+      "code ": "A054",
       "description": "Foodborne Bacillus cereus intoxication"
     },
     {
       "id": "57",
-      "code": "A055",
+      "code ": "A055",
       "description": "Foodborne Vibrio vulnificus intoxication"
     },
     {
       "id": "58",
-      "code": "A058",
+      "code ": "A058",
       "description": "Other specified bacterial foodborne intoxications"
     },
     {
       "id": "59",
-      "code": "A059",
+      "code ": "A059",
       "description": "Bacterial foodborne intoxication, unspecified"
     },
     {
       "id": "60",
-      "code": "A06",
+      "code ": "A06",
       "description": "Amebiasis"
     },
     {
       "id": "61",
-      "code": "A060",
+      "code ": "A060",
       "description": "Acute amebic dysentery"
     },
     {
       "id": "62",
-      "code": "A061",
+      "code ": "A061",
       "description": "Chronic intestinal amebiasis"
     },
     {
       "id": "63",
-      "code": "A062",
+      "code ": "A062",
       "description": "Amebic nondysenteric colitis"
     },
     {
       "id": "64",
-      "code": "A063",
+      "code ": "A063",
       "description": "Ameboma of intestine"
     },
     {
       "id": "65",
-      "code": "A064",
+      "code ": "A064",
       "description": "Amebic liver abscess"
     },
     {
       "id": "66",
-      "code": "A065",
+      "code ": "A065",
       "description": "Amebic lung abscess"
     },
     {
       "id": "67",
-      "code": "A066",
+      "code ": "A066",
       "description": "Amebic brain abscess"
     },
     {
       "id": "68",
-      "code": "A067",
+      "code ": "A067",
       "description": "Cutaneous amebiasis"
     },
     {
       "id": "69",
-      "code": "A068",
+      "code ": "A068",
       "description": "Amebic infection of other sites"
     },
     {
       "id": "70",
-      "code": "A0681",
+      "code ": "A0681",
       "description": "Amebic cystitis"
     },
     {
       "id": "71",
-      "code": "A0682",
+      "code ": "A0682",
       "description": "Other amebic genitourinary infections"
     },
     {
       "id": "72",
-      "code": "A0689",
+      "code ": "A0689",
       "description": "Other amebic infections"
     },
     {
       "id": "73",
-      "code": "A069",
+      "code ": "A069",
       "description": "Amebiasis, unspecified"
     },
     {
       "id": "74",
-      "code": "A07",
+      "code ": "A07",
       "description": "Other protozoal intestinal diseases"
     },
     {
       "id": "75",
-      "code": "A070",
+      "code ": "A070",
       "description": "Balantidiasis"
     },
     {
       "id": "76",
-      "code": "A071",
+      "code ": "A071",
       "description": "Giardiasis [lambliasis]"
     },
     {
       "id": "77",
-      "code": "A072",
+      "code ": "A072",
       "description": "Cryptosporidiosis"
     },
     {
       "id": "78",
-      "code": "A073",
+      "code ": "A073",
       "description": "Isosporiasis"
     },
     {
       "id": "79",
-      "code": "A074",
+      "code ": "A074",
       "description": "Cyclosporiasis"
     },
     {
       "id": "80",
-      "code": "A078",
+      "code ": "A078",
       "description": "Other specified protozoal intestinal diseases"
     },
     {
       "id": "81",
-      "code": "A079",
+      "code ": "A079",
       "description": "Protozoal intestinal disease, unspecified"
     },
     {
       "id": "82",
-      "code": "A08",
+      "code ": "A08",
       "description": "Viral and other specified intestinal infections"
     },
     {
       "id": "83",
-      "code": "A080",
+      "code ": "A080",
       "description": "Rotaviral enteritis"
     },
     {
       "id": "84",
-      "code": "A081",
+      "code ": "A081",
       "description": "Acute gastrent d/t Norwalk agent and oth small round viruses"
     },
     {
       "id": "85",
-      "code": "A0811",
+      "code ": "A0811",
       "description": "Acute gastroenteropathy due to Norwalk agent"
     },
     {
       "id": "86",
-      "code": "A0819",
+      "code ": "A0819",
       "description": "Acute gastroenteropathy due to other small round viruses"
     },
     {
       "id": "87",
-      "code": "A082",
+      "code ": "A082",
       "description": "Adenoviral enteritis"
     },
     {
       "id": "88",
-      "code": "A083",
+      "code ": "A083",
       "description": "Other viral enteritis"
     },
     {
       "id": "89",
-      "code": "A0831",
+      "code ": "A0831",
       "description": "Calicivirus enteritis"
     },
     {
       "id": "90",
-      "code": "A0832",
+      "code ": "A0832",
       "description": "Astrovirus enteritis"
     },
     {
       "id": "91",
-      "code": "A0839",
+      "code ": "A0839",
       "description": "Other viral enteritis"
     },
     {
       "id": "92",
-      "code": "A084",
+      "code ": "A084",
       "description": "Viral intestinal infection, unspecified"
     },
     {
       "id": "93",
-      "code": "A088",
+      "code ": "A088",
       "description": "Other specified intestinal infections"
     },
     {
       "id": "94",
-      "code": "A09",
+      "code ": "A09",
       "description": "Infectious gastroenteritis and colitis, unspecified"
     },
     {
       "id": "95",
-      "code": "A15",
+      "code ": "A15",
       "description": "Respiratory tuberculosis"
     },
     {
       "id": "96",
-      "code": "A150",
+      "code ": "A150",
       "description": "Tuberculosis of lung"
     },
     {
       "id": "97",
-      "code": "A154",
+      "code ": "A154",
       "description": "Tuberculosis of intrathoracic lymph nodes"
     },
     {
       "id": "98",
-      "code": "A155",
+      "code ": "A155",
       "description": "Tuberculosis of larynx, trachea and bronchus"
     },
     {
       "id": "99",
-      "code": "A156",
+      "code ": "A156",
       "description": "Tuberculous pleurisy"
     },
     {
       "id": "100",
-      "code": "A157",
+      "code ": "A157",
       "description": "Primary respiratory tuberculosis"
     },
     {
       "id": "101",
-      "code": "A158",
+      "code ": "A158",
       "description": "Other respiratory tuberculosis"
     },
     {
       "id": "102",
-      "code": "A159",
+      "code ": "A159",
       "description": "Respiratory tuberculosis unspecified"
     },
     {
       "id": "103",
-      "code": "A17",
+      "code ": "A17",
       "description": "Tuberculosis of nervous system"
     },
     {
       "id": "104",
-      "code": "A170",
+      "code ": "A170",
       "description": "Tuberculous meningitis"
     },
     {
       "id": "105",
-      "code": "A171",
+      "code ": "A171",
       "description": "Meningeal tuberculoma"
     },
     {
       "id": "106",
-      "code": "A178",
+      "code ": "A178",
       "description": "Other tuberculosis of nervous system"
     },
     {
       "id": "107",
-      "code": "A1781",
+      "code ": "A1781",
       "description": "Tuberculoma of brain and spinal cord"
     },
     {
       "id": "108",
-      "code": "A1782",
+      "code ": "A1782",
       "description": "Tuberculous meningoencephalitis"
     },
     {
       "id": "109",
-      "code": "A1783",
+      "code ": "A1783",
       "description": "Tuberculous neuritis"
     },
     {
       "id": "110",
-      "code": "A1789",
+      "code ": "A1789",
       "description": "Other tuberculosis of nervous system"
     },
     {
       "id": "111",
-      "code": "A179",
+      "code ": "A179",
       "description": "Tuberculosis of nervous system, unspecified"
     },
     {
       "id": "112",
-      "code": "A18",
+      "code ": "A18",
       "description": "Tuberculosis of other organs"
     },
     {
       "id": "113",
-      "code": "A180",
+      "code ": "A180",
       "description": "Tuberculosis of bones and joints"
     },
     {
       "id": "114",
-      "code": "A1801",
+      "code ": "A1801",
       "description": "Tuberculosis of spine"
     },
     {
       "id": "115",
-      "code": "A1802",
+      "code ": "A1802",
       "description": "Tuberculous arthritis of other joints"
     },
     {
       "id": "116",
-      "code": "A1803",
+      "code ": "A1803",
       "description": "Tuberculosis of other bones"
     },
     {
       "id": "117",
-      "code": "A1809",
+      "code ": "A1809",
       "description": "Other musculoskeletal tuberculosis"
     },
     {
       "id": "118",
-      "code": "A181",
+      "code ": "A181",
       "description": "Tuberculosis of genitourinary system"
     },
     {
       "id": "119",
-      "code": "A1810",
+      "code ": "A1810",
       "description": "Tuberculosis of genitourinary system, unspecified"
     },
     {
       "id": "120",
-      "code": "A1811",
+      "code ": "A1811",
       "description": "Tuberculosis of kidney and ureter"
     },
     {
       "id": "121",
-      "code": "A1812",
+      "code ": "A1812",
       "description": "Tuberculosis of bladder"
     },
     {
       "id": "122",
-      "code": "A1813",
+      "code ": "A1813",
       "description": "Tuberculosis of other urinary organs"
     },
     {
       "id": "123",
-      "code": "A1814",
+      "code ": "A1814",
       "description": "Tuberculosis of prostate"
     },
     {
       "id": "124",
-      "code": "A1815",
+      "code ": "A1815",
       "description": "Tuberculosis of other male genital organs"
     },
     {
       "id": "125",
-      "code": "A1816",
+      "code ": "A1816",
       "description": "Tuberculosis of cervix"
     },
     {
       "id": "126",
-      "code": "A1817",
+      "code ": "A1817",
       "description": "Tuberculous female pelvic inflammatory disease"
     },
     {
       "id": "127",
-      "code": "A1818",
+      "code ": "A1818",
       "description": "Tuberculosis of other female genital organs"
     },
     {
       "id": "128",
-      "code": "A182",
+      "code ": "A182",
       "description": "Tuberculous peripheral lymphadenopathy"
     },
     {
       "id": "129",
-      "code": "A183",
+      "code ": "A183",
       "description": "Tuberculosis of intestines, peritoneum and mesenteric glands"
     },
     {
       "id": "130",
-      "code": "A1831",
+      "code ": "A1831",
       "description": "Tuberculous peritonitis"
     },
     {
       "id": "131",
-      "code": "A1832",
+      "code ": "A1832",
       "description": "Tuberculous enteritis"
     },
     {
       "id": "132",
-      "code": "A1839",
+      "code ": "A1839",
       "description": "Retroperitoneal tuberculosis"
     },
     {
       "id": "133",
-      "code": "A184",
+      "code ": "A184",
       "description": "Tuberculosis of skin and subcutaneous tissue"
     },
     {
       "id": "134",
-      "code": "A185",
+      "code ": "A185",
       "description": "Tuberculosis of eye"
     },
     {
       "id": "135",
-      "code": "A1850",
+      "code ": "A1850",
       "description": "Tuberculosis of eye, unspecified"
     },
     {
       "id": "136",
-      "code": "A1851",
+      "code ": "A1851",
       "description": "Tuberculous episcleritis"
     },
     {
       "id": "137",
-      "code": "A1852",
+      "code ": "A1852",
       "description": "Tuberculous keratitis"
     },
     {
       "id": "138",
-      "code": "A1853",
+      "code ": "A1853",
       "description": "Tuberculous chorioretinitis"
     },
     {
       "id": "139",
-      "code": "A1854",
+      "code ": "A1854",
       "description": "Tuberculous iridocyclitis"
     },
     {
       "id": "140",
-      "code": "A1859",
+      "code ": "A1859",
       "description": "Other tuberculosis of eye"
     },
     {
       "id": "141",
-      "code": "A186",
+      "code ": "A186",
       "description": "Tuberculosis of (inner) (middle) ear"
     },
     {
       "id": "142",
-      "code": "A187",
+      "code ": "A187",
       "description": "Tuberculosis of adrenal glands"
     },
     {
       "id": "143",
-      "code": "A188",
+      "code ": "A188",
       "description": "Tuberculosis of other specified organs"
     },
     {
       "id": "144",
-      "code": "A1881",
+      "code ": "A1881",
       "description": "Tuberculosis of thyroid gland"
     },
     {
       "id": "145",
-      "code": "A1882",
+      "code ": "A1882",
       "description": "Tuberculosis of other endocrine glands"
     },
     {
       "id": "146",
-      "code": "A1883",
+      "code ": "A1883",
       "description": "Tuberculosis of digestive tract organs, NEC"
     },
     {
       "id": "147",
-      "code": "A1884",
+      "code ": "A1884",
       "description": "Tuberculosis of heart"
     },
     {
       "id": "148",
-      "code": "A1885",
+      "code ": "A1885",
       "description": "Tuberculosis of spleen"
     },
     {
       "id": "149",
-      "code": "A1889",
+      "code ": "A1889",
       "description": "Tuberculosis of other sites"
     },
     {
       "id": "150",
-      "code": "A19",
+      "code ": "A19",
       "description": "Miliary tuberculosis"
     },
     {
       "id": "151",
-      "code": "A190",
+      "code ": "A190",
       "description": "Acute miliary tuberculosis of a single specified site"
     },
     {
       "id": "152",
-      "code": "A191",
+      "code ": "A191",
       "description": "Acute miliary tuberculosis of multiple sites"
     },
     {
       "id": "153",
-      "code": "A192",
+      "code ": "A192",
       "description": "Acute miliary tuberculosis, unspecified"
     },
     {
       "id": "154",
-      "code": "A198",
+      "code ": "A198",
       "description": "Other miliary tuberculosis"
     },
     {
       "id": "155",
-      "code": "A199",
+      "code ": "A199",
       "description": "Miliary tuberculosis, unspecified"
     },
     {
       "id": "156",
-      "code": "A20",
+      "code ": "A20",
       "description": "Plague"
     },
     {
       "id": "157",
-      "code": "A200",
+      "code ": "A200",
       "description": "Bubonic plague"
     },
     {
       "id": "158",
-      "code": "A201",
+      "code ": "A201",
       "description": "Cellulocutaneous plague"
     },
     {
       "id": "159",
-      "code": "A202",
+      "code ": "A202",
       "description": "Pneumonic plague"
     },
     {
       "id": "160",
-      "code": "A203",
+      "code ": "A203",
       "description": "Plague meningitis"
     },
     {
       "id": "161",
-      "code": "A207",
+      "code ": "A207",
       "description": "Septicemic plague"
     },
     {
       "id": "162",
-      "code": "A208",
+      "code ": "A208",
       "description": "Other forms of plague"
     },
     {
       "id": "163",
-      "code": "A209",
+      "code ": "A209",
       "description": "Plague, unspecified"
     },
     {
       "id": "164",
-      "code": "A21",
+      "code ": "A21",
       "description": "Tularemia"
     },
     {
       "id": "165",
-      "code": "A210",
+      "code ": "A210",
       "description": "Ulceroglandular tularemia"
     },
     {
       "id": "166",
-      "code": "A211",
+      "code ": "A211",
       "description": "Oculoglandular tularemia"
     },
     {
       "id": "167",
-      "code": "A212",
+      "code ": "A212",
       "description": "Pulmonary tularemia"
     },
     {
       "id": "168",
-      "code": "A213",
+      "code ": "A213",
       "description": "Gastrointestinal tularemia"
     },
     {
       "id": "169",
-      "code": "A217",
+      "code ": "A217",
       "description": "Generalized tularemia"
     },
     {
       "id": "170",
-      "code": "A218",
+      "code ": "A218",
       "description": "Other forms of tularemia"
     },
     {
       "id": "171",
-      "code": "A219",
+      "code ": "A219",
       "description": "Tularemia, unspecified"
     },
     {
       "id": "172",
-      "code": "A22",
+      "code ": "A22",
       "description": "Anthrax"
     },
     {
       "id": "173",
-      "code": "A220",
+      "code ": "A220",
       "description": "Cutaneous anthrax"
     },
     {
       "id": "174",
-      "code": "A221",
+      "code ": "A221",
       "description": "Pulmonary anthrax"
     },
     {
       "id": "175",
-      "code": "A222",
+      "code ": "A222",
       "description": "Gastrointestinal anthrax"
     },
     {
       "id": "176",
-      "code": "A227",
+      "code ": "A227",
       "description": "Anthrax sepsis"
     },
     {
       "id": "177",
-      "code": "A228",
+      "code ": "A228",
       "description": "Other forms of anthrax"
     },
     {
       "id": "178",
-      "code": "A229",
+      "code ": "A229",
       "description": "Anthrax, unspecified"
     },
     {
       "id": "179",
-      "code": "A23",
+      "code ": "A23",
       "description": "Brucellosis"
     },
     {
       "id": "180",
-      "code": "A230",
+      "code ": "A230",
       "description": "Brucellosis due to Brucella melitensis"
     },
     {
       "id": "181",
-      "code": "A231",
+      "code ": "A231",
       "description": "Brucellosis due to Brucella abortus"
     },
     {
       "id": "182",
-      "code": "A232",
+      "code ": "A232",
       "description": "Brucellosis due to Brucella suis"
     },
     {
       "id": "183",
-      "code": "A233",
+      "code ": "A233",
       "description": "Brucellosis due to Brucella canis"
     },
     {
       "id": "184",
-      "code": "A238",
+      "code ": "A238",
       "description": "Other brucellosis"
     },
     {
       "id": "185",
-      "code": "A239",
+      "code ": "A239",
       "description": "Brucellosis, unspecified"
     },
     {
       "id": "186",
-      "code": "A24",
+      "code ": "A24",
       "description": "Glanders and melioidosis"
     },
     {
       "id": "187",
-      "code": "A240",
+      "code ": "A240",
       "description": "Glanders"
     },
     {
       "id": "188",
-      "code": "A241",
+      "code ": "A241",
       "description": "Acute and fulminating melioidosis"
     },
     {
       "id": "189",
-      "code": "A242",
+      "code ": "A242",
       "description": "Subacute and chronic melioidosis"
     },
     {
       "id": "190",
-      "code": "A243",
+      "code ": "A243",
       "description": "Other melioidosis"
     },
     {
       "id": "191",
-      "code": "A249",
+      "code ": "A249",
       "description": "Melioidosis, unspecified"
     },
     {
       "id": "192",
-      "code": "A25",
+      "code ": "A25",
       "description": "Rat-bite fevers"
     },
     {
       "id": "193",
-      "code": "A250",
+      "code ": "A250",
       "description": "Spirillosis"
     },
     {
       "id": "194",
-      "code": "A251",
+      "code ": "A251",
       "description": "Streptobacillosis"
     },
     {
       "id": "195",
-      "code": "A259",
+      "code ": "A259",
       "description": "Rat-bite fever, unspecified"
     },
     {
       "id": "196",
-      "code": "A26",
+      "code ": "A26",
       "description": "Erysipeloid"
     },
     {
       "id": "197",
-      "code": "A260",
+      "code ": "A260",
       "description": "Cutaneous erysipeloid"
     },
     {
       "id": "198",
-      "code": "A267",
+      "code ": "A267",
       "description": "Erysipelothrix sepsis"
     },
     {
       "id": "199",
-      "code": "A268",
+      "code ": "A268",
       "description": "Other forms of erysipeloid"
     },
     {
       "id": "200",
-      "code": "A269",
+      "code ": "A269",
       "description": "Erysipeloid, unspecified"
     },
     {
       "id": "201",
-      "code": "A27",
+      "code ": "A27",
       "description": "Leptospirosis"
     },
     {
       "id": "202",
-      "code": "A270",
+      "code ": "A270",
       "description": "Leptospirosis icterohemorrhagica"
     },
     {
       "id": "203",
-      "code": "A278",
+      "code ": "A278",
       "description": "Other forms of leptospirosis"
     },
     {
       "id": "204",
-      "code": "A2781",
+      "code ": "A2781",
       "description": "Aseptic meningitis in leptospirosis"
     },
     {
       "id": "205",
-      "code": "A2789",
+      "code ": "A2789",
       "description": "Other forms of leptospirosis"
     },
     {
       "id": "206",
-      "code": "A279",
+      "code ": "A279",
       "description": "Leptospirosis, unspecified"
     },
     {
       "id": "207",
-      "code": "A28",
+      "code ": "A28",
       "description": "Other zoonotic bacterial diseases, not elsewhere classified"
     },
     {
       "id": "208",
-      "code": "A280",
+      "code ": "A280",
       "description": "Pasteurellosis"
     },
     {
       "id": "209",
-      "code": "A281",
+      "code ": "A281",
       "description": "Cat-scratch disease"
     },
     {
       "id": "210",
-      "code": "A282",
+      "code ": "A282",
       "description": "Extraintestinal yersiniosis"
     },
     {
       "id": "211",
-      "code": "A288",
+      "code ": "A288",
       "description": "Oth zoonotic bacterial diseases, not elsewhere classified"
     },
     {
       "id": "212",
-      "code": "A289",
+      "code ": "A289",
       "description": "Zoonotic bacterial disease, unspecified"
     },
     {
       "id": "213",
-      "code": "A30",
+      "code ": "A30",
       "description": "Leprosy [Hansen's disease]"
     },
     {
       "id": "214",
-      "code": "A300",
+      "code ": "A300",
       "description": "Indeterminate leprosy"
     },
     {
       "id": "215",
-      "code": "A301",
+      "code ": "A301",
       "description": "Tuberculoid leprosy"
     },
     {
       "id": "216",
-      "code": "A302",
+      "code ": "A302",
       "description": "Borderline tuberculoid leprosy"
     },
     {
       "id": "217",
-      "code": "A303",
+      "code ": "A303",
       "description": "Borderline leprosy"
     },
     {
       "id": "218",
-      "code": "A304",
+      "code ": "A304",
       "description": "Borderline lepromatous leprosy"
     },
     {
       "id": "219",
-      "code": "A305",
+      "code ": "A305",
       "description": "Lepromatous leprosy"
     },
     {
       "id": "220",
-      "code": "A308",
+      "code ": "A308",
       "description": "Other forms of leprosy"
     },
     {
       "id": "221",
-      "code": "A309",
+      "code ": "A309",
       "description": "Leprosy, unspecified"
     },
     {
       "id": "222",
-      "code": "A31",
+      "code ": "A31",
       "description": "Infection due to other mycobacteria"
     },
     {
       "id": "223",
-      "code": "A310",
+      "code ": "A310",
       "description": "Pulmonary mycobacterial infection"
     },
     {
       "id": "224",
-      "code": "A311",
+      "code ": "A311",
       "description": "Cutaneous mycobacterial infection"
     },
     {
       "id": "225",
-      "code": "A312",
+      "code ": "A312",
       "description": "Dissem mycobacterium avium-intracellulare complex (DMAC)"
     },
     {
       "id": "226",
-      "code": "A318",
+      "code ": "A318",
       "description": "Other mycobacterial infections"
     },
     {
       "id": "227",
-      "code": "A319",
+      "code ": "A319",
       "description": "Mycobacterial infection, unspecified"
     },
     {
       "id": "228",
-      "code": "A32",
+      "code ": "A32",
       "description": "Listeriosis"
     },
     {
       "id": "229",
-      "code": "A320",
+      "code ": "A320",
       "description": "Cutaneous listeriosis"
     },
     {
       "id": "230",
-      "code": "A321",
+      "code ": "A321",
       "description": "Listerial meningitis and meningoencephalitis"
     },
     {
       "id": "231",
-      "code": "A3211",
+      "code ": "A3211",
       "description": "Listerial meningitis"
     },
     {
       "id": "232",
-      "code": "A3212",
+      "code ": "A3212",
       "description": "Listerial meningoencephalitis"
     },
     {
       "id": "233",
-      "code": "A327",
+      "code ": "A327",
       "description": "Listerial sepsis"
     },
     {
       "id": "234",
-      "code": "A328",
+      "code ": "A328",
       "description": "Other forms of listeriosis"
     },
     {
       "id": "235",
-      "code": "A3281",
+      "code ": "A3281",
       "description": "Oculoglandular listeriosis"
     },
     {
       "id": "236",
-      "code": "A3282",
+      "code ": "A3282",
       "description": "Listerial endocarditis"
     },
     {
       "id": "237",
-      "code": "A3289",
+      "code ": "A3289",
       "description": "Other forms of listeriosis"
     },
     {
       "id": "238",
-      "code": "A329",
+      "code ": "A329",
       "description": "Listeriosis, unspecified"
     },
     {
       "id": "239",
-      "code": "A33",
+      "code ": "A33",
       "description": "Tetanus neonatorum"
     },
     {
       "id": "240",
-      "code": "A34",
+      "code ": "A34",
       "description": "Obstetrical tetanus"
     },
     {
       "id": "241",
-      "code": "A35",
+      "code ": "A35",
       "description": "Other tetanus"
     },
     {
       "id": "242",
-      "code": "A36",
+      "code ": "A36",
       "description": "Diphtheria"
     },
     {
       "id": "243",
-      "code": "A360",
+      "code ": "A360",
       "description": "Pharyngeal diphtheria"
     },
     {
       "id": "244",
-      "code": "A361",
+      "code ": "A361",
       "description": "Nasopharyngeal diphtheria"
     },
     {
       "id": "245",
-      "code": "A362",
+      "code ": "A362",
       "description": "Laryngeal diphtheria"
     },
     {
       "id": "246",
-      "code": "A363",
+      "code ": "A363",
       "description": "Cutaneous diphtheria"
     },
     {
       "id": "247",
-      "code": "A368",
+      "code ": "A368",
       "description": "Other diphtheria"
     },
     {
       "id": "248",
-      "code": "A3681",
+      "code ": "A3681",
       "description": "Diphtheritic cardiomyopathy"
     },
     {
       "id": "249",
-      "code": "A3682",
+      "code ": "A3682",
       "description": "Diphtheritic radiculomyelitis"
     },
     {
       "id": "250",
-      "code": "A3683",
+      "code ": "A3683",
       "description": "Diphtheritic polyneuritis"
     },
     {
       "id": "251",
-      "code": "A3684",
+      "code ": "A3684",
       "description": "Diphtheritic tubulo-interstitial nephropathy"
     },
     {
       "id": "252",
-      "code": "A3685",
+      "code ": "A3685",
       "description": "Diphtheritic cystitis"
     },
     {
       "id": "253",
-      "code": "A3686",
+      "code ": "A3686",
       "description": "Diphtheritic conjunctivitis"
     },
     {
       "id": "254",
-      "code": "A3689",
+      "code ": "A3689",
       "description": "Other diphtheritic complications"
     },
     {
       "id": "255",
-      "code": "A369",
+      "code ": "A369",
       "description": "Diphtheria, unspecified"
     },
     {
       "id": "256",
-      "code": "A37",
+      "code ": "A37",
       "description": "Whooping cough"
     },
     {
       "id": "257",
-      "code": "A370",
+      "code ": "A370",
       "description": "Whooping cough due to Bordetella pertussis"
     },
     {
       "id": "258",
-      "code": "A3700",
+      "code ": "A3700",
       "description": "Whooping cough due to Bordetella pertussis without pneumonia"
     },
     {
       "id": "259",
-      "code": "A3701",
+      "code ": "A3701",
       "description": "Whooping cough due to Bordetella pertussis with pneumonia"
     },
     {
       "id": "260",
-      "code": "A371",
+      "code ": "A371",
       "description": "Whooping cough due to Bordetella parapertussis"
     },
     {
       "id": "261",
-      "code": "A3710",
+      "code ": "A3710",
       "description": "Whooping cough due to Bordetella parapertussis w/o pneumonia"
     },
     {
       "id": "262",
-      "code": "A3711",
+      "code ": "A3711",
       "description": "Whooping cough due to Bordetella parapertussis w pneumonia"
     },
     {
       "id": "263",
-      "code": "A378",
+      "code ": "A378",
       "description": "Whooping cough due to other Bordetella species"
     },
     {
       "id": "264",
-      "code": "A3780",
+      "code ": "A3780",
       "description": "Whooping cough due to other Bordetella species w/o pneumonia"
     },
     {
       "id": "265",
-      "code": "A3781",
+      "code ": "A3781",
       "description": "Whooping cough due to oth Bordetella species with pneumonia"
     },
     {
       "id": "266",
-      "code": "A379",
+      "code ": "A379",
       "description": "Whooping cough, unspecified species"
     },
     {
       "id": "267",
-      "code": "A3790",
+      "code ": "A3790",
       "description": "Whooping cough, unspecified species without pneumonia"
     },
     {
       "id": "268",
-      "code": "A3791",
+      "code ": "A3791",
       "description": "Whooping cough, unspecified species with pneumonia"
     },
     {
       "id": "269",
-      "code": "A38",
+      "code ": "A38",
       "description": "Scarlet fever"
     },
     {
       "id": "270",
-      "code": "A380",
+      "code ": "A380",
       "description": "Scarlet fever with otitis media"
     },
     {
       "id": "271",
-      "code": "A381",
+      "code ": "A381",
       "description": "Scarlet fever with myocarditis"
     },
     {
       "id": "272",
-      "code": "A388",
+      "code ": "A388",
       "description": "Scarlet fever with other complications"
     },
     {
       "id": "273",
-      "code": "A389",
+      "code ": "A389",
       "description": "Scarlet fever, uncomplicated"
     },
     {
       "id": "274",
-      "code": "A39",
+      "code ": "A39",
       "description": "Meningococcal infection"
     },
     {
       "id": "275",
-      "code": "A390",
+      "code ": "A390",
       "description": "Meningococcal meningitis"
     },
     {
       "id": "276",
-      "code": "A391",
+      "code ": "A391",
       "description": "Waterhouse-Friderichsen syndrome"
     },
     {
       "id": "277",
-      "code": "A392",
+      "code ": "A392",
       "description": "Acute meningococcemia"
     },
     {
       "id": "278",
-      "code": "A393",
+      "code ": "A393",
       "description": "Chronic meningococcemia"
     },
     {
       "id": "279",
-      "code": "A394",
+      "code ": "A394",
       "description": "Meningococcemia, unspecified"
     },
     {
       "id": "280",
-      "code": "A395",
+      "code ": "A395",
       "description": "Meningococcal heart disease"
     },
     {
       "id": "281",
-      "code": "A3950",
+      "code ": "A3950",
       "description": "Meningococcal carditis, unspecified"
     },
     {
       "id": "282",
-      "code": "A3951",
+      "code ": "A3951",
       "description": "Meningococcal endocarditis"
     },
     {
       "id": "283",
-      "code": "A3952",
+      "code ": "A3952",
       "description": "Meningococcal myocarditis"
     },
     {
       "id": "284",
-      "code": "A3953",
+      "code ": "A3953",
       "description": "Meningococcal pericarditis"
     },
     {
       "id": "285",
-      "code": "A398",
+      "code ": "A398",
       "description": "Other meningococcal infections"
     },
     {
       "id": "286",
-      "code": "A3981",
+      "code ": "A3981",
       "description": "Meningococcal encephalitis"
     },
     {
       "id": "287",
-      "code": "A3982",
+      "code ": "A3982",
       "description": "Meningococcal retrobulbar neuritis"
     },
     {
       "id": "288",
-      "code": "A3983",
+      "code ": "A3983",
       "description": "Meningococcal arthritis"
     },
     {
       "id": "289",
-      "code": "A3984",
+      "code ": "A3984",
       "description": "Postmeningococcal arthritis"
     },
     {
       "id": "290",
-      "code": "A3989",
+      "code ": "A3989",
       "description": "Other meningococcal infections"
     },
     {
       "id": "291",
-      "code": "A399",
+      "code ": "A399",
       "description": "Meningococcal infection, unspecified"
     },
     {
       "id": "292",
-      "code": "A40",
+      "code ": "A40",
       "description": "Streptococcal sepsis"
     },
     {
       "id": "293",
-      "code": "A400",
+      "code ": "A400",
       "description": "Sepsis due to streptococcus, group A"
     },
     {
       "id": "294",
-      "code": "A401",
+      "code ": "A401",
       "description": "Sepsis due to streptococcus, group B"
     },
     {
       "id": "295",
-      "code": "A403",
+      "code ": "A403",
       "description": "Sepsis due to Streptococcus pneumoniae"
     },
     {
       "id": "296",
-      "code": "A408",
+      "code ": "A408",
       "description": "Other streptococcal sepsis"
     },
     {
       "id": "297",
-      "code": "A409",
+      "code ": "A409",
       "description": "Streptococcal sepsis, unspecified"
     },
     {
       "id": "298",
-      "code": "A41",
+      "code ": "A41",
       "description": "Other sepsis"
     },
     {
       "id": "299",
-      "code": "A410",
+      "code ": "A410",
       "description": "Sepsis due to Staphylococcus aureus"
     },
     {
       "id": "300",
-      "code": "A4101",
+      "code ": "A4101",
       "description": "Sepsis due to Methicillin susceptible Staphylococcus aureus"
     },
     {
       "id": "301",
-      "code": "A4102",
+      "code ": "A4102",
       "description": "Sepsis due to Methicillin resistant Staphylococcus aureus"
     },
     {
       "id": "302",
-      "code": "A411",
+      "code ": "A411",
       "description": "Sepsis due to other specified staphylococcus"
     },
     {
       "id": "303",
-      "code": "A412",
+      "code ": "A412",
       "description": "Sepsis due to unspecified staphylococcus"
     },
     {
       "id": "304",
-      "code": "A413",
+      "code ": "A413",
       "description": "Sepsis due to Hemophilus influenzae"
     },
     {
       "id": "305",
-      "code": "A414",
+      "code ": "A414",
       "description": "Sepsis due to anaerobes"
     },
     {
       "id": "306",
-      "code": "A415",
+      "code ": "A415",
       "description": "Sepsis due to other Gram-negative organisms"
     },
     {
       "id": "307",
-      "code": "A4150",
+      "code ": "A4150",
       "description": "Gram-negative sepsis, unspecified"
     },
     {
       "id": "308",
-      "code": "A4151",
+      "code ": "A4151",
       "description": "Sepsis due to Escherichia coli [E. coli]"
     },
     {
       "id": "309",
-      "code": "A4152",
+      "code ": "A4152",
       "description": "Sepsis due to Pseudomonas"
     },
     {
       "id": "310",
-      "code": "A4153",
+      "code ": "A4153",
       "description": "Sepsis due to Serratia"
     },
     {
       "id": "311",
-      "code": "A4159",
+      "code ": "A4159",
       "description": "Other Gram-negative sepsis"
     },
     {
       "id": "312",
-      "code": "A418",
+      "code ": "A418",
       "description": "Other specified sepsis"
     },
     {
       "id": "313",
-      "code": "A4181",
+      "code ": "A4181",
       "description": "Sepsis due to Enterococcus"
     },
     {
       "id": "314",
-      "code": "A4189",
+      "code ": "A4189",
       "description": "Other specified sepsis"
     },
     {
       "id": "315",
-      "code": "A419",
+      "code ": "A419",
       "description": "Sepsis, unspecified organism"
     },
     {
       "id": "316",
-      "code": "A42",
+      "code ": "A42",
       "description": "Actinomycosis"
     },
     {
       "id": "317",
-      "code": "A420",
+      "code ": "A420",
       "description": "Pulmonary actinomycosis"
     },
     {
       "id": "318",
-      "code": "A421",
+      "code ": "A421",
       "description": "Abdominal actinomycosis"
     },
     {
       "id": "319",
-      "code": "A422",
+      "code ": "A422",
       "description": "Cervicofacial actinomycosis"
     },
     {
       "id": "320",
-      "code": "A427",
+      "code ": "A427",
       "description": "Actinomycotic sepsis"
     },
     {
       "id": "321",
-      "code": "A428",
+      "code ": "A428",
       "description": "Other forms of actinomycosis"
     },
     {
       "id": "322",
-      "code": "A4281",
+      "code ": "A4281",
       "description": "Actinomycotic meningitis"
     },
     {
       "id": "323",
-      "code": "A4282",
+      "code ": "A4282",
       "description": "Actinomycotic encephalitis"
     },
     {
       "id": "324",
-      "code": "A4289",
+      "code ": "A4289",
       "description": "Other forms of actinomycosis"
     },
     {
       "id": "325",
-      "code": "A429",
+      "code ": "A429",
       "description": "Actinomycosis, unspecified"
     },
     {
       "id": "326",
-      "code": "A43",
+      "code ": "A43",
       "description": "Nocardiosis"
     },
     {
       "id": "327",
-      "code": "A430",
+      "code ": "A430",
       "description": "Pulmonary nocardiosis"
     },
     {
       "id": "328",
-      "code": "A431",
+      "code ": "A431",
       "description": "Cutaneous nocardiosis"
     },
     {
       "id": "329",
-      "code": "A438",
+      "code ": "A438",
       "description": "Other forms of nocardiosis"
     },
     {
       "id": "330",
-      "code": "A439",
+      "code ": "A439",
       "description": "Nocardiosis, unspecified"
     },
     {
       "id": "331",
-      "code": "A44",
+      "code ": "A44",
       "description": "Bartonellosis"
     },
     {
       "id": "332",
-      "code": "A440",
+      "code ": "A440",
       "description": "Systemic bartonellosis"
     },
     {
       "id": "333",
-      "code": "A441",
+      "code ": "A441",
       "description": "Cutaneous and mucocutaneous bartonellosis"
     },
     {
       "id": "334",
-      "code": "A448",
+      "code ": "A448",
       "description": "Other forms of bartonellosis"
     },
     {
       "id": "335",
-      "code": "A449",
+      "code ": "A449",
       "description": "Bartonellosis, unspecified"
     },
     {
       "id": "336",
-      "code": "A46",
+      "code ": "A46",
       "description": "Erysipelas"
     },
     {
       "id": "337",
-      "code": "A48",
+      "code ": "A48",
       "description": "Other bacterial diseases, not elsewhere classified"
     },
     {
       "id": "338",
-      "code": "A480",
+      "code ": "A480",
       "description": "Gas gangrene"
     },
     {
       "id": "339",
-      "code": "A481",
+      "code ": "A481",
       "description": "Legionnaires' disease"
     },
     {
       "id": "340",
-      "code": "A482",
+      "code ": "A482",
       "description": "Nonpneumonic Legionnaires' disease [Pontiac fever]"
     },
     {
       "id": "341",
-      "code": "A483",
+      "code ": "A483",
       "description": "Toxic shock syndrome"
     },
     {
       "id": "342",
-      "code": "A484",
+      "code ": "A484",
       "description": "Brazilian purpuric fever"
     },
     {
       "id": "343",
-      "code": "A485",
+      "code ": "A485",
       "description": "Other specified botulism"
     },
     {
       "id": "344",
-      "code": "A4851",
+      "code ": "A4851",
       "description": "Infant botulism"
     },
     {
       "id": "345",
-      "code": "A4852",
+      "code ": "A4852",
       "description": "Wound botulism"
     },
     {
       "id": "346",
-      "code": "A488",
+      "code ": "A488",
       "description": "Other specified bacterial diseases"
     },
     {
       "id": "347",
-      "code": "A49",
+      "code ": "A49",
       "description": "Bacterial infection of unspecified site"
     },
     {
       "id": "348",
-      "code": "A490",
+      "code ": "A490",
       "description": "Staphylococcal infection, unspecified site"
     },
     {
       "id": "349",
-      "code": "A4901",
+      "code ": "A4901",
       "description": "Methicillin suscep staph infection, unsp site"
     },
     {
       "id": "350",
-      "code": "A4902",
+      "code ": "A4902",
       "description": "Methicillin resis staph infection, unsp site"
     },
     {
       "id": "351",
-      "code": "A491",
+      "code ": "A491",
       "description": "Streptococcal infection, unspecified site"
     },
     {
       "id": "352",
-      "code": "A492",
+      "code ": "A492",
       "description": "Hemophilus influenzae infection, unspecified site"
     },
     {
       "id": "353",
-      "code": "A493",
+      "code ": "A493",
       "description": "Mycoplasma infection, unspecified site"
     },
     {
       "id": "354",
-      "code": "A498",
+      "code ": "A498",
       "description": "Other bacterial infections of unspecified site"
     },
     {
       "id": "355",
-      "code": "A499",
+      "code ": "A499",
       "description": "Bacterial infection, unspecified"
     },
     {
       "id": "356",
-      "code": "A50",
+      "code ": "A50",
       "description": "Congenital syphilis"
     },
     {
       "id": "357",
-      "code": "A500",
+      "code ": "A500",
       "description": "Early congenital syphilis, symptomatic"
     },
     {
       "id": "358",
-      "code": "A5001",
+      "code ": "A5001",
       "description": "Early congenital syphilitic oculopathy"
     },
     {
       "id": "359",
-      "code": "A5002",
+      "code ": "A5002",
       "description": "Early congenital syphilitic osteochondropathy"
     },
     {
       "id": "360",
-      "code": "A5003",
+      "code ": "A5003",
       "description": "Early congenital syphilitic pharyngitis"
     },
     {
       "id": "361",
-      "code": "A5004",
+      "code ": "A5004",
       "description": "Early congenital syphilitic pneumonia"
     },
     {
       "id": "362",
-      "code": "A5005",
+      "code ": "A5005",
       "description": "Early congenital syphilitic rhinitis"
     },
     {
       "id": "363",
-      "code": "A5006",
+      "code ": "A5006",
       "description": "Early cutaneous congenital syphilis"
     },
     {
       "id": "364",
-      "code": "A5007",
+      "code ": "A5007",
       "description": "Early mucocutaneous congenital syphilis"
     },
     {
       "id": "365",
-      "code": "A5008",
+      "code ": "A5008",
       "description": "Early visceral congenital syphilis"
     },
     {
       "id": "366",
-      "code": "A5009",
+      "code ": "A5009",
       "description": "Other early congenital syphilis, symptomatic"
     },
     {
       "id": "367",
-      "code": "A501",
+      "code ": "A501",
       "description": "Early congenital syphilis, latent"
     },
     {
       "id": "368",
-      "code": "A502",
+      "code ": "A502",
       "description": "Early congenital syphilis, unspecified"
     },
     {
       "id": "369",
-      "code": "A503",
+      "code ": "A503",
       "description": "Late congenital syphilitic oculopathy"
     },
     {
       "id": "370",
-      "code": "A5030",
+      "code ": "A5030",
       "description": "Late congenital syphilitic oculopathy, unspecified"
     },
     {
       "id": "371",
-      "code": "A5031",
+      "code ": "A5031",
       "description": "Late congenital syphilitic interstitial keratitis"
     },
     {
       "id": "372",
-      "code": "A5032",
+      "code ": "A5032",
       "description": "Late congenital syphilitic chorioretinitis"
     },
     {
       "id": "373",
-      "code": "A5039",
+      "code ": "A5039",
       "description": "Other late congenital syphilitic oculopathy"
     },
     {
       "id": "374",
-      "code": "A504",
+      "code ": "A504",
       "description": "Late congenital neurosyphilis [juvenile neurosyphilis]"
     },
     {
       "id": "375",
-      "code": "A5040",
+      "code ": "A5040",
       "description": "Late congenital neurosyphilis, unspecified"
     },
     {
       "id": "376",
-      "code": "A5041",
+      "code ": "A5041",
       "description": "Late congenital syphilitic meningitis"
     },
     {
       "id": "377",
-      "code": "A5042",
+      "code ": "A5042",
       "description": "Late congenital syphilitic encephalitis"
     },
     {
       "id": "378",
-      "code": "A5043",
+      "code ": "A5043",
       "description": "Late congenital syphilitic polyneuropathy"
     },
     {
       "id": "379",
-      "code": "A5044",
+      "code ": "A5044",
       "description": "Late congenital syphilitic optic nerve atrophy"
     },
     {
       "id": "380",
-      "code": "A5045",
+      "code ": "A5045",
       "description": "Juvenile general paresis"
     },
     {
       "id": "381",
-      "code": "A5049",
+      "code ": "A5049",
       "description": "Other late congenital neurosyphilis"
     },
     {
       "id": "382",
-      "code": "A505",
+      "code ": "A505",
       "description": "Other late congenital syphilis, symptomatic"
     },
     {
       "id": "383",
-      "code": "A5051",
+      "code ": "A5051",
       "description": "Clutton's joints"
     },
     {
       "id": "384",
-      "code": "A5052",
+      "code ": "A5052",
       "description": "Hutchinson's teeth"
     },
     {
       "id": "385",
-      "code": "A5053",
+      "code ": "A5053",
       "description": "Hutchinson's triad"
     },
     {
       "id": "386",
-      "code": "A5054",
+      "code ": "A5054",
       "description": "Late congenital cardiovascular syphilis"
     },
     {
       "id": "387",
-      "code": "A5055",
+      "code ": "A5055",
       "description": "Late congenital syphilitic arthropathy"
     },
     {
       "id": "388",
-      "code": "A5056",
+      "code ": "A5056",
       "description": "Late congenital syphilitic osteochondropathy"
     },
     {
       "id": "389",
-      "code": "A5057",
+      "code ": "A5057",
       "description": "Syphilitic saddle nose"
     },
     {
       "id": "390",
-      "code": "A5059",
+      "code ": "A5059",
       "description": "Other late congenital syphilis, symptomatic"
     },
     {
       "id": "391",
-      "code": "A506",
+      "code ": "A506",
       "description": "Late congenital syphilis, latent"
     },
     {
       "id": "392",
-      "code": "A507",
+      "code ": "A507",
       "description": "Late congenital syphilis, unspecified"
     },
     {
       "id": "393",
-      "code": "A509",
+      "code ": "A509",
       "description": "Congenital syphilis, unspecified"
     },
     {
       "id": "394",
-      "code": "A51",
+      "code ": "A51",
       "description": "Early syphilis"
     },
     {
       "id": "395",
-      "code": "A510",
+      "code ": "A510",
       "description": "Primary genital syphilis"
     },
     {
       "id": "396",
-      "code": "A511",
+      "code ": "A511",
       "description": "Primary anal syphilis"
     },
     {
       "id": "397",
-      "code": "A512",
+      "code ": "A512",
       "description": "Primary syphilis of other sites"
     },
     {
       "id": "398",
-      "code": "A513",
+      "code ": "A513",
       "description": "Secondary syphilis of skin and mucous membranes"
     },
     {
       "id": "399",
-      "code": "A5131",
+      "code ": "A5131",
       "description": "Condyloma latum"
     },
     {
       "id": "400",
-      "code": "A5132",
+      "code ": "A5132",
       "description": "Syphilitic alopecia"
     },
     {
       "id": "401",
-      "code": "A5139",
+      "code ": "A5139",
       "description": "Other secondary syphilis of skin"
     },
     {
       "id": "402",
-      "code": "A514",
+      "code ": "A514",
       "description": "Other secondary syphilis"
     },
     {
       "id": "403",
-      "code": "A5141",
+      "code ": "A5141",
       "description": "Secondary syphilitic meningitis"
     },
     {
       "id": "404",
-      "code": "A5142",
+      "code ": "A5142",
       "description": "Secondary syphilitic female pelvic disease"
     },
     {
       "id": "405",
-      "code": "A5143",
+      "code ": "A5143",
       "description": "Secondary syphilitic oculopathy"
     },
     {
       "id": "406",
-      "code": "A5144",
+      "code ": "A5144",
       "description": "Secondary syphilitic nephritis"
     },
     {
       "id": "407",
-      "code": "A5145",
+      "code ": "A5145",
       "description": "Secondary syphilitic hepatitis"
     },
     {
       "id": "408",
-      "code": "A5146",
+      "code ": "A5146",
       "description": "Secondary syphilitic osteopathy"
     },
     {
       "id": "409",
-      "code": "A5149",
+      "code ": "A5149",
       "description": "Other secondary syphilitic conditions"
     },
     {
       "id": "410",
-      "code": "A515",
+      "code ": "A515",
       "description": "Early syphilis, latent"
     },
     {
       "id": "411",
-      "code": "A519",
+      "code ": "A519",
       "description": "Early syphilis, unspecified"
     },
     {
       "id": "412",
-      "code": "A52",
+      "code ": "A52",
       "description": "Late syphilis"
     },
     {
       "id": "413",
-      "code": "A520",
+      "code ": "A520",
       "description": "Cardiovascular and cerebrovascular syphilis"
     },
     {
       "id": "414",
-      "code": "A5200",
+      "code ": "A5200",
       "description": "Cardiovascular syphilis, unspecified"
     },
     {
       "id": "415",
-      "code": "A5201",
+      "code ": "A5201",
       "description": "Syphilitic aneurysm of aorta"
     },
     {
       "id": "416",
-      "code": "A5202",
+      "code ": "A5202",
       "description": "Syphilitic aortitis"
     },
     {
       "id": "417",
-      "code": "A5203",
+      "code ": "A5203",
       "description": "Syphilitic endocarditis"
     },
     {
       "id": "418",
-      "code": "A5204",
+      "code ": "A5204",
       "description": "Syphilitic cerebral arteritis"
     },
     {
       "id": "419",
-      "code": "A5205",
+      "code ": "A5205",
       "description": "Other cerebrovascular syphilis"
     },
     {
       "id": "420",
-      "code": "A5206",
+      "code ": "A5206",
       "description": "Other syphilitic heart involvement"
     },
     {
       "id": "421",
-      "code": "A5209",
+      "code ": "A5209",
       "description": "Other cardiovascular syphilis"
     },
     {
       "id": "422",
-      "code": "A521",
+      "code ": "A521",
       "description": "Symptomatic neurosyphilis"
     },
     {
       "id": "423",
-      "code": "A5210",
+      "code ": "A5210",
       "description": "Symptomatic neurosyphilis, unspecified"
     },
     {
       "id": "424",
-      "code": "A5211",
+      "code ": "A5211",
       "description": "Tabes dorsalis"
     },
     {
       "id": "425",
-      "code": "A5212",
+      "code ": "A5212",
       "description": "Other cerebrospinal syphilis"
     },
     {
       "id": "426",
-      "code": "A5213",
+      "code ": "A5213",
       "description": "Late syphilitic meningitis"
     },
     {
       "id": "427",
-      "code": "A5214",
+      "code ": "A5214",
       "description": "Late syphilitic encephalitis"
     },
     {
       "id": "428",
-      "code": "A5215",
+      "code ": "A5215",
       "description": "Late syphilitic neuropathy"
     },
     {
       "id": "429",
-      "code": "A5216",
+      "code ": "A5216",
       "description": "Charcot's arthropathy (tabetic)"
     },
     {
       "id": "430",
-      "code": "A5217",
+      "code ": "A5217",
       "description": "General paresis"
     },
     {
       "id": "431",
-      "code": "A5219",
+      "code ": "A5219",
       "description": "Other symptomatic neurosyphilis"
     },
     {
       "id": "432",
-      "code": "A522",
+      "code ": "A522",
       "description": "Asymptomatic neurosyphilis"
     },
     {
       "id": "433",
-      "code": "A523",
+      "code ": "A523",
       "description": "Neurosyphilis, unspecified"
     },
     {
       "id": "434",
-      "code": "A527",
+      "code ": "A527",
       "description": "Other symptomatic late syphilis"
     },
     {
       "id": "435",
-      "code": "A5271",
+      "code ": "A5271",
       "description": "Late syphilitic oculopathy"
     },
     {
       "id": "436",
-      "code": "A5272",
+      "code ": "A5272",
       "description": "Syphilis of lung and bronchus"
     },
     {
       "id": "437",
-      "code": "A5273",
+      "code ": "A5273",
       "description": "Symptomatic late syphilis of other respiratory organs"
     },
     {
       "id": "438",
-      "code": "A5274",
+      "code ": "A5274",
       "description": "Syphilis of liver and other viscera"
     },
     {
       "id": "439",
-      "code": "A5275",
+      "code ": "A5275",
       "description": "Syphilis of kidney and ureter"
     },
     {
       "id": "440",
-      "code": "A5276",
+      "code ": "A5276",
       "description": "Other genitourinary symptomatic late syphilis"
     },
     {
       "id": "441",
-      "code": "A5277",
+      "code ": "A5277",
       "description": "Syphilis of bone and joint"
     },
     {
       "id": "442",
-      "code": "A5278",
+      "code ": "A5278",
       "description": "Syphilis of other musculoskeletal tissue"
     },
     {
       "id": "443",
-      "code": "A5279",
+      "code ": "A5279",
       "description": "Other symptomatic late syphilis"
     },
     {
       "id": "444",
-      "code": "A528",
+      "code ": "A528",
       "description": "Late syphilis, latent"
     },
     {
       "id": "445",
-      "code": "A529",
+      "code ": "A529",
       "description": "Late syphilis, unspecified"
     },
     {
       "id": "446",
-      "code": "A53",
+      "code ": "A53",
       "description": "Other and unspecified syphilis"
     },
     {
       "id": "447",
-      "code": "A530",
+      "code ": "A530",
       "description": "Latent syphilis, unspecified as early or late"
     },
     {
       "id": "448",
-      "code": "A539",
+      "code ": "A539",
       "description": "Syphilis, unspecified"
     },
     {
       "id": "449",
-      "code": "A54",
+      "code ": "A54",
       "description": "Gonococcal infection"
     },
     {
       "id": "450",
-      "code": "A540",
+      "code ": "A540",
       "description": "Gonocl infct of low GU tract w/o periureth or acc glnd abcs"
     },
     {
       "id": "451",
-      "code": "A5400",
+      "code ": "A5400",
       "description": "Gonococcal infection of lower genitourinary tract, unsp"
     },
     {
       "id": "452",
-      "code": "A5401",
+      "code ": "A5401",
       "description": "Gonococcal cystitis and urethritis, unspecified"
     },
     {
       "id": "453",
-      "code": "A5402",
+      "code ": "A5402",
       "description": "Gonococcal vulvovaginitis, unspecified"
     },
     {
       "id": "454",
-      "code": "A5403",
+      "code ": "A5403",
       "description": "Gonococcal cervicitis, unspecified"
     },
     {
       "id": "455",
-      "code": "A5409",
+      "code ": "A5409",
       "description": "Other gonococcal infection of lower genitourinary tract"
     },
     {
       "id": "456",
-      "code": "A541",
+      "code ": "A541",
       "description": "Gonocl infct of lower GU tract w periureth and acc glnd abcs"
     },
     {
       "id": "457",
-      "code": "A542",
+      "code ": "A542",
       "description": "Gonococcal pelviperitonitis and oth gonococcal GU infection"
     },
     {
       "id": "458",
-      "code": "A5421",
+      "code ": "A5421",
       "description": "Gonococcal infection of kidney and ureter"
     },
     {
       "id": "459",
-      "code": "A5422",
+      "code ": "A5422",
       "description": "Gonococcal prostatitis"
     },
     {
       "id": "460",
-      "code": "A5423",
+      "code ": "A5423",
       "description": "Gonococcal infection of other male genital organs"
     },
     {
       "id": "461",
-      "code": "A5424",
+      "code ": "A5424",
       "description": "Gonococcal female pelvic inflammatory disease"
     },
     {
       "id": "462",
-      "code": "A5429",
+      "code ": "A5429",
       "description": "Other gonococcal genitourinary infections"
     },
     {
       "id": "463",
-      "code": "A543",
+      "code ": "A543",
       "description": "Gonococcal infection of eye"
     },
     {
       "id": "464",
-      "code": "A5430",
+      "code ": "A5430",
       "description": "Gonococcal infection of eye, unspecified"
     },
     {
       "id": "465",
-      "code": "A5431",
+      "code ": "A5431",
       "description": "Gonococcal conjunctivitis"
     },
     {
       "id": "466",
-      "code": "A5432",
+      "code ": "A5432",
       "description": "Gonococcal iridocyclitis"
     },
     {
       "id": "467",
-      "code": "A5433",
+      "code ": "A5433",
       "description": "Gonococcal keratitis"
     },
     {
       "id": "468",
-      "code": "A5439",
+      "code ": "A5439",
       "description": "Other gonococcal eye infection"
     },
     {
       "id": "469",
-      "code": "A544",
+      "code ": "A544",
       "description": "Gonococcal infection of musculoskeletal system"
     },
     {
       "id": "470",
-      "code": "A5440",
+      "code ": "A5440",
       "description": "Gonococcal infection of musculoskeletal system, unspecified"
     },
     {
       "id": "471",
-      "code": "A5441",
+      "code ": "A5441",
       "description": "Gonococcal spondylopathy"
     },
     {
       "id": "472",
-      "code": "A5442",
+      "code ": "A5442",
       "description": "Gonococcal arthritis"
     },
     {
       "id": "473",
-      "code": "A5443",
+      "code ": "A5443",
       "description": "Gonococcal osteomyelitis"
     },
     {
       "id": "474",
-      "code": "A5449",
+      "code ": "A5449",
       "description": "Gonococcal infection of other musculoskeletal tissue"
     },
     {
       "id": "475",
-      "code": "A545",
+      "code ": "A545",
       "description": "Gonococcal pharyngitis"
     },
     {
       "id": "476",
-      "code": "A546",
+      "code ": "A546",
       "description": "Gonococcal infection of anus and rectum"
     },
     {
       "id": "477",
-      "code": "A548",
+      "code ": "A548",
       "description": "Other gonococcal infections"
     },
     {
       "id": "478",
-      "code": "A5481",
+      "code ": "A5481",
       "description": "Gonococcal meningitis"
     },
     {
       "id": "479",
-      "code": "A5482",
+      "code ": "A5482",
       "description": "Gonococcal brain abscess"
     },
     {
       "id": "480",
-      "code": "A5483",
+      "code ": "A5483",
       "description": "Gonococcal heart infection"
     },
     {
       "id": "481",
-      "code": "A5484",
+      "code ": "A5484",
       "description": "Gonococcal pneumonia"
     },
     {
       "id": "482",
-      "code": "A5485",
+      "code ": "A5485",
       "description": "Gonococcal peritonitis"
     },
     {
       "id": "483",
-      "code": "A5486",
+      "code ": "A5486",
       "description": "Gonococcal sepsis"
     },
     {
       "id": "484",
-      "code": "A5489",
+      "code ": "A5489",
       "description": "Other gonococcal infections"
     },
     {
       "id": "485",
-      "code": "A549",
+      "code ": "A549",
       "description": "Gonococcal infection, unspecified"
     },
     {
       "id": "486",
-      "code": "A55",
+      "code ": "A55",
       "description": "Chlamydial lymphogranuloma (venereum)"
     },
     {
       "id": "487",
-      "code": "A56",
+      "code ": "A56",
       "description": "Other sexually transmitted chlamydial diseases"
     },
     {
       "id": "488",
-      "code": "A560",
+      "code ": "A560",
       "description": "Chlamydial infection of lower genitourinary tract"
     },
     {
       "id": "489",
-      "code": "A5600",
+      "code ": "A5600",
       "description": "Chlamydial infection of lower genitourinary tract, unsp"
     },
     {
       "id": "490",
-      "code": "A5601",
+      "code ": "A5601",
       "description": "Chlamydial cystitis and urethritis"
     },
     {
       "id": "491",
-      "code": "A5602",
+      "code ": "A5602",
       "description": "Chlamydial vulvovaginitis"
     },
     {
       "id": "492",
-      "code": "A5609",
+      "code ": "A5609",
       "description": "Other chlamydial infection of lower genitourinary tract"
     },
     {
       "id": "493",
-      "code": "A561",
+      "code ": "A561",
       "description": "Chlamydial infection of pelviperitoneum and oth GU organs"
     },
     {
       "id": "494",
-      "code": "A5611",
+      "code ": "A5611",
       "description": "Chlamydial female pelvic inflammatory disease"
     },
     {
       "id": "495",
-      "code": "A5619",
+      "code ": "A5619",
       "description": "Other chlamydial genitourinary infection"
     },
     {
       "id": "496",
-      "code": "A562",
+      "code ": "A562",
       "description": "Chlamydial infection of genitourinary tract, unspecified"
     },
     {
       "id": "497",
-      "code": "A563",
+      "code ": "A563",
       "description": "Chlamydial infection of anus and rectum"
     },
     {
       "id": "498",
-      "code": "A564",
+      "code ": "A564",
       "description": "Chlamydial infection of pharynx"
     },
     {
       "id": "499",
-      "code": "A568",
+      "code ": "A568",
       "description": "Sexually transmitted chlamydial infection of other sites"
     },
     {
       "id": "500",
-      "code": "A57",
+      "code ": "A57",
       "description": "Chancroid"
     },
     {
       "id": "501",
-      "code": "A58",
+      "code ": "A58",
       "description": "Granuloma inguinale"
     },
     {
       "id": "502",
-      "code": "A59",
+      "code ": "A59",
       "description": "Trichomoniasis"
     },
     {
       "id": "503",
-      "code": "A590",
+      "code ": "A590",
       "description": "Urogenital trichomoniasis"
     },
     {
       "id": "504",
-      "code": "A5900",
+      "code ": "A5900",
       "description": "Urogenital trichomoniasis, unspecified"
     },
     {
       "id": "505",
-      "code": "A5901",
+      "code ": "A5901",
       "description": "Trichomonal vulvovaginitis"
     },
     {
       "id": "506",
-      "code": "A5902",
+      "code ": "A5902",
       "description": "Trichomonal prostatitis"
     },
     {
       "id": "507",
-      "code": "A5903",
+      "code ": "A5903",
       "description": "Trichomonal cystitis and urethritis"
     },
     {
       "id": "508",
-      "code": "A5909",
+      "code ": "A5909",
       "description": "Other urogenital trichomoniasis"
     },
     {
       "id": "509",
-      "code": "A598",
+      "code ": "A598",
       "description": "Trichomoniasis of other sites"
     },
     {
       "id": "510",
-      "code": "A599",
+      "code ": "A599",
       "description": "Trichomoniasis, unspecified"
     },
     {
       "id": "511",
-      "code": "A60",
+      "code ": "A60",
       "description": "Anogenital herpesviral [herpes simplex] infections"
     },
     {
       "id": "512",
-      "code": "A600",
+      "code ": "A600",
       "description": "Herpesviral infection of genitalia and urogenital tract"
     },
     {
       "id": "513",
-      "code": "A6000",
+      "code ": "A6000",
       "description": "Herpesviral infection of urogenital system, unspecified"
     },
     {
       "id": "514",
-      "code": "A6001",
+      "code ": "A6001",
       "description": "Herpesviral infection of penis"
     },
     {
       "id": "515",
-      "code": "A6002",
+      "code ": "A6002",
       "description": "Herpesviral infection of other male genital organs"
     },
     {
       "id": "516",
-      "code": "A6003",
+      "code ": "A6003",
       "description": "Herpesviral cervicitis"
     },
     {
       "id": "517",
-      "code": "A6004",
+      "code ": "A6004",
       "description": "Herpesviral vulvovaginitis"
     },
     {
       "id": "518",
-      "code": "A6009",
+      "code ": "A6009",
       "description": "Herpesviral infection of other urogenital tract"
     },
     {
       "id": "519",
-      "code": "A601",
+      "code ": "A601",
       "description": "Herpesviral infection of perianal skin and rectum"
     },
     {
       "id": "520",
-      "code": "A609",
+      "code ": "A609",
       "description": "Anogenital herpesviral infection, unspecified"
     },
     {
       "id": "521",
-      "code": "A63",
+      "code ": "A63",
       "description": "Oth predominantly sexually transmitted diseases, NEC"
     },
     {
       "id": "522",
-      "code": "A630",
+      "code ": "A630",
       "description": "Anogenital (venereal) warts"
     },
     {
       "id": "523",
-      "code": "A638",
+      "code ": "A638",
       "description": "Other specified predominantly sexually transmitted diseases"
     },
     {
       "id": "524",
-      "code": "A64",
+      "code ": "A64",
       "description": "Unspecified sexually transmitted disease"
     },
     {
       "id": "525",
-      "code": "A65",
+      "code ": "A65",
       "description": "Nonvenereal syphilis"
     },
     {
       "id": "526",
-      "code": "A66",
+      "code ": "A66",
       "description": "Yaws"
     },
     {
       "id": "527",
-      "code": "A660",
+      "code ": "A660",
       "description": "Initial lesions of yaws"
     },
     {
       "id": "528",
-      "code": "A661",
+      "code ": "A661",
       "description": "Multiple papillomata and wet crab yaws"
     },
     {
       "id": "529",
-      "code": "A662",
+      "code ": "A662",
       "description": "Other early skin lesions of yaws"
     },
     {
       "id": "530",
-      "code": "A663",
+      "code ": "A663",
       "description": "Hyperkeratosis of yaws"
     },
     {
       "id": "531",
-      "code": "A664",
+      "code ": "A664",
       "description": "Gummata and ulcers of yaws"
     },
     {
       "id": "532",
-      "code": "A665",
+      "code ": "A665",
       "description": "Gangosa"
     },
     {
       "id": "533",
-      "code": "A666",
+      "code ": "A666",
       "description": "Bone and joint lesions of yaws"
     },
     {
       "id": "534",
-      "code": "A667",
+      "code ": "A667",
       "description": "Other manifestations of yaws"
     },
     {
       "id": "535",
-      "code": "A668",
+      "code ": "A668",
       "description": "Latent yaws"
     },
     {
       "id": "536",
-      "code": "A669",
+      "code ": "A669",
       "description": "Yaws, unspecified"
     },
     {
       "id": "537",
-      "code": "A67",
+      "code ": "A67",
       "description": "Pinta [carate]"
     },
     {
       "id": "538",
-      "code": "A670",
+      "code ": "A670",
       "description": "Primary lesions of pinta"
     },
     {
       "id": "539",
-      "code": "A671",
+      "code ": "A671",
       "description": "Intermediate lesions of pinta"
     },
     {
       "id": "540",
-      "code": "A672",
+      "code ": "A672",
       "description": "Late lesions of pinta"
     },
     {
       "id": "541",
-      "code": "A673",
+      "code ": "A673",
       "description": "Mixed lesions of pinta"
     },
     {
       "id": "542",
-      "code": "A679",
+      "code ": "A679",
       "description": "Pinta, unspecified"
     },
     {
       "id": "543",
-      "code": "A68",
+      "code ": "A68",
       "description": "Relapsing fevers"
     },
     {
       "id": "544",
-      "code": "A680",
+      "code ": "A680",
       "description": "Louse-borne relapsing fever"
     },
     {
       "id": "545",
-      "code": "A681",
+      "code ": "A681",
       "description": "Tick-borne relapsing fever"
     },
     {
       "id": "546",
-      "code": "A689",
+      "code ": "A689",
       "description": "Relapsing fever, unspecified"
     },
     {
       "id": "547",
-      "code": "A69",
+      "code ": "A69",
       "description": "Other spirochetal infections"
     },
     {
       "id": "548",
-      "code": "A690",
+      "code ": "A690",
       "description": "Necrotizing ulcerative stomatitis"
     },
     {
       "id": "549",
-      "code": "A691",
+      "code ": "A691",
       "description": "Other Vincent's infections"
     },
     {
       "id": "550",
-      "code": "A692",
+      "code ": "A692",
       "description": "Lyme disease"
     },
     {
       "id": "551",
-      "code": "A6920",
+      "code ": "A6920",
       "description": "Lyme disease, unspecified"
     },
     {
       "id": "552",
-      "code": "A6921",
+      "code ": "A6921",
       "description": "Meningitis due to Lyme disease"
     },
     {
       "id": "553",
-      "code": "A6922",
+      "code ": "A6922",
       "description": "Other neurologic disorders in Lyme disease"
     },
     {
       "id": "554",
-      "code": "A6923",
+      "code ": "A6923",
       "description": "Arthritis due to Lyme disease"
     },
     {
       "id": "555",
-      "code": "A6929",
+      "code ": "A6929",
       "description": "Other conditions associated with Lyme disease"
     },
     {
       "id": "556",
-      "code": "A698",
+      "code ": "A698",
       "description": "Other specified spirochetal infections"
     },
     {
       "id": "557",
-      "code": "A699",
+      "code ": "A699",
       "description": "Spirochetal infection, unspecified"
     },
     {
       "id": "558",
-      "code": "A70",
+      "code ": "A70",
       "description": "Chlamydia psittaci infections"
     },
     {
       "id": "559",
-      "code": "A71",
+      "code ": "A71",
       "description": "Trachoma"
     },
     {
       "id": "560",
-      "code": "A710",
+      "code ": "A710",
       "description": "Initial stage of trachoma"
     },
     {
       "id": "561",
-      "code": "A711",
+      "code ": "A711",
       "description": "Active stage of trachoma"
     },
     {
       "id": "562",
-      "code": "A719",
+      "code ": "A719",
       "description": "Trachoma, unspecified"
     },
     {
       "id": "563",
-      "code": "A74",
+      "code ": "A74",
       "description": "Other diseases caused by chlamydiae"
     },
     {
       "id": "564",
-      "code": "A740",
+      "code ": "A740",
       "description": "Chlamydial conjunctivitis"
     },
     {
       "id": "565",
-      "code": "A748",
+      "code ": "A748",
       "description": "Other chlamydial diseases"
     },
     {
       "id": "566",
-      "code": "A7481",
+      "code ": "A7481",
       "description": "Chlamydial peritonitis"
     },
     {
       "id": "567",
-      "code": "A7489",
+      "code ": "A7489",
       "description": "Other chlamydial diseases"
     },
     {
       "id": "568",
-      "code": "A749",
+      "code ": "A749",
       "description": "Chlamydial infection, unspecified"
     },
     {
       "id": "569",
-      "code": "A75",
+      "code ": "A75",
       "description": "Typhus fever"
     },
     {
       "id": "570",
-      "code": "A750",
+      "code ": "A750",
       "description": "Epidemic louse-borne typhus fever d/t Rickettsia prowazekii"
     },
     {
       "id": "571",
-      "code": "A751",
+      "code ": "A751",
       "description": "Recrudescent typhus [Brill's disease]"
     },
     {
       "id": "572",
-      "code": "A752",
+      "code ": "A752",
       "description": "Typhus fever due to Rickettsia typhi"
     },
     {
       "id": "573",
-      "code": "A753",
+      "code ": "A753",
       "description": "Typhus fever due to Rickettsia tsutsugamushi"
     },
     {
       "id": "574",
-      "code": "A759",
+      "code ": "A759",
       "description": "Typhus fever, unspecified"
     },
     {
       "id": "575",
-      "code": "A77",
+      "code ": "A77",
       "description": "Spotted fever [tick-borne rickettsioses]"
     },
     {
       "id": "576",
-      "code": "A770",
+      "code ": "A770",
       "description": "Spotted fever due to Rickettsia rickettsii"
     },
     {
       "id": "577",
-      "code": "A771",
+      "code ": "A771",
       "description": "Spotted fever due to Rickettsia conorii"
     },
     {
       "id": "578",
-      "code": "A772",
+      "code ": "A772",
       "description": "Spotted fever due to Rickettsia siberica"
     },
     {
       "id": "579",
-      "code": "A773",
+      "code ": "A773",
       "description": "Spotted fever due to Rickettsia australis"
     },
     {
       "id": "580",
-      "code": "A774",
+      "code ": "A774",
       "description": "Ehrlichiosis"
     },
     {
       "id": "581",
-      "code": "A7740",
+      "code ": "A7740",
       "description": "Ehrlichiosis, unspecified"
     },
     {
       "id": "582",
-      "code": "A7741",
+      "code ": "A7741",
       "description": "Ehrlichiosis chafeensis [E. chafeensis]"
     },
     {
       "id": "583",
-      "code": "A7749",
+      "code ": "A7749",
       "description": "Other ehrlichiosis"
     },
     {
       "id": "584",
-      "code": "A778",
+      "code ": "A778",
       "description": "Other spotted fevers"
     },
     {
       "id": "585",
-      "code": "A779",
+      "code ": "A779",
       "description": "Spotted fever, unspecified"
     },
     {
       "id": "586",
-      "code": "A78",
+      "code ": "A78",
       "description": "Q fever"
     },
     {
       "id": "587",
-      "code": "A79",
+      "code ": "A79",
       "description": "Other rickettsioses"
     },
     {
       "id": "588",
-      "code": "A790",
+      "code ": "A790",
       "description": "Trench fever"
     },
     {
       "id": "589",
-      "code": "A791",
+      "code ": "A791",
       "description": "Rickettsialpox due to Rickettsia akari"
     },
     {
       "id": "590",
-      "code": "A798",
+      "code ": "A798",
       "description": "Other specified rickettsioses"
     },
     {
       "id": "591",
-      "code": "A7981",
+      "code ": "A7981",
       "description": "Rickettsiosis due to Ehrlichia sennetsu"
     },
     {
       "id": "592",
-      "code": "A7989",
+      "code ": "A7989",
       "description": "Other specified rickettsioses"
     },
     {
       "id": "593",
-      "code": "A799",
+      "code ": "A799",
       "description": "Rickettsiosis, unspecified"
     },
     {
       "id": "594",
-      "code": "A80",
+      "code ": "A80",
       "description": "Acute poliomyelitis"
     },
     {
       "id": "595",
-      "code": "A800",
+      "code ": "A800",
       "description": "Acute paralytic poliomyelitis, vaccine-associated"
     },
     {
       "id": "596",
-      "code": "A801",
+      "code ": "A801",
       "description": "Acute paralytic poliomyelitis, wild virus, imported"
     },
     {
       "id": "597",
-      "code": "A802",
+      "code ": "A802",
       "description": "Acute paralytic poliomyelitis, wild virus, indigenous"
     },
     {
       "id": "598",
-      "code": "A803",
+      "code ": "A803",
       "description": "Acute paralytic poliomyelitis, other and unspecified"
     },
     {
       "id": "599",
-      "code": "A8030",
+      "code ": "A8030",
       "description": "Acute paralytic poliomyelitis, unspecified"
     },
     {
       "id": "600",
-      "code": "A8039",
+      "code ": "A8039",
       "description": "Other acute paralytic poliomyelitis"
     },
     {
       "id": "601",
-      "code": "A804",
+      "code ": "A804",
       "description": "Acute nonparalytic poliomyelitis"
     },
     {
       "id": "602",
-      "code": "A809",
+      "code ": "A809",
       "description": "Acute poliomyelitis, unspecified"
     },
     {
       "id": "603",
-      "code": "A81",
+      "code ": "A81",
       "description": "Atypical virus infections of central nervous system"
     },
     {
       "id": "604",
-      "code": "A810",
+      "code ": "A810",
       "description": "Creutzfeldt-Jakob disease"
     },
     {
       "id": "605",
-      "code": "A8100",
+      "code ": "A8100",
       "description": "Creutzfeldt-Jakob disease, unspecified"
     },
     {
       "id": "606",
-      "code": "A8101",
+      "code ": "A8101",
       "description": "Variant Creutzfeldt-Jakob disease"
     },
     {
       "id": "607",
-      "code": "A8109",
+      "code ": "A8109",
       "description": "Other Creutzfeldt-Jakob disease"
     },
     {
       "id": "608",
-      "code": "A811",
+      "code ": "A811",
       "description": "Subacute sclerosing panencephalitis"
     },
     {
       "id": "609",
-      "code": "A812",
+      "code ": "A812",
       "description": "Progressive multifocal leukoencephalopathy"
     },
     {
       "id": "610",
-      "code": "A818",
+      "code ": "A818",
       "description": "Other atypical virus infections of central nervous system"
     },
     {
       "id": "611",
-      "code": "A8181",
+      "code ": "A8181",
       "description": "Kuru"
     },
     {
       "id": "612",
-      "code": "A8182",
+      "code ": "A8182",
       "description": "Gerstmann-Straussler-Scheinker syndrome"
     },
     {
       "id": "613",
-      "code": "A8183",
+      "code ": "A8183",
       "description": "Fatal familial insomnia"
     },
     {
       "id": "614",
-      "code": "A8189",
+      "code ": "A8189",
       "description": "Other atypical virus infections of central nervous system"
     },
     {
       "id": "615",
-      "code": "A819",
+      "code ": "A819",
       "description": "Atypical virus infection of central nervous system, unsp"
     },
     {
       "id": "616",
-      "code": "A82",
+      "code ": "A82",
       "description": "Rabies"
     },
     {
       "id": "617",
-      "code": "A820",
+      "code ": "A820",
       "description": "Sylvatic rabies"
     },
     {
       "id": "618",
-      "code": "A821",
+      "code ": "A821",
       "description": "Urban rabies"
     },
     {
       "id": "619",
-      "code": "A829",
+      "code ": "A829",
       "description": "Rabies, unspecified"
     },
     {
       "id": "620",
-      "code": "A83",
+      "code ": "A83",
       "description": "Mosquito-borne viral encephalitis"
     },
     {
       "id": "621",
-      "code": "A830",
+      "code ": "A830",
       "description": "Japanese encephalitis"
     },
     {
       "id": "622",
-      "code": "A831",
+      "code ": "A831",
       "description": "Western equine encephalitis"
     },
     {
       "id": "623",
-      "code": "A832",
+      "code ": "A832",
       "description": "Eastern equine encephalitis"
     },
     {
       "id": "624",
-      "code": "A833",
+      "code ": "A833",
       "description": "St Louis encephalitis"
     },
     {
       "id": "625",
-      "code": "A834",
+      "code ": "A834",
       "description": "Australian encephalitis"
     },
     {
       "id": "626",
-      "code": "A835",
+      "code ": "A835",
       "description": "California encephalitis"
     },
     {
       "id": "627",
-      "code": "A836",
+      "code ": "A836",
       "description": "Rocio virus disease"
     },
     {
       "id": "628",
-      "code": "A838",
+      "code ": "A838",
       "description": "Other mosquito-borne viral encephalitis"
     },
     {
       "id": "629",
-      "code": "A839",
+      "code ": "A839",
       "description": "Mosquito-borne viral encephalitis, unspecified"
     },
     {
       "id": "630",
-      "code": "A84",
+      "code ": "A84",
       "description": "Tick-borne viral encephalitis"
     },
     {
       "id": "631",
-      "code": "A840",
+      "code ": "A840",
       "description": "Far Eastern tick-borne encephalitis"
     },
     {
       "id": "632",
-      "code": "A841",
+      "code ": "A841",
       "description": "Central European tick-borne encephalitis"
     },
     {
       "id": "633",
-      "code": "A848",
+      "code ": "A848",
       "description": "Other tick-borne viral encephalitis"
     },
     {
       "id": "634",
-      "code": "A849",
+      "code ": "A849",
       "description": "Tick-borne viral encephalitis, unspecified"
     },
     {
       "id": "635",
-      "code": "A85",
+      "code ": "A85",
       "description": "Other viral encephalitis, not elsewhere classified"
     },
     {
       "id": "636",
-      "code": "A850",
+      "code ": "A850",
       "description": "Enteroviral encephalitis"
     },
     {
       "id": "637",
-      "code": "A851",
+      "code ": "A851",
       "description": "Adenoviral encephalitis"
     },
     {
       "id": "638",
-      "code": "A852",
+      "code ": "A852",
       "description": "Arthropod-borne viral encephalitis, unspecified"
     },
     {
       "id": "639",
-      "code": "A858",
+      "code ": "A858",
       "description": "Other specified viral encephalitis"
     },
     {
       "id": "640",
-      "code": "A86",
+      "code ": "A86",
       "description": "Unspecified viral encephalitis"
     },
     {
       "id": "641",
-      "code": "A87",
+      "code ": "A87",
       "description": "Viral meningitis"
     },
     {
       "id": "642",
-      "code": "A870",
+      "code ": "A870",
       "description": "Enteroviral meningitis"
     },
     {
       "id": "643",
-      "code": "A871",
+      "code ": "A871",
       "description": "Adenoviral meningitis"
     },
     {
       "id": "644",
-      "code": "A872",
+      "code ": "A872",
       "description": "Lymphocytic choriomeningitis"
     },
     {
       "id": "645",
-      "code": "A878",
+      "code ": "A878",
       "description": "Other viral meningitis"
     },
     {
       "id": "646",
-      "code": "A879",
+      "code ": "A879",
       "description": "Viral meningitis, unspecified"
     },
     {
       "id": "647",
-      "code": "A88",
+      "code ": "A88",
       "description": "Oth viral infections of central nervous system, NEC"
     },
     {
       "id": "648",
-      "code": "A880",
+      "code ": "A880",
       "description": "Enteroviral exanthematous fever [Boston exanthem]"
     },
     {
       "id": "649",
-      "code": "A881",
+      "code ": "A881",
       "description": "Epidemic vertigo"
     },
     {
       "id": "650",
-      "code": "A888",
+      "code ": "A888",
       "description": "Other specified viral infections of central nervous system"
     },
     {
       "id": "651",
-      "code": "A89",
+      "code ": "A89",
       "description": "Unspecified viral infection of central nervous system"
     },
     {
       "id": "652",
-      "code": "A90",
+      "code ": "A90",
       "description": "Dengue fever [classical dengue]"
     },
     {
       "id": "653",
-      "code": "A91",
+      "code ": "A91",
       "description": "Dengue hemorrhagic fever"
     },
     {
       "id": "654",
-      "code": "A92",
+      "code ": "A92",
       "description": "Other mosquito-borne viral fevers"
     },
     {
       "id": "655",
-      "code": "A920",
+      "code ": "A920",
       "description": "Chikungunya virus disease"
     },
     {
       "id": "656",
-      "code": "A921",
+      "code ": "A921",
       "description": "O'nyong-nyong fever"
     },
     {
       "id": "657",
-      "code": "A922",
+      "code ": "A922",
       "description": "Venezuelan equine fever"
     },
     {
       "id": "658",
-      "code": "A923",
+      "code ": "A923",
       "description": "West Nile virus infection"
     },
     {
       "id": "659",
-      "code": "A9230",
+      "code ": "A9230",
       "description": "West Nile virus infection, unspecified"
     },
     {
       "id": "660",
-      "code": "A9231",
+      "code ": "A9231",
       "description": "West Nile virus infection with encephalitis"
     },
     {
       "id": "661",
-      "code": "A9232",
+      "code ": "A9232",
       "description": "West Nile virus infection with oth neurologic manifestation"
     },
     {
       "id": "662",
-      "code": "A9239",
+      "code ": "A9239",
       "description": "West Nile virus infection with other complications"
     },
     {
       "id": "663",
-      "code": "A924",
+      "code ": "A924",
       "description": "Rift Valley fever"
     },
     {
       "id": "664",
-      "code": "A925",
+      "code ": "A925",
       "description": "Zika virus disease"
     },
     {
       "id": "665",
-      "code": "A928",
+      "code ": "A928",
       "description": "Other specified mosquito-borne viral fevers"
     },
     {
       "id": "666",
-      "code": "A929",
+      "code ": "A929",
       "description": "Mosquito-borne viral fever, unspecified"
     },
     {
       "id": "667",
-      "code": "A93",
+      "code ": "A93",
       "description": "Other arthropod-borne viral fevers, not elsewhere classified"
     },
     {
       "id": "668",
-      "code": "A930",
+      "code ": "A930",
       "description": "Oropouche virus disease"
     },
     {
       "id": "669",
-      "code": "A931",
+      "code ": "A931",
       "description": "Sandfly fever"
     },
     {
       "id": "670",
-      "code": "A932",
+      "code ": "A932",
       "description": "Colorado tick fever"
     },
     {
       "id": "671",
-      "code": "A938",
+      "code ": "A938",
       "description": "Other specified arthropod-borne viral fevers"
     },
     {
       "id": "672",
-      "code": "A94",
+      "code ": "A94",
       "description": "Unspecified arthropod-borne viral fever"
     },
     {
       "id": "673",
-      "code": "A95",
+      "code ": "A95",
       "description": "Yellow fever"
     },
     {
       "id": "674",
-      "code": "A950",
+      "code ": "A950",
       "description": "Sylvatic yellow fever"
     },
     {
       "id": "675",
-      "code": "A951",
+      "code ": "A951",
       "description": "Urban yellow fever"
     },
     {
       "id": "676",
-      "code": "A959",
+      "code ": "A959",
       "description": "Yellow fever, unspecified"
     },
     {
       "id": "677",
-      "code": "A96",
+      "code ": "A96",
       "description": "Arenaviral hemorrhagic fever"
     },
     {
       "id": "678",
-      "code": "A960",
+      "code ": "A960",
       "description": "Junin hemorrhagic fever"
     },
     {
       "id": "679",
-      "code": "A961",
+      "code ": "A961",
       "description": "Machupo hemorrhagic fever"
     },
     {
       "id": "680",
-      "code": "A962",
+      "code ": "A962",
       "description": "Lassa fever"
     },
     {
       "id": "681",
-      "code": "A968",
+      "code ": "A968",
       "description": "Other arenaviral hemorrhagic fevers"
     },
     {
       "id": "682",
-      "code": "A969",
+      "code ": "A969",
       "description": "Arenaviral hemorrhagic fever, unspecified"
     },
     {
       "id": "683",
-      "code": "A98",
+      "code ": "A98",
       "description": "Other viral hemorrhagic fevers, not elsewhere classified"
     },
     {
       "id": "684",
-      "code": "A980",
+      "code ": "A980",
       "description": "Crimean-Congo hemorrhagic fever"
     },
     {
       "id": "685",
-      "code": "A981",
+      "code ": "A981",
       "description": "Omsk hemorrhagic fever"
     },
     {
       "id": "686",
-      "code": "A982",
+      "code ": "A982",
       "description": "Kyasanur Forest disease"
     },
     {
       "id": "687",
-      "code": "A983",
+      "code ": "A983",
       "description": "Marburg virus disease"
     },
     {
       "id": "688",
-      "code": "A984",
+      "code ": "A984",
       "description": "Ebola virus disease"
     },
     {
       "id": "689",
-      "code": "A985",
+      "code ": "A985",
       "description": "Hemorrhagic fever with renal syndrome"
     },
     {
       "id": "690",
-      "code": "A988",
+      "code ": "A988",
       "description": "Other specified viral hemorrhagic fevers"
     },
     {
       "id": "691",
-      "code": "A99",
+      "code ": "A99",
       "description": "Unspecified viral hemorrhagic fever"
     },
     {
       "id": "692",
-      "code": "B00",
+      "code ": "B00",
       "description": "Herpesviral [herpes simplex] infections"
     },
     {
       "id": "693",
-      "code": "B000",
+      "code ": "B000",
       "description": "Eczema herpeticum"
     },
     {
       "id": "694",
-      "code": "B001",
+      "code ": "B001",
       "description": "Herpesviral vesicular dermatitis"
     },
     {
       "id": "695",
-      "code": "B002",
+      "code ": "B002",
       "description": "Herpesviral gingivostomatitis and pharyngotonsillitis"
     },
     {
       "id": "696",
-      "code": "B003",
+      "code ": "B003",
       "description": "Herpesviral meningitis"
     },
     {
       "id": "697",
-      "code": "B004",
+      "code ": "B004",
       "description": "Herpesviral encephalitis"
     },
     {
       "id": "698",
-      "code": "B005",
+      "code ": "B005",
       "description": "Herpesviral ocular disease"
     },
     {
       "id": "699",
-      "code": "B0050",
+      "code ": "B0050",
       "description": "Herpesviral ocular disease, unspecified"
     },
     {
       "id": "700",
-      "code": "B0051",
+      "code ": "B0051",
       "description": "Herpesviral iridocyclitis"
     },
     {
       "id": "701",
-      "code": "B0052",
+      "code ": "B0052",
       "description": "Herpesviral keratitis"
     },
     {
       "id": "702",
-      "code": "B0053",
+      "code ": "B0053",
       "description": "Herpesviral conjunctivitis"
     },
     {
       "id": "703",
-      "code": "B0059",
+      "code ": "B0059",
       "description": "Other herpesviral disease of eye"
     },
     {
       "id": "704",
-      "code": "B007",
+      "code ": "B007",
       "description": "Disseminated herpesviral disease"
     },
     {
       "id": "705",
-      "code": "B008",
+      "code ": "B008",
       "description": "Other forms of herpesviral infections"
     },
     {
       "id": "706",
-      "code": "B0081",
+      "code ": "B0081",
       "description": "Herpesviral hepatitis"
     },
     {
       "id": "707",
-      "code": "B0082",
+      "code ": "B0082",
       "description": "Herpes simplex myelitis"
     },
     {
       "id": "708",
-      "code": "B0089",
+      "code ": "B0089",
       "description": "Other herpesviral infection"
     },
     {
       "id": "709",
-      "code": "B009",
+      "code ": "B009",
       "description": "Herpesviral infection, unspecified"
     },
     {
       "id": "710",
-      "code": "B01",
+      "code ": "B01",
       "description": "Varicella [chickenpox]"
     },
     {
       "id": "711",
-      "code": "B010",
+      "code ": "B010",
       "description": "Varicella meningitis"
     },
     {
       "id": "712",
-      "code": "B011",
+      "code ": "B011",
       "description": "Varicella encephalitis, myelitis and encephalomyelitis"
     },
     {
       "id": "713",
-      "code": "B0111",
+      "code ": "B0111",
       "description": "Varicella encephalitis and encephalomyelitis"
     },
     {
       "id": "714",
-      "code": "B0112",
+      "code ": "B0112",
       "description": "Varicella myelitis"
     },
     {
       "id": "715",
-      "code": "B012",
+      "code ": "B012",
       "description": "Varicella pneumonia"
     },
     {
       "id": "716",
-      "code": "B018",
+      "code ": "B018",
       "description": "Varicella with other complications"
     },
     {
       "id": "717",
-      "code": "B0181",
+      "code ": "B0181",
       "description": "Varicella keratitis"
     },
     {
       "id": "718",
-      "code": "B0189",
+      "code ": "B0189",
       "description": "Other varicella complications"
     },
     {
       "id": "719",
-      "code": "B019",
+      "code ": "B019",
       "description": "Varicella without complication"
     },
     {
       "id": "720",
-      "code": "B02",
+      "code ": "B02",
       "description": "Zoster [herpes zoster]"
     },
     {
       "id": "721",
-      "code": "B020",
+      "code ": "B020",
       "description": "Zoster encephalitis"
     },
     {
       "id": "722",
-      "code": "B021",
+      "code ": "B021",
       "description": "Zoster meningitis"
     },
     {
       "id": "723",
-      "code": "B022",
+      "code ": "B022",
       "description": "Zoster with other nervous system involvement"
     },
     {
       "id": "724",
-      "code": "B0221",
+      "code ": "B0221",
       "description": "Postherpetic geniculate ganglionitis"
     },
     {
       "id": "725",
-      "code": "B0222",
+      "code ": "B0222",
       "description": "Postherpetic trigeminal neuralgia"
     },
     {
       "id": "726",
-      "code": "B0223",
+      "code ": "B0223",
       "description": "Postherpetic polyneuropathy"
     },
     {
       "id": "727",
-      "code": "B0224",
+      "code ": "B0224",
       "description": "Postherpetic myelitis"
     },
     {
       "id": "728",
-      "code": "B0229",
+      "code ": "B0229",
       "description": "Other postherpetic nervous system involvement"
     },
     {
       "id": "729",
-      "code": "B023",
+      "code ": "B023",
       "description": "Zoster ocular disease"
     },
     {
       "id": "730",
-      "code": "B0230",
+      "code ": "B0230",
       "description": "Zoster ocular disease, unspecified"
     },
     {
       "id": "731",
-      "code": "B0231",
+      "code ": "B0231",
       "description": "Zoster conjunctivitis"
     },
     {
       "id": "732",
-      "code": "B0232",
+      "code ": "B0232",
       "description": "Zoster iridocyclitis"
     },
     {
       "id": "733",
-      "code": "B0233",
+      "code ": "B0233",
       "description": "Zoster keratitis"
     },
     {
       "id": "734",
-      "code": "B0234",
+      "code ": "B0234",
       "description": "Zoster scleritis"
     },
     {
       "id": "735",
-      "code": "B0239",
+      "code ": "B0239",
       "description": "Other herpes zoster eye disease"
     },
     {
       "id": "736",
-      "code": "B027",
+      "code ": "B027",
       "description": "Disseminated zoster"
     },
     {
       "id": "737",
-      "code": "B028",
+      "code ": "B028",
       "description": "Zoster with other complications"
     },
     {
       "id": "738",
-      "code": "B029",
+      "code ": "B029",
       "description": "Zoster without complications"
     },
     {
       "id": "739",
-      "code": "B03",
+      "code ": "B03",
       "description": "Smallpox"
     },
     {
       "id": "740",
-      "code": "B04",
+      "code ": "B04",
       "description": "Monkeypox"
     },
     {
       "id": "741",
-      "code": "B05",
+      "code ": "B05",
       "description": "Measles"
     },
     {
       "id": "742",
-      "code": "B050",
+      "code ": "B050",
       "description": "Measles complicated by encephalitis"
     },
     {
       "id": "743",
-      "code": "B051",
+      "code ": "B051",
       "description": "Measles complicated by meningitis"
     },
     {
       "id": "744",
-      "code": "B052",
+      "code ": "B052",
       "description": "Measles complicated by pneumonia"
     },
     {
       "id": "745",
-      "code": "B053",
+      "code ": "B053",
       "description": "Measles complicated by otitis media"
     },
     {
       "id": "746",
-      "code": "B054",
+      "code ": "B054",
       "description": "Measles with intestinal complications"
     },
     {
       "id": "747",
-      "code": "B058",
+      "code ": "B058",
       "description": "Measles with other complications"
     },
     {
       "id": "748",
-      "code": "B0581",
+      "code ": "B0581",
       "description": "Measles keratitis and keratoconjunctivitis"
     },
     {
       "id": "749",
-      "code": "B0589",
+      "code ": "B0589",
       "description": "Other measles complications"
     },
     {
       "id": "750",
-      "code": "B059",
+      "code ": "B059",
       "description": "Measles without complication"
     },
     {
       "id": "751",
-      "code": "B06",
+      "code ": "B06",
       "description": "Rubella [German measles]"
     },
     {
       "id": "752",
-      "code": "B060",
+      "code ": "B060",
       "description": "Rubella with neurological complications"
     },
     {
       "id": "753",
-      "code": "B0600",
+      "code ": "B0600",
       "description": "Rubella with neurological complication, unspecified"
     },
     {
       "id": "754",
-      "code": "B0601",
+      "code ": "B0601",
       "description": "Rubella encephalitis"
     },
     {
       "id": "755",
-      "code": "B0602",
+      "code ": "B0602",
       "description": "Rubella meningitis"
     },
     {
       "id": "756",
-      "code": "B0609",
+      "code ": "B0609",
       "description": "Other neurological complications of rubella"
     },
     {
       "id": "757",
-      "code": "B068",
+      "code ": "B068",
       "description": "Rubella with other complications"
     },
     {
       "id": "758",
-      "code": "B0681",
+      "code ": "B0681",
       "description": "Rubella pneumonia"
     },
     {
       "id": "759",
-      "code": "B0682",
+      "code ": "B0682",
       "description": "Rubella arthritis"
     },
     {
       "id": "760",
-      "code": "B0689",
+      "code ": "B0689",
       "description": "Other rubella complications"
     },
     {
       "id": "761",
-      "code": "B069",
+      "code ": "B069",
       "description": "Rubella without complication"
     },
     {
       "id": "762",
-      "code": "B07",
+      "code ": "B07",
       "description": "Viral warts"
     },
     {
       "id": "763",
-      "code": "B070",
+      "code ": "B070",
       "description": "Plantar wart"
     },
     {
       "id": "764",
-      "code": "B078",
+      "code ": "B078",
       "description": "Other viral warts"
     },
     {
       "id": "765",
-      "code": "B079",
+      "code ": "B079",
       "description": "Viral wart, unspecified"
     },
     {
       "id": "766",
-      "code": "B08",
+      "code ": "B08",
       "description": "Oth viral infect with skin and mucous membrane lesions, NEC"
     },
     {
       "id": "767",
-      "code": "B080",
+      "code ": "B080",
       "description": "Other orthopoxvirus infections"
     },
     {
       "id": "768",
-      "code": "B0801",
+      "code ": "B0801",
       "description": "Cowpox and vaccinia not from vaccine"
     },
     {
       "id": "769",
-      "code": "B08010",
+      "code ": "B08010",
       "description": "Cowpox"
     },
     {
       "id": "770",
-      "code": "B08011",
+      "code ": "B08011",
       "description": "Vaccinia not from vaccine"
     },
     {
       "id": "771",
-      "code": "B0802",
+      "code ": "B0802",
       "description": "Orf virus disease"
     },
     {
       "id": "772",
-      "code": "B0803",
+      "code ": "B0803",
       "description": "Pseudocowpox [milker's node]"
     },
     {
       "id": "773",
-      "code": "B0804",
+      "code ": "B0804",
       "description": "Paravaccinia, unspecified"
     },
     {
       "id": "774",
-      "code": "B0809",
+      "code ": "B0809",
       "description": "Other orthopoxvirus infections"
     },
     {
       "id": "775",
-      "code": "B081",
+      "code ": "B081",
       "description": "Molluscum contagiosum"
     },
     {
       "id": "776",
-      "code": "B082",
+      "code ": "B082",
       "description": "Exanthema subitum [sixth disease]"
     },
     {
       "id": "777",
-      "code": "B0820",
+      "code ": "B0820",
       "description": "Exanthema subitum [sixth disease], unspecified"
     },
     {
       "id": "778",
-      "code": "B0821",
+      "code ": "B0821",
       "description": "Exanthema subitum [sixth disease] due to human herpesvirus 6"
     },
     {
       "id": "779",
-      "code": "B0822",
+      "code ": "B0822",
       "description": "Exanthema subitum [sixth disease] due to human herpesvirus 7"
     },
     {
       "id": "780",
-      "code": "B083",
+      "code ": "B083",
       "description": "Erythema infectiosum [fifth disease]"
     },
     {
       "id": "781",
-      "code": "B084",
+      "code ": "B084",
       "description": "Enteroviral vesicular stomatitis with exanthem"
     },
     {
       "id": "782",
-      "code": "B085",
+      "code ": "B085",
       "description": "Enteroviral vesicular pharyngitis"
     },
     {
       "id": "783",
-      "code": "B086",
+      "code ": "B086",
       "description": "Parapoxvirus infections"
     },
     {
       "id": "784",
-      "code": "B0860",
+      "code ": "B0860",
       "description": "Parapoxvirus infection, unspecified"
     },
     {
       "id": "785",
-      "code": "B0861",
+      "code ": "B0861",
       "description": "Bovine stomatitis"
     },
     {
       "id": "786",
-      "code": "B0862",
+      "code ": "B0862",
       "description": "Sealpox"
     },
     {
       "id": "787",
-      "code": "B0869",
+      "code ": "B0869",
       "description": "Other parapoxvirus infections"
     },
     {
       "id": "788",
-      "code": "B087",
+      "code ": "B087",
       "description": "Yatapoxvirus infections"
     },
     {
       "id": "789",
-      "code": "B0870",
+      "code ": "B0870",
       "description": "Yatapoxvirus infection, unspecified"
     },
     {
       "id": "790",
-      "code": "B0871",
+      "code ": "B0871",
       "description": "Tanapox virus disease"
     },
     {
       "id": "791",
-      "code": "B0872",
+      "code ": "B0872",
       "description": "Yaba pox virus disease"
     },
     {
       "id": "792",
-      "code": "B0879",
+      "code ": "B0879",
       "description": "Other yatapoxvirus infections"
     },
     {
       "id": "793",
-      "code": "B088",
+      "code ": "B088",
       "description": "Oth viral infections with skin and mucous membrane lesions"
     },
     {
       "id": "794",
-      "code": "B09",
+      "code ": "B09",
       "description": "Unsp viral infection with skin and mucous membrane lesions"
     },
     {
       "id": "795",
-      "code": "B10",
+      "code ": "B10",
       "description": "Other human herpesviruses"
     },
     {
       "id": "796",
-      "code": "B100",
+      "code ": "B100",
       "description": "Other human herpesvirus encephalitis"
     },
     {
       "id": "797",
-      "code": "B1001",
+      "code ": "B1001",
       "description": "Human herpesvirus 6 encephalitis"
     },
     {
       "id": "798",
-      "code": "B1009",
+      "code ": "B1009",
       "description": "Other human herpesvirus encephalitis"
     },
     {
       "id": "799",
-      "code": "B108",
+      "code ": "B108",
       "description": "Other human herpesvirus infection"
     },
     {
       "id": "800",
-      "code": "B1081",
+      "code ": "B1081",
       "description": "Human herpesvirus 6 infection"
     },
     {
       "id": "801",
-      "code": "B1082",
+      "code ": "B1082",
       "description": "Human herpesvirus 7 infection"
     },
     {
       "id": "802",
-      "code": "B1089",
+      "code ": "B1089",
       "description": "Other human herpesvirus infection"
     },
     {
       "id": "803",
-      "code": "B15",
+      "code ": "B15",
       "description": "Acute hepatitis A"
     },
     {
       "id": "804",
-      "code": "B150",
+      "code ": "B150",
       "description": "Hepatitis A with hepatic coma"
     },
     {
       "id": "805",
-      "code": "B159",
+      "code ": "B159",
       "description": "Hepatitis A without hepatic coma"
     },
     {
       "id": "806",
-      "code": "B16",
+      "code ": "B16",
       "description": "Acute hepatitis B"
     },
     {
       "id": "807",
-      "code": "B160",
+      "code ": "B160",
       "description": "Acute hepatitis B with delta-agent with hepatic coma"
     },
     {
       "id": "808",
-      "code": "B161",
+      "code ": "B161",
       "description": "Acute hepatitis B with delta-agent without hepatic coma"
     },
     {
       "id": "809",
-      "code": "B162",
+      "code ": "B162",
       "description": "Acute hepatitis B without delta-agent with hepatic coma"
     },
     {
       "id": "810",
-      "code": "B169",
+      "code ": "B169",
       "description": "Acute hepatitis B w/o delta-agent and without hepatic coma"
     },
     {
       "id": "811",
-      "code": "B17",
+      "code ": "B17",
       "description": "Other acute viral hepatitis"
     },
     {
       "id": "812",
-      "code": "B170",
+      "code ": "B170",
       "description": "Acute delta-(super) infection of hepatitis B carrier"
     },
     {
       "id": "813",
-      "code": "B171",
+      "code ": "B171",
       "description": "Acute hepatitis C"
     },
     {
       "id": "814",
-      "code": "B1710",
+      "code ": "B1710",
       "description": "Acute hepatitis C without hepatic coma"
     },
     {
       "id": "815",
-      "code": "B1711",
+      "code ": "B1711",
       "description": "Acute hepatitis C with hepatic coma"
     },
     {
       "id": "816",
-      "code": "B172",
+      "code ": "B172",
       "description": "Acute hepatitis E"
     },
     {
       "id": "817",
-      "code": "B178",
+      "code ": "B178",
       "description": "Other specified acute viral hepatitis"
     },
     {
       "id": "818",
-      "code": "B179",
+      "code ": "B179",
       "description": "Acute viral hepatitis, unspecified"
     },
     {
       "id": "819",
-      "code": "B18",
+      "code ": "B18",
       "description": "Chronic viral hepatitis"
     },
     {
       "id": "820",
-      "code": "B180",
+      "code ": "B180",
       "description": "Chronic viral hepatitis B with delta-agent"
     },
     {
       "id": "821",
-      "code": "B181",
+      "code ": "B181",
       "description": "Chronic viral hepatitis B without delta-agent"
     },
     {
       "id": "822",
-      "code": "B182",
+      "code ": "B182",
       "description": "Chronic viral hepatitis C"
     },
     {
       "id": "823",
-      "code": "B188",
+      "code ": "B188",
       "description": "Other chronic viral hepatitis"
     },
     {
       "id": "824",
-      "code": "B189",
+      "code ": "B189",
       "description": "Chronic viral hepatitis, unspecified"
     },
     {
       "id": "825",
-      "code": "B19",
+      "code ": "B19",
       "description": "Unspecified viral hepatitis"
     },
     {
       "id": "826",
-      "code": "B190",
+      "code ": "B190",
       "description": "Unspecified viral hepatitis with hepatic coma"
     },
     {
       "id": "827",
-      "code": "B191",
+      "code ": "B191",
       "description": "Unspecified viral hepatitis B"
     },
     {
       "id": "828",
-      "code": "B1910",
+      "code ": "B1910",
       "description": "Unspecified viral hepatitis B without hepatic coma"
     },
     {
       "id": "829",
-      "code": "B1911",
+      "code ": "B1911",
       "description": "Unspecified viral hepatitis B with hepatic coma"
     },
     {
       "id": "830",
-      "code": "B192",
+      "code ": "B192",
       "description": "Unspecified viral hepatitis C"
     },
     {
       "id": "831",
-      "code": "B1920",
+      "code ": "B1920",
       "description": "Unspecified viral hepatitis C without hepatic coma"
     },
     {
       "id": "832",
-      "code": "B1921",
+      "code ": "B1921",
       "description": "Unspecified viral hepatitis C with hepatic coma"
     },
     {
       "id": "833",
-      "code": "B199",
+      "code ": "B199",
       "description": "Unspecified viral hepatitis without hepatic coma"
     },
     {
       "id": "834",
-      "code": "B20",
+      "code ": "B20",
       "description": "Human immunodeficiency virus [HIV] disease"
     },
     {
       "id": "835",
-      "code": "B25",
+      "code ": "B25",
       "description": "Cytomegaloviral disease"
     },
     {
       "id": "836",
-      "code": "B250",
+      "code ": "B250",
       "description": "Cytomegaloviral pneumonitis"
     },
     {
       "id": "837",
-      "code": "B251",
+      "code ": "B251",
       "description": "Cytomegaloviral hepatitis"
     },
     {
       "id": "838",
-      "code": "B252",
+      "code ": "B252",
       "description": "Cytomegaloviral pancreatitis"
     },
     {
       "id": "839",
-      "code": "B258",
+      "code ": "B258",
       "description": "Other cytomegaloviral diseases"
     },
     {
       "id": "840",
-      "code": "B259",
+      "code ": "B259",
       "description": "Cytomegaloviral disease, unspecified"
     },
     {
       "id": "841",
-      "code": "B26",
+      "code ": "B26",
       "description": "Mumps"
     },
     {
       "id": "842",
-      "code": "B260",
+      "code ": "B260",
       "description": "Mumps orchitis"
     },
     {
       "id": "843",
-      "code": "B261",
+      "code ": "B261",
       "description": "Mumps meningitis"
     },
     {
       "id": "844",
-      "code": "B262",
+      "code ": "B262",
       "description": "Mumps encephalitis"
     },
     {
       "id": "845",
-      "code": "B263",
+      "code ": "B263",
       "description": "Mumps pancreatitis"
     },
     {
       "id": "846",
-      "code": "B268",
+      "code ": "B268",
       "description": "Mumps with other complications"
     },
     {
       "id": "847",
-      "code": "B2681",
+      "code ": "B2681",
       "description": "Mumps hepatitis"
     },
     {
       "id": "848",
-      "code": "B2682",
+      "code ": "B2682",
       "description": "Mumps myocarditis"
     },
     {
       "id": "849",
-      "code": "B2683",
+      "code ": "B2683",
       "description": "Mumps nephritis"
     },
     {
       "id": "850",
-      "code": "B2684",
+      "code ": "B2684",
       "description": "Mumps polyneuropathy"
     },
     {
       "id": "851",
-      "code": "B2685",
+      "code ": "B2685",
       "description": "Mumps arthritis"
     },
     {
       "id": "852",
-      "code": "B2689",
+      "code ": "B2689",
       "description": "Other mumps complications"
     },
     {
       "id": "853",
-      "code": "B269",
+      "code ": "B269",
       "description": "Mumps without complication"
     },
     {
       "id": "854",
-      "code": "B27",
+      "code ": "B27",
       "description": "Infectious mononucleosis"
     },
     {
       "id": "855",
-      "code": "B270",
+      "code ": "B270",
       "description": "Gammaherpesviral mononucleosis"
     },
     {
       "id": "856",
-      "code": "B2700",
+      "code ": "B2700",
       "description": "Gammaherpesviral mononucleosis without complication"
     },
     {
       "id": "857",
-      "code": "B2701",
+      "code ": "B2701",
       "description": "Gammaherpesviral mononucleosis with polyneuropathy"
     },
     {
       "id": "858",
-      "code": "B2702",
+      "code ": "B2702",
       "description": "Gammaherpesviral mononucleosis with meningitis"
     },
     {
       "id": "859",
-      "code": "B2709",
+      "code ": "B2709",
       "description": "Gammaherpesviral mononucleosis with other complications"
     },
     {
       "id": "860",
-      "code": "B271",
+      "code ": "B271",
       "description": "Cytomegaloviral mononucleosis"
     },
     {
       "id": "861",
-      "code": "B2710",
+      "code ": "B2710",
       "description": "Cytomegaloviral mononucleosis without complications"
     },
     {
       "id": "862",
-      "code": "B2711",
+      "code ": "B2711",
       "description": "Cytomegaloviral mononucleosis with polyneuropathy"
     },
     {
       "id": "863",
-      "code": "B2712",
+      "code ": "B2712",
       "description": "Cytomegaloviral mononucleosis with meningitis"
     },
     {
       "id": "864",
-      "code": "B2719",
+      "code ": "B2719",
       "description": "Cytomegaloviral mononucleosis with other complication"
     },
     {
       "id": "865",
-      "code": "B278",
+      "code ": "B278",
       "description": "Other infectious mononucleosis"
     },
     {
       "id": "866",
-      "code": "B2780",
+      "code ": "B2780",
       "description": "Other infectious mononucleosis without complication"
     },
     {
       "id": "867",
-      "code": "B2781",
+      "code ": "B2781",
       "description": "Other infectious mononucleosis with polyneuropathy"
     },
     {
       "id": "868",
-      "code": "B2782",
+      "code ": "B2782",
       "description": "Other infectious mononucleosis with meningitis"
     },
     {
       "id": "869",
-      "code": "B2789",
+      "code ": "B2789",
       "description": "Other infectious mononucleosis with other complication"
     },
     {
       "id": "870",
-      "code": "B279",
+      "code ": "B279",
       "description": "Infectious mononucleosis, unspecified"
     },
     {
       "id": "871",
-      "code": "B2790",
+      "code ": "B2790",
       "description": "Infectious mononucleosis, unspecified without complication"
     },
     {
       "id": "872",
-      "code": "B2791",
+      "code ": "B2791",
       "description": "Infectious mononucleosis, unspecified with polyneuropathy"
     },
     {
       "id": "873",
-      "code": "B2792",
+      "code ": "B2792",
       "description": "Infectious mononucleosis, unspecified with meningitis"
     },
     {
       "id": "874",
-      "code": "B2799",
+      "code ": "B2799",
       "description": "Infectious mononucleosis, unsp with other complication"
     },
     {
       "id": "875",
-      "code": "B30",
+      "code ": "B30",
       "description": "Viral conjunctivitis"
     },
     {
       "id": "876",
-      "code": "B300",
+      "code ": "B300",
       "description": "Keratoconjunctivitis due to adenovirus"
     },
     {
       "id": "877",
-      "code": "B301",
+      "code ": "B301",
       "description": "Conjunctivitis due to adenovirus"
     },
     {
       "id": "878",
-      "code": "B302",
+      "code ": "B302",
       "description": "Viral pharyngoconjunctivitis"
     },
     {
       "id": "879",
-      "code": "B303",
+      "code ": "B303",
       "description": "Acute epidemic hemorrhagic conjunctivitis (enteroviral)"
     },
     {
       "id": "880",
-      "code": "B308",
+      "code ": "B308",
       "description": "Other viral conjunctivitis"
     },
     {
       "id": "881",
-      "code": "B309",
+      "code ": "B309",
       "description": "Viral conjunctivitis, unspecified"
     },
     {
       "id": "882",
-      "code": "B33",
+      "code ": "B33",
       "description": "Other viral diseases, not elsewhere classified"
     },
     {
       "id": "883",
-      "code": "B330",
+      "code ": "B330",
       "description": "Epidemic myalgia"
     },
     {
       "id": "884",
-      "code": "B331",
+      "code ": "B331",
       "description": "Ross River disease"
     },
     {
       "id": "885",
-      "code": "B332",
+      "code ": "B332",
       "description": "Viral carditis"
     },
     {
       "id": "886",
-      "code": "B3320",
+      "code ": "B3320",
       "description": "Viral carditis, unspecified"
     },
     {
       "id": "887",
-      "code": "B3321",
+      "code ": "B3321",
       "description": "Viral endocarditis"
     },
     {
       "id": "888",
-      "code": "B3322",
+      "code ": "B3322",
       "description": "Viral myocarditis"
     },
     {
       "id": "889",
-      "code": "B3323",
+      "code ": "B3323",
       "description": "Viral pericarditis"
     },
     {
       "id": "890",
-      "code": "B3324",
+      "code ": "B3324",
       "description": "Viral cardiomyopathy"
     },
     {
       "id": "891",
-      "code": "B333",
+      "code ": "B333",
       "description": "Retrovirus infections, not elsewhere classified"
     },
     {
       "id": "892",
-      "code": "B334",
+      "code ": "B334",
       "description": "Hantavirus (cardio)-pulmonary syndrome [HPS] [HCPS]"
     },
     {
       "id": "893",
-      "code": "B338",
+      "code ": "B338",
       "description": "Other specified viral diseases"
     },
     {
       "id": "894",
-      "code": "B34",
+      "code ": "B34",
       "description": "Viral infection of unspecified site"
     },
     {
       "id": "895",
-      "code": "B340",
+      "code ": "B340",
       "description": "Adenovirus infection, unspecified"
     },
     {
       "id": "896",
-      "code": "B341",
+      "code ": "B341",
       "description": "Enterovirus infection, unspecified"
     },
     {
       "id": "897",
-      "code": "B342",
+      "code ": "B342",
       "description": "Coronavirus infection, unspecified"
     },
     {
       "id": "898",
-      "code": "B343",
+      "code ": "B343",
       "description": "Parvovirus infection, unspecified"
     },
     {
       "id": "899",
-      "code": "B344",
+      "code ": "B344",
       "description": "Papovavirus infection, unspecified"
     },
     {
       "id": "900",
-      "code": "B348",
+      "code ": "B348",
       "description": "Other viral infections of unspecified site"
     },
     {
       "id": "901",
-      "code": "B349",
+      "code ": "B349",
       "description": "Viral infection, unspecified"
     },
     {
       "id": "902",
-      "code": "B35",
+      "code ": "B35",
       "description": "Dermatophytosis"
     },
     {
       "id": "903",
-      "code": "B350",
+      "code ": "B350",
       "description": "Tinea barbae and tinea capitis"
     },
     {
       "id": "904",
-      "code": "B351",
+      "code ": "B351",
       "description": "Tinea unguium"
     },
     {
       "id": "905",
-      "code": "B352",
+      "code ": "B352",
       "description": "Tinea manuum"
     },
     {
       "id": "906",
-      "code": "B353",
+      "code ": "B353",
       "description": "Tinea pedis"
     },
     {
       "id": "907",
-      "code": "B354",
+      "code ": "B354",
       "description": "Tinea corporis"
     },
     {
       "id": "908",
-      "code": "B355",
+      "code ": "B355",
       "description": "Tinea imbricata"
     },
     {
       "id": "909",
-      "code": "B356",
+      "code ": "B356",
       "description": "Tinea cruris"
     },
     {
       "id": "910",
-      "code": "B358",
+      "code ": "B358",
       "description": "Other dermatophytoses"
     },
     {
       "id": "911",
-      "code": "B359",
+      "code ": "B359",
       "description": "Dermatophytosis, unspecified"
     },
     {
       "id": "912",
-      "code": "B36",
+      "code ": "B36",
       "description": "Other superficial mycoses"
     },
     {
       "id": "913",
-      "code": "B360",
+      "code ": "B360",
       "description": "Pityriasis versicolor"
     },
     {
       "id": "914",
-      "code": "B361",
+      "code ": "B361",
       "description": "Tinea nigra"
     },
     {
       "id": "915",
-      "code": "B362",
+      "code ": "B362",
       "description": "White piedra"
     },
     {
       "id": "916",
-      "code": "B363",
+      "code ": "B363",
       "description": "Black piedra"
     },
     {
       "id": "917",
-      "code": "B368",
+      "code ": "B368",
       "description": "Other specified superficial mycoses"
     },
     {
       "id": "918",
-      "code": "B369",
+      "code ": "B369",
       "description": "Superficial mycosis, unspecified"
     },
     {
       "id": "919",
-      "code": "B37",
+      "code ": "B37",
       "description": "Candidiasis"
     },
     {
       "id": "920",
-      "code": "B370",
+      "code ": "B370",
       "description": "Candidal stomatitis"
     },
     {
       "id": "921",
-      "code": "B371",
+      "code ": "B371",
       "description": "Pulmonary candidiasis"
     },
     {
       "id": "922",
-      "code": "B372",
+      "code ": "B372",
       "description": "Candidiasis of skin and nail"
     },
     {
       "id": "923",
-      "code": "B373",
+      "code ": "B373",
       "description": "Candidiasis of vulva and vagina"
     },
     {
       "id": "924",
-      "code": "B374",
+      "code ": "B374",
       "description": "Candidiasis of other urogenital sites"
     },
     {
       "id": "925",
-      "code": "B3741",
+      "code ": "B3741",
       "description": "Candidal cystitis and urethritis"
     },
     {
       "id": "926",
-      "code": "B3742",
+      "code ": "B3742",
       "description": "Candidal balanitis"
     },
     {
       "id": "927",
-      "code": "B3749",
+      "code ": "B3749",
       "description": "Other urogenital candidiasis"
     },
     {
       "id": "928",
-      "code": "B375",
+      "code ": "B375",
       "description": "Candidal meningitis"
     },
     {
       "id": "929",
-      "code": "B376",
+      "code ": "B376",
       "description": "Candidal endocarditis"
     },
     {
       "id": "930",
-      "code": "B377",
+      "code ": "B377",
       "description": "Candidal sepsis"
     },
     {
       "id": "931",
-      "code": "B378",
+      "code ": "B378",
       "description": "Candidiasis of other sites"
     },
     {
       "id": "932",
-      "code": "B3781",
+      "code ": "B3781",
       "description": "Candidal esophagitis"
     },
     {
       "id": "933",
-      "code": "B3782",
+      "code ": "B3782",
       "description": "Candidal enteritis"
     },
     {
       "id": "934",
-      "code": "B3783",
+      "code ": "B3783",
       "description": "Candidal cheilitis"
     },
     {
       "id": "935",
-      "code": "B3784",
+      "code ": "B3784",
       "description": "Candidal otitis externa"
     },
     {
       "id": "936",
-      "code": "B3789",
+      "code ": "B3789",
       "description": "Other sites of candidiasis"
     },
     {
       "id": "937",
-      "code": "B379",
+      "code ": "B379",
       "description": "Candidiasis, unspecified"
     },
     {
       "id": "938",
-      "code": "B38",
+      "code ": "B38",
       "description": "Coccidioidomycosis"
     },
     {
       "id": "939",
-      "code": "B380",
+      "code ": "B380",
       "description": "Acute pulmonary coccidioidomycosis"
     },
     {
       "id": "940",
-      "code": "B381",
+      "code ": "B381",
       "description": "Chronic pulmonary coccidioidomycosis"
     },
     {
       "id": "941",
-      "code": "B382",
+      "code ": "B382",
       "description": "Pulmonary coccidioidomycosis, unspecified"
     },
     {
       "id": "942",
-      "code": "B383",
+      "code ": "B383",
       "description": "Cutaneous coccidioidomycosis"
     },
     {
       "id": "943",
-      "code": "B384",
+      "code ": "B384",
       "description": "Coccidioidomycosis meningitis"
     },
     {
       "id": "944",
-      "code": "B387",
+      "code ": "B387",
       "description": "Disseminated coccidioidomycosis"
     },
     {
       "id": "945",
-      "code": "B388",
+      "code ": "B388",
       "description": "Other forms of coccidioidomycosis"
     },
     {
       "id": "946",
-      "code": "B3881",
+      "code ": "B3881",
       "description": "Prostatic coccidioidomycosis"
     },
     {
       "id": "947",
-      "code": "B3889",
+      "code ": "B3889",
       "description": "Other forms of coccidioidomycosis"
     },
     {
       "id": "948",
-      "code": "B389",
+      "code ": "B389",
       "description": "Coccidioidomycosis, unspecified"
     },
     {
       "id": "949",
-      "code": "B39",
+      "code ": "B39",
       "description": "Histoplasmosis"
     },
     {
       "id": "950",
-      "code": "B390",
+      "code ": "B390",
       "description": "Acute pulmonary histoplasmosis capsulati"
     },
     {
       "id": "951",
-      "code": "B391",
+      "code ": "B391",
       "description": "Chronic pulmonary histoplasmosis capsulati"
     },
     {
       "id": "952",
-      "code": "B392",
+      "code ": "B392",
       "description": "Pulmonary histoplasmosis capsulati, unspecified"
     },
     {
       "id": "953",
-      "code": "B393",
+      "code ": "B393",
       "description": "Disseminated histoplasmosis capsulati"
     },
     {
       "id": "954",
-      "code": "B394",
+      "code ": "B394",
       "description": "Histoplasmosis capsulati, unspecified"
     },
     {
       "id": "955",
-      "code": "B395",
+      "code ": "B395",
       "description": "Histoplasmosis duboisii"
     },
     {
       "id": "956",
-      "code": "B399",
+      "code ": "B399",
       "description": "Histoplasmosis, unspecified"
     },
     {
       "id": "957",
-      "code": "B40",
+      "code ": "B40",
       "description": "Blastomycosis"
     },
     {
       "id": "958",
-      "code": "B400",
+      "code ": "B400",
       "description": "Acute pulmonary blastomycosis"
     },
     {
       "id": "959",
-      "code": "B401",
+      "code ": "B401",
       "description": "Chronic pulmonary blastomycosis"
     },
     {
       "id": "960",
-      "code": "B402",
+      "code ": "B402",
       "description": "Pulmonary blastomycosis, unspecified"
     },
     {
       "id": "961",
-      "code": "B403",
+      "code ": "B403",
       "description": "Cutaneous blastomycosis"
     },
     {
       "id": "962",
-      "code": "B407",
+      "code ": "B407",
       "description": "Disseminated blastomycosis"
     },
     {
       "id": "963",
-      "code": "B408",
+      "code ": "B408",
       "description": "Other forms of blastomycosis"
     },
     {
       "id": "964",
-      "code": "B4081",
+      "code ": "B4081",
       "description": "Blastomycotic meningoencephalitis"
     },
     {
       "id": "965",
-      "code": "B4089",
+      "code ": "B4089",
       "description": "Other forms of blastomycosis"
     },
     {
       "id": "966",
-      "code": "B409",
+      "code ": "B409",
       "description": "Blastomycosis, unspecified"
     },
     {
       "id": "967",
-      "code": "B41",
+      "code ": "B41",
       "description": "Paracoccidioidomycosis"
     },
     {
       "id": "968",
-      "code": "B410",
+      "code ": "B410",
       "description": "Pulmonary paracoccidioidomycosis"
     },
     {
       "id": "969",
-      "code": "B417",
+      "code ": "B417",
       "description": "Disseminated paracoccidioidomycosis"
     },
     {
       "id": "970",
-      "code": "B418",
+      "code ": "B418",
       "description": "Other forms of paracoccidioidomycosis"
     },
     {
       "id": "971",
-      "code": "B419",
+      "code ": "B419",
       "description": "Paracoccidioidomycosis, unspecified"
     },
     {
       "id": "972",
-      "code": "B42",
+      "code ": "B42",
       "description": "Sporotrichosis"
     },
     {
       "id": "973",
-      "code": "B420",
+      "code ": "B420",
       "description": "Pulmonary sporotrichosis"
     },
     {
       "id": "974",
-      "code": "B421",
+      "code ": "B421",
       "description": "Lymphocutaneous sporotrichosis"
     },
     {
       "id": "975",
-      "code": "B427",
+      "code ": "B427",
       "description": "Disseminated sporotrichosis"
     },
     {
       "id": "976",
-      "code": "B428",
+      "code ": "B428",
       "description": "Other forms of sporotrichosis"
     },
     {
       "id": "977",
-      "code": "B4281",
+      "code ": "B4281",
       "description": "Cerebral sporotrichosis"
     },
     {
       "id": "978",
-      "code": "B4282",
+      "code ": "B4282",
       "description": "Sporotrichosis arthritis"
     },
     {
       "id": "979",
-      "code": "B4289",
+      "code ": "B4289",
       "description": "Other forms of sporotrichosis"
     },
     {
       "id": "980",
-      "code": "B429",
+      "code ": "B429",
       "description": "Sporotrichosis, unspecified"
     },
     {
       "id": "981",
-      "code": "B43",
+      "code ": "B43",
       "description": "Chromomycosis and pheomycotic abscess"
     },
     {
       "id": "982",
-      "code": "B430",
+      "code ": "B430",
       "description": "Cutaneous chromomycosis"
     },
     {
       "id": "983",
-      "code": "B431",
+      "code ": "B431",
       "description": "Pheomycotic brain abscess"
     },
     {
       "id": "984",
-      "code": "B432",
+      "code ": "B432",
       "description": "Subcutaneous pheomycotic abscess and cyst"
     },
     {
       "id": "985",
-      "code": "B438",
+      "code ": "B438",
       "description": "Other forms of chromomycosis"
     },
     {
       "id": "986",
-      "code": "B439",
+      "code ": "B439",
       "description": "Chromomycosis, unspecified"
     },
     {
       "id": "987",
-      "code": "B44",
+      "code ": "B44",
       "description": "Aspergillosis"
     },
     {
       "id": "988",
-      "code": "B440",
+      "code ": "B440",
       "description": "Invasive pulmonary aspergillosis"
     },
     {
       "id": "989",
-      "code": "B441",
+      "code ": "B441",
       "description": "Other pulmonary aspergillosis"
     },
     {
       "id": "990",
-      "code": "B442",
+      "code ": "B442",
       "description": "Tonsillar aspergillosis"
     },
     {
       "id": "991",
-      "code": "B447",
+      "code ": "B447",
       "description": "Disseminated aspergillosis"
     },
     {
       "id": "992",
-      "code": "B448",
+      "code ": "B448",
       "description": "Other forms of aspergillosis"
     },
     {
       "id": "993",
-      "code": "B4481",
+      "code ": "B4481",
       "description": "Allergic bronchopulmonary aspergillosis"
     },
     {
       "id": "994",
-      "code": "B4489",
+      "code ": "B4489",
       "description": "Other forms of aspergillosis"
     },
     {
       "id": "995",
-      "code": "B449",
+      "code ": "B449",
       "description": "Aspergillosis, unspecified"
     },
     {
       "id": "996",
-      "code": "B45",
+      "code ": "B45",
       "description": "Cryptococcosis"
     },
     {
       "id": "997",
-      "code": "B450",
+      "code ": "B450",
       "description": "Pulmonary cryptococcosis"
     },
     {
       "id": "998",
-      "code": "B451",
+      "code ": "B451",
       "description": "Cerebral cryptococcosis"
     },
     {
       "id": "999",
-      "code": "B452",
+      "code ": "B452",
       "description": "Cutaneous cryptococcosis"
     },
     {
       "id": "1000",
-      "code": "B453",
+      "code ": "B453",
       "description": "Osseous cryptococcosis"
     }
   ],
@@ -10888,21 +10915,7 @@
       "medication": ""
     }
   ],
-  "patientdietplan": [
-    {
-      "earlymorning": "aa",
-      "breakfast": "aa",
-      "mid_morning": "aa",
-      "lunch": "aa",
-      "evening": "aa",
-      "dinner": "aa",
-      "post_dinner_activity": "aa",
-      "bedtime": "aa",
-      "physicianId": 32,
-      "patientId": "48",
-      "id": 1
-    }
-  ],
+  "patientdietplan": [],
   "patient_procedures": [
     {
       "doc_id": 56,
@@ -10938,21 +10951,71 @@
       "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
       "code": "16071",
       "id": 8
-    },
-    {
-      "doc_id": 32,
-      "patientId": "48",
-      "desc": "Motor Function Treatment of Musculoskeletal System - Lower Back / Lower Extremity",
-      "code": "F07L3ZZ",
-      "id": 9
-    },
-    {
-      "doc_id": 32,
-      "patientId": "48",
-      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
-      "code": "16071",
-      "id": 10
     }
   ],
-  "patient_diagnosis": []
+  "patient_diagnosis": [
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
+      "code": "A001",
+      "id": 1
+    },
+    {
+      "doc_id": 55,
+      "patientId": "24",
+      "description": "Typhoid fever",
+      "code": "A010",
+      "id": 2
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Typhoid fever",
+      "code": "A010",
+      "id": 3
+    },
+    {
+      "doc_id": 55,
+      "patientId": "26",
+      "description": "Typhoid fever",
+      "code": "A010",
+      "id": 4
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Cholera due to Vibrio cholerae 01, biovar cholerae",
+      "code": "A000",
+      "id": 5
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
+      "code": "A001",
+      "id": 6
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
+      "code": "A001",
+      "id": 7
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
+      "code": "A001",
+      "id": 8
+    },
+    {
+      "doc_id": 56,
+      "patientId": "1",
+      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
+      "code": "A001",
+      "id": 9
+    }
+  ]
 }
