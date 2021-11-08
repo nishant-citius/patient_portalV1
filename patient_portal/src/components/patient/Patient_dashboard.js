@@ -72,7 +72,7 @@ const Patient_dashboard = (props) => {
 
   function loadInitialData() {
     getPatientVitals(props.currentUser.id);
-    props.getMedicalAllergy(props.currentUser.id);
+    props.getMedicationAllergies(props.currentUser.id);
   }
 
   return (
@@ -297,7 +297,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    getMedicalAllergy: (userId) =>
+    getMedicationAllergies: (userId) =>
       dispatch(actionCreator.GetMedicationAllergies(userId)),
     getImmunization: (userId) =>
       dispatch(actionCreator.GetPatientImmunization(userId)),

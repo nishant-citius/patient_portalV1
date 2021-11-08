@@ -28,7 +28,6 @@ describe("Demographics test", () => {
   });
   test("Should render Demographics Component", () => {
     const wrapper = mount(jsx);
-    console.log(wrapper);
     expect(wrapper.exists("Demographics")).toBe(true);
   });
 

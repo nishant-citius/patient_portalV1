@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
-import Immunization from "../patient/Immunization";
+// import Immunization from "../patient/Immunization";
 import PhyMedicationAllergies from "../physician/PhyMedicationAllergy";
 import Proceduers from "./PhyProcedure";
 import DietPlan from "../physician/PatientDietPlan";
@@ -13,6 +13,7 @@ import Vitals from "./PatientVitals";
 import { useParams, useLocation } from "react-router";
 import * as actions from "../../redux/actions/userActionCreater";
 import Diagnosis from "./PhyDiagnosis";
+import ImmunizationDetails from "components/admin/ImmunizationDetails";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -78,7 +79,7 @@ const AttendAppointment = (props) => {
             <Tab label="Immunization" {...a11yProps(1)} />
             <Tab label="Medication Allergies" {...a11yProps(2)} />
             <Tab label="Procedures" {...a11yProps(3)} />
-            <Tab label="Daignosis" {...a11yProps(4)} />
+            <Tab label="Diagnosis" {...a11yProps(4)} />
             <Tab label="Diet Plan" {...a11yProps(5)} />
           </Tabs>
         </Box>
@@ -91,7 +92,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <Immunization />
+          <ImmunizationDetails patientId={patientId} fromAdmin={true} />
         </TabPanel>
 
         <TabPanel value={value} index={2}>
