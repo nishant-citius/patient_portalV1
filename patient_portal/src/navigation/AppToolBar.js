@@ -187,6 +187,37 @@ function AppToolBar(props) {
     );
   };
 
+
+  const displayNotificationIcons = () => {
+    let iconJSX = null;
+
+    if (props.role === "admin") {
+      iconJSX = (
+        <>
+          <Badge badgeContent={props.count} color="secondary">
+            <PersonIcon onClick={handleAdminNotification} />
+          </Badge>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <Badge badgeContent={users.length} color="secondary">
+            <MailIcon onClick={handleAppointmentNotification} />
+          </Badge>
+        </>
+      );
+    } else if (props.role === "physician") {
+      iconJSX = (
+        <>
+          <Badge badgeContent={users.length} color="secondary">
+            <CalendarTodayIcon onClick={handlePhyAppointmentNotification} />
+          </Badge>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </>
+      );
+    } else {
+    }
+
+    return iconJSX;
+  };
+
   return (
     <AppBar position="fixed">
       <ToolBar className={classes.toolbar}>
@@ -208,55 +239,8 @@ function AppToolBar(props) {
           </>
         ) : (
           <>
-            {/* <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ "aria-label": "search" }}
-              />
-            </div> */}
             <div className={classes.icons}>
-              <SearchIcon
-                className={classes.searchbutton}
-                onClick={() => setOpen(true)}
-              />
-              {props.role === "admin" ? (
-                <Badge badgeContent={props.count} color="secondary">
-                  <PersonIcon onClick={handleAdminNotification} />
-                </Badge>
-              ) : (
-                <Badge badgeContent={0} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              )}
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              {props.role === "admin" ? (
-                <Badge badgeContent={users.length} color="secondary">
-                  <MailIcon onClick={handleAppointmentNotification} />
-                </Badge>
-              ) : (
-                <Badge badgeContent={0} color="secondary">
-                  <MailIcon />
-                </Badge>
-              )}
-
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              {props.role === "physician" ? (
-                <Badge badgeContent={users.length} color="secondary">
-                  <CalendarTodayIcon onClick={handlePhyAppointmentNotification} />
-                </Badge>
-              ) : (
-                <Badge badgeContent={0} color="secondary">
-                <CalendarTodayIcon />
-              </Badge>
-              )}
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              {displayNotificationIcons()} &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
                 onClick={HandleClick}
                 alt={props.currentUser.fName}
@@ -295,9 +279,11 @@ function AppToolBar(props) {
         openPopup={openAppointmentPopup}
         setOpenPopup={setOpenAppointmentPopup}
       >
-        <AppointmentNotifications  title="Scheduled Appointment"
-        openPopup={openAppointmentPopup}
-        setOpenPopup={setOpenAppointmentPopup}/>
+        <AppointmentNotifications
+          title="Scheduled Appointment"
+          openPopup={openAppointmentPopup}
+          setOpenPopup={setOpenAppointmentPopup}
+        />
       </ModalPopup>
       <ModalPopup
         title="Scheduled Appointment"
@@ -306,8 +292,6 @@ function AppToolBar(props) {
       >
         <PhyAppointmentNotifications />
       </ModalPopup>
-
-      
     </AppBar>
   );
 }
