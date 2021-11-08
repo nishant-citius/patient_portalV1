@@ -56,6 +56,7 @@ function PatientList(props) {
   const onChangeRowsPerPage = (event) => {
     setRowsPerPage(event.target.value);
   };
+  
   useEffect(() => {
     fetchUserDetails();
   });
@@ -76,10 +77,12 @@ function PatientList(props) {
       ...confirmDialog,
       isOpen: false,
     });
+
     props.flashNotification({
       message: "Patient Deleted Successfully...!",
       type: "success",
     });
+
     props.getAllPatients();
   }
 

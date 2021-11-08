@@ -51,15 +51,17 @@ function Proceduers(props) {
       code: procedureCode,
     };
     addPatientProcedure(obj);
-    alert("sucessfully submited");
     setDisable(true);
   }
 
   function addPatientProcedure(_procedure) {
     procedureServices.addPatientProcedure(_procedure).then(
       (response) => {
-        if (response.status === 200) {
-          alert("Patient Procedure Successfully...");
+        if (response.status === 201) {
+          props.flashNotification({
+            message: "Procedure Added Successfully...!",
+            type: "success",
+          });
         }
       },
       (error) => {}

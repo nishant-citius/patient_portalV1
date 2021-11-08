@@ -21,6 +21,7 @@ const DemographicsDetails = (props) => {
         if (isAvailable) {
           return;
         } else {
+          props.getdemographics(props.patientId);
           setIsAvailable(true);
         }
       }
@@ -95,7 +96,7 @@ const DemographicsDetails = (props) => {
       family_medical_history: values.family_medical_history,
       surgeries: values.surgeries,
       insurance_provider: values.insurance_provider,
-      userid: props.demographicsDetails[0].id,
+      userid: props.demographicsDetails[0].userid,
     };
 
     if (isAvailable) {

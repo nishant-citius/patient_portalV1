@@ -26,6 +26,10 @@ const DietPlan = (props) => {
         if (response.data.length > 0) {
           addPatientDiet(response.data);
           setDietAdded(true);
+          props.flashNotification({
+            message: "Patient Diet Plan Added Successfully...!",
+            type: "success",
+          });
         }
       },
       (error) => {
@@ -37,8 +41,11 @@ const DietPlan = (props) => {
   function updatePatientDiet(patientId, newData) {
     adminService.updatePatientDiet(patientId, newData).then(
       (response) => {
-        if (response.status === 200) {
-          alert("Patient Diet Updated Successfully...");
+        if (response.status === 201) {
+          props.flashNotification({
+            message: "Patient Diet Plan Updated Successfully...!",
+            type: "success",
+          });
         }
       },
       (error) => {}

@@ -131,11 +131,11 @@ const RegisterUser = (props) => {
                 margin="normal"
                 label="D.O.B"
                 type="date"
-                //placeholder="enter dob"
                 fullWidth
                 name="dob"
                 id="dob"
                 variant="filled"
+                className="pt-35"
                 helperText={<ErrorMessage name="dob" />}
               />
               <Field

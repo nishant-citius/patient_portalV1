@@ -55,15 +55,17 @@ function Diagnosis(props) {
 
     console.log(obj);
     addPatientDiagnosis(obj);
-    alert("sucessfully submited");
     setDisable(true);
   }
 
   function addPatientDiagnosis(_diagnosis) {
     diagnosisService.addPatientDiagnosis(_diagnosis).then(
       (response) => {
-        if (response.status === 200) {
-          alert("Patient dignosis Successfully...");
+        if (response.status === 201) {
+          props.flashNotification({
+            message: "Diagnosis Added Successfully...!",
+            type: "success",
+          });
         }
       },
       (error) => {}
