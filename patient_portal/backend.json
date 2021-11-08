@@ -208,7 +208,7 @@
       "mobile": "787698976D",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 34
     },
     {
@@ -221,7 +221,7 @@
       "mobile": "6789468988",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 35
     },
     {
@@ -234,7 +234,7 @@
       "mobile": "8977567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 36
     },
     {
@@ -247,7 +247,7 @@
       "mobile": "8677567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 37
     },
     {
@@ -260,7 +260,7 @@
       "mobile": "8106989754",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 38
     },
     {
@@ -287,7 +287,7 @@
       "mobile": "7655443329",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 39
     },
     {
@@ -321,21 +321,6 @@
       "id": 27
     },
     {
-      "email": "mitashi@gmail.com",
-      "password": "$2a$10$gmveacACTC5QM6EvMpaHq.kQG849e.vKXeyAZemor9YCH/sKFiz0O",
-      "fName": "Mitashi",
-      "lName": "thakur",
-      "dob": "2021-11-16",
-      "username": "mitashi20",
-      "rpassword": "12345",
-      "mobile": 6576688787,
-      "blood_group": "o-",
-      "role": "patient",
-      "createdDate": "Wed Nov 03 2021 17:17:34 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 40
-    },
-    {
       "email": "sp@email.com",
       "password": "$2a$10$JbFRkJCgLjcZXat10ZtLgecw8VYTrXEtRpKrgX04rSWadG7DFnGs2",
       "fName": "shiva ",
@@ -362,6 +347,36 @@
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 20
+    },
+    {
+      "email": "amar@gmail.com",
+      "password": "$2a$10$Uwm3JbH/0DMH4VDKy3q/XeB0h0Bl0kH2B6tAsqHipglcW1F9H8ZEK",
+      "fName": "Amar",
+      "lName": "Varma",
+      "dob": "2021-02-01",
+      "username": "amar2022",
+      "mobile": "9876543210",
+      "role": "physician",
+      "speciality": "neurology",
+      "rpassword": "12345",
+      "createdDate": "Mon Nov 08 2021 11:52:34 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 57
+    },
+    {
+      "email": "sham@email.com",
+      "fName": "sham",
+      "lName": "rautt",
+      "dob": "2021-11-02",
+      "username": "amar@2222",
+      "rpassword": "12345",
+      "mobile": 767674544242,
+      "blood_group": "b+",
+      "role": "patient",
+      "createdDate": "Mon Nov 08 2021 11:59:45 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 58,
+      "password": "$2a$10$GFkG91zRPNBcmlfCAQblTe7d37GapD9el66mBwJ2MttK8OpN8RCKy"
     }
   ],
   "medic_allergy": [
@@ -998,22 +1013,6 @@
       "id": 13
     },
     {
-      "fName": "sanjay",
-      "lName": "sharma",
-      "dob": "2021-11-25",
-      "mobile_no": 8788286580,
-      "doc_id": 20,
-      "doc_name": "Sudhir Koganti",
-      "appointment_title": "Checking",
-      "appointment_start_time": "16:03",
-      "appointment_end_time": "17:04",
-      "appointmentDate": "2021-11-05",
-      "appointment_desc": "Checking",
-      "createdBy": "sanjaysharma",
-      "createdDate": "2021-11-05T07:30:39.818Z",
-      "patientId": 26
-    },
-    {
       "fName": "Nishant",
       "lName": "Chaubey",
       "dob": "2021-09-30",
@@ -1030,6 +1029,42 @@
       "patientId": 1,
       "status": "approved",
       "id": 14
+    },
+    {
+      "fName": "sham",
+      "lName": "raut",
+      "dob": "2021-11-02",
+      "mobile_no": 2345678895,
+      "doc_id": 57,
+      "doc_name": "Amar Varma",
+      "appointment_title": "Something",
+      "appointment_start_time": "14:06",
+      "appointment_end_time": "14:08",
+      "appointmentDate": "2021-11-09",
+      "appointment_desc": "jshdk",
+      "createdBy": "shamraut",
+      "createdDate": "2021-11-08T06:36:43.081Z",
+      "patientId": 58,
+      "status": "approved",
+      "id": 15
+    },
+    {
+      "fName": "sham",
+      "lName": "rautt",
+      "dob": "2021-11-02",
+      "mobile_no": 65342425252,
+      "doc_id": 57,
+      "doc_name": "Amar Varma",
+      "appointment_title": "Something",
+      "appointment_start_time": "14:12",
+      "appointment_end_time": "14:17",
+      "appointmentDate": "2021-11-08",
+      "appointment_desc": "Checking..",
+      "createdBy": "shamrautt",
+      "createdDate": "2021-11-08T06:42:54.922Z",
+      "patientId": 58,
+      "status": "completed",
+      "id": 16
     }
   ],
   "demographics": [
@@ -1660,14 +1695,6 @@
       "AllergyName": "Fungus",
       "AllergenSource": "Alternaria alternata",
       "Isoforms_or_partial_sequences_of_allergen": "Alternaria MnSOD Alt a 14",
-      "Allerginicity": "IgE but no biological test"
-    },
-    {
-      "id": "Alt a 3.0101",
-      "AllergyType": "Fungi",
-      "AllergyName": "Fungus",
-      "AllergenSource": "Alternaria alternata",
-      "Isoforms_or_partial_sequences_of_allergen": "Alternaria Alt a 3 HSP",
       "Allerginicity": "IgE but no biological test"
     },
     {
