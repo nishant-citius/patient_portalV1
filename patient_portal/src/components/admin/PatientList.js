@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./admin.css";
 import { connect } from "react-redux";
 import * as actioncreators from "../../redux/actions/userActionCreater";
@@ -39,124 +39,171 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export class PatientList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: 0,
-      rowPerPage: 6,
-    };
-  }
+// export class PatientList extends React.Component {
+function PatientList(props) {
+  // constructor(props) {
+  //   super(props);
+  //   state = {
+  //     page: 0,
+  //     rowPerPage: 6,
+  //   };
+  // }
 
-  onPageChange = (event, nextPage) => {
-    this.setState({
-      ...this.state,
-      page: nextPage,
-    });
+  const [page, setPage] = useState(0);
+  const [rowPerPage, setRowsPerPage] = useState(6);
+  const [detailFetched, setDetailsFetched] = useState(false);
+  const [confirmDialog, setConfirmDialog] = useState({
+    isOpen: false,
+    title: "",
+    subTitle: "",
+  });
+
+  // onPageChange = (event, nextPage) => {
+  //   setState({
+  //     ...state,
+  //     page: nextPage,
+  //   });
+  // };
+
+  // onChangeRowsPerPage = (event) => {
+  //   setState({
+  //     ...state,
+  //     rowPerPage: event.target.value,
+  //   });
+  // };
+
+  const onPageChange = (event, nextPage) => {
+    setPage(nextPage);
   };
 
-  onChangeRowsPerPage = (event) => {
-    this.setState({
-      ...this.state,
-      rowPerPage: event.target.value,
-    });
+  const onChangeRowsPerPage = (event) => {
+    setRowsPerPage(event.target.value);
   };
 
-  componentDidMount() {
-    this.props.getAllPatients();
-    this.props.getDemographics();
+  // componentDidMount() {
+  //   props.getAllPatients();
+  //   props.getDemographics();
+  // }
+
+  useEffect(() => {
+    fetchUserDetails();
+  });
+
+  function fetchUserDetails() {
+    if (detailFetched) {
+      return;
+    } else {
+      props.getAllPatients();
+      props.getDemographics();
+      setDetailsFetched(true);
+    }
   }
 
-  deleteUser(userId) {
-    this.props.removeUser(userId);
-    this.props.flashNotification({
+  function deleteUser(userId) {
+    props.removeUser(userId);
+    setConfirmDialog({
+      ...confirmDialog,
+      isOpen: false,
+    });
+    props.flashNotification({
       message: "Patient Deleted Successfully...!",
       type: "success",
     });
-    this.props.getAllPatients();
+    props.getAllPatients();
   }
 
-  render() {
-    return (
-      <>
-        <Container>
-          <h4 className="text-center fw-bold ">Patient List</h4>
-          <TableContainer component={Paper} style={{ marginTop: "20px" }}>
-            <Table>
-              <TableHead className="tablehead">
-                <TableRow>
-                  <TableCell className="tableCell">Sr. No</TableCell>
-                  <TableCell className="tableCell">Name</TableCell>
-                  <TableCell className="tableCell">D.O.B.</TableCell>
-                  <TableCell className="tableCell">Email</TableCell>
-                  <TableCell className="tableCell">Phone</TableCell>
-                  <TableCell className="tableCell">Status</TableCell>
-                  <TableCell className="tableCell">Action</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {this.props.patientData
-                  .slice(
-                    this.state.page * this.state.rowPerPage,
-                    this.state.page * this.state.rowPerPage +
-                      this.state.rowPerPage
-                  )
-                  .map((user, index) => {
-                    return (
-                      <TableRow key={index}>
-                        <TableCell>{index + 1}</TableCell>
-                        <TableCell>{`${user.fName} ${user.lName}`}</TableCell>
-                        <TableCell>{user.dob}</TableCell>
-                        <TableCell>{user.email}</TableCell>
-                        <TableCell>{user.mobile}</TableCell>
-                        <TableCell>
-                          {user.isActive ? (
-                            <>
-                              <BsCheckCircleFill className="hand-pointer" />
-                              <span className="p-2">Active</span>
-                            </>
-                          ) : (
-                            <>
-                              <BsFillXCircleFill className="hand-pointer" />
-                              <span className="p-2">Inactive</span>
-                            </>
-                          )}
-                        </TableCell>
-                        <TableCell>
-                          <span className="p-2">
-                            <Link to={`/userdetails/${user.id}`}>
-                              <BsPersonFill />
-                            </Link>
-                          </span>
-                          <span className="p-2">
-                            <Link to={`/edit/${user.id}`}>
-                              <BsFillPencilFill />
-                            </Link>
-                          </span>
-                          <span className="p-2 hand-pointer">
-                            <BsFillTrashFill
-                              onClick={() => this.deleteUser(user.id)}
-                            />
-                          </span>
-                        </TableCell>
-                      </TableRow>
-                    );
-                  })}
-              </TableBody>
-            </Table>
-            <TablePagination
-              rowsPerPageOptions={[6, 10, 20, 25]}
-              count={this.props.patientData.length}
-              rowsPerPage={this.state.rowPerPage}
-              page={this.state.page}
-              onPageChange={this.onPageChange}
-              onChangeRowsPerPage={this.onChangeRowsPerPage}
-            />
-          </TableContainer>
-        </Container>
-      </>
-    );
-  }
+  // render() {
+  return (
+    <>
+      <Container>
+        <h4 className="text-center fw-bold ">Patient List</h4>
+        <TableContainer component={Paper} style={{ marginTop: "20px" }}>
+          <Table>
+            <TableHead className="tablehead">
+              <TableRow>
+                <TableCell className="tableCell">Sr. No</TableCell>
+                <TableCell className="tableCell">Name</TableCell>
+                <TableCell className="tableCell">D.O.B.</TableCell>
+                <TableCell className="tableCell">Email</TableCell>
+                <TableCell className="tableCell">Phone</TableCell>
+                <TableCell className="tableCell">Status</TableCell>
+                <TableCell className="tableCell">Action</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {props.patientData
+                .slice(page * rowPerPage, page * rowPerPage + rowPerPage)
+                .map((user, index) => {
+                  return (
+                    <TableRow key={index}>
+                      <TableCell>{index + 1}</TableCell>
+                      <TableCell>{`${user.fName} ${user.lName}`}</TableCell>
+                      <TableCell>{user.dob}</TableCell>
+                      <TableCell>{user.email}</TableCell>
+                      <TableCell>{user.mobile}</TableCell>
+                      <TableCell>
+                        {user.isActive ? (
+                          <>
+                            <BsCheckCircleFill className="hand-pointer" />
+                            <span className="p-2">Active</span>
+                          </>
+                        ) : (
+                          <>
+                            <BsFillXCircleFill className="hand-pointer" />
+                            <span className="p-2">Inactive</span>
+                          </>
+                        )}
+                      </TableCell>
+                      <TableCell>
+                        <span className="p-2">
+                          <Link to={`/userdetails/${user.id}`}>
+                            <BsPersonFill />
+                          </Link>
+                        </span>
+                        <span className="p-2">
+                          <Link to={`/edit/${user.id}`}>
+                            <BsFillPencilFill />
+                          </Link>
+                        </span>
+                        <span className="p-2 hand-pointer">
+                          <BsFillTrashFill
+                            // onClick={() => deleteUser(user.id)}
+                            onClick={() => {
+                              setConfirmDialog({
+                                isOpen: true,
+                                title: "Are you sure to delete this Patient?",
+                                subTitle:
+                                  "Patient Record will be removed permanently!!",
+                                onConfirm: () => {
+                                  deleteUser(user.id);
+                                },
+                              });
+                            }}
+                          />
+                        </span>
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
+            </TableBody>
+          </Table>
+          <TablePagination
+            rowsPerPageOptions={[6, 10, 20, 25]}
+            count={props.patientData.length}
+            rowsPerPage={rowPerPage}
+            page={page}
+            onPageChange={onPageChange}
+            onChangeRowsPerPage={onChangeRowsPerPage}
+          />
+        </TableContainer>
+        <ConfirmDialog
+          confirmDialog={confirmDialog}
+          setConfirmDialog={setConfirmDialog}
+        />
+      </Container>
+    </>
+  );
 }
+// }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PatientList);

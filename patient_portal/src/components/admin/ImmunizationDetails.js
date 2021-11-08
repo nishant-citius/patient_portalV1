@@ -52,7 +52,6 @@ export class PatientList extends React.Component {
       ),
       userid: this.props.currentUser.id,
     };
-
     return savedValues;
   }
 
