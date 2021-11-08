@@ -78,7 +78,7 @@ const AttendAppointment = (props) => {
             <Tab label="Immunization" {...a11yProps(1)} />
             <Tab label="Medication Allergies" {...a11yProps(2)} />
             <Tab label="Procedures" {...a11yProps(3)} />
-            <Tab label="Daignosis" {...a11yProps(4)} />
+            <Tab label="Diagnosis" {...a11yProps(4)} />
             <Tab label="Diet Plan" {...a11yProps(5)} />
           </Tabs>
         </Box>
