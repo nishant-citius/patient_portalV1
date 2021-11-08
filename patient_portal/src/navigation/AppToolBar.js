@@ -30,6 +30,7 @@ import { Edit } from "@material-ui/icons";
 import AddUsers from "components/admin/common/AddUsers";
 import { adminService } from "services/register_user_service";
 import PhyAppointmentNotifications from "../components/physician/PhyAppointmentNotification";
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -248,10 +249,12 @@ function AppToolBar(props) {
               &nbsp;&nbsp;&nbsp;&nbsp;
               {props.role === "physician" ? (
                 <Badge badgeContent={users.length} color="secondary">
-                  <MailIcon onClick={handlePhyAppointmentNotification} />
+                  <CalendarTodayIcon onClick={handlePhyAppointmentNotification} />
                 </Badge>
               ) : (
-                <div></div>
+                <Badge badgeContent={0} color="secondary">
+                <CalendarTodayIcon />
+              </Badge>
               )}
               &nbsp;&nbsp;&nbsp;&nbsp;
               <Avatar
@@ -292,7 +295,9 @@ function AppToolBar(props) {
         openPopup={openAppointmentPopup}
         setOpenPopup={setOpenAppointmentPopup}
       >
-        <AppointmentNotifications />
+        <AppointmentNotifications  title="Scheduled Appointment"
+        openPopup={openAppointmentPopup}
+        setOpenPopup={setOpenAppointmentPopup}/>
       </ModalPopup>
       <ModalPopup
         title="Scheduled Appointment"

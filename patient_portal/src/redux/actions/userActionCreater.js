@@ -824,3 +824,26 @@ export function GetMedicationAllergies(userId) {
     );
   };
 }
+
+export function GetPendingAppointment() {
+  let payload = {
+    pendingAppointments: [],
+    pendingAppointmentCount: 0,
+  };
+  return (dispatch, getState) => {
+    authToken = getState().login.authToken;
+
+    axios.get(URLS.PENDING_APPOINTMETS).then(
+      (response) => {
+        payload.pendingAppointments = response.data;
+        payload.pendingAppointmentCount = response.data.length;
+        dispatch({ type: actions.GET_PENDING_APPOINTMENT, payload: payload });
+      },
+      (error) => {
+        payload.pendingAppointments = [];
+        payload.pendingAppointmentCount = 0;
+        dispatch({ type: actions.GET_PENDING_APPOINTMENT, payload: payload });
+      }
+    );
+  };
+}

@@ -16,11 +16,14 @@ const PhyAppointmentNotifications = (props) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    todaysAppointments(new Date().toISOString().slice(0, 10));
+    todaysAppointments(new Date().toISOString().slice(0, 10), props.currentUser.id);
+    
+
+
   }, []);
 
-  const todaysAppointments = (_date) => {
-    adminService.appointmentsToday(_date).then(
+  const todaysAppointments = (_date,_id) => {
+    adminService.appointmentsPendingPhysician(_date,_id).then(
       (response) => {
         setUsers(response.data);
       },
@@ -34,7 +37,7 @@ const PhyAppointmentNotifications = (props) => {
     <>
       <List>
         {users.length === 0 ? (
-          <p>No Approved Appointments for Today...</p>
+          <p>No pending Appointments for Today...</p>
         ) : (
           users.map((user) => {
             return (
@@ -99,3 +102,4 @@ export default connect(
   mapStatetoProps,
   mapDispatchToProps
 )(PhyAppointmentNotifications);
+ 

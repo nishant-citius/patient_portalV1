@@ -22,6 +22,7 @@ export class InitializeReduxState extends Component {
       this.props.getVitals(this.props.currentUser.id);
       this.props.getDietPlan(this.props.currentUser.id);
       this.props.getMedicationAllergies(this.props.currentUser.id);
+      this.props.getPendingAppointmentData();
       // }
     }
   }
@@ -57,6 +58,8 @@ const mapDispatchToProps = (dispatch) => {
     getDietPlan: (userId) => dispatch(actionCreator.GetDietPlan(userId)),
     getMedicationAllergies: (userId) =>
       dispatch(actionCreator.GetMedicationAllergies(userId)),
+    getPendingAppointmentData: () =>
+    dispatch(actionCreator.GetPendingAppointment()),
   };
 };
 
