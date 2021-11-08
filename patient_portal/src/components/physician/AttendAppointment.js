@@ -92,7 +92,7 @@ const AttendAppointment = (props) => {
         </TabPanel>
 
         <TabPanel value={value} index={1}>
-          <ImmunizationDetails patientId={patientId} />
+          <ImmunizationDetails patientId={patientId} fromAdmin={true} />
         </TabPanel>
 
         <TabPanel value={value} index={2}>
