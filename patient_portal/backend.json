@@ -1,19 +1,6 @@
 {
   "users": [
     {
-      "email": "susmitha@email.com",
-      "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
-      "fName": "Susmitha",
-      "lName": "C",
-      "dob": "1996-08-08",
-      "username": "Susmitha1281",
-      "mobile": "8106989754",
-      "role": "admin",
-      "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 38
-    },
-    {
       "email": "swapna@email.com",
       "password": "$2a$10$auytsBcGHpMWT85tEZLImugluGGz6x8gZefPF/vEoSA9PEOGrL0ly",
       "fName": "Swapna",
@@ -363,6 +350,51 @@
       "createdDate": "Sun Nov 07 2021 22:24:33 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 58
+    },
+    {
+      "email": "rameeta@gmail.com",
+      "password": "$2a$10$.11ErNXbHoxB2jzeVJNQy.SBNyk.v5C/Lsc/xUvvJhAwTH6xfDbey",
+      "fName": "Rameeta",
+      "lName": "thakur",
+      "dob": "2021-11-09",
+      "username": "rameeta20",
+      "rpassword": "12345",
+      "mobile": 6578686868,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Mon Nov 08 2021 09:24:19 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 59
+    },
+    {
+      "email": "misha@gmail.com",
+      "password": "$2a$10$.H0EQ579MWd9oHaTWlPkLe.3dJsjrEI5RAuSqbKuengVEe/KAGVgm",
+      "fName": "misha",
+      "lName": "sharma",
+      "dob": "2021-11-09",
+      "username": "misha20",
+      "rpassword": "12345",
+      "mobile": 6567678787,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Mon Nov 08 2021 09:43:45 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 60
+    },
+    {
+      "email": "riam@gmail.com",
+      "password": "$2a$10$C/CGV5kZMLWTF7yqy4O3k.Y.jXkGH2saeo3BB2aYhmVLTqQJUDl7a",
+      "fName": "rima",
+      "lName": "thakur",
+      "dob": "2021-11-18",
+      "username": "rima20",
+      "rpassword": "12345",
+      "mobile": 67558686888,
+      "blood_group": "o-",
+      "role": "patient",
+      "createdDate": "Mon Nov 08 2021 09:51:28 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 61
     }
   ],
   "medic_allergy": [
@@ -433,6 +465,108 @@
         }
       ],
       "id": 2
+    },
+    {
+      "userid": 59,
+      "current_medication": [
+        {
+          "medicineName": "HEPARIN SODIUM1,000 UNITS/ML",
+          "dosage": "gyd",
+          "directionstoconsume": "ghvcgdgdhg",
+          "physicianName": "ghvgdhvdhshds",
+          "startDate": "2021-11-25",
+          "endDate": "2021-11-10"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "SULFAPYRIDINE500MG",
+          "directiontoconsume": "gdhcbd",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "HEPARIN SODIUM10,000 UNITS/ML",
+          "directiontoconsume": "hdghg"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyType": "Animal",
+          "allergyName": "Pig",
+          "drugAllergy": "hgddhg"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userid": 60,
+      "current_medication": [
+        {
+          "medicineName": "LIQUAEMIN SODIUM1,000 UNITS/ML",
+          "dosage": "hhdsdds",
+          "directionstoconsume": "ghchd",
+          "physicianName": "hjgdsusdh",
+          "startDate": "2021-11-09",
+          "endDate": "2021-11-11"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "LIQUAEMIN LOCK FLUSH100 UNITS/ML",
+          "directiontoconsume": "hdhss",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "LIQUAEMIN SODIUM5,000 UNITS/ML",
+          "directiontoconsume": "hhjbss"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyType": "Fungi",
+          "allergyName": "Rat",
+          "drugAllergy": "gydggsh"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "userid": 61,
+      "current_medication": [
+        {
+          "medicineName": "HEPARIN SODIUM1,000 UNITS/ML",
+          "dosage": "gcgy",
+          "directionstoconsume": "ghdsdgsdhjd",
+          "physicianName": "yudygf",
+          "startDate": "2021-11-02",
+          "endDate": "2021-11-10"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "LIQUAEMIN SODIUM40,000 UNITS/ML",
+          "directiontoconsume": "hfdfhd",
+          "socialDrugs": "drink"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "HEPARIN SODIUM1,000 UNITS/ML",
+          "directiontoconsume": "hjgdshdsbhb"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyType": "Insect",
+          "allergyName": "Mushroom",
+          "drugAllergy": "hdyygdyu"
+        }
+      ],
+      "id": 5
     }
   ],
   "immunization": [
@@ -481,6 +615,90 @@
         }
       ],
       "id": 1
+    },
+    {
+      "first_name": "Sudhir",
+      "last_name": "Koganti",
+      "age_category": "18_44",
+      "vaccine_brand": "sasas",
+      "dose_detail": "1",
+      "general_vaccine": [
+        {
+          "vaccine_name": "asasas",
+          "vaccine_date": "2021-11-05"
+        }
+      ],
+      "id": 32
+    },
+    {
+      "first_name": "shiva",
+      "last_name": "prasad",
+      "age_category": "45",
+      "vaccine_brand": "Covishield",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "Polio",
+          "vaccine_date": "2021-11-24"
+        }
+      ],
+      "id": 57
+    },
+    {
+      "first_name": "Rameeta",
+      "last_name": "thakur",
+      "age_category": "18_44",
+      "vaccine_brand": "ghdgd",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "gvddv",
+          "vaccine_date": "2021-11-17"
+        }
+      ],
+      "id": 59
+    },
+    {
+      "first_name": "misha",
+      "last_name": "sharma",
+      "age_category": "18_44",
+      "vaccine_brand": "jhd",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "hjcbhds",
+          "vaccine_date": "2021-11-09"
+        }
+      ],
+      "id": 60
+    },
+    {
+      "first_name": "rima",
+      "last_name": "thakur",
+      "age_category": "18_44",
+      "vaccine_brand": "dhgdys",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "jhbchdc",
+          "vaccine_date": "2021-11-09"
+        }
+      ],
+      "id": 61
+    },
+    {
+      "first_name": "Dr.Susmitha",
+      "last_name": "Chinthakindi",
+      "age_category": "18_44",
+      "vaccine_brand": "hjbchx",
+      "dose_detail": "2",
+      "general_vaccine": [
+        {
+          "vaccine_name": "cbxhjc",
+          "vaccine_date": "2021-11-09"
+        }
+      ],
+      "id": 55
     }
   ],
   "appointments": [
@@ -790,58 +1008,76 @@
       "id": 19
     },
     {
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-11-04",
-      "mobile_no": 8801888988,
-      "doc_id": 52,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "Neck pain",
-      "appointment_start_time": "23:05",
-      "appointment_end_time": "23:09",
-      "appointmentDate": "2021-11-07",
-      "appointment_desc": "",
-      "createdBy": "shivaprasad",
-      "createdDate": "2021-11-07T15:35:57.178Z",
-      "patientId": 57,
-      "status": "completed",
+      "fName": "rima",
+      "lName": "thakur",
+      "dob": "2021-11-18",
+      "mobile_no": 87785787877,
+      "doc_id": 55,
+      "doc_name": "Dr.Susmitha Chinthakindi",
+      "appointment_title": "hjdss",
+      "appointment_start_time": "11:56",
+      "appointment_end_time": "01:56",
+      "appointmentDate": "2021-11-10",
+      "appointment_desc": "general checkup",
+      "createdBy": "rimathakur",
+      "createdDate": "2021-11-08T04:26:54.711Z",
+      "patientId": 61,
+      "status": "approved",
       "id": 20
     },
     {
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-11-04",
-      "mobile_no": 8801888988,
-      "doc_id": 52,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "Backpain",
-      "appointment_start_time": "11:10",
-      "appointment_end_time": "22:15",
-      "appointmentDate": "2021-11-07",
-      "appointment_desc": "apointment is booked for  backpain",
-      "createdBy": "shivaprasad",
-      "createdDate": "2021-11-07T15:41:27.751Z",
-      "patientId": 57,
+      "fName": "rima",
+      "lName": "thakur",
+      "dob": "2021-11-18",
+      "mobile_no": 65757676676,
+      "doc_id": 55,
+      "doc_name": "Dr.Susmitha Chinthakindi",
+      "appointment_title": "hdh",
+      "appointment_start_time": "10:01",
+      "appointment_end_time": "11:01",
+      "appointmentDate": "2021-11-08",
+      "appointment_desc": "jdkhj",
+      "createdBy": "rimathakur",
+      "createdDate": "2021-11-08T04:32:04.752Z",
+      "patientId": 61,
       "status": "approved",
       "id": 21
     },
     {
-      "fName": "shiva",
-      "lName": "prasad",
-      "dob": "2021-11-04",
-      "mobile_no": 8801888988,
-      "doc_id": 52,
-      "doc_name": "shiva  prasad",
-      "appointment_title": "leg pain",
-      "appointment_start_time": "13:43",
-      "appointment_end_time": "14:43",
+      "fName": "rima",
+      "lName": "thakur",
+      "dob": "2021-11-18",
+      "mobile_no": 6565767676,
+      "doc_id": 55,
+      "doc_name": "Dr.Susmitha Chinthakindi",
+      "appointment_title": "hjd",
+      "appointment_start_time": "10:18",
+      "appointment_end_time": "11:18",
       "appointmentDate": "2021-11-08",
-      "appointment_desc": "",
-      "createdBy": "shivaprasad",
-      "createdDate": "2021-11-08T18:14:04.169Z",
-      "patientId": 57,
-      "status": "pending",
+      "appointment_desc": "hhbdj",
+      "createdBy": "rimathakur",
+      "createdDate": "2021-11-08T04:48:28.974Z",
+      "patientId": 61,
+      "status": "approved",
       "id": 22
+    },
+    {
+      "fName": "rima",
+      "lName": "thakur",
+      "dob": "2021-11-18",
+      "mobile_no": 77666555555,
+      "doc_id": 55,
+      "doc_name": "Dr.Susmitha Chinthakindi",
+      "appointment_title": "ghgg",
+      "appointment_start_time": "10:34",
+      "appointment_end_time": "11:34",
+      "appointmentDate": "2021-11-01",
+      "appointment_desc": "hjjhkjh",
+      "createdBy": "rimathakur",
+      "createdDate": "2021-11-08T05:04:22.646Z",
+      "patientId": 61,
+      "status": "approved",
+      "id": 23
     }
   ],
   "demographics": [
@@ -895,6 +1131,57 @@
       "insurance_provider": "jn",
       "userid": 1,
       "id": 1
+    },
+    {
+      "fName": "Rameeta",
+      "lName": "thakur",
+      "dob": "2021-11-09",
+      "gender": "female",
+      "ethnicity": "bhjsbdhs",
+      "education": "jhbdh",
+      "employment": "hjsdbhsd",
+      "address": "hdbhd",
+      "phone_number": 6747774775,
+      "medical_history": "jbdhs",
+      "family_medical_history": "hjgdhs",
+      "surgeries": "ghdsd",
+      "insurance_provider": "gdsd",
+      "userid": 59,
+      "id": 3
+    },
+    {
+      "fName": "misha",
+      "lName": "sharma",
+      "dob": "2021-11-09",
+      "gender": "female",
+      "ethnicity": "hssh",
+      "education": "hjsh",
+      "employment": "hdsadhis",
+      "address": "hchg",
+      "phone_number": 767676776778,
+      "medical_history": "hjgsdhs",
+      "family_medical_history": "hjsghsa",
+      "surgeries": "hsvhsa",
+      "insurance_provider": "ghssh",
+      "userid": 60,
+      "id": 4
+    },
+    {
+      "fName": "rima",
+      "lName": "thakur",
+      "dob": "2021-11-18",
+      "gender": "female",
+      "ethnicity": "hjgdhs",
+      "education": "hgdh",
+      "employment": "hjgdh",
+      "address": "hjdhj",
+      "phone_number": 85876768686,
+      "medical_history": "hgh",
+      "family_medical_history": "hjsgdhsd",
+      "surgeries": "gduysd",
+      "insurance_provider": "gsdgshgdshdg",
+      "userid": 61,
+      "id": 5
     }
   ],
   "patientvitals": [
@@ -909,6 +1196,30 @@
       "physicianId": 56,
       "patientId": "1",
       "id": 1
+    },
+    {
+      "height": "168",
+      "weight": "64",
+      "blood_pressure": "110/90",
+      "temperature": "97",
+      "pulse": "72",
+      "respiration": "100",
+      "oxigen_saturation": "sdfgdfsg",
+      "physicianId": 32,
+      "patientId": "48",
+      "id": 2
+    },
+    {
+      "height": "jknsns",
+      "weight": "hjxbch",
+      "blood_pressure": "hjbcxhc",
+      "temperature": "cbxc",
+      "pulse": "hcbjx",
+      "respiration": "hcbxj",
+      "oxigen_saturation": "hjbchxc",
+      "physicianId": 55,
+      "patientId": "61",
+      "id": 3
     }
   ],
   "billing": [
@@ -10975,53 +11286,19 @@
       "id": 2
     },
     {
-      "doc_id": 55,
-      "patientId": "26",
-      "description": "Typhoid fever",
-      "code": "A010",
-      "id": 3
+      "doc_id": 32,
+      "patientId": "48",
+      "desc": "Bypass Cerebral Ventricle to Mastoid Sinus with Autologous Tissue Substitute, Open Approach",
+      "code": "16071",
+      "id": 10
     },
     {
       "doc_id": 55,
-      "patientId": "26",
-      "description": "Typhoid fever",
-      "code": "A010",
-      "id": 4
-    },
-    {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": "Cholera due to Vibrio cholerae 01, biovar cholerae",
-      "code": "A000",
-      "id": 5
-    },
-    {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
-      "code": "A001",
-      "id": 6
-    },
-    {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
-      "code": "A001",
-      "id": 7
-    },
-    {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
-      "code": "A001",
-      "id": 8
-    },
-    {
-      "doc_id": 56,
-      "patientId": "1",
-      "description": "Cholera due to Vibrio cholerae 01, biovar eltor",
-      "code": "A001",
-      "id": 9
+      "patientId": 61,
+      "desc": "Bypass Cerebral Ventricle to Atrium with Autologous Tissue Substitute, Open Approach",
+      "code": "16072",
+      "id": 11
     }
   ]
+  
 }
