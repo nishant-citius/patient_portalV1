@@ -64,7 +64,6 @@ const Demographics = (props) => {
     insurance_provider: props.demographicsDetails[0]?.insurance_provider,
   };
 
-
   const validationSchema = Yup.object().shape({
     fName: Yup.string().required("Required"),
     lName: Yup.string().required("Required"),
@@ -106,7 +105,7 @@ const Demographics = (props) => {
       message: "Demographics added...",
       type: "success",
     });
-    props.getdemographics();
+    props.getdemographics(props.currentUser.id);
     history.push("/immunization");
   };
 
