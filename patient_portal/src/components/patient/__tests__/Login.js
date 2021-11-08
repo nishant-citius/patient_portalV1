@@ -23,7 +23,6 @@ describe("Login Component", () => {
   });
   it("should render an email input tag", () => {
     const wrapper = mount(jsx);
-    console.log(wrapper.find('Field[type="text"]'));
     expect(wrapper.find('Field[type="text"]').exists()).toBe(true);
   });
 
