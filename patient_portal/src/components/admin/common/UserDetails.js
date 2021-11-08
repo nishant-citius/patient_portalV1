@@ -141,11 +141,17 @@ const UserDetails = (props) => {
             </TabPanel>
 
             <TabPanel value={value} index={1}>
-              <Demographics patientId={props.userDetails.id} />
+              <Demographics
+                patientId={props.userDetails.id}
+                flashNotification={props.flashNotification}
+              />
             </TabPanel>
 
             <TabPanel value={value} index={2}>
-              <Immunization patientId={props.userDetails.id} />
+              <Immunization
+                patientId={props.userDetails.id}
+                flashNotification={props.flashNotification}
+              />
             </TabPanel>
 
             <TabPanel value={value} index={3}>

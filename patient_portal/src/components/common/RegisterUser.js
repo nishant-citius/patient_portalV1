@@ -132,7 +132,6 @@ const RegisterUser = (props) => {
                 label="D.O.B"
                 type="date"
                 className="pt_10"
-                //placeholder="enter dob"
                 fullWidth
                 name="dob"
                 id="dob"
