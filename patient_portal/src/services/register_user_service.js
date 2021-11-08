@@ -115,6 +115,11 @@ class AdminServices {
     return axios.get(url);
   }
 
+  getPatientApprovedAppointments(patientId) {
+    const url = `${URLS.BASE_URL}/appointments?patientId=${patientId}&&status=approved`;
+    return axios.get(url);
+  }
+
   getPhysicianAppointments(physicianId) {
     const url = `${URLS.BASE_URL}/appointments?doc_id=${physicianId}`;
     return axios.get(url);
@@ -145,8 +150,8 @@ class AdminServices {
     return axios.get(url);
   }
 
-  appointmentsPendingPhysician(date,physicianId) {
-    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&doc_id=${physicianId}&&status=pending`;
+  appointmentsPendingPhysician(date, physicianId) {
+    const url = `${URLS.BASE_URL}/appointments?appointmentDate=${date}&&doc_id=${physicianId}&&status=Pending`;
     return axios.get(url);
   }
 
