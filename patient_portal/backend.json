@@ -1,35 +1,6 @@
 {
   "users": [
     {
-      "email": "nc@email.com",
-      "fName": "Nishant",
-      "lName": "Chaubey",
-      "dob": "2021-04-06",
-      "username": "Nishant C.",
-      "rpassword": "12345",
-      "mobile": "8888888888",
-      "blood_group": "b+ve",
-      "role": "patient",
-      "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 1,
-      "password": "$2a$10$Nco9qlh6BpU1krvCpWUKVewsrjxSjPreOZQntKVa8Lz0pxDlQiLsa"
-    },
-    {
-      "email": "sumitha@gmail.com",
-      "password": "$2a$10$OJDAVU7McsRUUH2N6HcwJO5Biye5IquxhT24TcjS8eo5txRqWYhTa",
-      "fName": "sumitha",
-      "lName": "L",
-      "dob": "2021-10-31",
-      "username": "sumitha345",
-      "mobile": "8788286589",
-      "role": "physician",
-      "speciality": "pathology",
-      "createdDate": "Tue Nov 02 2021 12:46:10 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 51
-    },
-    {
       "email": "susmitha@email.com",
       "password": "$2a$10$FIEv528WC8vlGKkfqUM1rubeFDNNmVfv9kAbBJAgfBOyGEvDX2AsS",
       "fName": "Susmitha",
@@ -41,20 +12,6 @@
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 38
-    },
-    {
-      "email": "sneha@email.com",
-      "password": "$2a$10$7erkdXW8znmCkXYx.omG7eIIJAVNdtvOMF6nirXLqDKX1jL0UPRnK",
-      "fName": "Snehalatha",
-      "lName": "Reddy",
-      "dob": "2021-11-26",
-      "username": "SnehalathaR",
-      "mobile": "7688986545",
-      "role": "physician",
-      "speciality": "obstetrics_gynecology",
-      "createdDate": "Tue Nov 02 2021 10:57:12 GMT+0530 (India Standard Time)",
-      "isActive": true,
-      "id": 50
     },
     {
       "email": "swapna@email.com",
@@ -76,7 +33,7 @@
       "fName": "Ajinkya Mohanrao",
       "lName": "Pathak",
       "dob": "2021-09-30",
-      "username": "AjinkyaPathak2021",
+      "username": "JinxPathak",
       "rpassword": "12345",
       "mobile": 9403541779,
       "blood_group": "b+ve",
@@ -84,7 +41,7 @@
       "createdDate": "Thu Oct 21 2021 10:35:49 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 2,
-      "password": "$2a$10$UQjGulj6yyO3MCRb9fLVbeEy0SZVYp8PWqPMT6spESJ9hNYNJXQne"
+      "password": "$2a$10$sDi5PRvvZnVhCQgSlA9XRuzTXu.s2LkZ6CQHOqwxh5W9dsxB2LShC"
     },
     {
       "email": "mamatha@email.com",
@@ -222,7 +179,7 @@
       "mobile": "787698976D",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:35:54 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 34
     },
     {
@@ -235,7 +192,7 @@
       "mobile": "6789468988",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:36:57 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 35
     },
     {
@@ -248,7 +205,7 @@
       "mobile": "8977567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:15 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 36
     },
     {
@@ -261,7 +218,7 @@
       "mobile": "8677567778",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:38:49 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 37
     },
     {
@@ -274,7 +231,7 @@
       "mobile": "8106989754",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:39:25 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 38
     },
     {
@@ -301,7 +258,7 @@
       "mobile": "7655443329",
       "role": "admin",
       "createdDate": "Tue Nov 02 2021 10:41:58 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 39
     },
     {
@@ -374,7 +331,7 @@
       "role": "physician",
       "speciality": "",
       "createdDate": "Tue Nov 02 2021 06:58:56 GMT+0530 (India Standard Time)",
-      "isActive": false,
+      "isActive": true,
       "id": 32
     },
     {
@@ -391,6 +348,21 @@
       "createdDate": "Fri Nov 05 2021 19:15:53 GMT+0530 (India Standard Time)",
       "isActive": true,
       "id": 57
+    },
+    {
+      "email": "nayauser@email.com",
+      "password": "$2a$10$Y7B3DLNHy9P51Zooko7DxeLVcekY8gqMoZXtwic7OsCAKZuU0Mr.i",
+      "fName": "Naya User",
+      "lName": "Naye User Ka Surname",
+      "dob": "2021-11-10",
+      "username": "NayaUser",
+      "mobile": "9403541779",
+      "role": "physician",
+      "speciality": "pediatrics",
+      "rpassword": "12345",
+      "createdDate": "Sun Nov 07 2021 22:24:33 GMT+0530 (India Standard Time)",
+      "isActive": true,
+      "id": 58
     }
   ],
   "medic_allergy": [
@@ -427,6 +399,40 @@
         }
       ],
       "id": 1
+    },
+    {
+      "userid": 57,
+      "current_medication": [
+        {
+          "medicineName": "SULFAPYRIDINE500MG",
+          "dosage": "20",
+          "directionstoconsume": "2 Times/day",
+          "physicianName": "Dr.Nishant",
+          "startDate": "2021-11-10",
+          "endDate": "2021-11-11"
+        }
+      ],
+      "otc_medication": [
+        {
+          "otcDrugName": "LIQUAEMIN SODIUM20,000 UNITS/ML",
+          "directiontoconsume": "20",
+          "socialDrugs": "smoke"
+        }
+      ],
+      "past_medication": [
+        {
+          "pastdrugName": "HISTAMINE PHOSPHATEEQ 0.2MG BASE/ML",
+          "directiontoconsume": "2-3times/Day"
+        }
+      ],
+      "allergies": [
+        {
+          "allergyType": "Fungi",
+          "allergyName": "Silverfish",
+          "drugAllergy": "Alleretic to Zodiac Drug"
+        }
+      ],
+      "id": 2
     }
   ],
   "immunization": [

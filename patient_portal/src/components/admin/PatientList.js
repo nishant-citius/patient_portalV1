@@ -21,6 +21,7 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
+import ConfirmDialog from "../../shared/dialog/ConfirmDialog";
 
 const mapStateToProps = (rootReducer) => {
   return {
@@ -62,6 +63,7 @@ export class PatientList extends React.Component {
   };
 
   componentDidMount() {
+    this.props.getAllPatients();
     this.props.getDemographics();
   }
 

@@ -51,6 +51,10 @@ const EditUser = (props) => {
 
     props.updateUser(id, newUserData);
     if (props.globalmessage === "Edit Success") {
+      props.flashNotification({
+        message: `${newUserData.fName} ${newUserData.lName} details updated...`,
+        type: "success",
+      });
       history.push("/allusers");
     } else {
     }
@@ -219,6 +223,7 @@ const EditUser = (props) => {
                 placeholder="Password"
                 value={user.password}
                 onChange={handleUserChange}
+                disabled={true}
               />
             </div>
             <br />

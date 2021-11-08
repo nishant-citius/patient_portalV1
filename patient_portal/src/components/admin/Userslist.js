@@ -22,8 +22,8 @@ import {
   TablePagination,
   TableRow,
 } from "mui";
-
 import Preloader from "../../shared/preloder/Preloder";
+import ConfirmDialog from "../../shared/dialog/ConfirmDialog";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,6 +52,11 @@ function UserList(props) {
   const [page, setPage] = useState(0);
   const [rowPerPage, setRowsPerPage] = useState(6);
   const [detailFetched, setDetailsFetched] = useState(false);
+  const [confirmDialog, setConfirmDialog] = useState({
+    isOpen: false,
+    title: "",
+    subTitle: "",
+  });
 
   useEffect(() => {
     fetchUserDetails();
@@ -68,6 +73,10 @@ function UserList(props) {
 
   function deleteUser(userId) {
     props.removeUser(userId);
+    setConfirmDialog({
+      ...confirmDialog,
+      isOpen: false,
+    });
     props.flashNotification({
       message: "User Deleted Successfully...!",
       type: "success",
@@ -155,7 +164,18 @@ function UserList(props) {
                           </span>
                           <span className="p-2 hand-pointer">
                             <BsFillTrashFill
-                              onClick={() => deleteUser(user.id)}
+                              // onClick={() => deleteUser(user.id)}
+                              onClick={() => {
+                                setConfirmDialog({
+                                  isOpen: true,
+                                  title: `Are you sure to delete this ${user.role} record?`,
+                                  subTitle:
+                                    "User Record will be removed permanently!!",
+                                  onConfirm: () => {
+                                    deleteUser(user.id);
+                                  },
+                                });
+                              }}
                             />
                           </span>
                         </TableCell>
@@ -173,6 +193,10 @@ function UserList(props) {
               onChangeRowsPerPage={onChangeRowsPerPage}
             />
           </TableContainer>
+          <ConfirmDialog
+            confirmDialog={confirmDialog}
+            setConfirmDialog={setConfirmDialog}
+          />
         </Container>
       ) : (
         <Preloader />

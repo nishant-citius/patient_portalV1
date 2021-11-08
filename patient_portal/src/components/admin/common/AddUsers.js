@@ -24,9 +24,7 @@ const AddUsers = (props) => {
     isActive: true,
   };
 
-  const [user, setUser] = useState(initialValues);
   const [specialities, setSpecialities] = useState([]);
-
   let history = useHistory();
 
   const validationSchema = Yup.object().shape({
@@ -61,6 +59,10 @@ const AddUsers = (props) => {
     };
     props.adduser(payload);
     props.getalluserdata();
+    props.flashNotification({
+      message: "New User Added Succeessfully..",
+      type: "success",
+    });
     history.push("/allusers");
   };
 
